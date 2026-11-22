@@ -1,0 +1,49 @@
+{
+	"name": "Heroes IV-VII Memorial",
+	"description": "Creatures, spells, abilities and adventure objects from Heroes of Might and Magic IV, V, VI and VII, as close to the originals as VCMI allows. Each generation is a submod that can be switched off on its own. Assets come from Heroes of Might and Magic IV, V, VI and VII (© Ubisoft), rendered and converted for VCMI by the author; some icons, portraits, map objects and battle effects were made or repainted with AI (OpenArt). Battering Ram script by Karyoplasma (batteringRam mod). Non-commercial fan-made mod, not affiliated with or endorsed by Ubisoft.",
+	"chinese": {
+		"name": "英雄无敌4～7纪念版",
+		"translations": [
+			"config/translations/chinese.json"
+		],
+		"description": "把《英雄无敌》4、5、6、7 代的兵种、魔法、能力和地图物件搬进 VCMI，尽量贴近原作。每一代是一个子 mod，可以单独关闭。素材来自《英雄无敌》4、5、6、7 代原版（© Ubisoft），由作者渲染转换为 VCMI 格式；部分图标、头像、地图物件和战斗特效用 AI（OpenArt）制作或在原画基础上重绘。攻城槌脚本来自 Karyoplasma 的 batteringRam mod。非商业同人作品，与 Ubisoft 无关。"
+	},
+	"version": "0.1.0",
+	"author": "yche2990",
+	"contact": "https://github.com/yche2990/heroes-memorial",
+	"changelog": {
+		"0.1.0": [
+			"First release: Heroes IV, V, VI and VII memorial, Heroes VI dynasty weapons and guarded treasure chests."
+		]
+	},
+	"modType": "Creatures",
+	"compatibility": {
+		"min": "1.8.0"
+	},
+	"scripts": [
+		"config/memorial/scripts.json"
+	],
+	"spells": [
+		"config/memorial/spells.json",
+		"config/memorial/h6Status.json"
+	],
+	"bonuses": [
+		"config/memorial/bonuses.json"
+	],
+	"settings": {
+		"bonuses": {
+			"global": {
+				"memorialAiGate": {
+					"type": "MEMORIAL_AI_GATE",
+					"val": 1,
+					"hidden": true
+				}
+			}
+		}
+	},
+	"english": {
+		"translations": [
+			"config/translations/english.json"
+		]
+	}
+}

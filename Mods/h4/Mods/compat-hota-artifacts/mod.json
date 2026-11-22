@@ -1,0 +1,17 @@
+{
+	"name": "Heroes IV Memorial: Ring of Oblivion Compatibility",
+	"description": "The Ring of Oblivion (HotA artifacts) also blocks the Heroes IV resurrection spells.",
+	"chinese": {
+		"name": "英雄无敌4纪念版·遗忘之戒兼容",
+		"description": "遗忘之戒（HotA 宝物）也禁止英雄无敌4的复活类法术。"
+	},
+	"version": "0.1.0",
+	"author": "yche2990",
+	"modType": "Compatibility",
+	"depends": [
+		"hota.artifacts"
+	],
+	"spells": [
+		"config/spells.json"
+	]
+}

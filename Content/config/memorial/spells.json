@@ -1,0 +1,85 @@
+// H4-H7 mechanics port (round 139; matches H6 Dungeon's Veil of Shadows): Stealth. Cast by the stack on itself at battle start through scripts/combat/h47Stealth.lua;
+// for the color fade to translucent see config/battleEffects.json; spell icon and dedicated stealth and reveal animations to be added later
+{
+	"h47Stealth" : {
+		"graphics" : { "iconBook" : "h47/spells/sp_stealth/Book", "iconScroll" : "h47/spells/sp_stealth/Scroll", "iconScenarioBonus" : "h47/spells/sp_stealth/Scenario", "iconEffect" : "h47/spells/sp_stealth/Effect" },
+		"type" : "ability",
+		"name" : "Stealth",
+		"school" : {
+			"air" : false,
+			"earth" : false,
+			"fire" : false,
+			"water" : false
+		},
+		"level" : 0,
+		"power" : 0,
+		"defaultGainChance" : 0,
+		"gainChance" : {},
+		"targetType" : "CREATURE",
+		"flags" : {
+			"special" : true,
+			"positive" : true
+		},
+		"animation" : {
+			"affect" : [ { "defName" : "h47/fx/fx_stealthEnter", "verticalPosition" : "bottom", "transparency" : 0.9, "effectName" : "h47StealthFadeAsylum" } ]
+		},
+		"sounds" : {
+			"cast" : ""
+		},
+		"levels" : {
+			"base" : {
+				"description" : "{Stealth}\n\nConceals itself so it cannot be targeted by attacks or spells; while hidden, its attacks deal +10% damage and cannot be retaliated against. It is revealed after it attacks, after 3 rounds, or if an enemy is next to it at the start of a round.",
+				"power" : 0,
+				"cost" : 0,
+				"range" : "0",
+				"battleEffects" : {
+					"stealth" : {
+						"type" : "core:timed",
+						"cumulative" : false,
+						"ignoreImmunity" : true,
+						"bonus" : {
+							"stealth" : {
+								"type" : "INVINCIBLE",
+								"duration" : [ "N_TURNS", "UNTIL_OWN_ATTACK" ],
+								"turns" : 3
+							},
+							// The damage bonus shares a stacking group with other mods' wind stealth effects; the larger one counts
+							"stealthDamageMelee" : {
+								"type" : "PERCENTAGE_DAMAGE_BOOST",
+								"subtype" : "damageTypeMelee",
+								"val" : 10,
+								"stacking" : "h47Stealth",
+								"duration" : [ "N_TURNS", "UNTIL_OWN_ATTACK" ],
+								"turns" : 3
+							},
+							"stealthDamageRanged" : {
+								"type" : "PERCENTAGE_DAMAGE_BOOST",
+								"subtype" : "damageTypeRanged",
+								"val" : 10,
+								"stacking" : "h47Stealth",
+								"duration" : [ "N_TURNS", "UNTIL_OWN_ATTACK" ],
+								"turns" : 3
+							},
+							// Round 153: the no-retaliation part now lasts "until the end of this round's exchange". It used to be "until it attacks",
+							// which the engine removed as soon as the attack landed, before the retaliation check, so it still got retaliated in melee. No ranged retaliation either
+							"stealthNoRetaliation" : {
+								"type" : "BLOCKS_RETALIATION",
+								"duration" : [ "N_TURNS", "UNTIL_AFTER_ATTACK_SEQUENCE" ],
+								"turns" : 3
+							},
+							"stealthNoRangedRetaliation" : {
+								"type" : "BLOCKS_RANGED_RETALIATION",
+								"duration" : [ "N_TURNS", "UNTIL_AFTER_ATTACK_SEQUENCE" ],
+								"turns" : 3
+							}
+						}
+					}
+				}
+			},
+			"none" : {},
+			"basic" : {},
+			"advanced" : {},
+			"expert" : {}
+		}
+	}
+}

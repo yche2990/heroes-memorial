@@ -1,0 +1,13 @@
+{
+ "basepath": "h4/Sprite/map/",
+ "sequences": [
+  {
+   "group": 0,
+   "frames": [
+    "stand_01.png",
+    "stand_02.png",
+    "stand_03.png"
+   ]
+  }
+ ]
+}

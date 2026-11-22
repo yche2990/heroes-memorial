@@ -1,0 +1,3419 @@
+// Active abilities of the Dynasty Weapons: special hero spells, the weapon gives a SPELL bonus (addInfo true, no spellbook needed), once per battle / cooldown controlled by Lua.
+// Plus a few spells cast with stack attacks (Deadly Toxin, Shadow Poison, Chilling Attack, Nameless Curse) and the trigger spell of the Time Trap.
+{
+	"h6dynResurrection": {
+		"type": "combat",
+		"name": "Resurrection (H6)",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"flags": {
+			"special": true,
+			"positive": true
+		},
+		"graphics": {
+			"iconBook": "h6dyn/spells/h6dynResurrection/Book",
+			"iconScroll": "h6dyn/spells/h6dynResurrection/Scroll",
+			"iconScenarioBonus": "h6dyn/spells/h6dynResurrection/Scenario",
+			"iconEffect": "h6dyn/spells/h6dynResurrection/Effect",
+			"iconImmune": "h6dyn/spells/h6dynResurrection/Effect"
+		},
+		"sounds": {
+			"cast": "RESURECT"
+		},
+		"targetType": "CREATURE",
+		"targetCondition": {
+			"noneOf": {
+				"bonus.SIEGE_WEAPON": "absolute"
+			}
+		},
+		"levels": {
+			"base": {
+				"range": "0",
+				"targetModifier": {
+					"smart": true
+				},
+				"battleEffects": {
+					"main": {
+						"type": "h6dynResurrect",
+						"healLevel": "resurrect",
+						"healPower": "permanent",
+						"value": 800,
+						"improvedTurns": 2,
+						"onceIndex": 1,
+						"bonusText": "{Greater Resurrection}\nDamage +20% for 2 rounds"
+					}
+				}
+			},
+			"none": {
+				"cost": 0,
+				"power": 0,
+				"description": "{Resurrection (H6)}\n\nActive skill of Angelic Alliance, once per battle, needs no Spell Book and costs no Spell Points.\nResurrects one fallen friendly stack, restoring 800 Hit Points; the resurrected creatures remain after combat. Can only be cast on a corpse. With Angelic Alliance at level 5 (Greater Resurrection), the resurrected stack gains +20% damage for 2 rounds."
+			},
+			"basic": {
+				"cost": 0,
+				"power": 0,
+				"description": "{Resurrection (H6)}\n\nActive skill of Angelic Alliance, once per battle, needs no Spell Book and costs no Spell Points.\nResurrects one fallen friendly stack, restoring 800 Hit Points; the resurrected creatures remain after combat. Can only be cast on a corpse. With Angelic Alliance at level 5 (Greater Resurrection), the resurrected stack gains +20% damage for 2 rounds."
+			},
+			"advanced": {
+				"cost": 0,
+				"power": 0,
+				"description": "{Resurrection (H6)}\n\nActive skill of Angelic Alliance, once per battle, needs no Spell Book and costs no Spell Points.\nResurrects one fallen friendly stack, restoring 800 Hit Points; the resurrected creatures remain after combat. Can only be cast on a corpse. With Angelic Alliance at level 5 (Greater Resurrection), the resurrected stack gains +20% damage for 2 rounds."
+			},
+			"expert": {
+				"cost": 0,
+				"power": 0,
+				"description": "{Resurrection (H6)}\n\nActive skill of Angelic Alliance, once per battle, needs no Spell Book and costs no Spell Points.\nResurrects one fallen friendly stack, restoring 800 Hit Points; the resurrected creatures remain after combat. Can only be cast on a corpse. With Angelic Alliance at level 5 (Greater Resurrection), the resurrected stack gains +20% damage for 2 rounds."
+			}
+		},
+		"animation": {
+			"affect": [
+				{
+					"defName": "h6dyn/fx/resurrection_target"
+				}
+			]
+		}
+	},
+	"h6dynTransferLife": {
+		"type": "combat",
+		"name": "Transfer Life (H6)",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"flags": {
+			"special": true,
+			"positive": true
+		},
+		"graphics": {
+			"iconBook": "h6dyn/spells/h6dynTransferLife/Book",
+			"iconScroll": "h6dyn/spells/h6dynTransferLife/Scroll",
+			"iconScenarioBonus": "h6dyn/spells/h6dynTransferLife/Scenario",
+			"iconEffect": "h6dyn/spells/h6dynTransferLife/Effect",
+			"iconImmune": "h6dyn/spells/h6dynTransferLife/Effect"
+		},
+		"sounds": {
+			"cast": "DEATHSTR"
+		},
+		"targetType": "CREATURE",
+		"targetCondition": {
+			"noneOf": {
+				"bonus.SIEGE_WEAPON": "absolute"
+			}
+		},
+		"levels": {
+			"base": {
+				"range": "0",
+				"targetModifier": {
+					"smart": true
+				},
+				"battleEffects": {
+					"main": {
+						"type": "h6dynTransferLife",
+						"percent": 50,
+						"onceIndex": 2,
+						"bonusText": "{Transfer Life}\nHealed by 50% of hero spell damage"
+					}
+				}
+			},
+			"none": {
+				"cost": 0,
+				"power": 0,
+				"description": "{Transfer Life (H6)}\n\nActive skill of Staff of Sandro, once per battle, needs no Spell Book and costs no Spell Points.\nChoose one friendly stack: for the rest of the battle, 50% of the damage the hero's spells deal to living enemy troops heals this stack (healing only, no resurrection)."
+			},
+			"basic": {
+				"cost": 0,
+				"power": 0,
+				"description": "{Transfer Life (H6)}\n\nActive skill of Staff of Sandro, once per battle, needs no Spell Book and costs no Spell Points.\nChoose one friendly stack: for the rest of the battle, 50% of the damage the hero's spells deal to living enemy troops heals this stack (healing only, no resurrection)."
+			},
+			"advanced": {
+				"cost": 0,
+				"power": 0,
+				"description": "{Transfer Life (H6)}\n\nActive skill of Staff of Sandro, once per battle, needs no Spell Book and costs no Spell Points.\nChoose one friendly stack: for the rest of the battle, 50% of the damage the hero's spells deal to living enemy troops heals this stack (healing only, no resurrection)."
+			},
+			"expert": {
+				"cost": 0,
+				"power": 0,
+				"description": "{Transfer Life (H6)}\n\nActive skill of Staff of Sandro, once per battle, needs no Spell Book and costs no Spell Points.\nChoose one friendly stack: for the rest of the battle, 50% of the damage the hero's spells deal to living enemy troops heals this stack (healing only, no resurrection)."
+			}
+		},
+		"animation": {
+			"affect": [
+				{
+					"defName": "h6dyn/fx/lifedrain_target"
+				}
+			]
+		}
+	},
+	"h6dynSpidersWeb": {
+		"type": "combat",
+		"name": "Spider's Web (H6)",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"flags": {
+			"special": true,
+			"negative": true
+		},
+		"graphics": {
+			"iconBook": "h6dyn/spells/h6dynSpidersWeb/Book",
+			"iconScroll": "h6dyn/spells/h6dynSpidersWeb/Scroll",
+			"iconScenarioBonus": "h6dyn/spells/h6dynSpidersWeb/Scenario",
+			"iconEffect": "h6dyn/spells/h6dynSpidersWeb/Effect",
+			"iconImmune": "h6dyn/spells/h6dynSpidersWeb/Effect"
+		},
+		"sounds": {
+			"cast": "MUCKMIRE"
+		},
+		"targetType": "LOCATION",
+		"targetCondition": {
+			"noneOf": {
+				"bonus.SIEGE_WEAPON": "absolute",
+				"bonus.MIND_IMMUNITY": "normal",
+				"bonus.UNDEAD": "normal",
+				"bonus.NON_LIVING": "normal",
+				"bonus.MECHANICAL": "normal"
+			}
+		},
+		"levels": {
+			"base": {
+				"range": "0-1",
+				"targetModifier": {
+					"smart": true
+				},
+				"battleEffects": {
+					"main": {
+						"type": "h6dynAct",
+						"scope": "target",
+						"side": "enemy",
+						"onceIndex": 3,
+						"control": true,
+						"enemies": {
+							"web": {
+								"type": "STACKS_SPEED",
+								"val": -2,
+								"turns": 3
+							}
+						},
+						"animEnemy": "h6dyn/fx/spider_web"
+					}
+				}
+			},
+			"none": {
+				"cost": 0,
+				"power": 0,
+				"description": "{Spider's Web (H6)}\n\nActive skill of Arachne, once per battle, needs no Spell Book and costs no Spell Points.\nEnemy troops in the target area (the center and one ring around it) get -2 Speed for 3 rounds. No effect on Mind-immune troops (including Undead, Unliving and Mechanical), Commanders, War Machines or Capital Guardians."
+			},
+			"basic": {
+				"cost": 0,
+				"power": 0,
+				"description": "{Spider's Web (H6)}\n\nActive skill of Arachne, once per battle, needs no Spell Book and costs no Spell Points.\nEnemy troops in the target area (the center and one ring around it) get -2 Speed for 3 rounds. No effect on Mind-immune troops (including Undead, Unliving and Mechanical), Commanders, War Machines or Capital Guardians."
+			},
+			"advanced": {
+				"cost": 0,
+				"power": 0,
+				"description": "{Spider's Web (H6)}\n\nActive skill of Arachne, once per battle, needs no Spell Book and costs no Spell Points.\nEnemy troops in the target area (the center and one ring around it) get -2 Speed for 3 rounds. No effect on Mind-immune troops (including Undead, Unliving and Mechanical), Commanders, War Machines or Capital Guardians."
+			},
+			"expert": {
+				"cost": 0,
+				"power": 0,
+				"description": "{Spider's Web (H6)}\n\nActive skill of Arachne, once per battle, needs no Spell Book and costs no Spell Points.\nEnemy troops in the target area (the center and one ring around it) get -2 Speed for 3 rounds. No effect on Mind-immune troops (including Undead, Unliving and Mechanical), Commanders, War Machines or Capital Guardians."
+			}
+		}
+	},
+	"h6dynShadowstrike": {
+		"type": "combat",
+		"name": "Shadow Form (H6)",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"flags": {
+			"special": true,
+			"positive": true
+		},
+		"graphics": {
+			"iconBook": "h6dyn/spells/h6dynShadowstrike/Book",
+			"iconScroll": "h6dyn/spells/h6dynShadowstrike/Scroll",
+			"iconScenarioBonus": "h6dyn/spells/h6dynShadowstrike/Scenario",
+			"iconEffect": "h6dyn/spells/h6dynShadowstrike/Effect",
+			"iconImmune": "h6dyn/spells/h6dynShadowstrike/Effect"
+		},
+		"sounds": {
+			"cast": "TELPTOUT"
+		},
+		"targetType": "CREATURE",
+		"targetCondition": {
+			"noneOf": {
+				"bonus.SIEGE_WEAPON": "absolute"
+			}
+		},
+		"levels": {
+			"base": {
+				"range": "0",
+				"targetModifier": {
+					"smart": true
+				},
+				"battleEffects": {
+					"main": {
+						"type": "h6dynAct",
+						"scope": "target",
+						"side": "ally",
+						"walkers": true,
+						"onceIndex": 4,
+						"allies": {
+							"fly": {
+								"type": "FLYING",
+								"subtype": "movementFlying",
+								"val": 0,
+								"turns": 2
+							},
+							"cut": {
+								"type": "GENERAL_DAMAGE_REDUCTION",
+								"subtype": "damageTypeAll",
+								"val": 30,
+								"turns": 2
+							}
+						},
+						"animAlly": "h6dyn/fx/shadowstrike"
+					}
+				}
+			},
+			"none": {
+				"cost": 0,
+				"power": 0,
+				"description": "{Shadow Form (H6)}\n\nActive skill of Assassin's Blade, once per battle, needs no Spell Book and costs no Spell Points.\nOne friendly non-flying stack becomes Incorporeal: for 2 rounds it gains flight, can pass over troops, walls and obstacles, and takes 30% less damage from attacks."
+			},
+			"basic": {
+				"cost": 0,
+				"power": 0,
+				"description": "{Shadow Form (H6)}\n\nActive skill of Assassin's Blade, once per battle, needs no Spell Book and costs no Spell Points.\nOne friendly non-flying stack becomes Incorporeal: for 2 rounds it gains flight, can pass over troops, walls and obstacles, and takes 30% less damage from attacks."
+			},
+			"advanced": {
+				"cost": 0,
+				"power": 0,
+				"description": "{Shadow Form (H6)}\n\nActive skill of Assassin's Blade, once per battle, needs no Spell Book and costs no Spell Points.\nOne friendly non-flying stack becomes Incorporeal: for 2 rounds it gains flight, can pass over troops, walls and obstacles, and takes 30% less damage from attacks."
+			},
+			"expert": {
+				"cost": 0,
+				"power": 0,
+				"description": "{Shadow Form (H6)}\n\nActive skill of Assassin's Blade, once per battle, needs no Spell Book and costs no Spell Points.\nOne friendly non-flying stack becomes Incorporeal: for 2 rounds it gains flight, can pass over troops, walls and obstacles, and takes 30% less damage from attacks."
+			}
+		}
+	},
+	"h6dynShadowstrike2": {
+		"type": "combat",
+		"name": "Greater Shadow Form (H6)",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"flags": {
+			"special": true,
+			"positive": true
+		},
+		"graphics": {
+			"iconBook": "h6dyn/spells/h6dynShadowstrike2/Book",
+			"iconScroll": "h6dyn/spells/h6dynShadowstrike2/Scroll",
+			"iconScenarioBonus": "h6dyn/spells/h6dynShadowstrike2/Scenario",
+			"iconEffect": "h6dyn/spells/h6dynShadowstrike2/Effect",
+			"iconImmune": "h6dyn/spells/h6dynShadowstrike2/Effect"
+		},
+		"sounds": {
+			"cast": "TELPTOUT"
+		},
+		"targetType": "CREATURE",
+		"targetCondition": {
+			"noneOf": {
+				"bonus.SIEGE_WEAPON": "absolute"
+			}
+		},
+		"levels": {
+			"base": {
+				"range": "0",
+				"targetModifier": {
+					"smart": true
+				},
+				"battleEffects": {
+					"main": {
+						"type": "h6dynAct",
+						"scope": "target",
+						"side": "ally",
+						"walkers": true,
+						"onceIndex": 4,
+						"allies": {
+							"fly": {
+								"type": "FLYING",
+								"subtype": "movementFlying",
+								"val": 0,
+								"turns": 2
+							},
+							"cut": {
+								"type": "GENERAL_DAMAGE_REDUCTION",
+								"subtype": "damageTypeAll",
+								"val": 30,
+								"turns": 2
+							},
+							"poison": {
+								"type": "SPELL_AFTER_ATTACK",
+								"subtype": "h6dynShadowPoison",
+								"val": 100,
+								"addInfo": [
+									3,
+									0
+								],
+								"turns": 2
+							}
+						},
+						"animAlly": "h6dyn/fx/shadowstrike"
+					}
+				}
+			},
+			"none": {
+				"cost": 0,
+				"power": 0,
+				"description": "{Greater Shadow Form (H6)}\n\nActive skill of Assassin's Blade, once per battle, needs no Spell Book and costs no Spell Points.\nFor 2 rounds, one friendly non-flying stack gains flight, can pass over troops, walls and obstacles, and takes 30% less damage from attacks; during those 2 rounds its attacks Poison the target: 5 damage per attacking creature each round, for 2 rounds."
+			},
+			"basic": {
+				"cost": 0,
+				"power": 0,
+				"description": "{Greater Shadow Form (H6)}\n\nActive skill of Assassin's Blade, once per battle, needs no Spell Book and costs no Spell Points.\nFor 2 rounds, one friendly non-flying stack gains flight, can pass over troops, walls and obstacles, and takes 30% less damage from attacks; during those 2 rounds its attacks Poison the target: 5 damage per attacking creature each round, for 2 rounds."
+			},
+			"advanced": {
+				"cost": 0,
+				"power": 0,
+				"description": "{Greater Shadow Form (H6)}\n\nActive skill of Assassin's Blade, once per battle, needs no Spell Book and costs no Spell Points.\nFor 2 rounds, one friendly non-flying stack gains flight, can pass over troops, walls and obstacles, and takes 30% less damage from attacks; during those 2 rounds its attacks Poison the target: 5 damage per attacking creature each round, for 2 rounds."
+			},
+			"expert": {
+				"cost": 0,
+				"power": 0,
+				"description": "{Greater Shadow Form (H6)}\n\nActive skill of Assassin's Blade, once per battle, needs no Spell Book and costs no Spell Points.\nFor 2 rounds, one friendly non-flying stack gains flight, can pass over troops, walls and obstacles, and takes 30% less damage from attacks; during those 2 rounds its attacks Poison the target: 5 damage per attacking creature each round, for 2 rounds."
+			}
+		}
+	},
+	"h6dynSummonJuggernaut": {
+		"type": "combat",
+		"name": "Summon Juggernaut (H6)",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"flags": {
+			"special": true,
+			"positive": true
+		},
+		"graphics": {
+			"iconBook": "h6dyn/spells/h6dynSummonJuggernaut/Book",
+			"iconScroll": "h6dyn/spells/h6dynSummonJuggernaut/Scroll",
+			"iconScenarioBonus": "h6dyn/spells/h6dynSummonJuggernaut/Scenario",
+			"iconEffect": "h6dyn/spells/h6dynSummonJuggernaut/Effect",
+			"iconImmune": "h6dyn/spells/h6dynSummonJuggernaut/Effect"
+		},
+		"sounds": {
+			"cast": "SUMNELM"
+		},
+		"targetType": "NO_TARGET",
+		"targetCondition": {
+			"noneOf": {
+				"bonus.SIEGE_WEAPON": "absolute"
+			}
+		},
+		"levels": {
+			"base": {
+				"range": "X",
+				"targetModifier": {
+					"smart": true
+				},
+				"battleEffects": {
+					"guard": {
+						"type": "h6dynOnce",
+						"onceIndex": 5
+					},
+					"summon": {
+						"type": "h6dynSummon",
+						"id": "core:hellHound",
+						"amount": 20,
+						"permanent": false,
+						"exclusive": false
+					}
+				}
+			},
+			"none": {
+				"cost": 0,
+				"power": 20,
+				"description": "{Summon Juggernaut (H6)}\n\nActive skill of Blade of Binding, once per battle, needs no Spell Book and costs no Spell Points.\nSummons 20 Hell Hounds to join the battle; they vanish after combat. With Blade of Binding at level 5, the number summoned is increased by 20%."
+			},
+			"basic": {
+				"cost": 0,
+				"power": 20,
+				"description": "{Summon Juggernaut (H6)}\n\nActive skill of Blade of Binding, once per battle, needs no Spell Book and costs no Spell Points.\nSummons 20 Hell Hounds to join the battle; they vanish after combat. With Blade of Binding at level 5, the number summoned is increased by 20%."
+			},
+			"advanced": {
+				"cost": 0,
+				"power": 20,
+				"description": "{Summon Juggernaut (H6)}\n\nActive skill of Blade of Binding, once per battle, needs no Spell Book and costs no Spell Points.\nSummons 20 Hell Hounds to join the battle; they vanish after combat. With Blade of Binding at level 5, the number summoned is increased by 20%."
+			},
+			"expert": {
+				"cost": 0,
+				"power": 20,
+				"description": "{Summon Juggernaut (H6)}\n\nActive skill of Blade of Binding, once per battle, needs no Spell Book and costs no Spell Points.\nSummons 20 Hell Hounds to join the battle; they vanish after combat. With Blade of Binding at level 5, the number summoned is increased by 20%."
+			}
+		}
+	},
+	"h6dynConsecration": {
+		"type": "combat",
+		"name": "Consecration (H6)",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": true,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"flags": {
+			"special": true,
+			"indifferent": true
+		},
+		"graphics": {
+			"iconBook": "h6dyn/spells/h6dynConsecration/Book",
+			"iconScroll": "h6dyn/spells/h6dynConsecration/Scroll",
+			"iconScenarioBonus": "h6dyn/spells/h6dynConsecration/Scenario",
+			"iconEffect": "h6dyn/spells/h6dynConsecration/Effect",
+			"iconImmune": "h6dyn/spells/h6dynConsecration/Effect"
+		},
+		"sounds": {
+			"cast": "SACRIF1"
+		},
+		"targetType": "NO_TARGET",
+		"targetCondition": {
+			"noneOf": {
+				"bonus.SIEGE_WEAPON": "absolute"
+			}
+		},
+		"levels": {
+			"base": {
+				"range": "X",
+				"targetModifier": {
+					"smart": true
+				},
+				"battleEffects": {
+					"main": {
+						"type": "h6dynAct",
+						"scope": "all",
+						"side": "any",
+						"onceIndex": 6,
+						"healPercent": 5,
+						"healLevel": "resurrect",
+						"damagePercent": 5,
+						"animEnemy": "h6dyn/fx/consecration",
+						"animAlly": "h6dyn/fx/morale_up"
+					}
+				}
+			},
+			"none": {
+				"cost": 0,
+				"power": 0,
+				"description": "{Consecration (H6)}\n\nActive skill of Dragonflame Tongue, once per battle, needs no Spell Book and costs no Spell Points.\nAll friendly troops recover 5% of their total Hit Points as of the start of combat; all enemy troops take Fire damage equal to 5% of their total Hit Points as of the start of combat."
+			},
+			"basic": {
+				"cost": 0,
+				"power": 0,
+				"description": "{Consecration (H6)}\n\nActive skill of Dragonflame Tongue, once per battle, needs no Spell Book and costs no Spell Points.\nAll friendly troops recover 5% of their total Hit Points as of the start of combat; all enemy troops take Fire damage equal to 5% of their total Hit Points as of the start of combat."
+			},
+			"advanced": {
+				"cost": 0,
+				"power": 0,
+				"description": "{Consecration (H6)}\n\nActive skill of Dragonflame Tongue, once per battle, needs no Spell Book and costs no Spell Points.\nAll friendly troops recover 5% of their total Hit Points as of the start of combat; all enemy troops take Fire damage equal to 5% of their total Hit Points as of the start of combat."
+			},
+			"expert": {
+				"cost": 0,
+				"power": 0,
+				"description": "{Consecration (H6)}\n\nActive skill of Dragonflame Tongue, once per battle, needs no Spell Book and costs no Spell Points.\nAll friendly troops recover 5% of their total Hit Points as of the start of combat; all enemy troops take Fire damage equal to 5% of their total Hit Points as of the start of combat."
+			}
+		}
+	},
+	"h6dynConsecration2": {
+		"type": "combat",
+		"name": "Greater Consecration (H6)",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": true,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"flags": {
+			"special": true,
+			"indifferent": true
+		},
+		"graphics": {
+			"iconBook": "h6dyn/spells/h6dynConsecration2/Book",
+			"iconScroll": "h6dyn/spells/h6dynConsecration2/Scroll",
+			"iconScenarioBonus": "h6dyn/spells/h6dynConsecration2/Scenario",
+			"iconEffect": "h6dyn/spells/h6dynConsecration2/Effect",
+			"iconImmune": "h6dyn/spells/h6dynConsecration2/Effect"
+		},
+		"sounds": {
+			"cast": "SACRIF1"
+		},
+		"targetType": "NO_TARGET",
+		"targetCondition": {
+			"noneOf": {
+				"bonus.SIEGE_WEAPON": "absolute"
+			}
+		},
+		"levels": {
+			"base": {
+				"range": "X",
+				"targetModifier": {
+					"smart": true
+				},
+				"battleEffects": {
+					"main": {
+						"type": "h6dynAct",
+						"scope": "all",
+						"side": "any",
+						"onceIndex": 6,
+						"healPercent": 5,
+						"healLevel": "resurrect",
+						"damagePercent": 5,
+						"animEnemy": "h6dyn/fx/consecration",
+						"animAlly": "h6dyn/fx/morale_up",
+						"statusEnemies": [
+							"h6Dazed"
+						]
+					}
+				}
+			},
+			"none": {
+				"cost": 0,
+				"power": 0,
+				"description": "{Greater Consecration (H6)}\n\nActive skill of Dragonflame Tongue, once per battle, needs no Spell Book and costs no Spell Points.\nAll friendly troops recover 5% of their total Hit Points as of the start of combat; all enemy troops take Fire damage equal to 5% of their total Hit Points as of the start of combat and are Dazed (Speed -2, 2 rounds)."
+			},
+			"basic": {
+				"cost": 0,
+				"power": 0,
+				"description": "{Greater Consecration (H6)}\n\nActive skill of Dragonflame Tongue, once per battle, needs no Spell Book and costs no Spell Points.\nAll friendly troops recover 5% of their total Hit Points as of the start of combat; all enemy troops take Fire damage equal to 5% of their total Hit Points as of the start of combat and are Dazed (Speed -2, 2 rounds)."
+			},
+			"advanced": {
+				"cost": 0,
+				"power": 0,
+				"description": "{Greater Consecration (H6)}\n\nActive skill of Dragonflame Tongue, once per battle, needs no Spell Book and costs no Spell Points.\nAll friendly troops recover 5% of their total Hit Points as of the start of combat; all enemy troops take Fire damage equal to 5% of their total Hit Points as of the start of combat and are Dazed (Speed -2, 2 rounds)."
+			},
+			"expert": {
+				"cost": 0,
+				"power": 0,
+				"description": "{Greater Consecration (H6)}\n\nActive skill of Dragonflame Tongue, once per battle, needs no Spell Book and costs no Spell Points.\nAll friendly troops recover 5% of their total Hit Points as of the start of combat; all enemy troops take Fire damage equal to 5% of their total Hit Points as of the start of combat and are Dazed (Speed -2, 2 rounds)."
+			}
+		}
+	},
+	"h6dynWheelOfFortune": {
+		"type": "combat",
+		"name": "Wheel of Fortune (H6)",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"flags": {
+			"special": true,
+			"indifferent": true
+		},
+		"graphics": {
+			"iconBook": "h6dyn/spells/h6dynWheelOfFortune/Book",
+			"iconScroll": "h6dyn/spells/h6dynWheelOfFortune/Scroll",
+			"iconScenarioBonus": "h6dyn/spells/h6dynWheelOfFortune/Scenario",
+			"iconEffect": "h6dyn/spells/h6dynWheelOfFortune/Effect",
+			"iconImmune": "h6dyn/spells/h6dynWheelOfFortune/Effect"
+		},
+		"sounds": {
+			"cast": "FORTUNE"
+		},
+		"targetType": "NO_TARGET",
+		"targetCondition": {
+			"noneOf": {
+				"bonus.SIEGE_WEAPON": "absolute"
+			}
+		},
+		"levels": {
+			"base": {
+				"range": "X",
+				"targetModifier": {
+					"smart": true
+				},
+				"battleEffects": {
+					"main": {
+						"type": "h6dynAct",
+						"scope": "all",
+						"side": "any",
+						"onceIndex": 7,
+						"allies": {
+							"luck": {
+								"type": "LUCK",
+								"val": 2,
+								"turns": 3
+							}
+						},
+						"enemies": {
+							"luck": {
+								"type": "LUCK",
+								"val": -2,
+								"turns": 3
+							}
+						},
+						"animAlly": "h6dyn/fx/luck_up",
+						"animEnemy": "h6dyn/fx/luck_down"
+					}
+				}
+			},
+			"none": {
+				"cost": 0,
+				"power": 0,
+				"description": "{Wheel of Fortune (H6)}\n\nActive skill of Edge of Chaos, once per battle, needs no Spell Book and costs no Spell Points.\nFor 3 rounds, all friendly troops gain +2 Luck and all enemy troops get -2 Luck."
+			},
+			"basic": {
+				"cost": 0,
+				"power": 0,
+				"description": "{Wheel of Fortune (H6)}\n\nActive skill of Edge of Chaos, once per battle, needs no Spell Book and costs no Spell Points.\nFor 3 rounds, all friendly troops gain +2 Luck and all enemy troops get -2 Luck."
+			},
+			"advanced": {
+				"cost": 0,
+				"power": 0,
+				"description": "{Wheel of Fortune (H6)}\n\nActive skill of Edge of Chaos, once per battle, needs no Spell Book and costs no Spell Points.\nFor 3 rounds, all friendly troops gain +2 Luck and all enemy troops get -2 Luck."
+			},
+			"expert": {
+				"cost": 0,
+				"power": 0,
+				"description": "{Wheel of Fortune (H6)}\n\nActive skill of Edge of Chaos, once per battle, needs no Spell Book and costs no Spell Points.\nFor 3 rounds, all friendly troops gain +2 Luck and all enemy troops get -2 Luck."
+			}
+		}
+	},
+	"h6dynBurningLight": {
+		"type": "combat",
+		"name": "Burning Light (H6)",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"flags": {
+			"special": true,
+			"negative": true
+		},
+		"graphics": {
+			"iconBook": "h6dyn/spells/h6dynBurningLight/Book",
+			"iconScroll": "h6dyn/spells/h6dynBurningLight/Scroll",
+			"iconScenarioBonus": "h6dyn/spells/h6dynBurningLight/Scenario",
+			"iconEffect": "h6dyn/spells/h6dynBurningLight/Effect",
+			"iconImmune": "h6dyn/spells/h6dynBurningLight/Effect"
+		},
+		"sounds": {
+			"cast": "PROTECTF"
+		},
+		"targetType": "CREATURE",
+		"targetCondition": {
+			"noneOf": {
+				"bonus.SIEGE_WEAPON": "absolute"
+			}
+		},
+		"levels": {
+			"base": {
+				"range": "0",
+				"targetModifier": {
+					"smart": true
+				},
+				"battleEffects": {
+					"main": {
+						"type": "h6dynAct",
+						"scope": "target",
+						"side": "enemy",
+						"onceIndex": 8,
+						"enemies": {
+							"reflect": {
+								"type": "COMBAT_EVENT_TRIGGER",
+								"subtype": "heroes-memorial.dynasty-weapons:h6dynReflect",
+								"val": 30,
+								"turns": 3,
+								"addInfo": {
+									"anim": "h6dyn/fx/burning_light"
+								}
+							}
+						},
+						"animEnemy": "h6dyn/fx/burning_light"
+					}
+				}
+			},
+			"none": {
+				"cost": 0,
+				"power": 0,
+				"description": "{Burning Light (H6)}\n\nActive skill of Iron Feather, once per battle, needs no Spell Book and costs no Spell Points.\nFor 3 rounds, each time this enemy stack attacks, it takes 30% of that attack's damage back."
+			},
+			"basic": {
+				"cost": 0,
+				"power": 0,
+				"description": "{Burning Light (H6)}\n\nActive skill of Iron Feather, once per battle, needs no Spell Book and costs no Spell Points.\nFor 3 rounds, each time this enemy stack attacks, it takes 30% of that attack's damage back."
+			},
+			"advanced": {
+				"cost": 0,
+				"power": 0,
+				"description": "{Burning Light (H6)}\n\nActive skill of Iron Feather, once per battle, needs no Spell Book and costs no Spell Points.\nFor 3 rounds, each time this enemy stack attacks, it takes 30% of that attack's damage back."
+			},
+			"expert": {
+				"cost": 0,
+				"power": 0,
+				"description": "{Burning Light (H6)}\n\nActive skill of Iron Feather, once per battle, needs no Spell Book and costs no Spell Points.\nFor 3 rounds, each time this enemy stack attacks, it takes 30% of that attack's damage back."
+			}
+		}
+	},
+	"h6dynWrathOfTheOrcs": {
+		"type": "combat",
+		"name": "Wrath of the Orcs (H6)",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"flags": {
+			"special": true,
+			"positive": true
+		},
+		"graphics": {
+			"iconBook": "h6dyn/spells/h6dynWrathOfTheOrcs/Book",
+			"iconScroll": "h6dyn/spells/h6dynWrathOfTheOrcs/Scroll",
+			"iconScenarioBonus": "h6dyn/spells/h6dynWrathOfTheOrcs/Scenario",
+			"iconEffect": "h6dyn/spells/h6dynWrathOfTheOrcs/Effect",
+			"iconImmune": "h6dyn/spells/h6dynWrathOfTheOrcs/Effect"
+		},
+		"sounds": {
+			"cast": "BLOODLUS"
+		},
+		"targetType": "CREATURE",
+		"targetCondition": {
+			"noneOf": {
+				"bonus.SIEGE_WEAPON": "absolute"
+			}
+		},
+		"levels": {
+			"base": {
+				"range": "0",
+				"targetModifier": {
+					"smart": true
+				},
+				"battleEffects": {
+					"main": {
+						"type": "h6dynAct",
+						"scope": "target",
+						"side": "ally",
+						"onceIndex": 9,
+						"allies": {
+							"twice": {
+								"type": "ADDITIONAL_ATTACK",
+								"val": 1,
+								"turns": 2
+							}
+						},
+						"animAlly": "h6dyn/fx/wrath"
+					}
+				}
+			},
+			"none": {
+				"cost": 0,
+				"power": 0,
+				"description": "{Wrath of the Orcs (H6)}\n\nActive skill of Malathua's Cleaver, once per battle, needs no Spell Book and costs no Spell Points.\nFor 2 rounds, one friendly stack attacks twice each time."
+			},
+			"basic": {
+				"cost": 0,
+				"power": 0,
+				"description": "{Wrath of the Orcs (H6)}\n\nActive skill of Malathua's Cleaver, once per battle, needs no Spell Book and costs no Spell Points.\nFor 2 rounds, one friendly stack attacks twice each time."
+			},
+			"advanced": {
+				"cost": 0,
+				"power": 0,
+				"description": "{Wrath of the Orcs (H6)}\n\nActive skill of Malathua's Cleaver, once per battle, needs no Spell Book and costs no Spell Points.\nFor 2 rounds, one friendly stack attacks twice each time."
+			},
+			"expert": {
+				"cost": 0,
+				"power": 0,
+				"description": "{Wrath of the Orcs (H6)}\n\nActive skill of Malathua's Cleaver, once per battle, needs no Spell Book and costs no Spell Points.\nFor 2 rounds, one friendly stack attacks twice each time."
+			}
+		}
+	},
+	"h6dynWrathOfTheOrcs2": {
+		"type": "combat",
+		"name": "Greater Wrath of the Orcs (H6)",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"flags": {
+			"special": true,
+			"positive": true
+		},
+		"graphics": {
+			"iconBook": "h6dyn/spells/h6dynWrathOfTheOrcs2/Book",
+			"iconScroll": "h6dyn/spells/h6dynWrathOfTheOrcs2/Scroll",
+			"iconScenarioBonus": "h6dyn/spells/h6dynWrathOfTheOrcs2/Scenario",
+			"iconEffect": "h6dyn/spells/h6dynWrathOfTheOrcs2/Effect",
+			"iconImmune": "h6dyn/spells/h6dynWrathOfTheOrcs2/Effect"
+		},
+		"sounds": {
+			"cast": "BLOODLUS"
+		},
+		"targetType": "CREATURE",
+		"targetCondition": {
+			"noneOf": {
+				"bonus.SIEGE_WEAPON": "absolute"
+			}
+		},
+		"levels": {
+			"base": {
+				"range": "0",
+				"targetModifier": {
+					"smart": true
+				},
+				"battleEffects": {
+					"main": {
+						"type": "h6dynAct",
+						"scope": "target",
+						"side": "ally",
+						"onceIndex": 9,
+						"allies": {
+							"twice": {
+								"type": "ADDITIONAL_ATTACK",
+								"val": 1,
+								"turns": 2
+							},
+							"retaliate": {
+								"type": "UNLIMITED_RETALIATIONS",
+								"val": 0,
+								"turns": 2
+							}
+						},
+						"animAlly": "h6dyn/fx/wrath"
+					}
+				}
+			},
+			"none": {
+				"cost": 0,
+				"power": 0,
+				"description": "{Greater Wrath of the Orcs (H6)}\n\nActive skill of Malathua's Cleaver, once per battle, needs no Spell Book and costs no Spell Points.\nFor 2 rounds, one friendly stack attacks twice each time and retaliates without limit."
+			},
+			"basic": {
+				"cost": 0,
+				"power": 0,
+				"description": "{Greater Wrath of the Orcs (H6)}\n\nActive skill of Malathua's Cleaver, once per battle, needs no Spell Book and costs no Spell Points.\nFor 2 rounds, one friendly stack attacks twice each time and retaliates without limit."
+			},
+			"advanced": {
+				"cost": 0,
+				"power": 0,
+				"description": "{Greater Wrath of the Orcs (H6)}\n\nActive skill of Malathua's Cleaver, once per battle, needs no Spell Book and costs no Spell Points.\nFor 2 rounds, one friendly stack attacks twice each time and retaliates without limit."
+			},
+			"expert": {
+				"cost": 0,
+				"power": 0,
+				"description": "{Greater Wrath of the Orcs (H6)}\n\nActive skill of Malathua's Cleaver, once per battle, needs no Spell Book and costs no Spell Points.\nFor 2 rounds, one friendly stack attacks twice each time and retaliates without limit."
+			}
+		}
+	},
+	"h6dynPerfectBlade": {
+		"type": "combat",
+		"name": "Perfect Blade (H6)",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"flags": {
+			"special": true,
+			"positive": true
+		},
+		"graphics": {
+			"iconBook": "h6dyn/spells/h6dynPerfectBlade/Book",
+			"iconScroll": "h6dyn/spells/h6dynPerfectBlade/Scroll",
+			"iconScenarioBonus": "h6dyn/spells/h6dynPerfectBlade/Scenario",
+			"iconEffect": "h6dyn/spells/h6dynPerfectBlade/Effect",
+			"iconImmune": "h6dyn/spells/h6dynPerfectBlade/Effect"
+		},
+		"sounds": {
+			"cast": "PRECISON"
+		},
+		"targetType": "CREATURE",
+		"targetCondition": {
+			"noneOf": {
+				"bonus.SIEGE_WEAPON": "absolute"
+			}
+		},
+		"levels": {
+			"base": {
+				"range": "0",
+				"targetModifier": {
+					"smart": true
+				},
+				"battleEffects": {
+					"main": {
+						"type": "h6dynAct",
+						"scope": "target",
+						"side": "ally",
+						"onceIndex": 10,
+						"allies": {
+							"dmg": {
+								"type": "GENERAL_DAMAGE_PREMY",
+								"val": 30,
+								"turns": 3
+							},
+							"luck": {
+								"type": "LUCK",
+								"val": 3,
+								"turns": 3
+							}
+						},
+						"animAlly": "h6dyn/fx/perfect_blade"
+					}
+				}
+			},
+			"none": {
+				"cost": 0,
+				"power": 0,
+				"description": "{Perfect Blade (H6)}\n\nActive skill of Perfect Silksword, once per battle, needs no Spell Book and costs no Spell Points.\nOne friendly stack gains +30% damage and +3 Luck for 3 rounds."
+			},
+			"basic": {
+				"cost": 0,
+				"power": 0,
+				"description": "{Perfect Blade (H6)}\n\nActive skill of Perfect Silksword, once per battle, needs no Spell Book and costs no Spell Points.\nOne friendly stack gains +30% damage and +3 Luck for 3 rounds."
+			},
+			"advanced": {
+				"cost": 0,
+				"power": 0,
+				"description": "{Perfect Blade (H6)}\n\nActive skill of Perfect Silksword, once per battle, needs no Spell Book and costs no Spell Points.\nOne friendly stack gains +30% damage and +3 Luck for 3 rounds."
+			},
+			"expert": {
+				"cost": 0,
+				"power": 0,
+				"description": "{Perfect Blade (H6)}\n\nActive skill of Perfect Silksword, once per battle, needs no Spell Book and costs no Spell Points.\nOne friendly stack gains +30% damage and +3 Luck for 3 rounds."
+			}
+		}
+	},
+	"h6dynMysticWave": {
+		"type": "combat",
+		"name": "Mystic Wave (H6)",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"flags": {
+			"special": true,
+			"positive": true
+		},
+		"graphics": {
+			"iconBook": "h6dyn/spells/h6dynMysticWave/Book",
+			"iconScroll": "h6dyn/spells/h6dynMysticWave/Scroll",
+			"iconScenarioBonus": "h6dyn/spells/h6dynMysticWave/Scenario",
+			"iconEffect": "h6dyn/spells/h6dynMysticWave/Effect",
+			"iconImmune": "h6dyn/spells/h6dynMysticWave/Effect"
+		},
+		"sounds": {
+			"cast": "TELPTOUT"
+		},
+		"targetType": "CREATURE",
+		"targetCondition": {
+			"noneOf": {
+				"bonus.SIEGE_WEAPON": "absolute"
+			}
+		},
+		"levels": {
+			"base": {
+				"range": "0",
+				"targetModifier": {
+					"smart": true
+				},
+				"battleEffects": {
+					"guard": {
+						"type": "h6dynOnce",
+						"onceIndex": 11
+					},
+					"teleport": {
+						"type": "core:teleport",
+						"isWallPassable": true,
+						"isMoatPassable": true
+					}
+				}
+			},
+			"none": {
+				"cost": 0,
+				"power": 0,
+				"description": "{Mystic Wave (H6)}\n\nActive skill of Silksword of the Kirin, once per battle, needs no Spell Book and costs no Spell Points.\nTeleports one friendly stack to any free hex on the battlefield."
+			},
+			"basic": {
+				"cost": 0,
+				"power": 0,
+				"description": "{Mystic Wave (H6)}\n\nActive skill of Silksword of the Kirin, once per battle, needs no Spell Book and costs no Spell Points.\nTeleports one friendly stack to any free hex on the battlefield."
+			},
+			"advanced": {
+				"cost": 0,
+				"power": 0,
+				"description": "{Mystic Wave (H6)}\n\nActive skill of Silksword of the Kirin, once per battle, needs no Spell Book and costs no Spell Points.\nTeleports one friendly stack to any free hex on the battlefield."
+			},
+			"expert": {
+				"cost": 0,
+				"power": 0,
+				"description": "{Mystic Wave (H6)}\n\nActive skill of Silksword of the Kirin, once per battle, needs no Spell Book and costs no Spell Points.\nTeleports one friendly stack to any free hex on the battlefield."
+			}
+		},
+		"animation": {
+			"affect": [
+				{
+					"defName": "h6dyn/fx/mystic_wave"
+				}
+			]
+		}
+	},
+	"h6dynLifeDrain": {
+		"type": "combat",
+		"name": "Life Drain (H6)",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 10,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"flags": {
+			"special": true,
+			"negative": true,
+			"damage": true
+		},
+		"graphics": {
+			"iconBook": "h6dyn/spells/h6dynLifeDrain/Book",
+			"iconScroll": "h6dyn/spells/h6dynLifeDrain/Scroll",
+			"iconScenarioBonus": "h6dyn/spells/h6dynLifeDrain/Scenario",
+			"iconEffect": "h6dyn/spells/h6dynLifeDrain/Effect",
+			"iconImmune": "h6dyn/spells/h6dynLifeDrain/Effect"
+		},
+		"sounds": {
+			"cast": "DRAINLIF"
+		},
+		"targetType": "CREATURE",
+		"targetCondition": {
+			"noneOf": {
+				"bonus.SIEGE_WEAPON": "absolute"
+			}
+		},
+		"levels": {
+			"base": {
+				"range": "0",
+				"targetModifier": {
+					"smart": true
+				},
+				"battleEffects": {
+					"main": {
+						"type": "h6dynAct",
+						"scope": "target",
+						"side": "enemy",
+						"onceIndex": 12,
+						"damage": "power",
+						"drainPercent": 100,
+						"animEnemy": "h6dyn/fx/lifedrain_target",
+						"animAlly": "h6dyn/fx/lifedrain_target"
+					}
+				}
+			},
+			"none": {
+				"cost": 0,
+				"power": 100,
+				"description": "{Life Drain (H6)}\n\nActive skill of Souldrinker, once per battle, needs no Spell Book and costs no Spell Points.\nDeals 100 + 10×Spell Power damage to one enemy stack, and each wounded friendly stack recovers as many Hit Points."
+			},
+			"basic": {
+				"cost": 0,
+				"power": 100,
+				"description": "{Life Drain (H6)}\n\nActive skill of Souldrinker, once per battle, needs no Spell Book and costs no Spell Points.\nDeals 100 + 10×Spell Power damage to one enemy stack, and each wounded friendly stack recovers as many Hit Points."
+			},
+			"advanced": {
+				"cost": 0,
+				"power": 100,
+				"description": "{Life Drain (H6)}\n\nActive skill of Souldrinker, once per battle, needs no Spell Book and costs no Spell Points.\nDeals 100 + 10×Spell Power damage to one enemy stack, and each wounded friendly stack recovers as many Hit Points."
+			},
+			"expert": {
+				"cost": 0,
+				"power": 100,
+				"description": "{Life Drain (H6)}\n\nActive skill of Souldrinker, once per battle, needs no Spell Book and costs no Spell Points.\nDeals 100 + 10×Spell Power damage to one enemy stack, and each wounded friendly stack recovers as many Hit Points."
+			}
+		}
+	},
+	"h6dynGriffinsFury": {
+		"type": "combat",
+		"name": "Griffin's Fury (H6)",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"flags": {
+			"special": true,
+			"positive": true
+		},
+		"graphics": {
+			"iconBook": "h6dyn/spells/h6dynGriffinsFury/Book",
+			"iconScroll": "h6dyn/spells/h6dynGriffinsFury/Scroll",
+			"iconScenarioBonus": "h6dyn/spells/h6dynGriffinsFury/Scenario",
+			"iconEffect": "h6dyn/spells/h6dynGriffinsFury/Effect",
+			"iconImmune": "h6dyn/spells/h6dynGriffinsFury/Effect"
+		},
+		"sounds": {
+			"cast": "BLOODLUS"
+		},
+		"targetType": "CREATURE",
+		"targetCondition": {
+			"noneOf": {
+				"bonus.SIEGE_WEAPON": "absolute"
+			}
+		},
+		"levels": {
+			"base": {
+				"range": "0",
+				"targetModifier": {
+					"smart": true
+				},
+				"battleEffects": {
+					"main": {
+						"type": "h6dynAct",
+						"scope": "target",
+						"side": "ally",
+						"onceIndex": 13,
+						"allies": {
+							"retaliate": {
+								"type": "UNLIMITED_RETALIATIONS",
+								"val": 0,
+								"duration": "ONE_BATTLE"
+							}
+						},
+						"animAlly": "h6dyn/fx/griffin_fury"
+					}
+				}
+			},
+			"none": {
+				"cost": 0,
+				"power": 0,
+				"description": "{Griffin's Fury (H6)}\n\nActive skill of Sword of the Griffin, once per battle, needs no Spell Book and costs no Spell Points.\nOne friendly stack retaliates without limit for the rest of the battle."
+			},
+			"basic": {
+				"cost": 0,
+				"power": 0,
+				"description": "{Griffin's Fury (H6)}\n\nActive skill of Sword of the Griffin, once per battle, needs no Spell Book and costs no Spell Points.\nOne friendly stack retaliates without limit for the rest of the battle."
+			},
+			"advanced": {
+				"cost": 0,
+				"power": 0,
+				"description": "{Griffin's Fury (H6)}\n\nActive skill of Sword of the Griffin, once per battle, needs no Spell Book and costs no Spell Points.\nOne friendly stack retaliates without limit for the rest of the battle."
+			},
+			"expert": {
+				"cost": 0,
+				"power": 0,
+				"description": "{Griffin's Fury (H6)}\n\nActive skill of Sword of the Griffin, once per battle, needs no Spell Book and costs no Spell Points.\nOne friendly stack retaliates without limit for the rest of the battle."
+			}
+		}
+	},
+	"h6dynWolfsJaws": {
+		"type": "combat",
+		"name": "Wolf's Jaws (H6)",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"flags": {
+			"special": true,
+			"indifferent": true
+		},
+		"graphics": {
+			"iconBook": "h6dyn/spells/h6dynWolfsJaws/Book",
+			"iconScroll": "h6dyn/spells/h6dynWolfsJaws/Scroll",
+			"iconScenarioBonus": "h6dyn/spells/h6dynWolfsJaws/Scenario",
+			"iconEffect": "h6dyn/spells/h6dynWolfsJaws/Effect",
+			"iconImmune": "h6dyn/spells/h6dynWolfsJaws/Effect"
+		},
+		"sounds": {
+			"cast": "ARMGEDN"
+		},
+		"targetType": "NO_TARGET",
+		"targetCondition": {
+			"noneOf": {
+				"bonus.SIEGE_WEAPON": "absolute"
+			}
+		},
+		"levels": {
+			"base": {
+				"range": "X",
+				"targetModifier": {
+					"smart": false
+				},
+				"battleEffects": {
+					"main": {
+						"type": "h6dynAct",
+						"scope": "all",
+						"side": "any",
+						"onceIndex": 14,
+						"battle": {
+							"flee": {
+								"type": "BATTLE_CAN_FLEE",
+								"val": -100
+							},
+							"surrender": {
+								"type": "BATTLE_CAN_SURRENDER",
+								"val": -100
+							}
+						}
+					}
+				}
+			},
+			"none": {
+				"cost": 0,
+				"power": 0,
+				"description": "{Wolf's Jaws (H6)}\n\nActive skill of Sword of the Wolf, once per battle, needs no Spell Book and costs no Spell Points.\nFor the rest of the battle, neither hero can retreat or surrender."
+			},
+			"basic": {
+				"cost": 0,
+				"power": 0,
+				"description": "{Wolf's Jaws (H6)}\n\nActive skill of Sword of the Wolf, once per battle, needs no Spell Book and costs no Spell Points.\nFor the rest of the battle, neither hero can retreat or surrender."
+			},
+			"advanced": {
+				"cost": 0,
+				"power": 0,
+				"description": "{Wolf's Jaws (H6)}\n\nActive skill of Sword of the Wolf, once per battle, needs no Spell Book and costs no Spell Points.\nFor the rest of the battle, neither hero can retreat or surrender."
+			},
+			"expert": {
+				"cost": 0,
+				"power": 0,
+				"description": "{Wolf's Jaws (H6)}\n\nActive skill of Sword of the Wolf, once per battle, needs no Spell Book and costs no Spell Points.\nFor the rest of the battle, neither hero can retreat or surrender."
+			}
+		},
+		"animation": {
+			"affect": [
+				{
+					"effectName": "h6dynWolfsJawsDim"
+				}
+			],
+			"hit": [
+				{
+					"defName": "h6dyn/fx/wolf_jaws_dim"
+				}
+			]
+		}
+	},
+	"h6dynFatherSky": {
+		"type": "combat",
+		"name": "Father Sky (H6)",
+		"school": {
+			"air": true,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"flags": {
+			"special": true,
+			"negative": true
+		},
+		"graphics": {
+			"iconBook": "h6dyn/spells/h6dynFatherSky/Book",
+			"iconScroll": "h6dyn/spells/h6dynFatherSky/Scroll",
+			"iconScenarioBonus": "h6dyn/spells/h6dynFatherSky/Scenario",
+			"iconEffect": "h6dyn/spells/h6dynFatherSky/Effect",
+			"iconImmune": "h6dyn/spells/h6dynFatherSky/Effect"
+		},
+		"sounds": {
+			"cast": "LIGHTBLT"
+		},
+		"targetType": "CREATURE",
+		"targetCondition": {
+			"noneOf": {
+				"bonus.SIEGE_WEAPON": "absolute"
+			}
+		},
+		"levels": {
+			"base": {
+				"range": "0",
+				"targetModifier": {
+					"smart": true
+				},
+				"battleEffects": {
+					"main": {
+						"type": "h6dynAct",
+						"scope": "adjacent",
+						"side": "enemy",
+						"onceIndex": 15,
+						"damage": 300,
+						"animEnemy": "h6dyn/fx/chain_lightning_target_short",
+						"beam": "h6dyn/fx/chain_lightning_beam"
+					}
+				}
+			},
+			"none": {
+				"cost": 0,
+				"power": 0,
+				"description": "{Father Sky (H6)}\n\nActive skill of Sword of Whistlebone, once per battle, needs no Spell Book and costs no Spell Points.\nDeals 300 Air damage to one enemy stack and to each enemy stack adjacent to it."
+			},
+			"basic": {
+				"cost": 0,
+				"power": 0,
+				"description": "{Father Sky (H6)}\n\nActive skill of Sword of Whistlebone, once per battle, needs no Spell Book and costs no Spell Points.\nDeals 300 Air damage to one enemy stack and to each enemy stack adjacent to it."
+			},
+			"advanced": {
+				"cost": 0,
+				"power": 0,
+				"description": "{Father Sky (H6)}\n\nActive skill of Sword of Whistlebone, once per battle, needs no Spell Book and costs no Spell Points.\nDeals 300 Air damage to one enemy stack and to each enemy stack adjacent to it."
+			},
+			"expert": {
+				"cost": 0,
+				"power": 0,
+				"description": "{Father Sky (H6)}\n\nActive skill of Sword of Whistlebone, once per battle, needs no Spell Book and costs no Spell Points.\nDeals 300 Air damage to one enemy stack and to each enemy stack adjacent to it."
+			}
+		}
+	},
+	"h6dynFreeRum": {
+		"type": "combat",
+		"name": "Free Rum (H6)",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"flags": {
+			"special": true,
+			"positive": true
+		},
+		"graphics": {
+			"iconBook": "h6dyn/spells/h6dynFreeRum/Book",
+			"iconScroll": "h6dyn/spells/h6dynFreeRum/Scroll",
+			"iconScenarioBonus": "h6dyn/spells/h6dynFreeRum/Scenario",
+			"iconEffect": "h6dyn/spells/h6dynFreeRum/Effect",
+			"iconImmune": "h6dyn/spells/h6dynFreeRum/Effect"
+		},
+		"sounds": {
+			"cast": "MIRTH"
+		},
+		"targetType": "NO_TARGET",
+		"targetCondition": {
+			"noneOf": {
+				"bonus.SIEGE_WEAPON": "absolute"
+			}
+		},
+		"levels": {
+			"base": {
+				"range": "X",
+				"targetModifier": {
+					"smart": true
+				},
+				"battleEffects": {
+					"main": {
+						"type": "h6dynAct",
+						"scope": "all",
+						"side": "ally",
+						"onceIndex": 16,
+						"allies": {
+							"morale": {
+								"type": "MORALE",
+								"val": 3,
+								"turns": 3
+							}
+						},
+						"animAlly": "h6dyn/fx/free_rum"
+					}
+				}
+			},
+			"none": {
+				"cost": 0,
+				"power": 0,
+				"description": "{Free Rum (H6)}\n\nActive skill of Sword of the Pirate King, once per battle, needs no Spell Book and costs no Spell Points.\nAll friendly troops gain +3 Morale for 3 rounds."
+			},
+			"basic": {
+				"cost": 0,
+				"power": 0,
+				"description": "{Free Rum (H6)}\n\nActive skill of Sword of the Pirate King, once per battle, needs no Spell Book and costs no Spell Points.\nAll friendly troops gain +3 Morale for 3 rounds."
+			},
+			"advanced": {
+				"cost": 0,
+				"power": 0,
+				"description": "{Free Rum (H6)}\n\nActive skill of Sword of the Pirate King, once per battle, needs no Spell Book and costs no Spell Points.\nAll friendly troops gain +3 Morale for 3 rounds."
+			},
+			"expert": {
+				"cost": 0,
+				"power": 0,
+				"description": "{Free Rum (H6)}\n\nActive skill of Sword of the Pirate King, once per battle, needs no Spell Book and costs no Spell Points.\nAll friendly troops gain +3 Morale for 3 rounds."
+			}
+		}
+	},
+	"h6dynBurningHeart": {
+		"type": "combat",
+		"name": "Burning Heart (H6)",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"flags": {
+			"special": true,
+			"negative": true
+		},
+		"graphics": {
+			"iconBook": "h6dyn/spells/h6dynBurningHeart/Book",
+			"iconScroll": "h6dyn/spells/h6dynBurningHeart/Scroll",
+			"iconScenarioBonus": "h6dyn/spells/h6dynBurningHeart/Scenario",
+			"iconEffect": "h6dyn/spells/h6dynBurningHeart/Effect",
+			"iconImmune": "h6dyn/spells/h6dynBurningHeart/Effect"
+		},
+		"sounds": {
+			"cast": "BERSERK"
+		},
+		"targetType": "CREATURE",
+		"targetCondition": {
+			"noneOf": {
+				"bonus.SIEGE_WEAPON": "absolute",
+				"bonus.MIND_IMMUNITY": "normal",
+				"bonus.UNDEAD": "normal",
+				"bonus.NON_LIVING": "normal",
+				"bonus.MECHANICAL": "normal"
+			}
+		},
+		"levels": {
+			"base": {
+				"range": "0",
+				"targetModifier": {
+					"smart": true
+				},
+				"battleEffects": {
+					"main": {
+						"type": "h6dynAct",
+						"scope": "target",
+						"side": "enemy",
+						"onceIndex": 17,
+						"cooldown": 4,
+						"control": true,
+						"enemies": {
+							"berserk": {
+								"type": "ATTACKS_NEAREST_CREATURE",
+								"val": 0,
+								"turns": 2,
+								"duration": [
+									"N_TURNS",
+									"UNTIL_BEING_ATTACKED"
+								]
+							},
+							"dmg": {
+								"type": "GENERAL_DAMAGE_PREMY",
+								"val": 30,
+								"turns": 2,
+								"duration": [
+									"N_TURNS",
+									"UNTIL_BEING_ATTACKED"
+								]
+							}
+						},
+						"animEnemy": "h6dyn/fx/consecration"
+					}
+				}
+			},
+			"none": {
+				"cost": 0,
+				"power": 0,
+				"description": "{Burning Heart (H6)}\n\nActive skill of Sword of Nemesis, cooldown 4 rounds, needs no Spell Book and costs no Spell Points.\nOne enemy stack goes berserk and attacks the nearest stack with +30% damage, for 1 round or until it is attacked. No effect on Mind-immune troops (including Undead, Unliving and Mechanical), Commanders, War Machines or Capital Guardians."
+			},
+			"basic": {
+				"cost": 0,
+				"power": 0,
+				"description": "{Burning Heart (H6)}\n\nActive skill of Sword of Nemesis, cooldown 4 rounds, needs no Spell Book and costs no Spell Points.\nOne enemy stack goes berserk and attacks the nearest stack with +30% damage, for 1 round or until it is attacked. No effect on Mind-immune troops (including Undead, Unliving and Mechanical), Commanders, War Machines or Capital Guardians."
+			},
+			"advanced": {
+				"cost": 0,
+				"power": 0,
+				"description": "{Burning Heart (H6)}\n\nActive skill of Sword of Nemesis, cooldown 4 rounds, needs no Spell Book and costs no Spell Points.\nOne enemy stack goes berserk and attacks the nearest stack with +30% damage, for 1 round or until it is attacked. No effect on Mind-immune troops (including Undead, Unliving and Mechanical), Commanders, War Machines or Capital Guardians."
+			},
+			"expert": {
+				"cost": 0,
+				"power": 0,
+				"description": "{Burning Heart (H6)}\n\nActive skill of Sword of Nemesis, cooldown 4 rounds, needs no Spell Book and costs no Spell Points.\nOne enemy stack goes berserk and attacks the nearest stack with +30% damage, for 1 round or until it is attacked. No effect on Mind-immune troops (including Undead, Unliving and Mechanical), Commanders, War Machines or Capital Guardians."
+			}
+		}
+	},
+	"h6dynBurningSoul": {
+		"type": "combat",
+		"name": "Burning Soul (H6)",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"flags": {
+			"special": true,
+			"negative": true
+		},
+		"graphics": {
+			"iconBook": "h6dyn/spells/h6dynBurningSoul/Book",
+			"iconScroll": "h6dyn/spells/h6dynBurningSoul/Scroll",
+			"iconScenarioBonus": "h6dyn/spells/h6dynBurningSoul/Scenario",
+			"iconEffect": "h6dyn/spells/h6dynBurningSoul/Effect",
+			"iconImmune": "h6dyn/spells/h6dynBurningSoul/Effect"
+		},
+		"sounds": {
+			"cast": "BERSERK"
+		},
+		"targetType": "CREATURE",
+		"targetCondition": {
+			"noneOf": {
+				"bonus.SIEGE_WEAPON": "absolute",
+				"bonus.MIND_IMMUNITY": "normal",
+				"bonus.UNDEAD": "normal",
+				"bonus.NON_LIVING": "normal",
+				"bonus.MECHANICAL": "normal"
+			}
+		},
+		"levels": {
+			"base": {
+				"range": "0",
+				"targetModifier": {
+					"smart": true
+				},
+				"battleEffects": {
+					"main": {
+						"type": "h6dynAct",
+						"scope": "target",
+						"side": "enemy",
+						"onceIndex": 17,
+						"cooldown": 4,
+						"control": true,
+						"enemies": {
+							"berserk": {
+								"type": "ATTACKS_NEAREST_CREATURE",
+								"val": 0,
+								"turns": 2
+							},
+							"dmg": {
+								"type": "GENERAL_DAMAGE_PREMY",
+								"val": 30,
+								"turns": 2
+							},
+							"mind": {
+								"type": "MIND_IMMUNITY",
+								"val": 0,
+								"turns": 2
+							},
+							"blind": {
+								"type": "SPELL_IMMUNITY",
+								"subtype": "blind",
+								"val": 0,
+								"turns": 2
+							}
+						},
+						"animEnemy": "h6dyn/fx/consecration"
+					}
+				}
+			},
+			"none": {
+				"cost": 0,
+				"power": 0,
+				"description": "{Burning Soul (H6)}\n\nActive skill of Sword of Nemesis, cooldown 4 rounds, needs no Spell Book and costs no Spell Points.\nOne enemy stack goes berserk and attacks the nearest stack with +30% damage for 2 rounds; being attacked does not end it, and meanwhile it is immune to Mind spells and Blind. No effect on Mind-immune troops (including Undead, Unliving and Mechanical), Commanders, War Machines or Capital Guardians."
+			},
+			"basic": {
+				"cost": 0,
+				"power": 0,
+				"description": "{Burning Soul (H6)}\n\nActive skill of Sword of Nemesis, cooldown 4 rounds, needs no Spell Book and costs no Spell Points.\nOne enemy stack goes berserk and attacks the nearest stack with +30% damage for 2 rounds; being attacked does not end it, and meanwhile it is immune to Mind spells and Blind. No effect on Mind-immune troops (including Undead, Unliving and Mechanical), Commanders, War Machines or Capital Guardians."
+			},
+			"advanced": {
+				"cost": 0,
+				"power": 0,
+				"description": "{Burning Soul (H6)}\n\nActive skill of Sword of Nemesis, cooldown 4 rounds, needs no Spell Book and costs no Spell Points.\nOne enemy stack goes berserk and attacks the nearest stack with +30% damage for 2 rounds; being attacked does not end it, and meanwhile it is immune to Mind spells and Blind. No effect on Mind-immune troops (including Undead, Unliving and Mechanical), Commanders, War Machines or Capital Guardians."
+			},
+			"expert": {
+				"cost": 0,
+				"power": 0,
+				"description": "{Burning Soul (H6)}\n\nActive skill of Sword of Nemesis, cooldown 4 rounds, needs no Spell Book and costs no Spell Points.\nOne enemy stack goes berserk and attacks the nearest stack with +30% damage for 2 rounds; being attacked does not end it, and meanwhile it is immune to Mind spells and Blind. No effect on Mind-immune troops (including Undead, Unliving and Mechanical), Commanders, War Machines or Capital Guardians."
+			}
+		}
+	},
+	"h6dynSpectralDragon": {
+		"type": "combat",
+		"name": "Spectral Call (H6)",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"flags": {
+			"special": true,
+			"positive": true
+		},
+		"graphics": {
+			"iconBook": "h6dyn/spells/h6dynSpectralDragon/Book",
+			"iconScroll": "h6dyn/spells/h6dynSpectralDragon/Scroll",
+			"iconScenarioBonus": "h6dyn/spells/h6dynSpectralDragon/Scenario",
+			"iconEffect": "h6dyn/spells/h6dynSpectralDragon/Effect",
+			"iconImmune": "h6dyn/spells/h6dynSpectralDragon/Effect"
+		},
+		"sounds": {
+			"cast": "SUMNELM"
+		},
+		"targetType": "NO_TARGET",
+		"targetCondition": {
+			"noneOf": {
+				"bonus.SIEGE_WEAPON": "absolute"
+			}
+		},
+		"levels": {
+			"base": {
+				"range": "X",
+				"targetModifier": {
+					"smart": true
+				},
+				"battleEffects": {
+					"guard": {
+						"type": "h6dynOnce",
+						"onceIndex": 18
+					},
+					"summon": {
+						"type": "h6dynSummon",
+						"id": "core:ghostDragon",
+						"amount": 3,
+						"permanent": false,
+						"exclusive": false
+					}
+				}
+			},
+			"none": {
+				"cost": 0,
+				"power": 3,
+				"description": "{Spectral Call (H6)}\n\nActive skill of Dragonbone Staff, once per battle, needs no Spell Book and costs no Spell Points.\nSummons 3 Ghost Dragons to join the battle; they vanish after combat."
+			},
+			"basic": {
+				"cost": 0,
+				"power": 3,
+				"description": "{Spectral Call (H6)}\n\nActive skill of Dragonbone Staff, once per battle, needs no Spell Book and costs no Spell Points.\nSummons 3 Ghost Dragons to join the battle; they vanish after combat."
+			},
+			"advanced": {
+				"cost": 0,
+				"power": 3,
+				"description": "{Spectral Call (H6)}\n\nActive skill of Dragonbone Staff, once per battle, needs no Spell Book and costs no Spell Points.\nSummons 3 Ghost Dragons to join the battle; they vanish after combat."
+			},
+			"expert": {
+				"cost": 0,
+				"power": 3,
+				"description": "{Spectral Call (H6)}\n\nActive skill of Dragonbone Staff, once per battle, needs no Spell Book and costs no Spell Points.\nSummons 3 Ghost Dragons to join the battle; they vanish after combat."
+			}
+		}
+	},
+	"h6dynSpectralDragon2": {
+		"type": "combat",
+		"name": "Spectral Wave (H6)",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"flags": {
+			"special": true,
+			"positive": true
+		},
+		"graphics": {
+			"iconBook": "h6dyn/spells/h6dynSpectralDragon2/Book",
+			"iconScroll": "h6dyn/spells/h6dynSpectralDragon2/Scroll",
+			"iconScenarioBonus": "h6dyn/spells/h6dynSpectralDragon2/Scenario",
+			"iconEffect": "h6dyn/spells/h6dynSpectralDragon2/Effect",
+			"iconImmune": "h6dyn/spells/h6dynSpectralDragon2/Effect"
+		},
+		"sounds": {
+			"cast": "SUMNELM"
+		},
+		"targetType": "NO_TARGET",
+		"targetCondition": {
+			"noneOf": {
+				"bonus.SIEGE_WEAPON": "absolute"
+			}
+		},
+		"levels": {
+			"base": {
+				"range": "X",
+				"targetModifier": {
+					"smart": true
+				},
+				"battleEffects": {
+					"guard": {
+						"type": "h6dynOnce",
+						"onceIndex": 18
+					},
+					"summon": {
+						"type": "h6dynSummon",
+						"id": "core:ghostDragon",
+						"amount": 5,
+						"permanent": false,
+						"exclusive": false
+					}
+				}
+			},
+			"none": {
+				"cost": 0,
+				"power": 5,
+				"description": "{Spectral Wave (H6)}\n\nActive skill of Dragonbone Staff, once per battle, needs no Spell Book and costs no Spell Points.\nSummons 5 Ghost Dragons to join the battle; they vanish after combat."
+			},
+			"basic": {
+				"cost": 0,
+				"power": 5,
+				"description": "{Spectral Wave (H6)}\n\nActive skill of Dragonbone Staff, once per battle, needs no Spell Book and costs no Spell Points.\nSummons 5 Ghost Dragons to join the battle; they vanish after combat."
+			},
+			"advanced": {
+				"cost": 0,
+				"power": 5,
+				"description": "{Spectral Wave (H6)}\n\nActive skill of Dragonbone Staff, once per battle, needs no Spell Book and costs no Spell Points.\nSummons 5 Ghost Dragons to join the battle; they vanish after combat."
+			},
+			"expert": {
+				"cost": 0,
+				"power": 5,
+				"description": "{Spectral Wave (H6)}\n\nActive skill of Dragonbone Staff, once per battle, needs no Spell Book and costs no Spell Points.\nSummons 5 Ghost Dragons to join the battle; they vanish after combat."
+			}
+		}
+	},
+	"h6dynSephielsVoice": {
+		"type": "combat",
+		"name": "Sephiel's Voice (H6)",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 8,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"flags": {
+			"special": true,
+			"positive": true
+		},
+		"graphics": {
+			"iconBook": "h6dyn/spells/h6dynSephielsVoice/Book",
+			"iconScroll": "h6dyn/spells/h6dynSephielsVoice/Scroll",
+			"iconScenarioBonus": "h6dyn/spells/h6dynSephielsVoice/Scenario",
+			"iconEffect": "h6dyn/spells/h6dynSephielsVoice/Effect",
+			"iconImmune": "h6dyn/spells/h6dynSephielsVoice/Effect"
+		},
+		"sounds": {
+			"cast": "CURE"
+		},
+		"targetType": "LOCATION",
+		"targetCondition": {
+			"noneOf": {
+				"bonus.SIEGE_WEAPON": "absolute"
+			}
+		},
+		"levels": {
+			"base": {
+				"range": "0-1",
+				"targetModifier": {
+					"smart": true
+				},
+				"battleEffects": {
+					"main": {
+						"type": "h6dynAct",
+						"scope": "target",
+						"side": "ally",
+						"onceIndex": 19,
+						"heal": "power",
+						"healLevel": "resurrect",
+						"animAlly": "h6dyn/fx/sephiel"
+					}
+				}
+			},
+			"none": {
+				"cost": 0,
+				"power": 79,
+				"description": "{Sephiel's Voice (H6)}\n\nActive skill of Heartrending Song, once per battle, needs no Spell Book and costs no Spell Points.\nFriendly troops in the target area (the center and one ring around it) recover 79 + 8×Spell Power Hit Points."
+			},
+			"basic": {
+				"cost": 0,
+				"power": 79,
+				"description": "{Sephiel's Voice (H6)}\n\nActive skill of Heartrending Song, once per battle, needs no Spell Book and costs no Spell Points.\nFriendly troops in the target area (the center and one ring around it) recover 79 + 8×Spell Power Hit Points."
+			},
+			"advanced": {
+				"cost": 0,
+				"power": 79,
+				"description": "{Sephiel's Voice (H6)}\n\nActive skill of Heartrending Song, once per battle, needs no Spell Book and costs no Spell Points.\nFriendly troops in the target area (the center and one ring around it) recover 79 + 8×Spell Power Hit Points."
+			},
+			"expert": {
+				"cost": 0,
+				"power": 79,
+				"description": "{Sephiel's Voice (H6)}\n\nActive skill of Heartrending Song, once per battle, needs no Spell Book and costs no Spell Points.\nFriendly troops in the target area (the center and one ring around it) recover 79 + 8×Spell Power Hit Points."
+			}
+		}
+	},
+	"h6dynSephielsVoice2": {
+		"type": "combat",
+		"name": "Greater Sephiel's Voice (H6)",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 8,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"flags": {
+			"special": true,
+			"indifferent": true
+		},
+		"graphics": {
+			"iconBook": "h6dyn/spells/h6dynSephielsVoice2/Book",
+			"iconScroll": "h6dyn/spells/h6dynSephielsVoice2/Scroll",
+			"iconScenarioBonus": "h6dyn/spells/h6dynSephielsVoice2/Scenario",
+			"iconEffect": "h6dyn/spells/h6dynSephielsVoice2/Effect",
+			"iconImmune": "h6dyn/spells/h6dynSephielsVoice2/Effect"
+		},
+		"sounds": {
+			"cast": "CURE"
+		},
+		"targetType": "LOCATION",
+		"targetCondition": {
+			"noneOf": {
+				"bonus.SIEGE_WEAPON": "absolute"
+			}
+		},
+		"levels": {
+			"base": {
+				"range": "0-1",
+				"targetModifier": {
+					"smart": false
+				},
+				"battleEffects": {
+					"main": {
+						"type": "h6dynAct",
+						"scope": "target",
+						"side": "any",
+						"onceIndex": 19,
+						"heal": "power",
+						"healLevel": "resurrect",
+						"control": true,
+						"enemies": {
+							"charm": {
+								"type": "NOT_ACTIVE",
+								"val": 0,
+								"turns": 2,
+								"duration": [
+									"N_TURNS",
+									"UNTIL_BEING_ATTACKED"
+								]
+							}
+						},
+						"animAlly": "h6dyn/fx/sephiel",
+						"animEnemy": "h6dyn/fx/charm"
+					}
+				}
+			},
+			"none": {
+				"cost": 0,
+				"power": 79,
+				"description": "{Greater Sephiel's Voice (H6)}\n\nActive skill of Heartrending Song, once per battle, needs no Spell Book and costs no Spell Points.\nFriendly troops in the target area (the center and one ring around it) recover 79 + 8×Spell Power Hit Points; enemy troops in the area are Charmed and skip their next action, which ends when they are attacked (they retaliate as usual). Mind-immune troops (including Undead, Unliving and Mechanical), Commanders, War Machines and Capital Guardians cannot be Charmed."
+			},
+			"basic": {
+				"cost": 0,
+				"power": 79,
+				"description": "{Greater Sephiel's Voice (H6)}\n\nActive skill of Heartrending Song, once per battle, needs no Spell Book and costs no Spell Points.\nFriendly troops in the target area (the center and one ring around it) recover 79 + 8×Spell Power Hit Points; enemy troops in the area are Charmed and skip their next action, which ends when they are attacked (they retaliate as usual). Mind-immune troops (including Undead, Unliving and Mechanical), Commanders, War Machines and Capital Guardians cannot be Charmed."
+			},
+			"advanced": {
+				"cost": 0,
+				"power": 79,
+				"description": "{Greater Sephiel's Voice (H6)}\n\nActive skill of Heartrending Song, once per battle, needs no Spell Book and costs no Spell Points.\nFriendly troops in the target area (the center and one ring around it) recover 79 + 8×Spell Power Hit Points; enemy troops in the area are Charmed and skip their next action, which ends when they are attacked (they retaliate as usual). Mind-immune troops (including Undead, Unliving and Mechanical), Commanders, War Machines and Capital Guardians cannot be Charmed."
+			},
+			"expert": {
+				"cost": 0,
+				"power": 79,
+				"description": "{Greater Sephiel's Voice (H6)}\n\nActive skill of Heartrending Song, once per battle, needs no Spell Book and costs no Spell Points.\nFriendly troops in the target area (the center and one ring around it) recover 79 + 8×Spell Power Hit Points; enemy troops in the area are Charmed and skip their next action, which ends when they are attacked (they retaliate as usual). Mind-immune troops (including Undead, Unliving and Mechanical), Commanders, War Machines and Capital Guardians cannot be Charmed."
+			}
+		}
+	},
+	"h6dynTimeTrap": {
+		"type": "combat",
+		"name": "Time Trap (H6)",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"flags": {
+			"special": true,
+			"indifferent": true
+		},
+		"graphics": {
+			"iconBook": "h6dyn/spells/h6dynTimeTrap/Book",
+			"iconScroll": "h6dyn/spells/h6dynTimeTrap/Scroll",
+			"iconScenarioBonus": "h6dyn/spells/h6dynTimeTrap/Scenario",
+			"iconEffect": "h6dyn/spells/h6dynTimeTrap/Effect",
+			"iconImmune": "h6dyn/spells/h6dynTimeTrap/Effect"
+		},
+		"sounds": {
+			"cast": "FORCEFLD"
+		},
+		"targetType": "LOCATION",
+		"targetCondition": {
+			"noneOf": {
+				"bonus.SIEGE_WEAPON": "absolute"
+			}
+		},
+		"levels": {
+			"base": {
+				"range": "0",
+				"targetModifier": {
+					"smart": true,
+					"clearAffected": true
+				},
+				"battleEffects": {
+					"guard": {
+						"type": "h6dynOnce",
+						"onceIndex": 20
+					},
+					"obstacle": {
+						"type": "core:obstacle",
+						"hidden": true,
+						"passable": true,
+						"trap": true,
+						"removeOnTrigger": true,
+						"triggerAbility": "heroes-memorial.dynasty-weapons:h6dynTimeStasis",
+						"turnsRemaining": -1,
+						"attacker": {
+							"shape": [
+								[
+									"R"
+								]
+							],
+							"range": [
+								[
+									"L"
+								]
+							],
+							"animation": "h6dyn/fx/time_trap_idle",
+							"appearAnimation": "h6dyn/fx/time_trap_appear",
+							"removalAnimation": "h6dyn/fx/time_trap_removal"
+						},
+						"defender": {
+							"shape": [
+								[
+									"R"
+								]
+							],
+							"range": [
+								[
+									"L"
+								]
+							],
+							"animation": "h6dyn/fx/time_trap_idle",
+							"appearAnimation": "h6dyn/fx/time_trap_appear",
+							"removalAnimation": "h6dyn/fx/time_trap_removal"
+						}
+					}
+				}
+			},
+			"none": {
+				"cost": 0,
+				"power": 0,
+				"description": "{Time Trap (H6)}\n\nActive skill of Soulreaver Staff, once per battle, needs no Spell Book and costs no Spell Points.\nPlaces a Time Trap on an empty hex (invisible to the enemy). The first enemy stack to step into it falls into Chrono Stasis and cannot act for the next 2 rounds; being attacked does not end it (Mind-immune troops (including Undead, Unliving and Mechanical), Commanders, War Machines and Capital Guardians are unaffected)."
+			},
+			"basic": {
+				"cost": 0,
+				"power": 0,
+				"description": "{Time Trap (H6)}\n\nActive skill of Soulreaver Staff, once per battle, needs no Spell Book and costs no Spell Points.\nPlaces a Time Trap on an empty hex (invisible to the enemy). The first enemy stack to step into it falls into Chrono Stasis and cannot act for the next 2 rounds; being attacked does not end it (Mind-immune troops (including Undead, Unliving and Mechanical), Commanders, War Machines and Capital Guardians are unaffected)."
+			},
+			"advanced": {
+				"cost": 0,
+				"power": 0,
+				"description": "{Time Trap (H6)}\n\nActive skill of Soulreaver Staff, once per battle, needs no Spell Book and costs no Spell Points.\nPlaces a Time Trap on an empty hex (invisible to the enemy). The first enemy stack to step into it falls into Chrono Stasis and cannot act for the next 2 rounds; being attacked does not end it (Mind-immune troops (including Undead, Unliving and Mechanical), Commanders, War Machines and Capital Guardians are unaffected)."
+			},
+			"expert": {
+				"cost": 0,
+				"power": 0,
+				"description": "{Time Trap (H6)}\n\nActive skill of Soulreaver Staff, once per battle, needs no Spell Book and costs no Spell Points.\nPlaces a Time Trap on an empty hex (invisible to the enemy). The first enemy stack to step into it falls into Chrono Stasis and cannot act for the next 2 rounds; being attacked does not end it (Mind-immune troops (including Undead, Unliving and Mechanical), Commanders, War Machines and Capital Guardians are unaffected)."
+			}
+		}
+	},
+	"h6dynTimeStasis": {
+		"type": "combat",
+		"name": "Chrono Stasis (H6)",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"flags": {
+			"special": true,
+			"negative": true
+		},
+		"graphics": {
+			"iconBook": "h6dyn/spells/h6dynTimeStasis/Book",
+			"iconScroll": "h6dyn/spells/h6dynTimeStasis/Scroll",
+			"iconScenarioBonus": "h6dyn/spells/h6dynTimeStasis/Scenario",
+			"iconEffect": "h6dyn/spells/h6dynTimeStasis/Effect",
+			"iconImmune": "h6dyn/spells/h6dynTimeStasis/Effect"
+		},
+		"sounds": {
+			"cast": ""
+		},
+		"targetType": "CREATURE",
+		"targetCondition": {
+			"noneOf": {
+				"bonus.SIEGE_WEAPON": "absolute",
+				"bonus.MIND_IMMUNITY": "normal",
+				"bonus.UNDEAD": "normal",
+				"bonus.NON_LIVING": "normal",
+				"bonus.MECHANICAL": "normal"
+			}
+		},
+		"levels": {
+			"base": {
+				"range": "0",
+				"targetModifier": {
+					"smart": true
+				},
+				"battleEffects": {
+					"main": {
+						"type": "h6dynAct",
+						"scope": "target",
+						"side": "enemy",
+						"control": true,
+						"enemies": {
+							"stasis": {
+								"type": "NOT_ACTIVE",
+								"val": 0,
+								"turns": 3
+							}
+						},
+						"animEnemy": "h6dyn/fx/time_stasis"
+					}
+				}
+			},
+			"none": {
+				"cost": 0,
+				"power": 0,
+				"description": "{Chrono Stasis (H6)}\n\nTime Trap triggered: cannot act for the next 2 rounds; being attacked does not end it. No effect on Mind-immune troops (including Undead, Unliving and Mechanical), Commanders, War Machines or Capital Guardians."
+			},
+			"basic": {
+				"cost": 0,
+				"power": 0,
+				"description": "{Chrono Stasis (H6)}\n\nTime Trap triggered: cannot act for the next 2 rounds; being attacked does not end it. No effect on Mind-immune troops (including Undead, Unliving and Mechanical), Commanders, War Machines or Capital Guardians."
+			},
+			"advanced": {
+				"cost": 0,
+				"power": 0,
+				"description": "{Chrono Stasis (H6)}\n\nTime Trap triggered: cannot act for the next 2 rounds; being attacked does not end it. No effect on Mind-immune troops (including Undead, Unliving and Mechanical), Commanders, War Machines or Capital Guardians."
+			},
+			"expert": {
+				"cost": 0,
+				"power": 0,
+				"description": "{Chrono Stasis (H6)}\n\nTime Trap triggered: cannot act for the next 2 rounds; being attacked does not end it. No effect on Mind-immune troops (including Undead, Unliving and Mechanical), Commanders, War Machines or Capital Guardians."
+			}
+		}
+	},
+	"h6dynCleansing": {
+		"type": "combat",
+		"name": "Purification (H6)",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"flags": {
+			"special": true,
+			"indifferent": true
+		},
+		"graphics": {
+			"iconBook": "h6dyn/spells/h6dynCleansing/Book",
+			"iconScroll": "h6dyn/spells/h6dynCleansing/Scroll",
+			"iconScenarioBonus": "h6dyn/spells/h6dynCleansing/Scenario",
+			"iconEffect": "h6dyn/spells/h6dynCleansing/Effect",
+			"iconImmune": "h6dyn/spells/h6dynCleansing/Effect"
+		},
+		"sounds": {
+			"cast": "DISPELL"
+		},
+		"targetType": "CREATURE",
+		"targetCondition": {
+			"noneOf": {
+				"bonus.SIEGE_WEAPON": "absolute"
+			}
+		},
+		"levels": {
+			"base": {
+				"range": "0",
+				"targetModifier": {
+					"smart": false
+				},
+				"battleEffects": {
+					"guard": {
+						"type": "h6dynOnce",
+						"onceIndex": 21,
+						"cooldown": 1
+					},
+					"cleanse": {
+						"type": "h6dynCleanse",
+						"mode": "side",
+						"animAlly": "h6dyn/fx/cleanse_ally",
+						"animEnemy": "h6dyn/fx/cleanse_enemy"
+					}
+				}
+			},
+			"none": {
+				"cost": 0,
+				"power": 0,
+				"description": "{Purification (H6)}\n\nActive skill of Staff of Cleansing, cooldown 1 round, needs no Spell Book and costs no Spell Points.\nRemoves all negative spell effects from one friendly stack, or all positive spell effects from one enemy stack."
+			},
+			"basic": {
+				"cost": 0,
+				"power": 0,
+				"description": "{Purification (H6)}\n\nActive skill of Staff of Cleansing, cooldown 1 round, needs no Spell Book and costs no Spell Points.\nRemoves all negative spell effects from one friendly stack, or all positive spell effects from one enemy stack."
+			},
+			"advanced": {
+				"cost": 0,
+				"power": 0,
+				"description": "{Purification (H6)}\n\nActive skill of Staff of Cleansing, cooldown 1 round, needs no Spell Book and costs no Spell Points.\nRemoves all negative spell effects from one friendly stack, or all positive spell effects from one enemy stack."
+			},
+			"expert": {
+				"cost": 0,
+				"power": 0,
+				"description": "{Purification (H6)}\n\nActive skill of Staff of Cleansing, cooldown 1 round, needs no Spell Book and costs no Spell Points.\nRemoves all negative spell effects from one friendly stack, or all positive spell effects from one enemy stack."
+			}
+		}
+	},
+	"h6dynMasterOfMagic": {
+		"type": "combat",
+		"name": "Master of Magic (H6)",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"flags": {
+			"special": true,
+			"indifferent": true
+		},
+		"graphics": {
+			"iconBook": "h6dyn/spells/h6dynMasterOfMagic/Book",
+			"iconScroll": "h6dyn/spells/h6dynMasterOfMagic/Scroll",
+			"iconScenarioBonus": "h6dyn/spells/h6dynMasterOfMagic/Scenario",
+			"iconEffect": "h6dyn/spells/h6dynMasterOfMagic/Effect",
+			"iconImmune": "h6dyn/spells/h6dynMasterOfMagic/Effect"
+		},
+		"sounds": {
+			"cast": "MAGICBLT"
+		},
+		"targetType": "NO_TARGET",
+		"targetCondition": {
+			"noneOf": {
+				"bonus.SIEGE_WEAPON": "absolute"
+			}
+		},
+		"levels": {
+			"base": {
+				"range": "X",
+				"targetModifier": {
+					"smart": true
+				},
+				"battleEffects": {
+					"main": {
+						"type": "h6dynAct",
+						"scope": "all",
+						"side": "enemy",
+						"onceIndex": 22,
+						"enemies": {
+							"amp": {
+								"type": "SPELL_DAMAGE_REDUCTION",
+								"subtype": "any",
+								"val": -30,
+								"turns": 3
+							}
+						},
+						"animEnemy": "h6dyn/fx/oblivion"
+					}
+				}
+			},
+			"none": {
+				"cost": 0,
+				"power": 0,
+				"description": "{Master of Magic (H6)}\n\nActive skill of Staff of Sar-Aggreth, once per battle, needs no Spell Book and costs no Spell Points.\nFor 3 rounds, all enemy troops take +30% spell damage."
+			},
+			"basic": {
+				"cost": 0,
+				"power": 0,
+				"description": "{Master of Magic (H6)}\n\nActive skill of Staff of Sar-Aggreth, once per battle, needs no Spell Book and costs no Spell Points.\nFor 3 rounds, all enemy troops take +30% spell damage."
+			},
+			"advanced": {
+				"cost": 0,
+				"power": 0,
+				"description": "{Master of Magic (H6)}\n\nActive skill of Staff of Sar-Aggreth, once per battle, needs no Spell Book and costs no Spell Points.\nFor 3 rounds, all enemy troops take +30% spell damage."
+			},
+			"expert": {
+				"cost": 0,
+				"power": 0,
+				"description": "{Master of Magic (H6)}\n\nActive skill of Staff of Sar-Aggreth, once per battle, needs no Spell Book and costs no Spell Points.\nFor 3 rounds, all enemy troops take +30% spell damage."
+			}
+		}
+	},
+	"h6dynMasterOfMagic2": {
+		"type": "combat",
+		"name": "Greater Master of Magic (H6)",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"flags": {
+			"special": true,
+			"indifferent": true
+		},
+		"graphics": {
+			"iconBook": "h6dyn/spells/h6dynMasterOfMagic2/Book",
+			"iconScroll": "h6dyn/spells/h6dynMasterOfMagic2/Scroll",
+			"iconScenarioBonus": "h6dyn/spells/h6dynMasterOfMagic2/Scenario",
+			"iconEffect": "h6dyn/spells/h6dynMasterOfMagic2/Effect",
+			"iconImmune": "h6dyn/spells/h6dynMasterOfMagic2/Effect"
+		},
+		"sounds": {
+			"cast": "MAGICBLT"
+		},
+		"targetType": "NO_TARGET",
+		"targetCondition": {
+			"noneOf": {
+				"bonus.SIEGE_WEAPON": "absolute"
+			}
+		},
+		"levels": {
+			"base": {
+				"range": "X",
+				"targetModifier": {
+					"smart": true
+				},
+				"battleEffects": {
+					"main": {
+						"type": "h6dynAct",
+						"scope": "all",
+						"side": "any",
+						"onceIndex": 22,
+						"enemies": {
+							"amp": {
+								"type": "SPELL_DAMAGE_REDUCTION",
+								"subtype": "any",
+								"val": -30,
+								"turns": 3
+							}
+						},
+						"allies": {
+							"dmg": {
+								"type": "GENERAL_DAMAGE_PREMY",
+								"val": 30,
+								"turns": 3
+							}
+						},
+						"animEnemy": "h6dyn/fx/oblivion",
+						"animAlly": "h6dyn/fx/morale_up"
+					}
+				}
+			},
+			"none": {
+				"cost": 0,
+				"power": 0,
+				"description": "{Greater Master of Magic (H6)}\n\nActive skill of Staff of Sar-Aggreth, once per battle, needs no Spell Book and costs no Spell Points.\nFor 3 rounds, all enemy troops take +30% spell damage, and all friendly troops deal +30% attack damage."
+			},
+			"basic": {
+				"cost": 0,
+				"power": 0,
+				"description": "{Greater Master of Magic (H6)}\n\nActive skill of Staff of Sar-Aggreth, once per battle, needs no Spell Book and costs no Spell Points.\nFor 3 rounds, all enemy troops take +30% spell damage, and all friendly troops deal +30% attack damage."
+			},
+			"advanced": {
+				"cost": 0,
+				"power": 0,
+				"description": "{Greater Master of Magic (H6)}\n\nActive skill of Staff of Sar-Aggreth, once per battle, needs no Spell Book and costs no Spell Points.\nFor 3 rounds, all enemy troops take +30% spell damage, and all friendly troops deal +30% attack damage."
+			},
+			"expert": {
+				"cost": 0,
+				"power": 0,
+				"description": "{Greater Master of Magic (H6)}\n\nActive skill of Staff of Sar-Aggreth, once per battle, needs no Spell Book and costs no Spell Points.\nFor 3 rounds, all enemy troops take +30% spell damage, and all friendly troops deal +30% attack damage."
+			}
+		}
+	},
+	"h6dynCallOfTheDepths": {
+		"type": "combat",
+		"name": "Call of the Depths (H6)",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": true
+		},
+		"level": 0,
+		"power": 6,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"flags": {
+			"special": true,
+			"negative": true,
+			"damage": true
+		},
+		"graphics": {
+			"iconBook": "h6dyn/spells/h6dynCallOfTheDepths/Book",
+			"iconScroll": "h6dyn/spells/h6dynCallOfTheDepths/Scroll",
+			"iconScenarioBonus": "h6dyn/spells/h6dynCallOfTheDepths/Scenario",
+			"iconEffect": "h6dyn/spells/h6dynCallOfTheDepths/Effect",
+			"iconImmune": "h6dyn/spells/h6dynCallOfTheDepths/Effect"
+		},
+		"sounds": {
+			"cast": "ICERAY"
+		},
+		"targetType": "NO_TARGET",
+		"targetCondition": {
+			"noneOf": {
+				"bonus.SIEGE_WEAPON": "absolute"
+			}
+		},
+		"levels": {
+			"base": {
+				"range": "X",
+				"targetModifier": {
+					"smart": true
+				},
+				"battleEffects": {
+					"main": {
+						"type": "h6dynAct",
+						"scope": "all",
+						"side": "enemy",
+						"onceIndex": 23,
+						"damage": "power",
+						"animEnemy": "h6dyn/fx/ice_armor"
+					}
+				}
+			},
+			"none": {
+				"cost": 0,
+				"power": 58,
+				"description": "{Call of the Depths (H6)}\n\nActive skill of Staff of the Tides, once per battle, needs no Spell Book and costs no Spell Points.\nWaves sweep the battlefield: all enemy troops take 58 + 6×Spell Power Water damage."
+			},
+			"basic": {
+				"cost": 0,
+				"power": 58,
+				"description": "{Call of the Depths (H6)}\n\nActive skill of Staff of the Tides, once per battle, needs no Spell Book and costs no Spell Points.\nWaves sweep the battlefield: all enemy troops take 58 + 6×Spell Power Water damage."
+			},
+			"advanced": {
+				"cost": 0,
+				"power": 58,
+				"description": "{Call of the Depths (H6)}\n\nActive skill of Staff of the Tides, once per battle, needs no Spell Book and costs no Spell Points.\nWaves sweep the battlefield: all enemy troops take 58 + 6×Spell Power Water damage."
+			},
+			"expert": {
+				"cost": 0,
+				"power": 58,
+				"description": "{Call of the Depths (H6)}\n\nActive skill of Staff of the Tides, once per battle, needs no Spell Book and costs no Spell Points.\nWaves sweep the battlefield: all enemy troops take 58 + 6×Spell Power Water damage."
+			}
+		}
+	},
+	"h6dynOblivion": {
+		"type": "combat",
+		"name": "Oblivion (H6)",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"flags": {
+			"special": true,
+			"negative": true
+		},
+		"graphics": {
+			"iconBook": "h6dyn/spells/h6dynOblivion/Book",
+			"iconScroll": "h6dyn/spells/h6dynOblivion/Scroll",
+			"iconScenarioBonus": "h6dyn/spells/h6dynOblivion/Scenario",
+			"iconEffect": "h6dyn/spells/h6dynOblivion/Effect",
+			"iconImmune": "h6dyn/spells/h6dynOblivion/Effect"
+		},
+		"sounds": {
+			"cast": "FORGET"
+		},
+		"targetType": "CREATURE",
+		"targetCondition": {
+			"noneOf": {
+				"bonus.SIEGE_WEAPON": "absolute"
+			}
+		},
+		"levels": {
+			"base": {
+				"range": "0",
+				"targetModifier": {
+					"smart": true
+				},
+				"battleEffects": {
+					"main": {
+						"type": "h6dynAct",
+						"scope": "target",
+						"side": "enemy",
+						"onceIndex": 24,
+						"enemies": {
+							"block": {
+								"type": "BLOCK_CREATURE_MAGIC",
+								"val": 0,
+								"turns": 3
+							}
+						},
+						"animEnemy": "h6dyn/fx/oblivion"
+					}
+				}
+			},
+			"none": {
+				"cost": 0,
+				"power": 0,
+				"description": "{Oblivion (H6)}\n\nActive skill of The Oblivion, once per battle, needs no Spell Book and costs no Spell Points.\nOne enemy stack cannot cast magic spells for 3 rounds (both actively cast and attack-triggered ones count; non-magic abilities work as usual)."
+			},
+			"basic": {
+				"cost": 0,
+				"power": 0,
+				"description": "{Oblivion (H6)}\n\nActive skill of The Oblivion, once per battle, needs no Spell Book and costs no Spell Points.\nOne enemy stack cannot cast magic spells for 3 rounds (both actively cast and attack-triggered ones count; non-magic abilities work as usual)."
+			},
+			"advanced": {
+				"cost": 0,
+				"power": 0,
+				"description": "{Oblivion (H6)}\n\nActive skill of The Oblivion, once per battle, needs no Spell Book and costs no Spell Points.\nOne enemy stack cannot cast magic spells for 3 rounds (both actively cast and attack-triggered ones count; non-magic abilities work as usual)."
+			},
+			"expert": {
+				"cost": 0,
+				"power": 0,
+				"description": "{Oblivion (H6)}\n\nActive skill of The Oblivion, once per battle, needs no Spell Book and costs no Spell Points.\nOne enemy stack cannot cast magic spells for 3 rounds (both actively cast and attack-triggered ones count; non-magic abilities work as usual)."
+			}
+		}
+	},
+	"h6dynLightningRod": {
+		"type": "combat",
+		"name": "Lightning Rod (H6)",
+		"school": {
+			"air": true,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 20,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"flags": {
+			"special": true,
+			"negative": true,
+			"damage": true
+		},
+		"graphics": {
+			"iconBook": "h6dyn/spells/h6dynLightningRod/Book",
+			"iconScroll": "h6dyn/spells/h6dynLightningRod/Scroll",
+			"iconScenarioBonus": "h6dyn/spells/h6dynLightningRod/Scenario",
+			"iconEffect": "h6dyn/spells/h6dynLightningRod/Effect",
+			"iconImmune": "h6dyn/spells/h6dynLightningRod/Effect"
+		},
+		"sounds": {
+			"cast": "LIGHTBLT"
+		},
+		"targetType": "NO_TARGET",
+		"targetCondition": {
+			"noneOf": {
+				"bonus.SIEGE_WEAPON": "absolute"
+			}
+		},
+		"levels": {
+			"base": {
+				"range": "X",
+				"targetModifier": {
+					"smart": true
+				},
+				"battleEffects": {
+					"main": {
+						"type": "h6dynAct",
+						"scope": "strongest",
+						"side": "enemy",
+						"onceIndex": 25,
+						"damage": "power",
+						"dot": {
+							"value": "power",
+							"turns": 4,
+							"anim": "h6dyn/fx/lightning_target",
+							"status": [
+								"h6Dazed"
+							]
+						},
+						"animEnemy": "h6dyn/fx/lightning_target",
+						"statusEnemies": [
+							"h6Dazed"
+						]
+					}
+				}
+			},
+			"none": {
+				"cost": 0,
+				"power": 195,
+				"description": "{Lightning Rod (H6)}\n\nActive skill of Thunder Staff, once per battle, needs no Spell Book and costs no Spell Points.\nLightning instantly strikes the strongest enemy stack, then strikes it again at the start of each of the next 3 rounds; each strike deals 195 + 20×Spell Power Air damage and Dazes it (Speed -2, 2 rounds)."
+			},
+			"basic": {
+				"cost": 0,
+				"power": 195,
+				"description": "{Lightning Rod (H6)}\n\nActive skill of Thunder Staff, once per battle, needs no Spell Book and costs no Spell Points.\nLightning instantly strikes the strongest enemy stack, then strikes it again at the start of each of the next 3 rounds; each strike deals 195 + 20×Spell Power Air damage and Dazes it (Speed -2, 2 rounds)."
+			},
+			"advanced": {
+				"cost": 0,
+				"power": 195,
+				"description": "{Lightning Rod (H6)}\n\nActive skill of Thunder Staff, once per battle, needs no Spell Book and costs no Spell Points.\nLightning instantly strikes the strongest enemy stack, then strikes it again at the start of each of the next 3 rounds; each strike deals 195 + 20×Spell Power Air damage and Dazes it (Speed -2, 2 rounds)."
+			},
+			"expert": {
+				"cost": 0,
+				"power": 195,
+				"description": "{Lightning Rod (H6)}\n\nActive skill of Thunder Staff, once per battle, needs no Spell Book and costs no Spell Points.\nLightning instantly strikes the strongest enemy stack, then strikes it again at the start of each of the next 3 rounds; each strike deals 195 + 20×Spell Power Air damage and Dazes it (Speed -2, 2 rounds)."
+			}
+		}
+	},
+	"h6dynFireStorm": {
+		"type": "combat",
+		"name": "Fire Tempest (H6)",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": true,
+			"water": false
+		},
+		"level": 0,
+		"power": 7,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"flags": {
+			"special": true,
+			"negative": true,
+			"damage": true
+		},
+		"graphics": {
+			"iconBook": "h6dyn/spells/h6dynFireStorm/Book",
+			"iconScroll": "h6dyn/spells/h6dynFireStorm/Scroll",
+			"iconScenarioBonus": "h6dyn/spells/h6dynFireStorm/Scenario",
+			"iconEffect": "h6dyn/spells/h6dynFireStorm/Effect",
+			"iconImmune": "h6dyn/spells/h6dynFireStorm/Effect"
+		},
+		"sounds": {
+			"cast": "SPONTCOMB"
+		},
+		"targetType": "LOCATION",
+		"targetCondition": {
+			"noneOf": {
+				"bonus.SIEGE_WEAPON": "absolute"
+			}
+		},
+		"levels": {
+			"base": {
+				"range": "0-2",
+				"targetModifier": {
+					"smart": false
+				},
+				"battleEffects": {
+					"main": {
+						"type": "h6dynAct",
+						"scope": "target",
+						"side": "any",
+						"onceIndex": 26,
+						"damage": "power",
+						"damageAll": true,
+						"animEnemy": "h6dyn/fx/firestorm",
+						"animAlly": "h6dyn/fx/firestorm",
+						"statusEnemies": [
+							"h6Dazed"
+						],
+						"statusAllies": [
+							"h6Dazed"
+						]
+					}
+				}
+			},
+			"none": {
+				"cost": 0,
+				"power": 72,
+				"description": "{Fire Tempest (H6)}\n\nActive skill of Will of Urgash, once per battle, needs no Spell Book and costs no Spell Points.\nAll troops in the target area (two rings around the center, friendly troops included) take 72 + 7×Spell Power Fire damage and are Dazed (Speed -2, 2 rounds)."
+			},
+			"basic": {
+				"cost": 0,
+				"power": 72,
+				"description": "{Fire Tempest (H6)}\n\nActive skill of Will of Urgash, once per battle, needs no Spell Book and costs no Spell Points.\nAll troops in the target area (two rings around the center, friendly troops included) take 72 + 7×Spell Power Fire damage and are Dazed (Speed -2, 2 rounds)."
+			},
+			"advanced": {
+				"cost": 0,
+				"power": 72,
+				"description": "{Fire Tempest (H6)}\n\nActive skill of Will of Urgash, once per battle, needs no Spell Book and costs no Spell Points.\nAll troops in the target area (two rings around the center, friendly troops included) take 72 + 7×Spell Power Fire damage and are Dazed (Speed -2, 2 rounds)."
+			},
+			"expert": {
+				"cost": 0,
+				"power": 72,
+				"description": "{Fire Tempest (H6)}\n\nActive skill of Will of Urgash, once per battle, needs no Spell Book and costs no Spell Points.\nAll troops in the target area (two rings around the center, friendly troops included) take 72 + 7×Spell Power Fire damage and are Dazed (Speed -2, 2 rounds)."
+			}
+		}
+	},
+	"h6dynNetherbane": {
+		"type": "combat",
+		"name": "Netherbane (H6)",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 7,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"flags": {
+			"special": true,
+			"negative": true,
+			"damage": true
+		},
+		"graphics": {
+			"iconBook": "h6dyn/spells/h6dynNetherbane/Book",
+			"iconScroll": "h6dyn/spells/h6dynNetherbane/Scroll",
+			"iconScenarioBonus": "h6dyn/spells/h6dynNetherbane/Scenario",
+			"iconEffect": "h6dyn/spells/h6dynNetherbane/Effect",
+			"iconImmune": "h6dyn/spells/h6dynNetherbane/Effect"
+		},
+		"sounds": {
+			"cast": "DEATHSTR"
+		},
+		"targetType": "CREATURE",
+		"targetCondition": {
+			"noneOf": {
+				"bonus.SIEGE_WEAPON": "absolute"
+			}
+		},
+		"levels": {
+			"base": {
+				"range": "0",
+				"targetModifier": {
+					"smart": true
+				},
+				"battleEffects": {
+					"main": {
+						"type": "h6dynAct",
+						"scope": "adjacent",
+						"side": "enemy",
+						"onceIndex": 27,
+						"damage": "power",
+						"dot": {
+							"value": "power",
+							"turns": 4,
+							"anim": "h6dyn/fx/time_trap_hit"
+						},
+						"animEnemy": "h6dyn/fx/time_trap_hit"
+					}
+				}
+			},
+			"none": {
+				"cost": 0,
+				"power": 65,
+				"description": "{Netherbane (H6)}\n\nActive skill of Staff of the Netherworld, once per battle, needs no Spell Book and costs no Spell Points.\nOne enemy stack and each enemy stack adjacent to it instantly take 65 + 7×Spell Power damage, and again at the start of each of the next 3 rounds."
+			},
+			"basic": {
+				"cost": 0,
+				"power": 65,
+				"description": "{Netherbane (H6)}\n\nActive skill of Staff of the Netherworld, once per battle, needs no Spell Book and costs no Spell Points.\nOne enemy stack and each enemy stack adjacent to it instantly take 65 + 7×Spell Power damage, and again at the start of each of the next 3 rounds."
+			},
+			"advanced": {
+				"cost": 0,
+				"power": 65,
+				"description": "{Netherbane (H6)}\n\nActive skill of Staff of the Netherworld, once per battle, needs no Spell Book and costs no Spell Points.\nOne enemy stack and each enemy stack adjacent to it instantly take 65 + 7×Spell Power damage, and again at the start of each of the next 3 rounds."
+			},
+			"expert": {
+				"cost": 0,
+				"power": 65,
+				"description": "{Netherbane (H6)}\n\nActive skill of Staff of the Netherworld, once per battle, needs no Spell Book and costs no Spell Points.\nOne enemy stack and each enemy stack adjacent to it instantly take 65 + 7×Spell Power damage, and again at the start of each of the next 3 rounds."
+			}
+		}
+	},
+	"h6dynNetherbane2": {
+		"type": "combat",
+		"name": "Greater Netherbane (H6)",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 7,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"flags": {
+			"special": true,
+			"negative": true,
+			"damage": true
+		},
+		"graphics": {
+			"iconBook": "h6dyn/spells/h6dynNetherbane2/Book",
+			"iconScroll": "h6dyn/spells/h6dynNetherbane2/Scroll",
+			"iconScenarioBonus": "h6dyn/spells/h6dynNetherbane2/Scenario",
+			"iconEffect": "h6dyn/spells/h6dynNetherbane2/Effect",
+			"iconImmune": "h6dyn/spells/h6dynNetherbane2/Effect"
+		},
+		"sounds": {
+			"cast": "DEATHSTR"
+		},
+		"targetType": "CREATURE",
+		"targetCondition": {
+			"noneOf": {
+				"bonus.SIEGE_WEAPON": "absolute"
+			}
+		},
+		"levels": {
+			"base": {
+				"range": "0",
+				"targetModifier": {
+					"smart": true
+				},
+				"battleEffects": {
+					"main": {
+						"type": "h6dynAct",
+						"scope": "adjacent",
+						"side": "enemy",
+						"onceIndex": 27,
+						"damage": "power",
+						"dot": {
+							"value": "power",
+							"turns": 6,
+							"spread": 30,
+							"spreadTurns": 4,
+							"anim": "h6dyn/fx/time_trap_hit"
+						},
+						"animEnemy": "h6dyn/fx/time_trap_hit"
+					}
+				}
+			},
+			"none": {
+				"cost": 0,
+				"power": 65,
+				"description": "{Greater Netherbane (H6)}\n\nActive skill of Staff of the Netherworld, once per battle, needs no Spell Book and costs no Spell Points.\nOne enemy stack and each enemy stack adjacent to it instantly take 65 + 7×Spell Power damage, and again at the start of each of the next 5 rounds; at the start of each round there is a 30% chance it spreads to adjacent enemy stacks (lasting 3 rounds)."
+			},
+			"basic": {
+				"cost": 0,
+				"power": 65,
+				"description": "{Greater Netherbane (H6)}\n\nActive skill of Staff of the Netherworld, once per battle, needs no Spell Book and costs no Spell Points.\nOne enemy stack and each enemy stack adjacent to it instantly take 65 + 7×Spell Power damage, and again at the start of each of the next 5 rounds; at the start of each round there is a 30% chance it spreads to adjacent enemy stacks (lasting 3 rounds)."
+			},
+			"advanced": {
+				"cost": 0,
+				"power": 65,
+				"description": "{Greater Netherbane (H6)}\n\nActive skill of Staff of the Netherworld, once per battle, needs no Spell Book and costs no Spell Points.\nOne enemy stack and each enemy stack adjacent to it instantly take 65 + 7×Spell Power damage, and again at the start of each of the next 5 rounds; at the start of each round there is a 30% chance it spreads to adjacent enemy stacks (lasting 3 rounds)."
+			},
+			"expert": {
+				"cost": 0,
+				"power": 65,
+				"description": "{Greater Netherbane (H6)}\n\nActive skill of Staff of the Netherworld, once per battle, needs no Spell Book and costs no Spell Points.\nOne enemy stack and each enemy stack adjacent to it instantly take 65 + 7×Spell Power damage, and again at the start of each of the next 5 rounds; at the start of each round there is a 30% chance it spreads to adjacent enemy stacks (lasting 3 rounds)."
+			}
+		}
+	},
+	"h6dynThornsOfRemorse": {
+		"type": "combat",
+		"name": "Thorns of Remorse (H6)",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"flags": {
+			"special": true,
+			"negative": true
+		},
+		"graphics": {
+			"iconBook": "h6dyn/spells/h6dynThornsOfRemorse/Book",
+			"iconScroll": "h6dyn/spells/h6dynThornsOfRemorse/Scroll",
+			"iconScenarioBonus": "h6dyn/spells/h6dynThornsOfRemorse/Scenario",
+			"iconEffect": "h6dyn/spells/h6dynThornsOfRemorse/Effect",
+			"iconImmune": "h6dyn/spells/h6dynThornsOfRemorse/Effect"
+		},
+		"sounds": {
+			"cast": "DEATHSTR"
+		},
+		"targetType": "CREATURE",
+		"targetCondition": {
+			"noneOf": {
+				"bonus.SIEGE_WEAPON": "absolute"
+			}
+		},
+		"levels": {
+			"base": {
+				"range": "0",
+				"targetModifier": {
+					"smart": true
+				},
+				"battleEffects": {
+					"main": {
+						"type": "h6dynAct",
+						"scope": "target",
+						"side": "enemy",
+						"onceIndex": 28,
+						"cooldown": 4,
+						"dealtPercent": 25,
+						"dealtMax": 500,
+						"enemies": {
+							"vuln": {
+								"type": "GENERAL_DAMAGE_REDUCTION",
+								"subtype": "damageTypeAll",
+								"val": -25,
+								"duration": "ONE_BATTLE"
+							}
+						},
+						"animEnemy": "h6dyn/fx/thorns"
+					}
+				}
+			},
+			"none": {
+				"cost": 0,
+				"power": 0,
+				"description": "{Thorns of Remorse (H6)}\n\nActive skill of Staff of Crystal Roses, cooldown 4 rounds, needs no Spell Book and costs no Spell Points.\nOne enemy stack takes damage equal to 25% of the total damage it has dealt since the start of combat, and takes +25% damage from attacks for the rest of the battle."
+			},
+			"basic": {
+				"cost": 0,
+				"power": 0,
+				"description": "{Thorns of Remorse (H6)}\n\nActive skill of Staff of Crystal Roses, cooldown 4 rounds, needs no Spell Book and costs no Spell Points.\nOne enemy stack takes damage equal to 25% of the total damage it has dealt since the start of combat, and takes +25% damage from attacks for the rest of the battle."
+			},
+			"advanced": {
+				"cost": 0,
+				"power": 0,
+				"description": "{Thorns of Remorse (H6)}\n\nActive skill of Staff of Crystal Roses, cooldown 4 rounds, needs no Spell Book and costs no Spell Points.\nOne enemy stack takes damage equal to 25% of the total damage it has dealt since the start of combat, and takes +25% damage from attacks for the rest of the battle."
+			},
+			"expert": {
+				"cost": 0,
+				"power": 0,
+				"description": "{Thorns of Remorse (H6)}\n\nActive skill of Staff of Crystal Roses, cooldown 4 rounds, needs no Spell Book and costs no Spell Points.\nOne enemy stack takes damage equal to 25% of the total damage it has dealt since the start of combat, and takes +25% damage from attacks for the rest of the battle."
+			}
+		}
+	},
+	"h6dynDarkEcho": {
+		"type": "combat",
+		"name": "Dark Echo (H6)",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"flags": {
+			"special": true,
+			"indifferent": true
+		},
+		"graphics": {
+			"iconBook": "h6dyn/spells/h6dynDarkEcho/Book",
+			"iconScroll": "h6dyn/spells/h6dynDarkEcho/Scroll",
+			"iconScenarioBonus": "h6dyn/spells/h6dynDarkEcho/Scenario",
+			"iconEffect": "h6dyn/spells/h6dynDarkEcho/Effect",
+			"iconImmune": "h6dyn/spells/h6dynDarkEcho/Effect"
+		},
+		"sounds": {
+			"cast": "MAGICBLT"
+		},
+		"targetType": "NO_TARGET",
+		"targetCondition": {
+			"noneOf": {
+				"bonus.SIEGE_WEAPON": "absolute"
+			}
+		},
+		"levels": {
+			"base": {
+				"range": "X",
+				"targetModifier": {
+					"smart": true
+				},
+				"battleEffects": {
+					"main": {
+						"type": "h6dynAct",
+						"scope": "all",
+						"side": "enemy",
+						"onceIndex": 29,
+						"cooldown": 4,
+						"enemies": {
+							"amp": {
+								"type": "SPELL_DAMAGE_REDUCTION",
+								"subtype": "any",
+								"val": -100,
+								"turns": 2
+							}
+						},
+						"animEnemy": "h6dyn/fx/oblivion"
+					}
+				}
+			},
+			"none": {
+				"cost": 0,
+				"power": 0,
+				"description": "{Dark Echo (H6)}\n\nActive skill of Nameless Staff, cooldown 4 rounds, needs no Spell Book and costs no Spell Points.\nUntil the end of the next round, the hero's spells deal double damage to enemy troops."
+			},
+			"basic": {
+				"cost": 0,
+				"power": 0,
+				"description": "{Dark Echo (H6)}\n\nActive skill of Nameless Staff, cooldown 4 rounds, needs no Spell Book and costs no Spell Points.\nUntil the end of the next round, the hero's spells deal double damage to enemy troops."
+			},
+			"advanced": {
+				"cost": 0,
+				"power": 0,
+				"description": "{Dark Echo (H6)}\n\nActive skill of Nameless Staff, cooldown 4 rounds, needs no Spell Book and costs no Spell Points.\nUntil the end of the next round, the hero's spells deal double damage to enemy troops."
+			},
+			"expert": {
+				"cost": 0,
+				"power": 0,
+				"description": "{Dark Echo (H6)}\n\nActive skill of Nameless Staff, cooldown 4 rounds, needs no Spell Book and costs no Spell Points.\nUntil the end of the next round, the hero's spells deal double damage to enemy troops."
+			}
+		}
+	},
+	"h6dynWindsOfMagic": {
+		"type": "combat",
+		"name": "Winds of Magic (H6)",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"flags": {
+			"special": true,
+			"indifferent": true
+		},
+		"graphics": {
+			"iconBook": "h6dyn/spells/h6dynWindsOfMagic/Book",
+			"iconScroll": "h6dyn/spells/h6dynWindsOfMagic/Scroll",
+			"iconScenarioBonus": "h6dyn/spells/h6dynWindsOfMagic/Scenario",
+			"iconEffect": "h6dyn/spells/h6dynWindsOfMagic/Effect",
+			"iconImmune": "h6dyn/spells/h6dynWindsOfMagic/Effect"
+		},
+		"sounds": {
+			"cast": "ARMGEDN"
+		},
+		"targetType": "NO_TARGET",
+		"targetCondition": {
+			"noneOf": {
+				"bonus.SIEGE_WEAPON": "absolute"
+			}
+		},
+		"levels": {
+			"base": {
+				"range": "X",
+				"targetModifier": {
+					"smart": true
+				},
+				"battleEffects": {
+					"main": {
+						"type": "h6dynAct",
+						"scope": "none",
+						"onceIndex": 30,
+						"battle": {
+							"winds": {
+								"type": "COMBAT_EVENT_TRIGGER",
+								"subtype": "heroes-memorial.dynasty-weapons:h6dynWindsOfMagic",
+								"val": 0,
+								"turns": 3,
+								"sideParam": true,
+								"everyUnit": true,
+								"addInfo": {
+									"mult": 5,
+									"anim": "h6dyn/fx/winds_magic"
+								}
+							}
+						}
+					}
+				}
+			},
+			"none": {
+				"cost": 0,
+				"power": 0,
+				"description": "{Winds of Magic (H6)}\n\nActive skill of Batu's Totem, once per battle, needs no Spell Book and costs no Spell Points.\nFor the next 3 rounds, each time the enemy hero casts a spell, a random enemy stack takes damage equal to that spell's mana cost × 5."
+			},
+			"basic": {
+				"cost": 0,
+				"power": 0,
+				"description": "{Winds of Magic (H6)}\n\nActive skill of Batu's Totem, once per battle, needs no Spell Book and costs no Spell Points.\nFor the next 3 rounds, each time the enemy hero casts a spell, a random enemy stack takes damage equal to that spell's mana cost × 5."
+			},
+			"advanced": {
+				"cost": 0,
+				"power": 0,
+				"description": "{Winds of Magic (H6)}\n\nActive skill of Batu's Totem, once per battle, needs no Spell Book and costs no Spell Points.\nFor the next 3 rounds, each time the enemy hero casts a spell, a random enemy stack takes damage equal to that spell's mana cost × 5."
+			},
+			"expert": {
+				"cost": 0,
+				"power": 0,
+				"description": "{Winds of Magic (H6)}\n\nActive skill of Batu's Totem, once per battle, needs no Spell Book and costs no Spell Points.\nFor the next 3 rounds, each time the enemy hero casts a spell, a random enemy stack takes damage equal to that spell's mana cost × 5."
+			}
+		}
+	},
+	"h6dynDeadlyPoison": {
+		"type": "combat",
+		"name": "Deadly Poison (H6)",
+		"school": {
+			"air": false,
+			"earth": true,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"flags": {
+			"special": true,
+			"negative": true
+		},
+		"graphics": {
+			"iconBook": "h6dyn/spells/h6dynDeadlyPoison/Book",
+			"iconScroll": "h6dyn/spells/h6dynDeadlyPoison/Scroll",
+			"iconScenarioBonus": "h6dyn/spells/h6dynDeadlyPoison/Scenario",
+			"iconEffect": "h6dyn/spells/h6dynDeadlyPoison/Effect",
+			"iconImmune": "h6dyn/spells/h6dynDeadlyPoison/Effect"
+		},
+		"sounds": {
+			"cast": "POISON"
+		},
+		"targetType": "CREATURE",
+		"targetCondition": {
+			"noneOf": {
+				"bonus.SIEGE_WEAPON": "absolute"
+			}
+		},
+		"levels": {
+			"base": {
+				"range": "0",
+				"targetModifier": {
+					"smart": true
+				},
+				"battleEffects": {
+					"main": {
+						"type": "h6dynAct",
+						"scope": "target",
+						"side": "enemy",
+						"living": true,
+						"dot": {
+							"value": 100,
+							"turns": 3,
+							"anim": "h6dyn/fx/shadowstrike"
+						},
+						"animEnemy": "h6dyn/fx/shadowstrike"
+					}
+				}
+			},
+			"none": {
+				"cost": 0,
+				"power": 0,
+				"description": "{Deadly Poison (H6)}\n\nPoisoned: takes 100 Earth damage at the start of each of the next 2 rounds."
+			},
+			"basic": {
+				"cost": 0,
+				"power": 0,
+				"description": "{Deadly Poison (H6)}\n\nPoisoned: takes 100 Earth damage at the start of each of the next 2 rounds."
+			},
+			"advanced": {
+				"cost": 0,
+				"power": 0,
+				"description": "{Deadly Poison (H6)}\n\nPoisoned: takes 100 Earth damage at the start of each of the next 2 rounds."
+			},
+			"expert": {
+				"cost": 0,
+				"power": 0,
+				"description": "{Deadly Poison (H6)}\n\nPoisoned: takes 100 Earth damage at the start of each of the next 2 rounds."
+			}
+		}
+	},
+	"h6dynShadowPoison": {
+		"type": "combat",
+		"name": "Shadow Poison (H6)",
+		"school": {
+			"air": false,
+			"earth": true,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"flags": {
+			"special": true,
+			"negative": true
+		},
+		"graphics": {
+			"iconBook": "h6dyn/spells/h6dynShadowPoison/Book",
+			"iconScroll": "h6dyn/spells/h6dynShadowPoison/Scroll",
+			"iconScenarioBonus": "h6dyn/spells/h6dynShadowPoison/Scenario",
+			"iconEffect": "h6dyn/spells/h6dynShadowPoison/Effect",
+			"iconImmune": "h6dyn/spells/h6dynShadowPoison/Effect"
+		},
+		"sounds": {
+			"cast": "POISON"
+		},
+		"targetType": "CREATURE",
+		"targetCondition": {
+			"noneOf": {
+				"bonus.SIEGE_WEAPON": "absolute"
+			}
+		},
+		"levels": {
+			"base": {
+				"range": "0",
+				"targetModifier": {
+					"smart": true
+				},
+				"battleEffects": {
+					"main": {
+						"type": "h6dynAct",
+						"scope": "target",
+						"side": "enemy",
+						"living": true,
+						"dot": {
+							"value": 0,
+							"perCreature": 5,
+							"turns": 3,
+							"anim": "h6dyn/fx/shadowstrike"
+						}
+					}
+				}
+			},
+			"none": {
+				"cost": 0,
+				"power": 0,
+				"description": "{Shadow Poison (H6)}\n\nPoisoned: takes damage at the start of each of the next 2 rounds, equal to 5 per attacking creature."
+			},
+			"basic": {
+				"cost": 0,
+				"power": 0,
+				"description": "{Shadow Poison (H6)}\n\nPoisoned: takes damage at the start of each of the next 2 rounds, equal to 5 per attacking creature."
+			},
+			"advanced": {
+				"cost": 0,
+				"power": 0,
+				"description": "{Shadow Poison (H6)}\n\nPoisoned: takes damage at the start of each of the next 2 rounds, equal to 5 per attacking creature."
+			},
+			"expert": {
+				"cost": 0,
+				"power": 0,
+				"description": "{Shadow Poison (H6)}\n\nPoisoned: takes damage at the start of each of the next 2 rounds, equal to 5 per attacking creature."
+			}
+		}
+	},
+	"h6dynCurseOfTheNameless": {
+		"type": "combat",
+		"name": "Curse of the Nameless (H6)",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"flags": {
+			"special": true,
+			"negative": true
+		},
+		"graphics": {
+			"iconBook": "h6dyn/spells/h6dynCurseOfTheNameless/Book",
+			"iconScroll": "h6dyn/spells/h6dynCurseOfTheNameless/Scroll",
+			"iconScenarioBonus": "h6dyn/spells/h6dynCurseOfTheNameless/Scenario",
+			"iconEffect": "h6dyn/spells/h6dynCurseOfTheNameless/Effect",
+			"iconImmune": "h6dyn/spells/h6dynCurseOfTheNameless/Effect"
+		},
+		"sounds": {
+			"cast": "DISPELL"
+		},
+		"targetType": "CREATURE",
+		"targetCondition": {
+			"noneOf": {
+				"bonus.SIEGE_WEAPON": "absolute"
+			}
+		},
+		"levels": {
+			"base": {
+				"range": "0",
+				"targetModifier": {
+					"smart": true
+				},
+				"battleEffects": {
+					"main": {
+						"type": "h6dynCleanse",
+						"mode": "one",
+						"animEnemy": "h6dyn/fx/cleanse_enemy"
+					}
+				}
+			},
+			"none": {
+				"cost": 0,
+				"power": 0,
+				"description": "{Curse of the Nameless (H6)}\n\nRandomly dispels one positive spell effect from the target."
+			},
+			"basic": {
+				"cost": 0,
+				"power": 0,
+				"description": "{Curse of the Nameless (H6)}\n\nRandomly dispels one positive spell effect from the target."
+			},
+			"advanced": {
+				"cost": 0,
+				"power": 0,
+				"description": "{Curse of the Nameless (H6)}\n\nRandomly dispels one positive spell effect from the target."
+			},
+			"expert": {
+				"cost": 0,
+				"power": 0,
+				"description": "{Curse of the Nameless (H6)}\n\nRandomly dispels one positive spell effect from the target."
+			}
+		}
+	}
+}

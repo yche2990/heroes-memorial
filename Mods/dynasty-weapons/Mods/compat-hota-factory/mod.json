@@ -1,0 +1,17 @@
+{
+	"name": "Dynasty Weaponsmith: Factory Classes",
+	"description": "Takes effect when Factory is installed: its Might and Magic hero classes can also receive Dynasty Weapons from the Dynasty Weaponsmith.",
+	"chinese": {
+		"name": "王朝武器匠·工厂种族职业",
+		"description": "装了工厂种族时生效：它的力量型、魔法型英雄职业也能在王朝武器匠领到王朝武器。"
+	},
+	"version": "0.1.0",
+	"author": "yche2990",
+	"modType": "Compatibility",
+	"depends": [
+		"hota.factory"
+	],
+	"objects": [
+		"config/h6dyn/classes.json"
+	]
+}

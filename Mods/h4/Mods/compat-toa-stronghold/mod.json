@@ -1,0 +1,20 @@
+{
+	"name": "Heroes IV Memorial: Tears of Ashan Warcries",
+	"description": "Heroes IV Stronghold creatures become targets of the four Tears of Ashan warcries, with the warcry Attack bonus.",
+	"chinese": {
+		"name": "英雄无敌4纪念版：亚山之泪战嚎",
+		"description": "英雄无敌4的据点兵成为亚山之泪四个战嚎的目标，并带战嚎攻击加成。"
+	},
+	"version": "0.1.0",
+	"author": "yche2990",
+	"modType": "Compatibility",
+	"depends": [
+		"tears-of-ashan"
+	],
+	"spells": [
+		"config/spells.json"
+	],
+	"creatures": [
+		"config/creatures.json"
+	]
+}

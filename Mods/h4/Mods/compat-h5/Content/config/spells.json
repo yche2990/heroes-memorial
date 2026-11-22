@@ -1,0 +1,26 @@
+{
+	"heroes-memorial.h4:h4SacredGround": {
+		"levels": {
+			"base": {
+				"battleEffects": {
+					"timed": {
+						"bonus": {
+							"imm2": {
+								"type": "SPELL_IMMUNITY",
+								"subtype": "heroes-memorial.h5:spell.h5AnimateDead",
+								"duration": "N_TURNS",
+								"val": 0
+							},
+							"imm3": {
+								"type": "SPELL_IMMUNITY",
+								"subtype": "heroes-memorial.h5:spell.h5AbAnimateDead",
+								"duration": "N_TURNS",
+								"val": 0
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

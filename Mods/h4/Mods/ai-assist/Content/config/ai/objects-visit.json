@@ -1,0 +1,4067 @@
+{
+	"heroes-memorial.h4:h4MemorialSanctum": {
+		"types": {
+			"h4MemorialSanctum": {
+				"rewards": {
+					"appendItems": [
+						{
+							"limiter": {
+								"anyOf": [
+									{
+										"anyOf": [
+											{
+												"creatures": [
+													{
+														"type": "heroes-memorial.h4:h4Squire",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Crossbowman",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Pikeman",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Ballista",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Crusader",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Monk",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Champion",
+														"amount": 1
+													}
+												]
+											},
+											{
+												"creatures": [
+													{
+														"type": "heroes-memorial.h4:h4Squire",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Crossbowman",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Pikeman",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Ballista",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Crusader",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Monk",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Archangel",
+														"amount": 1
+													}
+												]
+											},
+											{
+												"creatures": [
+													{
+														"type": "heroes-memorial.h4:h4Squire",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Crossbowman",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Pikeman",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Ballista",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Crusader",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Champion",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Archangel",
+														"amount": 1
+													}
+												]
+											},
+											{
+												"creatures": [
+													{
+														"type": "heroes-memorial.h4:h4Squire",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Crossbowman",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Pikeman",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Ballista",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Monk",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Champion",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Archangel",
+														"amount": 1
+													}
+												]
+											},
+											{
+												"creatures": [
+													{
+														"type": "heroes-memorial.h4:h4Squire",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Crossbowman",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Pikeman",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Crusader",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Monk",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Champion",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Archangel",
+														"amount": 1
+													}
+												]
+											},
+											{
+												"creatures": [
+													{
+														"type": "heroes-memorial.h4:h4Squire",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Crossbowman",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Ballista",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Crusader",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Monk",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Champion",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Archangel",
+														"amount": 1
+													}
+												]
+											},
+											{
+												"creatures": [
+													{
+														"type": "heroes-memorial.h4:h4Squire",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Pikeman",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Ballista",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Crusader",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Monk",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Champion",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Archangel",
+														"amount": 1
+													}
+												]
+											},
+											{
+												"creatures": [
+													{
+														"type": "heroes-memorial.h4:h4Crossbowman",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Pikeman",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Ballista",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Crusader",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Monk",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Champion",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Archangel",
+														"amount": 1
+													}
+												]
+											}
+										]
+									},
+									{
+										"anyOf": [
+											{
+												"creatures": [
+													{
+														"type": "heroes-memorial.h4:h4Halfling",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Dwarf",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Mage",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4GoldGolem",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Genie",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Naga",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Titan",
+														"amount": 1
+													}
+												]
+											},
+											{
+												"creatures": [
+													{
+														"type": "heroes-memorial.h4:h4Halfling",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Dwarf",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Mage",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4GoldGolem",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Genie",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Naga",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4DragonGolem",
+														"amount": 1
+													}
+												]
+											},
+											{
+												"creatures": [
+													{
+														"type": "heroes-memorial.h4:h4Halfling",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Dwarf",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Mage",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4GoldGolem",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Genie",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Titan",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4DragonGolem",
+														"amount": 1
+													}
+												]
+											},
+											{
+												"creatures": [
+													{
+														"type": "heroes-memorial.h4:h4Halfling",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Dwarf",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Mage",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4GoldGolem",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Naga",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Titan",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4DragonGolem",
+														"amount": 1
+													}
+												]
+											},
+											{
+												"creatures": [
+													{
+														"type": "heroes-memorial.h4:h4Halfling",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Dwarf",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Mage",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Genie",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Naga",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Titan",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4DragonGolem",
+														"amount": 1
+													}
+												]
+											},
+											{
+												"creatures": [
+													{
+														"type": "heroes-memorial.h4:h4Halfling",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Dwarf",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4GoldGolem",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Genie",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Naga",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Titan",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4DragonGolem",
+														"amount": 1
+													}
+												]
+											},
+											{
+												"creatures": [
+													{
+														"type": "heroes-memorial.h4:h4Halfling",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Mage",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4GoldGolem",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Genie",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Naga",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Titan",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4DragonGolem",
+														"amount": 1
+													}
+												]
+											},
+											{
+												"creatures": [
+													{
+														"type": "heroes-memorial.h4:h4Dwarf",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Mage",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4GoldGolem",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Genie",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Naga",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Titan",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4DragonGolem",
+														"amount": 1
+													}
+												]
+											}
+										]
+									},
+									{
+										"anyOf": [
+											{
+												"creatures": [
+													{
+														"type": "heroes-memorial.h4:h4Imp",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Skeleton",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Cerberus",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Ghost",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4VenomSpawn",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Vampire",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Archdevil",
+														"amount": 1
+													}
+												]
+											},
+											{
+												"creatures": [
+													{
+														"type": "heroes-memorial.h4:h4Imp",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Skeleton",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Cerberus",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Ghost",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4VenomSpawn",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Vampire",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4BoneDragon",
+														"amount": 1
+													}
+												]
+											},
+											{
+												"creatures": [
+													{
+														"type": "heroes-memorial.h4:h4Imp",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Skeleton",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Cerberus",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Ghost",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4VenomSpawn",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Archdevil",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4BoneDragon",
+														"amount": 1
+													}
+												]
+											},
+											{
+												"creatures": [
+													{
+														"type": "heroes-memorial.h4:h4Imp",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Skeleton",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Cerberus",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Ghost",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Vampire",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Archdevil",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4BoneDragon",
+														"amount": 1
+													}
+												]
+											},
+											{
+												"creatures": [
+													{
+														"type": "heroes-memorial.h4:h4Imp",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Skeleton",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Cerberus",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4VenomSpawn",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Vampire",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Archdevil",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4BoneDragon",
+														"amount": 1
+													}
+												]
+											},
+											{
+												"creatures": [
+													{
+														"type": "heroes-memorial.h4:h4Imp",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Skeleton",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Ghost",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4VenomSpawn",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Vampire",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Archdevil",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4BoneDragon",
+														"amount": 1
+													}
+												]
+											},
+											{
+												"creatures": [
+													{
+														"type": "heroes-memorial.h4:h4Imp",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Cerberus",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Ghost",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4VenomSpawn",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Vampire",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Archdevil",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4BoneDragon",
+														"amount": 1
+													}
+												]
+											},
+											{
+												"creatures": [
+													{
+														"type": "heroes-memorial.h4:h4Skeleton",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Cerberus",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Ghost",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4VenomSpawn",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Vampire",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Archdevil",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4BoneDragon",
+														"amount": 1
+													}
+												]
+											}
+										]
+									},
+									{
+										"anyOf": [
+											{
+												"creatures": [
+													{
+														"type": "heroes-memorial.h4:h4Bandit",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Orc",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Medusa",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Minotaur",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Nightmare",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Efreet",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Hydra",
+														"amount": 1
+													}
+												]
+											},
+											{
+												"creatures": [
+													{
+														"type": "heroes-memorial.h4:h4Bandit",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Orc",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Medusa",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Minotaur",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Nightmare",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Efreet",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4BlackDragon",
+														"amount": 1
+													}
+												]
+											},
+											{
+												"creatures": [
+													{
+														"type": "heroes-memorial.h4:h4Bandit",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Orc",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Medusa",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Minotaur",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Nightmare",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Hydra",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4BlackDragon",
+														"amount": 1
+													}
+												]
+											},
+											{
+												"creatures": [
+													{
+														"type": "heroes-memorial.h4:h4Bandit",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Orc",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Medusa",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Minotaur",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Efreet",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Hydra",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4BlackDragon",
+														"amount": 1
+													}
+												]
+											},
+											{
+												"creatures": [
+													{
+														"type": "heroes-memorial.h4:h4Bandit",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Orc",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Medusa",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Nightmare",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Efreet",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Hydra",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4BlackDragon",
+														"amount": 1
+													}
+												]
+											},
+											{
+												"creatures": [
+													{
+														"type": "heroes-memorial.h4:h4Bandit",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Orc",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Minotaur",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Nightmare",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Efreet",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Hydra",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4BlackDragon",
+														"amount": 1
+													}
+												]
+											},
+											{
+												"creatures": [
+													{
+														"type": "heroes-memorial.h4:h4Bandit",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Medusa",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Minotaur",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Nightmare",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Efreet",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Hydra",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4BlackDragon",
+														"amount": 1
+													}
+												]
+											},
+											{
+												"creatures": [
+													{
+														"type": "heroes-memorial.h4:h4Orc",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Medusa",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Minotaur",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Nightmare",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Efreet",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Hydra",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4BlackDragon",
+														"amount": 1
+													}
+												]
+											}
+										]
+									},
+									{
+										"anyOf": [
+											{
+												"creatures": [
+													{
+														"type": "heroes-memorial.h4:h4Sprite",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Wolf",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Elf",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4WhiteTiger",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Unicorn",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Griffin",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4FaerieDragon",
+														"amount": 1
+													}
+												]
+											},
+											{
+												"creatures": [
+													{
+														"type": "heroes-memorial.h4:h4Sprite",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Wolf",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Elf",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4WhiteTiger",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Unicorn",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Griffin",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Phoenix",
+														"amount": 1
+													}
+												]
+											},
+											{
+												"creatures": [
+													{
+														"type": "heroes-memorial.h4:h4Sprite",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Wolf",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Elf",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4WhiteTiger",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Unicorn",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4FaerieDragon",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Phoenix",
+														"amount": 1
+													}
+												]
+											},
+											{
+												"creatures": [
+													{
+														"type": "heroes-memorial.h4:h4Sprite",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Wolf",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Elf",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4WhiteTiger",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Griffin",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4FaerieDragon",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Phoenix",
+														"amount": 1
+													}
+												]
+											},
+											{
+												"creatures": [
+													{
+														"type": "heroes-memorial.h4:h4Sprite",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Wolf",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Elf",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Unicorn",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Griffin",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4FaerieDragon",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Phoenix",
+														"amount": 1
+													}
+												]
+											},
+											{
+												"creatures": [
+													{
+														"type": "heroes-memorial.h4:h4Sprite",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Wolf",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4WhiteTiger",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Unicorn",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Griffin",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4FaerieDragon",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Phoenix",
+														"amount": 1
+													}
+												]
+											},
+											{
+												"creatures": [
+													{
+														"type": "heroes-memorial.h4:h4Sprite",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Elf",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4WhiteTiger",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Unicorn",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Griffin",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4FaerieDragon",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Phoenix",
+														"amount": 1
+													}
+												]
+											},
+											{
+												"creatures": [
+													{
+														"type": "heroes-memorial.h4:h4Wolf",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Elf",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4WhiteTiger",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Unicorn",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Griffin",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4FaerieDragon",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Phoenix",
+														"amount": 1
+													}
+												]
+											}
+										]
+									},
+									{
+										"anyOf": [
+											{
+												"creatures": [
+													{
+														"type": "heroes-memorial.h4:h4Berserker",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Centaur",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Harpy",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Nomad",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4OgreMage",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Cyclops",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Thunderbird",
+														"amount": 1
+													}
+												]
+											},
+											{
+												"creatures": [
+													{
+														"type": "heroes-memorial.h4:h4Berserker",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Centaur",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Harpy",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Nomad",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4OgreMage",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Cyclops",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Behemoth",
+														"amount": 1
+													}
+												]
+											},
+											{
+												"creatures": [
+													{
+														"type": "heroes-memorial.h4:h4Berserker",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Centaur",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Harpy",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Nomad",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4OgreMage",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Thunderbird",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Behemoth",
+														"amount": 1
+													}
+												]
+											},
+											{
+												"creatures": [
+													{
+														"type": "heroes-memorial.h4:h4Berserker",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Centaur",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Harpy",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Nomad",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Cyclops",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Thunderbird",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Behemoth",
+														"amount": 1
+													}
+												]
+											},
+											{
+												"creatures": [
+													{
+														"type": "heroes-memorial.h4:h4Berserker",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Centaur",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Harpy",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4OgreMage",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Cyclops",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Thunderbird",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Behemoth",
+														"amount": 1
+													}
+												]
+											},
+											{
+												"creatures": [
+													{
+														"type": "heroes-memorial.h4:h4Berserker",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Centaur",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Nomad",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4OgreMage",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Cyclops",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Thunderbird",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Behemoth",
+														"amount": 1
+													}
+												]
+											},
+											{
+												"creatures": [
+													{
+														"type": "heroes-memorial.h4:h4Berserker",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Harpy",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Nomad",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4OgreMage",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Cyclops",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Thunderbird",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Behemoth",
+														"amount": 1
+													}
+												]
+											},
+											{
+												"creatures": [
+													{
+														"type": "heroes-memorial.h4:h4Centaur",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Harpy",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Nomad",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4OgreMage",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Cyclops",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Thunderbird",
+														"amount": 1
+													},
+													{
+														"type": "heroes-memorial.h4:h4Behemoth",
+														"amount": 1
+													}
+												]
+											}
+										]
+									},
+									{
+										"heroLevel": 999
+									},
+									{
+										"heroLevel": 999
+									},
+									{
+										"heroLevel": 999
+									},
+									{
+										"heroLevel": 999
+									},
+									{
+										"heroLevel": 999
+									},
+									{
+										"heroLevel": 999
+									}
+								]
+							},
+							"primary": {
+								"knowledge": 1
+							}
+						}
+					]
+				}
+			}
+		}
+	},
+	"heroes-memorial.h4:h4PotEndurance": {
+		"types": {
+			"h4PotEndurance": {
+				"selectMode": "selectFirst",
+				"rewards": {
+					"appendItems": [
+						{
+							"resources": {
+								"gold": 300
+							}
+						}
+					]
+				}
+			}
+		}
+	},
+	"heroes-memorial.h4:h4PotMana": {
+		"types": {
+			"h4PotMana": {
+				"selectMode": "selectFirst",
+				"rewards": {
+					"appendItems": [
+						{
+							"resources": {
+								"gold": 300
+							}
+						}
+					]
+				}
+			}
+		}
+	},
+	"heroes-memorial.h4:h4PotionShop": {
+		"types": {
+			"h4PotionShop": {
+				"rewards": [
+					{
+						"appearChance": {
+							"dice": 0,
+							"min": 0,
+							"max": 5
+						},
+						"limiter": {
+							"resources": {
+								"gold": 500
+							}
+						},
+						"resources": {
+							"gold": -500
+						},
+						"artifacts": [
+							"heroes-memorial.h4:h4PotStrength"
+						],
+						"description": "Buy Potion of Strength (500 gold)",
+						"message": "You paid 500 gold for the Potion of Strength."
+					},
+					{
+						"appearChance": {
+							"dice": 0,
+							"min": 5,
+							"max": 10
+						},
+						"limiter": {
+							"resources": {
+								"gold": 500
+							}
+						},
+						"resources": {
+							"gold": -500
+						},
+						"artifacts": [
+							"heroes-memorial.h4:h4PotSpeed"
+						],
+						"description": "Buy Potion of Speed (500 gold)",
+						"message": "You paid 500 gold for the Potion of Speed."
+					},
+					{
+						"appearChance": {
+							"dice": 0,
+							"min": 10,
+							"max": 15
+						},
+						"limiter": {
+							"resources": {
+								"gold": 500
+							}
+						},
+						"resources": {
+							"gold": -500
+						},
+						"artifacts": [
+							"heroes-memorial.h4:h4PotHealth"
+						],
+						"description": "Buy Potion of Health (500 gold)",
+						"message": "You paid 500 gold for the Potion of Health."
+					},
+					{
+						"appearChance": {
+							"dice": 0,
+							"min": 15,
+							"max": 20
+						},
+						"limiter": {
+							"resources": {
+								"gold": 500
+							}
+						},
+						"resources": {
+							"gold": -500
+						},
+						"artifacts": [
+							"heroes-memorial.h4:h4PotLuck"
+						],
+						"description": "Buy Potion of Luck (500 gold)",
+						"message": "You paid 500 gold for the Potion of Luck."
+					},
+					{
+						"appearChance": {
+							"dice": 0,
+							"min": 20,
+							"max": 25
+						},
+						"limiter": {
+							"resources": {
+								"gold": 500
+							}
+						},
+						"resources": {
+							"gold": -500
+						},
+						"artifacts": [
+							"heroes-memorial.h4:h4PotMirth"
+						],
+						"description": "Buy Potion of Mirth (500 gold)",
+						"message": "You paid 500 gold for the Potion of Mirth."
+					},
+					{
+						"appearChance": {
+							"dice": 0,
+							"min": 25,
+							"max": 30
+						},
+						"limiter": {
+							"resources": {
+								"gold": 500
+							}
+						},
+						"resources": {
+							"gold": -500
+						},
+						"artifacts": [
+							"heroes-memorial.h4:h4PotResistance"
+						],
+						"description": "Buy Potion of Resistance (500 gold)",
+						"message": "You paid 500 gold for the Potion of Resistance."
+					},
+					{
+						"appearChance": {
+							"dice": 0,
+							"min": 30,
+							"max": 35
+						},
+						"limiter": {
+							"resources": {
+								"gold": 500
+							}
+						},
+						"resources": {
+							"gold": -500
+						},
+						"artifacts": [
+							"heroes-memorial.h4:h4PotFireResistance"
+						],
+						"description": "Buy Potion of Fire Resistance (500 gold)",
+						"message": "You paid 500 gold for the Potion of Fire Resistance."
+					},
+					{
+						"appearChance": {
+							"dice": 0,
+							"min": 35,
+							"max": 40
+						},
+						"limiter": {
+							"resources": {
+								"gold": 500
+							}
+						},
+						"resources": {
+							"gold": -500
+						},
+						"artifacts": [
+							"heroes-memorial.h4:h4PotCold"
+						],
+						"description": "Buy Potion of Cold (500 gold)",
+						"message": "You paid 500 gold for the Potion of Cold."
+					},
+					{
+						"appearChance": {
+							"dice": 0,
+							"min": 40,
+							"max": 45
+						},
+						"limiter": {
+							"resources": {
+								"gold": 500
+							}
+						},
+						"resources": {
+							"gold": -500
+						},
+						"artifacts": [
+							"heroes-memorial.h4:h4PotQuickness"
+						],
+						"description": "Buy Potion of Quickness (500 gold)",
+						"message": "You paid 500 gold for the Potion of Quickness."
+					},
+					{
+						"appearChance": {
+							"dice": 0,
+							"min": 45,
+							"max": 50
+						},
+						"limiter": {
+							"resources": {
+								"gold": 500
+							}
+						},
+						"resources": {
+							"gold": -500
+						},
+						"artifacts": [
+							"heroes-memorial.h4:h4PotPoison"
+						],
+						"description": "Buy Vial of Poison (500 gold)",
+						"message": "You paid 500 gold for the Vial of Poison."
+					},
+					{
+						"appearChance": {
+							"dice": 0,
+							"min": 50,
+							"max": 55
+						},
+						"limiter": {
+							"resources": {
+								"gold": 1000
+							}
+						},
+						"resources": {
+							"gold": -1000
+						},
+						"artifacts": [
+							"heroes-memorial.h4:h4PotImmortality"
+						],
+						"description": "Buy Potion of Immortality (1000 gold)",
+						"message": "You paid 1000 gold for the Potion of Immortality."
+					},
+					{
+						"appearChance": {
+							"dice": 0,
+							"min": 55,
+							"max": 60
+						},
+						"limiter": {
+							"resources": {
+								"gold": 500
+							}
+						},
+						"resources": {
+							"gold": -500
+						},
+						"artifacts": [
+							"heroes-memorial.h4:h4PotHealing"
+						],
+						"description": "Buy Potion of Healing (500 gold)",
+						"message": "You paid 500 gold for the Potion of Healing."
+					},
+					{
+						"appearChance": {
+							"dice": 0,
+							"min": 60,
+							"max": 65
+						},
+						"limiter": {
+							"resources": {
+								"gold": 500
+							}
+						},
+						"resources": {
+							"gold": -500
+						},
+						"artifacts": [
+							"heroes-memorial.h4:h4PotRestoration"
+						],
+						"description": "Buy Potion of Restoration (500 gold)",
+						"message": "You paid 500 gold for the Potion of Restoration."
+					},
+					{
+						"appearChance": {
+							"dice": 0,
+							"min": 65,
+							"max": 70
+						},
+						"limiter": {
+							"resources": {
+								"gold": 500
+							}
+						},
+						"resources": {
+							"gold": -500
+						},
+						"artifacts": [
+							"heroes-memorial.h4:h4PotHolyWater"
+						],
+						"description": "Buy Holy Water (500 gold)",
+						"message": "You paid 500 gold for the Holy Water."
+					},
+					{
+						"appearChance": {
+							"dice": 0,
+							"min": 70,
+							"max": 75
+						},
+						"limiter": {
+							"resources": {
+								"gold": 750
+							}
+						},
+						"resources": {
+							"gold": -750
+						},
+						"artifacts": [
+							"heroes-memorial.h4:h4PotKreeganFire"
+						],
+						"description": "Buy Vial of Kreegan Fire (750 gold)",
+						"message": "You paid 750 gold for the Vial of Kreegan Fire."
+					},
+					{
+						"appearChance": {
+							"dice": 0,
+							"min": 75,
+							"max": 80
+						},
+						"limiter": {
+							"resources": {
+								"gold": 500
+							}
+						},
+						"resources": {
+							"gold": -500
+						},
+						"artifacts": [
+							"heroes-memorial.h4:h4PotDespair"
+						],
+						"description": "Buy Vial of Cloud of Despair (500 gold)",
+						"message": "You paid 500 gold for the Vial of Cloud of Despair."
+					},
+					{
+						"appearChance": {
+							"dice": 0,
+							"min": 80,
+							"max": 85
+						},
+						"limiter": {
+							"resources": {
+								"gold": 750
+							}
+						},
+						"resources": {
+							"gold": -750
+						},
+						"artifacts": [
+							"heroes-memorial.h4:h4PotAcid"
+						],
+						"description": "Buy Vial of Acid (750 gold)",
+						"message": "You paid 750 gold for the Vial of Acid."
+					},
+					{
+						"appearChance": {
+							"dice": 0,
+							"min": 85,
+							"max": 90
+						},
+						"limiter": {
+							"resources": {
+								"gold": 500
+							}
+						},
+						"resources": {
+							"gold": -500
+						},
+						"artifacts": [
+							"heroes-memorial.h4:h4PotSmoke"
+						],
+						"description": "Buy Vial of Blinding Smoke (500 gold)",
+						"message": "You paid 500 gold for the Vial of Blinding Smoke."
+					},
+					{
+						"appearChance": {
+							"dice": 0,
+							"min": 90,
+							"max": 95
+						},
+						"limiter": {
+							"resources": {
+								"gold": 500
+							}
+						},
+						"resources": {
+							"gold": -500
+						},
+						"artifacts": [
+							"heroes-memorial.h4:h4PotChokingGas"
+						],
+						"description": "Buy Vial of Choking Gas (500 gold)",
+						"message": "You paid 500 gold for the Vial of Choking Gas."
+					},
+					{
+						"appearChance": {
+							"dice": 0,
+							"min": 95,
+							"max": 100
+						},
+						"limiter": {
+							"resources": {
+								"gold": 500
+							}
+						},
+						"resources": {
+							"gold": -500
+						},
+						"artifacts": [
+							"heroes-memorial.h4:h4PotBinding"
+						],
+						"description": "Buy Vial of Binding Liquid (500 gold)",
+						"message": "You paid 500 gold for the Vial of Binding Liquid."
+					},
+					{
+						"appearChance": {
+							"dice": 1,
+							"min": 0,
+							"max": 5
+						},
+						"limiter": {
+							"resources": {
+								"gold": 500
+							}
+						},
+						"resources": {
+							"gold": -500
+						},
+						"artifacts": [
+							"heroes-memorial.h4:h4PotStrength"
+						],
+						"description": "Buy Potion of Strength (500 gold)",
+						"message": "You paid 500 gold for the Potion of Strength."
+					},
+					{
+						"appearChance": {
+							"dice": 1,
+							"min": 5,
+							"max": 10
+						},
+						"limiter": {
+							"resources": {
+								"gold": 500
+							}
+						},
+						"resources": {
+							"gold": -500
+						},
+						"artifacts": [
+							"heroes-memorial.h4:h4PotSpeed"
+						],
+						"description": "Buy Potion of Speed (500 gold)",
+						"message": "You paid 500 gold for the Potion of Speed."
+					},
+					{
+						"appearChance": {
+							"dice": 1,
+							"min": 10,
+							"max": 15
+						},
+						"limiter": {
+							"resources": {
+								"gold": 500
+							}
+						},
+						"resources": {
+							"gold": -500
+						},
+						"artifacts": [
+							"heroes-memorial.h4:h4PotHealth"
+						],
+						"description": "Buy Potion of Health (500 gold)",
+						"message": "You paid 500 gold for the Potion of Health."
+					},
+					{
+						"appearChance": {
+							"dice": 1,
+							"min": 15,
+							"max": 20
+						},
+						"limiter": {
+							"resources": {
+								"gold": 500
+							}
+						},
+						"resources": {
+							"gold": -500
+						},
+						"artifacts": [
+							"heroes-memorial.h4:h4PotLuck"
+						],
+						"description": "Buy Potion of Luck (500 gold)",
+						"message": "You paid 500 gold for the Potion of Luck."
+					},
+					{
+						"appearChance": {
+							"dice": 1,
+							"min": 20,
+							"max": 25
+						},
+						"limiter": {
+							"resources": {
+								"gold": 500
+							}
+						},
+						"resources": {
+							"gold": -500
+						},
+						"artifacts": [
+							"heroes-memorial.h4:h4PotMirth"
+						],
+						"description": "Buy Potion of Mirth (500 gold)",
+						"message": "You paid 500 gold for the Potion of Mirth."
+					},
+					{
+						"appearChance": {
+							"dice": 1,
+							"min": 25,
+							"max": 30
+						},
+						"limiter": {
+							"resources": {
+								"gold": 500
+							}
+						},
+						"resources": {
+							"gold": -500
+						},
+						"artifacts": [
+							"heroes-memorial.h4:h4PotResistance"
+						],
+						"description": "Buy Potion of Resistance (500 gold)",
+						"message": "You paid 500 gold for the Potion of Resistance."
+					},
+					{
+						"appearChance": {
+							"dice": 1,
+							"min": 30,
+							"max": 35
+						},
+						"limiter": {
+							"resources": {
+								"gold": 500
+							}
+						},
+						"resources": {
+							"gold": -500
+						},
+						"artifacts": [
+							"heroes-memorial.h4:h4PotFireResistance"
+						],
+						"description": "Buy Potion of Fire Resistance (500 gold)",
+						"message": "You paid 500 gold for the Potion of Fire Resistance."
+					},
+					{
+						"appearChance": {
+							"dice": 1,
+							"min": 35,
+							"max": 40
+						},
+						"limiter": {
+							"resources": {
+								"gold": 500
+							}
+						},
+						"resources": {
+							"gold": -500
+						},
+						"artifacts": [
+							"heroes-memorial.h4:h4PotCold"
+						],
+						"description": "Buy Potion of Cold (500 gold)",
+						"message": "You paid 500 gold for the Potion of Cold."
+					},
+					{
+						"appearChance": {
+							"dice": 1,
+							"min": 40,
+							"max": 45
+						},
+						"limiter": {
+							"resources": {
+								"gold": 500
+							}
+						},
+						"resources": {
+							"gold": -500
+						},
+						"artifacts": [
+							"heroes-memorial.h4:h4PotQuickness"
+						],
+						"description": "Buy Potion of Quickness (500 gold)",
+						"message": "You paid 500 gold for the Potion of Quickness."
+					},
+					{
+						"appearChance": {
+							"dice": 1,
+							"min": 45,
+							"max": 50
+						},
+						"limiter": {
+							"resources": {
+								"gold": 500
+							}
+						},
+						"resources": {
+							"gold": -500
+						},
+						"artifacts": [
+							"heroes-memorial.h4:h4PotPoison"
+						],
+						"description": "Buy Vial of Poison (500 gold)",
+						"message": "You paid 500 gold for the Vial of Poison."
+					},
+					{
+						"appearChance": {
+							"dice": 1,
+							"min": 50,
+							"max": 55
+						},
+						"limiter": {
+							"resources": {
+								"gold": 1000
+							}
+						},
+						"resources": {
+							"gold": -1000
+						},
+						"artifacts": [
+							"heroes-memorial.h4:h4PotImmortality"
+						],
+						"description": "Buy Potion of Immortality (1000 gold)",
+						"message": "You paid 1000 gold for the Potion of Immortality."
+					},
+					{
+						"appearChance": {
+							"dice": 1,
+							"min": 55,
+							"max": 60
+						},
+						"limiter": {
+							"resources": {
+								"gold": 500
+							}
+						},
+						"resources": {
+							"gold": -500
+						},
+						"artifacts": [
+							"heroes-memorial.h4:h4PotHealing"
+						],
+						"description": "Buy Potion of Healing (500 gold)",
+						"message": "You paid 500 gold for the Potion of Healing."
+					},
+					{
+						"appearChance": {
+							"dice": 1,
+							"min": 60,
+							"max": 65
+						},
+						"limiter": {
+							"resources": {
+								"gold": 500
+							}
+						},
+						"resources": {
+							"gold": -500
+						},
+						"artifacts": [
+							"heroes-memorial.h4:h4PotRestoration"
+						],
+						"description": "Buy Potion of Restoration (500 gold)",
+						"message": "You paid 500 gold for the Potion of Restoration."
+					},
+					{
+						"appearChance": {
+							"dice": 1,
+							"min": 65,
+							"max": 70
+						},
+						"limiter": {
+							"resources": {
+								"gold": 500
+							}
+						},
+						"resources": {
+							"gold": -500
+						},
+						"artifacts": [
+							"heroes-memorial.h4:h4PotHolyWater"
+						],
+						"description": "Buy Holy Water (500 gold)",
+						"message": "You paid 500 gold for the Holy Water."
+					},
+					{
+						"appearChance": {
+							"dice": 1,
+							"min": 70,
+							"max": 75
+						},
+						"limiter": {
+							"resources": {
+								"gold": 750
+							}
+						},
+						"resources": {
+							"gold": -750
+						},
+						"artifacts": [
+							"heroes-memorial.h4:h4PotKreeganFire"
+						],
+						"description": "Buy Vial of Kreegan Fire (750 gold)",
+						"message": "You paid 750 gold for the Vial of Kreegan Fire."
+					},
+					{
+						"appearChance": {
+							"dice": 1,
+							"min": 75,
+							"max": 80
+						},
+						"limiter": {
+							"resources": {
+								"gold": 500
+							}
+						},
+						"resources": {
+							"gold": -500
+						},
+						"artifacts": [
+							"heroes-memorial.h4:h4PotDespair"
+						],
+						"description": "Buy Vial of Cloud of Despair (500 gold)",
+						"message": "You paid 500 gold for the Vial of Cloud of Despair."
+					},
+					{
+						"appearChance": {
+							"dice": 1,
+							"min": 80,
+							"max": 85
+						},
+						"limiter": {
+							"resources": {
+								"gold": 750
+							}
+						},
+						"resources": {
+							"gold": -750
+						},
+						"artifacts": [
+							"heroes-memorial.h4:h4PotAcid"
+						],
+						"description": "Buy Vial of Acid (750 gold)",
+						"message": "You paid 750 gold for the Vial of Acid."
+					},
+					{
+						"appearChance": {
+							"dice": 1,
+							"min": 85,
+							"max": 90
+						},
+						"limiter": {
+							"resources": {
+								"gold": 500
+							}
+						},
+						"resources": {
+							"gold": -500
+						},
+						"artifacts": [
+							"heroes-memorial.h4:h4PotSmoke"
+						],
+						"description": "Buy Vial of Blinding Smoke (500 gold)",
+						"message": "You paid 500 gold for the Vial of Blinding Smoke."
+					},
+					{
+						"appearChance": {
+							"dice": 1,
+							"min": 90,
+							"max": 95
+						},
+						"limiter": {
+							"resources": {
+								"gold": 500
+							}
+						},
+						"resources": {
+							"gold": -500
+						},
+						"artifacts": [
+							"heroes-memorial.h4:h4PotChokingGas"
+						],
+						"description": "Buy Vial of Choking Gas (500 gold)",
+						"message": "You paid 500 gold for the Vial of Choking Gas."
+					},
+					{
+						"appearChance": {
+							"dice": 1,
+							"min": 95,
+							"max": 100
+						},
+						"limiter": {
+							"resources": {
+								"gold": 500
+							}
+						},
+						"resources": {
+							"gold": -500
+						},
+						"artifacts": [
+							"heroes-memorial.h4:h4PotBinding"
+						],
+						"description": "Buy Vial of Binding Liquid (500 gold)",
+						"message": "You paid 500 gold for the Vial of Binding Liquid."
+					},
+					{
+						"appearChance": {
+							"dice": 2,
+							"min": 0,
+							"max": 5
+						},
+						"limiter": {
+							"resources": {
+								"gold": 500
+							}
+						},
+						"resources": {
+							"gold": -500
+						},
+						"artifacts": [
+							"heroes-memorial.h4:h4PotStrength"
+						],
+						"description": "Buy Potion of Strength (500 gold)",
+						"message": "You paid 500 gold for the Potion of Strength."
+					},
+					{
+						"appearChance": {
+							"dice": 2,
+							"min": 5,
+							"max": 10
+						},
+						"limiter": {
+							"resources": {
+								"gold": 500
+							}
+						},
+						"resources": {
+							"gold": -500
+						},
+						"artifacts": [
+							"heroes-memorial.h4:h4PotSpeed"
+						],
+						"description": "Buy Potion of Speed (500 gold)",
+						"message": "You paid 500 gold for the Potion of Speed."
+					},
+					{
+						"appearChance": {
+							"dice": 2,
+							"min": 10,
+							"max": 15
+						},
+						"limiter": {
+							"resources": {
+								"gold": 500
+							}
+						},
+						"resources": {
+							"gold": -500
+						},
+						"artifacts": [
+							"heroes-memorial.h4:h4PotHealth"
+						],
+						"description": "Buy Potion of Health (500 gold)",
+						"message": "You paid 500 gold for the Potion of Health."
+					},
+					{
+						"appearChance": {
+							"dice": 2,
+							"min": 15,
+							"max": 20
+						},
+						"limiter": {
+							"resources": {
+								"gold": 500
+							}
+						},
+						"resources": {
+							"gold": -500
+						},
+						"artifacts": [
+							"heroes-memorial.h4:h4PotLuck"
+						],
+						"description": "Buy Potion of Luck (500 gold)",
+						"message": "You paid 500 gold for the Potion of Luck."
+					},
+					{
+						"appearChance": {
+							"dice": 2,
+							"min": 20,
+							"max": 25
+						},
+						"limiter": {
+							"resources": {
+								"gold": 500
+							}
+						},
+						"resources": {
+							"gold": -500
+						},
+						"artifacts": [
+							"heroes-memorial.h4:h4PotMirth"
+						],
+						"description": "Buy Potion of Mirth (500 gold)",
+						"message": "You paid 500 gold for the Potion of Mirth."
+					},
+					{
+						"appearChance": {
+							"dice": 2,
+							"min": 25,
+							"max": 30
+						},
+						"limiter": {
+							"resources": {
+								"gold": 500
+							}
+						},
+						"resources": {
+							"gold": -500
+						},
+						"artifacts": [
+							"heroes-memorial.h4:h4PotResistance"
+						],
+						"description": "Buy Potion of Resistance (500 gold)",
+						"message": "You paid 500 gold for the Potion of Resistance."
+					},
+					{
+						"appearChance": {
+							"dice": 2,
+							"min": 30,
+							"max": 35
+						},
+						"limiter": {
+							"resources": {
+								"gold": 500
+							}
+						},
+						"resources": {
+							"gold": -500
+						},
+						"artifacts": [
+							"heroes-memorial.h4:h4PotFireResistance"
+						],
+						"description": "Buy Potion of Fire Resistance (500 gold)",
+						"message": "You paid 500 gold for the Potion of Fire Resistance."
+					},
+					{
+						"appearChance": {
+							"dice": 2,
+							"min": 35,
+							"max": 40
+						},
+						"limiter": {
+							"resources": {
+								"gold": 500
+							}
+						},
+						"resources": {
+							"gold": -500
+						},
+						"artifacts": [
+							"heroes-memorial.h4:h4PotCold"
+						],
+						"description": "Buy Potion of Cold (500 gold)",
+						"message": "You paid 500 gold for the Potion of Cold."
+					},
+					{
+						"appearChance": {
+							"dice": 2,
+							"min": 40,
+							"max": 45
+						},
+						"limiter": {
+							"resources": {
+								"gold": 500
+							}
+						},
+						"resources": {
+							"gold": -500
+						},
+						"artifacts": [
+							"heroes-memorial.h4:h4PotQuickness"
+						],
+						"description": "Buy Potion of Quickness (500 gold)",
+						"message": "You paid 500 gold for the Potion of Quickness."
+					},
+					{
+						"appearChance": {
+							"dice": 2,
+							"min": 45,
+							"max": 50
+						},
+						"limiter": {
+							"resources": {
+								"gold": 500
+							}
+						},
+						"resources": {
+							"gold": -500
+						},
+						"artifacts": [
+							"heroes-memorial.h4:h4PotPoison"
+						],
+						"description": "Buy Vial of Poison (500 gold)",
+						"message": "You paid 500 gold for the Vial of Poison."
+					},
+					{
+						"appearChance": {
+							"dice": 2,
+							"min": 50,
+							"max": 55
+						},
+						"limiter": {
+							"resources": {
+								"gold": 1000
+							}
+						},
+						"resources": {
+							"gold": -1000
+						},
+						"artifacts": [
+							"heroes-memorial.h4:h4PotImmortality"
+						],
+						"description": "Buy Potion of Immortality (1000 gold)",
+						"message": "You paid 1000 gold for the Potion of Immortality."
+					},
+					{
+						"appearChance": {
+							"dice": 2,
+							"min": 55,
+							"max": 60
+						},
+						"limiter": {
+							"resources": {
+								"gold": 500
+							}
+						},
+						"resources": {
+							"gold": -500
+						},
+						"artifacts": [
+							"heroes-memorial.h4:h4PotHealing"
+						],
+						"description": "Buy Potion of Healing (500 gold)",
+						"message": "You paid 500 gold for the Potion of Healing."
+					},
+					{
+						"appearChance": {
+							"dice": 2,
+							"min": 60,
+							"max": 65
+						},
+						"limiter": {
+							"resources": {
+								"gold": 500
+							}
+						},
+						"resources": {
+							"gold": -500
+						},
+						"artifacts": [
+							"heroes-memorial.h4:h4PotRestoration"
+						],
+						"description": "Buy Potion of Restoration (500 gold)",
+						"message": "You paid 500 gold for the Potion of Restoration."
+					},
+					{
+						"appearChance": {
+							"dice": 2,
+							"min": 65,
+							"max": 70
+						},
+						"limiter": {
+							"resources": {
+								"gold": 500
+							}
+						},
+						"resources": {
+							"gold": -500
+						},
+						"artifacts": [
+							"heroes-memorial.h4:h4PotHolyWater"
+						],
+						"description": "Buy Holy Water (500 gold)",
+						"message": "You paid 500 gold for the Holy Water."
+					},
+					{
+						"appearChance": {
+							"dice": 2,
+							"min": 70,
+							"max": 75
+						},
+						"limiter": {
+							"resources": {
+								"gold": 750
+							}
+						},
+						"resources": {
+							"gold": -750
+						},
+						"artifacts": [
+							"heroes-memorial.h4:h4PotKreeganFire"
+						],
+						"description": "Buy Vial of Kreegan Fire (750 gold)",
+						"message": "You paid 750 gold for the Vial of Kreegan Fire."
+					},
+					{
+						"appearChance": {
+							"dice": 2,
+							"min": 75,
+							"max": 80
+						},
+						"limiter": {
+							"resources": {
+								"gold": 500
+							}
+						},
+						"resources": {
+							"gold": -500
+						},
+						"artifacts": [
+							"heroes-memorial.h4:h4PotDespair"
+						],
+						"description": "Buy Vial of Cloud of Despair (500 gold)",
+						"message": "You paid 500 gold for the Vial of Cloud of Despair."
+					},
+					{
+						"appearChance": {
+							"dice": 2,
+							"min": 80,
+							"max": 85
+						},
+						"limiter": {
+							"resources": {
+								"gold": 750
+							}
+						},
+						"resources": {
+							"gold": -750
+						},
+						"artifacts": [
+							"heroes-memorial.h4:h4PotAcid"
+						],
+						"description": "Buy Vial of Acid (750 gold)",
+						"message": "You paid 750 gold for the Vial of Acid."
+					},
+					{
+						"appearChance": {
+							"dice": 2,
+							"min": 85,
+							"max": 90
+						},
+						"limiter": {
+							"resources": {
+								"gold": 500
+							}
+						},
+						"resources": {
+							"gold": -500
+						},
+						"artifacts": [
+							"heroes-memorial.h4:h4PotSmoke"
+						],
+						"description": "Buy Vial of Blinding Smoke (500 gold)",
+						"message": "You paid 500 gold for the Vial of Blinding Smoke."
+					},
+					{
+						"appearChance": {
+							"dice": 2,
+							"min": 90,
+							"max": 95
+						},
+						"limiter": {
+							"resources": {
+								"gold": 500
+							}
+						},
+						"resources": {
+							"gold": -500
+						},
+						"artifacts": [
+							"heroes-memorial.h4:h4PotChokingGas"
+						],
+						"description": "Buy Vial of Choking Gas (500 gold)",
+						"message": "You paid 500 gold for the Vial of Choking Gas."
+					},
+					{
+						"appearChance": {
+							"dice": 2,
+							"min": 95,
+							"max": 100
+						},
+						"limiter": {
+							"resources": {
+								"gold": 500
+							}
+						},
+						"resources": {
+							"gold": -500
+						},
+						"artifacts": [
+							"heroes-memorial.h4:h4PotBinding"
+						],
+						"description": "Buy Vial of Binding Liquid (500 gold)",
+						"message": "You paid 500 gold for the Vial of Binding Liquid."
+					},
+					{
+						"appearChance": {
+							"dice": 3,
+							"min": 0,
+							"max": 5
+						},
+						"limiter": {
+							"resources": {
+								"gold": 500
+							}
+						},
+						"resources": {
+							"gold": -500
+						},
+						"artifacts": [
+							"heroes-memorial.h4:h4PotStrength"
+						],
+						"description": "Buy Potion of Strength (500 gold)",
+						"message": "You paid 500 gold for the Potion of Strength."
+					},
+					{
+						"appearChance": {
+							"dice": 3,
+							"min": 5,
+							"max": 10
+						},
+						"limiter": {
+							"resources": {
+								"gold": 500
+							}
+						},
+						"resources": {
+							"gold": -500
+						},
+						"artifacts": [
+							"heroes-memorial.h4:h4PotSpeed"
+						],
+						"description": "Buy Potion of Speed (500 gold)",
+						"message": "You paid 500 gold for the Potion of Speed."
+					},
+					{
+						"appearChance": {
+							"dice": 3,
+							"min": 10,
+							"max": 15
+						},
+						"limiter": {
+							"resources": {
+								"gold": 500
+							}
+						},
+						"resources": {
+							"gold": -500
+						},
+						"artifacts": [
+							"heroes-memorial.h4:h4PotHealth"
+						],
+						"description": "Buy Potion of Health (500 gold)",
+						"message": "You paid 500 gold for the Potion of Health."
+					},
+					{
+						"appearChance": {
+							"dice": 3,
+							"min": 15,
+							"max": 20
+						},
+						"limiter": {
+							"resources": {
+								"gold": 500
+							}
+						},
+						"resources": {
+							"gold": -500
+						},
+						"artifacts": [
+							"heroes-memorial.h4:h4PotLuck"
+						],
+						"description": "Buy Potion of Luck (500 gold)",
+						"message": "You paid 500 gold for the Potion of Luck."
+					},
+					{
+						"appearChance": {
+							"dice": 3,
+							"min": 20,
+							"max": 25
+						},
+						"limiter": {
+							"resources": {
+								"gold": 500
+							}
+						},
+						"resources": {
+							"gold": -500
+						},
+						"artifacts": [
+							"heroes-memorial.h4:h4PotMirth"
+						],
+						"description": "Buy Potion of Mirth (500 gold)",
+						"message": "You paid 500 gold for the Potion of Mirth."
+					},
+					{
+						"appearChance": {
+							"dice": 3,
+							"min": 25,
+							"max": 30
+						},
+						"limiter": {
+							"resources": {
+								"gold": 500
+							}
+						},
+						"resources": {
+							"gold": -500
+						},
+						"artifacts": [
+							"heroes-memorial.h4:h4PotResistance"
+						],
+						"description": "Buy Potion of Resistance (500 gold)",
+						"message": "You paid 500 gold for the Potion of Resistance."
+					},
+					{
+						"appearChance": {
+							"dice": 3,
+							"min": 30,
+							"max": 35
+						},
+						"limiter": {
+							"resources": {
+								"gold": 500
+							}
+						},
+						"resources": {
+							"gold": -500
+						},
+						"artifacts": [
+							"heroes-memorial.h4:h4PotFireResistance"
+						],
+						"description": "Buy Potion of Fire Resistance (500 gold)",
+						"message": "You paid 500 gold for the Potion of Fire Resistance."
+					},
+					{
+						"appearChance": {
+							"dice": 3,
+							"min": 35,
+							"max": 40
+						},
+						"limiter": {
+							"resources": {
+								"gold": 500
+							}
+						},
+						"resources": {
+							"gold": -500
+						},
+						"artifacts": [
+							"heroes-memorial.h4:h4PotCold"
+						],
+						"description": "Buy Potion of Cold (500 gold)",
+						"message": "You paid 500 gold for the Potion of Cold."
+					},
+					{
+						"appearChance": {
+							"dice": 3,
+							"min": 40,
+							"max": 45
+						},
+						"limiter": {
+							"resources": {
+								"gold": 500
+							}
+						},
+						"resources": {
+							"gold": -500
+						},
+						"artifacts": [
+							"heroes-memorial.h4:h4PotQuickness"
+						],
+						"description": "Buy Potion of Quickness (500 gold)",
+						"message": "You paid 500 gold for the Potion of Quickness."
+					},
+					{
+						"appearChance": {
+							"dice": 3,
+							"min": 45,
+							"max": 50
+						},
+						"limiter": {
+							"resources": {
+								"gold": 500
+							}
+						},
+						"resources": {
+							"gold": -500
+						},
+						"artifacts": [
+							"heroes-memorial.h4:h4PotPoison"
+						],
+						"description": "Buy Vial of Poison (500 gold)",
+						"message": "You paid 500 gold for the Vial of Poison."
+					},
+					{
+						"appearChance": {
+							"dice": 3,
+							"min": 50,
+							"max": 55
+						},
+						"limiter": {
+							"resources": {
+								"gold": 1000
+							}
+						},
+						"resources": {
+							"gold": -1000
+						},
+						"artifacts": [
+							"heroes-memorial.h4:h4PotImmortality"
+						],
+						"description": "Buy Potion of Immortality (1000 gold)",
+						"message": "You paid 1000 gold for the Potion of Immortality."
+					},
+					{
+						"appearChance": {
+							"dice": 3,
+							"min": 55,
+							"max": 60
+						},
+						"limiter": {
+							"resources": {
+								"gold": 500
+							}
+						},
+						"resources": {
+							"gold": -500
+						},
+						"artifacts": [
+							"heroes-memorial.h4:h4PotHealing"
+						],
+						"description": "Buy Potion of Healing (500 gold)",
+						"message": "You paid 500 gold for the Potion of Healing."
+					},
+					{
+						"appearChance": {
+							"dice": 3,
+							"min": 60,
+							"max": 65
+						},
+						"limiter": {
+							"resources": {
+								"gold": 500
+							}
+						},
+						"resources": {
+							"gold": -500
+						},
+						"artifacts": [
+							"heroes-memorial.h4:h4PotRestoration"
+						],
+						"description": "Buy Potion of Restoration (500 gold)",
+						"message": "You paid 500 gold for the Potion of Restoration."
+					},
+					{
+						"appearChance": {
+							"dice": 3,
+							"min": 65,
+							"max": 70
+						},
+						"limiter": {
+							"resources": {
+								"gold": 500
+							}
+						},
+						"resources": {
+							"gold": -500
+						},
+						"artifacts": [
+							"heroes-memorial.h4:h4PotHolyWater"
+						],
+						"description": "Buy Holy Water (500 gold)",
+						"message": "You paid 500 gold for the Holy Water."
+					},
+					{
+						"appearChance": {
+							"dice": 3,
+							"min": 70,
+							"max": 75
+						},
+						"limiter": {
+							"resources": {
+								"gold": 750
+							}
+						},
+						"resources": {
+							"gold": -750
+						},
+						"artifacts": [
+							"heroes-memorial.h4:h4PotKreeganFire"
+						],
+						"description": "Buy Vial of Kreegan Fire (750 gold)",
+						"message": "You paid 750 gold for the Vial of Kreegan Fire."
+					},
+					{
+						"appearChance": {
+							"dice": 3,
+							"min": 75,
+							"max": 80
+						},
+						"limiter": {
+							"resources": {
+								"gold": 500
+							}
+						},
+						"resources": {
+							"gold": -500
+						},
+						"artifacts": [
+							"heroes-memorial.h4:h4PotDespair"
+						],
+						"description": "Buy Vial of Cloud of Despair (500 gold)",
+						"message": "You paid 500 gold for the Vial of Cloud of Despair."
+					},
+					{
+						"appearChance": {
+							"dice": 3,
+							"min": 80,
+							"max": 85
+						},
+						"limiter": {
+							"resources": {
+								"gold": 750
+							}
+						},
+						"resources": {
+							"gold": -750
+						},
+						"artifacts": [
+							"heroes-memorial.h4:h4PotAcid"
+						],
+						"description": "Buy Vial of Acid (750 gold)",
+						"message": "You paid 750 gold for the Vial of Acid."
+					},
+					{
+						"appearChance": {
+							"dice": 3,
+							"min": 85,
+							"max": 90
+						},
+						"limiter": {
+							"resources": {
+								"gold": 500
+							}
+						},
+						"resources": {
+							"gold": -500
+						},
+						"artifacts": [
+							"heroes-memorial.h4:h4PotSmoke"
+						],
+						"description": "Buy Vial of Blinding Smoke (500 gold)",
+						"message": "You paid 500 gold for the Vial of Blinding Smoke."
+					},
+					{
+						"appearChance": {
+							"dice": 3,
+							"min": 90,
+							"max": 95
+						},
+						"limiter": {
+							"resources": {
+								"gold": 500
+							}
+						},
+						"resources": {
+							"gold": -500
+						},
+						"artifacts": [
+							"heroes-memorial.h4:h4PotChokingGas"
+						],
+						"description": "Buy Vial of Choking Gas (500 gold)",
+						"message": "You paid 500 gold for the Vial of Choking Gas."
+					},
+					{
+						"appearChance": {
+							"dice": 3,
+							"min": 95,
+							"max": 100
+						},
+						"limiter": {
+							"resources": {
+								"gold": 500
+							}
+						},
+						"resources": {
+							"gold": -500
+						},
+						"artifacts": [
+							"heroes-memorial.h4:h4PotBinding"
+						],
+						"description": "Buy Vial of Binding Liquid (500 gold)",
+						"message": "You paid 500 gold for the Vial of Binding Liquid."
+					},
+					{
+						"appearChance": {
+							"dice": 4,
+							"min": 0,
+							"max": 5
+						},
+						"limiter": {
+							"resources": {
+								"gold": 500
+							}
+						},
+						"resources": {
+							"gold": -500
+						},
+						"artifacts": [
+							"heroes-memorial.h4:h4PotStrength"
+						],
+						"description": "Buy Potion of Strength (500 gold)",
+						"message": "You paid 500 gold for the Potion of Strength."
+					},
+					{
+						"appearChance": {
+							"dice": 4,
+							"min": 5,
+							"max": 10
+						},
+						"limiter": {
+							"resources": {
+								"gold": 500
+							}
+						},
+						"resources": {
+							"gold": -500
+						},
+						"artifacts": [
+							"heroes-memorial.h4:h4PotSpeed"
+						],
+						"description": "Buy Potion of Speed (500 gold)",
+						"message": "You paid 500 gold for the Potion of Speed."
+					},
+					{
+						"appearChance": {
+							"dice": 4,
+							"min": 10,
+							"max": 15
+						},
+						"limiter": {
+							"resources": {
+								"gold": 500
+							}
+						},
+						"resources": {
+							"gold": -500
+						},
+						"artifacts": [
+							"heroes-memorial.h4:h4PotHealth"
+						],
+						"description": "Buy Potion of Health (500 gold)",
+						"message": "You paid 500 gold for the Potion of Health."
+					},
+					{
+						"appearChance": {
+							"dice": 4,
+							"min": 15,
+							"max": 20
+						},
+						"limiter": {
+							"resources": {
+								"gold": 500
+							}
+						},
+						"resources": {
+							"gold": -500
+						},
+						"artifacts": [
+							"heroes-memorial.h4:h4PotLuck"
+						],
+						"description": "Buy Potion of Luck (500 gold)",
+						"message": "You paid 500 gold for the Potion of Luck."
+					},
+					{
+						"appearChance": {
+							"dice": 4,
+							"min": 20,
+							"max": 25
+						},
+						"limiter": {
+							"resources": {
+								"gold": 500
+							}
+						},
+						"resources": {
+							"gold": -500
+						},
+						"artifacts": [
+							"heroes-memorial.h4:h4PotMirth"
+						],
+						"description": "Buy Potion of Mirth (500 gold)",
+						"message": "You paid 500 gold for the Potion of Mirth."
+					},
+					{
+						"appearChance": {
+							"dice": 4,
+							"min": 25,
+							"max": 30
+						},
+						"limiter": {
+							"resources": {
+								"gold": 500
+							}
+						},
+						"resources": {
+							"gold": -500
+						},
+						"artifacts": [
+							"heroes-memorial.h4:h4PotResistance"
+						],
+						"description": "Buy Potion of Resistance (500 gold)",
+						"message": "You paid 500 gold for the Potion of Resistance."
+					},
+					{
+						"appearChance": {
+							"dice": 4,
+							"min": 30,
+							"max": 35
+						},
+						"limiter": {
+							"resources": {
+								"gold": 500
+							}
+						},
+						"resources": {
+							"gold": -500
+						},
+						"artifacts": [
+							"heroes-memorial.h4:h4PotFireResistance"
+						],
+						"description": "Buy Potion of Fire Resistance (500 gold)",
+						"message": "You paid 500 gold for the Potion of Fire Resistance."
+					},
+					{
+						"appearChance": {
+							"dice": 4,
+							"min": 35,
+							"max": 40
+						},
+						"limiter": {
+							"resources": {
+								"gold": 500
+							}
+						},
+						"resources": {
+							"gold": -500
+						},
+						"artifacts": [
+							"heroes-memorial.h4:h4PotCold"
+						],
+						"description": "Buy Potion of Cold (500 gold)",
+						"message": "You paid 500 gold for the Potion of Cold."
+					},
+					{
+						"appearChance": {
+							"dice": 4,
+							"min": 40,
+							"max": 45
+						},
+						"limiter": {
+							"resources": {
+								"gold": 500
+							}
+						},
+						"resources": {
+							"gold": -500
+						},
+						"artifacts": [
+							"heroes-memorial.h4:h4PotQuickness"
+						],
+						"description": "Buy Potion of Quickness (500 gold)",
+						"message": "You paid 500 gold for the Potion of Quickness."
+					},
+					{
+						"appearChance": {
+							"dice": 4,
+							"min": 45,
+							"max": 50
+						},
+						"limiter": {
+							"resources": {
+								"gold": 500
+							}
+						},
+						"resources": {
+							"gold": -500
+						},
+						"artifacts": [
+							"heroes-memorial.h4:h4PotPoison"
+						],
+						"description": "Buy Vial of Poison (500 gold)",
+						"message": "You paid 500 gold for the Vial of Poison."
+					},
+					{
+						"appearChance": {
+							"dice": 4,
+							"min": 50,
+							"max": 55
+						},
+						"limiter": {
+							"resources": {
+								"gold": 1000
+							}
+						},
+						"resources": {
+							"gold": -1000
+						},
+						"artifacts": [
+							"heroes-memorial.h4:h4PotImmortality"
+						],
+						"description": "Buy Potion of Immortality (1000 gold)",
+						"message": "You paid 1000 gold for the Potion of Immortality."
+					},
+					{
+						"appearChance": {
+							"dice": 4,
+							"min": 55,
+							"max": 60
+						},
+						"limiter": {
+							"resources": {
+								"gold": 500
+							}
+						},
+						"resources": {
+							"gold": -500
+						},
+						"artifacts": [
+							"heroes-memorial.h4:h4PotHealing"
+						],
+						"description": "Buy Potion of Healing (500 gold)",
+						"message": "You paid 500 gold for the Potion of Healing."
+					},
+					{
+						"appearChance": {
+							"dice": 4,
+							"min": 60,
+							"max": 65
+						},
+						"limiter": {
+							"resources": {
+								"gold": 500
+							}
+						},
+						"resources": {
+							"gold": -500
+						},
+						"artifacts": [
+							"heroes-memorial.h4:h4PotRestoration"
+						],
+						"description": "Buy Potion of Restoration (500 gold)",
+						"message": "You paid 500 gold for the Potion of Restoration."
+					},
+					{
+						"appearChance": {
+							"dice": 4,
+							"min": 65,
+							"max": 70
+						},
+						"limiter": {
+							"resources": {
+								"gold": 500
+							}
+						},
+						"resources": {
+							"gold": -500
+						},
+						"artifacts": [
+							"heroes-memorial.h4:h4PotHolyWater"
+						],
+						"description": "Buy Holy Water (500 gold)",
+						"message": "You paid 500 gold for the Holy Water."
+					},
+					{
+						"appearChance": {
+							"dice": 4,
+							"min": 70,
+							"max": 75
+						},
+						"limiter": {
+							"resources": {
+								"gold": 750
+							}
+						},
+						"resources": {
+							"gold": -750
+						},
+						"artifacts": [
+							"heroes-memorial.h4:h4PotKreeganFire"
+						],
+						"description": "Buy Vial of Kreegan Fire (750 gold)",
+						"message": "You paid 750 gold for the Vial of Kreegan Fire."
+					},
+					{
+						"appearChance": {
+							"dice": 4,
+							"min": 75,
+							"max": 80
+						},
+						"limiter": {
+							"resources": {
+								"gold": 500
+							}
+						},
+						"resources": {
+							"gold": -500
+						},
+						"artifacts": [
+							"heroes-memorial.h4:h4PotDespair"
+						],
+						"description": "Buy Vial of Cloud of Despair (500 gold)",
+						"message": "You paid 500 gold for the Vial of Cloud of Despair."
+					},
+					{
+						"appearChance": {
+							"dice": 4,
+							"min": 80,
+							"max": 85
+						},
+						"limiter": {
+							"resources": {
+								"gold": 750
+							}
+						},
+						"resources": {
+							"gold": -750
+						},
+						"artifacts": [
+							"heroes-memorial.h4:h4PotAcid"
+						],
+						"description": "Buy Vial of Acid (750 gold)",
+						"message": "You paid 750 gold for the Vial of Acid."
+					},
+					{
+						"appearChance": {
+							"dice": 4,
+							"min": 85,
+							"max": 90
+						},
+						"limiter": {
+							"resources": {
+								"gold": 500
+							}
+						},
+						"resources": {
+							"gold": -500
+						},
+						"artifacts": [
+							"heroes-memorial.h4:h4PotSmoke"
+						],
+						"description": "Buy Vial of Blinding Smoke (500 gold)",
+						"message": "You paid 500 gold for the Vial of Blinding Smoke."
+					},
+					{
+						"appearChance": {
+							"dice": 4,
+							"min": 90,
+							"max": 95
+						},
+						"limiter": {
+							"resources": {
+								"gold": 500
+							}
+						},
+						"resources": {
+							"gold": -500
+						},
+						"artifacts": [
+							"heroes-memorial.h4:h4PotChokingGas"
+						],
+						"description": "Buy Vial of Choking Gas (500 gold)",
+						"message": "You paid 500 gold for the Vial of Choking Gas."
+					},
+					{
+						"appearChance": {
+							"dice": 4,
+							"min": 95,
+							"max": 100
+						},
+						"limiter": {
+							"resources": {
+								"gold": 500
+							}
+						},
+						"resources": {
+							"gold": -500
+						},
+						"artifacts": [
+							"heroes-memorial.h4:h4PotBinding"
+						],
+						"description": "Buy Vial of Binding Liquid (500 gold)",
+						"message": "You paid 500 gold for the Vial of Binding Liquid."
+					},
+					{
+						"appearChance": {
+							"dice": 5,
+							"min": 0,
+							"max": 5
+						},
+						"limiter": {
+							"resources": {
+								"gold": 500
+							}
+						},
+						"resources": {
+							"gold": -500
+						},
+						"artifacts": [
+							"heroes-memorial.h4:h4PotStrength"
+						],
+						"description": "Buy Potion of Strength (500 gold)",
+						"message": "You paid 500 gold for the Potion of Strength."
+					},
+					{
+						"appearChance": {
+							"dice": 5,
+							"min": 5,
+							"max": 10
+						},
+						"limiter": {
+							"resources": {
+								"gold": 500
+							}
+						},
+						"resources": {
+							"gold": -500
+						},
+						"artifacts": [
+							"heroes-memorial.h4:h4PotSpeed"
+						],
+						"description": "Buy Potion of Speed (500 gold)",
+						"message": "You paid 500 gold for the Potion of Speed."
+					},
+					{
+						"appearChance": {
+							"dice": 5,
+							"min": 10,
+							"max": 15
+						},
+						"limiter": {
+							"resources": {
+								"gold": 500
+							}
+						},
+						"resources": {
+							"gold": -500
+						},
+						"artifacts": [
+							"heroes-memorial.h4:h4PotHealth"
+						],
+						"description": "Buy Potion of Health (500 gold)",
+						"message": "You paid 500 gold for the Potion of Health."
+					},
+					{
+						"appearChance": {
+							"dice": 5,
+							"min": 15,
+							"max": 20
+						},
+						"limiter": {
+							"resources": {
+								"gold": 500
+							}
+						},
+						"resources": {
+							"gold": -500
+						},
+						"artifacts": [
+							"heroes-memorial.h4:h4PotLuck"
+						],
+						"description": "Buy Potion of Luck (500 gold)",
+						"message": "You paid 500 gold for the Potion of Luck."
+					},
+					{
+						"appearChance": {
+							"dice": 5,
+							"min": 20,
+							"max": 25
+						},
+						"limiter": {
+							"resources": {
+								"gold": 500
+							}
+						},
+						"resources": {
+							"gold": -500
+						},
+						"artifacts": [
+							"heroes-memorial.h4:h4PotMirth"
+						],
+						"description": "Buy Potion of Mirth (500 gold)",
+						"message": "You paid 500 gold for the Potion of Mirth."
+					},
+					{
+						"appearChance": {
+							"dice": 5,
+							"min": 25,
+							"max": 30
+						},
+						"limiter": {
+							"resources": {
+								"gold": 500
+							}
+						},
+						"resources": {
+							"gold": -500
+						},
+						"artifacts": [
+							"heroes-memorial.h4:h4PotResistance"
+						],
+						"description": "Buy Potion of Resistance (500 gold)",
+						"message": "You paid 500 gold for the Potion of Resistance."
+					},
+					{
+						"appearChance": {
+							"dice": 5,
+							"min": 30,
+							"max": 35
+						},
+						"limiter": {
+							"resources": {
+								"gold": 500
+							}
+						},
+						"resources": {
+							"gold": -500
+						},
+						"artifacts": [
+							"heroes-memorial.h4:h4PotFireResistance"
+						],
+						"description": "Buy Potion of Fire Resistance (500 gold)",
+						"message": "You paid 500 gold for the Potion of Fire Resistance."
+					},
+					{
+						"appearChance": {
+							"dice": 5,
+							"min": 35,
+							"max": 40
+						},
+						"limiter": {
+							"resources": {
+								"gold": 500
+							}
+						},
+						"resources": {
+							"gold": -500
+						},
+						"artifacts": [
+							"heroes-memorial.h4:h4PotCold"
+						],
+						"description": "Buy Potion of Cold (500 gold)",
+						"message": "You paid 500 gold for the Potion of Cold."
+					},
+					{
+						"appearChance": {
+							"dice": 5,
+							"min": 40,
+							"max": 45
+						},
+						"limiter": {
+							"resources": {
+								"gold": 500
+							}
+						},
+						"resources": {
+							"gold": -500
+						},
+						"artifacts": [
+							"heroes-memorial.h4:h4PotQuickness"
+						],
+						"description": "Buy Potion of Quickness (500 gold)",
+						"message": "You paid 500 gold for the Potion of Quickness."
+					},
+					{
+						"appearChance": {
+							"dice": 5,
+							"min": 45,
+							"max": 50
+						},
+						"limiter": {
+							"resources": {
+								"gold": 500
+							}
+						},
+						"resources": {
+							"gold": -500
+						},
+						"artifacts": [
+							"heroes-memorial.h4:h4PotPoison"
+						],
+						"description": "Buy Vial of Poison (500 gold)",
+						"message": "You paid 500 gold for the Vial of Poison."
+					},
+					{
+						"appearChance": {
+							"dice": 5,
+							"min": 50,
+							"max": 55
+						},
+						"limiter": {
+							"resources": {
+								"gold": 1000
+							}
+						},
+						"resources": {
+							"gold": -1000
+						},
+						"artifacts": [
+							"heroes-memorial.h4:h4PotImmortality"
+						],
+						"description": "Buy Potion of Immortality (1000 gold)",
+						"message": "You paid 1000 gold for the Potion of Immortality."
+					},
+					{
+						"appearChance": {
+							"dice": 5,
+							"min": 55,
+							"max": 60
+						},
+						"limiter": {
+							"resources": {
+								"gold": 500
+							}
+						},
+						"resources": {
+							"gold": -500
+						},
+						"artifacts": [
+							"heroes-memorial.h4:h4PotHealing"
+						],
+						"description": "Buy Potion of Healing (500 gold)",
+						"message": "You paid 500 gold for the Potion of Healing."
+					},
+					{
+						"appearChance": {
+							"dice": 5,
+							"min": 60,
+							"max": 65
+						},
+						"limiter": {
+							"resources": {
+								"gold": 500
+							}
+						},
+						"resources": {
+							"gold": -500
+						},
+						"artifacts": [
+							"heroes-memorial.h4:h4PotRestoration"
+						],
+						"description": "Buy Potion of Restoration (500 gold)",
+						"message": "You paid 500 gold for the Potion of Restoration."
+					},
+					{
+						"appearChance": {
+							"dice": 5,
+							"min": 65,
+							"max": 70
+						},
+						"limiter": {
+							"resources": {
+								"gold": 500
+							}
+						},
+						"resources": {
+							"gold": -500
+						},
+						"artifacts": [
+							"heroes-memorial.h4:h4PotHolyWater"
+						],
+						"description": "Buy Holy Water (500 gold)",
+						"message": "You paid 500 gold for the Holy Water."
+					},
+					{
+						"appearChance": {
+							"dice": 5,
+							"min": 70,
+							"max": 75
+						},
+						"limiter": {
+							"resources": {
+								"gold": 750
+							}
+						},
+						"resources": {
+							"gold": -750
+						},
+						"artifacts": [
+							"heroes-memorial.h4:h4PotKreeganFire"
+						],
+						"description": "Buy Vial of Kreegan Fire (750 gold)",
+						"message": "You paid 750 gold for the Vial of Kreegan Fire."
+					},
+					{
+						"appearChance": {
+							"dice": 5,
+							"min": 75,
+							"max": 80
+						},
+						"limiter": {
+							"resources": {
+								"gold": 500
+							}
+						},
+						"resources": {
+							"gold": -500
+						},
+						"artifacts": [
+							"heroes-memorial.h4:h4PotDespair"
+						],
+						"description": "Buy Vial of Cloud of Despair (500 gold)",
+						"message": "You paid 500 gold for the Vial of Cloud of Despair."
+					},
+					{
+						"appearChance": {
+							"dice": 5,
+							"min": 80,
+							"max": 85
+						},
+						"limiter": {
+							"resources": {
+								"gold": 750
+							}
+						},
+						"resources": {
+							"gold": -750
+						},
+						"artifacts": [
+							"heroes-memorial.h4:h4PotAcid"
+						],
+						"description": "Buy Vial of Acid (750 gold)",
+						"message": "You paid 750 gold for the Vial of Acid."
+					},
+					{
+						"appearChance": {
+							"dice": 5,
+							"min": 85,
+							"max": 90
+						},
+						"limiter": {
+							"resources": {
+								"gold": 500
+							}
+						},
+						"resources": {
+							"gold": -500
+						},
+						"artifacts": [
+							"heroes-memorial.h4:h4PotSmoke"
+						],
+						"description": "Buy Vial of Blinding Smoke (500 gold)",
+						"message": "You paid 500 gold for the Vial of Blinding Smoke."
+					},
+					{
+						"appearChance": {
+							"dice": 5,
+							"min": 90,
+							"max": 95
+						},
+						"limiter": {
+							"resources": {
+								"gold": 500
+							}
+						},
+						"resources": {
+							"gold": -500
+						},
+						"artifacts": [
+							"heroes-memorial.h4:h4PotChokingGas"
+						],
+						"description": "Buy Vial of Choking Gas (500 gold)",
+						"message": "You paid 500 gold for the Vial of Choking Gas."
+					},
+					{
+						"limiter": {
+							"resources": {
+								"gold": 750
+							}
+						},
+						"resources": {
+							"gold": -750
+						},
+						"description": "Buy Vial of Binding Liquid (500 gold)",
+						"message": "You paid 500 gold for the Vial of Binding Liquid.",
+						"manaPoints": 25,
+						"manaOverflowFactor": 100
+					},
+					{
+						"limiter": {
+							"resources": {
+								"gold": 500
+							}
+						},
+						"resources": {
+							"gold": -500
+						},
+						"description": "Drink Potion of Mana (750 gold)",
+						"message": "You pay 750 gold and drink a Potion of Mana on the spot: the hero gains 25 mana (may exceed the maximum).",
+						"movePoints": 300,
+						"moveOverflowFactor": 100
+					},
+					{
+						"appearChance": {
+							"dice": 5,
+							"min": 95,
+							"max": 100
+						},
+						"limiter": {
+							"resources": {
+								"gold": 500
+							}
+						},
+						"resources": {
+							"gold": -500
+						},
+						"artifacts": [
+							"heroes-memorial.h4:h4PotBinding"
+						],
+						"description": "Drink Potion of Endurance (500 gold)",
+						"message": "You pay 500 gold and drink a Potion of Endurance on the spot: the hero gains 300 movement points for today (about 3 tiles)."
+					}
+				]
+			}
+		}
+	}
+}

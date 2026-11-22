@@ -1,0 +1,207 @@
+{
+	"h4Proc": {
+		"implements": "combatEvent",
+		"script": "combat/h4Proc",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"mode": {
+					"type": "string"
+				},
+				"turns": {
+					"type": "number"
+				},
+				"show": {
+					"type": "string"
+				},
+				"log": {
+					"type": "number"
+				},
+				"sound": {
+					"type": "string"
+				},
+				"mind": {
+					"type": "boolean"
+				},
+				"school": {
+					"type": "string"
+				},
+				"melee": {
+					"type": "boolean"
+				},
+				"ranged": {
+					"type": "boolean"
+				},
+				"counter": {
+					"type": "boolean"
+				},
+				"amount": {
+					"type": "number"
+				},
+				"minLevel": {
+					"type": "number"
+				},
+				"attack": {
+					"type": "number"
+				},
+				"spells": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"weeks": {
+					"type": "number"
+				},
+				"schools": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"side": {
+					"type": "string"
+				},
+				"tint": {
+					"type": "string"
+				},
+				"fx": {
+					"type": "string"
+				},
+				"spell": {
+					"type": "string"
+				},
+				"level": {
+					"type": "number"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": "Heroes IV: after-attack chance to incapacitate the target, devour, and giant slayer"
+	},
+	"h4SpellFx": {
+		"implements": "spellEffect",
+		"script": "spells/h4SpellFx",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"mode": {
+					"type": "string"
+				},
+				"give": {
+					"type": "boolean"
+				},
+				"range": {
+					"type": "number"
+				},
+				"base": {
+					"type": "array",
+					"items": {
+						"type": "number"
+					}
+				},
+				"perPower": {
+					"type": "array",
+					"items": {
+						"type": "number"
+					}
+				},
+				"spell": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"h4SmokeFx": {
+		"implements": "spellEffect",
+		"script": "spells/h4SmokeFx",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"turns": {
+					"type": "number"
+				},
+				"animation": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"h4FireShield": {
+		"implements": "combatEvent",
+		"script": "combat/h4FireShield",
+		"patches": [],
+		"priority": 50,
+		"schema": {
+			"properties": {},
+			"additionalProperties": false
+		},
+		"description": "Heroes IV: Fire Shield (same rules as the engine fireShield, with Heroes IV effects)"
+	},
+	"h4LifeDrain": {
+		"implements": "combatEvent",
+		"script": "combat/h4LifeDrain",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"properties": {},
+			"additionalProperties": false
+		},
+		"description": "Heroes IV: Life Drain (same rules as the engine lifeDrain, with Heroes IV effects)"
+	},
+	"h4Rebirth": {
+		"implements": "combatEvent",
+		"script": "combat/h4Rebirth",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"properties": {
+				"guaranteed": {
+					"type": "boolean"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": "Heroes IV: Rebirth (same rules as the engine rebirth, with Heroes IV effects)"
+	},
+	"h4DeathStare": {
+		"implements": "combatEvent",
+		"script": "combat/h4DeathStare",
+		"patches": [],
+		"priority": 100,
+		"schema": {
+			"properties": {
+				"situation": {
+					"type": "string"
+				},
+				"spell": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": "Heroes IV: Death Stare (same rules as the engine deathStare, with Heroes IV effects)"
+	},
+	"h4NecroRaise": {
+		"implements": "combatEvent",
+		"script": "combat/h4NecroRaise",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {},
+			"additionalProperties": false
+		},
+		"description": "Heroes IV Necromancy: with 4 or more Heroes IV undead stacks, post-battle Necromancy raises the matching Heroes IV creatures"
+	}
+}

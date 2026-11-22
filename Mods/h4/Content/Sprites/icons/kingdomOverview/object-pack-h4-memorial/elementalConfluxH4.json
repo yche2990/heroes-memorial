@@ -1,0 +1,10 @@
+{
+	"basepath": "icons/kingdomOverview/object-pack-h4-memorial/",
+	"images": [
+		{
+			"group": 0,
+			"frame": 0,
+			"file": "elementalConfluxH4.png"
+		}
+	]
+}

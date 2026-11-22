@@ -1,0 +1,39 @@
+// Ring of Oblivion (hota.artifacts): the Heroes IV resurrection spells cannot be cast while the ring is in effect (written like HotA's spellChanges.json; kept in a submod of heroes-memorial.h4 so the H4 spells load first)
+{
+	// Resurrection spells of heroes-memorial.h4 (the Archangel's resurrection uses the original spell, which HotA already handles)
+	"heroes-memorial.h4:h4Resurrection" : { 
+		"targetCondition" : {
+			"noneOf" : {
+				"bonus.HOTA_RING_OF_OBLIVION" : "absolute"
+			}
+		}
+	},
+	"heroes-memorial.h4:h4DivineIntervention" : { 
+		"targetCondition" : {
+			"noneOf" : {
+				"bonus.HOTA_RING_OF_OBLIVION" : "absolute"
+			}
+		}
+	},
+	"heroes-memorial.h4:h4DeathCall" : { 
+		"targetCondition" : {
+			"noneOf" : {
+				"bonus.HOTA_RING_OF_OBLIVION" : "absolute"
+			}
+		}
+	},
+	"heroes-memorial.h4:h4Sacrifice" : { 
+		"targetCondition" : {
+			"noneOf" : {
+				"bonus.HOTA_RING_OF_OBLIVION" : "absolute"
+			}
+		}
+	},
+	"heroes-memorial.h4:h4AnimateDead" : { 
+		"targetCondition" : {
+			"noneOf" : {
+				"bonus.HOTA_RING_OF_OBLIVION" : "absolute"
+			}
+		}
+	}
+}

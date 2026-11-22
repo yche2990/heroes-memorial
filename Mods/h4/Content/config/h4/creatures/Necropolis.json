@@ -1,0 +1,1883 @@
+{
+	"h4Imp": {
+		"name": {
+			"singular": "Imp",
+			"plural": "Imps"
+		},
+		"description": "Imps drain the enemy hero's spell points.",
+		"faction": "necropolis",
+		"level": 1,
+		"cost": {
+			"gold": 50
+		},
+		"speed": 9,
+		"hitPoints": 4,
+		"attack": 5,
+		"defense": 5,
+		"damage": {
+			"min": 1,
+			"max": 2
+		},
+		"doubleWide": false,
+		"growth": 14,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"demonic": {
+				"type": "tears-of-ashan:DEMONIC",
+				"description": "{Demonic Blood}\nTakes less Fire damage, +25% Light damage."
+			},
+			"demonFireResistance": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.fire",
+				"val": 25,
+				"hidden": true
+			},
+			"lightVulnerability": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.01lightSchool",
+				"val": -25,
+				"hidden": true
+			},
+			"flying": {
+				"type": "FLYING"
+			},
+			"manaDrain": {
+				"type": "MANA_DRAIN",
+				"description": "{Mana Drain}\nDrains 2 spell points from the enemy\nhero every turn",
+				"val": 2
+			}
+		},
+		"graphics": {
+			"animation": "h4/Imp/battle.json",
+			"map": "h4/Imp/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h4/Imp/map/atkL.png",
+			"mapAttackFromRight": "h4/Imp/map/atkR.png",
+			"iconLarge": "h4/Imp/iconLarge.png",
+			"iconSmall": "h4/Imp/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h4/imp_melee.ogg",
+			"wince": "h4/imp_flinch.ogg",
+			"killed": "h4/imp_die.ogg",
+			"move": "h4/imp_walk.ogg"
+		},
+		"aiValue": 69,
+		"fightValue": 65,
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_RETALIATION",
+					"description": "{Nimbleness}\nExtra retaliation each round"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "MORALE"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			}
+		]
+	},
+	"h4Skeleton": {
+		"name": {
+			"singular": "Skeleton",
+			"plural": "Skeletons"
+		},
+		"description": "Made only of bones, skeletons are hard to hurt with ranged attacks.",
+		"faction": "necropolis",
+		"level": 2,
+		"cost": {
+			"gold": 110
+		},
+		"speed": 6,
+		"hitPoints": 12,
+		"attack": 7,
+		"defense": 6,
+		"damage": {
+			"min": 1,
+			"max": 2
+		},
+		"doubleWide": false,
+		"growth": 8,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"undead": {
+				"type": "UNDEAD"
+			},
+			"bones": {
+				"type": "GENERAL_DAMAGE_REDUCTION",
+				"description": "{Bones}\nHalf damage from ranged attacks",
+				"subtype": "damageTypeRanged",
+				"val": 50
+			},
+			"h4NecroRaise": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h4NecroRaise",
+				"hidden": true
+			},
+			"h4NecroRaiseInfo": {
+				"type": "H4_NECRO_RAISE_H4C",
+				"icon": "h4/abilities/necroRaise"
+			}
+		},
+		"graphics": {
+			"animation": "h4/Skeleton/battle.json",
+			"map": "h4/Skeleton/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h4/Skeleton/map/atkL.png",
+			"mapAttackFromRight": "h4/Skeleton/map/atkR.png",
+			"iconLarge": "h4/Skeleton/iconLarge.png",
+			"iconSmall": "h4/Skeleton/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h4/skeleton_melee.ogg",
+			"wince": "h4/skeleton_flinch.ogg",
+			"killed": "h4/skeleton_die.ogg",
+			"move": "h4/skeleton_walk.ogg"
+		},
+		"aiValue": 131,
+		"fightValue": 114,
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					3,
+					3,
+					3,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					3,
+					4,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					0,
+					1,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					3,
+					3,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_RETALIATION",
+					"description": "{Nimbleness}\nExtra retaliation each round"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "LUCK"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			}
+		]
+	},
+	"h4Cerberus": {
+		"name": {
+			"singular": "Cerberus",
+			"plural": "Cerberi"
+		},
+		"description": "The three-headed Cerberus attacks three adjacent enemies at once, and none can retaliate.",
+		"faction": "necropolis",
+		"level": 4,
+		"cost": {
+			"gold": 325
+		},
+		"speed": 9,
+		"hitPoints": 23,
+		"attack": 10,
+		"defense": 10,
+		"damage": {
+			"min": 4,
+			"max": 6
+		},
+		"doubleWide": true,
+		"growth": 5,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"demonic": {
+				"type": "tears-of-ashan:DEMONIC",
+				"description": "{Demonic Blood}\nTakes less Fire damage, +25% Light damage."
+			},
+			"demonFireResistance": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.fire",
+				"val": 25,
+				"hidden": true
+			},
+			"lightVulnerability": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.01lightSchool",
+				"val": -25,
+				"hidden": true
+			},
+			"noRetaliation": {
+				"type": "BLOCKS_RETALIATION",
+				"description": "{No Retaliation}\nEnemies cannot retaliate"
+			},
+			"allAround": {
+				"type": "ATTACKS_ALL_ADJACENT",
+				"description": "{Multiple Attack}\nAttacks all adjacent enemies"
+			}
+		},
+		"graphics": {
+			"animation": "h4/Cerberus/battle.json",
+			"map": "h4/Cerberus/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h4/Cerberus/map/atkL.png",
+			"mapAttackFromRight": "h4/Cerberus/map/atkR.png",
+			"iconLarge": "h4/Cerberus/iconLarge.png",
+			"iconSmall": "h4/Cerberus/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h4/cerberus_melee.ogg",
+			"wince": "h4/cerberus_flinch.ogg",
+			"killed": "h4/cerberus_die.ogg",
+			"move": "h4/cerberus_walk.ogg"
+		},
+		"aiValue": 384,
+		"fightValue": 328,
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					5,
+					6,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_RETALIATION",
+					"description": "{Nimbleness}\nExtra retaliation each round"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "MORALE"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			}
+		]
+	},
+	"h4Ghost": {
+		"name": {
+			"singular": "Ghost",
+			"plural": "Ghosts"
+		},
+		"description": "Ghosts drain the life of their foes, aging them so they become slow and weak.",
+		"faction": "necropolis",
+		"level": 3,
+		"cost": {
+			"gold": 245
+		},
+		"speed": 9,
+		"hitPoints": 16,
+		"attack": 9,
+		"defense": 8,
+		"damage": {
+			"min": 2,
+			"max": 4
+		},
+		"doubleWide": false,
+		"growth": 6,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"flying": {
+				"type": "FLYING"
+			},
+			"undead": {
+				"type": "UNDEAD"
+			},
+			"incorporeal": {
+				"type": "GENERAL_DAMAGE_REDUCTION",
+				"description": "{Incorporeal}\nHalf damage from melee and ranged attacks",
+				"subtype": "damageTypeAll",
+				"val": 50
+			},
+			"age": {
+				"type": "SPELL_AFTER_ATTACK",
+				"description": "{Aging}\n25% after attack: target -25% damage, -20% defense, half speed",
+				"subtype": "spell.h4Aging",
+				"val": 25
+			},
+			"h4NecroRaise": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h4NecroRaise",
+				"hidden": true
+			},
+			"h4NecroRaiseInfo": {
+				"type": "H4_NECRO_RAISE_H4C",
+				"icon": "h4/abilities/necroRaise"
+			}
+		},
+		"graphics": {
+			"animation": "h4/Ghost/battle.json",
+			"map": "h4/Ghost/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h4/Ghost/map/atkL.png",
+			"mapAttackFromRight": "h4/Ghost/map/atkR.png",
+			"iconLarge": "h4/Ghost/iconLarge.png",
+			"iconSmall": "h4/Ghost/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h4/ghost_melee.ogg",
+			"wince": "h4/ghost_flinch.ogg",
+			"killed": "h4/ghost_die.ogg",
+			"move": "h4/ghost_walk.ogg"
+		},
+		"aiValue": 266,
+		"fightValue": 226,
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_RETALIATION",
+					"description": "{Nimbleness}\nExtra retaliation each round"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "LUCK"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			}
+		]
+	},
+	"h4Vampire": {
+		"name": {
+			"singular": "Vampire",
+			"plural": "Vampires"
+		},
+		"description": "Vampires heal themselves when attacking living creatures and can even raise their fallen kin.",
+		"faction": "necropolis",
+		"level": 6,
+		"cost": {
+			"gold": 1585
+		},
+		"speed": 11,
+		"hitPoints": 83,
+		"attack": 17,
+		"defense": 16,
+		"damage": {
+			"min": 16,
+			"max": 24
+		},
+		"doubleWide": false,
+		"growth": 2,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"flying": {
+				"type": "FLYING"
+			},
+			"undead": {
+				"type": "UNDEAD"
+			},
+			"noRetaliation": {
+				"type": "BLOCKS_RETALIATION",
+				"description": "{No Retaliation}\nEnemies cannot retaliate"
+			},
+			"lifeDrain": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"description": "{Life Drain}\nHeals 50% of damage dealt,\ncan revive fallen members",
+				"subtype": "h4LifeDrain",
+				"val": 50,
+				"icon": "h4/abilities/lifeDrain"
+			},
+			"h4NecroRaise": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h4NecroRaise",
+				"hidden": true
+			},
+			"h4NecroRaiseInfo": {
+				"type": "H4_NECRO_RAISE_H4C",
+				"icon": "h4/abilities/necroRaise"
+			}
+		},
+		"graphics": {
+			"animation": "h4/Vampire/battle.json",
+			"map": "h4/Vampire/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h4/Vampire/map/atkL.png",
+			"mapAttackFromRight": "h4/Vampire/map/atkR.png",
+			"iconLarge": "h4/Vampire/iconLarge.png",
+			"iconSmall": "h4/Vampire/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h4/vampire_melee.ogg",
+			"wince": "h4/vampire_flinch.ogg",
+			"killed": "h4/vampire_die.ogg",
+			"move": "h4/vampire_walk.ogg"
+		},
+		"aiValue": 2120,
+		"fightValue": 1774,
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					2,
+					3,
+					4,
+					5,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE",
+					"stacking": "h4VampireExpMagicResistance",
+					"description": "{Magic Resistance}\nChance to resist enemy spells"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					10,
+					20,
+					30,
+					40,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "LUCK"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			}
+		]
+	},
+	"h4VenomSpawn": {
+		"name": {
+			"singular": "Venom Spawn",
+			"plural": "Venom Spawn"
+		},
+		"description": "The hideous venom spawn spit a deadly poison at their foes.",
+		"faction": "necropolis",
+		"level": 5,
+		"cost": {
+			"gold": 990
+		},
+		"speed": 9,
+		"hitPoints": 65,
+		"attack": 14,
+		"defense": 13,
+		"damage": {
+			"min": 15,
+			"max": 23
+		},
+		"doubleWide": true,
+		"growth": 3,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"poison": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"description": "{Poison}\nPoisons the target for 15 turns: 1/4 of the first damage each turn",
+				"subtype": "h4Proc",
+				"val": 100,
+				"addInfo": {
+					"mode": "poison",
+					"turns": 15
+				},
+				"icon": "h4/abilities/poisonAttack"
+			},
+			"shooter": {
+				"type": "SHOOTER"
+			}
+		},
+		"shots": 15,
+		"graphics": {
+			"animation": "h4/VenomSpawn/battle.json",
+			"map": "h4/VenomSpawn/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h4/VenomSpawn/map/atkL.png",
+			"mapAttackFromRight": "h4/VenomSpawn/map/atkR.png",
+			"iconLarge": "h4/VenomSpawn/iconLarge.png",
+			"iconSmall": "h4/VenomSpawn/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"projectile": "h4/missiles/cr_spittle.json",
+				"frameAngles": [
+					90,
+					26.57,
+					0,
+					-26.57,
+					-90
+				],
+				"offset": {
+					"upperX": 60,
+					"upperY": -82,
+					"middleX": 80,
+					"middleY": -60,
+					"lowerX": 62,
+					"lowerY": -37
+				},
+				"attackClimaxFrame": 5
+			}
+		},
+		"sound": {
+			"attack": "h4/venom_spawn_melee.ogg",
+			"wince": "h4/venom_spawn_flinch.ogg",
+			"killed": "h4/venom_spawn_die.ogg",
+			"move": "h4/venom_spawn_walk.ogg",
+			"shoot": "h4/venom_spawn_ranged.ogg"
+		},
+		"aiValue": 1884,
+		"fightValue": 1543,
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					3,
+					4,
+					5,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					3,
+					4,
+					4,
+					6,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					2,
+					3,
+					3,
+					4,
+					5,
+					6,
+					6,
+					7
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					7
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_WALL_PENALTY",
+					"description": "{Siege Shooter}\nNo damage loss when shooting over walls"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_DISTANCE_PENALTY",
+					"description": "{Sharpshooter}\nNo penalty for long-range shots"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "MIND_IMMUNITY",
+					"description": "{Steadfast Mind}\nImmune to Mind spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h4Archdevil": {
+		"name": {
+			"singular": "Devil",
+			"plural": "Devils"
+		},
+		"description": "Devils can teleport anywhere on the battlefield, resist Life magic and summon ice demons to their aid.",
+		"faction": "necropolis",
+		"level": 7,
+		"cost": {
+			"gold": 3985,
+			"sulfur": 2
+		},
+		"speed": 15,
+		"hitPoints": 198,
+		"attack": 24,
+		"defense": 24,
+		"damage": {
+			"min": 31,
+			"max": 45
+		},
+		"doubleWide": false,
+		"growth": 1,
+		"advMapAmount": {
+			"min": 1,
+			"max": 3
+		},
+		"abilities": {
+			"demonic": {
+				"type": "tears-of-ashan:DEMONIC",
+				"description": "{Demonic Blood}\nTakes less Fire damage, +25% Light damage."
+			},
+			"demonFireResistance": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.fire",
+				"val": 25,
+				"hidden": true
+			},
+			"lightVulnerability": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.01lightSchool",
+				"val": -25,
+				"hidden": true
+			},
+			"teleport": {
+				"type": "FLYING",
+				"description": "{Teleport}\nCan teleport to any reachable hex",
+				"subtype": "movementTeleporting"
+			},
+			"lifeWard": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h4Proc",
+				"val": 75,
+				"addInfo": {
+					"mode": "schoolWard",
+					"school": "01lightSchool"
+				},
+				"description": "{Life Protection}\nHalf damage from Light magic",
+				"icon": "h4/abilities/lifeWard"
+			},
+			"summonIceDemons": {
+				"type": "SPELLCASTER",
+				"description": "{Summon Ice Demons}\nOnce per battle, summons as many\nice demons as there are devils",
+				"subtype": "spell.h4AbSummonIceDemons",
+				"val": 3
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 1,
+				"stacking": "h4ArchdevilExpCasts"
+			},
+			"spellPower": {
+				"type": "CREATURE_SPELL_POWER",
+				"val": 100,
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h4/Archdevil/battle.json",
+			"map": "h4/Archdevil/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h4/Archdevil/map/atkL.png",
+			"mapAttackFromRight": "h4/Archdevil/map/atkR.png",
+			"iconLarge": "h4/Archdevil/iconLarge.png",
+			"iconSmall": "h4/Archdevil/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h4/archdevil_melee.ogg",
+			"wince": "h4/archdevil_flinch.ogg",
+			"killed": "h4/archdevil_die.ogg",
+			"startMoving": "h4/archdevil_prewalk.ogg",
+			"endMoving": "h4/archdevil_postwalk.ogg"
+		},
+		"aiValue": 6712,
+		"fightValue": 5038,
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "CASTS",
+					"stacking": "h4ArchdevilExpCasts",
+					"description": "{Practiced Caster}\nCasts per battle grow with rank",
+					"icon": "h4/abilities/caster"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE",
+					"stacking": "h4ArchdevilExpMagicResistance",
+					"description": "{Magic Resistance}\nChance to resist enemy spells"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					10,
+					20,
+					30,
+					40,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "MIND_IMMUNITY",
+					"description": "{Steadfast Mind}\nImmune to Mind spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h4BoneDragon": {
+		"name": {
+			"singular": "Bone Dragon",
+			"plural": "Bone Dragons"
+		},
+		"description": "The gaze of a bone dragon is so terrible that most foes flee from it. Its bony frame also resists ranged attacks.",
+		"faction": "necropolis",
+		"level": 7,
+		"cost": {
+			"gold": 3985,
+			"crystal": 2
+		},
+		"speed": 11,
+		"hitPoints": 259,
+		"attack": 23,
+		"defense": 23,
+		"damage": {
+			"min": 41,
+			"max": 59
+		},
+		"doubleWide": true,
+		"growth": 1,
+		"advMapAmount": {
+			"min": 1,
+			"max": 3
+		},
+		"abilities": {
+			"flying": {
+				"type": "FLYING"
+			},
+			"undead": {
+				"type": "UNDEAD"
+			},
+			"bones": {
+				"type": "GENERAL_DAMAGE_REDUCTION",
+				"description": "{Bones}\nHalf damage from ranged attacks",
+				"subtype": "damageTypeRanged",
+				"val": 50
+			},
+			"terror": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"description": "{Terror}\nMelee targets cannot retaliate\nand are driven back 2 hexes",
+				"subtype": "h4Proc",
+				"addInfo": {
+					"mode": "noRetal"
+				},
+				"icon": "h4/abilities/panic"
+			},
+			"terrorPush": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "heroes-memorial.h4:h47Shove",
+				"val": 100,
+				"addInfo": {
+					"mode": "push",
+					"range": 2,
+					"fx": "h4/fx/panic",
+					"sound": "SORROW",
+					"mark": "H47_SHOVE_MOONSPIRE",
+					"immune": [
+						"H4_FEAR_IMMUNE_H4C"
+					]
+				},
+				"hidden": true
+			},
+			"dragon": {
+				"type": "DRAGON_NATURE"
+			},
+			"h4NecroRaise": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h4NecroRaise",
+				"hidden": true
+			},
+			"h4NecroRaiseInfo": {
+				"type": "H4_NECRO_RAISE_H4C",
+				"icon": "h4/abilities/necroRaise"
+			}
+		},
+		"graphics": {
+			"animation": "h4/BoneDragon/battle.json",
+			"map": "h4/BoneDragon/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h4/BoneDragon/map/atkL.png",
+			"mapAttackFromRight": "h4/BoneDragon/map/atkR.png",
+			"iconLarge": "h4/BoneDragon/iconLarge.png",
+			"iconSmall": "h4/BoneDragon/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h4/bone_dragon_melee.ogg",
+			"wince": "h4/bone_dragon_flinch.ogg",
+			"killed": "h4/bone_dragon_die.ogg",
+			"move": "h4/bone_dragon_walk.ogg"
+		},
+		"aiValue": 8410,
+		"fightValue": 6313,
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE",
+					"stacking": "h4BoneDragonExpMagicResistance",
+					"description": "{Magic Resistance}\nChance to resist enemy spells"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					10,
+					20,
+					30,
+					40,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "LUCK"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			}
+		]
+	}
+}

@@ -1,0 +1,615 @@
+{
+	"h6dynResurrect": {
+		"implements": "spellEffect",
+		"script": "spells/h6dynResurrect",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"ignoreImmunity": {
+					"type": "boolean"
+				},
+				"chainLength": {
+					"type": "number"
+				},
+				"chainFactor": {
+					"type": "number"
+				},
+				"healLevel": {
+					"type": "string"
+				},
+				"healPower": {
+					"type": "string"
+				},
+				"minFullUnits": {
+					"type": "number"
+				},
+				"minValue": {
+					"type": "number"
+				},
+				"value": {
+					"type": "number"
+				},
+				"improvedTurns": {
+					"type": "number"
+				},
+				"onceIndex": {
+					"type": "number"
+				},
+				"bonusText": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"stringRegistrations": [
+			"bonusText"
+		]
+	},
+	"h6dynTransferLife": {
+		"implements": "spellEffect",
+		"script": "spells/h6dynTransferLife",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"ignoreImmunity": {
+					"type": "boolean"
+				},
+				"chainLength": {
+					"type": "number"
+				},
+				"chainFactor": {
+					"type": "number"
+				},
+				"percent": {
+					"type": "number"
+				},
+				"onceIndex": {
+					"type": "number"
+				},
+				"bonusText": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"stringRegistrations": [
+			"bonusText"
+		]
+	},
+	"h6dynSummon": {
+		"implements": "spellEffect",
+		"script": "spells/h6dynSummon",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"ignoreImmunity": {
+					"type": "boolean"
+				},
+				"chainLength": {
+					"type": "number"
+				},
+				"chainFactor": {
+					"type": "number"
+				},
+				"id": {
+					"type": "string"
+				},
+				"amount": {
+					"type": "number"
+				},
+				"permanent": {
+					"type": "boolean"
+				},
+				"exclusive": {
+					"type": "boolean"
+				},
+				"summonByHealth": {
+					"type": "boolean"
+				},
+				"summonSameUnit": {
+					"type": "boolean"
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"h6dynOnce": {
+		"implements": "spellEffect",
+		"script": "spells/h6dynOnce",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"ignoreImmunity": {
+					"type": "boolean"
+				},
+				"chainLength": {
+					"type": "number"
+				},
+				"chainFactor": {
+					"type": "number"
+				},
+				"onceIndex": {
+					"type": "number"
+				},
+				"cooldown": {
+					"type": "number"
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"h6dynCleanse": {
+		"implements": "spellEffect",
+		"script": "spells/h6dynCleanse",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"ignoreImmunity": {
+					"type": "boolean"
+				},
+				"chainLength": {
+					"type": "number"
+				},
+				"chainFactor": {
+					"type": "number"
+				},
+				"mode": {
+					"type": "string"
+				},
+				"animAlly": {
+					"type": "string"
+				},
+				"animEnemy": {
+					"type": "string"
+				},
+				"dispelPositive": {
+					"type": "boolean"
+				},
+				"dispelNegative": {
+					"type": "boolean"
+				},
+				"dispelNeutral": {
+					"type": "boolean"
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"h6dynAct": {
+		"implements": "spellEffect",
+		"script": "spells/h6dynAct",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"ignoreImmunity": {
+					"type": "boolean"
+				},
+				"chainLength": {
+					"type": "number"
+				},
+				"chainFactor": {
+					"type": "number"
+				},
+				"scope": {
+					"type": "string"
+				},
+				"side": {
+					"type": "string"
+				},
+				"living": {
+					"type": "boolean"
+				},
+				"walkers": {
+					"type": "boolean"
+				},
+				"damage": {},
+				"damagePercent": {
+					"type": "number"
+				},
+				"damageAll": {
+					"type": "boolean"
+				},
+				"dealtPercent": {
+					"type": "number"
+				},
+				"dealtMax": {
+					"type": "number"
+				},
+				"heal": {},
+				"healPercent": {
+					"type": "number"
+				},
+				"healLevel": {
+					"type": "string"
+				},
+				"drainPercent": {
+					"type": "number"
+				},
+				"allies": {
+					"type": "object"
+				},
+				"enemies": {
+					"type": "object"
+				},
+				"dot": {
+					"type": "object"
+				},
+				"battle": {
+					"type": "object"
+				},
+				"animAlly": {
+					"type": "string"
+				},
+				"animEnemy": {
+					"type": "string"
+				},
+				"onceIndex": {
+					"type": "number"
+				},
+				"cooldown": {
+					"type": "number"
+				},
+				"control": {
+					"type": "boolean"
+				},
+				"statusAllies": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"statusEnemies": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"beam": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"h6dynTransferLifeHit": {
+		"implements": "combatEvent",
+		"script": "combat/h6dynTransferLifeHit",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {},
+			"additionalProperties": false
+		},
+		"description": ""
+	},
+	"h6dynShield": {
+		"implements": "combatEvent",
+		"script": "combat/h6dynShield",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"text": {
+					"type": "string"
+				},
+				"icon": {
+					"type": "string"
+				},
+				"anim": {
+					"type": "string"
+				},
+				"turns": {
+					"type": "number"
+				},
+				"chill": {
+					"type": "boolean"
+				},
+				"chillText": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": "",
+		"stringRegistrations": [
+			"text",
+			"chillText"
+		]
+	},
+	"h6dynDot": {
+		"implements": "combatEvent",
+		"script": "combat/h6dynDot",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"spread": {
+					"type": "number"
+				},
+				"spreadTurns": {
+					"type": "number"
+				},
+				"anim": {
+					"type": "string"
+				},
+				"spell": {
+					"type": "string"
+				},
+				"tag": {
+					"type": "string"
+				},
+				"raw": {
+					"type": "number"
+				},
+				"bonuses": {
+					"type": "object"
+				},
+				"status": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": ""
+	},
+	"h6dynReflect": {
+		"implements": "combatEvent",
+		"script": "combat/h6dynReflect",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"anim": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": ""
+	},
+	"h6dynRoundGrowth": {
+		"implements": "combatEvent",
+		"script": "combat/h6dynRoundGrowth",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"text": {
+					"type": "string"
+				},
+				"icon": {
+					"type": "string"
+				},
+				"anim": {
+					"type": "string"
+				},
+				"every": {
+					"type": "number"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": "",
+		"stringRegistrations": [
+			"text"
+		]
+	},
+	"h6dynEnemyDeath": {
+		"implements": "combatEvent",
+		"script": "combat/h6dynEnemyDeath",
+		"patches": [],
+		"priority": 100,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"text": {
+					"type": "string"
+				},
+				"icon": {
+					"type": "string"
+				},
+				"anim": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": "",
+		"stringRegistrations": [
+			"text"
+		]
+	},
+	"h6dynStartBuff": {
+		"implements": "combatEvent",
+		"script": "combat/h6dynStartBuff",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"text": {
+					"type": "string"
+				},
+				"icon": {
+					"type": "string"
+				},
+				"anim": {
+					"type": "string"
+				},
+				"bonuses": {
+					"type": "object"
+				},
+				"flyers": {
+					"type": "boolean"
+				},
+				"walkers": {
+					"type": "boolean"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": "",
+		"stringRegistrations": [
+			"text"
+		]
+	},
+	"h6dynLastStand": {
+		"implements": "combatEvent",
+		"script": "combat/h6dynLastStand",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"text": {
+					"type": "string"
+				},
+				"icon": {
+					"type": "string"
+				},
+				"anim": {
+					"type": "string"
+				},
+				"pct": {
+					"type": "number"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": "",
+		"stringRegistrations": [
+			"text"
+		]
+	},
+	"h6dynDealtTracker": {
+		"implements": "combatEvent",
+		"script": "combat/h6dynDealtTracker",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {},
+			"additionalProperties": false
+		},
+		"description": ""
+	},
+	"h6dynFocus": {
+		"implements": "combatEvent",
+		"script": "combat/h6dynFocus",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"text": {
+					"type": "string"
+				},
+				"icon": {
+					"type": "string"
+				},
+				"anim": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": "",
+		"stringRegistrations": [
+			"text"
+		]
+	},
+	"h6dynDazeOnSpell": {
+		"implements": "combatEvent",
+		"script": "combat/h6dynDazeOnSpell",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"text": {
+					"type": "string"
+				},
+				"icon": {
+					"type": "string"
+				},
+				"anim": {
+					"type": "string"
+				},
+				"bonuses": {
+					"type": "object"
+				},
+				"status": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": "",
+		"stringRegistrations": [
+			"text"
+		]
+	},
+	"h6dynWindsOfMagic": {
+		"implements": "combatEvent",
+		"script": "combat/h6dynWindsOfMagic",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"side": {
+					"type": "number"
+				},
+				"mult": {
+					"type": "number"
+				},
+				"anim": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": ""
+	},
+	"h6dynManaDrain": {
+		"implements": "combatEvent",
+		"script": "combat/h6dynManaDrain",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {},
+			"additionalProperties": false
+		},
+		"description": ""
+	}
+}

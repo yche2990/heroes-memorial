@@ -1,0 +1,1880 @@
+{
+	"h4Berserker": {
+		"name": {
+			"singular": "Berserker",
+			"plural": "Berserkers"
+		},
+		"description": "Berserkers attack in a rage with no thought of defense and cannot be controlled in battle.",
+		"faction": "stronghold",
+		"level": 1,
+		"cost": {
+			"gold": 55
+		},
+		"speed": 7,
+		"hitPoints": 9,
+		"attack": 6,
+		"defense": 4,
+		"damage": {
+			"min": 2,
+			"max": 3
+		},
+		"doubleWide": false,
+		"growth": 14,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"doubleAttack": {
+				"type": "ADDITIONAL_ATTACK",
+				"description": "{Strike Twice}\nAttacks twice",
+				"val": 1
+			},
+			"berserk": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"description": "{Berserk}\nUncontrollable: attacks the nearest enemy; never waits or hits allies",
+				"subtype": "h4Proc",
+				"addInfo": {
+					"mode": "berserk"
+				},
+				"icon": "h4/abilities/berserk"
+			},
+			"cpuControlled": {
+				"type": "CPU_CONTROLLED",
+				"hidden": true
+			},
+			"fearImmune": {
+				"type": "H4_FEAR_IMMUNE_H4C",
+				"description": "{Fear Immunity}\nImmune to Fear, Terror and fear attacks",
+				"icon": "h4/abilities/fearImmune"
+			},
+			"terrorImmune": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "spell.h4Terror",
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h4/Berserker/battle.json",
+			"map": "h4/Berserker/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h4/Berserker/map/atkL.png",
+			"mapAttackFromRight": "h4/Berserker/map/atkR.png",
+			"iconLarge": "h4/Berserker/iconLarge.png",
+			"iconSmall": "h4/Berserker/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h4/berserker_melee.ogg",
+			"wince": "h4/berserker_flinch.ogg",
+			"killed": "h4/berserker_die.ogg",
+			"move": "h4/berserker_walk.ogg"
+		},
+		"aiValue": 122,
+		"fightValue": 114,
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_RETALIATION",
+					"description": "{Nimbleness}\nExtra retaliation each round"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "MORALE"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			}
+		]
+	},
+	"h4Centaur": {
+		"name": {
+			"singular": "Centaur",
+			"plural": "Centaurs"
+		},
+		"description": "Centaurs throw spears that weaken quickly with distance, but unlike most shooters they suffer no melee penalty.",
+		"faction": "stronghold",
+		"level": 2,
+		"cost": {
+			"gold": 205
+		},
+		"speed": 7,
+		"hitPoints": 25,
+		"attack": 6,
+		"defense": 5,
+		"damage": {
+			"min": 4,
+			"max": 6
+		},
+		"doubleWide": true,
+		"growth": 8,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"noMeleePenalty": {
+				"type": "NO_MELEE_PENALTY",
+				"description": "{No Melee Penalty}\nFull damage in melee"
+			},
+			"shortRange": {
+				"type": "LIMITED_SHOOTING_RANGE",
+				"description": "{Short Range}\nHalf ranged damage beyond 3 hexes",
+				"val": 99,
+				"addInfo": 3
+			},
+			"shooter": {
+				"type": "SHOOTER"
+			}
+		},
+		"shots": 4,
+		"graphics": {
+			"animation": "h4/Centaur/battle.json",
+			"map": "h4/Centaur/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h4/Centaur/map/atkL.png",
+			"mapAttackFromRight": "h4/Centaur/map/atkR.png",
+			"iconLarge": "h4/Centaur/iconLarge.png",
+			"iconSmall": "h4/Centaur/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"projectile": "h4/missiles/cr_spear.json",
+				"frameAngles": [
+					90,
+					26.57,
+					0,
+					-26.57,
+					-90
+				],
+				"offset": {
+					"upperX": 65,
+					"upperY": -83,
+					"middleX": 71,
+					"middleY": -68,
+					"lowerX": 56,
+					"lowerY": -54
+				},
+				"attackClimaxFrame": 6
+			}
+		},
+		"sound": {
+			"attack": "h4/centaur_melee.ogg",
+			"wince": "h4/centaur_flinch.ogg",
+			"killed": "h4/centaur_die.ogg",
+			"move": "h4/centaur_walk.ogg",
+			"shoot": "h4/centaur_ranged.ogg"
+		},
+		"aiValue": 400,
+		"fightValue": 346,
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					3,
+					3,
+					3,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					3,
+					4,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					0,
+					1,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					3,
+					3,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_WALL_PENALTY",
+					"description": "{Siege Shooter}\nNo damage loss when shooting over walls"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "MORALE"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			}
+		]
+	},
+	"h4Harpy": {
+		"name": {
+			"singular": "Harpy",
+			"plural": "Harpies"
+		},
+		"description": "Harpies fly to their foe, strike and return to where they started, so the enemy cannot retaliate.",
+		"faction": "stronghold",
+		"level": 3,
+		"cost": {
+			"gold": 190
+		},
+		"speed": 8,
+		"hitPoints": 26,
+		"attack": 10,
+		"defense": 8,
+		"damage": {
+			"min": 4,
+			"max": 5
+		},
+		"doubleWide": false,
+		"growth": 6,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"flying": {
+				"type": "FLYING"
+			},
+			"noRetaliation": {
+				"type": "BLOCKS_RETALIATION",
+				"description": "{No Retaliation}\nEnemies cannot retaliate"
+			},
+			"returnAfterStrike": {
+				"type": "RETURN_AFTER_STRIKE",
+				"description": "{Strike and Return}\nReturns to its place after attacking"
+			}
+		},
+		"graphics": {
+			"animation": "h4/Harpy/battle.json",
+			"map": "h4/Harpy/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h4/Harpy/map/atkL.png",
+			"mapAttackFromRight": "h4/Harpy/map/atkR.png",
+			"iconLarge": "h4/Harpy/iconLarge.png",
+			"iconSmall": "h4/Harpy/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h4/harpy_melee.ogg",
+			"wince": "h4/harpy_flinch.ogg",
+			"killed": "h4/harpy_die.ogg",
+			"move": "h4/harpy_walk.ogg"
+		},
+		"aiValue": 430,
+		"fightValue": 365,
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_RETALIATION",
+					"description": "{Nimbleness}\nExtra retaliation each round"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "MORALE"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			}
+		]
+	},
+	"h4Nomad": {
+		"name": {
+			"singular": "Nomad",
+			"plural": "Nomads"
+		},
+		"description": "Nomads strike before the enemy can retaliate.",
+		"faction": "stronghold",
+		"level": 4,
+		"cost": {
+			"gold": 255
+		},
+		"speed": 13,
+		"hitPoints": 43,
+		"attack": 10,
+		"defense": 9,
+		"damage": {
+			"min": 6,
+			"max": 9
+		},
+		"doubleWide": true,
+		"growth": 5,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"firstStrike": {
+				"type": "FIRST_STRIKE",
+				"description": "{First Strike}\nRetaliates before the attacker strikes"
+			},
+			"skeletonTarget": {
+				"type": "SKELETON_TRANSFORMER_TARGET",
+				"subtype": "blackKnight",
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h4/Nomad/battle.json",
+			"map": "h4/Nomad/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h4/Nomad/map/atkL.png",
+			"mapAttackFromRight": "h4/Nomad/map/atkR.png",
+			"iconLarge": "h4/Nomad/iconLarge.png",
+			"iconSmall": "h4/Nomad/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h4/nomad_melee.ogg",
+			"wince": "h4/nomad_flinch.ogg",
+			"killed": "h4/nomad_die.ogg",
+			"move": "h4/nomad_walk.ogg"
+		},
+		"aiValue": 622,
+		"fightValue": 531,
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					5,
+					6,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_RETALIATION",
+					"description": "{Nimbleness}\nExtra retaliation each round"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "MORALE"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			}
+		]
+	},
+	"h4Cyclops": {
+		"name": {
+			"singular": "Cyclops",
+			"plural": "Cyclopes"
+		},
+		"description": "Cyclopes hurl boulders that shatter on impact and hit everything around the target.",
+		"faction": "stronghold",
+		"level": 6,
+		"cost": {
+			"gold": 1080
+		},
+		"speed": 6,
+		"hitPoints": 105,
+		"attack": 17,
+		"defense": 15,
+		"damage": {
+			"min": 16,
+			"max": 24
+		},
+		"doubleWide": false,
+		"growth": 2,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"boulder": {
+				"type": "SPELL_LIKE_ATTACK",
+				"description": "{Area Attack}\nBoulders shatter and hit every unit\naround the target",
+				"subtype": "spell.fireballAbility"
+			},
+			"shooter": {
+				"type": "SHOOTER"
+			}
+		},
+		"shots": 7,
+		"graphics": {
+			"animation": "h4/Cyclops/battle.json",
+			"map": "h4/Cyclops/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h4/Cyclops/map/atkL.png",
+			"mapAttackFromRight": "h4/Cyclops/map/atkR.png",
+			"iconLarge": "h4/Cyclops/iconLarge.png",
+			"iconSmall": "h4/Cyclops/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"projectile": "h4/missiles/cr_boulder.json",
+				"frameAngles": [
+					90,
+					26.57,
+					0,
+					-26.57,
+					-90
+				],
+				"offset": {
+					"upperX": 10,
+					"upperY": -110,
+					"middleX": 17,
+					"middleY": -104,
+					"lowerX": 11,
+					"lowerY": -96
+				},
+				"attackClimaxFrame": 5
+			}
+		},
+		"sound": {
+			"attack": "h4/cyclops_melee.ogg",
+			"wince": "h4/cyclops_flinch.ogg",
+			"killed": "h4/cyclops_die.ogg",
+			"move": "h4/cyclops_walk.ogg",
+			"shoot": "h4/cyclops_ranged.ogg"
+		},
+		"aiValue": 2634,
+		"fightValue": 2204,
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					2,
+					3,
+					4,
+					5,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_WALL_PENALTY",
+					"description": "{Siege Shooter}\nNo damage loss when shooting over walls"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_DISTANCE_PENALTY",
+					"description": "{Sharpshooter}\nNo penalty for long-range shots"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE",
+					"stacking": "h4CyclopsExpMagicResistance",
+					"description": "{Magic Resistance}\nChance to resist enemy spells"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					10,
+					20,
+					30,
+					40,
+					50
+				]
+			}
+		]
+	},
+	"h4OgreMage": {
+		"name": {
+			"singular": "Ogre Mage",
+			"plural": "Ogre Magi"
+		},
+		"description": "Ogre magi cast Bloodlust, Anti-Magic, Spell Shackle, Power Drain, Burning Hands and Snake Strike, and Bloodfrenzy once their numbers reach five weeks of growth.",
+		"faction": "stronghold",
+		"level": 5,
+		"cost": {
+			"gold": 405
+		},
+		"speed": 7,
+		"hitPoints": 55,
+		"attack": 13,
+		"defense": 12,
+		"damage": {
+			"min": 11,
+			"max": 17
+		},
+		"doubleWide": false,
+		"growth": 3,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"casterInfo": {
+				"type": "NONE",
+				"description": "{Spellcaster}\n1 casts per battle (power scales with count); spells: see wiki",
+				"icon": "h4/abilities/caster"
+			},
+			"cast_h4Bloodlust": {
+				"type": "SPELLCASTER",
+				"subtype": "spell.h4Bloodlust",
+				"val": 2,
+				"hidden": true
+			},
+			"cast_h4AntiMagic": {
+				"type": "SPELLCASTER",
+				"subtype": "spell.h4AntiMagic",
+				"val": 2,
+				"hidden": true
+			},
+			"cast_h4SpellShackle": {
+				"type": "SPELLCASTER",
+				"subtype": "spell.h4SpellShackle",
+				"val": 2,
+				"hidden": true
+			},
+			"cast_h4PowerDrain": {
+				"type": "SPELLCASTER",
+				"subtype": "spell.h4PowerDrain",
+				"val": 2,
+				"hidden": true
+			},
+			"cast_h4BurningHands": {
+				"type": "SPELLCASTER",
+				"subtype": "spell.h4BurningHands",
+				"val": 2,
+				"hidden": true
+			},
+			"cast_h4SnakeStrike": {
+				"type": "SPELLCASTER",
+				"subtype": "spell.h4SnakeStrike",
+				"val": 2,
+				"hidden": true
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 1,
+				"stacking": "h4OgreMageExpCasts"
+			},
+			"spellPower": {
+				"type": "CREATURE_SPELL_POWER",
+				"val": 100,
+				"hidden": true
+			},
+			"enchantPower": {
+				"type": "CREATURE_ENCHANT_POWER",
+				"val": 3
+			},
+			"massCaster": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h4Proc",
+				"hidden": true,
+				"addInfo": {
+					"mode": "massCaster",
+					"spells": [
+						"h4Bloodfrenzy"
+					],
+					"weeks": 5
+				}
+			}
+		},
+		"graphics": {
+			"animation": "h4/OgreMage/battle.json",
+			"map": "h4/OgreMage/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h4/OgreMage/map/atkL.png",
+			"mapAttackFromRight": "h4/OgreMage/map/atkR.png",
+			"iconLarge": "h4/OgreMage/iconLarge.png",
+			"iconSmall": "h4/OgreMage/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h4/ogre_mage_melee.ogg",
+			"wince": "h4/ogre_mage_flinch.ogg",
+			"killed": "h4/ogre_mage_die.ogg",
+			"move": "h4/ogre_mage_walk.ogg"
+		},
+		"aiValue": 1120,
+		"fightValue": 917,
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					3,
+					4,
+					5,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					3,
+					4,
+					4,
+					6,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					2,
+					3,
+					3,
+					4,
+					5,
+					6,
+					6,
+					7
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					7
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "CASTS",
+					"stacking": "h4OgreMageExpCasts",
+					"description": "{Practiced Caster}\nCasts per battle grow with rank",
+					"icon": "h4/abilities/caster"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "MIND_IMMUNITY",
+					"description": "{Steadfast Mind}\nImmune to Mind spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "MORALE"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			}
+		]
+	},
+	"h4Behemoth": {
+		"name": {
+			"singular": "Behemoth",
+			"plural": "Behemoths"
+		},
+		"description": "Deadly and clumsy, behemoths are so strong that few foes can match them.",
+		"faction": "stronghold",
+		"level": 7,
+		"cost": {
+			"gold": 2740,
+			"crystal": 2
+		},
+		"speed": 11,
+		"hitPoints": 226,
+		"attack": 25,
+		"defense": 24,
+		"damage": {
+			"min": 50,
+			"max": 72
+		},
+		"doubleWide": true,
+		"growth": 1,
+		"advMapAmount": {
+			"min": 1,
+			"max": 3
+		},
+		"abilities": {},
+		"graphics": {
+			"animation": "h4/Behemoth/battle.json",
+			"map": "h4/Behemoth/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h4/Behemoth/map/atkL.png",
+			"mapAttackFromRight": "h4/Behemoth/map/atkR.png",
+			"iconLarge": "h4/Behemoth/iconLarge.png",
+			"iconSmall": "h4/Behemoth/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h4/behemoth_melee.ogg",
+			"wince": "h4/behemoth_flinch.ogg",
+			"killed": "h4/behemoth_die.ogg",
+			"move": "h4/behemoth_walk.ogg"
+		},
+		"aiValue": 8447,
+		"fightValue": 6341,
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE",
+					"stacking": "h4BehemothExpMagicResistance",
+					"description": "{Magic Resistance}\nChance to resist enemy spells"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					10,
+					20,
+					30,
+					40,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "MIND_IMMUNITY",
+					"description": "{Steadfast Mind}\nImmune to Mind spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "MORALE"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			}
+		]
+	},
+	"h4Thunderbird": {
+		"name": {
+			"singular": "Thunderbird",
+			"plural": "Thunderbirds"
+		},
+		"description": "Thunderbirds call lightning down on the enemies they attack and are immune to it themselves.",
+		"faction": "stronghold",
+		"level": 7,
+		"cost": {
+			"gold": 1795,
+			"mercury": 2
+		},
+		"speed": 12,
+		"hitPoints": 160,
+		"attack": 23,
+		"defense": 23,
+		"damage": {
+			"min": 25,
+			"max": 36
+		},
+		"doubleWide": true,
+		"growth": 1,
+		"advMapAmount": {
+			"min": 1,
+			"max": 3
+		},
+		"abilities": {
+			"flying": {
+				"type": "FLYING"
+			},
+			"lightning": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"description": "{Lightning Strike}\n20% chance to call lightning on the target;\nimmune to lightning itself",
+				"subtype": "h4Proc",
+				"val": 20,
+				"addInfo": {
+					"mode": "bolt",
+					"spell": "thunderbolt",
+					"fx": "h4/fx/lightning",
+					"sound": "LIGHTBLT"
+				},
+				"icon": "h4/abilities/lightning"
+			},
+			"lightningPower": {
+				"type": "SPECIFIC_SPELL_POWER",
+				"subtype": "spell.thunderbolt",
+				"val": 10,
+				"hidden": true
+			},
+			"immune_lightningBolt": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "spell.lightningBolt",
+				"hidden": true
+			},
+			"immune_chainLightning": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "spell.chainLightning",
+				"hidden": true
+			},
+			"immune_thunderbolt": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "spell.thunderbolt",
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h4/Thunderbird/battle.json",
+			"map": "h4/Thunderbird/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h4/Thunderbird/map/atkL.png",
+			"mapAttackFromRight": "h4/Thunderbird/map/atkR.png",
+			"iconLarge": "h4/Thunderbird/iconLarge.png",
+			"iconSmall": "h4/Thunderbird/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h4/thunderbird_melee.ogg",
+			"wince": "h4/thunderbird_flinch.ogg",
+			"killed": "h4/thunderbird_die.ogg",
+			"move": "h4/thunderbird_walk.ogg"
+		},
+		"aiValue": 5163,
+		"fightValue": 3875,
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE",
+					"stacking": "h4ThunderbirdExpMagicResistance",
+					"description": "{Magic Resistance}\nChance to resist enemy spells"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					10,
+					20,
+					30,
+					40,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "MIND_IMMUNITY",
+					"description": "{Steadfast Mind}\nImmune to Mind spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "MORALE"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			}
+		]
+	}
+}

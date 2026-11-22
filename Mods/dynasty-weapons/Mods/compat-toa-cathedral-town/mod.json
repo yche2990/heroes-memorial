@@ -1,0 +1,20 @@
+{
+	"name": "Dynasty Weaponsmith: Cathedral Classes",
+	"description": "Takes effect when the Cathedral town of Tears of Ashan is enabled: Inquisitors can also receive Dynasty Weapons from the Dynasty Weaponsmith.",
+	"chinese": {
+		"name": "王朝武器匠·教廷职业",
+		"description": "开着亚山之泪的教廷时生效：审判官也能在王朝武器匠领到王朝武器。"
+	},
+	"version": "0.1.0",
+	"author": "yche2990",
+	"modType": "Compatibility",
+	"compatibility": {
+		"min": "1.8.0"
+	},
+	"depends": [
+		"tears-of-ashan.toa-cathedral-town"
+	],
+	"objects": [
+		"config/h6dyn/classes.json"
+	]
+}

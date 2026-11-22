@@ -1,0 +1,129 @@
+{
+	"heroes-memorial.dynasty-weapons:h6DynastyForge": {
+		"types": {
+			"h6DynastyForge": {
+				"rewards": {
+					"modify@1": {
+						"limiter": {
+							"heroClasses": {
+								"append": "tears-of-ashan.toa-cathedral-town:inquisitorClass"
+							}
+						}
+					},
+					"modify@2": {
+						"limiter": {
+							"heroClasses": {
+								"append": "tears-of-ashan.toa-cathedral-town:inquisitorClass"
+							}
+						}
+					},
+					"modify@3": {
+						"limiter": {
+							"heroClasses": {
+								"append": "tears-of-ashan.toa-cathedral-town:inquisitorClass"
+							}
+						}
+					},
+					"modify@4": {
+						"limiter": {
+							"heroClasses": {
+								"append": "tears-of-ashan.toa-cathedral-town:inquisitorClass"
+							}
+						}
+					},
+					"modify@5": {
+						"limiter": {
+							"heroClasses": {
+								"append": "tears-of-ashan.toa-cathedral-town:inquisitorClass"
+							}
+						}
+					},
+					"modify@6": {
+						"limiter": {
+							"heroClasses": {
+								"append": "tears-of-ashan.toa-cathedral-town:inquisitorClass"
+							}
+						}
+					},
+					"modify@7": {
+						"limiter": {
+							"heroClasses": {
+								"append": "tears-of-ashan.toa-cathedral-town:inquisitorClass"
+							}
+						}
+					},
+					"modify@8": {
+						"limiter": {
+							"heroClasses": {
+								"append": "tears-of-ashan.toa-cathedral-town:inquisitorClass"
+							}
+						}
+					},
+					"modify@9": {
+						"limiter": {
+							"heroClasses": {
+								"append": "tears-of-ashan.toa-cathedral-town:inquisitorClass"
+							}
+						}
+					},
+					"modify@10": {
+						"limiter": {
+							"heroClasses": {
+								"append": "tears-of-ashan.toa-cathedral-town:inquisitorClass"
+							}
+						}
+					},
+					"modify@11": {
+						"limiter": {
+							"heroClasses": {
+								"append": "tears-of-ashan.toa-cathedral-town:inquisitorClass"
+							}
+						}
+					},
+					"modify@12": {
+						"limiter": {
+							"heroClasses": {
+								"append": "tears-of-ashan.toa-cathedral-town:inquisitorClass"
+							}
+						}
+					},
+					"modify@13": {
+						"limiter": {
+							"heroClasses": {
+								"append": "tears-of-ashan.toa-cathedral-town:inquisitorClass"
+							}
+						}
+					},
+					"modify@14": {
+						"limiter": {
+							"heroClasses": {
+								"append": "tears-of-ashan.toa-cathedral-town:inquisitorClass"
+							}
+						}
+					},
+					"modify@15": {
+						"limiter": {
+							"heroClasses": {
+								"append": "tears-of-ashan.toa-cathedral-town:inquisitorClass"
+							}
+						}
+					},
+					"modify@16": {
+						"limiter": {
+							"heroClasses": {
+								"append": "tears-of-ashan.toa-cathedral-town:inquisitorClass"
+							}
+						}
+					},
+					"modify@17": {
+						"limiter": {
+							"heroClasses": {
+								"append": "tears-of-ashan.toa-cathedral-town:inquisitorClass"
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

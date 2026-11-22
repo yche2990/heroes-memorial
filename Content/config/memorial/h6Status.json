@@ -1,0 +1,299 @@
+// The four Heroes 6 battlefield statuses (original Data17 Ability.xml: Chilled, Frozen, Soaked, Dazed), shared by the Dynasty Weapons and the H6 memorial.
+// Original: Chilled movement -1, Might vulnerability +20%, 1 round; Frozen movement 0, Might vulnerability +20%, 1 round; Soaked Air vulnerability +20%, 2 rounds; Dazed initiative -10, 2 rounds.
+// Conversion: movement 1 -> Speed 1, initiative 5 -> Speed 1; Might vulnerability = attack damage taken (negative GENERAL_DAMAGE_REDUCTION). Icons are the original Chill, Freeze, Soak, Daze.
+{
+	"h6Chilled": {
+		"type": "combat",
+		"name": "Chilled (H6)",
+		"targetType": "CREATURE",
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": true
+		},
+		"flags": {
+			"special": true,
+			"negative": true
+		},
+		"animation": {
+			"affect": [
+				{
+					"defName": "h6status/fx/chill"
+				},
+				{
+					"effectName": "kad_h6_chill"
+				}
+			]
+		},
+		"sounds": {
+			"cast": ""
+		},
+		"graphics": {
+			"iconBook": "h6status/icons/h6Chilled/Book",
+			"iconScroll": "h6status/icons/h6Chilled/Scroll",
+			"iconScenarioBonus": "h6status/icons/h6Chilled/Scenario",
+			"iconEffect": "h6status/icons/h6Chilled/Effect"
+		},
+		"levels": {
+			"base": {
+				"range": "0",
+				"cost": 0,
+				"power": 0,
+				"description": "{Chilled}\nSpeed -1, damage taken from attacks +20%, for 1 round.",
+				"targetModifier": {
+					"smart": true
+				},
+				"battleEffects": {
+					"timed": {
+						"type": "core:timed",
+						"bonus": {
+							"speed": {
+								"type": "STACKS_SPEED",
+								"val": -1,
+								"duration": "N_TURNS",
+								"turns": 2
+							},
+							"vuln": {
+								"type": "GENERAL_DAMAGE_REDUCTION",
+								"subtype": "damageTypeAll",
+								"val": -20,
+								"duration": "N_TURNS",
+								"turns": 2
+							}
+						}
+					}
+				}
+			},
+			"none": {},
+			"basic": {},
+			"advanced": {},
+			"expert": {}
+		},
+		"targetCondition": {
+			"noneOf": {
+				"bonus.SIEGE_WEAPON": "absolute"
+			}
+		}
+	},
+	"h6Frozen": {
+		"type": "combat",
+		"name": "Frozen (H6)",
+		"targetType": "CREATURE",
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": true
+		},
+		"flags": {
+			"special": true,
+			"negative": true
+		},
+		"animation": {
+			"affect": [
+				{
+					"defName": "h6status/fx/freeze"
+				},
+				{
+					"effectName": "kad_h6_freeze"
+				}
+			]
+		},
+		"sounds": {
+			"cast": ""
+		},
+		"graphics": {
+			"iconBook": "h6status/icons/h6Frozen/Book",
+			"iconScroll": "h6status/icons/h6Frozen/Scroll",
+			"iconScenarioBonus": "h6status/icons/h6Frozen/Scenario",
+			"iconEffect": "h6status/icons/h6Frozen/Effect"
+		},
+		"levels": {
+			"base": {
+				"range": "0",
+				"cost": 0,
+				"power": 0,
+				"description": "{Frozen}\nCannot move (can still attack and shoot in place),\ndamage taken from attacks +20%, for 1 round.",
+				"targetModifier": {
+					"smart": true
+				},
+				"battleEffects": {
+					"timed": {
+						"type": "core:timed",
+						"bonus": {
+							"speed": {
+								"type": "STACKS_SPEED",
+								"valueType": "PERCENT_TO_ALL",
+								"val": -100,
+								"duration": "N_TURNS",
+								"turns": 2
+							},
+							"vuln": {
+								"type": "GENERAL_DAMAGE_REDUCTION",
+								"subtype": "damageTypeAll",
+								"val": -20,
+								"duration": "N_TURNS",
+								"turns": 2
+							}
+						}
+					}
+				}
+			},
+			"none": {},
+			"basic": {},
+			"advanced": {},
+			"expert": {}
+		},
+		"targetCondition": {
+			"noneOf": {
+				"bonus.SIEGE_WEAPON": "absolute"
+			}
+		}
+	},
+	"h6Soaked": {
+		"type": "combat",
+		"name": "Soaked (H6)",
+		"targetType": "CREATURE",
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": true
+		},
+		"flags": {
+			"special": true,
+			"negative": true
+		},
+		"animation": {
+			"affect": [
+				{
+					"defName": "h6status/fx/soaked"
+				}
+			]
+		},
+		"sounds": {
+			"cast": ""
+		},
+		"graphics": {
+			"iconBook": "h6status/icons/h6Soaked/Book",
+			"iconScroll": "h6status/icons/h6Soaked/Scroll",
+			"iconScenarioBonus": "h6status/icons/h6Soaked/Scenario",
+			"iconEffect": "h6status/icons/h6Soaked/Effect"
+		},
+		"levels": {
+			"base": {
+				"range": "0",
+				"cost": 0,
+				"power": 0,
+				"description": "{Soaked}\nDamage taken from Air spells +20%, for 2 rounds.",
+				"targetModifier": {
+					"smart": true
+				},
+				"battleEffects": {
+					"timed": {
+						"type": "core:timed",
+						"bonus": {
+							"air": {
+								"type": "SPELL_DAMAGE_REDUCTION",
+								"subtype": "air",
+								"val": -20,
+								"duration": "N_TURNS",
+								"turns": 3
+							}
+						}
+					}
+				}
+			},
+			"none": {},
+			"basic": {},
+			"advanced": {},
+			"expert": {}
+		},
+		"targetCondition": {
+			"noneOf": {
+				"bonus.SIEGE_WEAPON": "absolute"
+			}
+		}
+	},
+	"h6Dazed": {
+		"type": "combat",
+		"name": "Dazed (H6)",
+		"targetType": "CREATURE",
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"flags": {
+			"special": true,
+			"negative": true
+		},
+		"animation": {
+			"affect": [
+				{
+					"defName": "h6status/fx/dazed"
+				}
+			]
+		},
+		"sounds": {
+			"cast": ""
+		},
+		"graphics": {
+			"iconBook": "h6status/icons/h6Dazed/Book",
+			"iconScroll": "h6status/icons/h6Dazed/Scroll",
+			"iconScenarioBonus": "h6status/icons/h6Dazed/Scenario",
+			"iconEffect": "h6status/icons/h6Dazed/Effect"
+		},
+		"levels": {
+			"base": {
+				"range": "0",
+				"cost": 0,
+				"power": 0,
+				"description": "{Dazed}\nSpeed -2 (Initiative -10 in the H6 original), for 2 rounds.",
+				"targetModifier": {
+					"smart": true
+				},
+				"battleEffects": {
+					"timed": {
+						"type": "core:timed",
+						"bonus": {
+							"speed": {
+								"type": "STACKS_SPEED",
+								"val": -2,
+								"duration": "N_TURNS",
+								"turns": 3
+							}
+						}
+					}
+				}
+			},
+			"none": {},
+			"basic": {},
+			"advanced": {},
+			"expert": {}
+		},
+		"targetCondition": {
+			"noneOf": {
+				"bonus.SIEGE_WEAPON": "absolute"
+			}
+		}
+	}
+}

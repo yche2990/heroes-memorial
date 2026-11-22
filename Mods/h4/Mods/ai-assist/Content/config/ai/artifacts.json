@@ -1,0 +1,149 @@
+{
+	"heroes-memorial.h4:h4BookOfEnchantment": {
+		"bonuses": {
+			"aiAssistShadow": {
+				"type": "MAGIC_RESISTANCE",
+				"val": 60,
+				"hidden": true,
+				"stacking": "aiAssistShadow",
+				"limiters": [
+					"noneOf",
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "HERO_SPELL_CASTS_PER_COMBAT_TURN"
+					},
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "MEMORIAL_AI_GATE"
+					}
+				]
+			}
+		}
+	},
+	"heroes-memorial.h4:h4HolyCrown": {
+		"bonuses": {
+			"aiAssistShadow": {
+				"type": "MAGIC_RESISTANCE",
+				"val": 60,
+				"hidden": true,
+				"stacking": "aiAssistShadow",
+				"limiters": [
+					"noneOf",
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "HERO_SPELL_CASTS_PER_COMBAT_TURN"
+					},
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "MEMORIAL_AI_GATE"
+					}
+				]
+			}
+		}
+	},
+	"heroes-memorial.h4:h4OrbOfSummoning": {
+		"bonuses": {
+			"aiAssistShadow": {
+				"type": "MAGIC_RESISTANCE",
+				"val": 60,
+				"hidden": true,
+				"stacking": "aiAssistShadow",
+				"limiters": [
+					"noneOf",
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "HERO_SPELL_CASTS_PER_COMBAT_TURN"
+					},
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "MEMORIAL_AI_GATE"
+					}
+				]
+			}
+		}
+	},
+	"heroes-memorial.h4:h4PotImmortality": {
+		"bonuses": {
+			"aiAssistShadow": {
+				"type": "MAGIC_RESISTANCE",
+				"val": 1,
+				"hidden": true,
+				"stacking": "aiAssistShadow",
+				"limiters": [
+					"noneOf",
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "HERO_SPELL_CASTS_PER_COMBAT_TURN"
+					},
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "MEMORIAL_AI_GATE"
+					}
+				]
+			}
+		}
+	},
+	"heroes-memorial.h4:h4RodOfChaos": {
+		"bonuses": {
+			"aiAssistShadow": {
+				"type": "MAGIC_RESISTANCE",
+				"val": 60,
+				"hidden": true,
+				"stacking": "aiAssistShadow",
+				"limiters": [
+					"noneOf",
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "HERO_SPELL_CASTS_PER_COMBAT_TURN"
+					},
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "MEMORIAL_AI_GATE"
+					}
+				]
+			}
+		}
+	},
+	"heroes-memorial.h4:h4ShieldOfResistance": {
+		"bonuses": {
+			"aiAssistShadow": {
+				"type": "MAGIC_RESISTANCE",
+				"val": 60,
+				"hidden": true,
+				"stacking": "aiAssistShadow",
+				"limiters": [
+					"noneOf",
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "HERO_SPELL_CASTS_PER_COMBAT_TURN"
+					},
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "MEMORIAL_AI_GATE"
+					}
+				]
+			}
+		}
+	},
+	"heroes-memorial.h4:h4VampiricAmulet": {
+		"bonuses": {
+			"aiAssistShadow": {
+				"type": "MAGIC_RESISTANCE",
+				"val": 60,
+				"hidden": true,
+				"stacking": "aiAssistShadow",
+				"limiters": [
+					"noneOf",
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "HERO_SPELL_CASTS_PER_COMBAT_TURN"
+					},
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "MEMORIAL_AI_GATE"
+					}
+				]
+			}
+		}
+	}
+}

@@ -1,0 +1,10 @@
+// The Dynasty Weapons' Resurrection cannot be cast while the Ring of Oblivion (hota.artifacts) is in effect. This used to be in HotA's spellChanges.json, but HotA loads before this mod, so the patch was dropped (moved here in round 587)
+{
+	"heroes-memorial.dynasty-weapons:h6dynResurrection" : { 
+		"targetCondition" : {
+			"noneOf" : {
+				"bonus.HOTA_RING_OF_OBLIVION" : "absolute"
+			}
+		}
+	}
+}

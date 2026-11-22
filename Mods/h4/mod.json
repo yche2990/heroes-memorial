@@ -1,0 +1,58 @@
+{
+	"name": "Heroes IV Memorial",
+	"description": "Heroes IV creatures in the matching VCMI towns with their original abilities, Heroes IV hero spells and potions, ten Heroes IV creature banks, the Memorial Apothecary, Magic Schools, Troop Exchanges and Sanctum, and the Heroes IV Elemental Conflux.",
+	"chinese": {
+		"name": "英雄无敌4纪念版",
+		"translations": [
+			"config/translations/chinese.json"
+		],
+		"description": "英雄无敌4的兵种（带原版能力）加入对应的 VCMI 城镇，另有英雄无敌4的英雄魔法和药水、十座英雄无敌4宝屋，以及纪念药剂坊、魔法学院、换兵所、纪念圣殿和元素汇集H4。"
+	},
+	"version": "0.1.0",
+	"author": "yche2990",
+	"modType": "Creatures",
+	"compatibility": {
+		"min": "1.8.0"
+	},
+	"depends": [
+		"tears-of-ashan"
+	],
+	"creatures": [
+		"config/h4/creatures/Castle.json",
+		"config/h4/creatures/Tower.json",
+		"config/h4/creatures/Rampart.json",
+		"config/h4/creatures/Necropolis.json",
+		"config/h4/creatures/Dungeon.json",
+		"config/h4/creatures/Stronghold.json",
+		"config/h4/creatures/Neutral.json"
+	],
+	"spells": [
+		"config/h4/spells.json",
+		"config/h4/potionSpells.json",
+		"config/h4/abilitySpells.json"
+	],
+	"scripts": [
+		"config/h4/scripts.json",
+		"config/memorial/borrowedScripts.json"
+	],
+	"bonuses": [
+		"config/h4/bonuses.json"
+	],
+	"artifacts": [
+		"config/h4/artifacts.json",
+		"config/h4/potions.json"
+	],
+	"objects": [
+		"config/h4sanctum/sanctum.json",
+		"config/h4potions/potionshop.json",
+		"config/h4banks/banks.json",
+		"config/h4conflux/conflux.json",
+		"config/h4memorial/swap.json",
+		"config/h4memorial/magic.json"
+	],
+	"english": {
+		"translations": [
+			"config/translations/english.json"
+		]
+	}
+}

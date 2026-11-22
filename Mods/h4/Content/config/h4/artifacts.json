@@ -1,0 +1,968 @@
+{
+	"h4HolyCrown": {
+		"type": [
+			"HERO"
+		],
+		"slot": "HEAD",
+		"class": "SPECIAL",
+		"value": 30000,
+		"text": {
+			"name": "Holy Crown",
+			"description": "{Holy Crown}\n\nA crown assembled from five holy relics, the token of the god of Life.\n\n+100% damage from Light spells cast by the hero.\nIf the holder's hero casts a spell outside Light magic, it backfires: after the spell, every friendly stack loses 20% of its current total health.\nAll Castle stacks on the battlefield (friend or foe): +50% damage, +50% health, +2 Speed.\nAll Necropolis, Dungeon and Inferno stacks on the battlefield (friend or foe): -33% damage, -33% health, -1 Speed.\nEvery stack on the battlefield takes half damage from Dark and Fire magic.",
+			"event": "The light of the five relics on the crown merges into one, and you feel the gaze of the God of Life upon you. You have found the Holy Crown."
+		},
+		"graphics": {
+			"image": "h4/artifacts/h4HolyCrown",
+			"scenarioBonus": "h4/artifacts/h4HolyCrown",
+			"map": "h4/artifacts/map/h4HolyCrown/map.json"
+		},
+		"bonuses": {
+			"upDmg": {
+				"type": "GENERAL_DAMAGE_PREMY",
+				"val": 50,
+				"propagator": "BATTLE_WIDE",
+				"limiters": [
+					{
+						"type": "CREATURE_FACTION_LIMITER",
+						"faction": "castle"
+					}
+				],
+				"stacking": "h4DivineupDmg"
+			},
+			"upHp": {
+				"type": "STACK_HEALTH",
+				"val": 50,
+				"propagator": "BATTLE_WIDE",
+				"limiters": [
+					{
+						"type": "CREATURE_FACTION_LIMITER",
+						"faction": "castle"
+					}
+				],
+				"stacking": "h4DivineupHp",
+				"valueType": "PERCENT_TO_BASE"
+			},
+			"upSpd": {
+				"type": "STACKS_SPEED",
+				"val": 2,
+				"propagator": "BATTLE_WIDE",
+				"limiters": [
+					{
+						"type": "CREATURE_FACTION_LIMITER",
+						"faction": "castle"
+					}
+				],
+				"stacking": "h4DivineupSpd"
+			},
+			"dnDmg": {
+				"type": "GENERAL_DAMAGE_PREMY",
+				"val": -33,
+				"propagator": "BATTLE_WIDE",
+				"limiters": [
+					"anyOf",
+					{
+						"type": "CREATURE_FACTION_LIMITER",
+						"faction": "necropolis"
+					},
+					{
+						"type": "CREATURE_FACTION_LIMITER",
+						"faction": "dungeon"
+					},
+					{
+						"type": "CREATURE_FACTION_LIMITER",
+						"faction": "inferno"
+					}
+				],
+				"stacking": "h4DivinednDmg"
+			},
+			"dnHp": {
+				"type": "STACK_HEALTH",
+				"val": -33,
+				"propagator": "BATTLE_WIDE",
+				"limiters": [
+					"anyOf",
+					{
+						"type": "CREATURE_FACTION_LIMITER",
+						"faction": "necropolis"
+					},
+					{
+						"type": "CREATURE_FACTION_LIMITER",
+						"faction": "dungeon"
+					},
+					{
+						"type": "CREATURE_FACTION_LIMITER",
+						"faction": "inferno"
+					}
+				],
+				"stacking": "h4DivinednHp",
+				"valueType": "PERCENT_TO_BASE"
+			},
+			"dnSpd": {
+				"type": "STACKS_SPEED",
+				"val": -1,
+				"propagator": "BATTLE_WIDE",
+				"limiters": [
+					"anyOf",
+					{
+						"type": "CREATURE_FACTION_LIMITER",
+						"faction": "necropolis"
+					},
+					{
+						"type": "CREATURE_FACTION_LIMITER",
+						"faction": "dungeon"
+					},
+					{
+						"type": "CREATURE_FACTION_LIMITER",
+						"faction": "inferno"
+					}
+				],
+				"stacking": "h4DivinednSpd"
+			},
+			"school_light": {
+				"type": "SPELL_DAMAGE",
+				"subtype": "spellSchool.01lightSchool",
+				"val": 100
+			},
+			"prot_dark": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.02darkSchool",
+				"val": 50,
+				"propagator": "BATTLE_WIDE",
+				"stacking": "h4DivineProtdark"
+			},
+			"prot_fire": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.fire",
+				"val": 50,
+				"propagator": "BATTLE_WIDE",
+				"stacking": "h4DivineProtfire"
+			},
+			"guard": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h4Proc",
+				"val": 20,
+				"hidden": true,
+				"limiters": [
+					"CREATURES_ONLY"
+				],
+				"stacking": "h4DivineGuard",
+				"addInfo": {
+					"mode": "divineGuard",
+					"schools": [
+						"01lightSchool"
+					]
+				}
+			}
+		}
+	},
+	"h4BookOfEnchantment": {
+		"type": [
+			"HERO"
+		],
+		"slot": "LEFT_HAND",
+		"class": "SPECIAL",
+		"value": 30000,
+		"text": {
+			"name": "Book of Enchantment",
+			"description": "{Book of Enchantment}\n\nA tome of magic bound from five chapters by the mages of Order.\n\n+100% damage from Water and Air spells cast by the hero.\nIf the holder's hero casts a spell outside Water and Air magic, it backfires: after the spell, every friendly stack loses 20% of its current total health.\nAll Tower stacks on the battlefield (friend or foe): +50% damage, +50% health, +2 Speed.\nAll Dungeon, Inferno and Rampart stacks on the battlefield (friend or foe): -33% damage, -33% health, -1 Speed.\nEvery stack on the battlefield takes half damage from Fire and Earth magic.",
+			"event": "The five chapters close together in your hands, runes of water and wind flowing between the pages. You have found the Book of Enchantment."
+		},
+		"graphics": {
+			"image": "h4/artifacts/h4BookOfEnchantment",
+			"scenarioBonus": "h4/artifacts/h4BookOfEnchantment",
+			"map": "h4/artifacts/map/h4BookOfEnchantment/map.json"
+		},
+		"bonuses": {
+			"upDmg": {
+				"type": "GENERAL_DAMAGE_PREMY",
+				"val": 50,
+				"propagator": "BATTLE_WIDE",
+				"limiters": [
+					{
+						"type": "CREATURE_FACTION_LIMITER",
+						"faction": "tower"
+					}
+				],
+				"stacking": "h4DivineupDmg"
+			},
+			"upHp": {
+				"type": "STACK_HEALTH",
+				"val": 50,
+				"propagator": "BATTLE_WIDE",
+				"limiters": [
+					{
+						"type": "CREATURE_FACTION_LIMITER",
+						"faction": "tower"
+					}
+				],
+				"stacking": "h4DivineupHp",
+				"valueType": "PERCENT_TO_BASE"
+			},
+			"upSpd": {
+				"type": "STACKS_SPEED",
+				"val": 2,
+				"propagator": "BATTLE_WIDE",
+				"limiters": [
+					{
+						"type": "CREATURE_FACTION_LIMITER",
+						"faction": "tower"
+					}
+				],
+				"stacking": "h4DivineupSpd"
+			},
+			"dnDmg": {
+				"type": "GENERAL_DAMAGE_PREMY",
+				"val": -33,
+				"propagator": "BATTLE_WIDE",
+				"limiters": [
+					"anyOf",
+					{
+						"type": "CREATURE_FACTION_LIMITER",
+						"faction": "dungeon"
+					},
+					{
+						"type": "CREATURE_FACTION_LIMITER",
+						"faction": "inferno"
+					},
+					{
+						"type": "CREATURE_FACTION_LIMITER",
+						"faction": "rampart"
+					}
+				],
+				"stacking": "h4DivinednDmg"
+			},
+			"dnHp": {
+				"type": "STACK_HEALTH",
+				"val": -33,
+				"propagator": "BATTLE_WIDE",
+				"limiters": [
+					"anyOf",
+					{
+						"type": "CREATURE_FACTION_LIMITER",
+						"faction": "dungeon"
+					},
+					{
+						"type": "CREATURE_FACTION_LIMITER",
+						"faction": "inferno"
+					},
+					{
+						"type": "CREATURE_FACTION_LIMITER",
+						"faction": "rampart"
+					}
+				],
+				"stacking": "h4DivinednHp",
+				"valueType": "PERCENT_TO_BASE"
+			},
+			"dnSpd": {
+				"type": "STACKS_SPEED",
+				"val": -1,
+				"propagator": "BATTLE_WIDE",
+				"limiters": [
+					"anyOf",
+					{
+						"type": "CREATURE_FACTION_LIMITER",
+						"faction": "dungeon"
+					},
+					{
+						"type": "CREATURE_FACTION_LIMITER",
+						"faction": "inferno"
+					},
+					{
+						"type": "CREATURE_FACTION_LIMITER",
+						"faction": "rampart"
+					}
+				],
+				"stacking": "h4DivinednSpd"
+			},
+			"school_water": {
+				"type": "SPELL_DAMAGE",
+				"subtype": "spellSchool.water",
+				"val": 100
+			},
+			"school_air": {
+				"type": "SPELL_DAMAGE",
+				"subtype": "spellSchool.air",
+				"val": 100
+			},
+			"prot_fire": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.fire",
+				"val": 50,
+				"propagator": "BATTLE_WIDE",
+				"stacking": "h4DivineProtfire"
+			},
+			"prot_earth": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.earth",
+				"val": 50,
+				"propagator": "BATTLE_WIDE",
+				"stacking": "h4DivineProtearth"
+			},
+			"guard": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h4Proc",
+				"val": 20,
+				"hidden": true,
+				"limiters": [
+					"CREATURES_ONLY"
+				],
+				"stacking": "h4DivineGuard",
+				"addInfo": {
+					"mode": "divineGuard",
+					"schools": [
+						"water",
+						"air"
+					]
+				}
+			}
+		}
+	},
+	"h4VampiricAmulet": {
+		"type": [
+			"HERO"
+		],
+		"slot": "NECK",
+		"class": "SPECIAL",
+		"value": 30000,
+		"text": {
+			"name": "Vampiric Amulet",
+			"description": "{Vampiric Amulet}\n\nAn amulet set with a dark ruby and two onyx stones, the token of Death.\n\n+100% damage from Dark spells cast by the hero.\nIf the holder's hero casts a spell outside Dark magic, it backfires: after the spell, every friendly stack loses 20% of its current total health.\nAll Necropolis stacks on the battlefield (friend or foe): +50% damage, +50% health, +2 Speed.\nAll Castle and Rampart stacks on the battlefield (friend or foe): -33% damage, -33% health, -1 Speed.\nEvery stack on the battlefield takes half damage from Light and Earth magic.",
+			"event": "The black ruby glows faintly between the two onyx stones; against your skin the amulet is as cold as a dead man's hand. You have found the Vampiric Amulet."
+		},
+		"graphics": {
+			"image": "h4/artifacts/h4VampiricAmulet",
+			"scenarioBonus": "h4/artifacts/h4VampiricAmulet",
+			"map": "h4/artifacts/map/h4VampiricAmulet/map.json"
+		},
+		"bonuses": {
+			"upDmg": {
+				"type": "GENERAL_DAMAGE_PREMY",
+				"val": 50,
+				"propagator": "BATTLE_WIDE",
+				"limiters": [
+					{
+						"type": "CREATURE_FACTION_LIMITER",
+						"faction": "necropolis"
+					}
+				],
+				"stacking": "h4DivineupDmg"
+			},
+			"upHp": {
+				"type": "STACK_HEALTH",
+				"val": 50,
+				"propagator": "BATTLE_WIDE",
+				"limiters": [
+					{
+						"type": "CREATURE_FACTION_LIMITER",
+						"faction": "necropolis"
+					}
+				],
+				"stacking": "h4DivineupHp",
+				"valueType": "PERCENT_TO_BASE"
+			},
+			"upSpd": {
+				"type": "STACKS_SPEED",
+				"val": 2,
+				"propagator": "BATTLE_WIDE",
+				"limiters": [
+					{
+						"type": "CREATURE_FACTION_LIMITER",
+						"faction": "necropolis"
+					}
+				],
+				"stacking": "h4DivineupSpd"
+			},
+			"dnDmg": {
+				"type": "GENERAL_DAMAGE_PREMY",
+				"val": -33,
+				"propagator": "BATTLE_WIDE",
+				"limiters": [
+					"anyOf",
+					{
+						"type": "CREATURE_FACTION_LIMITER",
+						"faction": "castle"
+					},
+					{
+						"type": "CREATURE_FACTION_LIMITER",
+						"faction": "rampart"
+					}
+				],
+				"stacking": "h4DivinednDmg"
+			},
+			"dnHp": {
+				"type": "STACK_HEALTH",
+				"val": -33,
+				"propagator": "BATTLE_WIDE",
+				"limiters": [
+					"anyOf",
+					{
+						"type": "CREATURE_FACTION_LIMITER",
+						"faction": "castle"
+					},
+					{
+						"type": "CREATURE_FACTION_LIMITER",
+						"faction": "rampart"
+					}
+				],
+				"stacking": "h4DivinednHp",
+				"valueType": "PERCENT_TO_BASE"
+			},
+			"dnSpd": {
+				"type": "STACKS_SPEED",
+				"val": -1,
+				"propagator": "BATTLE_WIDE",
+				"limiters": [
+					"anyOf",
+					{
+						"type": "CREATURE_FACTION_LIMITER",
+						"faction": "castle"
+					},
+					{
+						"type": "CREATURE_FACTION_LIMITER",
+						"faction": "rampart"
+					}
+				],
+				"stacking": "h4DivinednSpd"
+			},
+			"school_dark": {
+				"type": "SPELL_DAMAGE",
+				"subtype": "spellSchool.02darkSchool",
+				"val": 100
+			},
+			"prot_light": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.01lightSchool",
+				"val": 50,
+				"propagator": "BATTLE_WIDE",
+				"stacking": "h4DivineProtlight"
+			},
+			"prot_earth": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.earth",
+				"val": 50,
+				"propagator": "BATTLE_WIDE",
+				"stacking": "h4DivineProtearth"
+			},
+			"guard": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h4Proc",
+				"val": 20,
+				"hidden": true,
+				"limiters": [
+					"CREATURES_ONLY"
+				],
+				"stacking": "h4DivineGuard",
+				"addInfo": {
+					"mode": "divineGuard",
+					"schools": [
+						"02darkSchool"
+					]
+				}
+			}
+		}
+	},
+	"h4RodOfChaos": {
+		"type": [
+			"HERO"
+		],
+		"slot": "RIGHT_HAND",
+		"class": "SPECIAL",
+		"value": 30000,
+		"text": {
+			"name": "Rod of Chaos",
+			"description": "{Rod of Chaos}\n\nA rod made from a ram's horn, a crown of dragon teeth, infant dragon wings, a vial of sulfur and a fire snake.\n\n+100% damage from Fire spells cast by the hero.\nIf the holder's hero casts a spell outside Fire magic, it backfires: after the spell, every friendly stack loses 20% of its current total health.\nAll Dungeon and Inferno stacks on the battlefield (friend or foe): +50% damage, +50% health, +2 Speed.\nAll Tower and Castle stacks on the battlefield (friend or foe): -33% damage, -33% health, -1 Speed.\nEvery stack on the battlefield takes half damage from Water, Air and Light magic.",
+			"event": "The fire serpent coils around the rod, the reek of brimstone fills the air, and the dragon-tooth crown at its head grows hot. You have found the Rod of Chaos."
+		},
+		"graphics": {
+			"image": "h4/artifacts/h4RodOfChaos",
+			"scenarioBonus": "h4/artifacts/h4RodOfChaos",
+			"map": "h4/artifacts/map/h4RodOfChaos/map.json"
+		},
+		"bonuses": {
+			"upDmg": {
+				"type": "GENERAL_DAMAGE_PREMY",
+				"val": 50,
+				"propagator": "BATTLE_WIDE",
+				"limiters": [
+					"anyOf",
+					{
+						"type": "CREATURE_FACTION_LIMITER",
+						"faction": "dungeon"
+					},
+					{
+						"type": "CREATURE_FACTION_LIMITER",
+						"faction": "inferno"
+					}
+				],
+				"stacking": "h4DivineupDmg"
+			},
+			"upHp": {
+				"type": "STACK_HEALTH",
+				"val": 50,
+				"propagator": "BATTLE_WIDE",
+				"limiters": [
+					"anyOf",
+					{
+						"type": "CREATURE_FACTION_LIMITER",
+						"faction": "dungeon"
+					},
+					{
+						"type": "CREATURE_FACTION_LIMITER",
+						"faction": "inferno"
+					}
+				],
+				"stacking": "h4DivineupHp",
+				"valueType": "PERCENT_TO_BASE"
+			},
+			"upSpd": {
+				"type": "STACKS_SPEED",
+				"val": 2,
+				"propagator": "BATTLE_WIDE",
+				"limiters": [
+					"anyOf",
+					{
+						"type": "CREATURE_FACTION_LIMITER",
+						"faction": "dungeon"
+					},
+					{
+						"type": "CREATURE_FACTION_LIMITER",
+						"faction": "inferno"
+					}
+				],
+				"stacking": "h4DivineupSpd"
+			},
+			"dnDmg": {
+				"type": "GENERAL_DAMAGE_PREMY",
+				"val": -33,
+				"propagator": "BATTLE_WIDE",
+				"limiters": [
+					"anyOf",
+					{
+						"type": "CREATURE_FACTION_LIMITER",
+						"faction": "tower"
+					},
+					{
+						"type": "CREATURE_FACTION_LIMITER",
+						"faction": "castle"
+					}
+				],
+				"stacking": "h4DivinednDmg"
+			},
+			"dnHp": {
+				"type": "STACK_HEALTH",
+				"val": -33,
+				"propagator": "BATTLE_WIDE",
+				"limiters": [
+					"anyOf",
+					{
+						"type": "CREATURE_FACTION_LIMITER",
+						"faction": "tower"
+					},
+					{
+						"type": "CREATURE_FACTION_LIMITER",
+						"faction": "castle"
+					}
+				],
+				"stacking": "h4DivinednHp",
+				"valueType": "PERCENT_TO_BASE"
+			},
+			"dnSpd": {
+				"type": "STACKS_SPEED",
+				"val": -1,
+				"propagator": "BATTLE_WIDE",
+				"limiters": [
+					"anyOf",
+					{
+						"type": "CREATURE_FACTION_LIMITER",
+						"faction": "tower"
+					},
+					{
+						"type": "CREATURE_FACTION_LIMITER",
+						"faction": "castle"
+					}
+				],
+				"stacking": "h4DivinednSpd"
+			},
+			"school_fire": {
+				"type": "SPELL_DAMAGE",
+				"subtype": "spellSchool.fire",
+				"val": 100
+			},
+			"prot_water": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.water",
+				"val": 50,
+				"propagator": "BATTLE_WIDE",
+				"stacking": "h4DivineProtwater"
+			},
+			"prot_air": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.air",
+				"val": 50,
+				"propagator": "BATTLE_WIDE",
+				"stacking": "h4DivineProtair"
+			},
+			"prot_light": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.01lightSchool",
+				"val": 50,
+				"propagator": "BATTLE_WIDE",
+				"stacking": "h4DivineProtlight"
+			},
+			"guard": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h4Proc",
+				"val": 20,
+				"hidden": true,
+				"limiters": [
+					"CREATURES_ONLY"
+				],
+				"stacking": "h4DivineGuard",
+				"addInfo": {
+					"mode": "divineGuard",
+					"schools": [
+						"fire"
+					]
+				}
+			}
+		}
+	},
+	"h4OrbOfSummoning": {
+		"type": [
+			"HERO"
+		],
+		"slot": "MISC",
+		"class": "SPECIAL",
+		"value": 30000,
+		"text": {
+			"name": "Orb of Summoning",
+			"description": "{Orb of Summoning}\n\nAn orb kept in a chest guarded by four keys of sandalwood, ebony, ivory and mahogany.\n\n+100% damage from Earth spells cast by the hero.\nIf the holder's hero casts a spell outside Earth magic, it backfires: after the spell, every friendly stack loses 20% of its current total health.\nAll Rampart stacks on the battlefield (friend or foe): +50% damage, +50% health, +2 Speed.\nAll Tower and Necropolis stacks on the battlefield (friend or foe): -33% damage, -33% health, -1 Speed.\nEvery stack on the battlefield takes half damage from Water, Air and Dark magic.",
+			"event": "The four keys turn one after another, the lid springs open, and the orb within swirls with the breath of earth and forest. You have found the Orb of Summoning."
+		},
+		"graphics": {
+			"image": "h4/artifacts/h4OrbOfSummoning",
+			"scenarioBonus": "h4/artifacts/h4OrbOfSummoning",
+			"map": "h4/artifacts/map/h4OrbOfSummoning/map.json"
+		},
+		"bonuses": {
+			"upDmg": {
+				"type": "GENERAL_DAMAGE_PREMY",
+				"val": 50,
+				"propagator": "BATTLE_WIDE",
+				"limiters": [
+					{
+						"type": "CREATURE_FACTION_LIMITER",
+						"faction": "rampart"
+					}
+				],
+				"stacking": "h4DivineupDmg"
+			},
+			"upHp": {
+				"type": "STACK_HEALTH",
+				"val": 50,
+				"propagator": "BATTLE_WIDE",
+				"limiters": [
+					{
+						"type": "CREATURE_FACTION_LIMITER",
+						"faction": "rampart"
+					}
+				],
+				"stacking": "h4DivineupHp",
+				"valueType": "PERCENT_TO_BASE"
+			},
+			"upSpd": {
+				"type": "STACKS_SPEED",
+				"val": 2,
+				"propagator": "BATTLE_WIDE",
+				"limiters": [
+					{
+						"type": "CREATURE_FACTION_LIMITER",
+						"faction": "rampart"
+					}
+				],
+				"stacking": "h4DivineupSpd"
+			},
+			"dnDmg": {
+				"type": "GENERAL_DAMAGE_PREMY",
+				"val": -33,
+				"propagator": "BATTLE_WIDE",
+				"limiters": [
+					"anyOf",
+					{
+						"type": "CREATURE_FACTION_LIMITER",
+						"faction": "tower"
+					},
+					{
+						"type": "CREATURE_FACTION_LIMITER",
+						"faction": "necropolis"
+					}
+				],
+				"stacking": "h4DivinednDmg"
+			},
+			"dnHp": {
+				"type": "STACK_HEALTH",
+				"val": -33,
+				"propagator": "BATTLE_WIDE",
+				"limiters": [
+					"anyOf",
+					{
+						"type": "CREATURE_FACTION_LIMITER",
+						"faction": "tower"
+					},
+					{
+						"type": "CREATURE_FACTION_LIMITER",
+						"faction": "necropolis"
+					}
+				],
+				"stacking": "h4DivinednHp",
+				"valueType": "PERCENT_TO_BASE"
+			},
+			"dnSpd": {
+				"type": "STACKS_SPEED",
+				"val": -1,
+				"propagator": "BATTLE_WIDE",
+				"limiters": [
+					"anyOf",
+					{
+						"type": "CREATURE_FACTION_LIMITER",
+						"faction": "tower"
+					},
+					{
+						"type": "CREATURE_FACTION_LIMITER",
+						"faction": "necropolis"
+					}
+				],
+				"stacking": "h4DivinednSpd"
+			},
+			"school_earth": {
+				"type": "SPELL_DAMAGE",
+				"subtype": "spellSchool.earth",
+				"val": 100
+			},
+			"prot_water": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.water",
+				"val": 50,
+				"propagator": "BATTLE_WIDE",
+				"stacking": "h4DivineProtwater"
+			},
+			"prot_air": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.air",
+				"val": 50,
+				"propagator": "BATTLE_WIDE",
+				"stacking": "h4DivineProtair"
+			},
+			"prot_dark": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.02darkSchool",
+				"val": 50,
+				"propagator": "BATTLE_WIDE",
+				"stacking": "h4DivineProtdark"
+			},
+			"guard": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h4Proc",
+				"val": 20,
+				"hidden": true,
+				"limiters": [
+					"CREATURES_ONLY"
+				],
+				"stacking": "h4DivineGuard",
+				"addInfo": {
+					"mode": "divineGuard",
+					"schools": [
+						"earth"
+					]
+				}
+			}
+		}
+	},
+	"h4ShieldOfResistance": {
+		"type": [
+			"HERO"
+		],
+		"slot": "LEFT_HAND",
+		"class": "SPECIAL",
+		"value": 30000,
+		"text": {
+			"name": "Shield of Resistance",
+			"description": "{Shield of Resistance}\n\nA shield set with two elephant tusks, a rhino horn and a rising sun badge, the token of Might.\n\nThe holder's side cannot cast any spells (neither hero nor creatures).\nAll Stronghold, Fortress and neutral stacks on the battlefield (friend or foe): +50% damage, +50% health, +2 Speed.\nAll Castle, Tower, Necropolis, Dungeon, Inferno and Rampart stacks on the battlefield (friend or foe): -33% damage, -33% health, -1 Speed.",
+			"event": "The rising-sun emblem gleams between ivory and rhino horn; as you raise the shield, the magic around you seems to fall silent. You have found the Shield of Resistance."
+		},
+		"graphics": {
+			"image": "h4/artifacts/h4ShieldOfResistance",
+			"scenarioBonus": "h4/artifacts/h4ShieldOfResistance",
+			"map": "h4/artifacts/map/h4ShieldOfResistance/map.json"
+		},
+		"bonuses": {
+			"upDmg": {
+				"type": "GENERAL_DAMAGE_PREMY",
+				"val": 50,
+				"propagator": "BATTLE_WIDE",
+				"limiters": [
+					"anyOf",
+					{
+						"type": "CREATURE_FACTION_LIMITER",
+						"faction": "stronghold"
+					},
+					{
+						"type": "CREATURE_FACTION_LIMITER",
+						"faction": "fortress"
+					},
+					{
+						"type": "CREATURE_FACTION_LIMITER",
+						"faction": "neutral"
+					}
+				],
+				"stacking": "h4DivineupDmg"
+			},
+			"upHp": {
+				"type": "STACK_HEALTH",
+				"val": 50,
+				"propagator": "BATTLE_WIDE",
+				"limiters": [
+					"anyOf",
+					{
+						"type": "CREATURE_FACTION_LIMITER",
+						"faction": "stronghold"
+					},
+					{
+						"type": "CREATURE_FACTION_LIMITER",
+						"faction": "fortress"
+					},
+					{
+						"type": "CREATURE_FACTION_LIMITER",
+						"faction": "neutral"
+					}
+				],
+				"stacking": "h4DivineupHp",
+				"valueType": "PERCENT_TO_BASE"
+			},
+			"upSpd": {
+				"type": "STACKS_SPEED",
+				"val": 2,
+				"propagator": "BATTLE_WIDE",
+				"limiters": [
+					"anyOf",
+					{
+						"type": "CREATURE_FACTION_LIMITER",
+						"faction": "stronghold"
+					},
+					{
+						"type": "CREATURE_FACTION_LIMITER",
+						"faction": "fortress"
+					},
+					{
+						"type": "CREATURE_FACTION_LIMITER",
+						"faction": "neutral"
+					}
+				],
+				"stacking": "h4DivineupSpd"
+			},
+			"dnDmg": {
+				"type": "GENERAL_DAMAGE_PREMY",
+				"val": -33,
+				"propagator": "BATTLE_WIDE",
+				"limiters": [
+					"anyOf",
+					{
+						"type": "CREATURE_FACTION_LIMITER",
+						"faction": "castle"
+					},
+					{
+						"type": "CREATURE_FACTION_LIMITER",
+						"faction": "tower"
+					},
+					{
+						"type": "CREATURE_FACTION_LIMITER",
+						"faction": "necropolis"
+					},
+					{
+						"type": "CREATURE_FACTION_LIMITER",
+						"faction": "dungeon"
+					},
+					{
+						"type": "CREATURE_FACTION_LIMITER",
+						"faction": "inferno"
+					},
+					{
+						"type": "CREATURE_FACTION_LIMITER",
+						"faction": "rampart"
+					}
+				],
+				"stacking": "h4DivinednDmg"
+			},
+			"dnHp": {
+				"type": "STACK_HEALTH",
+				"val": -33,
+				"propagator": "BATTLE_WIDE",
+				"limiters": [
+					"anyOf",
+					{
+						"type": "CREATURE_FACTION_LIMITER",
+						"faction": "castle"
+					},
+					{
+						"type": "CREATURE_FACTION_LIMITER",
+						"faction": "tower"
+					},
+					{
+						"type": "CREATURE_FACTION_LIMITER",
+						"faction": "necropolis"
+					},
+					{
+						"type": "CREATURE_FACTION_LIMITER",
+						"faction": "dungeon"
+					},
+					{
+						"type": "CREATURE_FACTION_LIMITER",
+						"faction": "inferno"
+					},
+					{
+						"type": "CREATURE_FACTION_LIMITER",
+						"faction": "rampart"
+					}
+				],
+				"stacking": "h4DivinednHp",
+				"valueType": "PERCENT_TO_BASE"
+			},
+			"dnSpd": {
+				"type": "STACKS_SPEED",
+				"val": -1,
+				"propagator": "BATTLE_WIDE",
+				"limiters": [
+					"anyOf",
+					{
+						"type": "CREATURE_FACTION_LIMITER",
+						"faction": "castle"
+					},
+					{
+						"type": "CREATURE_FACTION_LIMITER",
+						"faction": "tower"
+					},
+					{
+						"type": "CREATURE_FACTION_LIMITER",
+						"faction": "necropolis"
+					},
+					{
+						"type": "CREATURE_FACTION_LIMITER",
+						"faction": "dungeon"
+					},
+					{
+						"type": "CREATURE_FACTION_LIMITER",
+						"faction": "inferno"
+					},
+					{
+						"type": "CREATURE_FACTION_LIMITER",
+						"faction": "rampart"
+					}
+				],
+				"stacking": "h4DivinednSpd"
+			},
+			"block": {
+				"type": "BLOCK_ALL_MAGIC"
+			}
+		}
+	}
+}

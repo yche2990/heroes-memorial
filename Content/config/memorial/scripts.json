@@ -1,0 +1,372 @@
+{
+	"h5Timed": {
+		"implements": "spellEffect",
+		"script": "spells/h5Timed",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"ignoreImmunity": {
+					"type": "boolean"
+				},
+				"chainLength": {
+					"type": "number"
+				},
+				"requireAny": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"exclude": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"durBase": {
+					"type": "array",
+					"items": {
+						"type": "number"
+					}
+				},
+				"durPer": {
+					"type": "array",
+					"items": {
+						"type": "number"
+					}
+				},
+				"values": {
+					"type": "object"
+				},
+				"expertOnlyAboveTier": {
+					"type": "number"
+				},
+				"cumulative": {
+					"type": "boolean"
+				},
+				"battleLogSingular": {
+					"type": "string"
+				},
+				"battleLogPlural": {
+					"type": "string"
+				},
+				"bonus": {
+					"additionalProperties": {
+						"$ref": "bonusInstance.json"
+					}
+				}
+			},
+			"additionalProperties": false
+		},
+		"stringRegistrations": [
+			"battleLogSingular",
+			"battleLogPlural"
+		]
+	},
+	"h5Damage": {
+		"implements": "spellEffect",
+		"script": "spells/h5Damage",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"ignoreImmunity": {
+					"type": "boolean"
+				},
+				"chainLength": {
+					"type": "number"
+				},
+				"requireAny": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"exclude": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"base": {
+					"type": "array",
+					"items": {
+						"type": "number"
+					}
+				},
+				"perPower": {
+					"type": "array",
+					"items": {
+						"type": "number"
+					}
+				},
+				"frags": {
+					"type": "boolean"
+				},
+				"chainFactor": {
+					"type": "number"
+				},
+				"killByPercentage": {
+					"type": "boolean"
+				},
+				"killByCount": {
+					"type": "boolean"
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"h5Summon": {
+		"implements": "spellEffect",
+		"script": "spells/h5Summon",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"ignoreImmunity": {
+					"type": "boolean"
+				},
+				"chainLength": {
+					"type": "number"
+				},
+				"ids": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"base": {
+					"type": "array",
+					"items": {
+						"type": "number"
+					}
+				},
+				"perPower": {
+					"type": "array",
+					"items": {
+						"type": "number"
+					}
+				},
+				"byHealth": {
+					"type": "boolean"
+				},
+				"byTerrain": {
+					"type": "boolean"
+				},
+				"fx": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"permanent": {
+					"type": "boolean"
+				},
+				"exclusive": {
+					"type": "boolean"
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"h5Dispel": {
+		"implements": "spellEffect",
+		"script": "spells/h5Dispel",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"ignoreImmunity": {
+					"type": "boolean"
+				},
+				"chainLength": {
+					"type": "number"
+				},
+				"chance": {
+					"type": "array",
+					"items": {
+						"type": "number"
+					}
+				},
+				"onlyPositive": {
+					"type": "boolean"
+				},
+				"dispelPositive": {
+					"type": "boolean"
+				},
+				"dispelNegative": {
+					"type": "boolean"
+				},
+				"dispelNeutral": {
+					"type": "boolean"
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"h5Attach": {
+		"implements": "spellEffect",
+		"script": "spells/h5Attach",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"ignoreImmunity": {
+					"type": "boolean"
+				},
+				"chainLength": {
+					"type": "number"
+				},
+				"requireAny": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"exclude": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"eventScript": {
+					"type": "string"
+				},
+				"base": {
+					"type": "array",
+					"items": {
+						"type": "number"
+					}
+				},
+				"perPower": {
+					"type": "array",
+					"items": {
+						"type": "number"
+					}
+				},
+				"durBase": {
+					"type": "array",
+					"items": {
+						"type": "number"
+					}
+				},
+				"durPer": {
+					"type": "array",
+					"items": {
+						"type": "number"
+					}
+				},
+				"eventParameters": {
+					"type": "object"
+				},
+				"icon": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"h5RegenTick": {
+		"implements": "combatEvent",
+		"script": "combat/h5RegenTick",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {},
+			"additionalProperties": false
+		},
+		"description": "{Vitality Regeneration}\nRestores ${val} Hit Points at the start of each round."
+	},
+	"h5Heal": {
+		"implements": "spellEffect",
+		"script": "spells/h5Heal",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"ignoreImmunity": {
+					"type": "boolean"
+				},
+				"chainLength": {
+					"type": "number"
+				},
+				"requireAny": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"exclude": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"base": {
+					"type": "array",
+					"items": {
+						"type": "number"
+					}
+				},
+				"perPower": {
+					"type": "array",
+					"items": {
+						"type": "number"
+					}
+				},
+				"hpReduce": {
+					"type": "number"
+				},
+				"undeadPermanent": {
+					"type": "boolean"
+				},
+				"healLevel": {
+					"type": "string"
+				},
+				"healPower": {
+					"type": "string"
+				},
+				"minFullUnits": {
+					"type": "number"
+				},
+				"minValue": {
+					"type": "number"
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"h47Stealth": {
+		"implements": "combatEvent",
+		"script": "combat/h47Stealth",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"spell": {
+					"type": "string"
+				},
+				"mark": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": ""
+	}
+}

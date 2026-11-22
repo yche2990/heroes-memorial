@@ -1,0 +1,18 @@
+{
+	"basepath": "h6dyn/fx/time_trap_removal/",
+	"sequences": [
+		{
+			"group": 0,
+			"frames": [
+				"00.png",
+				"01.png",
+				"02.png",
+				"03.png",
+				"04.png",
+				"05.png",
+				"06.png",
+				"07.png"
+			]
+		}
+	]
+}

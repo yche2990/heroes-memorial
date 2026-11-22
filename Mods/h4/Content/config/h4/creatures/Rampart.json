@@ -1,0 +1,1844 @@
+{
+	"h4Sprite": {
+		"name": {
+			"singular": "Sprite",
+			"plural": "Sprites"
+		},
+		"description": "Tiny and very fast, sprites attack without retaliation.",
+		"faction": "rampart",
+		"level": 2,
+		"cost": {
+			"gold": 110
+		},
+		"speed": 11,
+		"hitPoints": 9,
+		"attack": 6,
+		"defense": 5,
+		"damage": {
+			"min": 1,
+			"max": 2
+		},
+		"doubleWide": false,
+		"growth": 8,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"flying": {
+				"type": "FLYING"
+			},
+			"noRetaliation": {
+				"type": "BLOCKS_RETALIATION",
+				"description": "{No Retaliation}\nEnemies cannot retaliate"
+			}
+		},
+		"graphics": {
+			"animation": "h4/Sprite/battle.json",
+			"map": "h4/Sprite/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h4/Sprite/map/atkL.png",
+			"mapAttackFromRight": "h4/Sprite/map/atkR.png",
+			"iconLarge": "h4/Sprite/iconLarge.png",
+			"iconSmall": "h4/Sprite/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h4/sprite_melee.ogg",
+			"wince": "h4/sprite_flinch.ogg",
+			"killed": "h4/sprite_die.ogg",
+			"move": "h4/sprite_walk.ogg"
+		},
+		"aiValue": 116,
+		"fightValue": 100,
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					3,
+					3,
+					3,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					3,
+					4,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					0,
+					1,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					3,
+					3,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_RETALIATION",
+					"description": "{Nimbleness}\nExtra retaliation each round"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "MORALE"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			}
+		]
+	},
+	"h4Wolf": {
+		"name": {
+			"singular": "Wolf",
+			"plural": "Wolves"
+		},
+		"description": "Wolves bite and claw, attacking twice in a row.",
+		"faction": "rampart",
+		"level": 1,
+		"cost": {
+			"gold": 95
+		},
+		"speed": 7,
+		"hitPoints": 6,
+		"attack": 5,
+		"defense": 4,
+		"damage": {
+			"min": 2,
+			"max": 3
+		},
+		"doubleWide": false,
+		"growth": 14,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"doubleAttack": {
+				"type": "ADDITIONAL_ATTACK",
+				"description": "{Strike Twice}\nAttacks twice",
+				"val": 1
+			}
+		},
+		"graphics": {
+			"animation": "h4/Wolf/battle.json",
+			"map": "h4/Wolf/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h4/Wolf/map/atkL.png",
+			"mapAttackFromRight": "h4/Wolf/map/atkR.png",
+			"iconLarge": "h4/Wolf/iconLarge.png",
+			"iconSmall": "h4/Wolf/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h4/wolf_melee.ogg",
+			"wince": "h4/wolf_flinch.ogg",
+			"killed": "h4/wolf_die.ogg",
+			"move": "h4/wolf_walk.ogg"
+		},
+		"aiValue": 96,
+		"fightValue": 89,
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_RETALIATION",
+					"description": "{Nimbleness}\nExtra retaliation each round"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "MORALE"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			}
+		]
+	},
+	"h4Elf": {
+		"name": {
+			"singular": "Elf",
+			"plural": "Elves"
+		},
+		"description": "Elves shoot twice per turn with their longbows and return fire when shot at.",
+		"faction": "rampart",
+		"level": 3,
+		"cost": {
+			"gold": 330
+		},
+		"speed": 7,
+		"hitPoints": 20,
+		"attack": 10,
+		"defense": 9,
+		"damage": {
+			"min": 3,
+			"max": 4
+		},
+		"doubleWide": false,
+		"growth": 6,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"doubleShot": {
+				"type": "ADDITIONAL_ATTACK",
+				"description": "{Double Shot}\nAttacks twice",
+				"val": 1
+			},
+			"rangedRetaliation": {
+				"type": "RANGED_RETALIATION",
+				"description": "{Return Fire}\nShoots back when shot at"
+			},
+			"shooter": {
+				"type": "SHOOTER"
+			}
+		},
+		"shots": 24,
+		"graphics": {
+			"animation": "h4/Elf/battle.json",
+			"map": "h4/Elf/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h4/Elf/map/atkL.png",
+			"mapAttackFromRight": "h4/Elf/map/atkR.png",
+			"iconLarge": "h4/Elf/iconLarge.png",
+			"iconSmall": "h4/Elf/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"projectile": "h4/missiles/cr_arrow.json",
+				"frameAngles": [
+					90,
+					26.57,
+					0,
+					-26.57,
+					-90
+				],
+				"offset": {
+					"upperX": 17,
+					"upperY": -85,
+					"middleX": 22,
+					"middleY": -75,
+					"lowerX": 14,
+					"lowerY": -67
+				},
+				"attackClimaxFrame": 9
+			}
+		},
+		"sound": {
+			"attack": "h4/elf_melee.ogg",
+			"wince": "h4/elf_flinch.ogg",
+			"killed": "h4/elf_die.ogg",
+			"move": "h4/elf_walk.ogg",
+			"shoot": "h4/elf_ranged.ogg"
+		},
+		"aiValue": 391,
+		"fightValue": 333,
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_WALL_PENALTY",
+					"description": "{Siege Shooter}\nNo damage loss when shooting over walls"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_DISTANCE_PENALTY",
+					"description": "{Sharpshooter}\nNo penalty for long-range shots"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "MORALE"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			}
+		]
+	},
+	"h4WhiteTiger": {
+		"name": {
+			"singular": "White Tiger",
+			"plural": "White Tigers"
+		},
+		"description": "Swift and cunning, white tigers strike before the enemy can retaliate.",
+		"faction": "rampart",
+		"level": 4,
+		"cost": {
+			"gold": 375
+		},
+		"speed": 12,
+		"hitPoints": 34,
+		"attack": 11,
+		"defense": 10,
+		"damage": {
+			"min": 6,
+			"max": 8
+		},
+		"doubleWide": true,
+		"growth": 5,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"firstStrike": {
+				"type": "FIRST_STRIKE",
+				"description": "{First Strike}\nRetaliates before the attacker strikes"
+			}
+		},
+		"graphics": {
+			"animation": "h4/WhiteTiger/battle.json",
+			"map": "h4/WhiteTiger/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h4/WhiteTiger/map/atkL.png",
+			"mapAttackFromRight": "h4/WhiteTiger/map/atkR.png",
+			"iconLarge": "h4/WhiteTiger/iconLarge.png",
+			"iconSmall": "h4/WhiteTiger/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h4/white_tiger_melee.ogg",
+			"wince": "h4/white_tiger_flinch.ogg",
+			"killed": "h4/white_tiger_die.ogg",
+			"move": "h4/white_tiger_walk.ogg"
+		},
+		"aiValue": 571,
+		"fightValue": 488,
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					5,
+					6,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_RETALIATION",
+					"description": "{Nimbleness}\nExtra retaliation each round"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "MORALE"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			}
+		]
+	},
+	"h4Griffin": {
+		"name": {
+			"singular": "Griffin",
+			"plural": "Griffins"
+		},
+		"description": "Fierce and tireless, griffins retaliate against every attack.",
+		"faction": "rampart",
+		"level": 6,
+		"cost": {
+			"gold": 1150
+		},
+		"speed": 10,
+		"hitPoints": 105,
+		"attack": 14,
+		"defense": 13,
+		"damage": {
+			"min": 21,
+			"max": 30
+		},
+		"doubleWide": true,
+		"growth": 2,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"flying": {
+				"type": "FLYING"
+			},
+			"unlimitedRetaliation": {
+				"type": "UNLIMITED_RETALIATIONS",
+				"description": "{Unlimited Retaliation}\nRetaliates against every attack"
+			}
+		},
+		"graphics": {
+			"animation": "h4/Griffin/battle.json",
+			"map": "h4/Griffin/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h4/Griffin/map/atkL.png",
+			"mapAttackFromRight": "h4/Griffin/map/atkR.png",
+			"iconLarge": "h4/Griffin/iconLarge.png",
+			"iconSmall": "h4/Griffin/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h4/griffin_melee.ogg",
+			"wince": "h4/griffin_flinch.ogg",
+			"killed": "h4/griffin_die.ogg",
+			"move": "h4/griffin_walk.ogg"
+		},
+		"aiValue": 2268,
+		"fightValue": 1898,
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					2,
+					3,
+					4,
+					5,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE",
+					"stacking": "h4GriffinExpMagicResistance",
+					"description": "{Magic Resistance}\nChance to resist enemy spells"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					10,
+					20,
+					30,
+					40,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "MIND_IMMUNITY",
+					"description": "{Steadfast Mind}\nImmune to Mind spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "MORALE"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			}
+		]
+	},
+	"h4Unicorn": {
+		"name": {
+			"singular": "Unicorn",
+			"plural": "Unicorns"
+		},
+		"description": "A unicorn's horn can blind its foes.",
+		"faction": "rampart",
+		"level": 5,
+		"cost": {
+			"gold": 585
+		},
+		"speed": 9,
+		"hitPoints": 55,
+		"attack": 12,
+		"defense": 12,
+		"damage": {
+			"min": 11,
+			"max": 19
+		},
+		"doubleWide": true,
+		"growth": 3,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"blind": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"description": "{Blind}\n40% chance to blind the target",
+				"subtype": "h4Proc",
+				"val": 40,
+				"addInfo": {
+					"mode": "spellHit",
+					"spell": "blind",
+					"level": 2,
+					"fx": "h4/fx/blind",
+					"sound": "BLIND"
+				},
+				"icon": "h4/abilities/blind"
+			}
+		},
+		"graphics": {
+			"animation": "h4/Unicorn/battle.json",
+			"map": "h4/Unicorn/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h4/Unicorn/map/atkL.png",
+			"mapAttackFromRight": "h4/Unicorn/map/atkR.png",
+			"iconLarge": "h4/Unicorn/iconLarge.png",
+			"iconSmall": "h4/Unicorn/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h4/unicorn_melee.ogg",
+			"wince": "h4/unicorn_flinch.ogg",
+			"killed": "h4/unicorn_die.ogg",
+			"move": "h4/unicorn_walk.ogg"
+		},
+		"aiValue": 1124,
+		"fightValue": 921,
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					3,
+					4,
+					5,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					3,
+					4,
+					4,
+					6,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					2,
+					3,
+					3,
+					4,
+					5,
+					6,
+					6,
+					7
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					7
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "MIND_IMMUNITY",
+					"description": "{Steadfast Mind}\nImmune to Mind spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "MORALE"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			}
+		]
+	},
+	"h4FaerieDragon": {
+		"name": {
+			"singular": "Faerie Dragon",
+			"plural": "Faerie Dragons"
+		},
+		"description": "Faerie dragons resist magic and can reflect spells. They cast Confusion, Fireball, Fire Ring and Lightning, and Cloud of Confusion once their numbers reach five weeks of growth.",
+		"faction": "rampart",
+		"level": 7,
+		"cost": {
+			"gold": 3985,
+			"gems": 2
+		},
+		"speed": 13,
+		"hitPoints": 207,
+		"attack": 16,
+		"defense": 22,
+		"damage": {
+			"min": 31,
+			"max": 45
+		},
+		"doubleWide": true,
+		"growth": 1,
+		"advMapAmount": {
+			"min": 1,
+			"max": 3
+		},
+		"abilities": {
+			"skeletonTarget": {
+				"type": "SKELETON_TRANSFORMER_TARGET",
+				"subtype": "boneDragon",
+				"hidden": true
+			},
+			"flying": {
+				"type": "FLYING"
+			},
+			"magicMirror": {
+				"type": "MAGIC_MIRROR",
+				"description": "{Magic Mirror}\n20% chance to reflect hostile spells",
+				"val": 20
+			},
+			"casterInfo": {
+				"type": "NONE",
+				"description": "{Spellcaster}\n5 casts per battle (power scales with count); spells: see wiki",
+				"icon": "h4/abilities/caster"
+			},
+			"cast_h4Confusion": {
+				"type": "SPELLCASTER",
+				"subtype": "spell.h4Confusion",
+				"val": 2,
+				"hidden": true
+			},
+			"cast_h4Fireball": {
+				"type": "SPELLCASTER",
+				"subtype": "spell.h4Fireball",
+				"val": 2,
+				"hidden": true
+			},
+			"cast_h4FireRing": {
+				"type": "SPELLCASTER",
+				"subtype": "spell.h4FireRing",
+				"val": 2,
+				"hidden": true
+			},
+			"cast_h4Lightning": {
+				"type": "SPELLCASTER",
+				"subtype": "spell.h4Lightning",
+				"val": 2,
+				"hidden": true
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 5,
+				"stacking": "h4FaerieDragonExpCasts"
+			},
+			"spellPower": {
+				"type": "CREATURE_SPELL_POWER",
+				"val": 100,
+				"hidden": true
+			},
+			"enchantPower": {
+				"type": "CREATURE_ENCHANT_POWER",
+				"val": 3
+			},
+			"massCaster": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h4Proc",
+				"hidden": true,
+				"addInfo": {
+					"mode": "massCaster",
+					"spells": [
+						"h4CloudOfConfusion"
+					],
+					"weeks": 5
+				}
+			},
+			"dragon": {
+				"type": "DRAGON_NATURE"
+			}
+		},
+		"graphics": {
+			"animation": "h4/FaerieDragon/battle.json",
+			"map": "h4/FaerieDragon/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h4/FaerieDragon/map/atkL.png",
+			"mapAttackFromRight": "h4/FaerieDragon/map/atkR.png",
+			"iconLarge": "h4/FaerieDragon/iconLarge.png",
+			"iconSmall": "h4/FaerieDragon/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h4/faerie_dragon_melee.ogg",
+			"wince": "h4/faerie_dragon_flinch.ogg",
+			"killed": "h4/faerie_dragon_die.ogg",
+			"move": "h4/faerie_dragon_walk.ogg"
+		},
+		"aiValue": 5360,
+		"fightValue": 4023,
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "CASTS",
+					"stacking": "h4FaerieDragonExpCasts",
+					"description": "{Practiced Caster}\nCasts per battle grow with rank",
+					"icon": "h4/abilities/caster"
+				},
+				"values": [
+					5,
+					5,
+					5,
+					5,
+					6,
+					6,
+					6,
+					6,
+					7,
+					7
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE",
+					"stacking": "h4FaerieDragonExpMagicResistance",
+					"description": "{Magic Resistance}\nChance to resist enemy spells"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					10,
+					20,
+					30,
+					40,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "MIND_IMMUNITY",
+					"description": "{Steadfast Mind}\nImmune to Mind spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h4Phoenix": {
+		"name": {
+			"singular": "Phoenix",
+			"plural": "Phoenixes"
+		},
+		"description": "Phoenixes breathe fire that hits several enemies and can be reborn once per battle.",
+		"faction": "rampart",
+		"level": 7,
+		"cost": {
+			"gold": 3985,
+			"mercury": 2
+		},
+		"speed": 20,
+		"hitPoints": 259,
+		"attack": 22,
+		"defense": 22,
+		"damage": {
+			"min": 41,
+			"max": 59
+		},
+		"doubleWide": true,
+		"growth": 1,
+		"advMapAmount": {
+			"min": 1,
+			"max": 3
+		},
+		"abilities": {
+			"flying": {
+				"type": "FLYING"
+			},
+			"fireResistance": {
+				"type": "SPELL_SCHOOL_IMMUNITY",
+				"description": "{Fire Resistance}\nImmune to Fire magic,\nhalf damage from fire attacks",
+				"subtype": "spellSchool.fire"
+			},
+			"breath": {
+				"type": "TWO_HEX_ATTACK_BREATH",
+				"description": "{Breath Attack}\nAlso hits the unit behind the target"
+			},
+			"rebirth": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"description": "{Rebirth}\n20% of the stack is reborn\nwhen it is wiped out",
+				"subtype": "h4Rebirth",
+				"val": 20,
+				"icon": "h4/abilities/rebirth"
+			},
+			"h4FireAttackVsEfreet": {
+				"type": "HATE",
+				"subtype": "creature.h4Efreet",
+				"val": -50,
+				"hidden": true
+			},
+			"h4FireAttackVsFireElemental": {
+				"type": "HATE",
+				"subtype": "creature.h4FireElemental",
+				"val": -50,
+				"hidden": true
+			},
+			"h4FireAttackVsPhoenix": {
+				"type": "HATE",
+				"subtype": "creature.h4Phoenix",
+				"val": -50,
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h4/Phoenix/battle.json",
+			"map": "h4/Phoenix/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h4/Phoenix/map/atkL.png",
+			"mapAttackFromRight": "h4/Phoenix/map/atkR.png",
+			"iconLarge": "h4/Phoenix/iconLarge.png",
+			"iconSmall": "h4/Phoenix/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h4/phoenix_melee.ogg",
+			"wince": "h4/phoenix_flinch.ogg",
+			"killed": "h4/phoenix_die.ogg",
+			"move": "h4/phoenix_walk.ogg"
+		},
+		"aiValue": 8023,
+		"fightValue": 6022,
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE",
+					"stacking": "h4PhoenixExpMagicResistance",
+					"description": "{Magic Resistance}\nChance to resist enemy spells"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					10,
+					20,
+					30,
+					40,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "MIND_IMMUNITY",
+					"description": "{Steadfast Mind}\nImmune to Mind spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "MORALE"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			}
+		]
+	}
+}

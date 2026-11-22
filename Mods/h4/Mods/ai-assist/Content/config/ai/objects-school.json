@@ -1,0 +1,1178 @@
+{
+	"heroes-memorial.h4:h4MemorialMagicHigh": {
+		"types": {
+			"h4MemorialMagicHigh": {
+				"rewards": {
+					"modify@1": {
+						"primary": {
+							"knowledge": 1
+						},
+						"bonuses": {
+							"appendItems": [
+								{
+									"type": "PRIMARY_SKILL",
+									"subtype": "knowledge",
+									"val": -1,
+									"duration": "PERMANENT",
+									"hidden": true
+								},
+								{
+									"type": "PRIMARY_SKILL",
+									"subtype": "knowledge",
+									"val": 1,
+									"duration": "PERMANENT",
+									"hidden": true,
+									"stacking": "aiAssistMemorialSchool"
+								}
+							]
+						}
+					},
+					"modify@2": {
+						"primary": {
+							"knowledge": 1
+						},
+						"bonuses": {
+							"appendItems": [
+								{
+									"type": "PRIMARY_SKILL",
+									"subtype": "knowledge",
+									"val": -1,
+									"duration": "PERMANENT",
+									"hidden": true
+								},
+								{
+									"type": "PRIMARY_SKILL",
+									"subtype": "knowledge",
+									"val": 1,
+									"duration": "PERMANENT",
+									"hidden": true,
+									"stacking": "aiAssistMemorialSchool"
+								}
+							]
+						}
+					},
+					"modify@3": {
+						"primary": {
+							"knowledge": 1
+						},
+						"bonuses": {
+							"appendItems": [
+								{
+									"type": "PRIMARY_SKILL",
+									"subtype": "knowledge",
+									"val": -1,
+									"duration": "PERMANENT",
+									"hidden": true
+								},
+								{
+									"type": "PRIMARY_SKILL",
+									"subtype": "knowledge",
+									"val": 1,
+									"duration": "PERMANENT",
+									"hidden": true,
+									"stacking": "aiAssistMemorialSchool"
+								}
+							]
+						}
+					},
+					"modify@4": {
+						"primary": {
+							"knowledge": 1
+						},
+						"bonuses": {
+							"appendItems": [
+								{
+									"type": "PRIMARY_SKILL",
+									"subtype": "knowledge",
+									"val": -1,
+									"duration": "PERMANENT",
+									"hidden": true
+								},
+								{
+									"type": "PRIMARY_SKILL",
+									"subtype": "knowledge",
+									"val": 1,
+									"duration": "PERMANENT",
+									"hidden": true,
+									"stacking": "aiAssistMemorialSchool"
+								}
+							]
+						}
+					},
+					"modify@5": {
+						"primary": {
+							"knowledge": 1
+						},
+						"bonuses": {
+							"appendItems": [
+								{
+									"type": "PRIMARY_SKILL",
+									"subtype": "knowledge",
+									"val": -1,
+									"duration": "PERMANENT",
+									"hidden": true
+								},
+								{
+									"type": "PRIMARY_SKILL",
+									"subtype": "knowledge",
+									"val": 1,
+									"duration": "PERMANENT",
+									"hidden": true,
+									"stacking": "aiAssistMemorialSchool"
+								}
+							]
+						}
+					},
+					"modify@6": {
+						"primary": {
+							"knowledge": 1
+						},
+						"bonuses": {
+							"appendItems": [
+								{
+									"type": "PRIMARY_SKILL",
+									"subtype": "knowledge",
+									"val": -1,
+									"duration": "PERMANENT",
+									"hidden": true
+								},
+								{
+									"type": "PRIMARY_SKILL",
+									"subtype": "knowledge",
+									"val": 1,
+									"duration": "PERMANENT",
+									"hidden": true,
+									"stacking": "aiAssistMemorialSchool"
+								}
+							]
+						}
+					},
+					"modify@7": {
+						"primary": {
+							"knowledge": 1
+						},
+						"bonuses": {
+							"appendItems": [
+								{
+									"type": "PRIMARY_SKILL",
+									"subtype": "knowledge",
+									"val": -1,
+									"duration": "PERMANENT",
+									"hidden": true
+								},
+								{
+									"type": "PRIMARY_SKILL",
+									"subtype": "knowledge",
+									"val": 1,
+									"duration": "PERMANENT",
+									"hidden": true,
+									"stacking": "aiAssistMemorialSchool"
+								}
+							]
+						}
+					},
+					"modify@8": {
+						"primary": {
+							"knowledge": 1
+						},
+						"bonuses": {
+							"appendItems": [
+								{
+									"type": "PRIMARY_SKILL",
+									"subtype": "knowledge",
+									"val": -1,
+									"duration": "PERMANENT",
+									"hidden": true
+								},
+								{
+									"type": "PRIMARY_SKILL",
+									"subtype": "knowledge",
+									"val": 1,
+									"duration": "PERMANENT",
+									"hidden": true,
+									"stacking": "aiAssistMemorialSchool"
+								}
+							]
+						}
+					},
+					"modify@9": {
+						"primary": {
+							"knowledge": 1
+						},
+						"bonuses": {
+							"appendItems": [
+								{
+									"type": "PRIMARY_SKILL",
+									"subtype": "knowledge",
+									"val": -1,
+									"duration": "PERMANENT",
+									"hidden": true
+								},
+								{
+									"type": "PRIMARY_SKILL",
+									"subtype": "knowledge",
+									"val": 1,
+									"duration": "PERMANENT",
+									"hidden": true,
+									"stacking": "aiAssistMemorialSchool"
+								}
+							]
+						}
+					},
+					"modify@10": {
+						"primary": {
+							"knowledge": 1
+						},
+						"bonuses": {
+							"appendItems": [
+								{
+									"type": "PRIMARY_SKILL",
+									"subtype": "knowledge",
+									"val": -1,
+									"duration": "PERMANENT",
+									"hidden": true
+								},
+								{
+									"type": "PRIMARY_SKILL",
+									"subtype": "knowledge",
+									"val": 1,
+									"duration": "PERMANENT",
+									"hidden": true,
+									"stacking": "aiAssistMemorialSchool"
+								}
+							]
+						}
+					},
+					"modify@11": {
+						"primary": {
+							"knowledge": 1
+						},
+						"bonuses": {
+							"appendItems": [
+								{
+									"type": "PRIMARY_SKILL",
+									"subtype": "knowledge",
+									"val": -1,
+									"duration": "PERMANENT",
+									"hidden": true
+								},
+								{
+									"type": "PRIMARY_SKILL",
+									"subtype": "knowledge",
+									"val": 1,
+									"duration": "PERMANENT",
+									"hidden": true,
+									"stacking": "aiAssistMemorialSchool"
+								}
+							]
+						}
+					},
+					"modify@12": {
+						"primary": {
+							"knowledge": 1
+						},
+						"bonuses": {
+							"appendItems": [
+								{
+									"type": "PRIMARY_SKILL",
+									"subtype": "knowledge",
+									"val": -1,
+									"duration": "PERMANENT",
+									"hidden": true
+								},
+								{
+									"type": "PRIMARY_SKILL",
+									"subtype": "knowledge",
+									"val": 1,
+									"duration": "PERMANENT",
+									"hidden": true,
+									"stacking": "aiAssistMemorialSchool"
+								}
+							]
+						}
+					}
+				}
+			}
+		}
+	},
+	"heroes-memorial.h4:h4MemorialMagicLow": {
+		"types": {
+			"h4MemorialMagicLow": {
+				"rewards": {
+					"modify@1": {
+						"primary": {
+							"knowledge": 1
+						},
+						"bonuses": {
+							"appendItems": [
+								{
+									"type": "PRIMARY_SKILL",
+									"subtype": "knowledge",
+									"val": -1,
+									"duration": "PERMANENT",
+									"hidden": true
+								},
+								{
+									"type": "PRIMARY_SKILL",
+									"subtype": "knowledge",
+									"val": 1,
+									"duration": "PERMANENT",
+									"hidden": true,
+									"stacking": "aiAssistMemorialSchool"
+								}
+							]
+						}
+					},
+					"modify@2": {
+						"primary": {
+							"knowledge": 1
+						},
+						"bonuses": {
+							"appendItems": [
+								{
+									"type": "PRIMARY_SKILL",
+									"subtype": "knowledge",
+									"val": -1,
+									"duration": "PERMANENT",
+									"hidden": true
+								},
+								{
+									"type": "PRIMARY_SKILL",
+									"subtype": "knowledge",
+									"val": 1,
+									"duration": "PERMANENT",
+									"hidden": true,
+									"stacking": "aiAssistMemorialSchool"
+								}
+							]
+						}
+					},
+					"modify@3": {
+						"primary": {
+							"knowledge": 1
+						},
+						"bonuses": {
+							"appendItems": [
+								{
+									"type": "PRIMARY_SKILL",
+									"subtype": "knowledge",
+									"val": -1,
+									"duration": "PERMANENT",
+									"hidden": true
+								},
+								{
+									"type": "PRIMARY_SKILL",
+									"subtype": "knowledge",
+									"val": 1,
+									"duration": "PERMANENT",
+									"hidden": true,
+									"stacking": "aiAssistMemorialSchool"
+								}
+							]
+						}
+					},
+					"modify@4": {
+						"primary": {
+							"knowledge": 1
+						},
+						"bonuses": {
+							"appendItems": [
+								{
+									"type": "PRIMARY_SKILL",
+									"subtype": "knowledge",
+									"val": -1,
+									"duration": "PERMANENT",
+									"hidden": true
+								},
+								{
+									"type": "PRIMARY_SKILL",
+									"subtype": "knowledge",
+									"val": 1,
+									"duration": "PERMANENT",
+									"hidden": true,
+									"stacking": "aiAssistMemorialSchool"
+								}
+							]
+						}
+					},
+					"modify@5": {
+						"primary": {
+							"knowledge": 1
+						},
+						"bonuses": {
+							"appendItems": [
+								{
+									"type": "PRIMARY_SKILL",
+									"subtype": "knowledge",
+									"val": -1,
+									"duration": "PERMANENT",
+									"hidden": true
+								},
+								{
+									"type": "PRIMARY_SKILL",
+									"subtype": "knowledge",
+									"val": 1,
+									"duration": "PERMANENT",
+									"hidden": true,
+									"stacking": "aiAssistMemorialSchool"
+								}
+							]
+						}
+					},
+					"modify@6": {
+						"primary": {
+							"knowledge": 1
+						},
+						"bonuses": {
+							"appendItems": [
+								{
+									"type": "PRIMARY_SKILL",
+									"subtype": "knowledge",
+									"val": -1,
+									"duration": "PERMANENT",
+									"hidden": true
+								},
+								{
+									"type": "PRIMARY_SKILL",
+									"subtype": "knowledge",
+									"val": 1,
+									"duration": "PERMANENT",
+									"hidden": true,
+									"stacking": "aiAssistMemorialSchool"
+								}
+							]
+						}
+					},
+					"modify@7": {
+						"primary": {
+							"knowledge": 1
+						},
+						"bonuses": {
+							"appendItems": [
+								{
+									"type": "PRIMARY_SKILL",
+									"subtype": "knowledge",
+									"val": -1,
+									"duration": "PERMANENT",
+									"hidden": true
+								},
+								{
+									"type": "PRIMARY_SKILL",
+									"subtype": "knowledge",
+									"val": 1,
+									"duration": "PERMANENT",
+									"hidden": true,
+									"stacking": "aiAssistMemorialSchool"
+								}
+							]
+						}
+					},
+					"modify@8": {
+						"primary": {
+							"knowledge": 1
+						},
+						"bonuses": {
+							"appendItems": [
+								{
+									"type": "PRIMARY_SKILL",
+									"subtype": "knowledge",
+									"val": -1,
+									"duration": "PERMANENT",
+									"hidden": true
+								},
+								{
+									"type": "PRIMARY_SKILL",
+									"subtype": "knowledge",
+									"val": 1,
+									"duration": "PERMANENT",
+									"hidden": true,
+									"stacking": "aiAssistMemorialSchool"
+								}
+							]
+						}
+					},
+					"modify@9": {
+						"primary": {
+							"knowledge": 1
+						},
+						"bonuses": {
+							"appendItems": [
+								{
+									"type": "PRIMARY_SKILL",
+									"subtype": "knowledge",
+									"val": -1,
+									"duration": "PERMANENT",
+									"hidden": true
+								},
+								{
+									"type": "PRIMARY_SKILL",
+									"subtype": "knowledge",
+									"val": 1,
+									"duration": "PERMANENT",
+									"hidden": true,
+									"stacking": "aiAssistMemorialSchool"
+								}
+							]
+						}
+					},
+					"modify@10": {
+						"primary": {
+							"knowledge": 1
+						},
+						"bonuses": {
+							"appendItems": [
+								{
+									"type": "PRIMARY_SKILL",
+									"subtype": "knowledge",
+									"val": -1,
+									"duration": "PERMANENT",
+									"hidden": true
+								},
+								{
+									"type": "PRIMARY_SKILL",
+									"subtype": "knowledge",
+									"val": 1,
+									"duration": "PERMANENT",
+									"hidden": true,
+									"stacking": "aiAssistMemorialSchool"
+								}
+							]
+						}
+					},
+					"modify@11": {
+						"primary": {
+							"knowledge": 1
+						},
+						"bonuses": {
+							"appendItems": [
+								{
+									"type": "PRIMARY_SKILL",
+									"subtype": "knowledge",
+									"val": -1,
+									"duration": "PERMANENT",
+									"hidden": true
+								},
+								{
+									"type": "PRIMARY_SKILL",
+									"subtype": "knowledge",
+									"val": 1,
+									"duration": "PERMANENT",
+									"hidden": true,
+									"stacking": "aiAssistMemorialSchool"
+								}
+							]
+						}
+					},
+					"modify@12": {
+						"primary": {
+							"knowledge": 1
+						},
+						"bonuses": {
+							"appendItems": [
+								{
+									"type": "PRIMARY_SKILL",
+									"subtype": "knowledge",
+									"val": -1,
+									"duration": "PERMANENT",
+									"hidden": true
+								},
+								{
+									"type": "PRIMARY_SKILL",
+									"subtype": "knowledge",
+									"val": 1,
+									"duration": "PERMANENT",
+									"hidden": true,
+									"stacking": "aiAssistMemorialSchool"
+								}
+							]
+						}
+					},
+					"modify@13": {
+						"primary": {
+							"knowledge": 1
+						},
+						"bonuses": {
+							"appendItems": [
+								{
+									"type": "PRIMARY_SKILL",
+									"subtype": "knowledge",
+									"val": -1,
+									"duration": "PERMANENT",
+									"hidden": true
+								},
+								{
+									"type": "PRIMARY_SKILL",
+									"subtype": "knowledge",
+									"val": 1,
+									"duration": "PERMANENT",
+									"hidden": true,
+									"stacking": "aiAssistMemorialSchool"
+								}
+							]
+						}
+					},
+					"modify@14": {
+						"primary": {
+							"knowledge": 1
+						},
+						"bonuses": {
+							"appendItems": [
+								{
+									"type": "PRIMARY_SKILL",
+									"subtype": "knowledge",
+									"val": -1,
+									"duration": "PERMANENT",
+									"hidden": true
+								},
+								{
+									"type": "PRIMARY_SKILL",
+									"subtype": "knowledge",
+									"val": 1,
+									"duration": "PERMANENT",
+									"hidden": true,
+									"stacking": "aiAssistMemorialSchool"
+								}
+							]
+						}
+					},
+					"modify@15": {
+						"primary": {
+							"knowledge": 1
+						},
+						"bonuses": {
+							"appendItems": [
+								{
+									"type": "PRIMARY_SKILL",
+									"subtype": "knowledge",
+									"val": -1,
+									"duration": "PERMANENT",
+									"hidden": true
+								},
+								{
+									"type": "PRIMARY_SKILL",
+									"subtype": "knowledge",
+									"val": 1,
+									"duration": "PERMANENT",
+									"hidden": true,
+									"stacking": "aiAssistMemorialSchool"
+								}
+							]
+						}
+					},
+					"modify@16": {
+						"primary": {
+							"knowledge": 1
+						},
+						"bonuses": {
+							"appendItems": [
+								{
+									"type": "PRIMARY_SKILL",
+									"subtype": "knowledge",
+									"val": -1,
+									"duration": "PERMANENT",
+									"hidden": true
+								},
+								{
+									"type": "PRIMARY_SKILL",
+									"subtype": "knowledge",
+									"val": 1,
+									"duration": "PERMANENT",
+									"hidden": true,
+									"stacking": "aiAssistMemorialSchool"
+								}
+							]
+						}
+					},
+					"modify@17": {
+						"primary": {
+							"knowledge": 1
+						},
+						"bonuses": {
+							"appendItems": [
+								{
+									"type": "PRIMARY_SKILL",
+									"subtype": "knowledge",
+									"val": -1,
+									"duration": "PERMANENT",
+									"hidden": true
+								},
+								{
+									"type": "PRIMARY_SKILL",
+									"subtype": "knowledge",
+									"val": 1,
+									"duration": "PERMANENT",
+									"hidden": true,
+									"stacking": "aiAssistMemorialSchool"
+								}
+							]
+						}
+					},
+					"modify@18": {
+						"primary": {
+							"knowledge": 1
+						},
+						"bonuses": {
+							"appendItems": [
+								{
+									"type": "PRIMARY_SKILL",
+									"subtype": "knowledge",
+									"val": -1,
+									"duration": "PERMANENT",
+									"hidden": true
+								},
+								{
+									"type": "PRIMARY_SKILL",
+									"subtype": "knowledge",
+									"val": 1,
+									"duration": "PERMANENT",
+									"hidden": true,
+									"stacking": "aiAssistMemorialSchool"
+								}
+							]
+						}
+					}
+				}
+			}
+		}
+	},
+	"heroes-memorial.h4:h4MemorialMagicMid": {
+		"types": {
+			"h4MemorialMagicMid": {
+				"rewards": {
+					"modify@1": {
+						"primary": {
+							"knowledge": 1
+						},
+						"bonuses": {
+							"appendItems": [
+								{
+									"type": "PRIMARY_SKILL",
+									"subtype": "knowledge",
+									"val": -1,
+									"duration": "PERMANENT",
+									"hidden": true
+								},
+								{
+									"type": "PRIMARY_SKILL",
+									"subtype": "knowledge",
+									"val": 1,
+									"duration": "PERMANENT",
+									"hidden": true,
+									"stacking": "aiAssistMemorialSchool"
+								}
+							]
+						}
+					},
+					"modify@2": {
+						"primary": {
+							"knowledge": 1
+						},
+						"bonuses": {
+							"appendItems": [
+								{
+									"type": "PRIMARY_SKILL",
+									"subtype": "knowledge",
+									"val": -1,
+									"duration": "PERMANENT",
+									"hidden": true
+								},
+								{
+									"type": "PRIMARY_SKILL",
+									"subtype": "knowledge",
+									"val": 1,
+									"duration": "PERMANENT",
+									"hidden": true,
+									"stacking": "aiAssistMemorialSchool"
+								}
+							]
+						}
+					},
+					"modify@3": {
+						"primary": {
+							"knowledge": 1
+						},
+						"bonuses": {
+							"appendItems": [
+								{
+									"type": "PRIMARY_SKILL",
+									"subtype": "knowledge",
+									"val": -1,
+									"duration": "PERMANENT",
+									"hidden": true
+								},
+								{
+									"type": "PRIMARY_SKILL",
+									"subtype": "knowledge",
+									"val": 1,
+									"duration": "PERMANENT",
+									"hidden": true,
+									"stacking": "aiAssistMemorialSchool"
+								}
+							]
+						}
+					},
+					"modify@4": {
+						"primary": {
+							"knowledge": 1
+						},
+						"bonuses": {
+							"appendItems": [
+								{
+									"type": "PRIMARY_SKILL",
+									"subtype": "knowledge",
+									"val": -1,
+									"duration": "PERMANENT",
+									"hidden": true
+								},
+								{
+									"type": "PRIMARY_SKILL",
+									"subtype": "knowledge",
+									"val": 1,
+									"duration": "PERMANENT",
+									"hidden": true,
+									"stacking": "aiAssistMemorialSchool"
+								}
+							]
+						}
+					},
+					"modify@5": {
+						"primary": {
+							"knowledge": 1
+						},
+						"bonuses": {
+							"appendItems": [
+								{
+									"type": "PRIMARY_SKILL",
+									"subtype": "knowledge",
+									"val": -1,
+									"duration": "PERMANENT",
+									"hidden": true
+								},
+								{
+									"type": "PRIMARY_SKILL",
+									"subtype": "knowledge",
+									"val": 1,
+									"duration": "PERMANENT",
+									"hidden": true,
+									"stacking": "aiAssistMemorialSchool"
+								}
+							]
+						}
+					},
+					"modify@6": {
+						"primary": {
+							"knowledge": 1
+						},
+						"bonuses": {
+							"appendItems": [
+								{
+									"type": "PRIMARY_SKILL",
+									"subtype": "knowledge",
+									"val": -1,
+									"duration": "PERMANENT",
+									"hidden": true
+								},
+								{
+									"type": "PRIMARY_SKILL",
+									"subtype": "knowledge",
+									"val": 1,
+									"duration": "PERMANENT",
+									"hidden": true,
+									"stacking": "aiAssistMemorialSchool"
+								}
+							]
+						}
+					},
+					"modify@7": {
+						"primary": {
+							"knowledge": 1
+						},
+						"bonuses": {
+							"appendItems": [
+								{
+									"type": "PRIMARY_SKILL",
+									"subtype": "knowledge",
+									"val": -1,
+									"duration": "PERMANENT",
+									"hidden": true
+								},
+								{
+									"type": "PRIMARY_SKILL",
+									"subtype": "knowledge",
+									"val": 1,
+									"duration": "PERMANENT",
+									"hidden": true,
+									"stacking": "aiAssistMemorialSchool"
+								}
+							]
+						}
+					},
+					"modify@8": {
+						"primary": {
+							"knowledge": 1
+						},
+						"bonuses": {
+							"appendItems": [
+								{
+									"type": "PRIMARY_SKILL",
+									"subtype": "knowledge",
+									"val": -1,
+									"duration": "PERMANENT",
+									"hidden": true
+								},
+								{
+									"type": "PRIMARY_SKILL",
+									"subtype": "knowledge",
+									"val": 1,
+									"duration": "PERMANENT",
+									"hidden": true,
+									"stacking": "aiAssistMemorialSchool"
+								}
+							]
+						}
+					},
+					"modify@9": {
+						"primary": {
+							"knowledge": 1
+						},
+						"bonuses": {
+							"appendItems": [
+								{
+									"type": "PRIMARY_SKILL",
+									"subtype": "knowledge",
+									"val": -1,
+									"duration": "PERMANENT",
+									"hidden": true
+								},
+								{
+									"type": "PRIMARY_SKILL",
+									"subtype": "knowledge",
+									"val": 1,
+									"duration": "PERMANENT",
+									"hidden": true,
+									"stacking": "aiAssistMemorialSchool"
+								}
+							]
+						}
+					},
+					"modify@10": {
+						"primary": {
+							"knowledge": 1
+						},
+						"bonuses": {
+							"appendItems": [
+								{
+									"type": "PRIMARY_SKILL",
+									"subtype": "knowledge",
+									"val": -1,
+									"duration": "PERMANENT",
+									"hidden": true
+								},
+								{
+									"type": "PRIMARY_SKILL",
+									"subtype": "knowledge",
+									"val": 1,
+									"duration": "PERMANENT",
+									"hidden": true,
+									"stacking": "aiAssistMemorialSchool"
+								}
+							]
+						}
+					},
+					"modify@11": {
+						"primary": {
+							"knowledge": 1
+						},
+						"bonuses": {
+							"appendItems": [
+								{
+									"type": "PRIMARY_SKILL",
+									"subtype": "knowledge",
+									"val": -1,
+									"duration": "PERMANENT",
+									"hidden": true
+								},
+								{
+									"type": "PRIMARY_SKILL",
+									"subtype": "knowledge",
+									"val": 1,
+									"duration": "PERMANENT",
+									"hidden": true,
+									"stacking": "aiAssistMemorialSchool"
+								}
+							]
+						}
+					},
+					"modify@12": {
+						"primary": {
+							"knowledge": 1
+						},
+						"bonuses": {
+							"appendItems": [
+								{
+									"type": "PRIMARY_SKILL",
+									"subtype": "knowledge",
+									"val": -1,
+									"duration": "PERMANENT",
+									"hidden": true
+								},
+								{
+									"type": "PRIMARY_SKILL",
+									"subtype": "knowledge",
+									"val": 1,
+									"duration": "PERMANENT",
+									"hidden": true,
+									"stacking": "aiAssistMemorialSchool"
+								}
+							]
+						}
+					},
+					"modify@13": {
+						"primary": {
+							"knowledge": 1
+						},
+						"bonuses": {
+							"appendItems": [
+								{
+									"type": "PRIMARY_SKILL",
+									"subtype": "knowledge",
+									"val": -1,
+									"duration": "PERMANENT",
+									"hidden": true
+								},
+								{
+									"type": "PRIMARY_SKILL",
+									"subtype": "knowledge",
+									"val": 1,
+									"duration": "PERMANENT",
+									"hidden": true,
+									"stacking": "aiAssistMemorialSchool"
+								}
+							]
+						}
+					},
+					"modify@14": {
+						"primary": {
+							"knowledge": 1
+						},
+						"bonuses": {
+							"appendItems": [
+								{
+									"type": "PRIMARY_SKILL",
+									"subtype": "knowledge",
+									"val": -1,
+									"duration": "PERMANENT",
+									"hidden": true
+								},
+								{
+									"type": "PRIMARY_SKILL",
+									"subtype": "knowledge",
+									"val": 1,
+									"duration": "PERMANENT",
+									"hidden": true,
+									"stacking": "aiAssistMemorialSchool"
+								}
+							]
+						}
+					},
+					"modify@15": {
+						"primary": {
+							"knowledge": 1
+						},
+						"bonuses": {
+							"appendItems": [
+								{
+									"type": "PRIMARY_SKILL",
+									"subtype": "knowledge",
+									"val": -1,
+									"duration": "PERMANENT",
+									"hidden": true
+								},
+								{
+									"type": "PRIMARY_SKILL",
+									"subtype": "knowledge",
+									"val": 1,
+									"duration": "PERMANENT",
+									"hidden": true,
+									"stacking": "aiAssistMemorialSchool"
+								}
+							]
+						}
+					},
+					"modify@16": {
+						"primary": {
+							"knowledge": 1
+						},
+						"bonuses": {
+							"appendItems": [
+								{
+									"type": "PRIMARY_SKILL",
+									"subtype": "knowledge",
+									"val": -1,
+									"duration": "PERMANENT",
+									"hidden": true
+								},
+								{
+									"type": "PRIMARY_SKILL",
+									"subtype": "knowledge",
+									"val": 1,
+									"duration": "PERMANENT",
+									"hidden": true,
+									"stacking": "aiAssistMemorialSchool"
+								}
+							]
+						}
+					},
+					"modify@17": {
+						"primary": {
+							"knowledge": 1
+						},
+						"bonuses": {
+							"appendItems": [
+								{
+									"type": "PRIMARY_SKILL",
+									"subtype": "knowledge",
+									"val": -1,
+									"duration": "PERMANENT",
+									"hidden": true
+								},
+								{
+									"type": "PRIMARY_SKILL",
+									"subtype": "knowledge",
+									"val": 1,
+									"duration": "PERMANENT",
+									"hidden": true,
+									"stacking": "aiAssistMemorialSchool"
+								}
+							]
+						}
+					},
+					"modify@18": {
+						"primary": {
+							"knowledge": 1
+						},
+						"bonuses": {
+							"appendItems": [
+								{
+									"type": "PRIMARY_SKILL",
+									"subtype": "knowledge",
+									"val": -1,
+									"duration": "PERMANENT",
+									"hidden": true
+								},
+								{
+									"type": "PRIMARY_SKILL",
+									"subtype": "knowledge",
+									"val": 1,
+									"duration": "PERMANENT",
+									"hidden": true,
+									"stacking": "aiAssistMemorialSchool"
+								}
+							]
+						}
+					}
+				}
+			}
+		}
+	}
+}

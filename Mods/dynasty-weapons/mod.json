@@ -1,0 +1,38 @@
+{
+	"name": "Heroes VI Dynasty Weapons",
+	"description": "The Heroes VI dynasty weapons, five levels each with their original abilities, given and upgraded by the Dynasty Weaponsmith.",
+	"chinese": {
+		"name": "英雄无敌6王朝武器",
+		"translations": [
+			"config/translations/chinese.json"
+		],
+		"description": "英雄无敌6的王朝武器，每件五级、带原版能力，在王朝武器匠领取和升级。"
+	},
+	"version": "0.1.0",
+	"author": "yche2990",
+	"modType": "Artifacts",
+	"compatibility": {
+		"min": "1.8.0"
+	},
+	"depends": [
+		"tears-of-ashan"
+	],
+	"spells": [
+		"config/h6dyn/spells.json"
+	],
+	"scripts": [
+		"config/h6dyn/scripts.json"
+	],
+	"bonuses": [
+		"config/h6dyn/bonuses.json"
+	],
+	"objects": [
+		"config/h6dyn/objects.json"
+	],
+	"artifacts": [
+		"config/h6dyn/artifacts.json"
+	],
+	"rumors": [
+		"config/rumors/h6dynastyweaponsRumors.json"
+	]
+}

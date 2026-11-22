@@ -1,0 +1,59 @@
+{
+	// Heroes IV Memorial: display bonuses and battle log texts used by the script combat/h4Proc
+	// Round 587: display bonus of Heroes IV Necromancy (combat/h4NecroRaise)
+	"H4_NECRO_RAISE_H4C": {
+		"creatureNature": false,
+		"graphics": { "icon": "h4/abilities/necroRaise" },
+		"description": "{H4 Necromancy}\nWith 4 or more H4 undead stacks, Necromancy raises the matching H4 creatures instead."
+	},
+	"H4_STUN_H4C": {
+		"creatureNature": false,
+		"graphics": { "icon": "h4/abilities/stun" },
+		"description": "{Stunned}\nStunned: cannot act or retaliate for now."
+	},
+	"H4_FEAR_H4C": {
+		"creatureNature": false,
+		"graphics": { "icon": "h4/abilities/terror" },
+		"description": "{Frightened}\nFrightened: cannot act or retaliate for now."
+	},
+	"H4_FREEZE_H4C": {
+		"creatureNature": false,
+		"graphics": { "icon": "h4/abilities/frozen" },
+		"description": "{Frozen}\nFrozen: cannot act or retaliate for now."
+	},
+	"H4_POISON_H4C": {
+		"creatureNature": false,
+		"graphics": { "icon": "h4/abilities/poisoned" },
+		"description": "{Poisoned}\nTakes ${val} damage at the start of each turn."
+	},
+	"H4_FEAR_IMMUNE_H4C": {
+		"hidden": true,
+		"creatureNature": false,
+		"description": "{Fear Immunity}\nUnaffected by fear effects."
+	},
+	"H4_MARTYR_H4C": {
+		"creatureNature": false,
+		"graphics": { "icon": "h4/abilities/martyr" },
+		"description": "{Martyr}\nTakes all attack damage dealt to another allied stack."
+	},
+	"H4_LOG_H4C": {
+		"hidden": true,
+		"creatureNature": false,
+		"description": "{Heroes IV}\nUsed for the combat log.",
+		"valueDescriptions": {
+			"1": "%s stun %s.",
+			"2": "%s terrify %s into stillness.",
+			"3": "%s freeze %s.",
+			"4": "%s swallow %d %s.",
+			"5": "%s are poisoned and will lose %d HP each turn.",
+			"6": "%s suffer %d poison damage.",
+			"8": "%s shield %s, taking %d damage.",
+			"9": "%s suffer %d damage from Spell Shackle.",
+			"10": "%s lose their nerve and hold back.",
+			"11": "The hero defied the artifact and cast a spell of another school. Backlash: every friendly stack loses %d% of its current total health.",
+			"12": "%s hit %s with %s.",
+			"13": "%s block the attack.",
+			"14": "%s negate the first strike of %s; it must wait to retaliate."
+		}
+	}
+}

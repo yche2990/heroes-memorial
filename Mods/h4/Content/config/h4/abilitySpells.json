@@ -1,0 +1,121 @@
+// Heroes IV Memorial: proxy spells that give original spells cast actively by creatures the Heroes IV effects (effects as the original spells, see proxy in scripts/spells/h4SpellFx.lua).
+// Round 575: Yu's decision to relax it: no health limit (as in the Heroes IV original). Target selection does not check healthValueSpecial; when it really takes effect, the original Hypnotize limit is lifted by SPECIFIC_SPELL_POWER spell.hypnotize 1000000 on the Mermaid.
+{
+	"h4AbHypnotize": {
+		"type": "combat",
+		"name": "Hypnotize",
+		"school": {
+			"air": true,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 3,
+		"power": 25,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"flags": {
+			"special": true,
+			"negative": true
+		},
+		"targetType": "CREATURE",
+		"targetCondition": {
+			"noneOf": {
+				"bonus.SIEGE_WEAPON": "absolute",
+				"bonus.MIND_IMMUNITY": "normal",
+				"bonus.UNDEAD": "normal",
+				"bonus.NON_LIVING": "normal",
+				"bonus.MECHANICAL": "normal",
+				"spell.magicMirror": "absolute"
+			}
+		},
+		"counters": {
+			"berserk": true
+		},
+		"levels": {
+			"base": {
+				"range": "0",
+				"targetModifier": {
+					"smart": true
+				},
+				"battleEffects": {
+					"fx": {
+						"type": "heroes-memorial.h4:h4SpellFx",
+						"mode": "proxy",
+						"spell": "hypnotize"
+					}
+				}
+			},
+			"none": {
+				"cost": 0,
+				"power": 10,
+				"description": "{Hypnotize}\n\nThe Mermaid's Hypnotize: same effect and immunities as the standard Hypnotize spell, but with no hit point limit as in Heroes IV, shown with the Heroes IV effect."
+			},
+			"basic": {
+				"cost": 0,
+				"power": 10,
+				"description": "{Hypnotize}\n\nThe Mermaid's Hypnotize: same effect and immunities as the standard Hypnotize spell, but with no hit point limit as in Heroes IV, shown with the Heroes IV effect."
+			},
+			"advanced": {
+				"cost": 0,
+				"power": 20,
+				"description": "{Hypnotize}\n\nThe Mermaid's Hypnotize: same effect and immunities as the standard Hypnotize spell, but with no hit point limit as in Heroes IV, shown with the Heroes IV effect."
+			},
+			"expert": {
+				"cost": 0,
+				"power": 50,
+				"description": "{Hypnotize}\n\nThe Mermaid's Hypnotize: same effect and immunities as the standard Hypnotize spell, but with no hit point limit as in Heroes IV, shown with the Heroes IV effect."
+			}
+		},
+		"sounds": {
+			"cast": "HYPNOTIZ"
+		},
+		"graphics": {
+			"iconBook": "h4/spells/h4Hypnotize/Book",
+			"iconScroll": "h4/spells/h4Hypnotize/Scroll",
+			"iconScenarioBonus": "h4/spells/h4Hypnotize/Scenario",
+			"iconEffect": "h4/spells/h4Hypnotize/Effect",
+			"iconImmune": "h4/spells/h4Hypnotize/Immune"
+		},
+		"animation": {
+			"affect": [
+				"h4/fx/hypnotize"
+			]
+		}
+	},
+	// Round 585: the Ice Demon's freeze "turns blue". Yu: in H4 frozen stacks change colour. After h4Proc's incap freezes the target, this spell is cast on it:
+	// the client tints the stack ice blue by the effectName of animation.affect (h4Frozen in config/battleEffects.json),
+	// and keeps it as long as the stack carries this spell's effect; when the freeze ends, h4Proc's tick removes the effect at the start of the round and the colour returns. The effect itself is just an empty mark.
+	"h4FrozenTint": {
+		"type": "combat",
+		"name": "Frozen",
+		"school": { "air": false, "earth": false, "fire": false, "water": false },
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"flags": { "special": true, "positive": true },
+		"targetType": "CREATURE",
+		"levels": {
+			"base": {
+				"range": "0",
+				"cost": 0,
+				"power": 0,
+				"targetModifier": { "smart": false },
+				"battleEffects": {
+					"tint": {
+						"type": "core:timed",
+						"bonus": {
+							"mark": { "type": "STACKS_SPEED", "val": 0, "hidden": true, "duration": "N_TURNS", "turns": 10, "stacking": "h4FrozenTint" }
+						}
+					}
+				},
+				"description": "{Frozen}\n\nFrozen by an Ice Demon and unable to act."
+			},
+			"none": {}, "basic": {}, "advanced": {}, "expert": {}
+		},
+		"animation": {
+			"affect": [ { "effectName": "h4Frozen" } ]
+		}
+	}
+}

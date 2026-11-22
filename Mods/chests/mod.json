@@ -1,0 +1,26 @@
+{
+	"name": "Guarded Treasure Chests",
+	"description": "Three kinds of treasure chests on the adventure map (supplies, scrolls, relics), guarded by Heroes III-VII creatures.",
+	"chinese": {
+		"name": "守军宝箱",
+		"translations": [
+			"config/translations/chinese.json"
+		],
+		"description": "地图上的三种宝箱（军资、秘卷、遗物），由英雄无敌3～7的兵种守护。"
+	},
+	"version": "0.1.0",
+	"author": "yche2990",
+	"modType": "Objects",
+	"compatibility": {
+		"min": "1.8.0"
+	},
+	"depends": [
+		"heroes-memorial.h4",
+		"heroes-memorial.h5",
+		"heroes-memorial.h6",
+		"heroes-memorial.h7"
+	],
+	"objects": [
+		"config/guardedChests.json"
+	]
+}

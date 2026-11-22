@@ -1,0 +1,59 @@
+{
+	"h47Shove": {
+		"implements": "combatEvent",
+		"script": "combat/h47Shove",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"mode": {
+					"type": "string"
+				},
+				"range": {
+					"type": "number"
+				},
+				"mark": {
+					"type": "string"
+				},
+				"fx": {
+					"type": "string"
+				},
+				"sound": {
+					"type": "string"
+				},
+				"immune": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": ""
+	},
+	"h5PhantomClone": {
+		"implements": "spellEffect",
+		"script": "spells/h5PhantomClone",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"ignoreImmunity": {
+					"type": "boolean"
+				},
+				"chainLength": {
+					"type": "number"
+				},
+				"maxTier": {
+					"type": "number"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": "Clone from Phantom Forces (H5): uses the engine's core:clone, marks its source as the original Clone spell, and lasts for the effect's duration"
+	}
+}

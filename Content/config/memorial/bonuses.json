@@ -1,0 +1,17 @@
+{
+	"H47_STEALTH_ASYLUM": {
+		"hidden": true,
+		"creatureNature": false,
+		"valueDescriptions": {
+			"1": "Enemies draw near, and %s are revealed."
+		}
+	},
+	"MEMORIAL_AI_GATE": {
+		"hidden": true,
+		"creatureNature": false
+	},
+	"MEMORIAL_MARK": {
+		"hidden": true,
+		"creatureNature": false
+	}
+}

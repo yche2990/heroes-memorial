@@ -1,0 +1,9 @@
+// Round 585: stack tints of the Heroes IV Memorial. h4Frozen: stacks frozen by the Ice Demon turn ice blue (as in Heroes IV), triggered by the affect of the spell h4FrozenTint.
+{
+	"colorMuxers": {
+		"h4Frozen": [
+			{ "time": 0.0, "alpha": 1.0 },
+			{ "time": 1.0, "color": [ 0.35, 0.75, 1.0, 1.0 ], "alpha": 1.0 }
+		]
+	}
+}

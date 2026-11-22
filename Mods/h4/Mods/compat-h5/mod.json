@@ -1,0 +1,17 @@
+{
+	"name": "Heroes IV Memorial: Heroes V Animate Dead",
+	"description": "Sacred Ground also blocks the Heroes V Animate Dead spells.",
+	"chinese": {
+		"name": "英雄无敌4纪念版：英雄无敌5亡灵复生",
+		"description": "招魂抵御同时挡住英雄无敌5的亡灵复生。"
+	},
+	"version": "0.1.0",
+	"author": "yche2990",
+	"modType": "Compatibility",
+	"depends": [
+		"heroes-memorial.h5"
+	],
+	"spells": [
+		"config/spells.json"
+	]
+}

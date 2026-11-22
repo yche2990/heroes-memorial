@@ -1,0 +1,14 @@
+{
+ "basepath": "h4/Troglodyte/map/",
+ "sequences": [
+  {
+   "group": 0,
+   "frames": [
+    "stand_01.png",
+    "stand_02.png",
+    "stand_03.png",
+    "stand_04.png"
+   ]
+  }
+ ]
+}

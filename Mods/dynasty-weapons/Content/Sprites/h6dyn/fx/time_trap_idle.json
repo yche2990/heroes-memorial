@@ -1,0 +1,11 @@
+{
+	"basepath": "h6dyn/fx/time_trap_idle/",
+	"sequences": [
+		{
+			"group": 0,
+			"frames": [
+				"00.png"
+			]
+		}
+	]
+}

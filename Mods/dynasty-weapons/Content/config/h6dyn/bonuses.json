@@ -1,0 +1,42 @@
+{
+	"H6DYN_FRESH": {
+		"hidden": true,
+		"creatureNature": false
+	},
+	"H6DYN_ONCE": {
+		"hidden": true,
+		"creatureNature": false
+	},
+	"H6DYN_IMPROVED_RES": {
+		"hidden": true,
+		"creatureNature": false
+	},
+	"H6DYN_LIFELINK": {
+		"hidden": true,
+		"creatureNature": false
+	},
+	"H6DYN_OWNER": {
+		"hidden": true,
+		"creatureNature": false
+	},
+	"H6DYN_SHIELD_LEFT": {
+		"hidden": true,
+		"creatureNature": false
+	},
+	"H6DYN_ROUNDS": {
+		"hidden": true,
+		"creatureNature": false
+	},
+	"H6DYN_RESOLVE": {
+		"hidden": true,
+		"creatureNature": false
+	},
+	"H6DYN_DEALT": {
+		"hidden": true,
+		"creatureNature": false
+	},
+	"H6DYN_SHIELD_ON": {
+		"hidden": false,
+		"creatureNature": false
+	}
+}

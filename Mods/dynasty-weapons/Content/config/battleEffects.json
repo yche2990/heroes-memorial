@@ -1,0 +1,117 @@
+// Stacks under Law of the Wolf are darkened to grey (the engine merges config/battleEffects.json from every mod by file name; not listed in mod.json)
+{
+	"colorMuxers": {
+		"h6dynWolfsJawsDim": [
+			{
+				"time": 0.0,
+				"alpha": 1.0
+			},
+			{
+				"time": 1.2,
+				"alpha": 1.0
+			},
+			{
+				"time": 2.4,
+				"alpha": 1.0
+			},
+			{
+				"time": 3.497,
+				"alpha": 1.0
+			},
+			{
+				"time": 3.6,
+				"alpha": 1.0,
+				"color": [
+					0.992,
+					0.992,
+					0.992,
+					0.011
+				]
+			},
+			{
+				"time": 4.8,
+				"alpha": 1.0,
+				"color": [
+					0.902,
+					0.902,
+					0.902,
+					0.14
+				]
+			},
+			{
+				"time": 6.0,
+				"alpha": 1.0,
+				"color": [
+					0.812,
+					0.812,
+					0.812,
+					0.268
+				]
+			},
+			{
+				"time": 7.044,
+				"alpha": 1.0,
+				"color": [
+					0.734,
+					0.734,
+					0.734,
+					0.38
+				]
+			},
+			{
+				"time": 7.2,
+				"alpha": 1.0,
+				"color": [
+					0.74,
+					0.74,
+					0.74,
+					0.371
+				]
+			},
+			{
+				"time": 8.4,
+				"alpha": 1.0,
+				"color": [
+					0.792,
+					0.792,
+					0.792,
+					0.297
+				]
+			},
+			{
+				"time": 9.6,
+				"alpha": 1.0,
+				"color": [
+					0.844,
+					0.844,
+					0.844,
+					0.222
+				]
+			},
+			{
+				"time": 10.8,
+				"alpha": 1.0,
+				"color": [
+					0.896,
+					0.896,
+					0.896,
+					0.148
+				]
+			},
+			{
+				"time": 12.0,
+				"alpha": 1.0,
+				"color": [
+					0.948,
+					0.948,
+					0.948,
+					0.074
+				]
+			},
+			{
+				"time": 13.2,
+				"alpha": 1.0
+			}
+		]
+	}
+}
