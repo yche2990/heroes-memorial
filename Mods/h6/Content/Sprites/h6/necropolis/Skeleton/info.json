@@ -1,0 +1,82 @@
+{
+ "fac": "necropolis",
+ "k": 1.1,
+ "scale": 77.26577450925517,
+ "origin": [
+  196.58333810242792,
+  264.0
+ ],
+ "baked": {
+  "0": [
+   "skeleton_basic.fx"
+  ],
+  "1": [
+   "skeleton_basic.fx"
+  ],
+  "2": [
+   "skeleton_basic.fx"
+  ],
+  "3": [
+   "skeleton_basic.fx"
+  ],
+  "4": [
+   "skeleton_basic.fx"
+  ],
+  "5": [
+   "skeleton_basic.fx"
+  ],
+  "7": [
+   "skeleton_basic.fx"
+  ],
+  "8": [
+   "skeleton_basic.fx"
+  ],
+  "11": [
+   "skeleton_basic.fx"
+  ],
+  "12": [
+   "skeleton_basic.fx"
+  ],
+  "13": [
+   "skeleton_basic.fx"
+  ],
+  "14": [
+   "skeleton_basic.fx"
+  ],
+  "15": [
+   "skeleton_basic.fx"
+  ],
+  "16": [
+   "skeleton_basic.fx"
+  ],
+  "17": [
+   "skeleton_basic.fx"
+  ],
+  "18": [
+   "skeleton_basic.fx"
+  ],
+  "19": [
+   "skeleton_basic.fx"
+  ],
+  "20": [
+   "skeleton_basic.fx"
+  ],
+  "21": [
+   "skeleton_basic.fx"
+  ],
+  "30": [
+   "skeleton_basic.fx"
+  ],
+  "32": [
+   "skeleton_basic.fx"
+  ],
+  "40": [
+   "skeleton_basic.fx"
+  ],
+  "42": [
+   "skeleton_basic.fx"
+  ]
+ },
+ "render": "Blender 4.2 Cycles 24spp 3x + sprite_post; fx h6m (fxsim d1=mul mode2=wrap)",
+ "sec": 20
+}

@@ -1,0 +1,73 @@
+{
+ "fac": "necropolis",
+ "k": 1.1,
+ "scale": 66.1067316009433,
+ "origin": [
+  211.55934198392657,
+  254.0
+ ],
+ "baked": {
+  "0": [
+   "lamasu_basic.fx"
+  ],
+  "1": [
+   "lamasu_basic.fx"
+  ],
+  "2": [
+   "lamasu_basic.fx"
+  ],
+  "3": [
+   "lamasu_basic.fx"
+  ],
+  "4": [
+   "lamasu_basic.fx"
+  ],
+  "5": [
+   "lamasu_basic.fx"
+  ],
+  "7": [
+   "lamasu_basic.fx"
+  ],
+  "8": [
+   "lamasu_basic.fx"
+  ],
+  "11": [
+   "lamasu_basic.fx"
+  ],
+  "12": [
+   "lamasu_basic.fx"
+  ],
+  "13": [
+   "lamasu_basic.fx"
+  ],
+  "17": [
+   "lamasu_basic.fx"
+  ],
+  "18": [
+   "lamasu_basic.fx"
+  ],
+  "19": [
+   "lamasu_basic.fx"
+  ],
+  "20": [
+   "lamasu_basic.fx"
+  ],
+  "21": [
+   "lamasu_basic.fx"
+  ],
+  "30": [
+   "lamasu_basic.fx"
+  ],
+  "32": [
+   "lamasu_basic.fx"
+  ],
+  "40": [
+   "lamasu_basic.fx"
+  ],
+  "42": [
+   "lamasu_basic.fx"
+  ]
+ },
+ "render": "Blender 4.2 Cycles 24spp 3x + sprite_post; fx h6m (fxsim d1=mul mode2=wrap)",
+ "sec": 20
+}

@@ -1,0 +1,86 @@
+{
+ "fac": "neutral",
+ "k": 0.85,
+ "scale": 59.4542456101132,
+ "origin": [
+  212.6919972700261,
+  261.0
+ ],
+ "baked": {
+  "0": [
+   "airelemental_basic.fx"
+  ],
+  "1": [
+   "airelemental_basic.fx"
+  ],
+  "2": [
+   "airelemental_basic.fx"
+  ],
+  "3": [
+   "airelemental_basic.fx"
+  ],
+  "4": [
+   "airelemental_basic.fx",
+   "airelemental_defend.fx"
+  ],
+  "5": [
+   "airelemental_basic.fx",
+   "airelemental_die.fx"
+  ],
+  "7": [
+   "airelemental_basic.fx"
+  ],
+  "8": [
+   "airelemental_basic.fx"
+  ],
+  "11": [
+   "airelemental_basic.fx"
+  ],
+  "12": [
+   "airelemental_basic.fx"
+  ],
+  "13": [
+   "airelemental_basic.fx"
+  ],
+  "17": [
+   "airelemental_basic.fx",
+   "airelemental_summon.fx",
+   "airelemental_summon_add.fx"
+  ],
+  "18": [
+   "airelemental_basic.fx",
+   "airelemental_summon.fx",
+   "airelemental_summon_add.fx"
+  ],
+  "19": [
+   "airelemental_basic.fx",
+   "airelemental_summon.fx",
+   "airelemental_summon_add.fx"
+  ],
+  "20": [
+   "airelemental_basic.fx"
+  ],
+  "21": [
+   "airelemental_basic.fx"
+  ],
+  "30": [
+   "airelemental_basic.fx",
+   "airelemental_summon.fx",
+   "airelemental_summon_add.fx"
+  ],
+  "32": [
+   "airelemental_basic.fx",
+   "airelemental_summon.fx",
+   "airelemental_summon_add.fx"
+  ],
+  "40": [
+   "airelemental_basic.fx"
+  ],
+  "42": [
+   "airelemental_basic.fx"
+  ]
+ },
+ "render": "Blender 4.2 Cycles 24spp 3x + sprite_post; fx h6m (fxsim d1=mul mode2=wrap)",
+ "sec": 168,
+ "note426": "battle frames shrunk x0.85 around the foot point (x=217, y=265) after render (Yu, round 426)"
+}

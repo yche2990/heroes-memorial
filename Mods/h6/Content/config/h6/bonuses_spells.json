@@ -1,0 +1,7 @@
+// Heroes 6 memorial: cooldown marks of hero spells
+{
+	"H6_SPELL_CD_H6C": {
+		"hidden": true,
+		"creatureNature": false
+	}
+}

@@ -1,0 +1,86 @@
+{
+ "fac": "boss",
+ "k": 1.2,
+ "scale": 39.12695171714104,
+ "origin": [
+  219.38905812587606,
+  251.0
+ ],
+ "baked": {
+  "0": [
+   "Azkaal.fx"
+  ],
+  "1": [
+   "Azkaal.fx"
+  ],
+  "2": [
+   "Azkaal.fx"
+  ],
+  "3": [
+   "Azkaal.fx"
+  ],
+  "4": [
+   "Azkaal.fx"
+  ],
+  "5": [
+   "Azkaal.fx",
+   "Azkaal_die.fx"
+  ],
+  "7": [
+   "Azkaal.fx"
+  ],
+  "8": [
+   "Azkaal.fx"
+  ],
+  "11": [
+   "Azkaal.fx",
+   "Azkaal_attack.fx"
+  ],
+  "12": [
+   "Azkaal.fx",
+   "Azkaal_attack.fx"
+  ],
+  "13": [
+   "Azkaal.fx",
+   "Azkaal_attack.fx"
+  ],
+  "17": [
+   "Azkaal.fx",
+   "Azkaal_ability.fx"
+  ],
+  "18": [
+   "Azkaal.fx",
+   "Azkaal_ability.fx"
+  ],
+  "19": [
+   "Azkaal.fx",
+   "Azkaal_ability.fx"
+  ],
+  "20": [
+   "Azkaal.fx",
+   "Azkaal_movestart.fx"
+  ],
+  "21": [
+   "Azkaal.fx",
+   "Azkaal_moveend.fx"
+  ],
+  "30": [
+   "Azkaal.fx",
+   "Azkaal_ability.fx"
+  ],
+  "32": [
+   "Azkaal.fx",
+   "Azkaal_ability.fx"
+  ],
+  "40": [
+   "Azkaal.fx",
+   "Azkaal_attack.fx"
+  ],
+  "42": [
+   "Azkaal.fx",
+   "Azkaal_attack.fx"
+  ]
+ },
+ "render": "Blender 4.2 Cycles 24spp 3x + sprite_post; fx h6m (fxsim d1=mul mode2=wrap)",
+ "sec": 118
+}

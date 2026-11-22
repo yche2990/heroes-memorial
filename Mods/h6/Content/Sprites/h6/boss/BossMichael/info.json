@@ -1,0 +1,108 @@
+{
+ "fac": "boss",
+ "k": 1.7,
+ "scale": 71.43490396568221,
+ "origin": [
+  197.0917421613647,
+  261.0
+ ],
+ "baked": {
+  "0": [
+   "bossmichael.fx",
+   "bossmichael_lights.fx"
+  ],
+  "1": [
+   "bossmichael.fx",
+   "bossmichael_lights.fx"
+  ],
+  "2": [
+   "bossmichael.fx",
+   "bossmichael_lights.fx"
+  ],
+  "3": [
+   "bossmichael.fx",
+   "bossmichael_lights.fx"
+  ],
+  "4": [
+   "bossmichael.fx",
+   "bossmichael_lights.fx"
+  ],
+  "5": [
+   "bossmichael.fx",
+   "bossmichael_lights.fx"
+  ],
+  "7": [
+   "bossmichael.fx",
+   "bossmichael_lights.fx"
+  ],
+  "8": [
+   "bossmichael.fx",
+   "bossmichael_lights.fx"
+  ],
+  "11": [
+   "bossmichael.fx",
+   "bossmichael_lights.fx",
+   "bossmichael_attack1.fx",
+   "bossmichael_attack2.fx"
+  ],
+  "12": [
+   "bossmichael.fx",
+   "bossmichael_lights.fx",
+   "bossmichael_attack1.fx",
+   "bossmichael_attack2.fx"
+  ],
+  "13": [
+   "bossmichael.fx",
+   "bossmichael_lights.fx",
+   "bossmichael_attack1.fx",
+   "bossmichael_attack2.fx"
+  ],
+  "17": [
+   "bossmichael.fx",
+   "bossmichael_lights.fx",
+   "bossmichael_ability1.fx"
+  ],
+  "18": [
+   "bossmichael.fx",
+   "bossmichael_lights.fx",
+   "bossmichael_ability1.fx"
+  ],
+  "19": [
+   "bossmichael.fx",
+   "bossmichael_lights.fx",
+   "bossmichael_ability1.fx"
+  ],
+  "20": [
+   "bossmichael.fx",
+   "bossmichael_lights.fx"
+  ],
+  "21": [
+   "bossmichael.fx",
+   "bossmichael_lights.fx"
+  ],
+  "30": [
+   "bossmichael.fx",
+   "bossmichael_lights.fx",
+   "bossmichael_ability1.fx"
+  ],
+  "32": [
+   "bossmichael.fx",
+   "bossmichael_lights.fx",
+   "bossmichael_ability1.fx"
+  ],
+  "40": [
+   "bossmichael.fx",
+   "bossmichael_lights.fx",
+   "bossmichael_attack1.fx",
+   "bossmichael_attack2.fx"
+  ],
+  "42": [
+   "bossmichael.fx",
+   "bossmichael_lights.fx",
+   "bossmichael_attack1.fx",
+   "bossmichael_attack2.fx"
+  ]
+ },
+ "render": "Blender 4.2 Cycles 24spp 3x + sprite_post; fx h6m (fxsim d1=mul mode2=wrap)",
+ "sec": 623
+}

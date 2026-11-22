@@ -1,0 +1,363 @@
+// Heroes 6 memorial: script registration. kadIntercept and h47Dive are identical to the scripts of the same name in the H5 memorial
+{
+	"h6SpiritForm": {
+		"implements": "combatEvent",
+		"script": "combat/h6SpiritForm",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {},
+			"additionalProperties": false
+		},
+		"description": ""
+	},
+	"h6Cooldown": {
+		"implements": "combatEvent",
+		"script": "combat/h6Cooldown",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"spell": {
+					"type": "string"
+				},
+				"turns": {
+					"type": "number"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": ""
+	},
+	"h6Shieldguard": {
+		"implements": "combatEvent",
+		"script": "combat/h6Shieldguard",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"mark": {
+					"type": "string"
+				},
+				"link": {
+					"type": "string"
+				},
+				"cut": {
+					"type": "number"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": ""
+	},
+	"kadIntercept": {
+		"implements": "combatEvent",
+		"script": "combat/kadIntercept",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"role": {
+					"type": "string",
+					"enum": [
+						"carrier",
+						"zone"
+					]
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": ""
+	},
+	"h6DiveLand": {
+		"implements": "combatEvent",
+		"script": "combat/h6DiveLand",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"mark": {
+					"type": "string"
+				},
+				"spell": {
+					"type": "string"
+				},
+				"factor": {
+					"type": "number"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": ""
+	},
+	"h6Pacify": {
+		"implements": "combatEvent",
+		"script": "combat/h6Pacify",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"spell": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": ""
+	},
+	"h6Judgment": {
+		"implements": "combatEvent",
+		"script": "combat/h6Judgment",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"role": {
+					"type": "string",
+					"enum": [
+						"carrier",
+						"zone"
+					]
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": ""
+	},
+	"h6Cleanse": {
+		"implements": "combatEvent",
+		"script": "combat/h6Cleanse",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {},
+			"additionalProperties": false
+		},
+		"description": ""
+	},
+	"h47Dive": {
+		"implements": "spellEffect",
+		"script": "spells/h47Dive",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"mark": {
+					"type": "string"
+				},
+				"landScript": {
+					"type": "string"
+				},
+				"factor": {
+					"type": "number"
+				},
+				"markAppear": {
+					"type": "string"
+				},
+				"markAnimation": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"h6AbRefund": {
+		"implements": "spellEffect",
+		"script": "spells/h6AbRefund",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"key": {
+					"type": "string"
+				},
+				"uses": {
+					"type": "number"
+				},
+				"usedType": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"h6Restore": {
+		"implements": "spellEffect",
+		"script": "spells/h6Restore",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"per": {
+					"type": "number"
+				},
+				"dmg": {
+					"type": "number"
+				},
+				"uses": {
+					"type": "number"
+				},
+				"boost": {
+					"type": "boolean"
+				},
+				"key": {
+					"type": "string"
+				},
+				"animation": {
+					"type": "string"
+				},
+				"sound": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"h6PiercingBolt": {
+		"implements": "spellEffect",
+		"script": "spells/h6PiercingBolt",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"pct": {
+					"type": "number"
+				},
+				"status": {
+					"type": "string"
+				},
+				"statusTurns": {
+					"type": "number"
+				},
+				"logType": {
+					"type": "string"
+				},
+				"logIndex": {
+					"type": "number"
+				},
+				"uses": {
+					"type": "number"
+				},
+				"key": {
+					"type": "string"
+				},
+				"animation": {
+					"type": "string"
+				},
+				"sound": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"h6SelfBuff": {
+		"implements": "spellEffect",
+		"script": "spells/h6SelfBuff",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"bonusType": {
+					"type": "string"
+				},
+				"val": {
+					"type": "number"
+				},
+				"subtype": {
+					"type": "string"
+				},
+				"turns": {
+					"type": "number"
+				},
+				"untilAttacked": {
+					"type": "boolean"
+				},
+				"untilAfterAttack": {
+					"type": "boolean"
+				},
+				"key": {
+					"type": "string"
+				},
+				"uses": {
+					"type": "number"
+				},
+				"show": {
+					"type": "string"
+				},
+				"animation": {
+					"type": "string"
+				},
+				"sound": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"h6SunSteed": {
+		"implements": "spellEffect",
+		"script": "spells/h6SunSteed",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"to": {
+					"type": "string"
+				},
+				"cooldown": {
+					"type": "number"
+				},
+				"startA": {
+					"type": "string"
+				},
+				"startB": {
+					"type": "string"
+				},
+				"sound": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"h6SunSteedForm": {
+		"implements": "combatEvent",
+		"script": "combat/h6SunSteedForm",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"endFx": {
+					"type": "string"
+				},
+				"sound": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": ""
+	}
+}

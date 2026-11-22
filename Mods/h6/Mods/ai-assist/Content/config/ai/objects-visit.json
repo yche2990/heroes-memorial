@@ -1,0 +1,476 @@
+{
+	"heroes-memorial.h6:h6MemorialSanctum": {
+		"types": {
+			"h6MemorialSanctum": {
+				"rewards": {
+					"appendItems": [
+						{
+							"limiter": {
+								"anyOf": [
+									{
+										"allOf": [
+											{
+												"anyOf": [
+													{
+														"creatures": [
+															{
+																"type": "heroes-memorial.h6:h6HavenPraetorian",
+																"amount": 1
+															}
+														]
+													}
+												]
+											},
+											{
+												"anyOf": [
+													{
+														"creatures": [
+															{
+																"type": "heroes-memorial.h6:h6HavenMarksman",
+																"amount": 1
+															}
+														]
+													}
+												]
+											},
+											{
+												"anyOf": [
+													{
+														"creatures": [
+															{
+																"type": "heroes-memorial.h6:h6HavenVestal",
+																"amount": 1
+															}
+														]
+													}
+												]
+											},
+											{
+												"anyOf": [
+													{
+														"creatures": [
+															{
+																"type": "heroes-memorial.h6:h6HavenImperialGriffin",
+																"amount": 1
+															}
+														]
+													}
+												]
+											},
+											{
+												"anyOf": [
+													{
+														"creatures": [
+															{
+																"type": "heroes-memorial.h6:h6HavenBlazingGlory",
+																"amount": 1
+															}
+														]
+													}
+												]
+											},
+											{
+												"anyOf": [
+													{
+														"creatures": [
+															{
+																"type": "heroes-memorial.h6:h6HavenSunCrusader",
+																"amount": 1
+															}
+														]
+													}
+												]
+											},
+											{
+												"anyOf": [
+													{
+														"creatures": [
+															{
+																"type": "heroes-memorial.h6:h6HavenCelestial",
+																"amount": 1
+															}
+														]
+													}
+												]
+											}
+										]
+									},
+									{
+										"allOf": [
+											{
+												"anyOf": [
+													{
+														"creatures": [
+															{
+																"type": "heroes-memorial.h6:h6InfernoDemented",
+																"amount": 1
+															}
+														]
+													}
+												]
+											},
+											{
+												"anyOf": [
+													{
+														"creatures": [
+															{
+																"type": "heroes-memorial.h6:h6InfernoCerberus",
+																"amount": 1
+															}
+														]
+													}
+												]
+											},
+											{
+												"anyOf": [
+													{
+														"creatures": [
+															{
+																"type": "heroes-memorial.h6:h6InfernoLilim",
+																"amount": 1
+															}
+														]
+													}
+												]
+											},
+											{
+												"anyOf": [
+													{
+														"creatures": [
+															{
+																"type": "heroes-memorial.h6:h6InfernoMotherBreeder",
+																"amount": 1
+															}
+														]
+													}
+												]
+											},
+											{
+												"anyOf": [
+													{
+														"creatures": [
+															{
+																"type": "heroes-memorial.h6:h6InfernoLacerator",
+																"amount": 1
+															}
+														]
+													}
+												]
+											},
+											{
+												"anyOf": [
+													{
+														"creatures": [
+															{
+																"type": "heroes-memorial.h6:h6InfernoRavager",
+																"amount": 1
+															}
+														]
+													}
+												]
+											},
+											{
+												"anyOf": [
+													{
+														"creatures": [
+															{
+																"type": "heroes-memorial.h6:h6InfernoPitLord",
+																"amount": 1
+															}
+														]
+													}
+												]
+											}
+										]
+									},
+									{
+										"allOf": [
+											{
+												"anyOf": [
+													{
+														"creatures": [
+															{
+																"type": "heroes-memorial.h6:h6NecroSkeletalSpearman",
+																"amount": 1
+															}
+														]
+													}
+												]
+											},
+											{
+												"anyOf": [
+													{
+														"creatures": [
+															{
+																"type": "heroes-memorial.h6:h6NecroRavenous",
+																"amount": 1
+															}
+														]
+													}
+												]
+											},
+											{
+												"anyOf": [
+													{
+														"creatures": [
+															{
+																"type": "heroes-memorial.h6:h6NecroSpectre",
+																"amount": 1
+															}
+														]
+													}
+												]
+											},
+											{
+												"anyOf": [
+													{
+														"creatures": [
+															{
+																"type": "heroes-memorial.h6:h6NecroArchlich",
+																"amount": 1
+															}
+														]
+													}
+												]
+											},
+											{
+												"anyOf": [
+													{
+														"creatures": [
+															{
+																"type": "heroes-memorial.h6:h6NecroPutrid",
+																"amount": 1
+															}
+														]
+													}
+												]
+											},
+											{
+												"anyOf": [
+													{
+														"creatures": [
+															{
+																"type": "heroes-memorial.h6:h6NecroVampireLord",
+																"amount": 1
+															}
+														]
+													}
+												]
+											},
+											{
+												"anyOf": [
+													{
+														"creatures": [
+															{
+																"type": "heroes-memorial.h6:h6NecroFateWeaver",
+																"amount": 1
+															}
+														]
+													}
+												]
+											}
+										]
+									},
+									{
+										"allOf": [
+											{
+												"anyOf": [
+													{
+														"creatures": [
+															{
+																"type": "heroes-memorial.h6:h6StrongholdCrusher",
+																"amount": 1
+															}
+														]
+													}
+												]
+											},
+											{
+												"anyOf": [
+													{
+														"creatures": [
+															{
+																"type": "heroes-memorial.h6:h6StrongholdGoblinHunter",
+																"amount": 1
+															}
+														]
+													}
+												]
+											},
+											{
+												"anyOf": [
+													{
+														"creatures": [
+															{
+																"type": "heroes-memorial.h6:h6StrongholdFury",
+																"amount": 1
+															}
+														]
+													}
+												]
+											},
+											{
+												"anyOf": [
+													{
+														"creatures": [
+															{
+																"type": "heroes-memorial.h6:h6StrongholdDreamreaver",
+																"amount": 1
+															}
+														]
+													}
+												]
+											},
+											{
+												"anyOf": [
+													{
+														"creatures": [
+															{
+																"type": "heroes-memorial.h6:h6StrongholdMarauderCentaur",
+																"amount": 1
+															}
+														]
+													}
+												]
+											},
+											{
+												"anyOf": [
+													{
+														"creatures": [
+															{
+																"type": "heroes-memorial.h6:h6StrongholdPantherWarrior",
+																"amount": 1
+															}
+														]
+													}
+												]
+											},
+											{
+												"anyOf": [
+													{
+														"creatures": [
+															{
+																"type": "heroes-memorial.h6:h6StrongholdEnragedCyclops",
+																"amount": 1
+															}
+														]
+													}
+												]
+											}
+										]
+									},
+									{
+										"allOf": [
+											{
+												"anyOf": [
+													{
+														"creatures": [
+															{
+																"type": "heroes-memorial.h6:h6DungeonShade",
+																"amount": 1
+															}
+														]
+													}
+												]
+											},
+											{
+												"anyOf": [
+													{
+														"creatures": [
+															{
+																"type": "heroes-memorial.h6:h6DungeonChakramDancer",
+																"amount": 1
+															}
+														]
+													}
+												]
+											},
+											{
+												"anyOf": [
+													{
+														"creatures": [
+															{
+																"type": "heroes-memorial.h6:h6DungeonShadowWatcher",
+																"amount": 1
+															}
+														]
+													}
+												]
+											},
+											{
+												"anyOf": [
+													{
+														"creatures": [
+															{
+																"type": "heroes-memorial.h6:h6DungeonScorpicore",
+																"amount": 1
+															}
+														]
+													}
+												]
+											},
+											{
+												"anyOf": [
+													{
+														"creatures": [
+															{
+																"type": "heroes-memorial.h6:h6DungeonFacelessPuppeteer",
+																"amount": 1
+															}
+														]
+													}
+												]
+											},
+											{
+												"anyOf": [
+													{
+														"creatures": [
+															{
+																"type": "heroes-memorial.h6:h6DungeonMinotaurGuard",
+																"amount": 1
+															}
+														]
+													}
+												]
+											},
+											{
+												"anyOf": [
+													{
+														"creatures": [
+															{
+																"type": "heroes-memorial.h6:h6DungeonBlackDragon",
+																"amount": 1
+															}
+														]
+													}
+												]
+											}
+										]
+									},
+									{
+										"heroLevel": 999
+									},
+									{
+										"heroLevel": 999
+									},
+									{
+										"heroLevel": 999
+									},
+									{
+										"heroLevel": 999
+									},
+									{
+										"heroLevel": 999
+									}
+								]
+							},
+							"primary": {
+								"knowledge": 1
+							}
+						}
+					]
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,92 @@
+{
+ "fac": "inferno",
+ "k": 0.69,
+ "scale": 42.025066340664814,
+ "origin": [
+  220.77828250424366,
+  249.581
+ ],
+ "baked": {
+  "0": [
+   "pitfiend_basic.fx"
+  ],
+  "1": [
+   "pitfiend_basic.fx"
+  ],
+  "2": [
+   "pitfiend_basic.fx"
+  ],
+  "3": [
+   "pitfiend_basic.fx"
+  ],
+  "4": [
+   "pitfiend_basic.fx"
+  ],
+  "5": [
+   "pitfiend_basic.fx",
+   "pitfiend_die.fx"
+  ],
+  "7": [
+   "pitfiend_basic.fx"
+  ],
+  "8": [
+   "pitfiend_basic.fx"
+  ],
+  "11": [
+   "pitfiend_basic.fx",
+   "pitfiend_attack.fx"
+  ],
+  "12": [
+   "pitfiend_basic.fx",
+   "pitfiend_attack.fx"
+  ],
+  "13": [
+   "pitfiend_basic.fx",
+   "pitfiend_attack.fx"
+  ],
+  "17": [
+   "pitfiend_basic.fx",
+   "pitfiend_ability.fx",
+   "pitfiend_ability_add.fx"
+  ],
+  "18": [
+   "pitfiend_basic.fx",
+   "pitfiend_ability.fx",
+   "pitfiend_ability_add.fx"
+  ],
+  "19": [
+   "pitfiend_basic.fx",
+   "pitfiend_ability.fx",
+   "pitfiend_ability_add.fx"
+  ],
+  "20": [
+   "pitfiend_basic.fx",
+   "pitfiend_movestart.fx"
+  ],
+  "21": [
+   "pitfiend_basic.fx",
+   "pitfiend_moveend.fx"
+  ],
+  "30": [
+   "pitfiend_basic.fx",
+   "pitfiend_ability.fx",
+   "pitfiend_ability_add.fx"
+  ],
+  "32": [
+   "pitfiend_basic.fx",
+   "pitfiend_ability.fx",
+   "pitfiend_ability_add.fx"
+  ],
+  "40": [
+   "pitfiend_basic.fx",
+   "pitfiend_attack.fx"
+  ],
+  "42": [
+   "pitfiend_basic.fx",
+   "pitfiend_attack.fx"
+  ]
+ },
+ "render": "Blender 4.2 Cycles 24spp 3x + sprite_post; fx h6m (fxsim d1=mul mode2=wrap)",
+ "sec": 59,
+ "note426": "battle frames shrunk x0.6 around the foot point (x=217, y=265) after render (Yu, round 426)"
+}

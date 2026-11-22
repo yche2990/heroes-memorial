@@ -1,0 +1,11 @@
+{
+	"basepath": "h6/banks/h6BankDragonwraith/",
+	"sequences": [
+		{
+			"group": 0,
+			"frames": [
+				"h6BankDragonwraith.png"
+			]
+		}
+	]
+}

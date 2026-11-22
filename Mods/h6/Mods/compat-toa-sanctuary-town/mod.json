@@ -1,0 +1,20 @@
+{
+	"name": "Heroes VI Memorial: Sanctuary at the Memorial Shrine",
+	"description": "Takes effect when the Sanctuary town of Tears of Ashan is enabled: the Heroes VI Memorial Shrine also accepts the Sanctuary faction and can be guarded by Sanctuary creatures.",
+	"chinese": {
+		"name": "英雄无敌6纪念版：纪念圣殿的瀛洲",
+		"description": "开着亚山之泪的瀛洲时生效：英雄无敌6纪念圣殿也认瀛洲种族，守军也可能是瀛洲兵。"
+	},
+	"version": "0.1.0",
+	"author": "yche2990",
+	"modType": "Compatibility",
+	"compatibility": {
+		"min": "1.8.0"
+	},
+	"depends": [
+		"tears-of-ashan.toa-sanctuary-town"
+	],
+	"objects": [
+		"config/compat/sanctum.json"
+	]
+}

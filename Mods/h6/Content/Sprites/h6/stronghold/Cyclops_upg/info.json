@@ -1,0 +1,61 @@
+{
+ "fac": "stronghold",
+ "k": 0.966,
+ "scale": 58.79071452845559,
+ "origin": [
+  203.85402485435228,
+  238.8936
+ ],
+ "baked": {
+  "0": [
+   "cyclops_move.fx"
+  ],
+  "1": [],
+  "2": [],
+  "3": [],
+  "4": [],
+  "5": [
+   "cyclops_die.fx"
+  ],
+  "7": [],
+  "8": [],
+  "11": [
+   "cyclops_attackcrit.fx"
+  ],
+  "12": [
+   "cyclops_attackcrit.fx"
+  ],
+  "13": [
+   "cyclops_attackcrit.fx"
+  ],
+  "14": [],
+  "15": [],
+  "16": [],
+  "17": [
+   "cyclops_ability.fx"
+  ],
+  "18": [
+   "cyclops_ability.fx"
+  ],
+  "19": [
+   "cyclops_ability.fx"
+  ],
+  "20": [],
+  "21": [],
+  "30": [
+   "cyclops_ability.fx"
+  ],
+  "32": [
+   "cyclops_ability.fx"
+  ],
+  "40": [
+   "cyclops_attackcrit.fx"
+  ],
+  "42": [
+   "cyclops_attackcrit.fx"
+  ]
+ },
+ "render": "Blender 4.2 Cycles 24spp 3x + sprite_post; fx h6m (fxsim d1=mul mode2=wrap)",
+ "sec": 40,
+ "note426": "battle frames shrunk x0.84 around the foot point (x=217, y=265) after render (Yu, round 426)"
+}

@@ -1,0 +1,2591 @@
+// Heroes 6 memorial: active abilities and statuses of the bosses
+{
+	"h6ArmorCrush": {
+		"type": "ability",
+		"name": "Armor Crush",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"targetType": "CREATURE",
+		"flags": {
+			"special": true,
+			"negative": true
+		},
+		"sounds": {
+			"cast": ""
+		},
+		"graphics": {
+			"iconBook": "h6/spells/h6ArmorCrush/Book",
+			"iconScroll": "h6/spells/h6ArmorCrush/Scroll",
+			"iconScenarioBonus": "h6/spells/h6ArmorCrush/Scenario",
+			"iconEffect": "h6/spells/h6ArmorCrush/Effect"
+		},
+		"levels": {
+			"base": {
+				"cost": 0,
+				"power": 0,
+				"range": "0",
+				"targetModifier": {
+					"smart": false
+				},
+				"battleEffects": {
+					"status": {
+						"type": "timed",
+						"bonus": {
+							"def": {
+								"type": "PRIMARY_SKILL",
+								"subtype": "primarySkill.defence",
+								"val": -5,
+								"duration": "N_TURNS",
+								"turns": 2
+							}
+						}
+					}
+				}
+			},
+			"none": {
+				"description": "{Armor Crush}\n\nThe Breeder Queen's sweep: -5 Defense for 2 rounds."
+			},
+			"basic": {
+				"description": "{Armor Crush}\n\nThe Breeder Queen's sweep: -5 Defense for 2 rounds."
+			},
+			"advanced": {
+				"description": "{Armor Crush}\n\nThe Breeder Queen's sweep: -5 Defense for 2 rounds."
+			},
+			"expert": {
+				"description": "{Armor Crush}\n\nThe Breeder Queen's sweep: -5 Defense for 2 rounds."
+			}
+		}
+	},
+	"h6ConsumptionMark": {
+		"type": "ability",
+		"name": "Mark of Consumption",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"targetType": "CREATURE",
+		"flags": {
+			"special": true,
+			"negative": true
+		},
+		"sounds": {
+			"cast": ""
+		},
+		"graphics": {
+			"iconBook": "h6/spells/h6ConsumptionMark/Book",
+			"iconScroll": "h6/spells/h6ConsumptionMark/Scroll",
+			"iconScenarioBonus": "h6/spells/h6ConsumptionMark/Scenario",
+			"iconEffect": "h6/spells/h6ConsumptionMark/Effect"
+		},
+		"levels": {
+			"base": {
+				"cost": 0,
+				"power": 0,
+				"range": "0",
+				"targetModifier": {
+					"smart": false
+				},
+				"battleEffects": {
+					"status": {
+						"type": "timed",
+						"bonus": {
+							"fire": {
+								"type": "SPELL_DAMAGE_REDUCTION",
+								"subtype": "spellSchool.fire",
+								"val": -100,
+								"duration": "ONE_BATTLE"
+							},
+							"show": {
+								"type": "H6_CONSUMED_H6C",
+								"val": 100,
+								"duration": "ONE_BATTLE"
+							}
+						}
+					}
+				}
+			},
+			"none": {
+				"description": "{Mark of Consumption}\n\n+100% damage taken from Fire spells until the end of battle."
+			},
+			"basic": {
+				"description": "{Mark of Consumption}\n\n+100% damage taken from Fire spells until the end of battle."
+			},
+			"advanced": {
+				"description": "{Mark of Consumption}\n\n+100% damage taken from Fire spells until the end of battle."
+			},
+			"expert": {
+				"description": "{Mark of Consumption}\n\n+100% damage taken from Fire spells until the end of battle."
+			}
+		},
+		"animation": {
+			"affect": [
+				"h6/boss/fx/mark"
+			]
+		}
+	},
+	"h6NightmareWebbed": {
+		"type": "ability",
+		"name": "Nightmare Web",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"targetType": "CREATURE",
+		"flags": {
+			"special": true,
+			"negative": true
+		},
+		"sounds": {
+			"cast": ""
+		},
+		"graphics": {
+			"iconBook": "h6/spells/h6NightmareWebbed/Book",
+			"iconScroll": "h6/spells/h6NightmareWebbed/Scroll",
+			"iconScenarioBonus": "h6/spells/h6NightmareWebbed/Scenario",
+			"iconEffect": "h6/spells/h6NightmareWebbed/Effect"
+		},
+		"levels": {
+			"base": {
+				"cost": 0,
+				"power": 0,
+				"range": "0",
+				"targetModifier": {
+					"smart": false
+				},
+				"battleEffects": {
+					"status": {
+						"type": "timed",
+						"bonus": {
+							"web": {
+								"type": "NOT_ACTIVE",
+								"val": 0,
+								"duration": "N_TURNS",
+								"turns": 1
+							}
+						}
+					}
+				}
+			},
+			"none": {
+				"description": "{Nightmare Web}\n\nCannot move, attack or cast spells for 1 round."
+			},
+			"basic": {
+				"description": "{Nightmare Web}\n\nCannot move, attack or cast spells for 1 round."
+			},
+			"advanced": {
+				"description": "{Nightmare Web}\n\nCannot move, attack or cast spells for 1 round."
+			},
+			"expert": {
+				"description": "{Nightmare Web}\n\nCannot move, attack or cast spells for 1 round."
+			}
+		},
+		"animation": {
+			"affect": [
+				"h6/boss/fx/web"
+			]
+		}
+	},
+	"h6DreamShieldOn": {
+		"type": "ability",
+		"name": "Dream Shield",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"targetType": "CREATURE",
+		"flags": {
+			"special": true,
+			"positive": true
+		},
+		"sounds": {
+			"cast": ""
+		},
+		"graphics": {
+			"iconBook": "h6/spells/h6DreamShieldOn/Book",
+			"iconScroll": "h6/spells/h6DreamShieldOn/Scroll",
+			"iconScenarioBonus": "h6/spells/h6DreamShieldOn/Scenario",
+			"iconEffect": "h6/spells/h6DreamShieldOn/Effect"
+		},
+		"levels": {
+			"base": {
+				"cost": 0,
+				"power": 0,
+				"range": "0",
+				"targetModifier": {
+					"smart": false
+				},
+				"battleEffects": {
+					"status": {
+						"type": "timed",
+						"bonus": {
+							"dmg": {
+								"type": "GENERAL_DAMAGE_REDUCTION",
+								"subtype": "damageTypeAll",
+								"val": 90,
+								"duration": "ONE_BATTLE"
+							},
+							"spell": {
+								"type": "SPELL_DAMAGE_REDUCTION",
+								"subtype": "spellSchool.any",
+								"val": 90,
+								"duration": "ONE_BATTLE"
+							}
+						}
+					}
+				}
+			},
+			"none": {
+				"description": "{Dream Shield}\n\n-90% to all damage taken until the end of battle (can be dispelled)."
+			},
+			"basic": {
+				"description": "{Dream Shield}\n\n-90% to all damage taken until the end of battle (can be dispelled)."
+			},
+			"advanced": {
+				"description": "{Dream Shield}\n\n-90% to all damage taken until the end of battle (can be dispelled)."
+			},
+			"expert": {
+				"description": "{Dream Shield}\n\n-90% to all damage taken until the end of battle (can be dispelled)."
+			}
+		},
+		"animation": {
+			"affect": [
+				"h6/boss/fx/shield"
+			]
+		}
+	},
+	"h6DazingWindsOn": {
+		"type": "ability",
+		"name": "Dazing Winds",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"targetType": "CREATURE",
+		"flags": {
+			"special": true,
+			"negative": true
+		},
+		"sounds": {
+			"cast": ""
+		},
+		"graphics": {
+			"iconBook": "h6/spells/h6DazingWindsOn/Book",
+			"iconScroll": "h6/spells/h6DazingWindsOn/Scroll",
+			"iconScenarioBonus": "h6/spells/h6DazingWindsOn/Scenario",
+			"iconEffect": "h6/spells/h6DazingWindsOn/Effect"
+		},
+		"levels": {
+			"base": {
+				"cost": 0,
+				"power": 0,
+				"range": "0",
+				"targetModifier": {
+					"smart": false
+				},
+				"battleEffects": {
+					"status": {
+						"type": "timed",
+						"bonus": {
+							"daze": {
+								"type": "NOT_ACTIVE",
+								"val": 0,
+								"duration": "N_TURNS",
+								"turns": 2
+							}
+						}
+					}
+				}
+			},
+			"none": {
+				"description": "{Dazing Winds}\n\nCannot act for 2 rounds."
+			},
+			"basic": {
+				"description": "{Dazing Winds}\n\nCannot act for 2 rounds."
+			},
+			"advanced": {
+				"description": "{Dazing Winds}\n\nCannot act for 2 rounds."
+			},
+			"expert": {
+				"description": "{Dazing Winds}\n\nCannot act for 2 rounds."
+			}
+		},
+		"animation": {
+			"affect": [
+				"h6/boss/fx/twister"
+			]
+		}
+	},
+	"h6VoidCircleOn": {
+		"type": "ability",
+		"name": "Void Circle",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"targetType": "CREATURE",
+		"flags": {
+			"special": true,
+			"positive": true
+		},
+		"sounds": {
+			"cast": ""
+		},
+		"graphics": {
+			"iconBook": "h6/spells/h6VoidCircleOn/Book",
+			"iconScroll": "h6/spells/h6VoidCircleOn/Scroll",
+			"iconScenarioBonus": "h6/spells/h6VoidCircleOn/Scenario",
+			"iconEffect": "h6/spells/h6VoidCircleOn/Effect"
+		},
+		"levels": {
+			"base": {
+				"cost": 0,
+				"power": 0,
+				"range": "0",
+				"targetModifier": {
+					"smart": false
+				},
+				"battleEffects": {
+					"status": {
+						"type": "timed",
+						"bonus": {
+							"circle": {
+								"type": "H6_VOIDCIRCLE_H6C",
+								"val": 1,
+								"duration": "N_TURNS",
+								"turns": 4
+							}
+						}
+					}
+				}
+			},
+			"none": {
+				"description": "{Void Circle}\n\nFor 4 rounds: enemies more than 2 hexes away deal -90% damage to the Avatar of the Void, enemies inside the circle take 100 damage each round, and the Avatar of the Void regains 8% of its Hit Points each round."
+			},
+			"basic": {
+				"description": "{Void Circle}\n\nFor 4 rounds: enemies more than 2 hexes away deal -90% damage to the Avatar of the Void, enemies inside the circle take 100 damage each round, and the Avatar of the Void regains 8% of its Hit Points each round."
+			},
+			"advanced": {
+				"description": "{Void Circle}\n\nFor 4 rounds: enemies more than 2 hexes away deal -90% damage to the Avatar of the Void, enemies inside the circle take 100 damage each round, and the Avatar of the Void regains 8% of its Hit Points each round."
+			},
+			"expert": {
+				"description": "{Void Circle}\n\nFor 4 rounds: enemies more than 2 hexes away deal -90% damage to the Avatar of the Void, enemies inside the circle take 100 damage each round, and the Avatar of the Void regains 8% of its Hit Points each round."
+			}
+		},
+		"animation": {
+			"affect": [
+				"h6/boss/fx/circle"
+			]
+		}
+	},
+	"h6AbDevour": {
+		"type": "ability",
+		"name": "Devour",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"targetType": "CREATURE",
+		"flags": {
+			"special": true,
+			"negative": true
+		},
+		"sounds": {
+			"cast": ""
+		},
+		"graphics": {
+			"iconBook": "h6/spells/h6AbDevour/Book",
+			"iconScroll": "h6/spells/h6AbDevour/Scroll",
+			"iconScenarioBonus": "h6/spells/h6AbDevour/Scenario",
+			"iconEffect": "h6/spells/h6AbDevour/Effect"
+		},
+		"levels": {
+			"base": {
+				"cost": 0,
+				"power": 0,
+				"range": "0",
+				"targetModifier": {
+					"smart": false
+				},
+				"battleEffects": {
+					"cd": {
+						"type": "h6BossCd",
+						"key": "h6AbDevour",
+						"cd": 1
+					},
+					"devour": {
+						"type": "h6Devour",
+						"digest": 600,
+						"key": "h6AbDevour",
+						"animation": "h6/boss/fx/devour",
+						"sound": "h6/boss/AbyssalWormBoss_DevourCreature.mp3"
+					}
+				}
+			},
+			"none": {
+				"description": "{Devour}\n\nSwallows an adjacent one-hex enemy stack: it cannot act or be attacked and takes 600 damage at the start of each round (ignoring invulnerability); it is spat out when the Abyssal Worm dies. Other one-hex enemies next to the worm are pushed back 1 hex. Only one stack can be swallowed at a time."
+			},
+			"basic": {
+				"description": "{Devour}\n\nSwallows an adjacent one-hex enemy stack: it cannot act or be attacked and takes 600 damage at the start of each round (ignoring invulnerability); it is spat out when the Abyssal Worm dies. Other one-hex enemies next to the worm are pushed back 1 hex. Only one stack can be swallowed at a time."
+			},
+			"advanced": {
+				"description": "{Devour}\n\nSwallows an adjacent one-hex enemy stack: it cannot act or be attacked and takes 600 damage at the start of each round (ignoring invulnerability); it is spat out when the Abyssal Worm dies. Other one-hex enemies next to the worm are pushed back 1 hex. Only one stack can be swallowed at a time."
+			},
+			"expert": {
+				"description": "{Devour}\n\nSwallows an adjacent one-hex enemy stack: it cannot act or be attacked and takes 600 damage at the start of each round (ignoring invulnerability); it is spat out when the Abyssal Worm dies. Other one-hex enemies next to the worm are pushed back 1 hex. Only one stack can be swallowed at a time."
+			}
+		}
+	},
+	"h6AbIllBlood": {
+		"type": "ability",
+		"name": "Ill Blood",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"targetType": "CREATURE",
+		"flags": {
+			"special": true,
+			"negative": true
+		},
+		"sounds": {
+			"cast": ""
+		},
+		"graphics": {
+			"iconBook": "h6/spells/h6AbIllBlood/Book",
+			"iconScroll": "h6/spells/h6AbIllBlood/Scroll",
+			"iconScenarioBonus": "h6/spells/h6AbIllBlood/Scenario",
+			"iconEffect": "h6/spells/h6AbIllBlood/Effect"
+		},
+		"levels": {
+			"base": {
+				"cost": 0,
+				"power": 0,
+				"range": "0",
+				"targetModifier": {
+					"smart": false
+				},
+				"battleEffects": {
+					"cd": {
+						"type": "h6BossCd",
+						"key": "h6AbIllBlood",
+						"cd": 2
+					},
+					"ill": {
+						"type": "h6IllBlood",
+						"pct": 105,
+						"key": "h6AbIllBlood",
+						"animation": "h6/boss/fx/illBlood"
+					}
+				}
+			},
+			"none": {
+				"description": "{Ill Blood}\n\nThe target enemy immediately strikes a stack next to it for 105% of normal attack damage (its allies first, no retaliation) and loses its action this turn. Cooldown: 2 rounds."
+			},
+			"basic": {
+				"description": "{Ill Blood}\n\nThe target enemy immediately strikes a stack next to it for 105% of normal attack damage (its allies first, no retaliation) and loses its action this turn. Cooldown: 2 rounds."
+			},
+			"advanced": {
+				"description": "{Ill Blood}\n\nThe target enemy immediately strikes a stack next to it for 105% of normal attack damage (its allies first, no retaliation) and loses its action this turn. Cooldown: 2 rounds."
+			},
+			"expert": {
+				"description": "{Ill Blood}\n\nThe target enemy immediately strikes a stack next to it for 105% of normal attack damage (its allies first, no retaliation) and loses its action this turn. Cooldown: 2 rounds."
+			}
+		}
+	},
+	"h6AbMarkOfConsumption": {
+		"type": "ability",
+		"name": "Mark of Consumption",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": true,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"targetType": "CREATURE",
+		"flags": {
+			"special": true,
+			"negative": true
+		},
+		"sounds": {
+			"cast": ""
+		},
+		"graphics": {
+			"iconBook": "h6/spells/h6AbMarkOfConsumption/Book",
+			"iconScroll": "h6/spells/h6AbMarkOfConsumption/Scroll",
+			"iconScenarioBonus": "h6/spells/h6AbMarkOfConsumption/Scenario",
+			"iconEffect": "h6/spells/h6AbMarkOfConsumption/Effect"
+		},
+		"levels": {
+			"base": {
+				"cost": 0,
+				"power": 0,
+				"range": "0",
+				"targetModifier": {
+					"smart": false
+				},
+				"battleEffects": {
+					"0aiHint": {
+						"type": "h6AiHint",
+						"mode": "foes",
+						"center": "target",
+						"ratio": 0.6,
+						"cap": 1,
+						"skip": "H6_CONSUMED_H6C",
+						"bigFirst": true
+					},
+					"cd": {
+						"type": "h6BossCd",
+						"key": "h6AbMarkOfConsumption",
+						"cd": 2
+					},
+					"mark": {
+						"type": "h6AreaStatus",
+						"center": "single",
+						"status": "heroes-memorial.h6:h6ConsumptionMark",
+						"turns": 99,
+						"key": "h6AbMarkOfConsumption"
+					}
+				}
+			},
+			"none": {
+				"description": "{Mark of Consumption}\n\nThe target enemy takes double damage from Fire spells until the end of battle. Cooldown: 2 rounds."
+			},
+			"basic": {
+				"description": "{Mark of Consumption}\n\nThe target enemy takes double damage from Fire spells until the end of battle. Cooldown: 2 rounds."
+			},
+			"advanced": {
+				"description": "{Mark of Consumption}\n\nThe target enemy takes double damage from Fire spells until the end of battle. Cooldown: 2 rounds."
+			},
+			"expert": {
+				"description": "{Mark of Consumption}\n\nThe target enemy takes double damage from Fire spells until the end of battle. Cooldown: 2 rounds."
+			}
+		}
+	},
+	"h6AbBossBoundlessHate": {
+		"type": "ability",
+		"name": "Endless Hatred",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": true,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"targetType": "NO_TARGET",
+		"flags": {
+			"special": true,
+			"negative": true
+		},
+		"sounds": {
+			"cast": ""
+		},
+		"graphics": {
+			"iconBook": "h6/spells/h6AbBossBoundlessHate/Book",
+			"iconScroll": "h6/spells/h6AbBossBoundlessHate/Scroll",
+			"iconScenarioBonus": "h6/spells/h6AbBossBoundlessHate/Scenario",
+			"iconEffect": "h6/spells/h6AbBossBoundlessHate/Effect"
+		},
+		"levels": {
+			"base": {
+				"cost": 0,
+				"power": 0,
+				"range": "0",
+				"targetModifier": {
+					"smart": false
+				},
+				"battleEffects": {
+					"cd": {
+						"type": "h6BossCd",
+						"key": "h6AbBossBoundlessHate",
+						"cd": 3
+					},
+					"hate": {
+						"type": "h6AreaStatus",
+						"center": "all",
+						"per": 150,
+						"school": "fire",
+						"logIndex": 14,
+						"key": "h6AbBossBoundlessHate",
+						"animation": "h6/boss/fx/hate"
+					}
+				}
+			},
+			"none": {
+				"description": "{Endless Hatred}\n\nAll enemy stacks take 150 Fire damage each (reduced by Fire and all-spell damage reduction). Cooldown: 3 rounds."
+			},
+			"basic": {
+				"description": "{Endless Hatred}\n\nAll enemy stacks take 150 Fire damage each (reduced by Fire and all-spell damage reduction). Cooldown: 3 rounds."
+			},
+			"advanced": {
+				"description": "{Endless Hatred}\n\nAll enemy stacks take 150 Fire damage each (reduced by Fire and all-spell damage reduction). Cooldown: 3 rounds."
+			},
+			"expert": {
+				"description": "{Endless Hatred}\n\nAll enemy stacks take 150 Fire damage each (reduced by Fire and all-spell damage reduction). Cooldown: 3 rounds."
+			}
+		}
+	},
+	"h6AbStabbingAttack": {
+		"type": "ability",
+		"name": "Stabbing Attack",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"targetType": "CREATURE",
+		"flags": {
+			"special": true,
+			"negative": true
+		},
+		"sounds": {
+			"cast": ""
+		},
+		"graphics": {
+			"iconBook": "h6/spells/h6AbStabbingAttack/Book",
+			"iconScroll": "h6/spells/h6AbStabbingAttack/Scroll",
+			"iconScenarioBonus": "h6/spells/h6AbStabbingAttack/Scenario",
+			"iconEffect": "h6/spells/h6AbStabbingAttack/Effect"
+		},
+		"levels": {
+			"base": {
+				"cost": 0,
+				"power": 0,
+				"range": "0",
+				"targetModifier": {
+					"smart": false
+				},
+				"battleEffects": {
+					"cd": {
+						"type": "h6BossCd",
+						"key": "h6AbStabbingAttack",
+						"cd": 1
+					},
+					"stab": {
+						"type": "h6PiercingBolt",
+						"pct": 100,
+						"status": "heroes-memorial:h6Dazed",
+						"statusTurns": 2,
+						"logType": "H6_AREA_H6C",
+						"logIndex": 12,
+						"key": "h6AbStabbingAttack",
+						"animation": "h6/boss/fx/stab",
+						"sound": "h6/boss/BossMotherBreederMowingAttackAfter_Impact.wav"
+					}
+				}
+			},
+			"none": {
+				"description": "{Stabbing Attack}\n\nStabs at an enemy stack: every stack on the straight line from the Breeder Queen through the target to the edge of the battlefield (friend or foe) takes normal ranged damage (no retaliation), and the enemies hit are Dazed (H6 Dazed). Cooldown: 1 round."
+			},
+			"basic": {
+				"description": "{Stabbing Attack}\n\nStabs at an enemy stack: every stack on the straight line from the Breeder Queen through the target to the edge of the battlefield (friend or foe) takes normal ranged damage (no retaliation), and the enemies hit are Dazed (H6 Dazed). Cooldown: 1 round."
+			},
+			"advanced": {
+				"description": "{Stabbing Attack}\n\nStabs at an enemy stack: every stack on the straight line from the Breeder Queen through the target to the edge of the battlefield (friend or foe) takes normal ranged damage (no retaliation), and the enemies hit are Dazed (H6 Dazed). Cooldown: 1 round."
+			},
+			"expert": {
+				"description": "{Stabbing Attack}\n\nStabs at an enemy stack: every stack on the straight line from the Breeder Queen through the target to the edge of the battlefield (friend or foe) takes normal ranged damage (no retaliation), and the enemies hit are Dazed (H6 Dazed). Cooldown: 1 round."
+			}
+		}
+	},
+	"h6AbDragonFlight": {
+		"type": "ability",
+		"name": "Dragon Flight",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"targetType": "NO_TARGET",
+		"flags": {
+			"special": true,
+			"positive": true
+		},
+		"sounds": {
+			"cast": ""
+		},
+		"graphics": {
+			"iconBook": "h6/spells/h6AbDragonFlight/Book",
+			"iconScroll": "h6/spells/h6AbDragonFlight/Scroll",
+			"iconScenarioBonus": "h6/spells/h6AbDragonFlight/Scenario",
+			"iconEffect": "h6/spells/h6AbDragonFlight/Effect"
+		},
+		"levels": {
+			"base": {
+				"cost": 0,
+				"power": 0,
+				"range": "0",
+				"targetModifier": {
+					"smart": false
+				},
+				"battleEffects": {
+					"0aiHint": {
+						"type": "h6AiHint",
+						"mode": "foes",
+						"center": "all",
+						"ratio": 0.3,
+						"cap": 4
+					},
+					"cd": {
+						"type": "h6BossCd",
+						"key": "h6AbDragonFlight",
+						"cd": 5
+					},
+					"fly": {
+						"type": "h6DragonFlight",
+						"summon": "heroes-memorial.h6:h6NeutralDarknessElemental",
+						"pct": 15,
+						"key": "h6AbDragonFlight",
+						"animation": "h6/boss/fx/flight",
+						"sound": "h6/boss/LamyaBoss_Ability1.wav"
+					}
+				}
+			},
+			"none": {
+				"description": "{Dragon Flight}\n\nThe Daughter of Malassa takes to the sky: until her next action she cannot be attacked or targeted by spells. Summons a stack of Darkness Elementals (summoned) next to each enemy stack, sized at 15% of that enemy stack's total Hit Points. Cooldown: 5 rounds."
+			},
+			"basic": {
+				"description": "{Dragon Flight}\n\nThe Daughter of Malassa takes to the sky: until her next action she cannot be attacked or targeted by spells. Summons a stack of Darkness Elementals (summoned) next to each enemy stack, sized at 15% of that enemy stack's total Hit Points. Cooldown: 5 rounds."
+			},
+			"advanced": {
+				"description": "{Dragon Flight}\n\nThe Daughter of Malassa takes to the sky: until her next action she cannot be attacked or targeted by spells. Summons a stack of Darkness Elementals (summoned) next to each enemy stack, sized at 15% of that enemy stack's total Hit Points. Cooldown: 5 rounds."
+			},
+			"expert": {
+				"description": "{Dragon Flight}\n\nThe Daughter of Malassa takes to the sky: until her next action she cannot be attacked or targeted by spells. Summons a stack of Darkness Elementals (summoned) next to each enemy stack, sized at 15% of that enemy stack's total Hit Points. Cooldown: 5 rounds."
+			}
+		}
+	},
+	"h6AbMarkOfDoom": {
+		"type": "ability",
+		"name": "Mark of Doom",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"targetType": "CREATURE",
+		"flags": {
+			"special": true,
+			"negative": true
+		},
+		"sounds": {
+			"cast": "h6/boss/LamyaBoss_Ability2.wav"
+		},
+		"graphics": {
+			"iconBook": "h6/spells/h6AbMarkOfDoom/Book",
+			"iconScroll": "h6/spells/h6AbMarkOfDoom/Scroll",
+			"iconScenarioBonus": "h6/spells/h6AbMarkOfDoom/Scenario",
+			"iconEffect": "h6/spells/h6AbMarkOfDoom/Effect"
+		},
+		"levels": {
+			"base": {
+				"cost": 0,
+				"power": 0,
+				"range": "0",
+				"targetModifier": {
+					"smart": false
+				},
+				"battleEffects": {
+					"0aiHint": {
+						"type": "h6AiHint",
+						"mode": "dispel",
+						"ratio": 0.5,
+						"cap": 2
+					},
+					"cd": {
+						"type": "h6BossCd",
+						"key": "h6AbMarkOfDoom",
+						"cd": 2
+					},
+					"dispel": {
+						"type": "dispel",
+						"dispelPositive": true,
+						"dispelNegative": false,
+						"dispelNeutral": false
+					},
+					"doom": {
+						"type": "timed",
+						"bonus": {
+							"doom": {
+								"type": "H6_DOOM_H6C",
+								"val": 1,
+								"duration": "N_TURNS",
+								"turns": 2
+							}
+						}
+					}
+				}
+			},
+			"none": {
+				"description": "{Mark of Doom}\n\nFree action. Removes all beneficial spells from the target enemy; for 2 rounds, beneficial spells cast on it fail at once. Cooldown: 2 rounds."
+			},
+			"basic": {
+				"description": "{Mark of Doom}\n\nFree action. Removes all beneficial spells from the target enemy; for 2 rounds, beneficial spells cast on it fail at once. Cooldown: 2 rounds."
+			},
+			"advanced": {
+				"description": "{Mark of Doom}\n\nFree action. Removes all beneficial spells from the target enemy; for 2 rounds, beneficial spells cast on it fail at once. Cooldown: 2 rounds."
+			},
+			"expert": {
+				"description": "{Mark of Doom}\n\nFree action. Removes all beneficial spells from the target enemy; for 2 rounds, beneficial spells cast on it fail at once. Cooldown: 2 rounds."
+			}
+		},
+		"canCastWithoutSkip": true,
+		"animation": {
+			"affect": [
+				"h6/boss/fx/doom"
+			]
+		}
+	},
+	"h6AbNightmareWeb": {
+		"type": "ability",
+		"name": "Nightmare Web",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"targetType": "CREATURE",
+		"flags": {
+			"special": true,
+			"negative": true
+		},
+		"sounds": {
+			"cast": ""
+		},
+		"graphics": {
+			"iconBook": "h6/spells/h6AbNightmareWeb/Book",
+			"iconScroll": "h6/spells/h6AbNightmareWeb/Scroll",
+			"iconScenarioBonus": "h6/spells/h6AbNightmareWeb/Scenario",
+			"iconEffect": "h6/spells/h6AbNightmareWeb/Effect"
+		},
+		"levels": {
+			"base": {
+				"cost": 0,
+				"power": 0,
+				"range": "0",
+				"targetModifier": {
+					"smart": false
+				},
+				"battleEffects": {
+					"0aiHint": {
+						"type": "h6AiHint",
+						"mode": "foes",
+						"center": "target",
+						"radius": 1,
+						"ratio": 0.45,
+						"cap": 3,
+						"status": "heroes-memorial.h6:h6NightmareWebbed"
+					},
+					"cd": {
+						"type": "h6BossCd",
+						"key": "h6AbNightmareWeb",
+						"cd": 1
+					},
+					"web": {
+						"type": "h6AreaStatus",
+						"center": "target",
+						"status": "heroes-memorial.h6:h6NightmareWebbed",
+						"turns": 1,
+						"key": "h6AbNightmareWeb",
+						"animation": "h6/boss/fx/web",
+						"sound": "h6/boss/MotherNamtaruBossNightmareWeb_Area.wav"
+					}
+				}
+			},
+			"none": {
+				"description": "{Nightmare Web}\n\nThe target and the enemies next to it cannot move, attack or cast spells for 1 round. Cooldown: 1 round."
+			},
+			"basic": {
+				"description": "{Nightmare Web}\n\nThe target and the enemies next to it cannot move, attack or cast spells for 1 round. Cooldown: 1 round."
+			},
+			"advanced": {
+				"description": "{Nightmare Web}\n\nThe target and the enemies next to it cannot move, attack or cast spells for 1 round. Cooldown: 1 round."
+			},
+			"expert": {
+				"description": "{Nightmare Web}\n\nThe target and the enemies next to it cannot move, attack or cast spells for 1 round. Cooldown: 1 round."
+			}
+		}
+	},
+	"h6AbDreamShield": {
+		"type": "ability",
+		"name": "Dream Shield",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"targetType": "NO_TARGET",
+		"flags": {
+			"special": true,
+			"positive": true
+		},
+		"sounds": {
+			"cast": ""
+		},
+		"graphics": {
+			"iconBook": "h6/spells/h6AbDreamShield/Book",
+			"iconScroll": "h6/spells/h6AbDreamShield/Scroll",
+			"iconScenarioBonus": "h6/spells/h6AbDreamShield/Scenario",
+			"iconEffect": "h6/spells/h6AbDreamShield/Effect"
+		},
+		"levels": {
+			"base": {
+				"cost": 0,
+				"power": 0,
+				"range": "0",
+				"targetModifier": {
+					"smart": false
+				},
+				"battleEffects": {
+					"cd": {
+						"type": "h6BossCd",
+						"key": "h6AbDreamShield",
+						"cd": 2
+					},
+					"shield": {
+						"type": "h6SelfStatus",
+						"status": "heroes-memorial.h6:h6DreamShieldOn",
+						"turns": 99,
+						"key": "h6AbDreamShield",
+						"animation": "h6/boss/fx/shield",
+						"sound": "h6/boss/MotherNamtaruBossDreamShield_Source.wav"
+					}
+				}
+			},
+			"none": {
+				"description": "{Dream Shield}\n\nCast on self: -90% to all damage taken until the end of battle; it is a beneficial spell and can be dispelled. Cooldown: 2 rounds."
+			},
+			"basic": {
+				"description": "{Dream Shield}\n\nCast on self: -90% to all damage taken until the end of battle; it is a beneficial spell and can be dispelled. Cooldown: 2 rounds."
+			},
+			"advanced": {
+				"description": "{Dream Shield}\n\nCast on self: -90% to all damage taken until the end of battle; it is a beneficial spell and can be dispelled. Cooldown: 2 rounds."
+			},
+			"expert": {
+				"description": "{Dream Shield}\n\nCast on self: -90% to all damage taken until the end of battle; it is a beneficial spell and can be dispelled. Cooldown: 2 rounds."
+			}
+		}
+	},
+	"h6AbSpiderLeap": {
+		"type": "ability",
+		"name": "Spider Leap",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"targetType": "LOCATION",
+		"flags": {
+			"special": true,
+			"negative": true
+		},
+		"sounds": {
+			"cast": ""
+		},
+		"graphics": {
+			"iconBook": "h6/spells/h6AbSpiderLeap/Book",
+			"iconScroll": "h6/spells/h6AbSpiderLeap/Scroll",
+			"iconScenarioBonus": "h6/spells/h6AbSpiderLeap/Scenario",
+			"iconEffect": "h6/spells/h6AbSpiderLeap/Effect"
+		},
+		"levels": {
+			"base": {
+				"cost": 0,
+				"power": 0,
+				"range": "0",
+				"targetModifier": {
+					"smart": false
+				},
+				"battleEffects": {
+					"cd": {
+						"type": "h6BossCd",
+						"key": "h6AbSpiderLeap",
+						"cd": 3
+					},
+					"leap": {
+						"type": "h6Leap",
+						"pct": 100,
+						"minRange": 3,
+						"key": "h6AbSpiderLeap",
+						"animation": "h6/boss/fx/leap",
+						"sound": "h6/boss/MotherNamtaruSpiderLeap_Impact.wav"
+					}
+				}
+			},
+			"none": {
+				"description": "{Spider Leap}\n\nLeaps to an empty spot at least 3 hexes away; on landing, every adjacent enemy takes normal attack damage (no retaliation). Cooldown: 3 rounds."
+			},
+			"basic": {
+				"description": "{Spider Leap}\n\nLeaps to an empty spot at least 3 hexes away; on landing, every adjacent enemy takes normal attack damage (no retaliation). Cooldown: 3 rounds."
+			},
+			"advanced": {
+				"description": "{Spider Leap}\n\nLeaps to an empty spot at least 3 hexes away; on landing, every adjacent enemy takes normal attack damage (no retaliation). Cooldown: 3 rounds."
+			},
+			"expert": {
+				"description": "{Spider Leap}\n\nLeaps to an empty spot at least 3 hexes away; on landing, every adjacent enemy takes normal attack damage (no retaliation). Cooldown: 3 rounds."
+			}
+		}
+	},
+	"h6AbSpiritDevour": {
+		"type": "ability",
+		"name": "Spirit Devour",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"targetType": "CREATURE",
+		"flags": {
+			"special": true,
+			"positive": true
+		},
+		"sounds": {
+			"cast": ""
+		},
+		"graphics": {
+			"iconBook": "h6/spells/h6AbSpiritDevour/Book",
+			"iconScroll": "h6/spells/h6AbSpiritDevour/Scroll",
+			"iconScenarioBonus": "h6/spells/h6AbSpiritDevour/Scenario",
+			"iconEffect": "h6/spells/h6AbSpiritDevour/Effect"
+		},
+		"levels": {
+			"base": {
+				"cost": 0,
+				"power": 0,
+				"range": "0",
+				"targetModifier": {
+					"smart": false
+				},
+				"battleEffects": {
+					"devour": {
+						"type": "h6SpiritDevour",
+						"pct": 300,
+						"minion": [
+							"heroes-memorial.h6:h6BossNamtaruGhost"
+						],
+						"key": "h6AbSpiritDevour",
+						"animation": "h6/boss/fx/spiritDevour",
+						"sound": "h6/boss/MotherNamtaruBossSpiritDevourer_Impact.wav"
+					}
+				}
+			},
+			"none": {
+				"description": "{Spirit Devour}\n\nDrains an adjacent stack of Namtaru's Ghosts: they all dissipate, and Mother Namtaru restores 300% of the Hit Points drained."
+			},
+			"basic": {
+				"description": "{Spirit Devour}\n\nDrains an adjacent stack of Namtaru's Ghosts: they all dissipate, and Mother Namtaru restores 300% of the Hit Points drained."
+			},
+			"advanced": {
+				"description": "{Spirit Devour}\n\nDrains an adjacent stack of Namtaru's Ghosts: they all dissipate, and Mother Namtaru restores 300% of the Hit Points drained."
+			},
+			"expert": {
+				"description": "{Spirit Devour}\n\nDrains an adjacent stack of Namtaru's Ghosts: they all dissipate, and Mother Namtaru restores 300% of the Hit Points drained."
+			}
+		}
+	},
+	"h6AbWordOfLight": {
+		"type": "ability",
+		"name": "Empowered Word",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false,
+			"01lightSchool": true
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"targetType": "NO_TARGET",
+		"flags": {
+			"special": true,
+			"negative": true
+		},
+		"sounds": {
+			"cast": ""
+		},
+		"graphics": {
+			"iconBook": "h6/spells/h6AbWordOfLight/Book",
+			"iconScroll": "h6/spells/h6AbWordOfLight/Scroll",
+			"iconScenarioBonus": "h6/spells/h6AbWordOfLight/Scenario",
+			"iconEffect": "h6/spells/h6AbWordOfLight/Effect"
+		},
+		"levels": {
+			"base": {
+				"cost": 0,
+				"power": 0,
+				"range": "0",
+				"targetModifier": {
+					"smart": false
+				},
+				"battleEffects": {
+					"cd": {
+						"type": "h6BossCd",
+						"key": "h6AbWordOfLight",
+						"cd": 3
+					},
+					"word": {
+						"type": "h6WordOfLight",
+						"heal": 100,
+						"dmg": 5,
+						"minion": [
+							"heroes-memorial.h6:h6BossMichaelGuard"
+						],
+						"key": "h6AbWordOfLight",
+						"animation": "h6/boss/fx/wordOfLight",
+						"sound": "h6/boss/BossMichael_Ability1.wav"
+					}
+				}
+			},
+			"none": {
+				"description": "{Empowered Word}\n\nMichael's Guards (including fallen ones) are restored to their full starting Hit Points (can resurrect); all enemy stacks take Light damage equal to 5% of their own starting total Hit Points. Cooldown: 3 rounds."
+			},
+			"basic": {
+				"description": "{Empowered Word}\n\nMichael's Guards (including fallen ones) are restored to their full starting Hit Points (can resurrect); all enemy stacks take Light damage equal to 5% of their own starting total Hit Points. Cooldown: 3 rounds."
+			},
+			"advanced": {
+				"description": "{Empowered Word}\n\nMichael's Guards (including fallen ones) are restored to their full starting Hit Points (can resurrect); all enemy stacks take Light damage equal to 5% of their own starting total Hit Points. Cooldown: 3 rounds."
+			},
+			"expert": {
+				"description": "{Empowered Word}\n\nMichael's Guards (including fallen ones) are restored to their full starting Hit Points (can resurrect); all enemy stacks take Light damage equal to 5% of their own starting total Hit Points. Cooldown: 3 rounds."
+			}
+		}
+	},
+	"h6AbHolyBlades": {
+		"type": "ability",
+		"name": "Holy Blades",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"targetType": "CREATURE",
+		"flags": {
+			"special": true,
+			"positive": true
+		},
+		"sounds": {
+			"cast": "h6/boss/MichaelBossZoneOfHolyBlades_Target.wav"
+		},
+		"graphics": {
+			"iconBook": "h6/spells/h6AbHolyBlades/Book",
+			"iconScroll": "h6/spells/h6AbHolyBlades/Scroll",
+			"iconScenarioBonus": "h6/spells/h6AbHolyBlades/Scenario",
+			"iconEffect": "h6/spells/h6AbHolyBlades/Effect"
+		},
+		"levels": {
+			"base": {
+				"cost": 0,
+				"power": 0,
+				"range": "0-1",
+				"targetModifier": {
+					"smart": true
+				},
+				"battleEffects": {
+					"0aiHint": {
+						"type": "h6AiHint",
+						"mode": "allies",
+						"ratio": 0.6,
+						"proxyBonus": {
+							"type": "PRIMARY_SKILL",
+							"subtype": "attack",
+							"val": 10,
+							"turns": 2
+						}
+					},
+					"cd": {
+						"type": "h6BossCd",
+						"key": "h6AbHolyBlades",
+						"cd": 2
+					},
+					"status": {
+						"type": "timed",
+						"bonus": {
+							"blades": {
+								"type": "GENERAL_DAMAGE_PREMY",
+								"val": 50,
+								"duration": "N_TURNS",
+								"turns": 2
+							}
+						}
+					}
+				}
+			},
+			"none": {
+				"description": "{Holy Blades}\n\nThe target and the allies next to it deal +50% damage for 2 rounds. Cooldown: 2 rounds."
+			},
+			"basic": {
+				"description": "{Holy Blades}\n\nThe target and the allies next to it deal +50% damage for 2 rounds. Cooldown: 2 rounds."
+			},
+			"advanced": {
+				"description": "{Holy Blades}\n\nThe target and the allies next to it deal +50% damage for 2 rounds. Cooldown: 2 rounds."
+			},
+			"expert": {
+				"description": "{Holy Blades}\n\nThe target and the allies next to it deal +50% damage for 2 rounds. Cooldown: 2 rounds."
+			}
+		},
+		"animation": {
+			"affect": [
+				"h6/boss/fx/holyBlades"
+			]
+		}
+	},
+	"h6AbLastWish": {
+		"type": "ability",
+		"name": "Last Wish",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false,
+			"01lightSchool": true
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"targetType": "NO_TARGET",
+		"flags": {
+			"special": true,
+			"negative": true
+		},
+		"sounds": {
+			"cast": ""
+		},
+		"graphics": {
+			"iconBook": "h6/spells/h6AbLastWish/Book",
+			"iconScroll": "h6/spells/h6AbLastWish/Scroll",
+			"iconScenarioBonus": "h6/spells/h6AbLastWish/Scenario",
+			"iconEffect": "h6/spells/h6AbLastWish/Effect"
+		},
+		"levels": {
+			"base": {
+				"cost": 0,
+				"power": 0,
+				"range": "0",
+				"targetModifier": {
+					"smart": false
+				},
+				"battleEffects": {
+					"cd": {
+						"type": "h6BossCd",
+						"key": "h6AbLastWish",
+						"cd": 2
+					},
+					"wish": {
+						"type": "h6LastWish",
+						"per": 1250,
+						"minion": [
+							"heroes-memorial.h6:h6BossMichaelGuard"
+						],
+						"key": "h6AbLastWish",
+						"animation": "h6/boss/fx/lastWish",
+						"sound": "h6/boss/BossMichael_Ability2.wav"
+					}
+				}
+			},
+			"none": {
+				"description": "{Last Wish}\n\nConsumes a guard's corpse and fires beams from it in 6 directions to the edge of the battlefield; every enemy stack on the lines takes 1250 Light damage. Cannot be used without a guard's corpse. Cooldown: 2 rounds."
+			},
+			"basic": {
+				"description": "{Last Wish}\n\nConsumes a guard's corpse and fires beams from it in 6 directions to the edge of the battlefield; every enemy stack on the lines takes 1250 Light damage. Cannot be used without a guard's corpse. Cooldown: 2 rounds."
+			},
+			"advanced": {
+				"description": "{Last Wish}\n\nConsumes a guard's corpse and fires beams from it in 6 directions to the edge of the battlefield; every enemy stack on the lines takes 1250 Light damage. Cannot be used without a guard's corpse. Cooldown: 2 rounds."
+			},
+			"expert": {
+				"description": "{Last Wish}\n\nConsumes a guard's corpse and fires beams from it in 6 directions to the edge of the battlefield; every enemy stack on the lines takes 1250 Light damage. Cannot be used without a guard's corpse. Cooldown: 2 rounds."
+			}
+		}
+	},
+	"h6AbDazingWinds": {
+		"type": "ability",
+		"name": "Dazing Winds",
+		"school": {
+			"air": true,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"targetType": "CREATURE",
+		"flags": {
+			"special": true,
+			"negative": true
+		},
+		"sounds": {
+			"cast": ""
+		},
+		"graphics": {
+			"iconBook": "h6/spells/h6AbDazingWinds/Book",
+			"iconScroll": "h6/spells/h6AbDazingWinds/Scroll",
+			"iconScenarioBonus": "h6/spells/h6AbDazingWinds/Scenario",
+			"iconEffect": "h6/spells/h6AbDazingWinds/Effect"
+		},
+		"levels": {
+			"base": {
+				"cost": 0,
+				"power": 0,
+				"range": "0",
+				"targetModifier": {
+					"smart": false
+				},
+				"battleEffects": {
+					"cd": {
+						"type": "h6BossCd",
+						"key": "h6AbDazingWinds",
+						"cd": 2
+					},
+					"daze": {
+						"type": "h6AreaStatus",
+						"center": "single",
+						"status": "heroes-memorial.h6:h6DazingWindsOn",
+						"turns": 2,
+						"key": "h6AbDazingWinds",
+						"animation": "h6/boss/fx/twister",
+						"sound": "h6/boss/Thunderbird_Ability_Twister.wav"
+					}
+				}
+			},
+			"none": {
+				"description": "{Dazing Winds}\n\nThe target enemy cannot act for the next 2 rounds. Cooldown: 2 rounds."
+			},
+			"basic": {
+				"description": "{Dazing Winds}\n\nThe target enemy cannot act for the next 2 rounds. Cooldown: 2 rounds."
+			},
+			"advanced": {
+				"description": "{Dazing Winds}\n\nThe target enemy cannot act for the next 2 rounds. Cooldown: 2 rounds."
+			},
+			"expert": {
+				"description": "{Dazing Winds}\n\nThe target enemy cannot act for the next 2 rounds. Cooldown: 2 rounds."
+			}
+		}
+	},
+	"h6AbStaticDischarge": {
+		"type": "ability",
+		"name": "Static Discharge",
+		"school": {
+			"air": true,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"targetType": "NO_TARGET",
+		"flags": {
+			"special": true,
+			"negative": true
+		},
+		"sounds": {
+			"cast": ""
+		},
+		"graphics": {
+			"iconBook": "h6/spells/h6AbStaticDischarge/Book",
+			"iconScroll": "h6/spells/h6AbStaticDischarge/Scroll",
+			"iconScenarioBonus": "h6/spells/h6AbStaticDischarge/Scenario",
+			"iconEffect": "h6/spells/h6AbStaticDischarge/Effect"
+		},
+		"levels": {
+			"base": {
+				"cost": 0,
+				"power": 0,
+				"range": "0",
+				"targetModifier": {
+					"smart": false
+				},
+				"battleEffects": {
+					"cd": {
+						"type": "h6BossCd",
+						"key": "h6AbStaticDischarge",
+						"cd": 2
+					},
+					"static": {
+						"type": "h6StaticDischarge",
+						"per": 100,
+						"extra": 100,
+						"key": "h6AbStaticDischarge",
+						"animation": "h6/boss/fx/static",
+						"sound": "h6/boss/Thunderbird_Ability_StaticDischarge.wav"
+					}
+				}
+			},
+			"none": {
+				"description": "{Static Discharge}\n\nEach enemy stack takes 100 Air damage, plus 100 more for each stack next to it. Cooldown: 2 rounds."
+			},
+			"basic": {
+				"description": "{Static Discharge}\n\nEach enemy stack takes 100 Air damage, plus 100 more for each stack next to it. Cooldown: 2 rounds."
+			},
+			"advanced": {
+				"description": "{Static Discharge}\n\nEach enemy stack takes 100 Air damage, plus 100 more for each stack next to it. Cooldown: 2 rounds."
+			},
+			"expert": {
+				"description": "{Static Discharge}\n\nEach enemy stack takes 100 Air damage, plus 100 more for each stack next to it. Cooldown: 2 rounds."
+			}
+		}
+	},
+	"h6AbBossChainLightning": {
+		"type": "ability",
+		"name": "Thunder Chain",
+		"school": {
+			"air": true,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"targetType": "CREATURE",
+		"flags": {
+			"special": true,
+			"negative": true
+		},
+		"sounds": {
+			"cast": ""
+		},
+		"graphics": {
+			"iconBook": "h6/spells/h6AbBossChainLightning/Book",
+			"iconScroll": "h6/spells/h6AbBossChainLightning/Scroll",
+			"iconScenarioBonus": "h6/spells/h6AbBossChainLightning/Scenario",
+			"iconEffect": "h6/spells/h6AbBossChainLightning/Effect"
+		},
+		"levels": {
+			"base": {
+				"cost": 0,
+				"power": 0,
+				"range": "0",
+				"targetModifier": {
+					"smart": false
+				},
+				"battleEffects": {
+					"cd": {
+						"type": "h6BossCd",
+						"key": "h6AbBossChainLightning",
+						"cd": 2
+					},
+					"chain": {
+						"type": "h6ChainLightning",
+						"per": 150,
+						"jumps": 3,
+						"key": "h6AbBossChainLightning",
+						"animation": "h6/boss/fx/chain"
+					}
+				}
+			},
+			"none": {
+				"description": "{Thunder Chain}\n\nDeals 150 Air damage to an enemy stack, then jumps to the 3 nearest other enemy stacks, halving the damage with each jump. Cooldown: 2 rounds."
+			},
+			"basic": {
+				"description": "{Thunder Chain}\n\nDeals 150 Air damage to an enemy stack, then jumps to the 3 nearest other enemy stacks, halving the damage with each jump. Cooldown: 2 rounds."
+			},
+			"advanced": {
+				"description": "{Thunder Chain}\n\nDeals 150 Air damage to an enemy stack, then jumps to the 3 nearest other enemy stacks, halving the damage with each jump. Cooldown: 2 rounds."
+			},
+			"expert": {
+				"description": "{Thunder Chain}\n\nDeals 150 Air damage to an enemy stack, then jumps to the 3 nearest other enemy stacks, halving the damage with each jump. Cooldown: 2 rounds."
+			}
+		}
+	},
+	"h6AbLightningStrikes": {
+		"type": "ability",
+		"name": "Lightning Strikes",
+		"school": {
+			"air": true,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"targetType": "CREATURE",
+		"flags": {
+			"special": true,
+			"negative": true
+		},
+		"sounds": {
+			"cast": ""
+		},
+		"graphics": {
+			"iconBook": "h6/spells/h6AbLightningStrikes/Book",
+			"iconScroll": "h6/spells/h6AbLightningStrikes/Scroll",
+			"iconScenarioBonus": "h6/spells/h6AbLightningStrikes/Scenario",
+			"iconEffect": "h6/spells/h6AbLightningStrikes/Effect"
+		},
+		"levels": {
+			"base": {
+				"cost": 0,
+				"power": 0,
+				"range": "0",
+				"targetModifier": {
+					"smart": false
+				},
+				"battleEffects": {
+					"cd": {
+						"type": "h6BossCd",
+						"key": "h6AbLightningStrikes",
+						"cd": 2
+					},
+					"strike": {
+						"type": "h6AreaStatus",
+						"center": "single",
+						"dot": 300,
+						"dotTurns": 4,
+						"dotSrc": "zap",
+						"key": "h6AbLightningStrikes",
+						"animation": "h6/boss/fx/strike",
+						"sound": "h6/boss/Thunderbird_Ability_LightningConductor(Impact).wav"
+					}
+				}
+			},
+			"none": {
+				"description": "{Lightning Strikes}\n\nThe target enemy takes 300 Air damage at the start of each of the next 4 rounds. Cooldown: 2 rounds."
+			},
+			"basic": {
+				"description": "{Lightning Strikes}\n\nThe target enemy takes 300 Air damage at the start of each of the next 4 rounds. Cooldown: 2 rounds."
+			},
+			"advanced": {
+				"description": "{Lightning Strikes}\n\nThe target enemy takes 300 Air damage at the start of each of the next 4 rounds. Cooldown: 2 rounds."
+			},
+			"expert": {
+				"description": "{Lightning Strikes}\n\nThe target enemy takes 300 Air damage at the start of each of the next 4 rounds. Cooldown: 2 rounds."
+			}
+		}
+	},
+	"h6AbHurricane": {
+		"type": "ability",
+		"name": "Hurricane",
+		"school": {
+			"air": true,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"targetType": "NO_TARGET",
+		"flags": {
+			"special": true,
+			"negative": true
+		},
+		"sounds": {
+			"cast": ""
+		},
+		"graphics": {
+			"iconBook": "h6/spells/h6AbHurricane/Book",
+			"iconScroll": "h6/spells/h6AbHurricane/Scroll",
+			"iconScenarioBonus": "h6/spells/h6AbHurricane/Scenario",
+			"iconEffect": "h6/spells/h6AbHurricane/Effect"
+		},
+		"levels": {
+			"base": {
+				"cost": 0,
+				"power": 0,
+				"range": "0",
+				"targetModifier": {
+					"smart": false
+				},
+				"battleEffects": {
+					"0aiHint": {
+						"type": "h6AiHint",
+						"mode": "foes",
+						"center": "caster",
+						"radius": 2,
+						"small": true,
+						"melee": true,
+						"ratio": 0.5,
+						"cap": 3
+					},
+					"cd": {
+						"type": "h6BossCd",
+						"key": "h6AbHurricane",
+						"cd": 3
+					},
+					"wind": {
+						"type": "h6TidalWave",
+						"near": 2,
+						"knock": 2,
+						"key": "h6AbHurricane",
+						"animation": "h6/boss/fx/hurricane",
+						"sound": "h6/boss/Thunderbird_Ability_Cyclone.wav"
+					}
+				}
+			},
+			"none": {
+				"description": "{Hurricane}\n\nBlows away all enemies within 2 hexes of the Thunderbird (one-hex stacks are pushed 2 hexes away from the Thunderbird). Cooldown: 3 rounds."
+			},
+			"basic": {
+				"description": "{Hurricane}\n\nBlows away all enemies within 2 hexes of the Thunderbird (one-hex stacks are pushed 2 hexes away from the Thunderbird). Cooldown: 3 rounds."
+			},
+			"advanced": {
+				"description": "{Hurricane}\n\nBlows away all enemies within 2 hexes of the Thunderbird (one-hex stacks are pushed 2 hexes away from the Thunderbird). Cooldown: 3 rounds."
+			},
+			"expert": {
+				"description": "{Hurricane}\n\nBlows away all enemies within 2 hexes of the Thunderbird (one-hex stacks are pushed 2 hexes away from the Thunderbird). Cooldown: 3 rounds."
+			}
+		}
+	},
+	"h6AbShrivellingBreath": {
+		"type": "ability",
+		"name": "Shrivelling Breath",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"targetType": "CREATURE",
+		"flags": {
+			"special": true,
+			"negative": true
+		},
+		"sounds": {
+			"cast": ""
+		},
+		"graphics": {
+			"iconBook": "h6/spells/h6AbShrivellingBreath/Book",
+			"iconScroll": "h6/spells/h6AbShrivellingBreath/Scroll",
+			"iconScenarioBonus": "h6/spells/h6AbShrivellingBreath/Scenario",
+			"iconEffect": "h6/spells/h6AbShrivellingBreath/Effect"
+		},
+		"levels": {
+			"base": {
+				"cost": 0,
+				"power": 0,
+				"range": "0",
+				"targetModifier": {
+					"smart": false
+				},
+				"battleEffects": {
+					"cd": {
+						"type": "h6BossCd",
+						"key": "h6AbShrivellingBreath",
+						"cd": 1
+					},
+					"breath": {
+						"type": "h6AreaStatus",
+						"center": "target",
+						"per": 100,
+						"school": "02darkSchool",
+						"logIndex": 15,
+						"key": "h6AbShrivellingBreath",
+						"animation": "h6/boss/fx/breath",
+						"sound": "h6/boss/Dragonwraith_Ability1.wav"
+					}
+				}
+			},
+			"none": {
+				"description": "{Shrivelling Breath}\n\nThe target and the enemies next to it take 100 Dark damage each (reduced by Dark and all-spell damage reduction). Cooldown: 1 round."
+			},
+			"basic": {
+				"description": "{Shrivelling Breath}\n\nThe target and the enemies next to it take 100 Dark damage each (reduced by Dark and all-spell damage reduction). Cooldown: 1 round."
+			},
+			"advanced": {
+				"description": "{Shrivelling Breath}\n\nThe target and the enemies next to it take 100 Dark damage each (reduced by Dark and all-spell damage reduction). Cooldown: 1 round."
+			},
+			"expert": {
+				"description": "{Shrivelling Breath}\n\nThe target and the enemies next to it take 100 Dark damage each (reduced by Dark and all-spell damage reduction). Cooldown: 1 round."
+			}
+		}
+	},
+	"h6AbDragonwraithCurse": {
+		"type": "ability",
+		"name": "Wraith Curse",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"targetType": "CREATURE",
+		"flags": {
+			"special": true,
+			"negative": true
+		},
+		"sounds": {
+			"cast": ""
+		},
+		"graphics": {
+			"iconBook": "h6/spells/h6AbDragonwraithCurse/Book",
+			"iconScroll": "h6/spells/h6AbDragonwraithCurse/Scroll",
+			"iconScenarioBonus": "h6/spells/h6AbDragonwraithCurse/Scenario",
+			"iconEffect": "h6/spells/h6AbDragonwraithCurse/Effect"
+		},
+		"levels": {
+			"base": {
+				"cost": 0,
+				"power": 0,
+				"range": "0",
+				"targetModifier": {
+					"smart": false
+				},
+				"battleEffects": {
+					"cd": {
+						"type": "h6BossCd",
+						"key": "h6AbDragonwraithCurse",
+						"cd": 1
+					},
+					"curse": {
+						"type": "h6SpectralCurse",
+						"pct": 100,
+						"range": 20,
+						"turns": 4,
+						"key": "h6AbDragonwraithCurse",
+						"animation": "h6/dungeon/fx/wither",
+						"sound": "h6/boss/Dragonwraith_Ability2.wav"
+					}
+				}
+			},
+			"none": {
+				"description": "{Wraith Curse}\n\nAn enemy stack takes normal attack damage as Dark damage (no retaliation); for the next 4 rounds, all damage it deals with attacks heals the Dragonwraith (can revive those fallen this battle). Cooldown: 1 round."
+			},
+			"basic": {
+				"description": "{Wraith Curse}\n\nAn enemy stack takes normal attack damage as Dark damage (no retaliation); for the next 4 rounds, all damage it deals with attacks heals the Dragonwraith (can revive those fallen this battle). Cooldown: 1 round."
+			},
+			"advanced": {
+				"description": "{Wraith Curse}\n\nAn enemy stack takes normal attack damage as Dark damage (no retaliation); for the next 4 rounds, all damage it deals with attacks heals the Dragonwraith (can revive those fallen this battle). Cooldown: 1 round."
+			},
+			"expert": {
+				"description": "{Wraith Curse}\n\nAn enemy stack takes normal attack damage as Dark damage (no retaliation); for the next 4 rounds, all damage it deals with attacks heals the Dragonwraith (can revive those fallen this battle). Cooldown: 1 round."
+			}
+		}
+	},
+	"h6AbVoidGate": {
+		"type": "ability",
+		"name": "Void Gate",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"targetType": "CREATURE",
+		"flags": {
+			"special": true,
+			"negative": true
+		},
+		"sounds": {
+			"cast": ""
+		},
+		"graphics": {
+			"iconBook": "h6/spells/h6AbVoidGate/Book",
+			"iconScroll": "h6/spells/h6AbVoidGate/Scroll",
+			"iconScenarioBonus": "h6/spells/h6AbVoidGate/Scenario",
+			"iconEffect": "h6/spells/h6AbVoidGate/Effect"
+		},
+		"levels": {
+			"base": {
+				"cost": 0,
+				"power": 0,
+				"range": "0",
+				"targetModifier": {
+					"smart": false
+				},
+				"battleEffects": {
+					"cd": {
+						"type": "h6BossCd",
+						"key": "h6AbVoidGate",
+						"cd": 1
+					},
+					"gate": {
+						"type": "h6VoidGate",
+						"gate": 3,
+						"turns": 2,
+						"key": "h6AbVoidGate",
+						"animation": "h6/boss/fx/voidGate",
+						"sound": "h6/boss/AvatarOfTheVoid_AttackLaunchMeleeRanged.wav"
+					}
+				}
+			},
+			"none": {
+				"description": "{Void Gate}\n\nOpens a Void Gate under an enemy stack for 2 rounds, erasing 3% of its number (at least 1) at the start of each round. Cooldown: 1 round."
+			},
+			"basic": {
+				"description": "{Void Gate}\n\nOpens a Void Gate under an enemy stack for 2 rounds, erasing 3% of its number (at least 1) at the start of each round. Cooldown: 1 round."
+			},
+			"advanced": {
+				"description": "{Void Gate}\n\nOpens a Void Gate under an enemy stack for 2 rounds, erasing 3% of its number (at least 1) at the start of each round. Cooldown: 1 round."
+			},
+			"expert": {
+				"description": "{Void Gate}\n\nOpens a Void Gate under an enemy stack for 2 rounds, erasing 3% of its number (at least 1) at the start of each round. Cooldown: 1 round."
+			}
+		}
+	},
+	"h6AbVoidRift": {
+		"type": "ability",
+		"name": "Void Rift",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"targetType": "CREATURE",
+		"flags": {
+			"special": true,
+			"negative": true
+		},
+		"sounds": {
+			"cast": ""
+		},
+		"graphics": {
+			"iconBook": "h6/spells/h6AbVoidRift/Book",
+			"iconScroll": "h6/spells/h6AbVoidRift/Scroll",
+			"iconScenarioBonus": "h6/spells/h6AbVoidRift/Scenario",
+			"iconEffect": "h6/spells/h6AbVoidRift/Effect"
+		},
+		"levels": {
+			"base": {
+				"cost": 0,
+				"power": 0,
+				"range": "0",
+				"targetModifier": {
+					"smart": false
+				},
+				"battleEffects": {
+					"cd": {
+						"type": "h6BossCd",
+						"key": "h6AbVoidRift",
+						"cd": 4
+					},
+					"rift": {
+						"type": "h6VoidRift",
+						"radius": 2,
+						"per": 200,
+						"turns": 4,
+						"key": "h6AbVoidRift",
+						"animation": "h6/boss/fx/rift",
+						"sound": "h6/boss/AvatarOfTheVoid_Ability2.wav"
+					}
+				}
+			},
+			"none": {
+				"description": "{Void Rift}\n\nTears open a rift at an enemy stack: enemies within 2 hexes of it are pulled 1 hex closer and take 200 damage (of no school) at the start of each of the next 4 rounds. Cooldown: 4 rounds."
+			},
+			"basic": {
+				"description": "{Void Rift}\n\nTears open a rift at an enemy stack: enemies within 2 hexes of it are pulled 1 hex closer and take 200 damage (of no school) at the start of each of the next 4 rounds. Cooldown: 4 rounds."
+			},
+			"advanced": {
+				"description": "{Void Rift}\n\nTears open a rift at an enemy stack: enemies within 2 hexes of it are pulled 1 hex closer and take 200 damage (of no school) at the start of each of the next 4 rounds. Cooldown: 4 rounds."
+			},
+			"expert": {
+				"description": "{Void Rift}\n\nTears open a rift at an enemy stack: enemies within 2 hexes of it are pulled 1 hex closer and take 200 damage (of no school) at the start of each of the next 4 rounds. Cooldown: 4 rounds."
+			}
+		}
+	},
+	"h6AbVoidCircle": {
+		"type": "ability",
+		"name": "Void Circle",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"targetType": "NO_TARGET",
+		"flags": {
+			"special": true,
+			"positive": true
+		},
+		"sounds": {
+			"cast": ""
+		},
+		"graphics": {
+			"iconBook": "h6/spells/h6AbVoidCircle/Book",
+			"iconScroll": "h6/spells/h6AbVoidCircle/Scroll",
+			"iconScenarioBonus": "h6/spells/h6AbVoidCircle/Scenario",
+			"iconEffect": "h6/spells/h6AbVoidCircle/Effect"
+		},
+		"levels": {
+			"base": {
+				"cost": 0,
+				"power": 0,
+				"range": "0",
+				"targetModifier": {
+					"smart": false
+				},
+				"battleEffects": {
+					"cd": {
+						"type": "h6BossCd",
+						"key": "h6AbVoidCircle",
+						"cd": 5,
+						"uses": 2
+					},
+					"circle": {
+						"type": "h6SelfStatus",
+						"status": "heroes-memorial.h6:h6VoidCircleOn",
+						"turns": 4,
+						"key": "h6AbVoidCircle",
+						"animation": "h6/boss/fx/circle",
+						"sound": "h6/boss/AvatarOfTheVoid_Ability3.wav"
+					}
+				}
+			},
+			"none": {
+				"description": "{Void Circle}\n\n2 uses per battle, cast on self: for 4 rounds, enemies attacking it from more than 2 hexes away deal -90% damage, enemies within 2 hexes take 100 damage each round, and it regains 8% of its starting Hit Points each round. Cooldown: 5 rounds."
+			},
+			"basic": {
+				"description": "{Void Circle}\n\n2 uses per battle, cast on self: for 4 rounds, enemies attacking it from more than 2 hexes away deal -90% damage, enemies within 2 hexes take 100 damage each round, and it regains 8% of its starting Hit Points each round. Cooldown: 5 rounds."
+			},
+			"advanced": {
+				"description": "{Void Circle}\n\n2 uses per battle, cast on self: for 4 rounds, enemies attacking it from more than 2 hexes away deal -90% damage, enemies within 2 hexes take 100 damage each round, and it regains 8% of its starting Hit Points each round. Cooldown: 5 rounds."
+			},
+			"expert": {
+				"description": "{Void Circle}\n\n2 uses per battle, cast on self: for 4 rounds, enemies attacking it from more than 2 hexes away deal -90% damage, enemies within 2 hexes take 100 damage each round, and it regains 8% of its starting Hit Points each round. Cooldown: 5 rounds."
+			}
+		}
+	},
+	"h6AbVoidQuake": {
+		"type": "ability",
+		"name": "Void Quake",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"targetType": "NO_TARGET",
+		"flags": {
+			"special": true,
+			"negative": true
+		},
+		"sounds": {
+			"cast": ""
+		},
+		"graphics": {
+			"iconBook": "h6/spells/h6AbVoidQuake/Book",
+			"iconScroll": "h6/spells/h6AbVoidQuake/Scroll",
+			"iconScenarioBonus": "h6/spells/h6AbVoidQuake/Scenario",
+			"iconEffect": "h6/spells/h6AbVoidQuake/Effect"
+		},
+		"levels": {
+			"base": {
+				"cost": 0,
+				"power": 0,
+				"range": "0",
+				"targetModifier": {
+					"smart": false
+				},
+				"battleEffects": {
+					"cd": {
+						"type": "h6BossCd",
+						"key": "h6AbVoidQuake",
+						"cd": 4
+					},
+					"quake": {
+						"type": "h6Quake",
+						"pct": 100,
+						"knock": 2,
+						"key": "h6AbVoidQuake",
+						"animation": "h6/boss/fx/quake",
+						"sound": "h6/boss/AvatarOfTheVoid_Ability4.wav"
+					}
+				}
+			},
+			"none": {
+				"description": "{Void Quake}\n\nStrikes all adjacent enemies for normal attack damage (no retaliation); one-hex stacks are pushed back 2 hexes. Cooldown: 4 rounds."
+			},
+			"basic": {
+				"description": "{Void Quake}\n\nStrikes all adjacent enemies for normal attack damage (no retaliation); one-hex stacks are pushed back 2 hexes. Cooldown: 4 rounds."
+			},
+			"advanced": {
+				"description": "{Void Quake}\n\nStrikes all adjacent enemies for normal attack damage (no retaliation); one-hex stacks are pushed back 2 hexes. Cooldown: 4 rounds."
+			},
+			"expert": {
+				"description": "{Void Quake}\n\nStrikes all adjacent enemies for normal attack damage (no retaliation); one-hex stacks are pushed back 2 hexes. Cooldown: 4 rounds."
+			}
+		}
+	},
+	"h6AbMonsoon": {
+		"type": "ability",
+		"name": "Monsoon",
+		"school": {
+			"air": true,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"targetType": "CREATURE",
+		"flags": {
+			"special": true,
+			"negative": true
+		},
+		"sounds": {
+			"cast": ""
+		},
+		"graphics": {
+			"iconBook": "h6/spells/h6AbMonsoon/Book",
+			"iconScroll": "h6/spells/h6AbMonsoon/Scroll",
+			"iconScenarioBonus": "h6/spells/h6AbMonsoon/Scenario",
+			"iconEffect": "h6/spells/h6AbMonsoon/Effect"
+		},
+		"levels": {
+			"base": {
+				"cost": 0,
+				"power": 0,
+				"range": "0",
+				"targetModifier": {
+					"smart": false
+				},
+				"battleEffects": {
+					"cd": {
+						"type": "h6BossCd",
+						"key": "h6AbMonsoon",
+						"cd": 4
+					},
+					"storm": {
+						"type": "h6AreaStatus",
+						"center": "target",
+						"radius": 2,
+						"per": 200,
+						"school": "air",
+						"status": "heroes-memorial:h6Soaked",
+						"turns": 3,
+						"logIndex": 16,
+						"key": "h6AbMonsoon",
+						"animation": "h6/boss/fx/monsoon",
+						"sound": "h6/boss/EnragedKirin_Ability1.wav"
+					}
+				}
+			},
+			"none": {
+				"description": "{Monsoon}\n\nEnemies within 2 hexes of the target take 200 Air damage each and are Soaked for 3 rounds. Cooldown: 4 rounds."
+			},
+			"basic": {
+				"description": "{Monsoon}\n\nEnemies within 2 hexes of the target take 200 Air damage each and are Soaked for 3 rounds. Cooldown: 4 rounds."
+			},
+			"advanced": {
+				"description": "{Monsoon}\n\nEnemies within 2 hexes of the target take 200 Air damage each and are Soaked for 3 rounds. Cooldown: 4 rounds."
+			},
+			"expert": {
+				"description": "{Monsoon}\n\nEnemies within 2 hexes of the target take 200 Air damage each and are Soaked for 3 rounds. Cooldown: 4 rounds."
+			}
+		}
+	},
+	"h6AbRiptide": {
+		"type": "ability",
+		"name": "Riptide",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": true
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"targetType": "CREATURE",
+		"flags": {
+			"special": true,
+			"negative": true
+		},
+		"sounds": {
+			"cast": ""
+		},
+		"graphics": {
+			"iconBook": "h6/spells/h6AbRiptide/Book",
+			"iconScroll": "h6/spells/h6AbRiptide/Scroll",
+			"iconScenarioBonus": "h6/spells/h6AbRiptide/Scenario",
+			"iconEffect": "h6/spells/h6AbRiptide/Effect"
+		},
+		"levels": {
+			"base": {
+				"cost": 0,
+				"power": 0,
+				"range": "0",
+				"targetModifier": {
+					"smart": false
+				},
+				"battleEffects": {
+					"cd": {
+						"type": "h6BossCd",
+						"key": "h6AbRiptide",
+						"cd": 3
+					},
+					"tide": {
+						"type": "h6Riptide",
+						"damage": 350,
+						"key": "h6AbRiptide",
+						"animation": "h6/boss/fx/riptide",
+						"sound": "h6/boss/EnragedKirin_Ability2.mp3"
+					}
+				}
+			},
+			"none": {
+				"description": "{Riptide}\n\nMarks a ripple under an enemy stack; at the start of the next round a water column rises from that hex, dealing 350 Water damage to the stack standing there. Moving away avoids it. Cooldown: 3 rounds."
+			},
+			"basic": {
+				"description": "{Riptide}\n\nMarks a ripple under an enemy stack; at the start of the next round a water column rises from that hex, dealing 350 Water damage to the stack standing there. Moving away avoids it. Cooldown: 3 rounds."
+			},
+			"advanced": {
+				"description": "{Riptide}\n\nMarks a ripple under an enemy stack; at the start of the next round a water column rises from that hex, dealing 350 Water damage to the stack standing there. Moving away avoids it. Cooldown: 3 rounds."
+			},
+			"expert": {
+				"description": "{Riptide}\n\nMarks a ripple under an enemy stack; at the start of the next round a water column rises from that hex, dealing 350 Water damage to the stack standing there. Moving away avoids it. Cooldown: 3 rounds."
+			}
+		}
+	},
+	"h6AbGreatTsunami": {
+		"type": "ability",
+		"name": "Great Tsunami",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": true
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"targetType": "NO_TARGET",
+		"flags": {
+			"special": true,
+			"negative": true
+		},
+		"sounds": {
+			"cast": ""
+		},
+		"graphics": {
+			"iconBook": "h6/spells/h6AbGreatTsunami/Book",
+			"iconScroll": "h6/spells/h6AbGreatTsunami/Scroll",
+			"iconScenarioBonus": "h6/spells/h6AbGreatTsunami/Scenario",
+			"iconEffect": "h6/spells/h6AbGreatTsunami/Effect"
+		},
+		"levels": {
+			"base": {
+				"cost": 0,
+				"power": 0,
+				"range": "0",
+				"targetModifier": {
+					"smart": false
+				},
+				"battleEffects": {
+					"cd": {
+						"type": "h6BossCd",
+						"key": "h6AbGreatTsunami",
+						"cd": 5
+					},
+					"wave": {
+						"type": "h6TidalWave",
+						"per": 250,
+						"school": "water",
+						"status": "heroes-memorial:h6Dazed",
+						"turns": 1,
+						"knock": 2,
+						"key": "h6AbGreatTsunami",
+						"animation": "h6/boss/fx/tsunami",
+						"sound": "h6/boss/EnragedKirin_Ability3.wav"
+					}
+				}
+			},
+			"none": {
+				"description": "{Great Tsunami}\n\nAll enemy stacks take 250 Water damage each and are Dazed (H6 Dazed); one-hex enemies are swept back 2 hexes. Cooldown: 5 rounds."
+			},
+			"basic": {
+				"description": "{Great Tsunami}\n\nAll enemy stacks take 250 Water damage each and are Dazed (H6 Dazed); one-hex enemies are swept back 2 hexes. Cooldown: 5 rounds."
+			},
+			"advanced": {
+				"description": "{Great Tsunami}\n\nAll enemy stacks take 250 Water damage each and are Dazed (H6 Dazed); one-hex enemies are swept back 2 hexes. Cooldown: 5 rounds."
+			},
+			"expert": {
+				"description": "{Great Tsunami}\n\nAll enemy stacks take 250 Water damage each and are Dazed (H6 Dazed); one-hex enemies are swept back 2 hexes. Cooldown: 5 rounds."
+			}
+		}
+	},
+	"h6FanaticismOn": {
+		"type": "ability",
+		"name": "Fanaticism",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"targetType": "CREATURE",
+		"flags": {
+			"special": true,
+			"positive": true
+		},
+		"sounds": {
+			"cast": ""
+		},
+		"graphics": {
+			"iconBook": "h6/spells/h6FanaticismOn/Book",
+			"iconScroll": "h6/spells/h6FanaticismOn/Scroll",
+			"iconScenarioBonus": "h6/spells/h6FanaticismOn/Scenario",
+			"iconEffect": "h6/spells/h6FanaticismOn/Effect"
+		},
+		"levels": {
+			"base": {
+				"cost": 0,
+				"power": 0,
+				"range": "0",
+				"targetModifier": {
+					"smart": false
+				},
+				"battleEffects": {
+					"status": {
+						"type": "timed",
+						"bonus": {
+							"morale": {
+								"type": "MORALE",
+								"val": 3,
+								"duration": "N_TURNS",
+								"turns": 2
+							}
+						}
+					}
+				}
+			},
+			"none": {
+				"description": "{Fanaticism}\n\n+3 Morale for 2 rounds."
+			},
+			"basic": {
+				"description": "{Fanaticism}\n\n+3 Morale for 2 rounds."
+			},
+			"advanced": {
+				"description": "{Fanaticism}\n\n+3 Morale for 2 rounds."
+			},
+			"expert": {
+				"description": "{Fanaticism}\n\n+3 Morale for 2 rounds."
+			}
+		},
+		"animation": {
+			"affect": [
+				"h6/boss/fx/fanaticism"
+			]
+		}
+	},
+	"h6AbMassResurrection": {
+		"type": "ability",
+		"name": "Mass Resurrection",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"targetType": "NO_TARGET",
+		"flags": {
+			"special": true,
+			"positive": true
+		},
+		"sounds": {
+			"cast": ""
+		},
+		"graphics": {
+			"iconBook": "h6/spells/h6AbMassResurrection/Book",
+			"iconScroll": "h6/spells/h6AbMassResurrection/Scroll",
+			"iconScenarioBonus": "h6/spells/h6AbMassResurrection/Scenario",
+			"iconEffect": "h6/spells/h6AbMassResurrection/Effect"
+		},
+		"levels": {
+			"base": {
+				"cost": 0,
+				"power": 0,
+				"range": "0",
+				"targetModifier": {
+					"smart": false
+				},
+				"battleEffects": {
+					"cd": {
+						"type": "h6BossCd",
+						"key": "h6AbMassResurrection",
+						"cd": 4
+					},
+					"res": {
+						"type": "h6MassRes",
+						"key": "h6AbMassResurrection",
+						"animation": "h6/boss/fx/resurrect"
+					}
+				}
+			},
+			"none": {
+				"description": "{Mass Resurrection}\n\nAll fallen allied stacks (with corpses remaining) are fully revived to their starting numbers (permanently). Cooldown: 4 rounds."
+			},
+			"basic": {
+				"description": "{Mass Resurrection}\n\nAll fallen allied stacks (with corpses remaining) are fully revived to their starting numbers (permanently). Cooldown: 4 rounds."
+			},
+			"advanced": {
+				"description": "{Mass Resurrection}\n\nAll fallen allied stacks (with corpses remaining) are fully revived to their starting numbers (permanently). Cooldown: 4 rounds."
+			},
+			"expert": {
+				"description": "{Mass Resurrection}\n\nAll fallen allied stacks (with corpses remaining) are fully revived to their starting numbers (permanently). Cooldown: 4 rounds."
+			}
+		}
+	},
+	"h6AbDivinePresence": {
+		"type": "ability",
+		"name": "Divine Presence",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"targetType": "CREATURE",
+		"flags": {
+			"special": true,
+			"positive": true
+		},
+		"sounds": {
+			"cast": ""
+		},
+		"graphics": {
+			"iconBook": "h6/spells/h6AbDivinePresence/Book",
+			"iconScroll": "h6/spells/h6AbDivinePresence/Scroll",
+			"iconScenarioBonus": "h6/spells/h6AbDivinePresence/Scenario",
+			"iconEffect": "h6/spells/h6AbDivinePresence/Effect"
+		},
+		"levels": {
+			"base": {
+				"cost": 0,
+				"power": 0,
+				"range": "0",
+				"targetModifier": {
+					"smart": false
+				},
+				"battleEffects": {
+					"cd": {
+						"type": "h6BossCd",
+						"key": "h6AbDivinePresence",
+						"cd": 2
+					},
+					"divine": {
+						"type": "h6DivinePresence",
+						"key": "h6AbDivinePresence",
+						"animation": "h6/boss/fx/divine"
+					}
+				}
+			},
+			"none": {
+				"description": "{Divine Presence}\n\nAn allied stack (alive or dead) is restored to its starting Hit Points (can resurrect, permanently), is cleansed of all negative spells, and is immune to negative spells for the rest of the battle (cannot be dispelled). Cooldown: 2 rounds."
+			},
+			"basic": {
+				"description": "{Divine Presence}\n\nAn allied stack (alive or dead) is restored to its starting Hit Points (can resurrect, permanently), is cleansed of all negative spells, and is immune to negative spells for the rest of the battle (cannot be dispelled). Cooldown: 2 rounds."
+			},
+			"advanced": {
+				"description": "{Divine Presence}\n\nAn allied stack (alive or dead) is restored to its starting Hit Points (can resurrect, permanently), is cleansed of all negative spells, and is immune to negative spells for the rest of the battle (cannot be dispelled). Cooldown: 2 rounds."
+			},
+			"expert": {
+				"description": "{Divine Presence}\n\nAn allied stack (alive or dead) is restored to its starting Hit Points (can resurrect, permanently), is cleansed of all negative spells, and is immune to negative spells for the rest of the battle (cannot be dispelled). Cooldown: 2 rounds."
+			}
+		}
+	},
+	"h6AbFanaticism": {
+		"type": "ability",
+		"name": "Fanaticism",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"targetType": "CREATURE",
+		"flags": {
+			"special": true,
+			"positive": true
+		},
+		"sounds": {
+			"cast": ""
+		},
+		"graphics": {
+			"iconBook": "h6/spells/h6AbFanaticism/Book",
+			"iconScroll": "h6/spells/h6AbFanaticism/Scroll",
+			"iconScenarioBonus": "h6/spells/h6AbFanaticism/Scenario",
+			"iconEffect": "h6/spells/h6AbFanaticism/Effect"
+		},
+		"levels": {
+			"base": {
+				"cost": 0,
+				"power": 0,
+				"range": "0",
+				"targetModifier": {
+					"smart": false
+				},
+				"battleEffects": {
+					"cd": {
+						"type": "h6BossCd",
+						"key": "h6AbFanaticism",
+						"cd": 2
+					},
+					"fan": {
+						"type": "h6AreaStatus",
+						"center": "single",
+						"friendly": true,
+						"status": "heroes-memorial.h6:h6FanaticismOn",
+						"turns": 2,
+						"key": "h6AbFanaticism",
+						"animation": "h6/boss/fx/fanaticism",
+						"sound": "h6/boss/UrielBossFanaticism_Target.wav"
+					}
+				}
+			},
+			"none": {
+				"description": "{Fanaticism}\n\nAn allied stack gets +3 Morale for 2 rounds (+100 Morale in the H6 original). Cooldown: 2 rounds."
+			},
+			"basic": {
+				"description": "{Fanaticism}\n\nAn allied stack gets +3 Morale for 2 rounds (+100 Morale in the H6 original). Cooldown: 2 rounds."
+			},
+			"advanced": {
+				"description": "{Fanaticism}\n\nAn allied stack gets +3 Morale for 2 rounds (+100 Morale in the H6 original). Cooldown: 2 rounds."
+			},
+			"expert": {
+				"description": "{Fanaticism}\n\nAn allied stack gets +3 Morale for 2 rounds (+100 Morale in the H6 original). Cooldown: 2 rounds."
+			}
+		}
+	}
+}

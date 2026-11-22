@@ -1,0 +1,393 @@
+{
+	"basepath": "h6/neutral/ShadowPanther/",
+	"sequences": [
+		{
+			"group": 0,
+			"frames": [
+				"00_00.png",
+				"00_01.png",
+				"00_02.png",
+				"00_03.png",
+				"00_04.png",
+				"00_05.png",
+				"00_06.png",
+				"00_07.png"
+			],
+			"generateShadow": 1,
+			"generateOverlay": 1
+		},
+		{
+			"group": 1,
+			"frames": [
+				"01_00.png",
+				"01_01.png",
+				"01_02.png",
+				"01_03.png",
+				"01_04.png",
+				"01_05.png"
+			],
+			"generateShadow": 1,
+			"generateOverlay": 1
+		},
+		{
+			"group": 2,
+			"frames": [
+				"02_00.png",
+				"02_01.png",
+				"02_02.png",
+				"02_03.png",
+				"02_04.png",
+				"02_05.png",
+				"02_06.png",
+				"02_07.png",
+				"02_08.png",
+				"02_09.png"
+			],
+			"generateShadow": 1,
+			"generateOverlay": 1
+		},
+		{
+			"group": 3,
+			"frames": [
+				"03_00.png",
+				"03_01.png",
+				"03_02.png",
+				"03_03.png",
+				"03_04.png",
+				"03_05.png",
+				"03_06.png"
+			],
+			"generateShadow": 1,
+			"generateOverlay": 1
+		},
+		{
+			"group": 4,
+			"frames": [
+				"04_00.png",
+				"04_01.png",
+				"04_02.png",
+				"04_03.png",
+				"04_04.png",
+				"04_05.png",
+				"04_06.png",
+				"04_07.png"
+			],
+			"generateShadow": 1,
+			"generateOverlay": 1
+		},
+		{
+			"group": 5,
+			"frames": [
+				"05_00.png",
+				"05_01.png",
+				"05_02.png",
+				"05_03.png",
+				"05_04.png",
+				"05_05.png",
+				"05_06.png",
+				"05_07.png",
+				"05_08.png",
+				"05_09.png"
+			],
+			"generateShadow": 1,
+			"generateOverlay": 1
+		},
+		{
+			"group": 6,
+			"frames": [
+				"05_00.png",
+				"05_01.png",
+				"05_02.png",
+				"05_03.png",
+				"05_04.png",
+				"05_05.png",
+				"05_06.png",
+				"05_07.png",
+				"05_08.png",
+				"05_09.png"
+			],
+			"generateShadow": 1,
+			"generateOverlay": 1
+		},
+		{
+			"group": 7,
+			"frames": [
+				"07_00.png",
+				"07_01.png",
+				"07_02.png"
+			],
+			"generateShadow": 1,
+			"generateOverlay": 1
+		},
+		{
+			"group": 8,
+			"frames": [
+				"08_00.png",
+				"08_01.png",
+				"08_02.png"
+			],
+			"generateShadow": 1,
+			"generateOverlay": 1
+		},
+		{
+			"group": 9,
+			"frames": [
+				"07_00.png",
+				"07_01.png",
+				"07_02.png"
+			],
+			"generateShadow": 1,
+			"generateOverlay": 1
+		},
+		{
+			"group": 10,
+			"frames": [
+				"08_00.png",
+				"08_01.png",
+				"08_02.png"
+			],
+			"generateShadow": 1,
+			"generateOverlay": 1
+		},
+		{
+			"group": 11,
+			"frames": [
+				"11_00.png",
+				"11_01.png",
+				"11_02.png",
+				"11_03.png",
+				"11_04.png",
+				"11_05.png",
+				"11_06.png",
+				"11_07.png",
+				"11_08.png",
+				"11_09.png",
+				"11_10.png"
+			],
+			"generateShadow": 1,
+			"generateOverlay": 1
+		},
+		{
+			"group": 12,
+			"frames": [
+				"12_00.png",
+				"12_01.png",
+				"12_02.png",
+				"12_03.png",
+				"12_04.png",
+				"12_05.png",
+				"12_06.png",
+				"12_07.png",
+				"12_08.png",
+				"12_09.png",
+				"12_10.png"
+			],
+			"generateShadow": 1,
+			"generateOverlay": 1
+		},
+		{
+			"group": 13,
+			"frames": [
+				"13_00.png",
+				"13_01.png",
+				"13_02.png",
+				"13_03.png",
+				"13_04.png",
+				"13_05.png",
+				"13_06.png",
+				"13_07.png",
+				"13_08.png",
+				"13_09.png",
+				"13_10.png"
+			],
+			"generateShadow": 1,
+			"generateOverlay": 1
+		},
+		{
+			"group": 17,
+			"frames": [
+				"17_00.png",
+				"17_01.png",
+				"17_02.png",
+				"17_03.png",
+				"17_04.png",
+				"17_05.png",
+				"17_06.png",
+				"17_07.png",
+				"17_08.png",
+				"17_09.png",
+				"17_10.png",
+				"17_11.png"
+			],
+			"generateShadow": 1,
+			"generateOverlay": 1
+		},
+		{
+			"group": 18,
+			"frames": [
+				"18_00.png",
+				"18_01.png",
+				"18_02.png",
+				"18_03.png",
+				"18_04.png",
+				"18_05.png",
+				"18_06.png",
+				"18_07.png",
+				"18_08.png",
+				"18_09.png",
+				"18_10.png",
+				"18_11.png"
+			],
+			"generateShadow": 1,
+			"generateOverlay": 1
+		},
+		{
+			"group": 19,
+			"frames": [
+				"19_00.png",
+				"19_01.png",
+				"19_02.png",
+				"19_03.png",
+				"19_04.png",
+				"19_05.png",
+				"19_06.png",
+				"19_07.png",
+				"19_08.png",
+				"19_09.png",
+				"19_10.png",
+				"19_11.png"
+			],
+			"generateShadow": 1,
+			"generateOverlay": 1
+		},
+		{
+			"group": 20,
+			"frames": [
+				"20_00.png",
+				"20_01.png"
+			],
+			"generateShadow": 1,
+			"generateOverlay": 1
+		},
+		{
+			"group": 21,
+			"frames": [
+				"21_00.png",
+				"21_01.png"
+			],
+			"generateShadow": 1,
+			"generateOverlay": 1
+		},
+		{
+			"group": 30,
+			"frames": [
+				"30_00.png",
+				"30_01.png",
+				"30_02.png",
+				"30_03.png",
+				"30_04.png",
+				"30_05.png",
+				"30_06.png",
+				"30_07.png",
+				"30_08.png",
+				"30_09.png",
+				"30_10.png",
+				"30_11.png"
+			],
+			"generateShadow": 1,
+			"generateOverlay": 1
+		},
+		{
+			"group": 31,
+			"frames": [
+				"18_00.png",
+				"18_01.png",
+				"18_02.png",
+				"18_03.png",
+				"18_04.png",
+				"18_05.png",
+				"18_06.png",
+				"18_07.png",
+				"18_08.png",
+				"18_09.png",
+				"18_10.png",
+				"18_11.png"
+			],
+			"generateShadow": 1,
+			"generateOverlay": 1
+		},
+		{
+			"group": 32,
+			"frames": [
+				"32_00.png",
+				"32_01.png",
+				"32_02.png",
+				"32_03.png",
+				"32_04.png",
+				"32_05.png",
+				"32_06.png",
+				"32_07.png",
+				"32_08.png",
+				"32_09.png",
+				"32_10.png",
+				"32_11.png"
+			],
+			"generateShadow": 1,
+			"generateOverlay": 1
+		},
+		{
+			"group": 40,
+			"frames": [
+				"40_00.png",
+				"40_01.png",
+				"40_02.png",
+				"40_03.png",
+				"40_04.png",
+				"40_05.png",
+				"40_06.png",
+				"40_07.png",
+				"40_08.png",
+				"40_09.png",
+				"40_10.png"
+			],
+			"generateShadow": 1,
+			"generateOverlay": 1
+		},
+		{
+			"group": 41,
+			"frames": [
+				"12_00.png",
+				"12_01.png",
+				"12_02.png",
+				"12_03.png",
+				"12_04.png",
+				"12_05.png",
+				"12_06.png",
+				"12_07.png",
+				"12_08.png",
+				"12_09.png",
+				"12_10.png"
+			],
+			"generateShadow": 1,
+			"generateOverlay": 1
+		},
+		{
+			"group": 42,
+			"frames": [
+				"42_00.png",
+				"42_01.png",
+				"42_02.png",
+				"42_03.png",
+				"42_04.png",
+				"42_05.png",
+				"42_06.png",
+				"42_07.png",
+				"42_08.png",
+				"42_09.png",
+				"42_10.png"
+			],
+			"generateShadow": 1,
+			"generateOverlay": 1
+		}
+	]
+}

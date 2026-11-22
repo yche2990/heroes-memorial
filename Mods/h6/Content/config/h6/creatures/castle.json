@@ -1,0 +1,3573 @@
+// Heroes 6 memorial: the 14 Haven creatures (stats converted by H3 same-level averages)
+{
+	"h6HavenSentinel": {
+		"name": {
+			"singular": "Sentinel",
+			"plural": "Sentinels"
+		},
+		"description": "These mighty Sentinels are the Empire's first line of defense. They are volunteers who have proven their loyalty to the Empire and to Elrath, and they swear to protect their comrades with their great shields and even their lives, and to protect themselves with their faith.",
+		"faction": "castle",
+		"level": 1,
+		"cost": {
+			"gold": 35
+		},
+		"speed": 4,
+		"hitPoints": 6,
+		"attack": 3,
+		"defense": 4,
+		"damage": {
+			"min": 1,
+			"max": 2
+		},
+		"doubleWide": false,
+		"fightValue": 71,
+		"aiValue": 62,
+		"growth": 14,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"upgrades": [
+			"h6HavenPraetorian"
+		],
+		"abilities": {
+			"shielded": {
+				"type": "GENERAL_DAMAGE_REDUCTION",
+				"subtype": "damageTypeRanged",
+				"val": 25,
+				"stacking": "h6HavenSentinelExpShielded",
+				"icon": "h6/abilities/ab_Shielded",
+				"description": "{Shield Keeper}\nRanged damage taken -25%"
+			},
+			"shieldguard": {
+				"type": "H6_SHIELDGUARD_H6C",
+				"val": 35,
+				"icon": "h6/abilities/ab_Shieldguard",
+				"description": "{Shieldguard}\nTakes 35% of adjacent allies' dmg, -25% itself"
+			},
+			"shieldguardZone": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6Shieldguard",
+				"val": 0,
+				"hidden": true,
+				"description": "~",
+				"propagator": "BATTLE_WIDE",
+				"stacking": "h6ShieldguardZone",
+				"addInfo": {
+					"mark": "H6_SHIELDGUARD_H6C",
+					"link": "H6_SHIELDGUARD_LINK_H6C",
+					"cut": 25
+				}
+			}
+		},
+		"graphics": {
+			"animation": "h6/haven/Sentinel/Sentinel.json",
+			"map": "h6/units/h6HavenSentinel/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h6/units/h6HavenSentinel/map/atkL.png",
+			"mapAttackFromRight": "h6/units/h6HavenSentinel/map/atkR.png",
+			"iconLarge": "h6/units/h6HavenSentinel/iconLarge.png",
+			"iconSmall": "h6/units/h6HavenSentinel/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h6/haven/Sentinel_AttackLaunchMelee.wav",
+			"wince": "h6/haven/Sentinel_Hit.wav",
+			"defend": "h6/haven/Sentinel_Defend.wav",
+			"killed": "h6/haven/Sentinel_Die.wav",
+			"move": "h6/haven/Sentinel_Move_Earth1.wav"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.attack"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.defence"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "GENERAL_DAMAGE_REDUCTION",
+					"subtype": "damageTypeRanged",
+					"stacking": "h6HavenSentinelExpShielded"
+				},
+				"values": [
+					25,
+					26,
+					27,
+					29,
+					31,
+					33,
+					35,
+					37,
+					39,
+					40
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_RETALIATION"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			}
+		]
+	},
+	"h6HavenPraetorian": {
+		"name": {
+			"singular": "Praetorian",
+			"plural": "Praetorians"
+		},
+		"description": "Praetorians, known among the people as the Golden Cloaks, earn their honored rank through brave deeds and fearless hearts. Praetorians form the personal guard of the Holy Emperor and the dukes. Each year, on Elrath's birthday, only a few Sentinels are chosen to become Praetorians. On the day they join, they must swear a sacred oath before Elrath that they will be ready to give their lives for their duty at any time. They chose golden armor at first to impress the Empire's enemies and allies alike, but now their legendary reputation outshines their golden uniforms.",
+		"faction": "castle",
+		"level": 1,
+		"cost": {
+			"gold": 50
+		},
+		"speed": 5,
+		"hitPoints": 7,
+		"attack": 4,
+		"defense": 5,
+		"damage": {
+			"min": 1,
+			"max": 2
+		},
+		"doubleWide": false,
+		"fightValue": 87,
+		"aiValue": 93,
+		"growth": 14,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"shielded": {
+				"type": "GENERAL_DAMAGE_REDUCTION",
+				"subtype": "damageTypeRanged",
+				"val": 25,
+				"stacking": "h6HavenPraetorianExpShielded",
+				"icon": "h6/abilities/ab_Shielded",
+				"description": "{Shield Keeper}\nRanged damage taken -25%"
+			},
+			"shieldguard": {
+				"type": "H6_SHIELDGUARD_H6C",
+				"val": 35,
+				"icon": "h6/abilities/ab_Shieldguard",
+				"description": "{Shieldguard}\nTakes 35% of adjacent allies' dmg, -25% itself"
+			},
+			"shieldguardZone": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6Shieldguard",
+				"val": 0,
+				"hidden": true,
+				"description": "~",
+				"propagator": "BATTLE_WIDE",
+				"stacking": "h6ShieldguardZone",
+				"addInfo": {
+					"mark": "H6_SHIELDGUARD_H6C",
+					"link": "H6_SHIELDGUARD_LINK_H6C",
+					"cut": 25
+				}
+			},
+			"shieldBash": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "heroes-memorial.h6:kadIntercept",
+				"val": 50,
+				"stacking": "kadInterceptor",
+				"addInfo": {
+					"role": "carrier"
+				},
+				"icon": "h6/abilities/ab_Shield_Bash",
+				"description": "{Shield Bash}\nHits adjacent foes that leave: 50%, 1/round"
+			},
+			"shieldBashZone": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "heroes-memorial.h6:kadIntercept",
+				"val": 0,
+				"hidden": true,
+				"description": "~",
+				"propagator": "BATTLE_WIDE",
+				"stacking": "kadInterceptZone",
+				"addInfo": {
+					"role": "zone"
+				}
+			}
+		},
+		"graphics": {
+			"animation": "h6/haven/Sentinel_upg/Sentinel_upg.json",
+			"map": "h6/units/h6HavenPraetorian/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h6/units/h6HavenPraetorian/map/atkL.png",
+			"mapAttackFromRight": "h6/units/h6HavenPraetorian/map/atkR.png",
+			"iconLarge": "h6/units/h6HavenPraetorian/iconLarge.png",
+			"iconSmall": "h6/units/h6HavenPraetorian/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h6/haven/Sentinel_AttackLaunchMelee.wav",
+			"wince": "h6/haven/Sentinel_Hit.wav",
+			"defend": "h6/haven/Sentinel_Defend.wav",
+			"killed": "h6/haven/Sentinel_Die.wav",
+			"move": "h6/haven/Sentinel_Move_Earth1.wav"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.attack"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.defence"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "GENERAL_DAMAGE_REDUCTION",
+					"subtype": "damageTypeRanged",
+					"stacking": "h6HavenPraetorianExpShielded"
+				},
+				"values": [
+					26,
+					27,
+					29,
+					31,
+					33,
+					35,
+					37,
+					39,
+					41,
+					43
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_RETALIATION"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2
+				]
+			}
+		]
+	},
+	"h6HavenCrossbowman": {
+		"name": {
+			"singular": "Mighty Crossbowman",
+			"plural": "Mighty Crossbowmen"
+		},
+		"description": "Many tales tell how Ronan Falcon defeated the lords of the human clans by courage and honor alone and united them into an empire named for the falcon, and these tales show well that the key to his victories was the crossbow. To this day the Empire's Mighty Crossbowmen are feared far and wide.",
+		"faction": "castle",
+		"level": 2,
+		"cost": {
+			"gold": 115
+		},
+		"speed": 4,
+		"hitPoints": 13,
+		"attack": 5,
+		"defense": 4,
+		"damage": {
+			"min": 1,
+			"max": 3
+		},
+		"doubleWide": false,
+		"fightValue": 124,
+		"aiValue": 120,
+		"growth": 8,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"upgrades": [
+			"h6HavenMarksman"
+		],
+		"shots": 24,
+		"abilities": {
+			"shooter": {
+				"type": "SHOOTER"
+			},
+			"armorPiercing": {
+				"type": "ENEMY_DEFENCE_REDUCTION",
+				"val": 35,
+				"stacking": "h6HavenCrossbowmanExpArmorPiercing",
+				"icon": "h6/abilities/ab_Armor_Piercing",
+				"description": "{Armor-Piercing Bolts}\nIgnores 35% of the target's Defense"
+			}
+		},
+		"graphics": {
+			"animation": "h6/haven/Crossbowman/Crossbowman.json",
+			"map": "h6/units/h6HavenCrossbowman/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h6/units/h6HavenCrossbowman/map/atkL.png",
+			"mapAttackFromRight": "h6/units/h6HavenCrossbowman/map/atkR.png",
+			"iconLarge": "h6/units/h6HavenCrossbowman/iconLarge.png",
+			"iconSmall": "h6/units/h6HavenCrossbowman/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"frameAngles": [
+					90,
+					60,
+					45,
+					30,
+					0,
+					-30,
+					-45,
+					-60,
+					-90
+				],
+				"offset": {
+					"upperX": 28,
+					"upperY": -52,
+					"middleX": 20,
+					"middleY": -55,
+					"lowerX": 10,
+					"lowerY": -47
+				},
+				"attackClimaxFrame": 3,
+				"projectile": "h6/haven/bolt.json"
+			}
+		},
+		"sound": {
+			"attack": "h6/haven/Crossbowman_Attack.wav",
+			"shoot": "h6/haven/Crossbowman_AttackRanged.wav",
+			"wince": "h6/haven/Crossbowman_Hit.wav",
+			"defend": "h6/haven/Crossbowman_Defend.wav",
+			"killed": "h6/haven/Crossbowman_Die.wav",
+			"move": "h6/haven/Crossbowman_Move_Earth1.wav"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.attack"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					3,
+					3,
+					3,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.defence"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					3,
+					4,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					0,
+					1,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					3,
+					3,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "ENEMY_DEFENCE_REDUCTION",
+					"stacking": "h6HavenCrossbowmanExpArmorPiercing"
+				},
+				"values": [
+					36,
+					37,
+					39,
+					41,
+					43,
+					45,
+					47,
+					49,
+					51,
+					53
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_WALL_PENALTY"
+				},
+				"values": [
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h6HavenMarksman": {
+		"name": {
+			"singular": "Master Crossbowman",
+			"plural": "Master Crossbowmen"
+		},
+		"description": "Master Crossbowmen are seasoned crossbowmen who have guarded the walls of the capital, Falcon's Reach, for generations. One of the tests to join them is a trial of marksmanship: they set out to hunt with a single arrow and must come back with two geese, that is, they must bring down two birds with one shot. Captain Bolo, a legendary Master Crossbowman, is said to have found the test too easy, for he came back from his with a wolf and a bear.",
+		"faction": "castle",
+		"level": 2,
+		"cost": {
+			"gold": 145
+		},
+		"speed": 6,
+		"hitPoints": 13,
+		"attack": 6,
+		"defense": 5,
+		"damage": {
+			"min": 2,
+			"max": 3
+		},
+		"doubleWide": false,
+		"fightValue": 179,
+		"aiValue": 207,
+		"growth": 8,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"shots": 24,
+		"abilities": {
+			"shooter": {
+				"type": "SHOOTER"
+			},
+			"armorPiercing": {
+				"type": "ENEMY_DEFENCE_REDUCTION",
+				"val": 35,
+				"stacking": "h6HavenMarksmanExpArmorPiercing",
+				"icon": "h6/abilities/ab_Armor_Piercing",
+				"description": "{Armor-Piercing Bolts}\nIgnores 35% of the target's Defense"
+			},
+			"cast_h6AbPiercingBolt": {
+				"type": "SPELLCASTER",
+				"subtype": "spell.h6AbPiercingBolt",
+				"val": 3,
+				"description": "{Piercing Bolt}\nCooldown 1: pierces a line, allies too",
+				"icon": "h6/abilities/ab_Piercing_Bolt",
+				"limiters": [
+					[
+						"noneOf",
+						{
+							"type": "HAS_ANOTHER_BONUS_LIMITER",
+							"parameters": [
+								"H6_COOLDOWN_H6C"
+							]
+						}
+					]
+				]
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 1,
+				"hidden": true
+			},
+			"noSpellcastByDefault": {
+				"type": "NO_SPELLCAST_BY_DEFAULT",
+				"hidden": true
+			},
+			"cooldown": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6Cooldown",
+				"val": 0,
+				"hidden": true,
+				"description": "~",
+				"addInfo": {
+					"spell": "heroes-memorial.h6:h6AbPiercingBolt",
+					"turns": 1
+				}
+			}
+		},
+		"graphics": {
+			"animation": "h6/haven/Crossbowman_upg/Crossbowman_upg.json",
+			"map": "h6/units/h6HavenMarksman/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h6/units/h6HavenMarksman/map/atkL.png",
+			"mapAttackFromRight": "h6/units/h6HavenMarksman/map/atkR.png",
+			"iconLarge": "h6/units/h6HavenMarksman/iconLarge.png",
+			"iconSmall": "h6/units/h6HavenMarksman/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"frameAngles": [
+					90,
+					60,
+					45,
+					30,
+					0,
+					-30,
+					-45,
+					-60,
+					-90
+				],
+				"offset": {
+					"upperX": 29,
+					"upperY": -54,
+					"middleX": 21,
+					"middleY": -58,
+					"lowerX": 11,
+					"lowerY": -49
+				},
+				"attackClimaxFrame": 3,
+				"projectile": "h6/haven/bolt.json"
+			}
+		},
+		"sound": {
+			"attack": "h6/haven/Crossbowman_Attack.wav",
+			"shoot": "h6/haven/Crossbowman_AttackRanged.wav",
+			"wince": "h6/haven/Crossbowman_Hit.wav",
+			"defend": "h6/haven/Crossbowman_Defend.wav",
+			"killed": "h6/haven/Crossbowman_Die.wav",
+			"move": "h6/haven/Crossbowman_Move_Earth1.wav"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.attack"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					3,
+					3,
+					3,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.defence"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					3,
+					4,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					0,
+					1,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					3,
+					3,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "ENEMY_DEFENCE_REDUCTION",
+					"stacking": "h6HavenMarksmanExpArmorPiercing"
+				},
+				"values": [
+					37,
+					39,
+					41,
+					43,
+					45,
+					47,
+					50,
+					52,
+					55,
+					58
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_WALL_PENALTY"
+				},
+				"values": [
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_DISTANCE_PENALTY",
+					"description": "{Accuracy}\nNo range penalty"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h6HavenSister": {
+		"name": {
+			"singular": "Sister",
+			"plural": "Sisters"
+		},
+		"description": "Elrath's priestesses devote themselves to the worship of the Dragon of Light. Chosen for their gifts, these women dedicate themselves to bringing light and warmth to those in need. They are respected by the citizens of the Empire, and in times of war they tend the wounded on the front lines.",
+		"faction": "castle",
+		"level": 3,
+		"cost": {
+			"gold": 220
+		},
+		"speed": 4,
+		"hitPoints": 23,
+		"attack": 9,
+		"defense": 5,
+		"damage": {
+			"min": 5,
+			"max": 8
+		},
+		"doubleWide": false,
+		"fightValue": 328,
+		"aiValue": 352,
+		"growth": 6,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"upgrades": [
+			"h6HavenVestal"
+		],
+		"abilities": {
+			"pacification": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6Pacify",
+				"val": 0,
+				"icon": "h6/abilities/ab_Pacification",
+				"addInfo": {
+					"spell": "heroes-memorial.h6:h6Pacified"
+				},
+				"description": "{Pacified}\nFoes hit can't act or retaliate; hit to break"
+			}
+		},
+		"graphics": {
+			"animation": "h6/haven/Priestess/Priestess.json",
+			"map": "h6/units/h6HavenSister/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h6/units/h6HavenSister/map/atkL.png",
+			"mapAttackFromRight": "h6/units/h6HavenSister/map/atkR.png",
+			"iconLarge": "h6/units/h6HavenSister/iconLarge.png",
+			"iconSmall": "h6/units/h6HavenSister/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h6/haven/Priestess_AttackLaunchMelee.wav",
+			"wince": "h6/haven/Priestess_Hit.wav",
+			"defend": "h6/haven/Priestess_Defend.wav",
+			"killed": "h6/haven/Priestess_Die.wav",
+			"move": "h6/haven/Priestess_Move_Ground1.wav"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.attack"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.defence"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					5,
+					5,
+					10,
+					10,
+					15,
+					15,
+					20
+				]
+			},
+			{
+				"bonus": {
+					"type": "MIND_IMMUNITY",
+					"description": "{Steadfast Mind}\nImmune to Mind spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h6HavenVestal": {
+		"name": {
+			"singular": "Vestal",
+			"plural": "Vestals"
+		},
+		"description": "The Vestals take their name from Vesta Falcon, widow of Emperor Ronan II. After her husband died in the war she withdrew from public life and devoted herself to Elrath, seeking a power that could end war forever. Today these priestesses have made their name on the battlefield, soothing enemy troops so that the soldiers of the holy legions can destroy them. Whether Vesta would be pleased with this turn of events is somewhat doubtful.",
+		"faction": "castle",
+		"level": 3,
+		"cost": {
+			"gold": 255
+		},
+		"speed": 5,
+		"hitPoints": 26,
+		"attack": 9,
+		"defense": 6,
+		"damage": {
+			"min": 5,
+			"max": 8
+		},
+		"doubleWide": false,
+		"fightValue": 425,
+		"aiValue": 500,
+		"growth": 6,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"pacification": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6Pacify",
+				"val": 0,
+				"icon": "h6/abilities/ab_Pacification",
+				"addInfo": {
+					"spell": "heroes-memorial.h6:h6Pacified"
+				},
+				"description": "{Pacified}\nFoes hit can't act or retaliate; hit to break"
+			},
+			"cast_h6AbHeal": {
+				"type": "SPELLCASTER",
+				"subtype": "spell.h6AbHeal",
+				"val": 3,
+				"description": "{Heal}\n2/battle: heals ally (can revive), hurts evil",
+				"icon": "h6/abilities/ab_Heal"
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 1,
+				"hidden": true
+			},
+			"noSpellcastByDefault": {
+				"type": "NO_SPELLCAST_BY_DEFAULT",
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h6/haven/Priestess_upg/Priestess_upg.json",
+			"map": "h6/units/h6HavenVestal/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h6/units/h6HavenVestal/map/atkL.png",
+			"mapAttackFromRight": "h6/units/h6HavenVestal/map/atkR.png",
+			"iconLarge": "h6/units/h6HavenVestal/iconLarge.png",
+			"iconSmall": "h6/units/h6HavenVestal/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h6/haven/Priestess_AttackLaunchMelee.wav",
+			"wince": "h6/haven/Priestess_Hit.wav",
+			"defend": "h6/haven/Priestess_Defend.wav",
+			"killed": "h6/haven/Priestess_Die.wav",
+			"move": "h6/haven/Priestess_Move_Ground1.wav"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.attack"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.defence"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					5,
+					5,
+					10,
+					10,
+					15,
+					15,
+					20
+				]
+			},
+			{
+				"bonus": {
+					"type": "MIND_IMMUNITY",
+					"description": "{Steadfast Mind}\nImmune to Mind spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "CASTS"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2
+				]
+			}
+		]
+	},
+	"h6HavenGriffin": {
+		"name": {
+			"singular": "Griffin",
+			"plural": "Griffins"
+		},
+		"description": "Griffins were born in the Mythic Age, a miraculous natural fusion of lion and eagle. That was the time of the wars of the Dragon Gods, when the surface of Ashan was soaked in dragon blood and animals that drank from rivers carrying it were forever touched by its magic. It is said that this wondrous species came to be when an eagle, out of a moment's pity, saved a lion while under the influence of dragon blood.",
+		"faction": "castle",
+		"level": 4,
+		"cost": {
+			"gold": 340
+		},
+		"speed": 6,
+		"hitPoints": 32,
+		"attack": 10,
+		"defense": 9,
+		"damage": {
+			"min": 6,
+			"max": 8
+		},
+		"doubleWide": true,
+		"fightValue": 545,
+		"aiValue": 608,
+		"growth": 5,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"upgrades": [
+			"h6HavenImperialGriffin"
+		],
+		"abilities": {
+			"flying": {
+				"type": "FLYING"
+			},
+			"unlimitedRetaliations": {
+				"type": "UNLIMITED_RETALIATIONS",
+				"icon": "h6/abilities/ab_Unlimited_Retaliation",
+				"description": "{Unlimited Retaliation}\nRetaliates against every attack"
+			},
+			"cast_h6AbDivingAttack": {
+				"type": "SPELLCASTER",
+				"subtype": "spell.h6AbDivingAttack",
+				"val": 3,
+				"description": "{Diving Attack}\nCooldown 3: flies off, dives next round for 2x",
+				"icon": "h6/abilities/ab_Diving_Attack",
+				"limiters": [
+					[
+						"noneOf",
+						{
+							"type": "HAS_ANOTHER_BONUS_LIMITER",
+							"parameters": [
+								"H6_COOLDOWN_H6C"
+							]
+						}
+					]
+				]
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 1,
+				"hidden": true
+			},
+			"noSpellcastByDefault": {
+				"type": "NO_SPELLCAST_BY_DEFAULT",
+				"hidden": true
+			},
+			"cooldown": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6Cooldown",
+				"val": 0,
+				"hidden": true,
+				"description": "~",
+				"addInfo": {
+					"spell": "heroes-memorial.h6:h6AbDivingAttack",
+					"turns": 3
+				}
+			}
+		},
+		"graphics": {
+			"animation": "h6/haven/griffin/griffin.json",
+			"map": "h6/units/h6HavenGriffin/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h6/units/h6HavenGriffin/map/atkL.png",
+			"mapAttackFromRight": "h6/units/h6HavenGriffin/map/atkR.png",
+			"iconLarge": "h6/units/h6HavenGriffin/iconLarge.png",
+			"iconSmall": "h6/units/h6HavenGriffin/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h6/haven/Griffin_AttackLaunchMelee.wav",
+			"wince": "h6/haven/Griffin_Hit.wav",
+			"defend": "h6/haven/Griffin_Defend.wav",
+			"killed": "h6/haven/Griffin_Die.wav",
+			"move": "h6/haven/Griffin_Flying1.wav",
+			"startMoving": "h6/haven/Griffin_FlyUp.wav",
+			"endMoving": "h6/haven/Griffin_FlyEnd.wav"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.attack"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					5,
+					6,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.defence"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "DOUBLE_DAMAGE_CHANCE"
+				},
+				"values": [
+					2,
+					4,
+					6,
+					8,
+					10,
+					12,
+					14,
+					16,
+					18,
+					20
+				]
+			},
+			{
+				"bonus": {
+					"type": "FIRST_STRIKE",
+					"subtype": "damageTypeMelee"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h6HavenImperialGriffin": {
+		"name": {
+			"singular": "Imperial Griffin",
+			"plural": "Imperial Griffins"
+		},
+		"description": "Before the elves of Tuidhana and the Holy Empire went to war, both kingdoms enjoyed a long time of peace. In the Age of Healing, it is said, the elven smiths were so moved by the harmony between humans and griffins that they told the humans the secret of starsilver. This metal is light and very hard, and when worked properly it makes excellent armor for flying beasts. Mysterious elven runes found on Imperial Griffin armor record that long-forgotten friendship.",
+		"faction": "castle",
+		"level": 4,
+		"cost": {
+			"gold": 390
+		},
+		"speed": 8,
+		"hitPoints": 38,
+		"attack": 10,
+		"defense": 11,
+		"damage": {
+			"min": 6,
+			"max": 8
+		},
+		"doubleWide": true,
+		"fightValue": 646,
+		"aiValue": 756,
+		"growth": 5,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"flying": {
+				"type": "FLYING"
+			},
+			"unlimitedRetaliations": {
+				"type": "UNLIMITED_RETALIATIONS",
+				"icon": "h6/abilities/ab_Unlimited_Retaliation",
+				"description": "{Unlimited Retaliation}\nRetaliates against every attack"
+			},
+			"cast_h6AbDivingAssault": {
+				"type": "SPELLCASTER",
+				"subtype": "spell.h6AbDivingAssault",
+				"val": 3,
+				"description": "{Diving Assault}\nCooldown 3: flies, dives next turn, 2x on path",
+				"icon": "h6/abilities/ab_Diving_Assault",
+				"limiters": [
+					[
+						"noneOf",
+						{
+							"type": "HAS_ANOTHER_BONUS_LIMITER",
+							"parameters": [
+								"H6_COOLDOWN_H6C"
+							]
+						}
+					]
+				]
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 1,
+				"hidden": true
+			},
+			"noSpellcastByDefault": {
+				"type": "NO_SPELLCAST_BY_DEFAULT",
+				"hidden": true
+			},
+			"cooldown": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6Cooldown",
+				"val": 0,
+				"hidden": true,
+				"description": "~",
+				"addInfo": {
+					"spell": "heroes-memorial.h6:h6AbDivingAssault",
+					"turns": 3
+				}
+			}
+		},
+		"graphics": {
+			"animation": "h6/haven/Griffin_upg/Griffin_upg.json",
+			"map": "h6/units/h6HavenImperialGriffin/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h6/units/h6HavenImperialGriffin/map/atkL.png",
+			"mapAttackFromRight": "h6/units/h6HavenImperialGriffin/map/atkR.png",
+			"iconLarge": "h6/units/h6HavenImperialGriffin/iconLarge.png",
+			"iconSmall": "h6/units/h6HavenImperialGriffin/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h6/haven/Griffin_AttackLaunchMelee.wav",
+			"wince": "h6/haven/Griffin_Hit.wav",
+			"defend": "h6/haven/Griffin_Defend.wav",
+			"killed": "h6/haven/Griffin_Die.wav",
+			"move": "h6/haven/Griffin_Flying1.wav",
+			"startMoving": "h6/haven/Griffin_FlyUp.wav",
+			"endMoving": "h6/haven/Griffin_FlyEnd.wav"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.attack"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					5,
+					6,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.defence"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "DOUBLE_DAMAGE_CHANCE"
+				},
+				"values": [
+					3,
+					6,
+					9,
+					12,
+					15,
+					18,
+					21,
+					24,
+					27,
+					30
+				]
+			},
+			{
+				"bonus": {
+					"type": "FIRST_STRIKE",
+					"subtype": "damageTypeMelee"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h6HavenRadiantGlory": {
+		"name": {
+			"singular": "Radiant Glory",
+			"plural": "Radiant Glories"
+		},
+		"description": "In the spirit world, Elrath's divine realm, there are countless Light Elementals, some of whom the Dragon God of Light has raised to a higher station. As bearers of Elrath's will, they are sent as envoys and advisors to his most faithful followers. Radiant Glories are dazzling beings; they shine with a radiance that can blind their enemies. The generals of the Holy Empire soon learned how important these burning lights could be.",
+		"faction": "castle",
+		"level": 5,
+		"cost": {
+			"gold": 435
+		},
+		"speed": 6,
+		"hitPoints": 39,
+		"attack": 12,
+		"defense": 11,
+		"damage": {
+			"min": 11,
+			"max": 12
+		},
+		"doubleWide": false,
+		"fightValue": 774,
+		"aiValue": 834,
+		"growth": 3,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"upgrades": [
+			"h6HavenBlazingGlory"
+		],
+		"abilities": {
+			"spiritForm": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6SpiritForm",
+				"val": 50,
+				"icon": "h6/abilities/ab_Spirit_Form",
+				"description": "{Spirit Form}\n-50% damage taken until it first acts"
+			},
+			"shadowWeak": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.02darkSchool",
+				"val": -25,
+				"icon": "h6/abilities/ab_Vulnerable_to_Shadow_Magic",
+				"description": "{Dark Weakness}\nDark Magic damage taken +25%"
+			},
+			"teleport": {
+				"type": "FLYING",
+				"subtype": "movementTeleporting"
+			},
+			"speedOfLight": {
+				"type": "RETURN_AFTER_STRIKE",
+				"icon": "h6/abilities/ab_Speed_of_Light",
+				"description": "{Speed of Light}\nReturns after attacking, no retaliation"
+			},
+			"speedOfLightNoRet": {
+				"type": "BLOCKS_RETALIATION",
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h6/haven/RadiantGlory/RadiantGlory.json",
+			"map": "h6/units/h6HavenRadiantGlory/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h6/units/h6HavenRadiantGlory/map/atkL.png",
+			"mapAttackFromRight": "h6/units/h6HavenRadiantGlory/map/atkR.png",
+			"iconLarge": "h6/units/h6HavenRadiantGlory/iconLarge.png",
+			"iconSmall": "h6/units/h6HavenRadiantGlory/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h6/haven/RadiantGlory_Attack.ogg",
+			"wince": "h6/haven/RadiantGlory_Hit.ogg",
+			"defend": "h6/haven/RadiantGlory_Defend.ogg",
+			"killed": "h6/haven/LightElemental_Die.wav",
+			"move": "h6/haven/LightElemental_Move.wav"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.attack"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					3,
+					4,
+					5,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					3,
+					4,
+					4,
+					6,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					2,
+					3,
+					3,
+					4,
+					5,
+					6,
+					6,
+					7
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					7
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE"
+				},
+				"values": [
+					0,
+					0,
+					5,
+					5,
+					10,
+					10,
+					15,
+					15,
+					20,
+					25
+				]
+			},
+			{
+				"bonus": {
+					"type": "SPELL_DAMAGE_REDUCTION",
+					"subtype": "spellSchool.01lightSchool",
+					"description": "{Body of Light}\nReduced Light Magic damage taken"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					10,
+					10,
+					20,
+					20,
+					30,
+					30,
+					40
+				]
+			}
+		]
+	},
+	"h6HavenBlazingGlory": {
+		"name": {
+			"singular": "Blazing Glory",
+			"plural": "Blazing Glories"
+		},
+		"description": "Blazing Glories are Radiant Glories given a higher calling by the Dragon God of Light. Bathed directly in his flawless aura, they are held to be the embodiment of justice. On the battlefield their enemies fear them greatly, for to defeat a Blazing Glory you must have a very good moral reason; otherwise you will be cursed for that sin for the rest of your life.",
+		"faction": "castle",
+		"level": 5,
+		"cost": {
+			"gold": 540
+		},
+		"speed": 9,
+		"hitPoints": 44,
+		"attack": 12,
+		"defense": 12,
+		"damage": {
+			"min": 11,
+			"max": 12
+		},
+		"doubleWide": false,
+		"fightValue": 1065,
+		"aiValue": 1301,
+		"growth": 3,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"spiritForm": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6SpiritForm",
+				"val": 50,
+				"icon": "h6/abilities/ab_Spirit_Form",
+				"description": "{Spirit Form}\n-50% damage taken until it first acts"
+			},
+			"shadowWeak": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.02darkSchool",
+				"val": -25,
+				"icon": "h6/abilities/ab_Vulnerable_to_Shadow_Magic",
+				"description": "{Dark Weakness}\nDark Magic damage taken +25%"
+			},
+			"teleport": {
+				"type": "FLYING",
+				"subtype": "movementTeleporting"
+			},
+			"speedOfLight": {
+				"type": "RETURN_AFTER_STRIKE",
+				"icon": "h6/abilities/ab_Speed_of_Light",
+				"description": "{Speed of Light}\nReturns after attacking, no retaliation"
+			},
+			"speedOfLightNoRet": {
+				"type": "BLOCKS_RETALIATION",
+				"hidden": true
+			},
+			"cleansingLight": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6Cleanse",
+				"val": 0,
+				"icon": "h6/abilities/ab_Cleansing_Light",
+				"description": "{Cleansing Light}\nAfter moving: dispels 1 foe buff, 1 ally curse"
+			},
+			"searingPower": {
+				"type": "SPECIFIC_SPELL_POWER",
+				"subtype": "spell.h6AbSearingLight",
+				"val": 12,
+				"hidden": true
+			},
+			"cast_h6AbSearingLight": {
+				"type": "SPELLCASTER",
+				"subtype": "spell.h6AbSearingLight",
+				"val": 3,
+				"description": "{Searing Light}\nCooldown 3: 12 Light per unit, Blind 2 rounds",
+				"icon": "h6/abilities/ab_Searing_Light",
+				"limiters": [
+					[
+						"noneOf",
+						{
+							"type": "HAS_ANOTHER_BONUS_LIMITER",
+							"parameters": [
+								"H6_COOLDOWN_H6C"
+							]
+						}
+					]
+				]
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 1,
+				"hidden": true
+			},
+			"noSpellcastByDefault": {
+				"type": "NO_SPELLCAST_BY_DEFAULT",
+				"hidden": true
+			},
+			"cooldown": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6Cooldown",
+				"val": 0,
+				"hidden": true,
+				"description": "~",
+				"addInfo": {
+					"spell": "heroes-memorial.h6:h6AbSearingLight",
+					"turns": 3
+				}
+			}
+		},
+		"graphics": {
+			"animation": "h6/haven/BlazingGlory/BlazingGlory.json",
+			"map": "h6/units/h6HavenBlazingGlory/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h6/units/h6HavenBlazingGlory/map/atkL.png",
+			"mapAttackFromRight": "h6/units/h6HavenBlazingGlory/map/atkR.png",
+			"iconLarge": "h6/units/h6HavenBlazingGlory/iconLarge.png",
+			"iconSmall": "h6/units/h6HavenBlazingGlory/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h6/haven/RadiantGlory_Attack.ogg",
+			"wince": "h6/haven/RadiantGlory_Hit.ogg",
+			"defend": "h6/haven/RadiantGlory_Defend.ogg",
+			"killed": "h6/haven/LightElemental_Die.wav",
+			"move": "h6/haven/LightElemental_Move.wav"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.attack"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					3,
+					4,
+					5,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					3,
+					4,
+					4,
+					6,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					2,
+					3,
+					3,
+					4,
+					5,
+					6,
+					6,
+					7
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					7
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE"
+				},
+				"values": [
+					0,
+					0,
+					5,
+					5,
+					10,
+					10,
+					15,
+					15,
+					20,
+					25
+				]
+			},
+			{
+				"bonus": {
+					"type": "SPELL_DAMAGE_REDUCTION",
+					"subtype": "spellSchool.01lightSchool",
+					"description": "{Body of Light}\nReduced Light Magic damage taken"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					10,
+					10,
+					20,
+					20,
+					30,
+					30,
+					40
+				]
+			}
+		]
+	},
+	"h6HavenSunRider": {
+		"name": {
+			"singular": "Sun Rider",
+			"plural": "Sun Riders"
+		},
+		"description": "The Holy Empire has many knights, but only those recognized by Elrath may join the Holy Order of the Sun. Usually called Sun Riders, these elite warriors of light ride wondrous horses summoned from Elrath's divine realm; these magic mounts are said to be able to gallop along even the faintest ray of light.",
+		"faction": "castle",
+		"level": 6,
+		"cost": {
+			"gold": 915
+		},
+		"speed": 6,
+		"hitPoints": 94,
+		"attack": 15,
+		"defense": 15,
+		"damage": {
+			"min": 17,
+			"max": 19
+		},
+		"doubleWide": true,
+		"fightValue": 1540,
+		"aiValue": 1799,
+		"growth": 2,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"upgrades": [
+			"h6HavenSunCrusader"
+		],
+		"abilities": {
+			"skeletonTarget": {
+				"type": "SKELETON_TRANSFORMER_TARGET",
+				"subtype": "blackKnight",
+				"hidden": true
+			},
+			"charge": {
+				"type": "JOUSTING",
+				"val": 10,
+				"stacking": "h6HavenSunRiderExpJousting",
+				"icon": "h6/abilities/ab_Charge",
+				"description": "{Sun Charge}\n+10% damage per hex charged"
+			}
+		},
+		"graphics": {
+			"animation": "h6/haven/SunRider/SunRider.json",
+			"map": "h6/units/h6HavenSunRider/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h6/units/h6HavenSunRider/map/atkL.png",
+			"mapAttackFromRight": "h6/units/h6HavenSunRider/map/atkR.png",
+			"iconLarge": "h6/units/h6HavenSunRider/iconLarge.png",
+			"iconSmall": "h6/units/h6HavenSunRider/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h6/haven/Sunrider_AttackLaunchMelee.wav",
+			"wince": "h6/haven/Sunrider_Hit.wav",
+			"defend": "h6/haven/Sunrider_Defend.wav",
+			"killed": "h6/haven/Sunrider_Die.wav",
+			"move": "CAVAMOVE.wav"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.defence"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					2,
+					3,
+					4,
+					5,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "JOUSTING",
+					"stacking": "h6HavenSunRiderExpJousting"
+				},
+				"values": [
+					10,
+					10,
+					11,
+					11,
+					12,
+					13,
+					14,
+					15,
+					16,
+					18
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_RETALIATION"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			}
+		]
+	},
+	"h6HavenSunCrusader": {
+		"name": {
+			"singular": "Sun Crusader",
+			"plural": "Sun Crusaders"
+		},
+		"description": "Sun Crusaders are Sun Riders who have taken on a holy quest. They make personal pacts with Elrath, usually to defeat a particular foe or find a particular item. Once sworn, Sun Crusaders seldom stay long in one place, becoming true knights-errant who wander far and wide in pursuit of their quest. In times of war, the Holy Empire calls these Sun Crusaders back to defend the realm, and their duty to the Empire comes before their personal quests.",
+		"faction": "castle",
+		"level": 6,
+		"cost": {
+			"gold": 1205
+		},
+		"speed": 9,
+		"hitPoints": 94,
+		"attack": 15,
+		"defense": 16,
+		"damage": {
+			"min": 17,
+			"max": 19
+		},
+		"doubleWide": true,
+		"fightValue": 1818,
+		"aiValue": 2173,
+		"growth": 2,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"skeletonTarget": {
+				"type": "SKELETON_TRANSFORMER_TARGET",
+				"subtype": "blackKnight",
+				"hidden": true
+			},
+			"charge": {
+				"type": "JOUSTING",
+				"val": 10,
+				"stacking": "h6HavenSunCrusaderExpJousting",
+				"icon": "h6/abilities/ab_Blinding_Charge",
+				"description": "{Dazzling Charge}\n+10% dmg per hex moved\nNo retaliation"
+			},
+			"blindingCharge": {
+				"type": "BLOCKS_RETALIATION",
+				"hidden": true
+			},
+			"cast_h6AbSunSteed": {
+				"type": "SPELLCASTER",
+				"subtype": "spell.h6AbSunSteed",
+				"val": 3,
+				"description": "{Sun Steed}\nCooldown 3, free: light form, passes obstacles",
+				"icon": "h6/abilities/ab_Sun_Steed",
+				"limiters": [
+					[
+						"noneOf",
+						{
+							"type": "HAS_ANOTHER_BONUS_LIMITER",
+							"parameters": [
+								"H6_COOLDOWN_H6C"
+							]
+						}
+					]
+				]
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 1,
+				"hidden": true
+			},
+			"noSpellcastByDefault": {
+				"type": "NO_SPELLCAST_BY_DEFAULT",
+				"hidden": true
+			},
+			"cooldown": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6Cooldown",
+				"val": 0,
+				"hidden": true,
+				"description": "~",
+				"addInfo": {
+					"spell": "heroes-memorial.h6:h6AbSunSteed",
+					"turns": 3
+				}
+			}
+		},
+		"graphics": {
+			"animation": "h6/haven/SunRider_upg/SunRider_upg.json",
+			"map": "h6/units/h6HavenSunCrusader/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h6/units/h6HavenSunCrusader/map/atkL.png",
+			"mapAttackFromRight": "h6/units/h6HavenSunCrusader/map/atkR.png",
+			"iconLarge": "h6/units/h6HavenSunCrusader/iconLarge.png",
+			"iconSmall": "h6/units/h6HavenSunCrusader/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h6/haven/Sunrider_AttackLaunchMelee.wav",
+			"wince": "h6/haven/Sunrider_Hit.wav",
+			"defend": "h6/haven/Sunrider_Defend.wav",
+			"killed": "h6/haven/Sunrider_Die.wav",
+			"move": "CAVAMOVE.wav"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.defence"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					2,
+					3,
+					4,
+					5,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "JOUSTING",
+					"stacking": "h6HavenSunCrusaderExpJousting"
+				},
+				"values": [
+					10,
+					10,
+					11,
+					11,
+					12,
+					13,
+					14,
+					15,
+					16,
+					18
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_RETALIATION"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			}
+		]
+	},
+	"h6HavenSunCrusaderLight": {
+		"name": {
+			"singular": "Sun Crusader (Light)",
+			"plural": "Sun Crusaders (Light)"
+		},
+		"description": "The light form a Sun Crusader takes when using Sun Steed: knight and horse both become translucent golden light that can pass over any obstacle. It returns to its normal form at the start of the next round.",
+		"faction": "castle",
+		"level": 6,
+		"cost": {
+			"gold": 1205
+		},
+		"speed": 9,
+		"hitPoints": 94,
+		"attack": 15,
+		"defense": 16,
+		"damage": {
+			"min": 17,
+			"max": 19
+		},
+		"doubleWide": true,
+		"fightValue": 1818,
+		"aiValue": 2173,
+		"growth": 0,
+		"abilities": {
+			"charge": {
+				"type": "JOUSTING",
+				"val": 10,
+				"stacking": "h6HavenSunCrusaderExpJousting",
+				"icon": "h6/abilities/ab_Blinding_Charge",
+				"description": "{Dazzling Charge}\n+10% dmg per hex moved\nNo retaliation"
+			},
+			"blindingCharge": {
+				"type": "BLOCKS_RETALIATION",
+				"hidden": true
+			},
+			"lightForm": {
+				"type": "H6_SUN_STEED_H6C",
+				"icon": "h6/abilities/ab_Sun_Steed"
+			},
+			"flying": {
+				"type": "FLYING",
+				"hidden": true
+			},
+			"noSlow": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "spell.slow",
+				"hidden": true
+			},
+			"revert": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6SunSteedForm",
+				"val": 0,
+				"hidden": true,
+				"description": "~",
+				"addInfo": {
+					"endFx": "h6/haven/fx/sunSteedEnd",
+					"sound": "h6/haven/SunRiderSunStallion_Finish.wav"
+				}
+			}
+		},
+		"graphics": {
+			"animation": "h6/haven/SunRider_upg_ghost/SunRider_upg_ghost.json",
+			"map": "h6/units/h6HavenSunCrusader/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h6/units/h6HavenSunCrusader/map/atkL.png",
+			"mapAttackFromRight": "h6/units/h6HavenSunCrusader/map/atkR.png",
+			"iconLarge": "h6/units/h6HavenSunCrusader/iconLarge.png",
+			"iconSmall": "h6/units/h6HavenSunCrusader/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h6/haven/Sunrider_AttackLaunchMelee.wav",
+			"wince": "h6/haven/Sunrider_Hit.wav",
+			"defend": "h6/haven/Sunrider_Defend.wav",
+			"killed": "h6/haven/Sunrider_Die.wav",
+			"move": "CAVAMOVE.wav"
+		},
+		"special": true
+	},
+	"h6HavenSeraph": {
+		"name": {
+			"singular": "Seraph",
+			"plural": "Seraphs"
+		},
+		"description": "Angels are the envoys, and the shock troops, of Elrath, the Dragon of Light, on the surface of Ashan. They have perfect, extraordinary bodies, taller and more beautiful than ordinary humans, radiating strength and trust. Seraphs are smaller in build and look more human; they appeared after the founding of the Falcon Empire. Their true origin remains a mystery, but their absolute loyalty to Elrath is certain. In battle they wield the Blade of Judgment and the Blade of Mercy.",
+		"faction": "castle",
+		"level": 7,
+		"cost": {
+			"gold": 2170,
+			"crystal": 1
+		},
+		"speed": 8,
+		"hitPoints": 176,
+		"attack": 17,
+		"defense": 20,
+		"damage": {
+			"min": 38,
+			"max": 39
+		},
+		"doubleWide": true,
+		"fightValue": 4238,
+		"aiValue": 5232,
+		"growth": 1,
+		"advMapAmount": {
+			"min": 1,
+			"max": 3
+		},
+		"upgrades": [
+			"h6HavenCelestial"
+		],
+		"abilities": {
+			"flying": {
+				"type": "FLYING"
+			},
+			"judgment": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6Judgment",
+				"val": 20,
+				"stacking": "h6JudgmentCarrier",
+				"addInfo": {
+					"role": "carrier"
+				},
+				"icon": "h6/abilities/ab_Blade_of_Judgment",
+				"description": "{Blade of Judgment}\n+20% dmg vs foes that killed our creatures"
+			},
+			"judgmentZone": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6Judgment",
+				"val": 0,
+				"hidden": true,
+				"description": "~",
+				"propagator": "BATTLE_WIDE",
+				"stacking": "h6JudgmentZone",
+				"addInfo": {
+					"role": "zone"
+				}
+			},
+			"cast_h6AbBladeOfMercy": {
+				"type": "SPELLCASTER",
+				"subtype": "spell.h6AbBladeOfMercy",
+				"val": 3,
+				"description": "{Blade of Mercy}\n1/battle: heals ally (can revive), hurts evil",
+				"icon": "h6/abilities/ab_Blade_of_Mercy"
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 1,
+				"hidden": true
+			},
+			"noSpellcastByDefault": {
+				"type": "NO_SPELLCAST_BY_DEFAULT",
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h6/haven/Celestial/Celestial.json",
+			"map": "h6/units/h6HavenSeraph/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h6/units/h6HavenSeraph/map/atkL.png",
+			"mapAttackFromRight": "h6/units/h6HavenSeraph/map/atkR.png",
+			"iconLarge": "h6/units/h6HavenSeraph/iconLarge.png",
+			"iconSmall": "h6/units/h6HavenSeraph/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h6/haven/Celetial_AttackLaunchMelee.wav",
+			"wince": "h6/haven/Celetial_Hit.wav",
+			"defend": "h6/haven/Celetial_Defend.wav",
+			"killed": "h6/haven/Celetial_Die.wav",
+			"move": "h6/haven/Celetial_FlyLoop1.wav",
+			"startMoving": "h6/haven/Celetial_FlyStart.wav",
+			"endMoving": "h6/haven/Celetial_FlyEnd.wav"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					10,
+					20,
+					30,
+					40,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "MIND_IMMUNITY",
+					"description": "{Steadfast Mind}\nImmune to Mind spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_RETALIATION"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			}
+		]
+	},
+	"h6HavenCelestial": {
+		"name": {
+			"singular": "Celestial",
+			"plural": "Celestials"
+		},
+		"description": "Celestials are the champions among the Seraphs. They bear the names of legendary angels who fell in the ancient wars, and some priests even believe they are the reborn souls of those ancient angels, called back by Elrath in these troubled times. Whatever their true origin, their flawless fighting skill and fearless courage are worthy of the heroes of a legendary age.",
+		"faction": "castle",
+		"level": 7,
+		"cost": {
+			"gold": 3995,
+			"crystal": 2
+		},
+		"speed": 13,
+		"hitPoints": 262,
+		"attack": 23,
+		"defense": 27,
+		"damage": {
+			"min": 39,
+			"max": 39
+		},
+		"doubleWide": true,
+		"fightValue": 7317,
+		"aiValue": 9748,
+		"growth": 1,
+		"advMapAmount": {
+			"min": 1,
+			"max": 3
+		},
+		"abilities": {
+			"flying": {
+				"type": "FLYING"
+			},
+			"judgment": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6Judgment",
+				"val": 20,
+				"stacking": "h6JudgmentCarrier",
+				"addInfo": {
+					"role": "carrier"
+				},
+				"icon": "h6/abilities/ab_Blade_of_Judgment",
+				"description": "{Blade of Judgment}\n+20% dmg vs foes that killed our creatures"
+			},
+			"judgmentZone": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6Judgment",
+				"val": 0,
+				"hidden": true,
+				"description": "~",
+				"propagator": "BATTLE_WIDE",
+				"stacking": "h6JudgmentZone",
+				"addInfo": {
+					"role": "zone"
+				}
+			},
+			"absolutePurity": {
+				"type": "NEGATIVE_EFFECTS_IMMUNITY",
+				"subtype": "spellSchool.any",
+				"icon": "h6/abilities/ab_Absolute_Purity",
+				"description": "{Absolute Purity}\nImmune to all negative spells"
+			},
+			"cast_h6AbBladeOfEpiphany": {
+				"type": "SPELLCASTER",
+				"subtype": "spell.h6AbBladeOfEpiphany",
+				"val": 3,
+				"description": "{Blade of Epiphany}\n2/battle: heals, +Morale, +Speed; hurts evil",
+				"icon": "h6/abilities/ab_Blade_of_Epiphany"
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 1,
+				"hidden": true
+			},
+			"noSpellcastByDefault": {
+				"type": "NO_SPELLCAST_BY_DEFAULT",
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h6/haven/Celestial_upg/Celestial_upg.json",
+			"map": "h6/units/h6HavenCelestial/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h6/units/h6HavenCelestial/map/atkL.png",
+			"mapAttackFromRight": "h6/units/h6HavenCelestial/map/atkR.png",
+			"iconLarge": "h6/units/h6HavenCelestial/iconLarge.png",
+			"iconSmall": "h6/units/h6HavenCelestial/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h6/haven/Celetial_AttackLaunchMelee.wav",
+			"wince": "h6/haven/Celetial_Hit.wav",
+			"defend": "h6/haven/Celetial_Defend.wav",
+			"killed": "h6/haven/Celetial_Die.wav",
+			"move": "h6/haven/Celetial_FlyLoop1.wav",
+			"startMoving": "h6/haven/Celetial_FlyStart.wav",
+			"endMoving": "h6/haven/Celetial_FlyEnd.wav"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					10,
+					20,
+					30,
+					40,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "MIND_IMMUNITY",
+					"description": "{Steadfast Mind}\nImmune to Mind spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_RETALIATION"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "CASTS"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2
+				]
+			}
+		]
+	}
+}

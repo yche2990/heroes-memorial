@@ -1,0 +1,73 @@
+{
+ "fac": "inferno",
+ "k": 1.15,
+ "scale": 81.62098501312447,
+ "origin": [
+  208.9151192718766,
+  255.0
+ ],
+ "baked": {
+  "0": [
+   "cerberus_basic.fx"
+  ],
+  "1": [
+   "cerberus_basic.fx"
+  ],
+  "2": [
+   "cerberus_basic.fx"
+  ],
+  "3": [
+   "cerberus_basic.fx"
+  ],
+  "4": [
+   "cerberus_basic.fx"
+  ],
+  "5": [
+   "cerberus_basic.fx"
+  ],
+  "7": [
+   "cerberus_basic.fx"
+  ],
+  "8": [
+   "cerberus_basic.fx"
+  ],
+  "11": [
+   "cerberus_basic.fx"
+  ],
+  "12": [
+   "cerberus_basic.fx"
+  ],
+  "13": [
+   "cerberus_basic.fx"
+  ],
+  "17": [
+   "cerberus_basic.fx"
+  ],
+  "18": [
+   "cerberus_basic.fx"
+  ],
+  "19": [
+   "cerberus_basic.fx"
+  ],
+  "20": [
+   "cerberus_basic.fx"
+  ],
+  "21": [
+   "cerberus_basic.fx"
+  ],
+  "30": [
+   "cerberus_basic.fx"
+  ],
+  "32": [
+   "cerberus_basic.fx"
+  ],
+  "40": [
+   "cerberus_basic.fx"
+  ],
+  "42": [
+   "cerberus_basic.fx"
+  ]
+ },
+ "render": "Blender 4.2 Cycles 24spp 3x + sprite_post; fx h6m (fxsim d1=mul mode2=wrap)",
+ "sec": 17
+}

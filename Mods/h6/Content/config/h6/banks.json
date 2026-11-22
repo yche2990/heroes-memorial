@@ -1,0 +1,2609 @@
+// Heroes 6 memorial: boss treasuries (after Tears of Ashan's Uriel temple)
+{
+	"core:creatureBank": {
+		"types": {
+			"h6BankAbyssalWorm": {
+				"name": "Lava Pit",
+				"templates": {
+					"base": {
+						"animation": "h6/banks/h6BankAbyssalWorm/h6BankAbyssalWorm.json",
+						"visitableFrom": [
+							"---",
+							"-++",
+							"+++"
+						],
+						"mask": [
+							"VVVV",
+							"VVVV",
+							"VBBB",
+							"VBAA"
+						]
+					}
+				},
+				"sounds": {
+					"ambient": [
+						"LOOPVOLC"
+					],
+					"visit": [
+						"ROGUE"
+					]
+				},
+				"battleground": "lava",
+				"blockedVisitable": false,
+				// As the boss-level banks in the RMG settings of map objects (HotA Ancient Altar, the four Lands of Light): at most 1 per map, value 100000, rarity 100
+				"rmg": {
+					"mapLimit": 1,
+					"value": 25000,
+					"rarity": 4
+				},
+				"onGuardedMessage": "The ground is scorching, and something huge is churning in the lava. Will you go down?",
+				"onVisitedMessage": "Only cooled lava remains in the pit.",
+				"visitMode": "once",
+				"selectMode": "selectFirst",
+				"guardsLayout": "h6BossBank",
+				"rewards": [
+					{
+						"message": 34,
+						"appearChance": {
+							"min": 0,
+							"max": 20
+						},
+						"mapDice": 0,
+						"guards": [
+							{
+								"amount": 1,
+								"type": "h6BossAbyssalWorm"
+							}
+						],
+						"resources": {
+							"gold": 100000
+						},
+						"artifacts": [
+							{
+								"class": "MINOR"
+							},
+							{
+								"class": "MINOR"
+							},
+							{
+								"class": "MAJOR"
+							},
+							{
+								"class": "MAJOR"
+							},
+							{
+								"class": "MAJOR"
+							},
+							{
+								"class": "MAJOR"
+							},
+							"h7ArtSmasher"
+						]
+					},
+					{
+						"message": 34,
+						"appearChance": {
+							"min": 20,
+							"max": 40
+						},
+						"mapDice": 1,
+						"guards": [
+							{
+								"amount": 1,
+								"type": "h6BossAbyssalWorm"
+							}
+						],
+						"resources": {
+							"gold": 125000
+						},
+						"artifacts": [
+							{
+								"class": "MINOR"
+							},
+							{
+								"class": "MAJOR"
+							},
+							{
+								"class": "MAJOR"
+							},
+							{
+								"class": "MAJOR"
+							},
+							{
+								"class": "RELIC"
+							},
+							{
+								"class": "RELIC"
+							},
+							"h7ArtSmasher"
+						]
+					},
+					{
+						"message": 34,
+						"appearChance": {
+							"min": 40,
+							"max": 60
+						},
+						"mapDice": 2,
+						"guards": [
+							{
+								"amount": 1,
+								"type": "h6BossAbyssalWorm"
+							}
+						],
+						"resources": {
+							"gold": 150000
+						},
+						"artifacts": [
+							{
+								"class": "MAJOR"
+							},
+							{
+								"class": "MAJOR"
+							},
+							{
+								"class": "MAJOR"
+							},
+							{
+								"class": "RELIC"
+							},
+							{
+								"class": "RELIC"
+							},
+							{
+								"class": "RELIC"
+							},
+							"h7ArtSmasher"
+						]
+					},
+					{
+						"message": 34,
+						"appearChance": {
+							"min": 60,
+							"max": 80
+						},
+						"mapDice": 3,
+						"guards": [
+							{
+								"amount": 1,
+								"type": "h6BossAbyssalWorm"
+							}
+						],
+						"resources": {
+							"gold": 175000
+						},
+						"artifacts": [
+							{
+								"class": "MAJOR"
+							},
+							{
+								"class": "MAJOR"
+							},
+							{
+								"class": "RELIC"
+							},
+							{
+								"class": "RELIC"
+							},
+							{
+								"class": "RELIC"
+							},
+							{
+								"class": "RELIC"
+							},
+							"h7ArtSmasher"
+						]
+					},
+					{
+						"message": 34,
+						"appearChance": {
+							"min": 80,
+							"max": 100
+						},
+						"mapDice": 4,
+						"guards": [
+							{
+								"amount": 1,
+								"type": "h6BossAbyssalWorm"
+							}
+						],
+						"resources": {
+							"gold": 200000
+						},
+						"artifacts": [
+							{
+								"class": "RELIC"
+							},
+							{
+								"class": "RELIC"
+							},
+							{
+								"class": "RELIC"
+							},
+							{
+								"class": "RELIC"
+							},
+							{
+								"class": "RELIC"
+							},
+							{
+								"class": "RELIC"
+							},
+							"h7ArtSmasher"
+						]
+					}
+				]
+			},
+			"h6BankAzkaal": {
+				"name": "Altar of Destruction",
+				"templates": {
+					"base": {
+						"animation": "h6/banks/h6BankAzkaal/h6BankAzkaal.json",
+						"visitableFrom": [
+							"---",
+							"-++",
+							"+++"
+						],
+						"mask": [
+							"VVVV",
+							"VVVV",
+							"VBBB",
+							"VBAA"
+						]
+					}
+				},
+				"sounds": {
+					"ambient": [
+						"LOOPFIRE"
+					],
+					"visit": [
+						"ROGUE"
+					]
+				},
+				"battleground": "fiery_fields",
+				"blockedVisitable": false,
+				// As the boss-level banks in the RMG settings of map objects (HotA Ancient Altar, the four Lands of Light): at most 1 per map, value 100000, rarity 100
+				"rmg": {
+					"mapLimit": 1,
+					"value": 25000,
+					"rarity": 4
+				},
+				"onGuardedMessage": "Azkaal, Prince of Destruction, awaits challengers at the altar. Will you step forward?",
+				"onVisitedMessage": "The altar's fires have gone out.",
+				"visitMode": "once",
+				"selectMode": "selectFirst",
+				"guardsLayout": "h6BossBank",
+				"rewards": [
+					{
+						"message": 34,
+						"appearChance": {
+							"min": 0,
+							"max": 20
+						},
+						"mapDice": 0,
+						"guards": [
+							{
+								"amount": 1,
+								"type": "h6BossAzkaal"
+							}
+						],
+						"resources": {
+							"gold": 100000
+						},
+						"artifacts": [
+							{
+								"class": "MINOR"
+							},
+							{
+								"class": "MINOR"
+							},
+							{
+								"class": "MAJOR"
+							},
+							{
+								"class": "MAJOR"
+							},
+							{
+								"class": "MAJOR"
+							},
+							{
+								"class": "MAJOR"
+							},
+							"h7ArtMalathuasCleaver"
+						]
+					},
+					{
+						"message": 34,
+						"appearChance": {
+							"min": 20,
+							"max": 40
+						},
+						"mapDice": 1,
+						"guards": [
+							{
+								"amount": 1,
+								"type": "h6BossAzkaal"
+							}
+						],
+						"resources": {
+							"gold": 125000
+						},
+						"artifacts": [
+							{
+								"class": "MINOR"
+							},
+							{
+								"class": "MAJOR"
+							},
+							{
+								"class": "MAJOR"
+							},
+							{
+								"class": "MAJOR"
+							},
+							{
+								"class": "RELIC"
+							},
+							{
+								"class": "RELIC"
+							},
+							"h7ArtMalathuasCleaver"
+						]
+					},
+					{
+						"message": 34,
+						"appearChance": {
+							"min": 40,
+							"max": 60
+						},
+						"mapDice": 2,
+						"guards": [
+							{
+								"amount": 1,
+								"type": "h6BossAzkaal"
+							}
+						],
+						"resources": {
+							"gold": 150000
+						},
+						"artifacts": [
+							{
+								"class": "MAJOR"
+							},
+							{
+								"class": "MAJOR"
+							},
+							{
+								"class": "MAJOR"
+							},
+							{
+								"class": "RELIC"
+							},
+							{
+								"class": "RELIC"
+							},
+							{
+								"class": "RELIC"
+							},
+							"h7ArtMalathuasCleaver"
+						]
+					},
+					{
+						"message": 34,
+						"appearChance": {
+							"min": 60,
+							"max": 80
+						},
+						"mapDice": 3,
+						"guards": [
+							{
+								"amount": 1,
+								"type": "h6BossAzkaal"
+							}
+						],
+						"resources": {
+							"gold": 175000
+						},
+						"artifacts": [
+							{
+								"class": "MAJOR"
+							},
+							{
+								"class": "MAJOR"
+							},
+							{
+								"class": "RELIC"
+							},
+							{
+								"class": "RELIC"
+							},
+							{
+								"class": "RELIC"
+							},
+							{
+								"class": "RELIC"
+							},
+							"h7ArtMalathuasCleaver"
+						]
+					},
+					{
+						"message": 34,
+						"appearChance": {
+							"min": 80,
+							"max": 100
+						},
+						"mapDice": 4,
+						"guards": [
+							{
+								"amount": 1,
+								"type": "h6BossAzkaal"
+							}
+						],
+						"resources": {
+							"gold": 200000
+						},
+						"artifacts": [
+							{
+								"class": "RELIC"
+							},
+							{
+								"class": "RELIC"
+							},
+							{
+								"class": "RELIC"
+							},
+							{
+								"class": "RELIC"
+							},
+							{
+								"class": "RELIC"
+							},
+							{
+								"class": "RELIC"
+							},
+							"h7ArtMalathuasCleaver"
+						]
+					}
+				]
+			},
+			"h6BankBreederQueen": {
+				"name": "Chaos Nest",
+				"templates": {
+					"base": {
+						"animation": "h6/banks/h6BankBreederQueen/h6BankBreederQueen.json",
+						"visitableFrom": [
+							"---",
+							"-++",
+							"+++"
+						],
+						"mask": [
+							"VVVV",
+							"VVVV",
+							"VBBB",
+							"VBAA"
+						]
+					}
+				},
+				"sounds": {
+					"ambient": [
+						"LOOPSWAR"
+					],
+					"visit": [
+						"ROGUE"
+					]
+				},
+				"battleground": "lava",
+				"blockedVisitable": false,
+				// As the boss-level banks in the RMG settings of map objects (HotA Ancient Altar, the four Lands of Light): at most 1 per map, value 100000, rarity 100
+				"rmg": {
+					"mapLimit": 1,
+					"value": 25000,
+					"rarity": 4
+				},
+				"onGuardedMessage": "Countless Devil Spawn shriek within the nest, and the Breeder Queen lurks in its depths. Will you go in?",
+				"onVisitedMessage": "The nest is empty; only broken shells litter the ground.",
+				"visitMode": "once",
+				"selectMode": "selectFirst",
+				"guardsLayout": "h6BossBank",
+				"rewards": [
+					{
+						"message": 34,
+						"appearChance": {
+							"min": 0,
+							"max": 20
+						},
+						"mapDice": 0,
+						"guards": [
+							{
+								"amount": 1,
+								"type": "h6BossBreederQueen"
+							}
+						],
+						"resources": {
+							"gold": 100000
+						},
+						"artifacts": [
+							{
+								"class": "MINOR"
+							},
+							{
+								"class": "MINOR"
+							},
+							{
+								"class": "MAJOR"
+							},
+							{
+								"class": "MAJOR"
+							},
+							{
+								"class": "MAJOR"
+							},
+							{
+								"class": "MAJOR"
+							},
+							"h7ArtQueenscale"
+						]
+					},
+					{
+						"message": 34,
+						"appearChance": {
+							"min": 20,
+							"max": 40
+						},
+						"mapDice": 1,
+						"guards": [
+							{
+								"amount": 1,
+								"type": "h6BossBreederQueen"
+							}
+						],
+						"resources": {
+							"gold": 125000
+						},
+						"artifacts": [
+							{
+								"class": "MINOR"
+							},
+							{
+								"class": "MAJOR"
+							},
+							{
+								"class": "MAJOR"
+							},
+							{
+								"class": "MAJOR"
+							},
+							{
+								"class": "RELIC"
+							},
+							{
+								"class": "RELIC"
+							},
+							"h7ArtQueenscale"
+						]
+					},
+					{
+						"message": 34,
+						"appearChance": {
+							"min": 40,
+							"max": 60
+						},
+						"mapDice": 2,
+						"guards": [
+							{
+								"amount": 1,
+								"type": "h6BossBreederQueen"
+							}
+						],
+						"resources": {
+							"gold": 150000
+						},
+						"artifacts": [
+							{
+								"class": "MAJOR"
+							},
+							{
+								"class": "MAJOR"
+							},
+							{
+								"class": "MAJOR"
+							},
+							{
+								"class": "RELIC"
+							},
+							{
+								"class": "RELIC"
+							},
+							{
+								"class": "RELIC"
+							},
+							"h7ArtQueenscale"
+						]
+					},
+					{
+						"message": 34,
+						"appearChance": {
+							"min": 60,
+							"max": 80
+						},
+						"mapDice": 3,
+						"guards": [
+							{
+								"amount": 1,
+								"type": "h6BossBreederQueen"
+							}
+						],
+						"resources": {
+							"gold": 175000
+						},
+						"artifacts": [
+							{
+								"class": "MAJOR"
+							},
+							{
+								"class": "MAJOR"
+							},
+							{
+								"class": "RELIC"
+							},
+							{
+								"class": "RELIC"
+							},
+							{
+								"class": "RELIC"
+							},
+							{
+								"class": "RELIC"
+							},
+							"h7ArtQueenscale"
+						]
+					},
+					{
+						"message": 34,
+						"appearChance": {
+							"min": 80,
+							"max": 100
+						},
+						"mapDice": 4,
+						"guards": [
+							{
+								"amount": 1,
+								"type": "h6BossBreederQueen"
+							}
+						],
+						"resources": {
+							"gold": 200000
+						},
+						"artifacts": [
+							{
+								"class": "RELIC"
+							},
+							{
+								"class": "RELIC"
+							},
+							{
+								"class": "RELIC"
+							},
+							{
+								"class": "RELIC"
+							},
+							{
+								"class": "RELIC"
+							},
+							{
+								"class": "RELIC"
+							},
+							"h7ArtQueenscale"
+						]
+					}
+				]
+			},
+			"h6BankDaughterOfMalassa": {
+				"name": "Tower of Shadows",
+				"templates": {
+					"base": {
+						"animation": "h6/banks/h6BankDaughterOfMalassa/h6BankDaughterOfMalassa.json",
+						"visitableFrom": [
+							"---",
+							"-++",
+							"+++"
+						],
+						"mask": [
+							"VVVV",
+							"VVVV",
+							"VBBB",
+							"VBAA"
+						]
+					}
+				},
+				"sounds": {
+					"ambient": [
+						"LOOPDEVL"
+					],
+					"visit": [
+						"ROGUE"
+					]
+				},
+				"battleground": "evil_fog",
+				"blockedVisitable": false,
+				// As the boss-level banks in the RMG settings of map objects (HotA Ancient Altar, the four Lands of Light): at most 1 per map, value 100000, rarity 100
+				"rmg": {
+					"mapLimit": 1,
+					"value": 25000,
+					"rarity": 4
+				},
+				"onGuardedMessage": "A shadow dragon coils atop the tower: a Daughter of Malassa. Dare you climb it?",
+				"onVisitedMessage": "Only deep darkness remains in the tower.",
+				"visitMode": "once",
+				"selectMode": "selectFirst",
+				"guardsLayout": "h6BossBank",
+				"rewards": [
+					{
+						"message": 34,
+						"appearChance": {
+							"min": 0,
+							"max": 20
+						},
+						"mapDice": 0,
+						"guards": [
+							{
+								"amount": 1,
+								"type": "h6BossDaughterOfMalassa"
+							}
+						],
+						"resources": {
+							"gold": 100000
+						},
+						"artifacts": [
+							{
+								"class": "MINOR"
+							},
+							{
+								"class": "MINOR"
+							},
+							{
+								"class": "MAJOR"
+							},
+							{
+								"class": "MAJOR"
+							},
+							{
+								"class": "MAJOR"
+							},
+							{
+								"class": "MAJOR"
+							},
+							"h7ArtFlowerOfDolor"
+						]
+					},
+					{
+						"message": 34,
+						"appearChance": {
+							"min": 20,
+							"max": 40
+						},
+						"mapDice": 1,
+						"guards": [
+							{
+								"amount": 1,
+								"type": "h6BossDaughterOfMalassa"
+							}
+						],
+						"resources": {
+							"gold": 125000
+						},
+						"artifacts": [
+							{
+								"class": "MINOR"
+							},
+							{
+								"class": "MAJOR"
+							},
+							{
+								"class": "MAJOR"
+							},
+							{
+								"class": "MAJOR"
+							},
+							{
+								"class": "RELIC"
+							},
+							{
+								"class": "RELIC"
+							},
+							"h7ArtFlowerOfDolor"
+						]
+					},
+					{
+						"message": 34,
+						"appearChance": {
+							"min": 40,
+							"max": 60
+						},
+						"mapDice": 2,
+						"guards": [
+							{
+								"amount": 1,
+								"type": "h6BossDaughterOfMalassa"
+							}
+						],
+						"resources": {
+							"gold": 150000
+						},
+						"artifacts": [
+							{
+								"class": "MAJOR"
+							},
+							{
+								"class": "MAJOR"
+							},
+							{
+								"class": "MAJOR"
+							},
+							{
+								"class": "RELIC"
+							},
+							{
+								"class": "RELIC"
+							},
+							{
+								"class": "RELIC"
+							},
+							"h7ArtFlowerOfDolor"
+						]
+					},
+					{
+						"message": 34,
+						"appearChance": {
+							"min": 60,
+							"max": 80
+						},
+						"mapDice": 3,
+						"guards": [
+							{
+								"amount": 1,
+								"type": "h6BossDaughterOfMalassa"
+							}
+						],
+						"resources": {
+							"gold": 175000
+						},
+						"artifacts": [
+							{
+								"class": "MAJOR"
+							},
+							{
+								"class": "MAJOR"
+							},
+							{
+								"class": "RELIC"
+							},
+							{
+								"class": "RELIC"
+							},
+							{
+								"class": "RELIC"
+							},
+							{
+								"class": "RELIC"
+							},
+							"h7ArtFlowerOfDolor"
+						]
+					},
+					{
+						"message": 34,
+						"appearChance": {
+							"min": 80,
+							"max": 100
+						},
+						"mapDice": 4,
+						"guards": [
+							{
+								"amount": 1,
+								"type": "h6BossDaughterOfMalassa"
+							}
+						],
+						"resources": {
+							"gold": 200000
+						},
+						"artifacts": [
+							{
+								"class": "RELIC"
+							},
+							{
+								"class": "RELIC"
+							},
+							{
+								"class": "RELIC"
+							},
+							{
+								"class": "RELIC"
+							},
+							{
+								"class": "RELIC"
+							},
+							{
+								"class": "RELIC"
+							},
+							"h7ArtFlowerOfDolor"
+						]
+					}
+				]
+			},
+			"h6BankMotherNamtaru": {
+				"name": "Spider Temple",
+				"templates": {
+					"base": {
+						"animation": "h6/banks/h6BankMotherNamtaru/h6BankMotherNamtaru.json",
+						"visitableFrom": [
+							"---",
+							"-++",
+							"+++"
+						],
+						"mask": [
+							"VVVV",
+							"VVVV",
+							"VBBB",
+							"VBAA"
+						]
+					}
+				},
+				"sounds": {
+					"ambient": [
+						"LOOPCAVE"
+					],
+					"visit": [
+						"ROGUE"
+					]
+				},
+				"battleground": "cursed_ground",
+				"blockedVisitable": false,
+				// As the boss-level banks in the RMG settings of map objects (HotA Ancient Altar, the four Lands of Light): at most 1 per map, value 100000, rarity 100
+				"rmg": {
+					"mapLimit": 1,
+					"value": 25000,
+					"rarity": 4
+				},
+				"onGuardedMessage": "The temple is thick with webs; Mother Namtaru and her ghosts keep watch here. Will you go in?",
+				"onVisitedMessage": "The temple is no longer guarded.",
+				"visitMode": "once",
+				"selectMode": "selectFirst",
+				"guardsLayout": "h6BossBank",
+				"rewards": [
+					{
+						"message": 34,
+						"appearChance": {
+							"min": 0,
+							"max": 20
+						},
+						"mapDice": 0,
+						"guards": [
+							{
+								"amount": 20,
+								"type": "h6BossNamtaruGhost"
+							},
+							{
+								"amount": 20,
+								"type": "h6BossNamtaruGhost"
+							},
+							{
+								"amount": 1,
+								"type": "h6BossMotherNamtaru"
+							}
+						],
+						"resources": {
+							"gold": 100000
+						},
+						"artifacts": [
+							{
+								"class": "MINOR"
+							},
+							{
+								"class": "MINOR"
+							},
+							{
+								"class": "MAJOR"
+							},
+							{
+								"class": "MAJOR"
+							},
+							{
+								"class": "MAJOR"
+							},
+							{
+								"class": "MAJOR"
+							},
+							"h7ArtDeadwoodStaff"
+						]
+					},
+					{
+						"message": 34,
+						"appearChance": {
+							"min": 20,
+							"max": 40
+						},
+						"mapDice": 1,
+						"guards": [
+							{
+								"amount": 30,
+								"type": "h6BossNamtaruGhost"
+							},
+							{
+								"amount": 30,
+								"type": "h6BossNamtaruGhost"
+							},
+							{
+								"amount": 1,
+								"type": "h6BossMotherNamtaru"
+							}
+						],
+						"resources": {
+							"gold": 125000
+						},
+						"artifacts": [
+							{
+								"class": "MINOR"
+							},
+							{
+								"class": "MAJOR"
+							},
+							{
+								"class": "MAJOR"
+							},
+							{
+								"class": "MAJOR"
+							},
+							{
+								"class": "RELIC"
+							},
+							{
+								"class": "RELIC"
+							},
+							"h7ArtDeadwoodStaff"
+						]
+					},
+					{
+						"message": 34,
+						"appearChance": {
+							"min": 40,
+							"max": 60
+						},
+						"mapDice": 2,
+						"guards": [
+							{
+								"amount": 40,
+								"type": "h6BossNamtaruGhost"
+							},
+							{
+								"amount": 40,
+								"type": "h6BossNamtaruGhost"
+							},
+							{
+								"amount": 1,
+								"type": "h6BossMotherNamtaru"
+							}
+						],
+						"resources": {
+							"gold": 150000
+						},
+						"artifacts": [
+							{
+								"class": "MAJOR"
+							},
+							{
+								"class": "MAJOR"
+							},
+							{
+								"class": "MAJOR"
+							},
+							{
+								"class": "RELIC"
+							},
+							{
+								"class": "RELIC"
+							},
+							{
+								"class": "RELIC"
+							},
+							"h7ArtDeadwoodStaff"
+						]
+					},
+					{
+						"message": 34,
+						"appearChance": {
+							"min": 60,
+							"max": 80
+						},
+						"mapDice": 3,
+						"guards": [
+							{
+								"amount": 50,
+								"type": "h6BossNamtaruGhost"
+							},
+							{
+								"amount": 50,
+								"type": "h6BossNamtaruGhost"
+							},
+							{
+								"amount": 1,
+								"type": "h6BossMotherNamtaru"
+							}
+						],
+						"resources": {
+							"gold": 175000
+						},
+						"artifacts": [
+							{
+								"class": "MAJOR"
+							},
+							{
+								"class": "MAJOR"
+							},
+							{
+								"class": "RELIC"
+							},
+							{
+								"class": "RELIC"
+							},
+							{
+								"class": "RELIC"
+							},
+							{
+								"class": "RELIC"
+							},
+							"h7ArtDeadwoodStaff"
+						]
+					},
+					{
+						"message": 34,
+						"appearChance": {
+							"min": 80,
+							"max": 100
+						},
+						"mapDice": 4,
+						"guards": [
+							{
+								"amount": 60,
+								"type": "h6BossNamtaruGhost"
+							},
+							{
+								"amount": 60,
+								"type": "h6BossNamtaruGhost"
+							},
+							{
+								"amount": 1,
+								"type": "h6BossMotherNamtaru"
+							}
+						],
+						"resources": {
+							"gold": 200000
+						},
+						"artifacts": [
+							{
+								"class": "RELIC"
+							},
+							{
+								"class": "RELIC"
+							},
+							{
+								"class": "RELIC"
+							},
+							{
+								"class": "RELIC"
+							},
+							{
+								"class": "RELIC"
+							},
+							{
+								"class": "RELIC"
+							},
+							"h7ArtDeadwoodStaff"
+						]
+					}
+				]
+			},
+			"h6BankMichael": {
+				"name": "Sanctuary of Light",
+				"templates": {
+					"base": {
+						"animation": "h6/banks/h6BankMichael/h6BankMichael.json",
+						"visitableFrom": [
+							"---",
+							"-++",
+							"+++"
+						],
+						"mask": [
+							"VVVV",
+							"VVVV",
+							"VBBB",
+							"VBAA"
+						]
+					}
+				},
+				"sounds": {
+					"ambient": [
+						"LOOPSANC"
+					],
+					"visit": [
+						"ROGUE"
+					]
+				},
+				"battleground": "holy_ground",
+				"blockedVisitable": false,
+				// As the boss-level banks in the RMG settings of map objects (HotA Ancient Altar, the four Lands of Light): at most 1 per map, value 100000, rarity 100
+				"rmg": {
+					"mapLimit": 1,
+					"value": 25000,
+					"rarity": 4
+				},
+				"onGuardedMessage": "The Archangel Michael and his guards protect the sanctuary. Will you challenge them?",
+				"onVisitedMessage": "The light of the sanctuary has dimmed.",
+				"visitMode": "once",
+				"selectMode": "selectFirst",
+				"guardsLayout": "h6BossBank",
+				"rewards": [
+					{
+						"message": 34,
+						"appearChance": {
+							"min": 0,
+							"max": 20
+						},
+						"mapDice": 0,
+						"guards": [
+							{
+								"amount": 1,
+								"type": "h6BossMichaelGuard"
+							},
+							{
+								"amount": 1,
+								"type": "h6BossMichaelGuard"
+							},
+							{
+								"amount": 1,
+								"type": "h6BossMichaelGuard"
+							},
+							{
+								"amount": 1,
+								"type": "h6BossMichaelGuard"
+							},
+							{
+								"amount": 1,
+								"type": "h6BossMichaelGuard"
+							},
+							{
+								"amount": 1,
+								"type": "h6BossMichaelGuard"
+							},
+							{
+								"amount": 1,
+								"type": "h6BossMichael"
+							}
+						],
+						"resources": {
+							"gold": 100000
+						},
+						"artifacts": [
+							{
+								"class": "MINOR"
+							},
+							{
+								"class": "MINOR"
+							},
+							{
+								"class": "MAJOR"
+							},
+							{
+								"class": "MAJOR"
+							},
+							{
+								"class": "MAJOR"
+							},
+							{
+								"class": "MAJOR"
+							},
+							"h7ArtGriffinsMantle"
+						]
+					},
+					{
+						"message": 34,
+						"appearChance": {
+							"min": 20,
+							"max": 40
+						},
+						"mapDice": 1,
+						"guards": [
+							{
+								"amount": 1,
+								"type": "h6BossMichaelGuard"
+							},
+							{
+								"amount": 1,
+								"type": "h6BossMichaelGuard"
+							},
+							{
+								"amount": 1,
+								"type": "h6BossMichaelGuard"
+							},
+							{
+								"amount": 1,
+								"type": "h6BossMichaelGuard"
+							},
+							{
+								"amount": 1,
+								"type": "h6BossMichaelGuard"
+							},
+							{
+								"amount": 1,
+								"type": "h6BossMichaelGuard"
+							},
+							{
+								"amount": 1,
+								"type": "h6BossMichael"
+							}
+						],
+						"resources": {
+							"gold": 125000
+						},
+						"artifacts": [
+							{
+								"class": "MINOR"
+							},
+							{
+								"class": "MAJOR"
+							},
+							{
+								"class": "MAJOR"
+							},
+							{
+								"class": "MAJOR"
+							},
+							{
+								"class": "RELIC"
+							},
+							{
+								"class": "RELIC"
+							},
+							"h7ArtGriffinsMantle"
+						]
+					},
+					{
+						"message": 34,
+						"appearChance": {
+							"min": 40,
+							"max": 60
+						},
+						"mapDice": 2,
+						"guards": [
+							{
+								"amount": 2,
+								"type": "h6BossMichaelGuard"
+							},
+							{
+								"amount": 2,
+								"type": "h6BossMichaelGuard"
+							},
+							{
+								"amount": 2,
+								"type": "h6BossMichaelGuard"
+							},
+							{
+								"amount": 2,
+								"type": "h6BossMichaelGuard"
+							},
+							{
+								"amount": 2,
+								"type": "h6BossMichaelGuard"
+							},
+							{
+								"amount": 2,
+								"type": "h6BossMichaelGuard"
+							},
+							{
+								"amount": 1,
+								"type": "h6BossMichael"
+							}
+						],
+						"resources": {
+							"gold": 150000
+						},
+						"artifacts": [
+							{
+								"class": "MAJOR"
+							},
+							{
+								"class": "MAJOR"
+							},
+							{
+								"class": "MAJOR"
+							},
+							{
+								"class": "RELIC"
+							},
+							{
+								"class": "RELIC"
+							},
+							{
+								"class": "RELIC"
+							},
+							"h7ArtGriffinsMantle"
+						]
+					},
+					{
+						"message": 34,
+						"appearChance": {
+							"min": 60,
+							"max": 80
+						},
+						"mapDice": 3,
+						"guards": [
+							{
+								"amount": 2,
+								"type": "h6BossMichaelGuard"
+							},
+							{
+								"amount": 2,
+								"type": "h6BossMichaelGuard"
+							},
+							{
+								"amount": 2,
+								"type": "h6BossMichaelGuard"
+							},
+							{
+								"amount": 2,
+								"type": "h6BossMichaelGuard"
+							},
+							{
+								"amount": 2,
+								"type": "h6BossMichaelGuard"
+							},
+							{
+								"amount": 2,
+								"type": "h6BossMichaelGuard"
+							},
+							{
+								"amount": 1,
+								"type": "h6BossMichael"
+							}
+						],
+						"resources": {
+							"gold": 175000
+						},
+						"artifacts": [
+							{
+								"class": "MAJOR"
+							},
+							{
+								"class": "MAJOR"
+							},
+							{
+								"class": "RELIC"
+							},
+							{
+								"class": "RELIC"
+							},
+							{
+								"class": "RELIC"
+							},
+							{
+								"class": "RELIC"
+							},
+							"h7ArtGriffinsMantle",
+							"h7ArtBladeOfTruth"
+						]
+					},
+					{
+						"message": 34,
+						"appearChance": {
+							"min": 80,
+							"max": 100
+						},
+						"mapDice": 4,
+						"guards": [
+							{
+								"amount": 3,
+								"type": "h6BossMichaelGuard"
+							},
+							{
+								"amount": 3,
+								"type": "h6BossMichaelGuard"
+							},
+							{
+								"amount": 3,
+								"type": "h6BossMichaelGuard"
+							},
+							{
+								"amount": 3,
+								"type": "h6BossMichaelGuard"
+							},
+							{
+								"amount": 3,
+								"type": "h6BossMichaelGuard"
+							},
+							{
+								"amount": 3,
+								"type": "h6BossMichaelGuard"
+							},
+							{
+								"amount": 1,
+								"type": "h6BossMichael"
+							}
+						],
+						"resources": {
+							"gold": 200000
+						},
+						"artifacts": [
+							{
+								"class": "RELIC"
+							},
+							{
+								"class": "RELIC"
+							},
+							{
+								"class": "RELIC"
+							},
+							{
+								"class": "RELIC"
+							},
+							{
+								"class": "RELIC"
+							},
+							{
+								"class": "RELIC"
+							},
+							"h7ArtGriffinsMantle",
+							"h7ArtBladeOfTruth"
+						]
+					}
+				]
+			},
+			"h6BankThunderbird": {
+				"name": "Thunderbird Nest",
+				"templates": {
+					"base": {
+						"animation": "h6/banks/h6BankThunderbird/h6BankThunderbird.json",
+						"visitableFrom": [
+							"---",
+							"-++",
+							"+++"
+						],
+						"mask": [
+							"VVVV",
+							"VVVV",
+							"VBBB",
+							"VBAA"
+						]
+					}
+				},
+				"sounds": {
+					"ambient": [
+						"LOOPWIND"
+					],
+					"visit": [
+						"ROGUE"
+					]
+				},
+				"battleground": "magic_clouds",
+				"blockedVisitable": false,
+				// As the boss-level banks in the RMG settings of map objects (HotA Ancient Altar, the four Lands of Light): at most 1 per map, value 100000, rarity 100
+				"rmg": {
+					"mapLimit": 1,
+					"value": 25000,
+					"rarity": 4
+				},
+				"onGuardedMessage": "Thunder rumbles on the summit, where a Thunderbird guards its nest. Will you climb up?",
+				"onVisitedMessage": "The nest is empty.",
+				"visitMode": "once",
+				"selectMode": "selectFirst",
+				"guardsLayout": "h6BossBank",
+				"rewards": [
+					{
+						"message": 34,
+						"appearChance": {
+							"min": 0,
+							"max": 20
+						},
+						"mapDice": 0,
+						"guards": [
+							{
+								"amount": 1,
+								"type": "h6BossThunderbird"
+							}
+						],
+						"resources": {
+							"gold": 100000
+						},
+						"artifacts": [
+							{
+								"class": "MINOR"
+							},
+							{
+								"class": "MINOR"
+							},
+							{
+								"class": "MAJOR"
+							},
+							{
+								"class": "MAJOR"
+							},
+							{
+								"class": "MAJOR"
+							},
+							{
+								"class": "MAJOR"
+							},
+							"h7ArtGriffinsTalons"
+						]
+					},
+					{
+						"message": 34,
+						"appearChance": {
+							"min": 20,
+							"max": 40
+						},
+						"mapDice": 1,
+						"guards": [
+							{
+								"amount": 1,
+								"type": "h6BossThunderbird"
+							}
+						],
+						"resources": {
+							"gold": 125000
+						},
+						"artifacts": [
+							{
+								"class": "MINOR"
+							},
+							{
+								"class": "MAJOR"
+							},
+							{
+								"class": "MAJOR"
+							},
+							{
+								"class": "MAJOR"
+							},
+							{
+								"class": "RELIC"
+							},
+							{
+								"class": "RELIC"
+							},
+							"h7ArtGriffinsTalons"
+						]
+					},
+					{
+						"message": 34,
+						"appearChance": {
+							"min": 40,
+							"max": 60
+						},
+						"mapDice": 2,
+						"guards": [
+							{
+								"amount": 1,
+								"type": "h6BossThunderbird"
+							}
+						],
+						"resources": {
+							"gold": 150000
+						},
+						"artifacts": [
+							{
+								"class": "MAJOR"
+							},
+							{
+								"class": "MAJOR"
+							},
+							{
+								"class": "MAJOR"
+							},
+							{
+								"class": "RELIC"
+							},
+							{
+								"class": "RELIC"
+							},
+							{
+								"class": "RELIC"
+							},
+							"h7ArtGriffinsTalons"
+						]
+					},
+					{
+						"message": 34,
+						"appearChance": {
+							"min": 60,
+							"max": 80
+						},
+						"mapDice": 3,
+						"guards": [
+							{
+								"amount": 1,
+								"type": "h6BossThunderbird"
+							}
+						],
+						"resources": {
+							"gold": 175000
+						},
+						"artifacts": [
+							{
+								"class": "MAJOR"
+							},
+							{
+								"class": "MAJOR"
+							},
+							{
+								"class": "RELIC"
+							},
+							{
+								"class": "RELIC"
+							},
+							{
+								"class": "RELIC"
+							},
+							{
+								"class": "RELIC"
+							},
+							"h7ArtGriffinsTalons"
+						]
+					},
+					{
+						"message": 34,
+						"appearChance": {
+							"min": 80,
+							"max": 100
+						},
+						"mapDice": 4,
+						"guards": [
+							{
+								"amount": 1,
+								"type": "h6BossThunderbird"
+							}
+						],
+						"resources": {
+							"gold": 200000
+						},
+						"artifacts": [
+							{
+								"class": "RELIC"
+							},
+							{
+								"class": "RELIC"
+							},
+							{
+								"class": "RELIC"
+							},
+							{
+								"class": "RELIC"
+							},
+							{
+								"class": "RELIC"
+							},
+							{
+								"class": "RELIC"
+							},
+							"h7ArtGriffinsTalons"
+						]
+					}
+				]
+			},
+			"h6BankDragonwraith": {
+				"name": "Hall of the Undying",
+				"templates": {
+					"base": {
+						"animation": "h6/banks/h6BankDragonwraith/h6BankDragonwraith.json",
+						"visitableFrom": [
+							"---",
+							"-++",
+							"+++"
+						],
+						"mask": [
+							"VVVV",
+							"VVVV",
+							"VBBB",
+							"VBAA"
+						]
+					}
+				},
+				"sounds": {
+					"ambient": [
+						"LOOPDEAD"
+					],
+					"visit": [
+						"ROGUE"
+					]
+				},
+				"battleground": "cursed_ground",
+				"blockedVisitable": false,
+				// As the boss-level banks in the RMG settings of map objects (HotA Ancient Altar, the four Lands of Light): at most 1 per map, value 100000, rarity 100
+				"rmg": {
+					"mapLimit": 1,
+					"value": 25000,
+					"rarity": 4
+				},
+				"onGuardedMessage": "Channelers chant in the hall while a Dragonwraith circles above them. Will you storm in?",
+				"onVisitedMessage": "Only a cold silence remains in the hall.",
+				"visitMode": "once",
+				"selectMode": "selectFirst",
+				"guardsLayout": "h6BossBank",
+				"rewards": [
+					{
+						"message": 34,
+						"appearChance": {
+							"min": 0,
+							"max": 20
+						},
+						"mapDice": 0,
+						"guards": [
+							{
+								"amount": 20,
+								"type": "h6BossChanneler"
+							},
+							{
+								"amount": 20,
+								"type": "h6BossChanneler"
+							},
+							{
+								"amount": 20,
+								"type": "h6BossChanneler"
+							},
+							{
+								"amount": 20,
+								"type": "h6BossChanneler"
+							},
+							{
+								"amount": 20,
+								"type": "h6BossChanneler"
+							},
+							{
+								"amount": 20,
+								"type": "h6BossChanneler"
+							},
+							{
+								"amount": 1,
+								"type": "h6BossDragonwraith"
+							}
+						],
+						"resources": {
+							"gold": 100000
+						},
+						"artifacts": [
+							{
+								"class": "MINOR"
+							},
+							{
+								"class": "MINOR"
+							},
+							{
+								"class": "MAJOR"
+							},
+							{
+								"class": "MAJOR"
+							},
+							{
+								"class": "MAJOR"
+							},
+							{
+								"class": "MAJOR"
+							},
+							"h7ArtWardenOfWinter"
+						]
+					},
+					{
+						"message": 34,
+						"appearChance": {
+							"min": 20,
+							"max": 40
+						},
+						"mapDice": 1,
+						"guards": [
+							{
+								"amount": 25,
+								"type": "h6BossChanneler"
+							},
+							{
+								"amount": 25,
+								"type": "h6BossChanneler"
+							},
+							{
+								"amount": 25,
+								"type": "h6BossChanneler"
+							},
+							{
+								"amount": 25,
+								"type": "h6BossChanneler"
+							},
+							{
+								"amount": 25,
+								"type": "h6BossChanneler"
+							},
+							{
+								"amount": 25,
+								"type": "h6BossChanneler"
+							},
+							{
+								"amount": 1,
+								"type": "h6BossDragonwraith"
+							}
+						],
+						"resources": {
+							"gold": 125000
+						},
+						"artifacts": [
+							{
+								"class": "MINOR"
+							},
+							{
+								"class": "MAJOR"
+							},
+							{
+								"class": "MAJOR"
+							},
+							{
+								"class": "MAJOR"
+							},
+							{
+								"class": "RELIC"
+							},
+							{
+								"class": "RELIC"
+							},
+							"h7ArtWardenOfWinter"
+						]
+					},
+					{
+						"message": 34,
+						"appearChance": {
+							"min": 40,
+							"max": 60
+						},
+						"mapDice": 2,
+						"guards": [
+							{
+								"amount": 30,
+								"type": "h6BossChanneler"
+							},
+							{
+								"amount": 30,
+								"type": "h6BossChanneler"
+							},
+							{
+								"amount": 30,
+								"type": "h6BossChanneler"
+							},
+							{
+								"amount": 30,
+								"type": "h6BossChanneler"
+							},
+							{
+								"amount": 30,
+								"type": "h6BossChanneler"
+							},
+							{
+								"amount": 30,
+								"type": "h6BossChanneler"
+							},
+							{
+								"amount": 1,
+								"type": "h6BossDragonwraith"
+							}
+						],
+						"resources": {
+							"gold": 150000
+						},
+						"artifacts": [
+							{
+								"class": "MAJOR"
+							},
+							{
+								"class": "MAJOR"
+							},
+							{
+								"class": "MAJOR"
+							},
+							{
+								"class": "RELIC"
+							},
+							{
+								"class": "RELIC"
+							},
+							{
+								"class": "RELIC"
+							},
+							"h7ArtWardenOfWinter"
+						]
+					},
+					{
+						"message": 34,
+						"appearChance": {
+							"min": 60,
+							"max": 80
+						},
+						"mapDice": 3,
+						"guards": [
+							{
+								"amount": 35,
+								"type": "h6BossChanneler"
+							},
+							{
+								"amount": 35,
+								"type": "h6BossChanneler"
+							},
+							{
+								"amount": 35,
+								"type": "h6BossChanneler"
+							},
+							{
+								"amount": 35,
+								"type": "h6BossChanneler"
+							},
+							{
+								"amount": 35,
+								"type": "h6BossChanneler"
+							},
+							{
+								"amount": 35,
+								"type": "h6BossChanneler"
+							},
+							{
+								"amount": 1,
+								"type": "h6BossDragonwraith"
+							}
+						],
+						"resources": {
+							"gold": 175000
+						},
+						"artifacts": [
+							{
+								"class": "MAJOR"
+							},
+							{
+								"class": "MAJOR"
+							},
+							{
+								"class": "RELIC"
+							},
+							{
+								"class": "RELIC"
+							},
+							{
+								"class": "RELIC"
+							},
+							{
+								"class": "RELIC"
+							},
+							"h7ArtWardenOfWinter"
+						]
+					},
+					{
+						"message": 34,
+						"appearChance": {
+							"min": 80,
+							"max": 100
+						},
+						"mapDice": 4,
+						"guards": [
+							{
+								"amount": 40,
+								"type": "h6BossChanneler"
+							},
+							{
+								"amount": 40,
+								"type": "h6BossChanneler"
+							},
+							{
+								"amount": 40,
+								"type": "h6BossChanneler"
+							},
+							{
+								"amount": 40,
+								"type": "h6BossChanneler"
+							},
+							{
+								"amount": 40,
+								"type": "h6BossChanneler"
+							},
+							{
+								"amount": 40,
+								"type": "h6BossChanneler"
+							},
+							{
+								"amount": 1,
+								"type": "h6BossDragonwraith"
+							}
+						],
+						"resources": {
+							"gold": 200000
+						},
+						"artifacts": [
+							{
+								"class": "RELIC"
+							},
+							{
+								"class": "RELIC"
+							},
+							{
+								"class": "RELIC"
+							},
+							{
+								"class": "RELIC"
+							},
+							{
+								"class": "RELIC"
+							},
+							{
+								"class": "RELIC"
+							},
+							"h7ArtWardenOfWinter"
+						]
+					}
+				]
+			},
+			"h6BankAvatarOfVoid": {
+				"name": "Void Breach",
+				"templates": {
+					"base": {
+						"animation": "h6/banks/h6BankAvatarOfVoid/h6BankAvatarOfVoid.json",
+						"visitableFrom": [
+							"---",
+							"-++",
+							"+++"
+						],
+						"mask": [
+							"VVVV",
+							"VVVV",
+							"VBBB",
+							"VBAA"
+						]
+					}
+				},
+				"sounds": {
+					"ambient": [
+						"LOOPMAGI"
+					],
+					"visit": [
+						"ROGUE"
+					]
+				},
+				"battleground": "magic_plains",
+				"blockedVisitable": false,
+				// As the boss-level banks in the RMG settings of map objects (HotA Ancient Altar, the four Lands of Light): at most 1 per map, value 100000, rarity 100
+				"rmg": {
+					"mapLimit": 1,
+					"value": 25000,
+					"rarity": 4
+				},
+				"onGuardedMessage": "The void within the breach devours all light and sound. Will you step inside?",
+				"onVisitedMessage": "The breach has closed.",
+				"visitMode": "once",
+				"selectMode": "selectFirst",
+				"guardsLayout": "h6BossBank",
+				"rewards": [
+					{
+						"message": 34,
+						"appearChance": {
+							"min": 0,
+							"max": 20
+						},
+						"mapDice": 0,
+						"guards": [
+							{
+								"amount": 1,
+								"type": "h6BossAvatarOfVoid"
+							}
+						],
+						"resources": {
+							"gold": 100000
+						},
+						"artifacts": [
+							{
+								"class": "MINOR"
+							},
+							{
+								"class": "MINOR"
+							},
+							{
+								"class": "MAJOR"
+							},
+							{
+								"class": "MAJOR"
+							},
+							{
+								"class": "MAJOR"
+							},
+							{
+								"class": "MAJOR"
+							},
+							"h7ArtFlowerOfTheDesert"
+						]
+					},
+					{
+						"message": 34,
+						"appearChance": {
+							"min": 20,
+							"max": 40
+						},
+						"mapDice": 1,
+						"guards": [
+							{
+								"amount": 1,
+								"type": "h6BossAvatarOfVoid"
+							}
+						],
+						"resources": {
+							"gold": 125000
+						},
+						"artifacts": [
+							{
+								"class": "MINOR"
+							},
+							{
+								"class": "MAJOR"
+							},
+							{
+								"class": "MAJOR"
+							},
+							{
+								"class": "MAJOR"
+							},
+							{
+								"class": "RELIC"
+							},
+							{
+								"class": "RELIC"
+							},
+							"h7ArtFlowerOfTheDesert"
+						]
+					},
+					{
+						"message": 34,
+						"appearChance": {
+							"min": 40,
+							"max": 60
+						},
+						"mapDice": 2,
+						"guards": [
+							{
+								"amount": 1,
+								"type": "h6BossAvatarOfVoid"
+							}
+						],
+						"resources": {
+							"gold": 150000
+						},
+						"artifacts": [
+							{
+								"class": "MAJOR"
+							},
+							{
+								"class": "MAJOR"
+							},
+							{
+								"class": "MAJOR"
+							},
+							{
+								"class": "RELIC"
+							},
+							{
+								"class": "RELIC"
+							},
+							{
+								"class": "RELIC"
+							},
+							"h7ArtFlowerOfTheDesert"
+						]
+					},
+					{
+						"message": 34,
+						"appearChance": {
+							"min": 60,
+							"max": 80
+						},
+						"mapDice": 3,
+						"guards": [
+							{
+								"amount": 1,
+								"type": "h6BossAvatarOfVoid"
+							}
+						],
+						"resources": {
+							"gold": 175000
+						},
+						"artifacts": [
+							{
+								"class": "MAJOR"
+							},
+							{
+								"class": "MAJOR"
+							},
+							{
+								"class": "RELIC"
+							},
+							{
+								"class": "RELIC"
+							},
+							{
+								"class": "RELIC"
+							},
+							{
+								"class": "RELIC"
+							},
+							"h7ArtFlowerOfTheDesert"
+						]
+					},
+					{
+						"message": 34,
+						"appearChance": {
+							"min": 80,
+							"max": 100
+						},
+						"mapDice": 4,
+						"guards": [
+							{
+								"amount": 1,
+								"type": "h6BossAvatarOfVoid"
+							}
+						],
+						"resources": {
+							"gold": 200000
+						},
+						"artifacts": [
+							{
+								"class": "RELIC"
+							},
+							{
+								"class": "RELIC"
+							},
+							{
+								"class": "RELIC"
+							},
+							{
+								"class": "RELIC"
+							},
+							{
+								"class": "RELIC"
+							},
+							{
+								"class": "RELIC"
+							},
+							"h7ArtFlowerOfTheDesert"
+						]
+					}
+				]
+			},
+			"h6BankEnragedKirin": {
+				"name": "Great City Sanctuary",
+				"templates": {
+					"base": {
+						"animation": "h6/banks/h6BankEnragedKirin/h6BankEnragedKirin.json",
+						"visitableFrom": [
+							"---",
+							"-++",
+							"+++"
+						],
+						"mask": [
+							"VVVV",
+							"VVVV",
+							"VBBB",
+							"VBAA"
+						]
+					}
+				},
+				"sounds": {
+					"ambient": [
+						"LOOPFALL"
+					],
+					"visit": [
+						"ROGUE"
+					]
+				},
+				"battleground": "lucid_pools",
+				"blockedVisitable": false,
+				// As the boss-level banks in the RMG settings of map objects (HotA Ancient Altar, the four Lands of Light): at most 1 per map, value 100000, rarity 100
+				"rmg": {
+					"mapLimit": 1,
+					"value": 25000,
+					"rarity": 4
+				},
+				"onGuardedMessage": "A maddened Enraged Kirin guards Oshiro's sanctuary and lets no one near. Will you approach?",
+				"onVisitedMessage": "The sanctuary is calm at last.",
+				"visitMode": "once",
+				"selectMode": "selectFirst",
+				"guardsLayout": "h6BossBank",
+				"rewards": [
+					{
+						"message": 34,
+						"appearChance": {
+							"min": 0,
+							"max": 20
+						},
+						"mapDice": 0,
+						"guards": [
+							{
+								"amount": 1,
+								"type": "h6BossEnragedKirin"
+							}
+						],
+						"resources": {
+							"gold": 100000
+						},
+						"artifacts": [
+							{
+								"class": "MINOR"
+							},
+							{
+								"class": "MINOR"
+							},
+							{
+								"class": "MAJOR"
+							},
+							{
+								"class": "MAJOR"
+							},
+							{
+								"class": "MAJOR"
+							},
+							{
+								"class": "MAJOR"
+							},
+							"h7ArtMorningLight"
+						]
+					},
+					{
+						"message": 34,
+						"appearChance": {
+							"min": 20,
+							"max": 40
+						},
+						"mapDice": 1,
+						"guards": [
+							{
+								"amount": 1,
+								"type": "h6BossEnragedKirin"
+							}
+						],
+						"resources": {
+							"gold": 125000
+						},
+						"artifacts": [
+							{
+								"class": "MINOR"
+							},
+							{
+								"class": "MAJOR"
+							},
+							{
+								"class": "MAJOR"
+							},
+							{
+								"class": "MAJOR"
+							},
+							{
+								"class": "RELIC"
+							},
+							{
+								"class": "RELIC"
+							},
+							"h7ArtMorningLight"
+						]
+					},
+					{
+						"message": 34,
+						"appearChance": {
+							"min": 40,
+							"max": 60
+						},
+						"mapDice": 2,
+						"guards": [
+							{
+								"amount": 1,
+								"type": "h6BossEnragedKirin"
+							}
+						],
+						"resources": {
+							"gold": 150000
+						},
+						"artifacts": [
+							{
+								"class": "MAJOR"
+							},
+							{
+								"class": "MAJOR"
+							},
+							{
+								"class": "MAJOR"
+							},
+							{
+								"class": "RELIC"
+							},
+							{
+								"class": "RELIC"
+							},
+							{
+								"class": "RELIC"
+							},
+							"h7ArtMorningLight"
+						]
+					},
+					{
+						"message": 34,
+						"appearChance": {
+							"min": 60,
+							"max": 80
+						},
+						"mapDice": 3,
+						"guards": [
+							{
+								"amount": 1,
+								"type": "h6BossEnragedKirin"
+							}
+						],
+						"resources": {
+							"gold": 175000
+						},
+						"artifacts": [
+							{
+								"class": "MAJOR"
+							},
+							{
+								"class": "MAJOR"
+							},
+							{
+								"class": "RELIC"
+							},
+							{
+								"class": "RELIC"
+							},
+							{
+								"class": "RELIC"
+							},
+							{
+								"class": "RELIC"
+							},
+							"h7ArtMorningLight"
+						]
+					},
+					{
+						"message": 34,
+						"appearChance": {
+							"min": 80,
+							"max": 100
+						},
+						"mapDice": 4,
+						"guards": [
+							{
+								"amount": 1,
+								"type": "h6BossEnragedKirin"
+							}
+						],
+						"resources": {
+							"gold": 200000
+						},
+						"artifacts": [
+							{
+								"class": "RELIC"
+							},
+							{
+								"class": "RELIC"
+							},
+							{
+								"class": "RELIC"
+							},
+							{
+								"class": "RELIC"
+							},
+							{
+								"class": "RELIC"
+							},
+							{
+								"class": "RELIC"
+							},
+							"h7ArtMorningLight"
+						]
+					}
+				]
+			}
+		}
+	}
+}

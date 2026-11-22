@@ -1,0 +1,68 @@
+{
+	"batteringRam" : {
+		"targetType" : "LOCATION",
+		"type" : "ability",
+		// Formerly named "Battering Ram" (renamed in round 192)
+		"name" : "Battering Ram",
+		"school" : {},
+		"level" : 0,
+		"power" : 0,
+		"defaultGainChance" : 0,
+		"animation" : {
+		},
+		"targetCondition" : {},
+		"gainChance" : {},
+		"graphics" : {
+			"iconEffect" : "h6/batteringRam/spellIcon.png"
+		},
+		"levels" : {
+			"base" : {
+				"description" : "{Battering Ram}\n\nDuring a siege, can ram the walls.",
+				"power" : 0,
+				"cost" : 0,
+				"battleEffects" : {
+					"batteringRam" : {
+						"type" : "batteringRam",
+						"singular" : "%s: %d damage dealt to the walls.",
+						"plural" : "%s: %d damage dealt to the walls."
+					}
+				},
+				"range" : "0"
+			},
+			"none" : {
+			},
+			"basic" : {
+				"description" : "{Battering Ram}\n\nDuring a siege, can ram the walls and the gate.",
+				"battleEffects" : {
+					"batteringRam" : {
+						"canAttackGate" : true
+					}
+				}
+			},
+			"advanced" : {
+				"description" : "{Battering Ram}\n\nDuring a siege, can ram the walls, the gate and the arrow towers.",
+				"battleEffects" : {
+					"batteringRam" : {
+						"canAttackGate" : true,
+						"canAttackTowers" : true
+					}
+				}
+			},
+			"expert" : {
+				"description" : "{Battering Ram}\n\nDuring a siege, can ram the walls, the gate, the arrow towers and the keep.",
+				"battleEffects" : {
+					"batteringRam" : {
+						"canAttackGate" : true,
+						"canAttackTowers" : true,
+						"canAttackKeep" : true
+					}
+				}
+			}
+		},
+		"flags" : {
+			"nonMagical" : true,
+			"indifferent" : true,
+			"special" : true
+		}
+	}
+}

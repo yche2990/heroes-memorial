@@ -1,0 +1,34 @@
+{
+ "fac": "necropolis",
+ "k": 0.968,
+ "scale": 61.58456509262847,
+ "origin": [
+  223.07756683972156,
+  254.12369999999999
+ ],
+ "baked": {
+  "0": [],
+  "1": [],
+  "2": [],
+  "3": [],
+  "4": [],
+  "5": [],
+  "7": [],
+  "8": [],
+  "11": [],
+  "12": [],
+  "13": [],
+  "17": [],
+  "18": [],
+  "19": [],
+  "20": [],
+  "21": [],
+  "30": [],
+  "32": [],
+  "40": [],
+  "42": []
+ },
+ "render": "Blender 4.2 Cycles 24spp 3x + sprite_post; fx h6m (fxsim d1=mul mode2=wrap)",
+ "sec": 27,
+ "note426": "battle frames shrunk x0.88 around the foot point (x=217, y=265) after render (Yu, round 426)"
+}

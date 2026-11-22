@@ -1,0 +1,569 @@
+// Heroes 6 memorial: H7 campaign artifacts given by the boss treasuries (round 353)
+{
+	"h7ArtSmasher": {
+		"class": "SPECIAL",
+		"type": [
+			"HERO"
+		],
+		"slot": "RIGHT_HAND",
+		"value": 15000,
+		"text": {
+			"name": "Smasher",
+			"description": "{Smasher}\n\n+6 Attack, +1 Speed to all troops.\n\nA gleaming mace with a dragon's magic sealed in its head, made for big hands like an orc's.",
+			"event": "In the remains of the Abyssal Worm, a heavy mace is still faintly hot."
+		},
+		"graphics": {
+			"image": "h6/artifacts/h7ArtSmasher.png",
+			"scenarioBonus": "h6/artifacts/h7ArtSmasher_bonus.png",
+			"map": "h6/artifacts/h7ArtSmasher_map.json"
+		},
+		"bonuses": {
+			"attack": {
+				"type": "PRIMARY_SKILL",
+				"subtype": "attack",
+				"val": 6,
+				"valueType": "BASE_NUMBER"
+			},
+			"speed": {
+				"type": "STACKS_SPEED",
+				"val": 1,
+				"valueType": "BASE_NUMBER"
+			}
+		}
+	},
+	"h7ArtMalathuasCleaver": {
+		"class": "SPECIAL",
+		"type": [
+			"HERO"
+		],
+		"slot": "RIGHT_HAND",
+		"value": 18000,
+		"text": {
+			"name": "Malathua's Cleaver",
+			"description": "{Malathua's Cleaver}\n\n+6 Attack, +6 Defense, +1 Morale.\n\nThe cleaver of the orc warchief Malathua. It kindles the blood rage in the heart of whoever swings it.",
+			"event": "A bloodstained cleaver is stuck in the Altar of Destruction. You pull it free."
+		},
+		"graphics": {
+			"image": "h6/artifacts/h7ArtMalathuasCleaver.png",
+			"scenarioBonus": "h6/artifacts/h7ArtMalathuasCleaver_bonus.png",
+			"map": "h6/artifacts/h7ArtMalathuasCleaver_map.json"
+		},
+		"bonuses": {
+			"attack": {
+				"type": "PRIMARY_SKILL",
+				"subtype": "attack",
+				"val": 6,
+				"valueType": "BASE_NUMBER"
+			},
+			"defence": {
+				"type": "PRIMARY_SKILL",
+				"subtype": "defence",
+				"val": 6,
+				"valueType": "BASE_NUMBER"
+			},
+			"morale": {
+				"type": "MORALE",
+				"val": 1,
+				"valueType": "BASE_NUMBER"
+			}
+		}
+	},
+	"h7ArtQueenscale": {
+		"class": "SPECIAL",
+		"type": [
+			"HERO"
+		],
+		"slot": "TORSO",
+		"value": 15000,
+		"text": {
+			"name": "Queenscale",
+			"description": "{Queenscale}\n\n+6 Defense, +400 land movement points.\n\nA fine suit of armor made for a warrior woman, so light you can barely feel its weight.",
+			"event": "In the depths of the Chaos Nest, a suit of scale armor glints among piles of broken shells."
+		},
+		"graphics": {
+			"image": "h6/artifacts/h7ArtQueenscale.png",
+			"scenarioBonus": "h6/artifacts/h7ArtQueenscale_bonus.png",
+			"map": "h6/artifacts/h7ArtQueenscale_map.json"
+		},
+		"bonuses": {
+			"defence": {
+				"type": "PRIMARY_SKILL",
+				"subtype": "defence",
+				"val": 6,
+				"valueType": "BASE_NUMBER"
+			},
+			"move": {
+				"type": "MOVEMENT",
+				"subtype": "heroMovementLand",
+				"val": 400,
+				"valueType": "ADDITIVE_VALUE"
+			}
+		}
+	},
+	"h7ArtFlowerOfDolor": {
+		"class": "SPECIAL",
+		"type": [
+			"HERO"
+		],
+		"slot": "NECK",
+		"value": 15000,
+		"text": {
+			"name": "Flower of Dolor",
+			"description": "{Flower of Dolor}\n\n+5 Knowledge. Allows casting Expert Chain Lightning.\n\nAn ancient sapphire holding a dragon's tear. After the sacrifice it shines brighter, and colder.",
+			"event": "At the top of the Tower of Shadows, an ice-blue flower glows quietly in the dark."
+		},
+		"graphics": {
+			"image": "h6/artifacts/h7ArtFlowerOfDolor.png",
+			"scenarioBonus": "h6/artifacts/h7ArtFlowerOfDolor_bonus.png",
+			"map": "h6/artifacts/h7ArtFlowerOfDolor_map.json"
+		},
+		"bonuses": {
+			"knowledge": {
+				"type": "PRIMARY_SKILL",
+				"subtype": "knowledge",
+				"val": 5,
+				"valueType": "BASE_NUMBER"
+			},
+			"chainLightning": {
+				"type": "SPELL",
+				"subtype": "spell.chainLightning",
+				"val": 3
+			}
+		}
+	},
+	"h7ArtDeadwoodStaff": {
+		"class": "SPECIAL",
+		"type": [
+			"HERO"
+		],
+		"slot": "RIGHT_HAND",
+		"value": 15000,
+		"text": {
+			"name": "Deadwood Staff",
+			"description": "{Deadwood Staff}\n\n+10 Spell Power.\n\nA staff twisted from the branches of a long-dead ancient tree. Lost souls still whisper inside it.",
+			"event": "Deep in the webs hangs a staff of dead wood. Faint whispers come from within it."
+		},
+		"graphics": {
+			"image": "h6/artifacts/h7ArtDeadwoodStaff.png",
+			"scenarioBonus": "h6/artifacts/h7ArtDeadwoodStaff_bonus.png",
+			"map": "h6/artifacts/h7ArtDeadwoodStaff_map.json"
+		},
+		"bonuses": {
+			"spellpower": {
+				"type": "PRIMARY_SKILL",
+				"subtype": "spellpower",
+				"val": 10,
+				"valueType": "BASE_NUMBER"
+			}
+		}
+	},
+	"h7ArtGriffinsMantle": {
+		"class": "SPECIAL",
+		"type": [
+			"HERO"
+		],
+		"slot": "SHOULDERS",
+		"value": 15000,
+		"text": {
+			"name": "Griffin's Mantle",
+			"description": "{Griffin's Mantle}\n\n+8 Knowledge, +30% Light Magic effect.\n\n{#F800F8|Griffin Battle Garb} (4 pieces): Collect Griffin's Mantle, Griffin's Talons, Griffin's Resolve and Griffin's Gorget to combine them into the Griffin Battle Garb.\n\nOne piece of the Griffin Battle Garb. A pure white feathered mantle that Duke Ivan wore on campaign.",
+			"event": "A pure white feathered mantle lies folded on the sanctuary altar."
+		},
+		"graphics": {
+			"image": "h6/artifacts/h7ArtGriffinsMantle.png",
+			"scenarioBonus": "h6/artifacts/h7ArtGriffinsMantle_bonus.png",
+			"map": "h6/artifacts/h7ArtGriffinsMantle_map.json"
+		},
+		"bonuses": {
+			"knowledge": {
+				"type": "PRIMARY_SKILL",
+				"subtype": "knowledge",
+				"val": 8,
+				"valueType": "BASE_NUMBER"
+			},
+			"light": {
+				"type": "SPELL_DAMAGE",
+				"subtype": "spellSchool.01lightSchool",
+				"val": 30,
+				"valueType": "BASE_NUMBER"
+			}
+		}
+	},
+	"h7ArtBladeOfTruth": {
+		"class": "SPECIAL",
+		"type": [
+			"HERO"
+		],
+		"slot": "RIGHT_HAND",
+		"value": 20000,
+		"text": {
+			"name": "Blade of Truth",
+			"description": "{Blade of Truth}\n\n+8 Knowledge, +2 Luck.\n\nThe longsword once wielded by Empress Mave. Wherever its point is turned, no lie can hide.",
+			"event": "In the innermost hall of the sanctuary lies a longsword whose blade shines bright enough to reveal the hearts of men."
+		},
+		"graphics": {
+			"image": "h6/artifacts/h7ArtBladeOfTruth.png",
+			"scenarioBonus": "h6/artifacts/h7ArtBladeOfTruth_bonus.png",
+			"map": "h6/artifacts/h7ArtBladeOfTruth_map.json"
+		},
+		"bonuses": {
+			"knowledge": {
+				"type": "PRIMARY_SKILL",
+				"subtype": "knowledge",
+				"val": 8,
+				"valueType": "BASE_NUMBER"
+			},
+			"luck": {
+				"type": "LUCK",
+				"val": 2,
+				"valueType": "BASE_NUMBER"
+			}
+		}
+	},
+	"h7ArtGriffinsTalons": {
+		"class": "SPECIAL",
+		"type": [
+			"HERO"
+		],
+		"slot": "FEET",
+		"value": 15000,
+		"text": {
+			"name": "Griffin's Talons",
+			"description": "{Griffin's Talons}\n\n+300 land movement points, +1 Speed to all troops.\n\n{#F800F8|Griffin Battle Garb} (4 pieces): Collect Griffin's Mantle, Griffin's Talons, Griffin's Resolve and Griffin's Gorget to combine them into the Griffin Battle Garb.\n\nOne piece of the Griffin Battle Garb. Boots whose toes are shaped like griffin claws; the wearer and his army march swift as the wind.",
+			"event": "In the Thunderbird's nest lies a pair of war boots set with claws."
+		},
+		"graphics": {
+			"image": "h6/artifacts/h7ArtGriffinsTalons.png",
+			"scenarioBonus": "h6/artifacts/h7ArtGriffinsTalons_bonus.png",
+			"map": "h6/artifacts/h7ArtGriffinsTalons_map.json"
+		},
+		"bonuses": {
+			"move": {
+				"type": "MOVEMENT",
+				"subtype": "heroMovementLand",
+				"val": 300,
+				"valueType": "ADDITIVE_VALUE"
+			},
+			"speed": {
+				"type": "STACKS_SPEED",
+				"val": 1,
+				"valueType": "BASE_NUMBER"
+			}
+		}
+	},
+	"h7ArtWardenOfWinter": {
+		"class": "SPECIAL",
+		"type": [
+			"HERO"
+		],
+		"slot": "LEFT_HAND",
+		"value": 15000,
+		"text": {
+			"name": "Warden of Winter",
+			"description": "{Warden of Winter}\n\n+5 Defense, +5 Knowledge.\n\nA great shield bearing the crest of the Wolf family, forged from enchanted metal and always cold to the touch.",
+			"event": "In a frozen hall stands a great shield bearing the crest of the Wolf family."
+		},
+		"graphics": {
+			"image": "h6/artifacts/h7ArtWardenOfWinter.png",
+			"scenarioBonus": "h6/artifacts/h7ArtWardenOfWinter_bonus.png",
+			"map": "h6/artifacts/h7ArtWardenOfWinter_map.json"
+		},
+		"bonuses": {
+			"defence": {
+				"type": "PRIMARY_SKILL",
+				"subtype": "defence",
+				"val": 5,
+				"valueType": "BASE_NUMBER"
+			},
+			"knowledge": {
+				"type": "PRIMARY_SKILL",
+				"subtype": "knowledge",
+				"val": 5,
+				"valueType": "BASE_NUMBER"
+			}
+		}
+	},
+	"h7ArtFlowerOfTheDesert": {
+		"class": "SPECIAL",
+		"type": [
+			"HERO"
+		],
+		"slot": "NECK",
+		"value": 15000,
+		"text": {
+			"name": "Flower of the Desert",
+			"description": "{Flower of the Desert}\n\n+5 Knowledge. Restores 10 extra Spell Points each day.\n\nA glittering ancient sapphire with a dragon's tear sealed inside.",
+			"event": "Just before the breach closes, a sapphire falls out of the void."
+		},
+		"graphics": {
+			"image": "h6/artifacts/h7ArtFlowerOfTheDesert.png",
+			"scenarioBonus": "h6/artifacts/h7ArtFlowerOfTheDesert_bonus.png",
+			"map": "h6/artifacts/h7ArtFlowerOfTheDesert_map.json"
+		},
+		"bonuses": {
+			"knowledge": {
+				"type": "PRIMARY_SKILL",
+				"subtype": "knowledge",
+				"val": 5,
+				"valueType": "BASE_NUMBER"
+			},
+			"mana": {
+				"type": "MANA_REGENERATION",
+				"val": 10,
+				"valueType": "BASE_NUMBER"
+			}
+		}
+	},
+	"h7ArtMorningLight": {
+		"class": "SPECIAL",
+		"type": [
+			"HERO"
+		],
+		"slot": "RIGHT_HAND",
+		"value": 18000,
+		"text": {
+			"name": "Morning Light",
+			"description": "{  Morning Light  }\n\n+5 Attack, +2 Speed to all troops.\n\nA magic sword forged by a master bloodsmith for his son, as good in defense as in attack. Its gleam is like the first ray of dawn.",
+			"event": "Once the Kirin has calmed down, you find a sword shining with morning light in the pool."
+		},
+		"graphics": {
+			"image": "h6/artifacts/h7ArtMorningLight.png",
+			"scenarioBonus": "h6/artifacts/h7ArtMorningLight_bonus.png",
+			"map": "h6/artifacts/h7ArtMorningLight_map.json"
+		},
+		"bonuses": {
+			"attack": {
+				"type": "PRIMARY_SKILL",
+				"subtype": "attack",
+				"val": 5,
+				"valueType": "BASE_NUMBER"
+			},
+			"speed": {
+				"type": "STACKS_SPEED",
+				"val": 2,
+				"valueType": "BASE_NUMBER"
+			}
+		}
+	},
+	"h7ArtSilverfang": {
+		"class": "SPECIAL",
+		"type": [
+			"HERO"
+		],
+		"slot": "RIGHT_HAND",
+		"value": 15000,
+		"text": {
+			"name": "Silverfang",
+			"description": "{  Silverfang  }\n\n+5 Attack, +1 Morale.\n\nA broadsword engraved with ancient Shantiri blessings, originally forged for Thomas Wolfe.",
+			"event": "A gleaming silver broadsword lies on the shrine's offering table."
+		},
+		"graphics": {
+			"image": "h6/artifacts/h7ArtSilverfang.png",
+			"scenarioBonus": "h6/artifacts/h7ArtSilverfang_bonus.png",
+			"map": "h6/artifacts/h7ArtSilverfang_map.json"
+		},
+		"bonuses": {
+			"attack": {
+				"type": "PRIMARY_SKILL",
+				"subtype": "attack",
+				"val": 5,
+				"valueType": "BASE_NUMBER"
+			},
+			"morale": {
+				"type": "MORALE",
+				"val": 1,
+				"valueType": "BASE_NUMBER"
+			}
+		}
+	},
+	"h7ArtGriffinsResolve": {
+		"class": "SPECIAL",
+		"type": [
+			"HERO"
+		],
+		"slot": "RIGHT_HAND",
+		"value": 15000,
+		"text": {
+			"name": "Griffin's Resolve",
+			"description": "{Griffin's Resolve}\n\n+3 Attack, +3 Knowledge, +1 Morale.\n\n{#F800F8|Griffin Battle Garb} (4 pieces): Collect Griffin's Mantle, Griffin's Talons, Griffin's Resolve and Griffin's Gorget to combine them into the Griffin Battle Garb.\n\nOne piece of the Griffin Battle Garb. Its hilt is shaped like a griffin with spread wings; whoever holds it never falters.",
+			"event": "In the temple rests a longsword with a griffin carved on its hilt."
+		},
+		"graphics": {
+			"image": "h6/artifacts/h7ArtGriffinsResolve.png",
+			"scenarioBonus": "h6/artifacts/h7ArtGriffinsResolve_bonus.png",
+			"map": "h6/artifacts/h7ArtGriffinsResolve_map.json"
+		},
+		"bonuses": {
+			"attack": {
+				"type": "PRIMARY_SKILL",
+				"subtype": "attack",
+				"val": 3,
+				"valueType": "BASE_NUMBER"
+			},
+			"knowledge": {
+				"type": "PRIMARY_SKILL",
+				"subtype": "knowledge",
+				"val": 3,
+				"valueType": "BASE_NUMBER"
+			},
+			"morale": {
+				"type": "MORALE",
+				"val": 1,
+				"valueType": "BASE_NUMBER"
+			}
+		}
+	},
+	"h7ArtGriffinsGorget": {
+		"class": "SPECIAL",
+		"type": [
+			"HERO"
+		],
+		"slot": "TORSO",
+		"value": 15000,
+		"text": {
+			"name": "Griffin's Gorget",
+			"description": "{Griffin's Gorget}\n\n+2 Defense, +1 Luck, +2 rounds to the duration of spells cast by the hero.\n\n{#F800F8|Griffin Battle Garb} (4 pieces): Collect Griffin's Mantle, Griffin's Talons, Griffin's Resolve and Griffin's Gorget to combine them into the Griffin Battle Garb.\n\nOne piece of the Griffin Battle Garb. A gorget trimmed with griffin plumes.",
+			"event": "Deep inside the temple hangs a gorget trimmed with plumes."
+		},
+		"graphics": {
+			"image": "h6/artifacts/h7ArtGriffinsGorget.png",
+			"scenarioBonus": "h6/artifacts/h7ArtGriffinsGorget_bonus.png",
+			"map": "h6/artifacts/h7ArtGriffinsGorget_map.json"
+		},
+		"bonuses": {
+			"defence": {
+				"type": "PRIMARY_SKILL",
+				"subtype": "defence",
+				"val": 2,
+				"valueType": "BASE_NUMBER"
+			},
+			"luck": {
+				"type": "LUCK",
+				"val": 1,
+				"valueType": "BASE_NUMBER"
+			},
+			"duration": {
+				"type": "SPELL_DURATION",
+				"val": 2,
+				"valueType": "BASE_NUMBER"
+			}
+		}
+	},
+	"h7ArtGriffinBattleGarb": {
+		"class": "SPECIAL",
+		"type": [
+			"HERO"
+		],
+		"slot": "TORSO",
+		"value": 70000,
+		"components": [
+			"h7ArtGriffinsMantle",
+			"h7ArtGriffinsTalons",
+			"h7ArtGriffinsResolve",
+			"h7ArtGriffinsGorget"
+		],
+		"fusedComponents": true,
+		"text": {
+			"name": "Griffin Battle Garb",
+			"description": "{Griffin Battle Garb}\n\n+4 Attack, +3 Defense, +1 Spell Power, +12 Knowledge, +1 Morale, +1 Luck, +1 Speed to all troops, +300 land movement points, +30% Light Magic effect, +2 rounds to the duration of spells cast by the hero, +10% experience. Allows casting Expert Resurrection.\n\nDuke Ivan's full set of griffin armor. A hero clad in all of it is guarded by the might of the griffin, and fallen comrades rise again.\n\n(The components are consumed when combined.)",
+			"event": "The four pieces of griffin armor join together into a complete battle garb."
+		},
+		"graphics": {
+			"image": "h6/artifacts/h7ArtGriffinBattleGarb.png",
+			"scenarioBonus": "h6/artifacts/h7ArtGriffinBattleGarb_bonus.png",
+			"map": "h6/artifacts/h7ArtGriffinBattleGarb_map.json"
+		},
+		"bonuses": {
+			"h7ArtGriffinsMantle_knowledge": {
+				"type": "PRIMARY_SKILL",
+				"subtype": "knowledge",
+				"val": 8,
+				"valueType": "BASE_NUMBER"
+			},
+			"h7ArtGriffinsMantle_light": {
+				"type": "SPELL_DAMAGE",
+				"subtype": "spellSchool.01lightSchool",
+				"val": 30,
+				"valueType": "BASE_NUMBER"
+			},
+			"h7ArtGriffinsTalons_move": {
+				"type": "MOVEMENT",
+				"subtype": "heroMovementLand",
+				"val": 300,
+				"valueType": "ADDITIVE_VALUE"
+			},
+			"h7ArtGriffinsTalons_speed": {
+				"type": "STACKS_SPEED",
+				"val": 1,
+				"valueType": "BASE_NUMBER"
+			},
+			"h7ArtGriffinsResolve_attack": {
+				"type": "PRIMARY_SKILL",
+				"subtype": "attack",
+				"val": 3,
+				"valueType": "BASE_NUMBER"
+			},
+			"h7ArtGriffinsResolve_knowledge": {
+				"type": "PRIMARY_SKILL",
+				"subtype": "knowledge",
+				"val": 3,
+				"valueType": "BASE_NUMBER"
+			},
+			"h7ArtGriffinsResolve_morale": {
+				"type": "MORALE",
+				"val": 1,
+				"valueType": "BASE_NUMBER"
+			},
+			"h7ArtGriffinsGorget_defence": {
+				"type": "PRIMARY_SKILL",
+				"subtype": "defence",
+				"val": 2,
+				"valueType": "BASE_NUMBER"
+			},
+			"h7ArtGriffinsGorget_luck": {
+				"type": "LUCK",
+				"val": 1,
+				"valueType": "BASE_NUMBER"
+			},
+			"h7ArtGriffinsGorget_duration": {
+				"type": "SPELL_DURATION",
+				"val": 2,
+				"valueType": "BASE_NUMBER"
+			},
+			"set_attack": {
+				"type": "PRIMARY_SKILL",
+				"subtype": "attack",
+				"val": 1,
+				"valueType": "BASE_NUMBER"
+			},
+			"set_defence": {
+				"type": "PRIMARY_SKILL",
+				"subtype": "defence",
+				"val": 1,
+				"valueType": "BASE_NUMBER"
+			},
+			"set_spellpower": {
+				"type": "PRIMARY_SKILL",
+				"subtype": "spellpower",
+				"val": 1,
+				"valueType": "BASE_NUMBER"
+			},
+			"set_knowledge": {
+				"type": "PRIMARY_SKILL",
+				"subtype": "knowledge",
+				"val": 1,
+				"valueType": "BASE_NUMBER"
+			},
+			"set_exp": {
+				"type": "HERO_EXPERIENCE_GAIN_PERCENT",
+				"val": 10,
+				"valueType": "BASE_NUMBER"
+			},
+			"set_resurrection": {
+				"type": "SPELL",
+				"subtype": "spell.resurrection",
+				"val": 3
+			}
+		}
+	}
+}

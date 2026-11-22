@@ -1,0 +1,79 @@
+{
+ "fac": "boss",
+ "k": 1.0,
+ "scale": 71.43490396568221,
+ "origin": [
+  217.0691580777473,
+  265.0
+ ],
+ "baked": {
+  "0": [
+   "bosskirin_basic.fx"
+  ],
+  "1": [
+   "bosskirin_basic.fx"
+  ],
+  "2": [
+   "bosskirin_basic.fx"
+  ],
+  "3": [
+   "bosskirin_basic.fx"
+  ],
+  "4": [
+   "bosskirin_basic.fx"
+  ],
+  "5": [
+   "bosskirin_basic.fx",
+   "bosskirin_die.fx"
+  ],
+  "7": [
+   "bosskirin_basic.fx"
+  ],
+  "8": [
+   "bosskirin_basic.fx"
+  ],
+  "11": [
+   "bosskirin_basic.fx",
+   "bosskirin_attack.fx"
+  ],
+  "12": [
+   "bosskirin_basic.fx",
+   "bosskirin_attack.fx"
+  ],
+  "13": [
+   "bosskirin_basic.fx",
+   "bosskirin_attack.fx"
+  ],
+  "17": [
+   "bosskirin_basic.fx"
+  ],
+  "18": [
+   "bosskirin_basic.fx"
+  ],
+  "19": [
+   "bosskirin_basic.fx"
+  ],
+  "20": [
+   "bosskirin_basic.fx"
+  ],
+  "21": [
+   "bosskirin_basic.fx"
+  ],
+  "30": [
+   "bosskirin_basic.fx"
+  ],
+  "32": [
+   "bosskirin_basic.fx"
+  ],
+  "40": [
+   "bosskirin_basic.fx",
+   "bosskirin_attack.fx"
+  ],
+  "42": [
+   "bosskirin_basic.fx",
+   "bosskirin_attack.fx"
+  ]
+ },
+ "render": "Blender 4.2 Cycles 24spp 3x + sprite_post; fx h6m (fxsim d1=mul mode2=wrap)",
+ "sec": 82
+}

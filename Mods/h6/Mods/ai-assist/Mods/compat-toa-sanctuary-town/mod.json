@@ -1,0 +1,20 @@
+{
+	"name": "Heroes VI Memorial: AI Assist for Sanctuary",
+	"description": "Takes effect when the Sanctuary town of Tears of Ashan is enabled: computer players also visit the Heroes VI Memorial Shrine with a Sanctuary army.",
+	"chinese": {
+		"name": "英雄无敌6纪念版：电脑辅助·瀛洲",
+		"description": "开着亚山之泪的瀛洲时生效：电脑玩家带着瀛洲部队也会去拜访英雄无敌6纪念圣殿。"
+	},
+	"version": "0.1.0",
+	"author": "yche2990",
+	"modType": "Compatibility",
+	"compatibility": {
+		"min": "1.8.0"
+	},
+	"depends": [
+		"tears-of-ashan.toa-sanctuary-town"
+	],
+	"objects": [
+		"config/ai/objects-visit.json"
+	]
+}

@@ -1,0 +1,94 @@
+// Heroes 6 memorial: bonus types used by Necropolis creatures
+{
+	"H6_DEATH_SEAL_H6C": {
+		"graphics": {
+			"icon": "h6/abilities/ab_Death_Seal"
+		},
+		"creatureNature": false,
+		"description": "{Death Seal}\nHealing received -${val}%",
+		"valueDescriptions": {
+			"900001": "The Death Seal costs %s %d HP of healing."
+		}
+	},
+	"H6_PUTRESCENCE_H6C": {
+		"graphics": {
+			"icon": "h6/abilities/ab_Aura_of_Putrescence"
+		},
+		"creatureNature": false,
+		"description": "{Putrescence}\nMaximum Hit Points -${val}%",
+		"valueDescriptions": {
+			"900001": "The Putrescence aura of %s eats at %d stacks.",
+			"900002": "%s spread Putrescence to %d stacks."
+		}
+	},
+	"H6_DOT_H6C": {
+		"graphics": {
+			"icon": "h6/abilities/ab_Venomous_Touch"
+		},
+		"creatureNature": false,
+		"description": "{Poison}\nTakes ${val} Earth damage at the start of each round",
+		"valueDescriptions": {
+			"900001": "%s take %d damage over time; %d perish."
+		}
+	},
+	"H6_LIFE_DRAIN_H6C": {
+		"graphics": {
+			"icon": "h6/abilities/ab_Life_Drain"
+		},
+		"creatureNature": false,
+		"description": "{Vital Drain}\nThis round, half its damage to living units heals another undead stack",
+		"valueDescriptions": {
+			"900001": "%s use Vital Drain: %s recover %d HP, %d revived."
+		}
+	},
+	"H6_OUT_OF_TIME_H6C": {
+		"graphics": {
+			"icon": "h6/abilities/ab_Out_of_time"
+		},
+		"creatureNature": false,
+		"description": "{Out of Time}\nThe next attack it takes this round has no effect"
+	},
+	"H6_GAZE_H6C": {
+		"hidden": true,
+		"creatureNature": false,
+		"valueDescriptions": {
+			"1": "The Evil Gaze of %s hits %s for %d damage."
+		}
+	},
+	"H6_WAIL_H6C": {
+		"hidden": true,
+		"creatureNature": false,
+		"valueDescriptions": {
+			"1": "%s let out a Wail: %s drain %d stacks of %d HP in total, restoring %d HP and reviving %d."
+		}
+	},
+	"H6_DUAL_FORM_H6C": {
+		"hidden": true,
+		"creatureNature": false,
+		"valueDescriptions": {
+			"1": "%s change form."
+		}
+	},
+	"H6_AREA_H6C": {
+		"hidden": true,
+		"creatureNature": false,
+		"valueDescriptions": {
+			"1": "The Dance of Decay of %s hits %d stacks for %d damage in total.",
+			"2": "The spikes of %s hit %d stacks for %d damage in total.",
+			"3": "The Boundless Hate of %s burns %d stacks for %d damage in total.",
+			"4": "%s call on the Earth Mother's Might: %d enemy stacks take %d damage in total.",
+			"5": "%s smash %d stacks for %d damage in total.",
+			"6": "The Frost Bolt of %s hits %d enemy stacks for %d damage in total.",
+			"7": "The Vengeful Flames of %s burn %d stacks for %d damage in total.",
+			"8": "%s speak an Empowered Word: %d enemy stacks take %d damage in total.",
+			"9": "The Light of the Last Wish from %s hits %d enemy stacks for %d damage in total.",
+			"10": "%s discharge static: %d enemy stacks take %d damage in total.",
+			"11": "The Thunder Chain of %s hits %d enemy stacks for %d damage in total.",
+			"12": "The Stabbing Attack of %s pierces %d stacks for %d damage in total.",
+			"13": "A Wave of Decay sweeps out: %s hit %d enemy stacks for %d damage in total.",
+			"14": "The Endless Hatred of %s burns %d enemy stacks for %d damage in total.",
+			"15": "The Shrivelling Breath of %s hits %d enemy stacks for %d damage in total.",
+			"16": "%s call down a Monsoon: %d enemy stacks take %d damage in total."
+		}
+	}
+}

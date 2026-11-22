@@ -1,0 +1,65 @@
+// Heroes 6 memorial: bonus types used by Stronghold creatures
+{
+	"H6_BLOOD_H6C": {
+		"graphics": {
+			"icon": "h6/abilities/ab_Taste_of_Blood"
+		},
+		"creatureNature": false,
+		"description": "{Blood on the Blade}\nDamage +${val}%"
+	},
+	"H6_ASSAULT_H6C": {
+		"hidden": true,
+		"creatureNature": false,
+		"valueDescriptions": {
+			"1": "%s press the Onslaught on %s for another %d damage, killing %d."
+		}
+	},
+	"H6_TRAP_H6C": {
+		"hidden": true,
+		"creatureNature": false,
+		"valueDescriptions": {
+			"1": "%s step into Crippling Traps, taking %d damage."
+		}
+	},
+	"H6_VIGILANT_H6C": {
+		"graphics": {
+			"icon": "h6/abilities/ab_Vigilant_Scout"
+		},
+		"creatureNature": false,
+		"description": "{Vigilant Scout}\nShoots an enemy the first time it comes within ${val} hexes",
+		"valueDescriptions": {
+			"900001": "%s fire a sentry shot at %s for %d damage."
+		}
+	},
+	"H6_MANOEUVRE_H6C": {
+		"hidden": true,
+		"creatureNature": false,
+		"valueDescriptions": {
+			"1": "%s step back and shoot %s for %d damage."
+		}
+	},
+	"H6_WAR_FURY_H6C": {
+		"graphics": {
+			"icon": "h6/abilities/ab_War_Fury"
+		},
+		"creatureNature": false,
+		"description": "{War Fury}\nImmune to Mind spells"
+	},
+	"H6_FERAL_H6C": {
+		"graphics": {
+			"icon": "h6/abilities/ab_Feral_Charge"
+		},
+		"creatureNature": false,
+		"description": "{Feral Charge}\nNext attack draws no retaliation"
+	},
+	"H6_IMPERVIOUS_H6C": {
+		"graphics": {
+			"icon": "h6/abilities/ab_Impervious_to_Pain"
+		},
+		"creatureNature": false,
+		"description": "{Impervious to Pain}\n${val} damage comes due at the start of next round",
+		"valueDescriptions": {
+			"900001": "%s take the %d damage held back earlier; %d perish."
+		}
+	}
+}

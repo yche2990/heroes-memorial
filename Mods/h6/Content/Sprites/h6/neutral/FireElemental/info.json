@@ -1,0 +1,105 @@
+{
+ "fac": "neutral",
+ "k": 1.035,
+ "scale": 83.42825922278952,
+ "origin": [
+  193.98099181252053,
+  264.0
+ ],
+ "baked": {
+  "0": [
+   "fireelemental.fx"
+  ],
+  "1": [
+   "fireelemental.fx"
+  ],
+  "2": [
+   "fireelemental.fx"
+  ],
+  "3": [
+   "fireelemental.fx"
+  ],
+  "4": [
+   "fireelemental.fx"
+  ],
+  "5": [
+   "fireelemental.fx",
+   "fireelemental_die.fx",
+   "fireelemental_die_additional.fx"
+  ],
+  "7": [
+   "fireelemental.fx"
+  ],
+  "8": [
+   "fireelemental.fx"
+  ],
+  "11": [
+   "fireelemental.fx",
+   "fireelemental_attack.fx"
+  ],
+  "12": [
+   "fireelemental.fx",
+   "fireelemental_attack.fx"
+  ],
+  "13": [
+   "fireelemental.fx",
+   "fireelemental_attack.fx"
+  ],
+  "14": [
+   "fireelemental.fx"
+  ],
+  "15": [
+   "fireelemental.fx"
+  ],
+  "16": [
+   "fireelemental.fx"
+  ],
+  "17": [
+   "fireelemental.fx",
+   "fireelemental_summon_add.fx",
+   "fireelemental_summon_fall.fx",
+   "fireelemental_summon_gr.fx"
+  ],
+  "18": [
+   "fireelemental.fx",
+   "fireelemental_summon_add.fx",
+   "fireelemental_summon_fall.fx",
+   "fireelemental_summon_gr.fx"
+  ],
+  "19": [
+   "fireelemental.fx",
+   "fireelemental_summon_add.fx",
+   "fireelemental_summon_fall.fx",
+   "fireelemental_summon_gr.fx"
+  ],
+  "20": [
+   "fireelemental.fx"
+  ],
+  "21": [
+   "fireelemental.fx"
+  ],
+  "30": [
+   "fireelemental.fx",
+   "fireelemental_summon_add.fx",
+   "fireelemental_summon_fall.fx",
+   "fireelemental_summon_gr.fx"
+  ],
+  "32": [
+   "fireelemental.fx",
+   "fireelemental_summon_add.fx",
+   "fireelemental_summon_fall.fx",
+   "fireelemental_summon_gr.fx"
+  ],
+  "40": [
+   "fireelemental.fx",
+   "fireelemental_attack.fx"
+  ],
+  "42": [
+   "fireelemental.fx",
+   "fireelemental_attack.fx"
+  ]
+ },
+ "render": "Blender 4.2 Cycles 24spp 3x + sprite_post; fx h6m (fxsim d1=mul mode2=wrap)",
+ "sec": 168,
+ "note426": "battle frames shrunk x0.9 around the foot point (x=196, y=265) after render (Yu, round 426)"
+}

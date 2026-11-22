@@ -1,0 +1,87 @@
+{
+ "fac": "boss",
+ "k": 1.2,
+ "scale": 37.946336140460474,
+ "origin": [
+  223.65373343346187,
+  236.3905
+ ],
+ "baked": {
+  "0": [
+   "abyssworm_basic.fx"
+  ],
+  "1": [
+   "abyssworm_basic.fx"
+  ],
+  "2": [
+   "abyssworm_basic.fx"
+  ],
+  "3": [
+   "abyssworm_basic.fx",
+   "abyssworm_hit.fx"
+  ],
+  "4": [
+   "abyssworm_basic.fx"
+  ],
+  "5": [
+   "abyssworm_basic.fx",
+   "abyssworm_die.fx"
+  ],
+  "7": [
+   "abyssworm_basic.fx"
+  ],
+  "8": [
+   "abyssworm_basic.fx"
+  ],
+  "11": [
+   "abyssworm_basic.fx",
+   "abyssworm_attack.fx"
+  ],
+  "12": [
+   "abyssworm_basic.fx",
+   "abyssworm_attack.fx"
+  ],
+  "13": [
+   "abyssworm_basic.fx",
+   "abyssworm_attack.fx"
+  ],
+  "17": [
+   "abyssworm_basic.fx",
+   "abyssworm_ability.fx"
+  ],
+  "18": [
+   "abyssworm_basic.fx",
+   "abyssworm_ability.fx"
+  ],
+  "19": [
+   "abyssworm_basic.fx",
+   "abyssworm_ability.fx"
+  ],
+  "20": [
+   "abyssworm_basic.fx",
+   "abyssworm_movestart.fx"
+  ],
+  "21": [
+   "abyssworm_basic.fx",
+   "abyssworm_moveend.fx"
+  ],
+  "30": [
+   "abyssworm_basic.fx",
+   "abyssworm_ability.fx"
+  ],
+  "32": [
+   "abyssworm_basic.fx",
+   "abyssworm_ability.fx"
+  ],
+  "40": [
+   "abyssworm_basic.fx",
+   "abyssworm_attack.fx"
+  ],
+  "42": [
+   "abyssworm_basic.fx",
+   "abyssworm_attack.fx"
+  ]
+ },
+ "render": "Blender 4.2 Cycles 24spp 3x + sprite_post; fx h6m (fxsim d1=mul mode2=wrap)",
+ "sec": 103
+}

@@ -1,0 +1,56 @@
+{
+ "fac": "dungeon",
+ "k": 1.25,
+ "scale": 80.3113925763595,
+ "origin": [
+  207.1891086697254,
+  262.0
+ ],
+ "baked": {
+  "0": [],
+  "1": [],
+  "2": [],
+  "3": [],
+  "4": [],
+  "5": [],
+  "7": [],
+  "8": [],
+  "11": [
+   "shadowlurker_attack.fx"
+  ],
+  "12": [
+   "shadowlurker_attack.fx"
+  ],
+  "13": [
+   "shadowlurker_attack.fx"
+  ],
+  "14": [],
+  "15": [],
+  "16": [],
+  "17": [
+   "shadowlurker_ability.fx"
+  ],
+  "18": [
+   "shadowlurker_ability.fx"
+  ],
+  "19": [
+   "shadowlurker_ability.fx"
+  ],
+  "20": [],
+  "21": [],
+  "30": [
+   "shadowlurker_ability.fx"
+  ],
+  "32": [
+   "shadowlurker_ability.fx"
+  ],
+  "40": [
+   "shadowlurker_attack.fx"
+  ],
+  "42": [
+   "shadowlurker_attack.fx"
+  ]
+ },
+ "render": "Blender 4.2 Cycles 24spp 3x + sprite_post; fx h6m (fxsim d1=mul mode2=wrap)",
+ "sec": 29
+}

@@ -1,0 +1,92 @@
+{
+ "fac": "dungeon",
+ "k": 1.1,
+ "scale": 75.93718962418586,
+ "origin": [
+  198.34850385086617,
+  266.0
+ ],
+ "baked": {
+  "0": [
+   "stalker_basic.fx"
+  ],
+  "1": [
+   "stalker_basic.fx"
+  ],
+  "2": [
+   "stalker_basic.fx"
+  ],
+  "3": [
+   "stalker_basic.fx"
+  ],
+  "4": [
+   "stalker_basic.fx"
+  ],
+  "5": [
+   "stalker_basic.fx"
+  ],
+  "7": [
+   "stalker_basic.fx"
+  ],
+  "8": [
+   "stalker_basic.fx"
+  ],
+  "11": [
+   "stalker_basic.fx",
+   "stalker_attack.fx"
+  ],
+  "12": [
+   "stalker_basic.fx",
+   "stalker_attack.fx"
+  ],
+  "13": [
+   "stalker_basic.fx",
+   "stalker_attack.fx"
+  ],
+  "14": [
+   "stalker_basic.fx"
+  ],
+  "15": [
+   "stalker_basic.fx"
+  ],
+  "16": [
+   "stalker_basic.fx"
+  ],
+  "17": [
+   "stalker_basic.fx",
+   "stalker_attackcrit.fx"
+  ],
+  "18": [
+   "stalker_basic.fx",
+   "stalker_attackcrit.fx"
+  ],
+  "19": [
+   "stalker_basic.fx",
+   "stalker_attackcrit.fx"
+  ],
+  "20": [
+   "stalker_basic.fx"
+  ],
+  "21": [
+   "stalker_basic.fx"
+  ],
+  "30": [
+   "stalker_basic.fx",
+   "stalker_attackcrit.fx"
+  ],
+  "32": [
+   "stalker_basic.fx",
+   "stalker_attackcrit.fx"
+  ],
+  "40": [
+   "stalker_basic.fx",
+   "stalker_attack.fx"
+  ],
+  "42": [
+   "stalker_basic.fx",
+   "stalker_attack.fx"
+  ]
+ },
+ "render": "Blender 4.2 Cycles 24spp 3x + sprite_post; fx h6m (fxsim d1=mul mode2=wrap)",
+ "sec": 29
+}

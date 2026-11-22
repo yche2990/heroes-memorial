@@ -1,0 +1,35 @@
+// Heroes 6 memorial: bonus types used by neutral creatures
+{
+	"H6_SIREN_H6C": {
+		"graphics": {
+			"icon": "h6/abilities/ab_Siren_Song"
+		},
+		"creatureNature": false,
+		"description": "{Siren Song}\nEnemies that move next to it are charmed"
+	},
+	"H6_CHARMED_H6C": {
+		"graphics": {
+			"icon": "h6/abilities/ab_Siren_Song"
+		},
+		"creatureNature": false,
+		"description": "{Charmed}\nDeals no damage this round",
+		"valueDescriptions": {
+			"900001": "%s are charmed by the Siren Song and deal no damage this round."
+		}
+	},
+	"H6_CURSED_H6C": {
+		"graphics": {
+			"icon": "h6/abilities/ab_Curse_of_the_Spectral_Dragon"
+		},
+		"creatureNature": false,
+		"description": "{Spectral Curse}\nDamage it deals heals the Phantom Dragon"
+	},
+	"H6_PETRIFY_USED_H6C": {
+		"hidden": true,
+		"creatureNature": false
+	},
+	"H6_TIDE_USED_H6C": {
+		"hidden": true,
+		"creatureNature": false
+	}
+}

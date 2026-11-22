@@ -1,0 +1,115 @@
+// Heroes 6 memorial: bonus types used by the bosses
+{
+	"H6_ENRAGED_H6C": {
+		"graphics": {
+			"icon": "h6/abilities/ab_Enrage"
+		},
+		"creatureNature": false,
+		"description": "{Fury Unleashed}\n+1 attack, Speed +5, damage +30%",
+		"valueDescriptions": {
+			"900001": "%s are enraged!"
+		}
+	},
+	"H6_DEVOURED_H6C": {
+		"graphics": {
+			"icon": "h6/abilities/ab_Devour"
+		},
+		"creatureNature": false,
+		"description": "{Devoured}\nCannot act; takes damage each round",
+		"valueDescriptions": {
+			"900001": "%s swallow %s whole.",
+			"900002": "%s are digested, taking %d damage; %d perish."
+		}
+	},
+	"H6_ILLBLOOD_H6C": {
+		"hidden": true,
+		"creatureNature": false,
+		"valueDescriptions": {
+			"1": "Driven by Ill Blood, %s strike %s for %d damage."
+		}
+	},
+	"H6_CONSUMED_H6C": {
+		"graphics": {
+			"icon": "h6/abilities/ab_Mark_of_Consumption"
+		},
+		"creatureNature": false,
+		"description": "{Mark of Consumption}\nFire spell damage taken +${val}%"
+	},
+	"H6_WEARY_H6C": {
+		"graphics": {
+			"icon": "h6/abilities/ab_Fatigue"
+		},
+		"creatureNature": false,
+		"description": "{Weary}\nDamage dealt -${val}%"
+	},
+	"H6_DOOM_H6C": {
+		"graphics": {
+			"icon": "h6/abilities/ab_Mark_of_Doom"
+		},
+		"creatureNature": false,
+		"description": "{Mark of Doom}\nBeneficial spells have no effect",
+		"valueDescriptions": {
+			"900001": "The Mark of Doom nullifies the beneficial spells on %s."
+		}
+	},
+	"H6_SUMMON_H6C": {
+		"hidden": true,
+		"creatureNature": false,
+		"valueDescriptions": {
+			"1": "%s take to the sky and summon %d stacks of Darkness Elementals."
+		}
+	},
+	"H6_DEVOUR_SPIRIT_H6C": {
+		"hidden": true,
+		"creatureNature": false,
+		"valueDescriptions": {
+			"1": "%s drain a ghost dry, recovering %d HP."
+		}
+	},
+	"H6_VOIDGATE_H6C": {
+		"graphics": {
+			"icon": "h6/abilities/ab_Void_Gate"
+		},
+		"creatureNature": false,
+		"description": "{Void Gate}\nLoses 3% of its number each round",
+		"valueDescriptions": {
+			"900001": "The Void Gate erases %d %s."
+		}
+	},
+	"H6_VOIDCIRCLE_H6C": {
+		"graphics": {
+			"icon": "h6/abilities/ab_Circle_of_the_Void"
+		},
+		"creatureNature": false,
+		"description": "{Void Circle}\nEnemies more than 2 hexes away deal -90% damage to it"
+	},
+	"H6_OBLIVION_H6C": {
+		"hidden": true,
+		"creatureNature": false,
+		"valueDescriptions": {
+			"1": "Curse of Oblivion: the attack of %s has no effect."
+		}
+	},
+	"H6_MASSRES_H6C": {
+		"hidden": true,
+		"creatureNature": false,
+		"valueDescriptions": {
+			"1": "%s resurrect %d stacks."
+		}
+	},
+	"H6_DIVINE_H6C": {
+		"graphics": {
+			"icon": "h6/abilities/ab_Divine_Presence"
+		},
+		"creatureNature": false,
+		"description": "{Divine Presence}\nImmune to harmful spells"
+	},
+	"H6_RIPTIDE_H6C": {
+		"hidden": true,
+		"creatureNature": false,
+		"valueDescriptions": {
+			"1": "A Riptide water spout hits %s for %d damage; %d perish.",
+			"2": "Ripples spread beneath %s…"
+		}
+	}
+}

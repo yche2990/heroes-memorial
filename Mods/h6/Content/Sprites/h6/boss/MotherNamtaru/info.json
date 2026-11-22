@@ -1,0 +1,90 @@
+{
+ "fac": "boss",
+ "k": 1.0,
+ "scale": 50.506080307921216,
+ "origin": [
+  209.16753245114035,
+  242.174
+ ],
+ "baked": {
+  "0": [
+   "Mothernamtaru_basic.fx"
+  ],
+  "1": [
+   "Mothernamtaru_basic.fx"
+  ],
+  "2": [
+   "Mothernamtaru_basic.fx"
+  ],
+  "3": [
+   "Mothernamtaru_basic.fx"
+  ],
+  "4": [
+   "Mothernamtaru_basic.fx"
+  ],
+  "5": [
+   "Mothernamtaru_basic.fx"
+  ],
+  "7": [
+   "Mothernamtaru_basic.fx"
+  ],
+  "8": [
+   "Mothernamtaru_basic.fx"
+  ],
+  "11": [
+   "Mothernamtaru_basic.fx"
+  ],
+  "12": [
+   "Mothernamtaru_basic.fx"
+  ],
+  "13": [
+   "Mothernamtaru_basic.fx"
+  ],
+  "14": [
+   "Mothernamtaru_basic.fx",
+   "mothernamtaru_attackranged.fx"
+  ],
+  "15": [
+   "Mothernamtaru_basic.fx",
+   "mothernamtaru_attackranged.fx"
+  ],
+  "16": [
+   "Mothernamtaru_basic.fx",
+   "mothernamtaru_attackranged.fx"
+  ],
+  "17": [
+   "Mothernamtaru_basic.fx",
+   "mothernamtaru_spiderleap_end.fx"
+  ],
+  "18": [
+   "Mothernamtaru_basic.fx",
+   "mothernamtaru_spiderleap_end.fx"
+  ],
+  "19": [
+   "Mothernamtaru_basic.fx",
+   "mothernamtaru_spiderleap_end.fx"
+  ],
+  "20": [
+   "Mothernamtaru_basic.fx"
+  ],
+  "21": [
+   "Mothernamtaru_basic.fx"
+  ],
+  "30": [
+   "Mothernamtaru_basic.fx",
+   "mothernamtaru_spiderleap_end.fx"
+  ],
+  "32": [
+   "Mothernamtaru_basic.fx",
+   "mothernamtaru_spiderleap_end.fx"
+  ],
+  "40": [
+   "Mothernamtaru_basic.fx"
+  ],
+  "42": [
+   "Mothernamtaru_basic.fx"
+  ]
+ },
+ "render": "Blender 4.2 Cycles 24spp 3x + sprite_post; fx h6m (fxsim d1=mul mode2=wrap)",
+ "sec": 45
+}

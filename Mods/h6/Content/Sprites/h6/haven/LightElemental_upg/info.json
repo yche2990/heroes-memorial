@@ -1,0 +1,92 @@
+{
+ "fac": "haven",
+ "k": 1.3,
+ "scale": 86.97568893312688,
+ "origin": [
+  206.5259446629978,
+  273.6577240141422
+ ],
+ "baked": {
+  "0": [
+   "lightelemental_upg.fx"
+  ],
+  "1": [
+   "lightelemental_upg.fx"
+  ],
+  "2": [
+   "lightelemental_upg.fx"
+  ],
+  "3": [
+   "lightelemental_upg.fx"
+  ],
+  "4": [
+   "lightelemental_upg.fx",
+   "lightelemental_upg_defend.fx"
+  ],
+  "5": [
+   "lightelemental_upg.fx",
+   "lightelemental_upg_die.fx"
+  ],
+  "7": [
+   "lightelemental_upg.fx"
+  ],
+  "8": [
+   "lightelemental_upg.fx"
+  ],
+  "11": [
+   "lightelemental_upg.fx",
+   "lightelemental_upg_attack.fx"
+  ],
+  "12": [
+   "lightelemental_upg.fx",
+   "lightelemental_upg_attack.fx"
+  ],
+  "13": [
+   "lightelemental_upg.fx",
+   "lightelemental_upg_attack.fx"
+  ],
+  "17": [
+   "lightelemental_upg.fx",
+   "lightelemental_summon.fx",
+   "lightelemental_summon_add.fx"
+  ],
+  "18": [
+   "lightelemental_upg.fx",
+   "lightelemental_summon.fx",
+   "lightelemental_summon_add.fx"
+  ],
+  "19": [
+   "lightelemental_upg.fx",
+   "lightelemental_summon.fx",
+   "lightelemental_summon_add.fx"
+  ],
+  "20": [
+   "lightelemental_upg.fx",
+   "lightelemental_upg_movestart.fx"
+  ],
+  "21": [
+   "lightelemental_upg.fx",
+   "lightelemental_upg_moveend.fx"
+  ],
+  "30": [
+   "lightelemental_upg.fx",
+   "lightelemental_summon.fx",
+   "lightelemental_summon_add.fx"
+  ],
+  "32": [
+   "lightelemental_upg.fx",
+   "lightelemental_summon.fx",
+   "lightelemental_summon_add.fx"
+  ],
+  "40": [
+   "lightelemental_upg.fx",
+   "lightelemental_upg_attack.fx"
+  ],
+  "42": [
+   "lightelemental_upg.fx",
+   "lightelemental_upg_attack.fx"
+  ]
+ },
+ "render": "Blender 4.2 Cycles 24spp 3x + sprite_post; fx h6m (fxsim d1=mul mode2=wrap)",
+ "sec": 190
+}

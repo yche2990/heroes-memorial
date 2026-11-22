@@ -1,0 +1,11 @@
+{
+	"basepath": "h6/banks/h6BankMichael/",
+	"sequences": [
+		{
+			"group": 0,
+			"frames": [
+				"h6BankMichael.png"
+			]
+		}
+	]
+}

@@ -1,0 +1,8 @@
+{
+	"H6_BATTERING_RAM" : {
+		"description" : "{Battering Ram}\nCan attack the walls from melee range.",
+		"graphics" : {
+			"icon" : "h6/batteringRam/bonusIcon.png"
+		}
+	}
+}

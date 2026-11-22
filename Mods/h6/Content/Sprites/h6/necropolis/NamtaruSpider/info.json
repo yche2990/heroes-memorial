@@ -1,0 +1,91 @@
+{
+ "fac": "necropolis",
+ "k": 1.1,
+ "scale": 66.84767545635557,
+ "origin": [
+  218.59014030965602,
+  261.0
+ ],
+ "baked": {
+  "0": [
+   "namtaruspider.fx"
+  ],
+  "1": [
+   "namtaruspider.fx"
+  ],
+  "2": [
+   "namtaruspider.fx"
+  ],
+  "3": [
+   "namtaruspider.fx"
+  ],
+  "4": [
+   "namtaruspider.fx"
+  ],
+  "5": [
+   "namtaruspider.fx",
+   "namtaruspider_die.fx"
+  ],
+  "7": [
+   "namtaruspider.fx"
+  ],
+  "8": [
+   "namtaruspider.fx"
+  ],
+  "11": [
+   "namtaruspider.fx",
+   "namtaruspider_attack.fx"
+  ],
+  "12": [
+   "namtaruspider.fx",
+   "namtaruspider_attack.fx"
+  ],
+  "13": [
+   "namtaruspider.fx",
+   "namtaruspider_attack.fx"
+  ],
+  "14": [
+   "namtaruspider.fx",
+   "namtaruspider_attackranged.fx"
+  ],
+  "15": [
+   "namtaruspider.fx",
+   "namtaruspider_attackranged.fx"
+  ],
+  "16": [
+   "namtaruspider.fx",
+   "namtaruspider_attackranged.fx"
+  ],
+  "17": [
+   "namtaruspider.fx"
+  ],
+  "18": [
+   "namtaruspider.fx"
+  ],
+  "19": [
+   "namtaruspider.fx"
+  ],
+  "20": [
+   "namtaruspider.fx"
+  ],
+  "21": [
+   "namtaruspider.fx"
+  ],
+  "30": [
+   "namtaruspider.fx"
+  ],
+  "32": [
+   "namtaruspider.fx"
+  ],
+  "40": [
+   "namtaruspider.fx",
+   "namtaruspider_attack.fx"
+  ],
+  "42": [
+   "namtaruspider.fx",
+   "namtaruspider_attack.fx"
+  ]
+ },
+ "render": "Blender 4.2 Cycles 24spp 3x + sprite_post; fx h6m (fxsim d1=mul mode2=wrap)",
+ "sec": 34
+}

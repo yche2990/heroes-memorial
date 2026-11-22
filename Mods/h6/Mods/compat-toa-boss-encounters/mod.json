@@ -1,0 +1,23 @@
+{
+	"chinese": {
+		"name": "兼容：亚山之泪首领挑战（乌列）",
+		"description": "乌列尔和两种卫兵换成英雄无敌6的模型、头像、声音，补上原版乌列的技能；乌列尔神庙奖励加英雄无敌7狮鹫套装。",
+		"translations": [
+			"config/translations/chinese.json"
+		]
+	},
+	"name": "Compatibility: Tears of Ashan Boss Encounters (Uriel)",
+	"description": "Uriel and the two kinds of guards use H6 models, portraits and sounds, and gain the H6 original Uriel's skills; the Temple of Uriel reward adds the H7 Griffin set.",
+	"version": "1.0.0",
+	"author": "yche2990",
+	"modType": "Compatibility",
+	"depends": [
+		"tears-of-ashan.toa-boss-encounters"
+	],
+	"creatures": [
+		"config/creatures.json"
+	],
+	"objects": [
+		"config/objects.json"
+	]
+}

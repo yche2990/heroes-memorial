@@ -1,0 +1,86 @@
+{
+ "fac": "dungeon",
+ "k": 0.78,
+ "scale": 45.49805433965801,
+ "origin": [
+  217.1825126029391,
+  252.7971
+ ],
+ "baked": {
+  "0": [
+   "shadowdragon_basicfx.fx",
+   "shadowdragon_wing_fly.fx"
+  ],
+  "1": [
+   "shadowdragon_basicfx.fx"
+  ],
+  "2": [
+   "shadowdragon_basicfx.fx"
+  ],
+  "3": [
+   "shadowdragon_basicfx.fx"
+  ],
+  "4": [
+   "shadowdragon_basicfx.fx",
+   "shadowdragon_defend.fx"
+  ],
+  "5": [
+   "shadowdragon_basicfx.fx"
+  ],
+  "7": [
+   "shadowdragon_basicfx.fx"
+  ],
+  "8": [
+   "shadowdragon_basicfx.fx"
+  ],
+  "11": [
+   "shadowdragon_basicfx.fx",
+   "shadowdragon_critical_attack.fx"
+  ],
+  "12": [
+   "shadowdragon_basicfx.fx",
+   "shadowdragon_critical_attack.fx"
+  ],
+  "13": [
+   "shadowdragon_basicfx.fx",
+   "shadowdragon_critical_attack.fx"
+  ],
+  "17": [
+   "shadowdragon_basicfx.fx",
+   "shadowdragon_ability1.fx"
+  ],
+  "18": [
+   "shadowdragon_basicfx.fx",
+   "shadowdragon_ability1.fx"
+  ],
+  "19": [
+   "shadowdragon_basicfx.fx",
+   "shadowdragon_ability1.fx"
+  ],
+  "20": [
+   "shadowdragon_basicfx.fx"
+  ],
+  "21": [
+   "shadowdragon_basicfx.fx"
+  ],
+  "30": [
+   "shadowdragon_basicfx.fx",
+   "shadowdragon_ability1.fx"
+  ],
+  "32": [
+   "shadowdragon_basicfx.fx",
+   "shadowdragon_ability1.fx"
+  ],
+  "40": [
+   "shadowdragon_basicfx.fx",
+   "shadowdragon_critical_attack.fx"
+  ],
+  "42": [
+   "shadowdragon_basicfx.fx",
+   "shadowdragon_critical_attack.fx"
+  ]
+ },
+ "render": "Blender 4.2 Cycles 24spp 3x + sprite_post; fx h6m (fxsim d1=mul mode2=wrap)",
+ "sec": 63,
+ "note426": "battle frames shrunk x0.65 around the foot point (x=217, y=265) after render (Yu, round 426)"
+}

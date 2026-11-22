@@ -1,0 +1,86 @@
+{
+ "fac": "neutral",
+ "k": 0.84,
+ "scale": 58.8,
+ "origin": [
+  207.14377902619194,
+  268.2263483763957
+ ],
+ "baked": {
+  "0": [
+   "mermaid.fx"
+  ],
+  "1": [
+   "mermaid.fx"
+  ],
+  "2": [
+   "mermaid.fx"
+  ],
+  "3": [
+   "mermaid.fx"
+  ],
+  "4": [
+   "mermaid.fx"
+  ],
+  "5": [
+   "mermaid.fx"
+  ],
+  "7": [
+   "mermaid.fx"
+  ],
+  "8": [
+   "mermaid.fx"
+  ],
+  "11": [
+   "mermaid.fx"
+  ],
+  "12": [
+   "mermaid.fx"
+  ],
+  "13": [
+   "mermaid.fx"
+  ],
+  "14": [
+   "mermaid.fx",
+   "mermaid_rangedattack.fx"
+  ],
+  "15": [
+   "mermaid.fx",
+   "mermaid_rangedattack.fx"
+  ],
+  "16": [
+   "mermaid.fx",
+   "mermaid_rangedattack.fx"
+  ],
+  "17": [
+   "mermaid.fx"
+  ],
+  "18": [
+   "mermaid.fx"
+  ],
+  "19": [
+   "mermaid.fx"
+  ],
+  "20": [
+   "mermaid.fx"
+  ],
+  "21": [
+   "mermaid.fx"
+  ],
+  "30": [
+   "mermaid.fx"
+  ],
+  "32": [
+   "mermaid.fx"
+  ],
+  "40": [
+   "mermaid.fx"
+  ],
+  "42": [
+   "mermaid.fx"
+  ]
+ },
+ "render": "Blender 4.2 Cycles 24spp 3x + sprite_post; fx h6m (fxsim d1=mul mode2=wrap)",
+ "sec": 157,
+ "note426": "battle frames shrunk x0.84 around the foot point (x=196, y=265) after render (Yu, round 426)"
+}

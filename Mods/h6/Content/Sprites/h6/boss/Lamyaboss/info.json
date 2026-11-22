@@ -1,0 +1,79 @@
+{
+ "fac": "boss",
+ "k": 1.0,
+ "scale": 35.55165787516399,
+ "origin": [
+  208.02872907731083,
+  253.1797
+ ],
+ "baked": {
+  "0": [
+   "lamyaboss.fx"
+  ],
+  "1": [
+   "lamyaboss.fx"
+  ],
+  "2": [
+   "lamyaboss.fx"
+  ],
+  "3": [
+   "lamyaboss.fx"
+  ],
+  "4": [
+   "lamyaboss.fx"
+  ],
+  "5": [
+   "lamyaboss.fx"
+  ],
+  "7": [
+   "lamyaboss.fx"
+  ],
+  "8": [
+   "lamyaboss.fx"
+  ],
+  "11": [
+   "lamyaboss.fx",
+   "lamyaboss_attack.fx"
+  ],
+  "12": [
+   "lamyaboss.fx",
+   "lamyaboss_attack.fx"
+  ],
+  "13": [
+   "lamyaboss.fx",
+   "lamyaboss_attack.fx"
+  ],
+  "17": [
+   "lamyaboss.fx"
+  ],
+  "18": [
+   "lamyaboss.fx"
+  ],
+  "19": [
+   "lamyaboss.fx"
+  ],
+  "20": [
+   "lamyaboss.fx"
+  ],
+  "21": [
+   "lamyaboss.fx",
+   "lamyaboss_flyend.fx"
+  ],
+  "30": [
+   "lamyaboss.fx"
+  ],
+  "32": [
+   "lamyaboss.fx"
+  ],
+  "40": [
+   "lamyaboss.fx",
+   "lamyaboss_attack.fx"
+  ],
+  "42": [
+   "lamyaboss.fx",
+   "lamyaboss_attack.fx"
+  ]
+ },
+ "render": "Blender 4.2 Cycles 24spp 3x + sprite_post; fx h6m (fxsim d1=mul mode2=wrap)",
+ "sec": 55
+}

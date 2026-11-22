@@ -1,0 +1,79 @@
+{
+ "fac": "neutral",
+ "k": 0.9,
+ "scale": 63.01146124061382,
+ "origin": [
+  181.33437652196397,
+  259.3226
+ ],
+ "baked": {
+  "0": [
+   "shadowelemental_basic.fx"
+  ],
+  "1": [
+   "shadowelemental_basic.fx"
+  ],
+  "2": [
+   "shadowelemental_basic.fx"
+  ],
+  "3": [
+   "shadowelemental_basic.fx",
+   "shadowelemental_hit.fx"
+  ],
+  "4": [
+   "shadowelemental_basic.fx",
+   "shadowelemental_defend.fx"
+  ],
+  "5": [
+   "shadowelemental_basic.fx",
+   "shadowelemental_die.fx"
+  ],
+  "7": [
+   "shadowelemental_basic.fx"
+  ],
+  "8": [
+   "shadowelemental_basic.fx"
+  ],
+  "11": [
+   "shadowelemental_basic.fx"
+  ],
+  "12": [
+   "shadowelemental_basic.fx"
+  ],
+  "13": [
+   "shadowelemental_basic.fx"
+  ],
+  "17": [
+   "shadowelemental_basic.fx"
+  ],
+  "18": [
+   "shadowelemental_basic.fx"
+  ],
+  "19": [
+   "shadowelemental_basic.fx"
+  ],
+  "20": [
+   "shadowelemental_basic.fx",
+   "shadowelemental_movestart.fx"
+  ],
+  "21": [
+   "shadowelemental_basic.fx",
+   "shadowelemental_moveend.fx"
+  ],
+  "30": [
+   "shadowelemental_basic.fx"
+  ],
+  "32": [
+   "shadowelemental_basic.fx"
+  ],
+  "40": [
+   "shadowelemental_basic.fx"
+  ],
+  "42": [
+   "shadowelemental_basic.fx"
+  ]
+ },
+ "render": "Blender 4.2 Cycles 24spp 3x + sprite_post; fx h6m (fxsim d1=mul mode2=wrap)",
+ "sec": 57,
+ "note426": "battle frames shrunk x0.9 around the foot point (x=196, y=265) after render (Yu, round 426)"
+}

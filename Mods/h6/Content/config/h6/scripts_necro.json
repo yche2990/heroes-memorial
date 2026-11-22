@@ -1,0 +1,344 @@
+// Heroes 6 memorial: script registration of Necropolis creatures
+{
+	"h6AttackStatus": {
+		"implements": "combatEvent",
+		"script": "combat/h6AttackStatus",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"spell": {
+					"type": "string"
+				},
+				"turns": {
+					"type": "number"
+				},
+				"adjacent": {
+					"type": "boolean"
+				},
+				"animation": {
+					"type": "string"
+				},
+				"sound": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": ""
+	},
+	"h6Rage": {
+		"implements": "combatEvent",
+		"script": "combat/h6Rage",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"val": {
+					"type": "number"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": ""
+	},
+	"h6DeathSeal": {
+		"implements": "combatEvent",
+		"script": "combat/h6DeathSeal",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"role": {
+					"type": "string",
+					"enum": [
+						"carrier",
+						"zone"
+					]
+				},
+				"spell": {
+					"type": "string"
+				},
+				"turns": {
+					"type": "number"
+				},
+				"animation": {
+					"type": "string"
+				},
+				"sound": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": ""
+	},
+	"h6Putrescence": {
+		"implements": "combatEvent",
+		"script": "combat/h6Putrescence",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"role": {
+					"type": "string",
+					"enum": [
+						"carrier",
+						"zone"
+					]
+				},
+				"pct": {
+					"type": "number"
+				},
+				"max": {
+					"type": "number"
+				},
+				"turns": {
+					"type": "number"
+				},
+				"contagion": {
+					"type": "boolean"
+				},
+				"animation": {
+					"type": "string"
+				},
+				"sound": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": ""
+	},
+	"h6Dot": {
+		"implements": "combatEvent",
+		"script": "combat/h6Dot",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"role": {
+					"type": "string",
+					"enum": [
+						"carrier",
+						"zone"
+					]
+				},
+				"animation": {
+					"type": "string"
+				},
+				"sound": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": ""
+	},
+	"h6LifeDrain": {
+		"implements": "combatEvent",
+		"script": "combat/h6LifeDrain",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"pct": {
+					"type": "number"
+				},
+				"animation": {
+					"type": "string"
+				},
+				"sound": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": ""
+	},
+	"h6Gaze": {
+		"implements": "combatEvent",
+		"script": "combat/h6Gaze",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"per": {
+					"type": "number"
+				},
+				"animation": {
+					"type": "string"
+				},
+				"sound": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": ""
+	},
+	"h6Venom": {
+		"implements": "combatEvent",
+		"script": "combat/h6Venom",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"per": {
+					"type": "number"
+				},
+				"turns": {
+					"type": "number"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": ""
+	},
+	"h6Wail": {
+		"implements": "spellEffect",
+		"script": "spells/h6Wail",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"per": {
+					"type": "number"
+				},
+				"uses": {
+					"type": "number"
+				},
+				"key": {
+					"type": "string"
+				},
+				"animation": {
+					"type": "string"
+				},
+				"sound": {
+					"type": "string"
+				},
+				"drainAnimation": {
+					"type": "string"
+				},
+				"drainSound": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"h6AreaStatus": {
+		"implements": "spellEffect",
+		"script": "spells/h6AreaStatus",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"center": {
+					"type": "string"
+				},
+				"friendly": {
+					"type": "boolean"
+				},
+				"radius": {
+					"type": "number"
+				},
+				"dotSrc": {
+					"type": "string"
+				},
+				"living": {
+					"type": "boolean"
+				},
+				"status": {
+					"type": "string"
+				},
+				"turns": {
+					"type": "number"
+				},
+				"dot": {
+					"type": "number"
+				},
+				"dotTurns": {
+					"type": "number"
+				},
+				"pct": {
+					"type": "number"
+				},
+				"attackPct": {
+					"type": "number"
+				},
+				"per": {
+					"type": "number"
+				},
+				"school": {
+					"type": "string"
+				},
+				"logIndex": {
+					"type": "number"
+				},
+				"uses": {
+					"type": "number"
+				},
+				"key": {
+					"type": "string"
+				},
+				"animation": {
+					"type": "string"
+				},
+				"sound": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"h6DualForm": {
+		"implements": "spellEffect",
+		"script": "spells/h6DualForm",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"to": {
+					"type": "string"
+				},
+				"cooldown": {
+					"type": "number"
+				},
+				"animation": {
+					"type": "string"
+				},
+				"sound": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"h6FormLink": {
+		"implements": "combatEvent",
+		"script": "combat/h6FormLink",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {},
+			"additionalProperties": false
+		},
+		"description": ""
+	}
+}

@@ -1,0 +1,3821 @@
+// Heroes 6 memorial: the 14 Inferno creatures (stats converted by H3 same-level averages)
+{
+	"h6InfernoManiac": {
+		"name": {
+			"singular": "Maniac",
+			"plural": "Maniacs"
+		},
+		"description": "Maniacs are the creations of Ur-Jubal, Demon Lord of Madness. The souls of these demons have an unstable, furious and unpredictable chaotic nature. As creations of the Demon Lord of Madness, Maniacs excel at spreading fear and panic; they scream and wail as they attack, and laugh out loud when wounded.",
+		"faction": "inferno",
+		"level": 1,
+		"cost": {
+			"gold": 45
+		},
+		"speed": 5,
+		"hitPoints": 6,
+		"attack": 4,
+		"defense": 4,
+		"damage": {
+			"min": 1,
+			"max": 2
+		},
+		"doubleWide": false,
+		"fightValue": 78,
+		"aiValue": 68,
+		"growth": 14,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"upgrades": [
+			"h6InfernoDemented"
+		],
+		"abilities": {
+			"toaDemonic": {
+				"type": "tears-of-ashan:DEMONIC",
+				"val": 1,
+				"hidden": true
+			},
+			"h6Gating": {
+				"type": "H6_GATING_H6C",
+				"val": 1
+			},
+			"twistedMind": {
+				"type": "MIND_IMMUNITY",
+				"icon": "h6/abilities/ab_Twisted_Mind",
+				"description": "{Twisted Mind}\nImmune to mind spells"
+			},
+			"fireproof": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.fire",
+				"val": 20,
+				"stacking": "h6InfernoManiacExpFire",
+				"icon": "h6/abilities/ab_Fireproof_Skin",
+				"description": "{Fireproof Skin}\nFire Magic damage taken -20%"
+			},
+			"lightWeak": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.01lightSchool",
+				"val": -20,
+				"icon": "h6/abilities/ab_Vulnerability_to_Light",
+				"description": "{Light Weakness}\nLight Magic damage taken +20%"
+			}
+		},
+		"graphics": {
+			"animation": "h6/inferno/Maniac/Maniac.json",
+			"map": "h6/units/h6InfernoManiac/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h6/units/h6InfernoManiac/map/atkL.png",
+			"mapAttackFromRight": "h6/units/h6InfernoManiac/map/atkR.png",
+			"iconLarge": "h6/units/h6InfernoManiac/iconLarge.png",
+			"iconSmall": "h6/units/h6InfernoManiac/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h6/inferno/Maniac_AttackLaunchMelee.wav",
+			"wince": "h6/inferno/Maniac_Hit.wav",
+			"defend": "h6/inferno/Maniac_Defend.wav",
+			"killed": "h6/inferno/Maniac_Die.wav",
+			"move": "h6/inferno/Maniac_Move.wav"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.attack"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.defence"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					5,
+					5,
+					5,
+					10,
+					10,
+					15,
+					15
+				]
+			},
+			{
+				"bonus": {
+					"type": "DOUBLE_DAMAGE_CHANCE"
+				},
+				"values": [
+					0,
+					0,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					10
+				]
+			}
+		]
+	},
+	"h6InfernoDemented": {
+		"name": {
+			"singular": "Demented",
+			"plural": "Demented"
+		},
+		"description": "Maniacs who have lived in madness for a long time gain a twisted sense of humor; to them everything seems ironic or simply funny. This lets them drain resolve and confidence from their foes. A Demented joke is no laughing matter.",
+		"faction": "inferno",
+		"level": 1,
+		"cost": {
+			"gold": 65
+		},
+		"speed": 7,
+		"hitPoints": 6,
+		"attack": 5,
+		"defense": 5,
+		"damage": {
+			"min": 1,
+			"max": 3
+		},
+		"doubleWide": false,
+		"fightValue": 104,
+		"aiValue": 112,
+		"growth": 14,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"toaDemonic": {
+				"type": "tears-of-ashan:DEMONIC",
+				"val": 1,
+				"hidden": true
+			},
+			"h6Gating": {
+				"type": "H6_GATING_H6C",
+				"val": 1
+			},
+			"twistedMind": {
+				"type": "MIND_IMMUNITY",
+				"icon": "h6/abilities/ab_Twisted_Mind",
+				"description": "{Twisted Mind}\nImmune to mind spells"
+			},
+			"fireproof": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.fire",
+				"val": 20,
+				"stacking": "h6InfernoDementedExpFire",
+				"icon": "h6/abilities/ab_Fireproof_Skin",
+				"description": "{Fireproof Skin}\nFire Magic damage taken -20%"
+			},
+			"lightWeak": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.01lightSchool",
+				"val": -20,
+				"icon": "h6/abilities/ab_Vulnerability_to_Light",
+				"description": "{Light Weakness}\nLight Magic damage taken +20%"
+			},
+			"laughter": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6Laughter",
+				"val": 1,
+				"icon": "h6/abilities/ab_Manic_Laughter",
+				"stacking": "h6Laughter",
+				"description": "{Mockery}\nHit: foe -1 dmg/unit, self +1, till next round",
+				"addInfo": {
+					"val": 1,
+					"turns": 2,
+					"spell": "heroes-memorial.h6:h6Mocked"
+				}
+			}
+		},
+		"graphics": {
+			"animation": "h6/inferno/Maniac_upg/Maniac_upg.json",
+			"map": "h6/units/h6InfernoDemented/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h6/units/h6InfernoDemented/map/atkL.png",
+			"mapAttackFromRight": "h6/units/h6InfernoDemented/map/atkR.png",
+			"iconLarge": "h6/units/h6InfernoDemented/iconLarge.png",
+			"iconSmall": "h6/units/h6InfernoDemented/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h6/inferno/Maniac_AttackLaunchMelee.wav",
+			"wince": "h6/inferno/Maniac_Hit.wav",
+			"defend": "h6/inferno/Maniac_Defend.wav",
+			"killed": "h6/inferno/Maniac_Die.wav",
+			"move": "h6/inferno/Maniac_Move.wav"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.attack"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.defence"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					5,
+					5,
+					5,
+					10,
+					10,
+					15,
+					15
+				]
+			},
+			{
+				"bonus": {
+					"type": "DOUBLE_DAMAGE_CHANCE"
+				},
+				"values": [
+					0,
+					0,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					10
+				]
+			}
+		]
+	},
+	"h6InfernoHellhound": {
+		"name": {
+			"singular": "Hellhound",
+			"plural": "Hellhounds"
+		},
+		"description": "Hellhounds are servants of the Demon Lord of Greed, one of the six Demon Lords. They are fire-breathing two-headed mastiffs, larger, faster and fiercer than sabretooth tigers and Dire Wolves.",
+		"faction": "inferno",
+		"level": 2,
+		"cost": {
+			"gold": 140
+		},
+		"speed": 5,
+		"hitPoints": 16,
+		"attack": 7,
+		"defense": 6,
+		"damage": {
+			"min": 3,
+			"max": 5
+		},
+		"doubleWide": true,
+		"fightValue": 242,
+		"aiValue": 235,
+		"growth": 8,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"upgrades": [
+			"h6InfernoCerberus"
+		],
+		"abilities": {
+			"toaDemonic": {
+				"type": "tears-of-ashan:DEMONIC",
+				"val": 1,
+				"hidden": true
+			},
+			"h6Gating": {
+				"type": "H6_GATING_H6C",
+				"val": 1
+			},
+			"unlimitedRetaliations": {
+				"type": "UNLIMITED_RETALIATIONS",
+				"icon": "h6/abilities/ab_Unlimited_Retaliation_Cerberus",
+				"description": "{Unlimited Retaliation}\nRetaliates against every attack"
+			},
+			"eyeOfGluttony": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6Gluttony",
+				"val": 20,
+				"icon": "h6/abilities/ab_Eye_of_Gluttony",
+				"stacking": "h6Gluttony",
+				"description": "{Eye of Gluttony}\nMarks foes that hit it; +20% dmg vs marked",
+				"addInfo": {
+					"val": 20
+				}
+			},
+			"fireproof": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.fire",
+				"val": 20,
+				"stacking": "h6InfernoHellhoundExpFire",
+				"icon": "h6/abilities/ab_Fireproof_Skin",
+				"description": "{Fireproof Skin}\nFire Magic damage taken -20%"
+			},
+			"lightWeak": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.01lightSchool",
+				"val": -20,
+				"icon": "h6/abilities/ab_Vulnerability_to_Light",
+				"description": "{Light Weakness}\nLight Magic damage taken +20%"
+			}
+		},
+		"graphics": {
+			"animation": "h6/inferno/Cerberus/Cerberus.json",
+			"map": "h6/units/h6InfernoHellhound/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h6/units/h6InfernoHellhound/map/atkL.png",
+			"mapAttackFromRight": "h6/units/h6InfernoHellhound/map/atkR.png",
+			"iconLarge": "h6/units/h6InfernoHellhound/iconLarge.png",
+			"iconSmall": "h6/units/h6InfernoHellhound/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h6/inferno/Cerberus_AttackLaunchMelee.wav",
+			"wince": "h6/inferno/Cerberus_Hit.wav",
+			"defend": "h6/inferno/Cerberus_Defend.wav",
+			"killed": "h6/inferno/Cerberus_Die.wav",
+			"move": "h6/inferno/Cerberus_Move1.wav"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.attack"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					3,
+					3,
+					3,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.defence"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					3,
+					4,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					0,
+					1,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					3,
+					3,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "SPELL_DAMAGE_REDUCTION",
+					"subtype": "spellSchool.fire",
+					"stacking": "h6InfernoHellhoundExpFire"
+				},
+				"values": [
+					20,
+					22,
+					23,
+					25,
+					27,
+					28,
+					30,
+					32,
+					33,
+					35
+				]
+			},
+			{
+				"bonus": {
+					"type": "DOUBLE_DAMAGE_CHANCE"
+				},
+				"values": [
+					0,
+					2,
+					3,
+					5,
+					6,
+					8,
+					9,
+					11,
+					12,
+					15
+				]
+			}
+		]
+	},
+	"h6InfernoCerberus": {
+		"name": {
+			"singular": "Demon Hound",
+			"plural": "Demon Hounds"
+		},
+		"description": "When the two heads of a Hellhound start barking at once, competing to see which sounds more vicious, it shows they are gaining the mental coordination unique to Demon Hounds. From then on they can attack several targets at once.",
+		"faction": "inferno",
+		"level": 2,
+		"cost": {
+			"gold": 180
+		},
+		"speed": 7,
+		"hitPoints": 18,
+		"attack": 7,
+		"defense": 6,
+		"damage": {
+			"min": 3,
+			"max": 5
+		},
+		"doubleWide": true,
+		"fightValue": 295,
+		"aiValue": 341,
+		"growth": 8,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"toaDemonic": {
+				"type": "tears-of-ashan:DEMONIC",
+				"val": 1,
+				"hidden": true
+			},
+			"h6Gating": {
+				"type": "H6_GATING_H6C",
+				"val": 1
+			},
+			"unlimitedRetaliations": {
+				"type": "UNLIMITED_RETALIATIONS",
+				"icon": "h6/abilities/ab_Unlimited_Retaliation_Cerberus",
+				"description": "{Unlimited Retaliation}\nRetaliates against every attack"
+			},
+			"eyeOfGluttony": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6Gluttony",
+				"val": 20,
+				"icon": "h6/abilities/ab_Eye_of_Gluttony",
+				"stacking": "h6Gluttony",
+				"description": "{Eye of Gluttony}\nMarks foes that hit it; +20% dmg vs marked",
+				"addInfo": {
+					"val": 20
+				}
+			},
+			"fireproof": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.fire",
+				"val": 20,
+				"stacking": "h6InfernoCerberusExpFire",
+				"icon": "h6/abilities/ab_Fireproof_Skin",
+				"description": "{Fireproof Skin}\nFire Magic damage taken -20%"
+			},
+			"lightWeak": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.01lightSchool",
+				"val": -20,
+				"icon": "h6/abilities/ab_Vulnerability_to_Light",
+				"description": "{Light Weakness}\nLight Magic damage taken +20%"
+			},
+			"voracious": {
+				"type": "THREE_HEADED_ATTACK",
+				"icon": "h6/abilities/ab_Voracious",
+				"description": "{Voracious}\nMelee also hits the row of foes in front"
+			}
+		},
+		"graphics": {
+			"animation": "h6/inferno/Cerberus_upg/Cerberus_upg.json",
+			"map": "h6/units/h6InfernoCerberus/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h6/units/h6InfernoCerberus/map/atkL.png",
+			"mapAttackFromRight": "h6/units/h6InfernoCerberus/map/atkR.png",
+			"iconLarge": "h6/units/h6InfernoCerberus/iconLarge.png",
+			"iconSmall": "h6/units/h6InfernoCerberus/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h6/inferno/Cerberus_AttackLaunchMelee.wav",
+			"wince": "h6/inferno/Cerberus_Hit.wav",
+			"defend": "h6/inferno/Cerberus_Defend.wav",
+			"killed": "h6/inferno/Cerberus_Die.wav",
+			"move": "h6/inferno/Cerberus_Move1.wav"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.attack"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					3,
+					3,
+					3,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.defence"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					3,
+					4,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					0,
+					1,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					3,
+					3,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "SPELL_DAMAGE_REDUCTION",
+					"subtype": "spellSchool.fire",
+					"stacking": "h6InfernoCerberusExpFire"
+				},
+				"values": [
+					20,
+					22,
+					24,
+					27,
+					29,
+					31,
+					33,
+					36,
+					38,
+					40
+				]
+			},
+			{
+				"bonus": {
+					"type": "DOUBLE_DAMAGE_CHANCE"
+				},
+				"values": [
+					0,
+					2,
+					3,
+					5,
+					6,
+					8,
+					9,
+					11,
+					12,
+					15
+				]
+			}
+		]
+	},
+	"h6InfernoSuccubus": {
+		"name": {
+			"singular": "Temptress",
+			"plural": "Temptresses"
+		},
+		"description": "Some of Asha's children (humans, elves, dwarves and others) pledge themselves to Urgash and the Demon Lords of Sheogh; after death the men are reborn as incubi and the women as Temptresses. Reborn as demon cultists, they hold a fairly high and unusual place in the demonic hierarchy. Yet although their wisdom, loyalty and power should be enough to earn them rank, many demon cultists end up as lowly incubi and Temptresses (as servants, sex slaves and the like). Because of their origins they usually serve as spies, infiltrators and diplomats, so they excel at illusion, enthrallment and shapeshifting. As beautiful and charming as angels, their sensual, physical allure lets them sway beings of weaker will. In the rise of any demon cult, incubi and Temptresses are bound to appear.",
+		"faction": "inferno",
+		"level": 3,
+		"cost": {
+			"gold": 230
+		},
+		"speed": 5,
+		"hitPoints": 27,
+		"attack": 8,
+		"defense": 11,
+		"damage": {
+			"min": 3,
+			"max": 5
+		},
+		"doubleWide": false,
+		"fightValue": 395,
+		"aiValue": 423,
+		"growth": 6,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"upgrades": [
+			"h6InfernoLilim"
+		],
+		"shots": 24,
+		"abilities": {
+			"toaDemonic": {
+				"type": "tears-of-ashan:DEMONIC",
+				"val": 1,
+				"hidden": true
+			},
+			"h6Gating": {
+				"type": "H6_GATING_H6C",
+				"val": 1
+			},
+			"shooter": {
+				"type": "SHOOTER"
+			},
+			"flying": {
+				"type": "FLYING"
+			},
+			"reflectCut": {
+				"type": "GENERAL_DAMAGE_REDUCTION",
+				"subtype": "damageTypeMelee",
+				"val": 10,
+				"hidden": true
+			},
+			"reflect": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6Reflect",
+				"val": 10,
+				"icon": "h6/abilities/ab_Pleasure_in_Pain",
+				"stacking": "h6Reflect10",
+				"description": "{Pleasure in Pain}\nMelee damage taken -10%, blocked part reflects",
+				"addInfo": {
+					"pct": 10,
+					"animation": "h6/inferno/fx/reflect"
+				}
+			},
+			"fireproof": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.fire",
+				"val": 20,
+				"stacking": "h6InfernoSuccubusExpFire",
+				"icon": "h6/abilities/ab_Fireproof_Skin",
+				"description": "{Fireproof Skin}\nFire Magic damage taken -20%"
+			},
+			"lightWeak": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.01lightSchool",
+				"val": -20,
+				"icon": "h6/abilities/ab_Vulnerability_to_Light",
+				"description": "{Light Weakness}\nLight Magic damage taken +20%"
+			}
+		},
+		"graphics": {
+			"animation": "h6/inferno/Succubus/Succubus.json",
+			"map": "h6/units/h6InfernoSuccubus/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h6/units/h6InfernoSuccubus/map/atkL.png",
+			"mapAttackFromRight": "h6/units/h6InfernoSuccubus/map/atkR.png",
+			"iconLarge": "h6/units/h6InfernoSuccubus/iconLarge.png",
+			"iconSmall": "h6/units/h6InfernoSuccubus/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"frameAngles": [
+					90,
+					60,
+					45,
+					30,
+					0,
+					-30,
+					-45,
+					-60,
+					-90
+				],
+				"offset": {
+					"upperX": -2,
+					"upperY": -45,
+					"middleX": -2,
+					"middleY": -41,
+					"lowerX": -2,
+					"lowerY": -36
+				},
+				"attackClimaxFrame": 4,
+				"projectile": "h6/inferno/succBolt.json"
+			}
+		},
+		"sound": {
+			"attack": "h6/inferno/Succubus_AttackLaunchMelee.wav",
+			"shoot": "h6/inferno/Succubus_AttackLaunchRanged.wav",
+			"wince": "h6/inferno/Succubus_Hit.wav",
+			"defend": "h6/inferno/Succubus_Defend.wav",
+			"killed": "h6/inferno/Succubus_Die.wav",
+			"move": "h6/inferno/Succubus_FlyLoop1.wav",
+			"startMoving": "h6/inferno/Succubus_FlyStart.wav",
+			"endMoving": "h6/inferno/Succubus_FlyEnd.wav"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.attack"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.defence"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_WALL_PENALTY"
+				},
+				"values": [
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					5,
+					5,
+					10,
+					10,
+					15,
+					15,
+					20
+				]
+			}
+		]
+	},
+	"h6InfernoLilim": {
+		"name": {
+			"singular": "Lilim",
+			"plural": "Lilim"
+		},
+		"description": "The Lilim is a Temptress especially skilled in battle, and much sought after by every army of Sheogh. She uses the power of seduction to disarm her foes, which makes fighting her very hard. The Lilim sees battle as a passionate prelude to death. She is often seen kissing dying enemies as the light slowly fades from their eyes, leaving only infatuation behind.",
+		"faction": "inferno",
+		"level": 3,
+		"cost": {
+			"gold": 270
+		},
+		"speed": 6,
+		"hitPoints": 28,
+		"attack": 9,
+		"defense": 11,
+		"damage": {
+			"min": 4,
+			"max": 6
+		},
+		"doubleWide": false,
+		"fightValue": 537,
+		"aiValue": 632,
+		"growth": 6,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"shots": 24,
+		"abilities": {
+			"toaDemonic": {
+				"type": "tears-of-ashan:DEMONIC",
+				"val": 1,
+				"hidden": true
+			},
+			"h6Gating": {
+				"type": "H6_GATING_H6C",
+				"val": 1
+			},
+			"shooter": {
+				"type": "SHOOTER"
+			},
+			"flying": {
+				"type": "FLYING"
+			},
+			"reflectCut": {
+				"type": "GENERAL_DAMAGE_REDUCTION",
+				"subtype": "damageTypeMelee",
+				"val": 20,
+				"hidden": true
+			},
+			"reflect": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6Reflect",
+				"val": 20,
+				"icon": "h6/abilities/ab_Rapture_in_Agony",
+				"stacking": "h6Reflect20",
+				"description": "{Ecstasy of Pain}\nMelee damage taken -20%, blocked part reflects",
+				"addInfo": {
+					"pct": 20,
+					"animation": "h6/inferno/fx/reflect"
+				}
+			},
+			"fireproof": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.fire",
+				"val": 20,
+				"stacking": "h6InfernoLilimExpFire",
+				"icon": "h6/abilities/ab_Fireproof_Skin",
+				"description": "{Fireproof Skin}\nFire Magic damage taken -20%"
+			},
+			"lightWeak": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.01lightSchool",
+				"val": -20,
+				"icon": "h6/abilities/ab_Vulnerability_to_Light",
+				"description": "{Light Weakness}\nLight Magic damage taken +20%"
+			},
+			"cast_h6AbEnthrall": {
+				"type": "SPELLCASTER",
+				"subtype": "spell.h6AbEnthrall",
+				"val": 3,
+				"description": "{Enthrall}\nCooldown 3: foe disabled 2 rounds, hit breaks",
+				"icon": "h6/abilities/ab_Enthrall",
+				"limiters": [
+					[
+						"noneOf",
+						{
+							"type": "HAS_ANOTHER_BONUS_LIMITER",
+							"parameters": [
+								"H6_COOLDOWN_H6C"
+							]
+						}
+					]
+				]
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 1,
+				"hidden": true
+			},
+			"noSpellcastByDefault": {
+				"type": "NO_SPELLCAST_BY_DEFAULT",
+				"hidden": true
+			},
+			"cooldown_h6AbEnthrall": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6Cooldown",
+				"val": 0,
+				"hidden": true,
+				"description": "~",
+				"addInfo": {
+					"spell": "heroes-memorial.h6:h6AbEnthrall",
+					"turns": 3
+				}
+			}
+		},
+		"graphics": {
+			"animation": "h6/inferno/Succubus_upg/Succubus_upg.json",
+			"map": "h6/units/h6InfernoLilim/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h6/units/h6InfernoLilim/map/atkL.png",
+			"mapAttackFromRight": "h6/units/h6InfernoLilim/map/atkR.png",
+			"iconLarge": "h6/units/h6InfernoLilim/iconLarge.png",
+			"iconSmall": "h6/units/h6InfernoLilim/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"frameAngles": [
+					90,
+					60,
+					45,
+					30,
+					0,
+					-30,
+					-45,
+					-60,
+					-90
+				],
+				"offset": {
+					"upperX": -2,
+					"upperY": -45,
+					"middleX": -2,
+					"middleY": -41,
+					"lowerX": -2,
+					"lowerY": -36
+				},
+				"attackClimaxFrame": 4,
+				"projectile": "h6/inferno/succBolt.json"
+			}
+		},
+		"sound": {
+			"attack": "h6/inferno/Succubus_AttackLaunchMelee.wav",
+			"shoot": "h6/inferno/Succubus_AttackLaunchRanged.wav",
+			"wince": "h6/inferno/Succubus_Hit.wav",
+			"defend": "h6/inferno/Succubus_Defend.wav",
+			"killed": "h6/inferno/Succubus_Die.wav",
+			"move": "h6/inferno/Succubus_FlyLoop1.wav",
+			"startMoving": "h6/inferno/Succubus_FlyStart.wav",
+			"endMoving": "h6/inferno/Succubus_FlyEnd.wav"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.attack"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.defence"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_WALL_PENALTY"
+				},
+				"values": [
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					5,
+					5,
+					10,
+					10,
+					15,
+					15,
+					20
+				]
+			}
+		]
+	},
+	"h6InfernoBreeder": {
+		"name": {
+			"singular": "Breeder",
+			"plural": "Breeders"
+		},
+		"description": "Breeders are what Urgash got when he tried to create bodies infused with part of his own primal desires: among them the desire to devour magic, and the desire to drown Ashan in a tide of creatures loyal to the Lord of Chaos. Ruled over by Ur-Akkil, Demon Lord of Proliferation, the Breeder is a bloated creature whose huge, pulsing body never stops giving birth to Devil Spawn. The Spawn she bears spurt out of the many holes that open and close all over her body. Though this demon can barely move, she twitches and writhes constantly, driven by her endless urge to breed. This urge to give birth consumes her and tries to burst out of her body, and most of her energy must go into holding back her own mutations. Sometimes she eats the Spawn she has borne; the magic she devours is used to make herself fertile, to feed herself and to hold back the hideous deformities caused by her endless breeding.",
+		"faction": "inferno",
+		"level": 4,
+		"cost": {
+			"gold": 285
+		},
+		"speed": 6,
+		"hitPoints": 28,
+		"attack": 10,
+		"defense": 9,
+		"damage": {
+			"min": 6,
+			"max": 8
+		},
+		"doubleWide": true,
+		"fightValue": 502,
+		"aiValue": 560,
+		"growth": 5,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"upgrades": [
+			"h6InfernoMotherBreeder"
+		],
+		"shots": 24,
+		"abilities": {
+			"toaDemonic": {
+				"type": "tears-of-ashan:DEMONIC",
+				"val": 1,
+				"hidden": true
+			},
+			"h6Gating": {
+				"type": "H6_GATING_H6C",
+				"val": 1
+			},
+			"shooter": {
+				"type": "SHOOTER"
+			},
+			"manaLeech": {
+				"type": "MANA_DRAIN",
+				"val": 3,
+				"stacking": "h6InfernoBreederExpMana",
+				"icon": "h6/abilities/ab_Mana_Leech",
+				"description": "{Mana Leech}\nDrains 3 Spell Points/round from enemy hero"
+			},
+			"fireproof": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.fire",
+				"val": 20,
+				"stacking": "h6InfernoBreederExpFire",
+				"icon": "h6/abilities/ab_Fireproof_Skin",
+				"description": "{Fireproof Skin}\nFire Magic damage taken -20%"
+			},
+			"lightWeak": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.01lightSchool",
+				"val": -20,
+				"icon": "h6/abilities/ab_Vulnerability_to_Light",
+				"description": "{Light Weakness}\nLight Magic damage taken +20%"
+			}
+		},
+		"graphics": {
+			"animation": "h6/inferno/Breeder/Breeder.json",
+			"map": "h6/units/h6InfernoBreeder/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h6/units/h6InfernoBreeder/map/atkL.png",
+			"mapAttackFromRight": "h6/units/h6InfernoBreeder/map/atkR.png",
+			"iconLarge": "h6/units/h6InfernoBreeder/iconLarge.png",
+			"iconSmall": "h6/units/h6InfernoBreeder/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"frameAngles": [
+					90,
+					60,
+					45,
+					30,
+					0,
+					-30,
+					-45,
+					-60,
+					-90
+				],
+				"offset": {
+					"upperX": 65,
+					"upperY": -69,
+					"middleX": 72,
+					"middleY": -63,
+					"lowerX": 38,
+					"lowerY": -25
+				},
+				"attackClimaxFrame": 4,
+				"projectile": "h6/inferno/imp_s82.json"
+			}
+		},
+		"sound": {
+			"attack": "h6/inferno/Breeder_AttackLaunchMelee.wav",
+			"shoot": "h6/inferno/Breeder_AttackLaunchRanged.wav",
+			"wince": "h6/inferno/Breeder_Hit.wav",
+			"defend": "h6/inferno/Breeder_Defend.wav",
+			"killed": "h6/inferno/Breeder_Die.wav",
+			"move": "h6/inferno/Breeder_Move_Earth1.wav"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.attack"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					5,
+					6,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.defence"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "MANA_DRAIN",
+					"stacking": "h6InfernoBreederExpMana"
+				},
+				"values": [
+					3,
+					3,
+					3,
+					4,
+					4,
+					4,
+					5,
+					5,
+					5,
+					6
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_WALL_PENALTY"
+				},
+				"values": [
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h6InfernoMotherBreeder": {
+		"name": {
+			"singular": "Breeder Mother",
+			"plural": "Breeder Mothers"
+		},
+		"description": "Breeder Mothers are Breeders who have learned to control their urge to multiply, and they copy themselves very well. No one has ever found a Breeder father, and for good reason: Breeder Mothers increase their numbers only through the primal power of Urgash's endless chaos, along with the Imps that keep spurting from their bodies.",
+		"faction": "inferno",
+		"level": 4,
+		"cost": {
+			"gold": 360
+		},
+		"speed": 8,
+		"hitPoints": 32,
+		"attack": 10,
+		"defense": 10,
+		"damage": {
+			"min": 6,
+			"max": 8
+		},
+		"doubleWide": true,
+		"fightValue": 624,
+		"aiValue": 731,
+		"growth": 5,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"shots": 24,
+		"abilities": {
+			"toaDemonic": {
+				"type": "tears-of-ashan:DEMONIC",
+				"val": 1,
+				"hidden": true
+			},
+			"h6Gating": {
+				"type": "H6_GATING_H6C",
+				"val": 1
+			},
+			"shooter": {
+				"type": "SHOOTER"
+			},
+			"manaLeech": {
+				"type": "MANA_DRAIN",
+				"val": 4,
+				"stacking": "h6InfernoMotherBreederExpMana",
+				"icon": "h6/abilities/ab_Mana_Leech",
+				"description": "{Mana Leech}\nDrains 4 Spell Points/round from enemy hero"
+			},
+			"fireproof": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.fire",
+				"val": 20,
+				"stacking": "h6InfernoMotherBreederExpFire",
+				"icon": "h6/abilities/ab_Fireproof_Skin",
+				"description": "{Fireproof Skin}\nFire Magic damage taken -20%"
+			},
+			"lightWeak": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.01lightSchool",
+				"val": -20,
+				"icon": "h6/abilities/ab_Vulnerability_to_Light",
+				"description": "{Light Weakness}\nLight Magic damage taken +20%"
+			},
+			"mobileShooter": {
+				"type": "FREE_SHOOTING",
+				"icon": "h6/abilities/ab_Mobile_Shooter",
+				"description": "{Mobile Shooter}\nCan shoot even when adjacent to foes"
+			},
+			"proliferation": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6Proliferate",
+				"val": 20,
+				"icon": "h6/abilities/ab_Proliferation",
+				"stacking": "h6Proliferate",
+				"description": "{Proliferation}\n+20% count at battle start, extras lost after",
+				"addInfo": {
+					"pct": 20,
+					"animation": "h6/inferno/fx/imps",
+					"sound": "h6/inferno/Breeder_Ability.wav"
+				}
+			}
+		},
+		"graphics": {
+			"animation": "h6/inferno/Breeder_upg/Breeder_upg.json",
+			"map": "h6/units/h6InfernoMotherBreeder/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h6/units/h6InfernoMotherBreeder/map/atkL.png",
+			"mapAttackFromRight": "h6/units/h6InfernoMotherBreeder/map/atkR.png",
+			"iconLarge": "h6/units/h6InfernoMotherBreeder/iconLarge.png",
+			"iconSmall": "h6/units/h6InfernoMotherBreeder/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"frameAngles": [
+					90,
+					60,
+					45,
+					30,
+					0,
+					-30,
+					-45,
+					-60,
+					-90
+				],
+				"offset": {
+					"upperX": 63,
+					"upperY": -64,
+					"middleX": 69,
+					"middleY": -59,
+					"lowerX": 38,
+					"lowerY": -28
+				},
+				"attackClimaxFrame": 4,
+				"projectile": "h6/inferno/imp_s82.json"
+			}
+		},
+		"sound": {
+			"attack": "h6/inferno/Breeder_AttackLaunchMelee.wav",
+			"shoot": "h6/inferno/Breeder_AttackLaunchRanged.wav",
+			"wince": "h6/inferno/Breeder_Hit.wav",
+			"defend": "h6/inferno/Breeder_Defend.wav",
+			"killed": "h6/inferno/Breeder_Die.wav",
+			"move": "h6/inferno/Breeder_Move_Earth1.wav"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.attack"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					5,
+					6,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.defence"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "MANA_DRAIN",
+					"stacking": "h6InfernoMotherBreederExpMana"
+				},
+				"values": [
+					4,
+					4,
+					4,
+					5,
+					5,
+					5,
+					6,
+					6,
+					6,
+					7
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_WALL_PENALTY"
+				},
+				"values": [
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h6InfernoTormentor": {
+		"name": {
+			"singular": "Tormentor",
+			"plural": "Tormentors"
+		},
+		"description": "Tormentors are servants of Ur-Tralgar, Demon Lord of Pain. Eaten away by Urgash's endless agony, they inflict unimaginably horrific acts on their own bodies and draw strength from their own pain to attack their foes. Their main weapons are their bones, parts of which they can tear off to fight with: a rib can pierce their own chest while impaling an enemy, bones can stretch out, and finger bones can push beyond the fingers to become razor-sharp claws.",
+		"faction": "inferno",
+		"level": 5,
+		"cost": {
+			"gold": 555
+		},
+		"speed": 6,
+		"hitPoints": 42,
+		"attack": 13,
+		"defense": 10,
+		"damage": {
+			"min": 12,
+			"max": 17
+		},
+		"doubleWide": false,
+		"fightValue": 1003,
+		"aiValue": 1080,
+		"growth": 3,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"upgrades": [
+			"h6InfernoLacerator"
+		],
+		"abilities": {
+			"toaDemonic": {
+				"type": "tears-of-ashan:DEMONIC",
+				"val": 1,
+				"hidden": true
+			},
+			"h6Gating": {
+				"type": "H6_GATING_H6C",
+				"val": 1
+			},
+			"deadFlesh": {
+				"type": "GENERAL_DAMAGE_REDUCTION",
+				"subtype": "damageTypeAll",
+				"val": 20,
+				"stacking": "h6InfernoTormentorExpFlesh",
+				"icon": "h6/abilities/ab_Dead_Flesh",
+				"description": "{Dead Flesh}\nAttack damage taken -20%"
+			},
+			"tasteOfPain": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6TasteOfPain",
+				"val": 15,
+				"icon": "h6/abilities/ab_Taste_of_Pain",
+				"stacking": "h6Taste",
+				"description": "{Taste of Pain}\nAfter attacking or hit: next attack +15%, x4",
+				"addInfo": {
+					"pct": 15,
+					"max": 4
+				}
+			},
+			"fireproof": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.fire",
+				"val": 20,
+				"stacking": "h6InfernoTormentorExpFire",
+				"icon": "h6/abilities/ab_Fireproof_Skin",
+				"description": "{Fireproof Skin}\nFire Magic damage taken -20%"
+			},
+			"lightWeak": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.01lightSchool",
+				"val": -20,
+				"icon": "h6/abilities/ab_Vulnerability_to_Light",
+				"description": "{Light Weakness}\nLight Magic damage taken +20%"
+			},
+			"cast_h6AbRetractableSpikes": {
+				"type": "SPELLCASTER",
+				"subtype": "spell.h6AbRetractableSpikes",
+				"val": 3,
+				"description": "{Retractable Spikes}\nCooldown 2: hits all adjacent, unretaliated",
+				"icon": "h6/abilities/ab_Retractable_Spikes",
+				"limiters": [
+					[
+						"noneOf",
+						{
+							"type": "HAS_ANOTHER_BONUS_LIMITER",
+							"parameters": [
+								"H6_COOLDOWN_H6C"
+							]
+						}
+					]
+				]
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 1,
+				"hidden": true
+			},
+			"noSpellcastByDefault": {
+				"type": "NO_SPELLCAST_BY_DEFAULT",
+				"hidden": true
+			},
+			"cooldown_h6AbRetractableSpikes": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6Cooldown",
+				"val": 0,
+				"hidden": true,
+				"description": "~",
+				"addInfo": {
+					"spell": "heroes-memorial.h6:h6AbRetractableSpikes",
+					"turns": 2
+				}
+			}
+		},
+		"graphics": {
+			"animation": "h6/inferno/Tormented/Tormented.json",
+			"map": "h6/units/h6InfernoTormentor/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h6/units/h6InfernoTormentor/map/atkL.png",
+			"mapAttackFromRight": "h6/units/h6InfernoTormentor/map/atkR.png",
+			"iconLarge": "h6/units/h6InfernoTormentor/iconLarge.png",
+			"iconSmall": "h6/units/h6InfernoTormentor/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h6/inferno/Tormented_AttackLaunchMelee.wav",
+			"wince": "h6/inferno/Tormented_Hit.wav",
+			"defend": "h6/inferno/Tormented_Defend.wav",
+			"killed": "h6/inferno/Tormented_Die.wav",
+			"move": "h6/inferno/Maniac_Move.wav"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.attack"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					3,
+					4,
+					5,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					3,
+					4,
+					4,
+					6,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					2,
+					3,
+					3,
+					4,
+					5,
+					6,
+					6,
+					7
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					7
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "GENERAL_DAMAGE_REDUCTION",
+					"subtype": "damageTypeAll",
+					"stacking": "h6InfernoTormentorExpFlesh"
+				},
+				"values": [
+					20,
+					21,
+					22,
+					23,
+					24,
+					25,
+					26,
+					27,
+					28,
+					30
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					5,
+					5,
+					10,
+					10,
+					15,
+					15,
+					20
+				]
+			}
+		]
+	},
+	"h6InfernoLacerator": {
+		"name": {
+			"singular": "Lacerator",
+			"plural": "Lacerators"
+		},
+		"description": "Lacerators are a kind of Tormentor that can not only burst out bone spikes but also spray acid and bile to hurt others. This is agony for the Lacerator, but even more painful for whoever gets splashed.",
+		"faction": "inferno",
+		"level": 5,
+		"cost": {
+			"gold": 630
+		},
+		"speed": 7,
+		"hitPoints": 47,
+		"attack": 13,
+		"defense": 13,
+		"damage": {
+			"min": 13,
+			"max": 17
+		},
+		"doubleWide": false,
+		"fightValue": 1217,
+		"aiValue": 1486,
+		"growth": 3,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"toaDemonic": {
+				"type": "tears-of-ashan:DEMONIC",
+				"val": 1,
+				"hidden": true
+			},
+			"h6Gating": {
+				"type": "H6_GATING_H6C",
+				"val": 1
+			},
+			"deadFlesh": {
+				"type": "GENERAL_DAMAGE_REDUCTION",
+				"subtype": "damageTypeAll",
+				"val": 20,
+				"stacking": "h6InfernoLaceratorExpFlesh",
+				"icon": "h6/abilities/ab_Dead_Flesh",
+				"description": "{Dead Flesh}\nAttack damage taken -20%"
+			},
+			"tasteOfPain": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6TasteOfPain",
+				"val": 15,
+				"icon": "h6/abilities/ab_Taste_of_Pain",
+				"stacking": "h6Taste",
+				"description": "{Taste of Pain}\nAfter attacking or hit: next attack +15%, x4",
+				"addInfo": {
+					"pct": 15,
+					"max": 4
+				}
+			},
+			"fireproof": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.fire",
+				"val": 20,
+				"stacking": "h6InfernoLaceratorExpFire",
+				"icon": "h6/abilities/ab_Fireproof_Skin",
+				"description": "{Fireproof Skin}\nFire Magic damage taken -20%"
+			},
+			"lightWeak": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.01lightSchool",
+				"val": -20,
+				"icon": "h6/abilities/ab_Vulnerability_to_Light",
+				"description": "{Light Weakness}\nLight Magic damage taken +20%"
+			},
+			"cast_h6AbExplodingSpikes": {
+				"type": "SPELLCASTER",
+				"subtype": "spell.h6AbExplodingSpikes",
+				"val": 3,
+				"description": "{Exploding Spikes}\nCooldown 2: 125% to all adjacent, unretaliated",
+				"icon": "h6/abilities/ab_Exploding_Spikes",
+				"limiters": [
+					[
+						"noneOf",
+						{
+							"type": "HAS_ANOTHER_BONUS_LIMITER",
+							"parameters": [
+								"H6_COOLDOWN_H6C"
+							]
+						}
+					]
+				]
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 1,
+				"hidden": true
+			},
+			"noSpellcastByDefault": {
+				"type": "NO_SPELLCAST_BY_DEFAULT",
+				"hidden": true
+			},
+			"cooldown_h6AbExplodingSpikes": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6Cooldown",
+				"val": 0,
+				"hidden": true,
+				"description": "~",
+				"addInfo": {
+					"spell": "heroes-memorial.h6:h6AbExplodingSpikes",
+					"turns": 2
+				}
+			}
+		},
+		"graphics": {
+			"animation": "h6/inferno/Tormented_upg/Tormented_upg.json",
+			"map": "h6/units/h6InfernoLacerator/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h6/units/h6InfernoLacerator/map/atkL.png",
+			"mapAttackFromRight": "h6/units/h6InfernoLacerator/map/atkR.png",
+			"iconLarge": "h6/units/h6InfernoLacerator/iconLarge.png",
+			"iconSmall": "h6/units/h6InfernoLacerator/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h6/inferno/Tormented_AttackLaunchMelee.wav",
+			"wince": "h6/inferno/Tormented_Hit.wav",
+			"defend": "h6/inferno/Tormented_Defend.wav",
+			"killed": "h6/inferno/Tormented_Die.wav",
+			"move": "h6/inferno/Maniac_Move.wav"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.attack"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					3,
+					4,
+					5,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					3,
+					4,
+					4,
+					6,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					2,
+					3,
+					3,
+					4,
+					5,
+					6,
+					6,
+					7
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					7
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "GENERAL_DAMAGE_REDUCTION",
+					"subtype": "damageTypeAll",
+					"stacking": "h6InfernoLaceratorExpFlesh"
+				},
+				"values": [
+					21,
+					22,
+					23,
+					24,
+					25,
+					26,
+					27,
+					28,
+					30,
+					32
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					5,
+					5,
+					10,
+					10,
+					15,
+					15,
+					20
+				]
+			}
+		]
+	},
+	"h6InfernoJuggernaut": {
+		"name": {
+			"singular": "Rampager",
+			"plural": "Rampagers"
+		},
+		"description": "Rampagers are servants of the Demon Lord of Destruction. They are easy to recognize by their huge horns and their fists and feet covered in basalt. They charge madly (sometimes even blindly) into the enemy ranks, goring foes on their horns, crushing them with their huge arms or trampling them to pulp. When needed, they can also serve as battering rams.",
+		"faction": "inferno",
+		"level": 6,
+		"cost": {
+			"gold": 1095
+		},
+		"speed": 8,
+		"hitPoints": 94,
+		"attack": 16,
+		"defense": 14,
+		"damage": {
+			"min": 20,
+			"max": 24
+		},
+		"doubleWide": true,
+		"fightValue": 2208,
+		"aiValue": 2580,
+		"growth": 2,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"upgrades": [
+			"h6InfernoRavager"
+		],
+		"abilities": {
+			"toaDemonic": {
+				"type": "tears-of-ashan:DEMONIC",
+				"val": 1,
+				"hidden": true
+			},
+			"h6Gating": {
+				"type": "H6_GATING_H6C",
+				"val": 1
+			},
+			"organicArmor": {
+				"type": "STACKS_SPEED",
+				"val": 0,
+				"icon": "h6/abilities/ab_Organic_Armor",
+				"stacking": "h6OrganicArmor",
+				"description": "{Organic Armor}\nImmune to Defense reduction"
+			},
+			"immune_disruptingRay": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "spell.disruptingRay",
+				"hidden": true
+			},
+			"immune_acidBreath": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "spell.acidBreath",
+				"hidden": true
+			},
+			"immune_h6Vermin": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "spell.h6Vermin",
+				"hidden": true
+			},
+			"fireproof": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.fire",
+				"val": 20,
+				"stacking": "h6InfernoJuggernautExpFire",
+				"icon": "h6/abilities/ab_Fireproof_Skin",
+				"description": "{Fireproof Skin}\nFire Magic damage taken -20%"
+			},
+			"lightWeak": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.01lightSchool",
+				"val": -20,
+				"icon": "h6/abilities/ab_Vulnerability_to_Light",
+				"description": "{Light Weakness}\nLight Magic damage taken +20%"
+			},
+			"cast_h6AbUnstoppableCharge": {
+				"type": "SPELLCASTER",
+				"subtype": "spell.h6AbUnstoppableCharge",
+				"val": 3,
+				"description": "{Unstoppable Charge}\nCooldown 3: line charge, hits each foe passed",
+				"icon": "h6/abilities/ab_Unstoppable_Charge",
+				"limiters": [
+					[
+						"noneOf",
+						{
+							"type": "HAS_ANOTHER_BONUS_LIMITER",
+							"parameters": [
+								"H6_COOLDOWN_H6C"
+							]
+						}
+					]
+				]
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 1,
+				"hidden": true
+			},
+			"noSpellcastByDefault": {
+				"type": "NO_SPELLCAST_BY_DEFAULT",
+				"hidden": true
+			},
+			"cooldown_h6AbUnstoppableCharge": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6Cooldown",
+				"val": 0,
+				"hidden": true,
+				"description": "~",
+				"addInfo": {
+					"spell": "heroes-memorial.h6:h6AbUnstoppableCharge",
+					"turns": 3
+				}
+			}
+		},
+		"graphics": {
+			"animation": "h6/inferno/Juggernaut/Juggernaut.json",
+			"map": "h6/units/h6InfernoJuggernaut/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h6/units/h6InfernoJuggernaut/map/atkL.png",
+			"mapAttackFromRight": "h6/units/h6InfernoJuggernaut/map/atkR.png",
+			"iconLarge": "h6/units/h6InfernoJuggernaut/iconLarge.png",
+			"iconSmall": "h6/units/h6InfernoJuggernaut/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h6/inferno/Juggernaut_AttackLaunchMelee.wav",
+			"wince": "h6/inferno/Juggernaut_Hit.wav",
+			"defend": "h6/inferno/Juggernaut_Defend.wav",
+			"killed": "h6/inferno/Juggernaut_Die.wav",
+			"move": "h6/inferno/Breeder_Move_Earth1.wav"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.defence"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					2,
+					3,
+					4,
+					5,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_RETALIATION"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					5,
+					5,
+					10,
+					10,
+					15,
+					15,
+					20
+				]
+			}
+		]
+	},
+	"h6InfernoRavager": {
+		"name": {
+			"singular": "Ravager",
+			"plural": "Ravagers"
+		},
+		"description": "No one would ever mistake a Ravager for a Rampager. When it appears on the battlefield it at once becomes the focus of every enemy. The crushing omen of destruction it brings has more than once driven an enemy commander to throw everything he had at the Ravager. It is hard to call such a decision rash in the heat of battle, for this creature is one of the mightiest and most destructive forces of the sulfur fields of Sheogh.",
+		"faction": "inferno",
+		"level": 6,
+		"cost": {
+			"gold": 1445
+		},
+		"speed": 11,
+		"hitPoints": 98,
+		"attack": 17,
+		"defense": 14,
+		"damage": {
+			"min": 22,
+			"max": 26
+		},
+		"doubleWide": true,
+		"fightValue": 2567,
+		"aiValue": 3068,
+		"growth": 2,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"toaDemonic": {
+				"type": "tears-of-ashan:DEMONIC",
+				"val": 1,
+				"hidden": true
+			},
+			"h6Gating": {
+				"type": "H6_GATING_H6C",
+				"val": 1
+			},
+			"organicArmor": {
+				"type": "STACKS_SPEED",
+				"val": 0,
+				"icon": "h6/abilities/ab_Organic_Armor",
+				"stacking": "h6OrganicArmor",
+				"description": "{Organic Armor}\nImmune to Defense reduction"
+			},
+			"immune_disruptingRay": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "spell.disruptingRay",
+				"hidden": true
+			},
+			"immune_acidBreath": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "spell.acidBreath",
+				"hidden": true
+			},
+			"immune_h6Vermin": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "spell.h6Vermin",
+				"hidden": true
+			},
+			"fireproof": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.fire",
+				"val": 20,
+				"stacking": "h6InfernoRavagerExpFire",
+				"icon": "h6/abilities/ab_Fireproof_Skin",
+				"description": "{Fireproof Skin}\nFire Magic damage taken -20%"
+			},
+			"lightWeak": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.01lightSchool",
+				"val": -20,
+				"icon": "h6/abilities/ab_Vulnerability_to_Light",
+				"description": "{Light Weakness}\nLight Magic damage taken +20%"
+			},
+			"taunt": {
+				"type": "H6_TAUNT_H6C",
+				"val": 50,
+				"icon": "h6/abilities/ab_Taunting_Presence",
+				"stacking": "h6Taunt",
+				"description": "{Taunt}\nFoes within 2 hexes: -50% dmg vs other targets"
+			},
+			"tauntZone": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6Taunt",
+				"val": 0,
+				"hidden": true,
+				"description": "~",
+				"propagator": "BATTLE_WIDE",
+				"stacking": "h6TauntZone",
+				"addInfo": {
+					"val": 50
+				}
+			},
+			"cast_h6AbUnstoppableCharge": {
+				"type": "SPELLCASTER",
+				"subtype": "spell.h6AbUnstoppableCharge",
+				"val": 3,
+				"description": "{Unstoppable Charge}\nCooldown 3: line charge, hits each foe passed",
+				"icon": "h6/abilities/ab_Unstoppable_Charge",
+				"limiters": [
+					[
+						"noneOf",
+						{
+							"type": "HAS_ANOTHER_BONUS_LIMITER",
+							"parameters": [
+								"H6_COOLDOWN_H6C"
+							]
+						}
+					]
+				]
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 1,
+				"hidden": true
+			},
+			"noSpellcastByDefault": {
+				"type": "NO_SPELLCAST_BY_DEFAULT",
+				"hidden": true
+			},
+			"cooldown_h6AbUnstoppableCharge": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6Cooldown",
+				"val": 0,
+				"hidden": true,
+				"description": "~",
+				"addInfo": {
+					"spell": "heroes-memorial.h6:h6AbUnstoppableCharge",
+					"turns": 3
+				}
+			}
+		},
+		"graphics": {
+			"animation": "h6/inferno/Juggernaut_upg/Juggernaut_upg.json",
+			"map": "h6/units/h6InfernoRavager/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h6/units/h6InfernoRavager/map/atkL.png",
+			"mapAttackFromRight": "h6/units/h6InfernoRavager/map/atkR.png",
+			"iconLarge": "h6/units/h6InfernoRavager/iconLarge.png",
+			"iconSmall": "h6/units/h6InfernoRavager/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h6/inferno/Juggernaut_AttackLaunchMelee.wav",
+			"wince": "h6/inferno/Juggernaut_Hit.wav",
+			"defend": "h6/inferno/Juggernaut_Defend.wav",
+			"killed": "h6/inferno/Juggernaut_Die.wav",
+			"move": "h6/inferno/Breeder_Move_Earth1.wav"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.defence"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					2,
+					3,
+					4,
+					5,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_RETALIATION"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					5,
+					5,
+					10,
+					10,
+					15,
+					15,
+					20
+				]
+			}
+		]
+	},
+	"h6InfernoPitFiend": {
+		"name": {
+			"singular": "Abyssal Fiend",
+			"plural": "Abyssal Fiends"
+		},
+		"description": "Punished and imprisoned, Urgash, the Dragon God of Chaos, is consumed by hatred for Asha and her children. Ur-Hekal, Demon Lord of Hatred, is the embodiment of that extreme hatred, and the astonishingly powerful Abyssal Fiends are his servants. Abyssal Fiends are the most dangerous creatures of the infernal legions; only the greater demons are more brutal by nature.",
+		"faction": "inferno",
+		"level": 7,
+		"cost": {
+			"gold": 2165,
+			"sulfur": 1
+		},
+		"speed": 9,
+		"hitPoints": 161,
+		"attack": 18,
+		"defense": 18,
+		"damage": {
+			"min": 40,
+			"max": 44
+		},
+		"doubleWide": true,
+		"fightValue": 4563,
+		"aiValue": 5633,
+		"growth": 1,
+		"advMapAmount": {
+			"min": 1,
+			"max": 3
+		},
+		"upgrades": [
+			"h6InfernoPitLord"
+		],
+		"abilities": {
+			"toaDemonic": {
+				"type": "tears-of-ashan:DEMONIC",
+				"val": 1,
+				"hidden": true
+			},
+			"h6Gating": {
+				"type": "H6_GATING_H6C",
+				"val": 1
+			},
+			"teleport": {
+				"type": "FLYING",
+				"subtype": "movementTeleporting"
+			},
+			"hatefulRetaliation": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6HatefulRetaliation",
+				"val": 0,
+				"icon": "h6/abilities/ab_Hateful_Retaliation",
+				"stacking": "h6HatefulRetaliation",
+				"description": "{Hateful Retaliation}\nRetaliation also burns other foes that hit it",
+				"addInfo": {
+					"animation": "h6/inferno/fx/fire"
+				}
+			},
+			"bladeOfHatred": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6AttackStatus",
+				"val": 0,
+				"icon": "h6/abilities/ab_Blade_of_Hatred",
+				"stacking": "h6BladeOfHatred",
+				"description": "{Blade of Hatred}\nHit: target frenzies on neighbors till it acts",
+				"addInfo": {
+					"spell": "heroes-memorial.h6:h6Hatred",
+					"turns": 2,
+					"adjacent": false,
+					"animation": "h6/inferno/fx/hatred",
+					"sound": "h6/inferno/PitFiendBladeOfHate_Impact.wav"
+				}
+			},
+			"blindedByRage": {
+				"type": "MIND_IMMUNITY",
+				"icon": "h6/abilities/ab_Blinded_by_Rage",
+				"description": "{Blinded by Rage}\nImmune to mind spells and slowing effects"
+			},
+			"immune_slow": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "spell.slow",
+				"hidden": true
+			},
+			"immune_h6Webbed": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "spell.h6Webbed",
+				"hidden": true
+			},
+			"fireproof": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.fire",
+				"val": 20,
+				"stacking": "h6InfernoPitFiendExpFire",
+				"icon": "h6/abilities/ab_Fireproof_Skin",
+				"description": "{Fireproof Skin}\nFire Magic damage taken -20%"
+			},
+			"lightWeak": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.01lightSchool",
+				"val": -20,
+				"icon": "h6/abilities/ab_Vulnerability_to_Light",
+				"description": "{Light Weakness}\nLight Magic damage taken +20%"
+			}
+		},
+		"graphics": {
+			"animation": "h6/inferno/PitFiend/PitFiend.json",
+			"map": "h6/units/h6InfernoPitFiend/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h6/units/h6InfernoPitFiend/map/atkL.png",
+			"mapAttackFromRight": "h6/units/h6InfernoPitFiend/map/atkR.png",
+			"iconLarge": "h6/units/h6InfernoPitFiend/iconLarge.png",
+			"iconSmall": "h6/units/h6InfernoPitFiend/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h6/inferno/PitFiend_AttackLaunchMelee.wav",
+			"wince": "h6/inferno/PitFiend_Hit.wav",
+			"defend": "h6/inferno/PitFiend_Defend.wav",
+			"killed": "h6/inferno/PitFiend_Die.wav",
+			"move": "h6/inferno/PitFiend_MoveStart.wav",
+			"endMoving": "h6/inferno/PitFiend_MoveEnd.wav"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "SPELL_DAMAGE_REDUCTION",
+					"subtype": "spellSchool.fire",
+					"stacking": "h6InfernoPitFiendExpFire"
+				},
+				"values": [
+					20,
+					22,
+					24,
+					27,
+					29,
+					31,
+					33,
+					36,
+					38,
+					40
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					10,
+					15,
+					20,
+					25,
+					30
+				]
+			}
+		]
+	},
+	"h6InfernoPitLord": {
+		"name": {
+			"singular": "Pit Lord",
+			"plural": "Pit Lords"
+		},
+		"description": "Pit Lords are Abyssal Fiends who have risen through the complex hierarchy of the infernal ranks. They are the embodiment of pure hatred, and only the greater demons surpass their strength and brutality.",
+		"faction": "inferno",
+		"level": 7,
+		"cost": {
+			"gold": 4005,
+			"sulfur": 2
+		},
+		"speed": 14,
+		"hitPoints": 234,
+		"attack": 24,
+		"defense": 23,
+		"damage": {
+			"min": 41,
+			"max": 47
+		},
+		"doubleWide": true,
+		"fightValue": 7944,
+		"aiValue": 10583,
+		"growth": 1,
+		"advMapAmount": {
+			"min": 1,
+			"max": 3
+		},
+		"abilities": {
+			"toaDemonic": {
+				"type": "tears-of-ashan:DEMONIC",
+				"val": 1,
+				"hidden": true
+			},
+			"h6Gating": {
+				"type": "H6_GATING_H6C",
+				"val": 1
+			},
+			"teleport": {
+				"type": "FLYING",
+				"subtype": "movementTeleporting"
+			},
+			"hatefulRetaliation": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6HatefulRetaliation",
+				"val": 0,
+				"icon": "h6/abilities/ab_Hateful_Retaliation",
+				"stacking": "h6HatefulRetaliation",
+				"description": "{Hateful Retaliation}\nRetaliation also burns other foes that hit it",
+				"addInfo": {
+					"animation": "h6/inferno/fx/fire"
+				}
+			},
+			"bladeOfHatred": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6AttackStatus",
+				"val": 0,
+				"icon": "h6/abilities/ab_Blade_of_Hatred",
+				"stacking": "h6BladeOfHatred",
+				"description": "{Blade of Hatred}\nHit: target frenzies on neighbors till it acts",
+				"addInfo": {
+					"spell": "heroes-memorial.h6:h6Hatred",
+					"turns": 2,
+					"adjacent": false,
+					"animation": "h6/inferno/fx/hatred",
+					"sound": "h6/inferno/PitFiendBladeOfHate_Impact.wav"
+				}
+			},
+			"blindedByRage": {
+				"type": "MIND_IMMUNITY",
+				"icon": "h6/abilities/ab_Blinded_by_Rage",
+				"description": "{Blinded by Rage}\nImmune to mind spells and slowing effects"
+			},
+			"immune_slow": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "spell.slow",
+				"hidden": true
+			},
+			"immune_h6Webbed": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "spell.h6Webbed",
+				"hidden": true
+			},
+			"fireproof": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.fire",
+				"val": 20,
+				"stacking": "h6InfernoPitLordExpFire",
+				"icon": "h6/abilities/ab_Fireproof_Skin",
+				"description": "{Fireproof Skin}\nFire Magic damage taken -20%"
+			},
+			"lightWeak": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.01lightSchool",
+				"val": -20,
+				"icon": "h6/abilities/ab_Vulnerability_to_Light",
+				"description": "{Light Weakness}\nLight Magic damage taken +20%"
+			},
+			"cast_h6AbBoundlessHate": {
+				"type": "SPELLCASTER",
+				"subtype": "spell.h6AbBoundlessHate",
+				"val": 3,
+				"description": "{Boundless Hate}\nActive, Cooldown 3: all foes 40 Fire per unit",
+				"icon": "h6/abilities/ab_Boundless_Hate",
+				"limiters": [
+					[
+						"noneOf",
+						{
+							"type": "HAS_ANOTHER_BONUS_LIMITER",
+							"parameters": [
+								"H6_COOLDOWN_H6C"
+							]
+						}
+					]
+				]
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 1,
+				"hidden": true
+			},
+			"noSpellcastByDefault": {
+				"type": "NO_SPELLCAST_BY_DEFAULT",
+				"hidden": true
+			},
+			"cooldown_h6AbBoundlessHate": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6Cooldown",
+				"val": 0,
+				"hidden": true,
+				"description": "~",
+				"addInfo": {
+					"spell": "heroes-memorial.h6:h6AbBoundlessHate",
+					"turns": 3
+				}
+			}
+		},
+		"graphics": {
+			"animation": "h6/inferno/PitFiend_upg/PitFiend_upg.json",
+			"map": "h6/units/h6InfernoPitLord/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h6/units/h6InfernoPitLord/map/atkL.png",
+			"mapAttackFromRight": "h6/units/h6InfernoPitLord/map/atkR.png",
+			"iconLarge": "h6/units/h6InfernoPitLord/iconLarge.png",
+			"iconSmall": "h6/units/h6InfernoPitLord/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h6/inferno/PitFiend_AttackLaunchMelee.wav",
+			"wince": "h6/inferno/PitFiend_Hit.wav",
+			"defend": "h6/inferno/PitFiend_Defend.wav",
+			"killed": "h6/inferno/PitFiend_Die.wav",
+			"move": "h6/inferno/PitFiend_MoveStart.wav",
+			"endMoving": "h6/inferno/PitFiend_MoveEnd.wav"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "SPELL_DAMAGE_REDUCTION",
+					"subtype": "spellSchool.fire",
+					"stacking": "h6InfernoPitLordExpFire"
+				},
+				"values": [
+					20,
+					22,
+					24,
+					27,
+					29,
+					31,
+					33,
+					36,
+					38,
+					40
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					10,
+					15,
+					20,
+					25,
+					30
+				]
+			}
+		]
+	}
+}

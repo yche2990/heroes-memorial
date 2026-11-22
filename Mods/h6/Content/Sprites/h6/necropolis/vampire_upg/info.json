@@ -1,0 +1,41 @@
+{
+ "fac": "necropolis",
+ "k": 1.1,
+ "scale": 76.44076301407992,
+ "origin": [
+  192.9433449832516,
+  263.0
+ ],
+ "baked": {
+  "0": [],
+  "1": [],
+  "2": [],
+  "3": [],
+  "4": [],
+  "5": [
+   "vampire_die.fx"
+  ],
+  "7": [],
+  "8": [],
+  "11": [],
+  "12": [],
+  "13": [],
+  "17": [],
+  "18": [],
+  "19": [],
+  "20": [
+   "vampire_movestart.fx",
+   "vampire_movestart_entity.fx"
+  ],
+  "21": [
+   "vampire_moveend.fx",
+   "vampire_moveend_entity.fx"
+  ],
+  "30": [],
+  "32": [],
+  "40": [],
+  "42": []
+ },
+ "render": "Blender 4.2 Cycles 24spp 3x + sprite_post; fx h6m (fxsim d1=mul mode2=wrap)",
+ "sec": 13
+}

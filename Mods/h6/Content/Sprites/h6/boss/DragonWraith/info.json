@@ -1,0 +1,73 @@
+{
+ "fac": "boss",
+ "k": 1.0,
+ "scale": 46.13643462201805,
+ "origin": [
+  203.52250530113628,
+  249.2624
+ ],
+ "baked": {
+  "0": [
+   "DragonWraithEffect.fx"
+  ],
+  "1": [
+   "DragonWraithEffect.fx"
+  ],
+  "2": [
+   "DragonWraithEffect.fx"
+  ],
+  "3": [
+   "DragonWraithEffect.fx"
+  ],
+  "4": [
+   "DragonWraithEffect.fx"
+  ],
+  "5": [
+   "DragonWraithEffect.fx"
+  ],
+  "7": [
+   "DragonWraithEffect.fx"
+  ],
+  "8": [
+   "DragonWraithEffect.fx"
+  ],
+  "11": [
+   "DragonWraithEffect.fx"
+  ],
+  "12": [
+   "DragonWraithEffect.fx"
+  ],
+  "13": [
+   "DragonWraithEffect.fx"
+  ],
+  "17": [
+   "DragonWraithEffect.fx"
+  ],
+  "18": [
+   "DragonWraithEffect.fx"
+  ],
+  "19": [
+   "DragonWraithEffect.fx"
+  ],
+  "20": [
+   "DragonWraithEffect.fx"
+  ],
+  "21": [
+   "DragonWraithEffect.fx"
+  ],
+  "30": [
+   "DragonWraithEffect.fx"
+  ],
+  "32": [
+   "DragonWraithEffect.fx"
+  ],
+  "40": [
+   "DragonWraithEffect.fx"
+  ],
+  "42": [
+   "DragonWraithEffect.fx"
+  ]
+ },
+ "render": "Blender 4.2 Cycles 24spp 3x + sprite_post; fx h6m (fxsim d1=mul mode2=wrap)",
+ "sec": 53
+}

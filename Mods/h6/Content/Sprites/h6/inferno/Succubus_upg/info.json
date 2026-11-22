@@ -1,0 +1,85 @@
+{
+ "fac": "inferno",
+ "k": 1.05,
+ "scale": 80.53599120565482,
+ "origin": [
+  197.99989337718108,
+  263.0
+ ],
+ "baked": {
+  "0": [
+   "succubus_upg.fx"
+  ],
+  "1": [
+   "succubus_upg.fx"
+  ],
+  "2": [
+   "succubus_upg.fx"
+  ],
+  "3": [
+   "succubus_upg.fx"
+  ],
+  "4": [
+   "succubus_upg.fx"
+  ],
+  "5": [
+   "succubus_upg.fx"
+  ],
+  "7": [
+   "succubus_upg.fx"
+  ],
+  "8": [
+   "succubus_upg.fx"
+  ],
+  "11": [
+   "succubus_upg.fx"
+  ],
+  "12": [
+   "succubus_upg.fx"
+  ],
+  "13": [
+   "succubus_upg.fx"
+  ],
+  "14": [
+   "succubus_upg.fx",
+   "succubus_attackranged.fx"
+  ],
+  "15": [
+   "succubus_upg.fx",
+   "succubus_attackranged.fx"
+  ],
+  "16": [
+   "succubus_upg.fx",
+   "succubus_attackranged.fx"
+  ],
+  "17": [
+   "succubus_upg.fx"
+  ],
+  "18": [
+   "succubus_upg.fx"
+  ],
+  "19": [
+   "succubus_upg.fx"
+  ],
+  "20": [
+   "succubus_upg.fx"
+  ],
+  "21": [
+   "succubus_upg.fx"
+  ],
+  "30": [
+   "succubus_upg.fx"
+  ],
+  "32": [
+   "succubus_upg.fx"
+  ],
+  "40": [
+   "succubus_upg.fx"
+  ],
+  "42": [
+   "succubus_upg.fx"
+  ]
+ },
+ "render": "Blender 4.2 Cycles 24spp 3x + sprite_post; fx h6m (fxsim d1=mul mode2=wrap)",
+ "sec": 22
+}

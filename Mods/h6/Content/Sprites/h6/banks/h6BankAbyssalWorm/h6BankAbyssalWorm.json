@@ -1,0 +1,11 @@
+{
+	"basepath": "h6/banks/h6BankAbyssalWorm/",
+	"sequences": [
+		{
+			"group": 0,
+			"frames": [
+				"h6BankAbyssalWorm.png"
+			]
+		}
+	]
+}

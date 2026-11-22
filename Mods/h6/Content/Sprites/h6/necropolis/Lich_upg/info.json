@@ -1,0 +1,92 @@
+{
+ "fac": "necropolis",
+ "k": 1.2,
+ "scale": 86.30850318751737,
+ "origin": [
+  201.49071100669096,
+  267.0
+ ],
+ "baked": {
+  "0": [
+   "lich_basic.fx"
+  ],
+  "1": [
+   "lich_basic.fx"
+  ],
+  "2": [
+   "lich_basic.fx"
+  ],
+  "3": [
+   "lich_basic.fx"
+  ],
+  "4": [
+   "lich_basic.fx",
+   "lich_defend.fx"
+  ],
+  "5": [
+   "lich_basic.fx",
+   "lich_die.fx"
+  ],
+  "7": [
+   "lich_basic.fx"
+  ],
+  "8": [
+   "lich_basic.fx"
+  ],
+  "11": [
+   "lich_basic.fx",
+   "lich_attack.fx"
+  ],
+  "12": [
+   "lich_basic.fx",
+   "lich_attack.fx"
+  ],
+  "13": [
+   "lich_basic.fx",
+   "lich_attack.fx"
+  ],
+  "14": [
+   "lich_basic.fx",
+   "lich_rangedattack_staff.fx"
+  ],
+  "15": [
+   "lich_basic.fx",
+   "lich_rangedattack_staff.fx"
+  ],
+  "16": [
+   "lich_basic.fx",
+   "lich_rangedattack_staff.fx"
+  ],
+  "17": [
+   "lich_basic.fx"
+  ],
+  "18": [
+   "lich_basic.fx"
+  ],
+  "19": [
+   "lich_basic.fx"
+  ],
+  "20": [
+   "lich_basic.fx"
+  ],
+  "21": [
+   "lich_basic.fx"
+  ],
+  "30": [
+   "lich_basic.fx"
+  ],
+  "32": [
+   "lich_basic.fx"
+  ],
+  "40": [
+   "lich_basic.fx",
+   "lich_attack.fx"
+  ],
+  "42": [
+   "lich_basic.fx",
+   "lich_attack.fx"
+  ]
+ },
+ "render": "Blender 4.2 Cycles 24spp 3x + sprite_post; fx h6m (fxsim d1=mul mode2=wrap)",
+ "sec": 46
+}

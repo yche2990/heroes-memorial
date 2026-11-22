@@ -1,0 +1,86 @@
+{
+ "fac": "dungeon",
+ "k": 0.72,
+ "scale": 50.40930520466771,
+ "origin": [
+  210.1788490939726,
+  258.2395
+ ],
+ "baked": {
+  "0": [
+   "faceless_basic.fx"
+  ],
+  "1": [
+   "faceless_basic.fx"
+  ],
+  "2": [
+   "faceless_basic.fx"
+  ],
+  "3": [
+   "faceless_basic.fx"
+  ],
+  "4": [
+   "faceless_basic.fx",
+   "faceless_defend.fx"
+  ],
+  "5": [
+   "faceless_basic.fx",
+   "faceless_die.fx"
+  ],
+  "7": [
+   "faceless_basic.fx"
+  ],
+  "8": [
+   "faceless_basic.fx"
+  ],
+  "11": [
+   "faceless_basic.fx",
+   "faceless_attack.fx"
+  ],
+  "12": [
+   "faceless_basic.fx",
+   "faceless_attack.fx"
+  ],
+  "13": [
+   "faceless_basic.fx",
+   "faceless_attack.fx"
+  ],
+  "17": [
+   "faceless_basic.fx",
+   "faceless_ability.fx"
+  ],
+  "18": [
+   "faceless_basic.fx",
+   "faceless_ability.fx"
+  ],
+  "19": [
+   "faceless_basic.fx",
+   "faceless_ability.fx"
+  ],
+  "20": [
+   "faceless_basic.fx"
+  ],
+  "21": [
+   "faceless_basic.fx"
+  ],
+  "30": [
+   "faceless_basic.fx",
+   "faceless_ability.fx"
+  ],
+  "32": [
+   "faceless_basic.fx",
+   "faceless_ability.fx"
+  ],
+  "40": [
+   "faceless_basic.fx",
+   "faceless_attack.fx"
+  ],
+  "42": [
+   "faceless_basic.fx",
+   "faceless_attack.fx"
+  ]
+ },
+ "render": "Blender 4.2 Cycles 24spp 3x + sprite_post; fx h6m (fxsim d1=mul mode2=wrap)",
+ "sec": 65,
+ "note426": "battle frames shrunk x0.72 around the foot point (x=196, y=265) after render (Yu, round 426)"
+}

@@ -1,0 +1,254 @@
+// Heroes 6 memorial: script registration of Dungeon creatures
+{
+	"h6Recloak": {
+		"implements": "combatEvent",
+		"script": "combat/h6Recloak",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"spell": {
+					"type": "string"
+				},
+				"rounds": {
+					"type": "number"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": ""
+	},
+	"h6StrikeExtra": {
+		"implements": "combatEvent",
+		"script": "combat/h6StrikeExtra",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"per": {
+					"type": "number"
+				},
+				"school": {
+					"type": "string"
+				},
+				"dotPct": {
+					"type": "number"
+				},
+				"dotTurns": {
+					"type": "number"
+				},
+				"dotSrc": {
+					"type": "string"
+				},
+				"spell": {
+					"type": "string"
+				},
+				"turns": {
+					"type": "number"
+				},
+				"ranged": {
+					"type": "boolean"
+				},
+				"once": {
+					"type": "boolean"
+				},
+				"animation": {
+					"type": "string"
+				},
+				"sound": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": ""
+	},
+	"h6FightingSpirit": {
+		"implements": "combatEvent",
+		"script": "combat/h6FightingSpirit",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"max": {
+					"type": "number"
+				},
+				"animation": {
+					"type": "string"
+				},
+				"sound": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": ""
+	},
+	"h6WitherTick": {
+		"implements": "combatEvent",
+		"script": "combat/h6WitherTick",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"role": {
+					"type": "string",
+					"enum": [
+						"carrier",
+						"zone"
+					]
+				},
+				"max": {
+					"type": "number"
+				},
+				"animation": {
+					"type": "string"
+				},
+				"sound": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": ""
+	},
+	"h6Terror": {
+		"implements": "combatEvent",
+		"script": "combat/h6Terror",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"role": {
+					"type": "string",
+					"enum": [
+						"carrier",
+						"zone"
+					]
+				},
+				"chance": {
+					"type": "number"
+				},
+				"morale": {
+					"type": "number"
+				},
+				"animation": {
+					"type": "string"
+				},
+				"sound": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": ""
+	},
+	"h6DarkPurge": {
+		"implements": "combatEvent",
+		"script": "combat/h6DarkPurge",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"animation": {
+					"type": "string"
+				},
+				"sound": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": ""
+	},
+	"h6DeathSpin": {
+		"implements": "spellEffect",
+		"script": "spells/h6DeathSpin",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"pct": {
+					"type": "number"
+				},
+				"key": {
+					"type": "string"
+				},
+				"animation": {
+					"type": "string"
+				},
+				"sound": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"h6UniqueMark": {
+		"implements": "spellEffect",
+		"script": "spells/h6UniqueMark",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"pct": {
+					"type": "number"
+				},
+				"key": {
+					"type": "string"
+				},
+				"animation": {
+					"type": "string"
+				},
+				"sound": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"h6Wither": {
+		"implements": "spellEffect",
+		"script": "spells/h6Wither",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"pct": {
+					"type": "number"
+				},
+				"range": {
+					"type": "number"
+				},
+				"dotPct": {
+					"type": "number"
+				},
+				"dotMax": {
+					"type": "number"
+				},
+				"key": {
+					"type": "string"
+				},
+				"animation": {
+					"type": "string"
+				},
+				"sound": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		}
+	}
+}

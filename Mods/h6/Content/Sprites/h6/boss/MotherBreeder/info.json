@@ -1,0 +1,66 @@
+{
+ "fac": "boss",
+ "k": 1.0,
+ "scale": 60.327107334634654,
+ "origin": [
+  213.76439331529258,
+  239.4572
+ ],
+ "baked": {
+  "0": [],
+  "1": [],
+  "2": [],
+  "3": [
+   "motherbreeder_hit.fx"
+  ],
+  "4": [],
+  "5": [
+   "motherbreeder_die.fx"
+  ],
+  "7": [],
+  "8": [],
+  "11": [
+   "motherbreeder_attack.fx"
+  ],
+  "12": [
+   "motherbreeder_attack.fx"
+  ],
+  "13": [
+   "motherbreeder_attack.fx"
+  ],
+  "14": [
+   "motherbreeder_ranged_attack.fx"
+  ],
+  "15": [
+   "motherbreeder_ranged_attack.fx"
+  ],
+  "16": [
+   "motherbreeder_ranged_attack.fx"
+  ],
+  "17": [
+   "motherbreeder_ability.fx"
+  ],
+  "18": [
+   "motherbreeder_ability.fx"
+  ],
+  "19": [
+   "motherbreeder_ability.fx"
+  ],
+  "20": [],
+  "21": [],
+  "30": [
+   "motherbreeder_ability.fx"
+  ],
+  "32": [
+   "motherbreeder_ability.fx"
+  ],
+  "40": [
+   "motherbreeder_attack.fx"
+  ],
+  "42": [
+   "motherbreeder_attack.fx"
+  ]
+ },
+ "render": "Blender 4.2 Cycles 24spp 3x + sprite_post; fx h6m (fxsim d1=mul mode2=wrap)",
+ "sec": 28
+}

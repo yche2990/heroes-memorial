@@ -1,0 +1,802 @@
+// Heroes 6 memorial: script registration of the bosses
+{
+	"h6BossWard": {
+		"implements": "combatEvent",
+		"script": "combat/h6BossWard",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {},
+			"additionalProperties": false
+		},
+		"description": ""
+	},
+	"h6Enrage": {
+		"implements": "combatEvent",
+		"script": "combat/h6Enrage",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"mode": {
+					"type": "string"
+				},
+				"pct": {
+					"type": "number"
+				},
+				"minion": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"attacks": {
+					"type": "number"
+				},
+				"speed": {
+					"type": "number"
+				},
+				"dmg": {
+					"type": "number"
+				},
+				"animation": {
+					"type": "string"
+				},
+				"sound": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": ""
+	},
+	"h6BossWorm": {
+		"implements": "combatEvent",
+		"script": "combat/h6BossWorm",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"burn": {
+					"type": "number"
+				},
+				"digest": {
+					"type": "number"
+				},
+				"animation": {
+					"type": "string"
+				},
+				"sound": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": ""
+	},
+	"h6BossAzkaal": {
+		"implements": "combatEvent",
+		"script": "combat/h6BossAzkaal",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"luck": {
+					"type": "number"
+				},
+				"animation": {
+					"type": "string"
+				},
+				"sound": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": ""
+	},
+	"h6BossMalassa": {
+		"implements": "combatEvent",
+		"script": "combat/h6BossMalassa",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"role": {
+					"type": "string",
+					"enum": [
+						"carrier",
+						"zone"
+					]
+				},
+				"pct": {
+					"type": "number"
+				},
+				"animation": {
+					"type": "string"
+				},
+				"sound": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": ""
+	},
+	"h6BossMichael": {
+		"implements": "combatEvent",
+		"script": "combat/h6BossMichael",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"pct": {
+					"type": "number"
+				},
+				"minion": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"animation": {
+					"type": "string"
+				},
+				"sound": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": ""
+	},
+	"h6BossWraith": {
+		"implements": "combatEvent",
+		"script": "combat/h6BossWraith",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"role": {
+					"type": "string"
+				},
+				"per": {
+					"type": "number"
+				},
+				"minion": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"step": {
+					"type": "number"
+				},
+				"bonus": {
+					"type": "number"
+				},
+				"max": {
+					"type": "number"
+				},
+				"boss": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"heal": {
+					"type": "number"
+				},
+				"charges": {
+					"type": "number"
+				},
+				"animation": {
+					"type": "string"
+				},
+				"sound": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": ""
+	},
+	"h6BossAvatar": {
+		"implements": "combatEvent",
+		"script": "combat/h6BossAvatar",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"aura": {
+					"type": "number"
+				},
+				"daze": {
+					"type": "string"
+				},
+				"reflect": {
+					"type": "number"
+				},
+				"gate": {
+					"type": "number"
+				},
+				"heal": {
+					"type": "number"
+				},
+				"circle": {
+					"type": "number"
+				},
+				"animation": {
+					"type": "string"
+				},
+				"sound": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": ""
+	},
+	"h6BossKirin": {
+		"implements": "combatEvent",
+		"script": "combat/h6BossKirin",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"per": {
+					"type": "number"
+				},
+				"animation": {
+					"type": "string"
+				},
+				"sound": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": ""
+	},
+	"h6BossCd": {
+		"implements": "spellEffect",
+		"script": "spells/h6BossCd",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"key": {
+					"type": "string"
+				},
+				"cd": {
+					"type": "number"
+				},
+				"uses": {
+					"type": "number"
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"h6Devour": {
+		"implements": "spellEffect",
+		"script": "spells/h6Devour",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"digest": {
+					"type": "number"
+				},
+				"key": {
+					"type": "string"
+				},
+				"animation": {
+					"type": "string"
+				},
+				"sound": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"h6IllBlood": {
+		"implements": "spellEffect",
+		"script": "spells/h6IllBlood",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"pct": {
+					"type": "number"
+				},
+				"key": {
+					"type": "string"
+				},
+				"animation": {
+					"type": "string"
+				},
+				"sound": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"h6DragonFlight": {
+		"implements": "spellEffect",
+		"script": "spells/h6DragonFlight",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"summon": {
+					"type": "string"
+				},
+				"pct": {
+					"type": "number"
+				},
+				"key": {
+					"type": "string"
+				},
+				"animation": {
+					"type": "string"
+				},
+				"sound": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"h6SelfStatus": {
+		"implements": "spellEffect",
+		"script": "spells/h6SelfStatus",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"status": {
+					"type": "string"
+				},
+				"turns": {
+					"type": "number"
+				},
+				"key": {
+					"type": "string"
+				},
+				"animation": {
+					"type": "string"
+				},
+				"sound": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"h6Leap": {
+		"implements": "spellEffect",
+		"script": "spells/h6Leap",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"pct": {
+					"type": "number"
+				},
+				"minRange": {
+					"type": "number"
+				},
+				"key": {
+					"type": "string"
+				},
+				"animation": {
+					"type": "string"
+				},
+				"sound": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"h6SpiritDevour": {
+		"implements": "spellEffect",
+		"script": "spells/h6SpiritDevour",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"pct": {
+					"type": "number"
+				},
+				"minion": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"key": {
+					"type": "string"
+				},
+				"animation": {
+					"type": "string"
+				},
+				"sound": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"h6WordOfLight": {
+		"implements": "spellEffect",
+		"script": "spells/h6WordOfLight",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"heal": {
+					"type": "number"
+				},
+				"dmg": {
+					"type": "number"
+				},
+				"minion": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"key": {
+					"type": "string"
+				},
+				"animation": {
+					"type": "string"
+				},
+				"sound": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"h6LastWish": {
+		"implements": "spellEffect",
+		"script": "spells/h6LastWish",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"per": {
+					"type": "number"
+				},
+				"minion": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"key": {
+					"type": "string"
+				},
+				"animation": {
+					"type": "string"
+				},
+				"sound": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"h6StaticDischarge": {
+		"implements": "spellEffect",
+		"script": "spells/h6StaticDischarge",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"per": {
+					"type": "number"
+				},
+				"extra": {
+					"type": "number"
+				},
+				"key": {
+					"type": "string"
+				},
+				"animation": {
+					"type": "string"
+				},
+				"sound": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"h6ChainLightning": {
+		"implements": "spellEffect",
+		"script": "spells/h6ChainLightning",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"per": {
+					"type": "number"
+				},
+				"jumps": {
+					"type": "number"
+				},
+				"key": {
+					"type": "string"
+				},
+				"animation": {
+					"type": "string"
+				},
+				"sound": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"h6VoidGate": {
+		"implements": "spellEffect",
+		"script": "spells/h6VoidGate",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"gate": {
+					"type": "number"
+				},
+				"turns": {
+					"type": "number"
+				},
+				"key": {
+					"type": "string"
+				},
+				"animation": {
+					"type": "string"
+				},
+				"sound": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"h6VoidRift": {
+		"implements": "spellEffect",
+		"script": "spells/h6VoidRift",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"radius": {
+					"type": "number"
+				},
+				"per": {
+					"type": "number"
+				},
+				"turns": {
+					"type": "number"
+				},
+				"key": {
+					"type": "string"
+				},
+				"animation": {
+					"type": "string"
+				},
+				"sound": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"h6Quake": {
+		"implements": "spellEffect",
+		"script": "spells/h6Quake",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"pct": {
+					"type": "number"
+				},
+				"knock": {
+					"type": "number"
+				},
+				"key": {
+					"type": "string"
+				},
+				"animation": {
+					"type": "string"
+				},
+				"sound": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"h6Riptide": {
+		"implements": "spellEffect",
+		"script": "spells/h6Riptide",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"damage": {
+					"type": "number"
+				},
+				"key": {
+					"type": "string"
+				},
+				"animation": {
+					"type": "string"
+				},
+				"sound": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"h6MassRes": {
+		"implements": "spellEffect",
+		"script": "spells/h6MassRes",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"key": {
+					"type": "string"
+				},
+				"animation": {
+					"type": "string"
+				},
+				"sound": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"h6DivinePresence": {
+		"implements": "spellEffect",
+		"script": "spells/h6DivinePresence",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"key": {
+					"type": "string"
+				},
+				"animation": {
+					"type": "string"
+				},
+				"sound": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"h6AiHint": {
+		"implements": "spellEffect",
+		"script": "spells/h6AiHint",
+		"patches": [],
+		"description": "H6 Memorial: AI valuation hint. Reports an equivalent value only during AI trial calculations; does nothing when actually cast",
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"mode": {
+					"type": "string",
+					"enum": [
+						"allies",
+						"dispel",
+						"foes"
+					],
+					"description": "allies: each affected ally counts as the value of one of its normal attacks; dispel: number of beneficial spells on the target enemy; foes: number of enemy stacks affected"
+				},
+				"ratio": {
+					"type": "number",
+					"description": "multiplier of each share (times the value of one normal attack of the caster or of the ally), default 0.5"
+				},
+				"cap": {
+					"type": "number",
+					"description": "maximum number of shares counted, default 3"
+				},
+				"center": {
+					"type": "string",
+					"enum": [
+						"target",
+						"caster",
+						"all"
+					],
+					"description": "foes: where to count enemies, default target"
+				},
+				"radius": {
+					"type": "number",
+					"description": "foes: how many hexes around target / caster, default 0 (with target, only the target itself)"
+				},
+				"small": {
+					"type": "boolean",
+					"description": "foes: count only single-hex enemies"
+				},
+				"melee": {
+					"type": "boolean",
+					"description": "foes: count only enemies that are not shooters"
+				},
+				"status": {
+					"type": "string",
+					"description": "foes: full name of the status spell; enemies immune to it or already under it are not counted"
+				},
+				"skip": {
+					"type": "string",
+					"description": "foes: enemies carrying this bonus type are not counted"
+				},
+				"bigFirst": {
+					"type": "boolean",
+					"description": "foes: also multiply by the target's value divided by the value of the largest enemy stack"
+				},
+				"proxyBonus": {
+					"type": "object",
+					"description": "allies: gives each affected ally one native bonus { type, subtype, val, turns } (only in the AI simulation)"
+				}
+			},
+			"additionalProperties": false
+		}
+	}
+}

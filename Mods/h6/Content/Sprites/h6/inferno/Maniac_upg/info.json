@@ -1,0 +1,73 @@
+{
+ "fac": "inferno",
+ "k": 1.0,
+ "scale": 72.18107198348724,
+ "origin": [
+  199.43056405797319,
+  256.0
+ ],
+ "baked": {
+  "0": [
+   "maniac_upg.fx"
+  ],
+  "1": [
+   "maniac_upg.fx"
+  ],
+  "2": [
+   "maniac_upg.fx"
+  ],
+  "3": [
+   "maniac_upg.fx"
+  ],
+  "4": [
+   "maniac_upg.fx"
+  ],
+  "5": [
+   "maniac_upg.fx"
+  ],
+  "7": [
+   "maniac_upg.fx"
+  ],
+  "8": [
+   "maniac_upg.fx"
+  ],
+  "11": [
+   "maniac_upg.fx"
+  ],
+  "12": [
+   "maniac_upg.fx"
+  ],
+  "13": [
+   "maniac_upg.fx"
+  ],
+  "17": [
+   "maniac_upg.fx"
+  ],
+  "18": [
+   "maniac_upg.fx"
+  ],
+  "19": [
+   "maniac_upg.fx"
+  ],
+  "20": [
+   "maniac_upg.fx"
+  ],
+  "21": [
+   "maniac_upg.fx"
+  ],
+  "30": [
+   "maniac_upg.fx"
+  ],
+  "32": [
+   "maniac_upg.fx"
+  ],
+  "40": [
+   "maniac_upg.fx"
+  ],
+  "42": [
+   "maniac_upg.fx"
+  ]
+ },
+ "render": "Blender 4.2 Cycles 24spp 3x + sprite_post; fx h6m (fxsim d1=mul mode2=wrap)",
+ "sec": 17
+}

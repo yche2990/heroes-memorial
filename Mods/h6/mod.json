@@ -1,0 +1,179 @@
+{
+	"name": "Heroes VI Memorial",
+	"description": "Heroes VI creatures, bosses with their treasuries, hero spells and creature skills, racial Gating and Bloodrage, and the Memorial Magic Academies, Troop Exchanges and Sanctum.",
+	"chinese": {
+		"name": "英雄无敌6纪念版",
+		"translations": [
+			"config/translations/chinese.json"
+		],
+		"description": "英雄无敌6的兵种、首领和首领宝屋、英雄魔法和兵种技能、种族能力异界之门和血怒，以及纪念魔法学院、换兵所和纪念圣殿。"
+	},
+	"version": "0.1.0",
+	"author": "yche2990",
+	"modType": "Creatures",
+	"compatibility": {
+		"min": "1.8.0"
+	},
+	"depends": [
+		"tears-of-ashan"
+	],
+	"creatures": [
+		"config/h6/creatures/castle.json",
+		"config/h6/creatures/necropolis.json",
+		"config/h6/creatures/inferno.json",
+		"config/h6/creatures/stronghold.json",
+		"config/h6/creatures/dungeon.json",
+		"config/h6/creatures/neutral.json",
+		"config/h6/creatures/boss.json",
+		"config/h6/creatures/shrine.json",
+		"config/h6/creatures/racial.json"
+	],
+	"spells": [
+		"config/h6/spells/haven.json",
+		"config/h6/spells/necropolis.json",
+		"config/h6/spells/inferno.json",
+		"config/h6/spells/stronghold.json",
+		"config/h6/spells/dungeon.json",
+		"config/h6/spells/neutral.json",
+		"config/h6/spells/boss.json",
+		"config/h6/spells/hero.json",
+		"config/h6/spells/shrine.json",
+		"config/h6/spells/racial.json",
+		"config/memorial/batteringRamSpell.json"
+	],
+	"scripts": [
+		"config/h6/scripts.json",
+		"config/h6/scripts_necro.json",
+		"config/h6/scripts_inferno.json",
+		"config/h6/scripts_stronghold.json",
+		"config/h6/scripts_dungeon.json",
+		"config/h6/scripts_neutral.json",
+		"config/h6/scripts_boss.json",
+		"config/h6/scripts_spells.json",
+		"config/h6/scripts_shrine.json",
+		"config/h6/scripts_racial.json",
+		"config/h6/scripts_integ.json",
+		"config/memorial/batteringRamScript.json"
+	],
+	"skills": [
+		"config/h6/skills_racial.json"
+	],
+	"bonuses": [
+		"config/h6/bonuses.json",
+		"config/h6/bonuses_necro.json",
+		"config/h6/bonuses_inferno.json",
+		"config/h6/bonuses_stronghold.json",
+		"config/h6/bonuses_dungeon.json",
+		"config/h6/bonuses_neutral.json",
+		"config/h6/bonuses_boss.json",
+		"config/h6/bonuses_spells.json",
+		"config/h6/bonuses_shrine.json",
+		"config/h6/bonuses_racial.json",
+		"config/h6/bonuses_integ.json",
+		"config/memorial/batteringRamBonus.json"
+	],
+	"objects": [
+		"config/h6/banks.json",
+		"config/h6memorial/magic.json",
+		"config/h6memorial/swap.json",
+		"config/h6sanctum/sanctum.json",
+		"config/memorial/elementalConflux.json"
+	],
+	"artifacts": [
+		"config/h6/artifacts.json"
+	],
+	"settings": {
+		"combat": {
+			"layouts": {
+				"h6BossBank": {
+					"tacticsAllowed": false,
+					"obstaclesAllowed": false,
+					"attackerCommander": 59,
+					"defenderCommander": 83,
+					"attackerUnits": [
+						57,
+						61,
+						90,
+						93,
+						96,
+						125,
+						129
+					],
+					"defenderUnits": [
+						15,
+						185,
+						172,
+						2,
+						8,
+						174,
+						181
+					]
+				}
+			}
+		},
+		"bonuses": {
+			"global": {
+				"h6Evil_necropolis": {
+					"type": "H6_EVIL_H6C",
+					"val": 1,
+					"hidden": true,
+					"limiters": [
+						{
+							"type": "CREATURE_FACTION_LIMITER",
+							"parameters": [
+								"necropolis"
+							]
+						}
+					]
+				},
+				"h6Evil_inferno": {
+					"type": "H6_EVIL_H6C",
+					"val": 1,
+					"hidden": true,
+					"limiters": [
+						{
+							"type": "CREATURE_FACTION_LIMITER",
+							"parameters": [
+								"inferno"
+							]
+						}
+					]
+				},
+				"h6Evil_dungeon": {
+					"type": "H6_EVIL_H6C",
+					"val": 1,
+					"hidden": true,
+					"limiters": [
+						{
+							"type": "CREATURE_FACTION_LIMITER",
+							"parameters": [
+								"dungeon"
+							]
+						}
+					]
+				},
+				"h6Evil_stronghold": {
+					"type": "H6_EVIL_H6C",
+					"val": 1,
+					"hidden": true,
+					"limiters": [
+						{
+							"type": "CREATURE_FACTION_LIMITER",
+							"parameters": [
+								"stronghold"
+							]
+						}
+					]
+				}
+			}
+		}
+	},
+	"rumors": [
+		"config/rumors/objectpackh6memorialRumors.json"
+	],
+	"english": {
+		"translations": [
+			"config/translations/english.json"
+		]
+	}
+}

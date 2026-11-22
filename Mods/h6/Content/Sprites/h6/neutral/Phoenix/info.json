@@ -1,0 +1,80 @@
+{
+ "fac": "neutral",
+ "k": 0.924,
+ "scale": 61.60729165719477,
+ "origin": [
+  248.65439803430405,
+  267.0415
+ ],
+ "baked": {
+  "0": [
+   "phoenix.fx"
+  ],
+  "1": [
+   "phoenix.fx"
+  ],
+  "2": [
+   "phoenix.fx"
+  ],
+  "3": [
+   "phoenix.fx"
+  ],
+  "4": [
+   "phoenix.fx"
+  ],
+  "5": [
+   "phoenix.fx",
+   "phoenix_die.fx"
+  ],
+  "7": [
+   "phoenix.fx"
+  ],
+  "8": [
+   "phoenix.fx"
+  ],
+  "11": [
+   "phoenix.fx"
+  ],
+  "12": [
+   "phoenix.fx"
+  ],
+  "13": [
+   "phoenix.fx"
+  ],
+  "17": [
+   "phoenix.fx",
+   "phoenix_ability.fx"
+  ],
+  "18": [
+   "phoenix.fx",
+   "phoenix_ability.fx"
+  ],
+  "19": [
+   "phoenix.fx",
+   "phoenix_ability.fx"
+  ],
+  "20": [
+   "phoenix.fx"
+  ],
+  "21": [
+   "phoenix.fx"
+  ],
+  "30": [
+   "phoenix.fx",
+   "phoenix_ability.fx"
+  ],
+  "32": [
+   "phoenix.fx",
+   "phoenix_ability.fx"
+  ],
+  "40": [
+   "phoenix.fx"
+  ],
+  "42": [
+   "phoenix.fx"
+  ]
+ },
+ "render": "Blender 4.2 Cycles 24spp 3x + sprite_post; fx h6m (fxsim d1=mul mode2=wrap)",
+ "sec": 202,
+ "note426": "battle frames shrunk x0.88 around the foot point (x=217, y=265) after render (Yu, round 426)"
+}

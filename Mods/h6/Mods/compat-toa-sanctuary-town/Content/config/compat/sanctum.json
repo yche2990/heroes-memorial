@@ -1,0 +1,208 @@
+{
+	"heroes-memorial.h6:h6MemorialSanctum": {
+		"types": {
+			"h6MemorialSanctum": {
+				"rewards": {
+					"append": {
+						"appearChance": {
+							"dice": 1,
+							"min": 83,
+							"max": 100
+						},
+						"limiter": {
+							"heroLevel": 999
+						},
+						"guards": [
+							{
+								"type": "tears-of-ashan.toa-sanctuary-town:wanizameAU",
+								"amount": 1544
+							},
+							{
+								"type": "tears-of-ashan.toa-sanctuary-town:kappaShoyaAU",
+								"amount": 1287
+							},
+							{
+								"type": "tears-of-ashan.toa-sanctuary-town:pearlPriestessAU",
+								"amount": 901
+							},
+							{
+								"type": "tears-of-ashan.toa-sanctuary-town:mizuKamiAU",
+								"amount": 515
+							},
+							{
+								"type": "tears-of-ashan.toa-sanctuary-town:yukiOnnaAU",
+								"amount": 257
+							},
+							{
+								"type": "tears-of-ashan.toa-sanctuary-town:kenseiAU",
+								"amount": 257
+							},
+							{
+								"type": "tears-of-ashan.toa-sanctuary-town:sacredKirinAU",
+								"amount": 129
+							}
+						]
+					},
+					"insert@6": {
+						"limiter": {
+							"allOf": [
+								{
+									"anyOf": [
+										{
+											"creatures": [
+												{
+													"type": "tears-of-ashan.toa-sanctuary-town:wanizameAU",
+													"amount": 1
+												}
+											]
+										}
+									]
+								},
+								{
+									"anyOf": [
+										{
+											"creatures": [
+												{
+													"type": "tears-of-ashan.toa-sanctuary-town:kappaShoyaAU",
+													"amount": 1
+												}
+											]
+										}
+									]
+								},
+								{
+									"anyOf": [
+										{
+											"creatures": [
+												{
+													"type": "tears-of-ashan.toa-sanctuary-town:pearlPriestessAU",
+													"amount": 1
+												}
+											]
+										}
+									]
+								},
+								{
+									"anyOf": [
+										{
+											"creatures": [
+												{
+													"type": "tears-of-ashan.toa-sanctuary-town:mizuKamiAU",
+													"amount": 1
+												}
+											]
+										}
+									]
+								},
+								{
+									"anyOf": [
+										{
+											"creatures": [
+												{
+													"type": "tears-of-ashan.toa-sanctuary-town:yukiOnnaAU",
+													"amount": 1
+												}
+											]
+										}
+									]
+								},
+								{
+									"anyOf": [
+										{
+											"creatures": [
+												{
+													"type": "tears-of-ashan.toa-sanctuary-town:kenseiAU",
+													"amount": 1
+												}
+											]
+										}
+									]
+								},
+								{
+									"anyOf": [
+										{
+											"creatures": [
+												{
+													"type": "tears-of-ashan.toa-sanctuary-town:sacredKirinAU",
+													"amount": 1
+												}
+											]
+										},
+										{
+											"creatures": [
+												{
+													"type": "tears-of-ashan.toa-sanctuary-town:enragedKirinAU",
+													"amount": 1
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						"bonuses": [
+							{
+								"type": "COMBAT_EVENT_TRIGGER",
+								"subtype": "heroes-memorial.h6:h6MmJinx",
+								"val": 0,
+								"limiters": [
+									"CREATURES_ONLY"
+								],
+								"hidden": true,
+								"duration": "PERMANENT",
+								"stacking": "h6MmJinx"
+							},
+							{
+								"type": "heroes-memorial.h6:H6_ULTIMATE_H6C",
+								"val": 1,
+								"icon": "h6/abilities/mm_Jinx",
+								"description": "{Jinx}\nAt battle start, each enemy stack randomly gets one of Chilled, Frozen, Soaked or Dazed",
+								"limiters": [
+									"CREATURES_ONLY"
+								],
+								"duration": "PERMANENT",
+								"stacking": "h6MemorialSanctum_sanctuary_ultimate"
+							}
+						],
+						"message": "{H6 Memorial Shrine}\n\nYour army has gathered upgraded level 1-7 creatures of the H6 Sanctuary faction. Do you want your hero to permanently master the Sanctuary skills?\n\n{Jinx}\nAt the start of combat, each enemy stack randomly gets one of Chilled, Frozen, Soaked or Dazed.\n\nEach player can master skills at the H6 Memorial Shrine only once."
+					},
+					"modify@7": {
+						"appearChance": {
+							"dice": 1,
+							"min": 0,
+							"max": 17
+						}
+					},
+					"modify@8": {
+						"appearChance": {
+							"dice": 1,
+							"min": 17,
+							"max": 33
+						}
+					},
+					"modify@9": {
+						"appearChance": {
+							"dice": 1,
+							"min": 33,
+							"max": 50
+						}
+					},
+					"modify@10": {
+						"appearChance": {
+							"dice": 1,
+							"min": 50,
+							"max": 67
+						}
+					},
+					"modify@11": {
+						"appearChance": {
+							"dice": 1,
+							"min": 67,
+							"max": 83
+						}
+					}
+				}
+			}
+		}
+	}
+}

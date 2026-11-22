@@ -1,0 +1,67 @@
+{
+ "fac": "inferno",
+ "k": 0.82,
+ "scale": 57.43546815476978,
+ "origin": [
+  212.4336782454031,
+  249.2404
+ ],
+ "baked": {
+  "0": [],
+  "1": [],
+  "2": [],
+  "3": [
+   "breeder_hit.fx"
+  ],
+  "4": [],
+  "5": [
+   "breeder_die.fx"
+  ],
+  "7": [],
+  "8": [],
+  "11": [
+   "breeder_attack.fx"
+  ],
+  "12": [
+   "breeder_attack.fx"
+  ],
+  "13": [
+   "breeder_attack.fx"
+  ],
+  "14": [
+   "breeder_ranged_attack.fx"
+  ],
+  "15": [
+   "breeder_ranged_attack.fx"
+  ],
+  "16": [
+   "breeder_ranged_attack.fx"
+  ],
+  "17": [
+   "breeder_ability.fx"
+  ],
+  "18": [
+   "breeder_ability.fx"
+  ],
+  "19": [
+   "breeder_ability.fx"
+  ],
+  "20": [],
+  "21": [],
+  "30": [
+   "breeder_ability.fx"
+  ],
+  "32": [
+   "breeder_ability.fx"
+  ],
+  "40": [
+   "breeder_attack.fx"
+  ],
+  "42": [
+   "breeder_attack.fx"
+  ]
+ },
+ "render": "Blender 4.2 Cycles 24spp 3x + sprite_post; fx h6m (fxsim d1=mul mode2=wrap)",
+ "sec": 39,
+ "note426": "battle frames shrunk x0.82 around the foot point (x=217, y=265) after render (Yu, round 426)"
+}

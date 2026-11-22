@@ -1,0 +1,249 @@
+// Heroes 6 memorial: script registration of neutral creatures
+{
+	"h6FirstRound": {
+		"implements": "combatEvent",
+		"script": "combat/h6FirstRound",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"speed": {
+					"type": "number"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": ""
+	},
+	"h6Cremation": {
+		"implements": "combatEvent",
+		"script": "combat/h6Cremation",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"per": {
+					"type": "number"
+				},
+				"once": {
+					"type": "boolean"
+				},
+				"animation": {
+					"type": "string"
+				},
+				"sound": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": ""
+	},
+	"h6ChainShot": {
+		"implements": "combatEvent",
+		"script": "combat/h6ChainShot",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"jumps": {
+					"type": "number"
+				},
+				"animation": {
+					"type": "string"
+				},
+				"sound": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": ""
+	},
+	"h6Manifest": {
+		"implements": "combatEvent",
+		"script": "combat/h6Manifest",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"per": {
+					"type": "number"
+				},
+				"animation": {
+					"type": "string"
+				},
+				"sound": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": ""
+	},
+	"h6Siren": {
+		"implements": "combatEvent",
+		"script": "combat/h6Siren",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"role": {
+					"type": "string",
+					"enum": [
+						"carrier",
+						"zone"
+					]
+				},
+				"animation": {
+					"type": "string"
+				},
+				"sound": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": ""
+	},
+	"h6Moonfire": {
+		"implements": "combatEvent",
+		"script": "combat/h6Moonfire",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"per": {
+					"type": "number"
+				},
+				"animation": {
+					"type": "string"
+				},
+				"sound": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": ""
+	},
+	"h6CurseLeech": {
+		"implements": "combatEvent",
+		"script": "combat/h6CurseLeech",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"role": {
+					"type": "string",
+					"enum": [
+						"carrier",
+						"zone"
+					]
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": ""
+	},
+	"h6ShadowForm": {
+		"implements": "combatEvent",
+		"script": "combat/h6ShadowForm",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"animation": {
+					"type": "string"
+				},
+				"sound": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": ""
+	},
+	"h6TidalWave": {
+		"implements": "spellEffect",
+		"script": "spells/h6TidalWave",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"status": {
+					"type": "string"
+				},
+				"turns": {
+					"type": "number"
+				},
+				"knock": {
+					"type": "number"
+				},
+				"near": {
+					"type": "number"
+				},
+				"per": {
+					"type": "number"
+				},
+				"school": {
+					"type": "string"
+				},
+				"key": {
+					"type": "string"
+				},
+				"usedType": {
+					"type": "string"
+				},
+				"animation": {
+					"type": "string"
+				},
+				"sound": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"h6SpectralCurse": {
+		"implements": "spellEffect",
+		"script": "spells/h6SpectralCurse",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"pct": {
+					"type": "number"
+				},
+				"range": {
+					"type": "number"
+				},
+				"turns": {
+					"type": "number"
+				},
+				"key": {
+					"type": "string"
+				},
+				"animation": {
+					"type": "string"
+				},
+				"sound": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		}
+	}
+}

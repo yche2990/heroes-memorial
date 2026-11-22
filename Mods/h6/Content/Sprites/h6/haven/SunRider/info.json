@@ -1,0 +1,77 @@
+{
+ "fac": "haven",
+ "k": 0.9135,
+ "scale": 60.94356208182236,
+ "origin": [
+  214.8720548781014,
+  261.078
+ ],
+ "baked": {
+  "0": [
+   "sunrider.fx"
+  ],
+  "1": [
+   "sunrider.fx"
+  ],
+  "2": [
+   "sunrider.fx"
+  ],
+  "3": [
+   "sunrider.fx"
+  ],
+  "4": [
+   "sunrider.fx"
+  ],
+  "5": [
+   "sunrider.fx",
+   "sunrider_die.fx"
+  ],
+  "7": [
+   "sunrider.fx"
+  ],
+  "8": [
+   "sunrider.fx"
+  ],
+  "11": [
+   "sunrider.fx"
+  ],
+  "12": [
+   "sunrider.fx"
+  ],
+  "13": [
+   "sunrider.fx"
+  ],
+  "17": [
+   "sunrider.fx"
+  ],
+  "18": [
+   "sunrider.fx"
+  ],
+  "19": [
+   "sunrider.fx"
+  ],
+  "20": [
+   "sunrider.fx",
+   "sunrider_sunstallion_start.fx"
+  ],
+  "21": [
+   "sunrider.fx",
+   "sunrider_sunstallion_end.fx"
+  ],
+  "30": [
+   "sunrider.fx"
+  ],
+  "32": [
+   "sunrider.fx"
+  ],
+  "40": [
+   "sunrider.fx"
+  ],
+  "42": [
+   "sunrider.fx"
+  ]
+ },
+ "render": "Blender 4.2 Cycles 24spp 3x + sprite_post; fx h6m (fxsim d1=mul mode2=wrap)",
+ "sec": 54,
+ "note426": "battle frames shrunk x0.87 around the foot point (x=217, y=265) after render (Yu, round 426)"
+}

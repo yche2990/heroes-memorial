@@ -1,0 +1,80 @@
+{
+ "fac": "inferno",
+ "k": 0.84,
+ "scale": 58.84925759380832,
+ "origin": [
+  205.31224424574998,
+  254.8301
+ ],
+ "baked": {
+  "0": [
+   "juggernaut_upg.fx"
+  ],
+  "1": [
+   "juggernaut_upg.fx"
+  ],
+  "2": [
+   "juggernaut_upg.fx"
+  ],
+  "3": [
+   "juggernaut_upg.fx"
+  ],
+  "4": [
+   "juggernaut_upg.fx"
+  ],
+  "5": [
+   "juggernaut_upg.fx",
+   "juggernaut_die.fx"
+  ],
+  "7": [
+   "juggernaut_upg.fx"
+  ],
+  "8": [
+   "juggernaut_upg.fx"
+  ],
+  "11": [
+   "juggernaut_upg.fx",
+   "juggernaut_attackcrit.fx"
+  ],
+  "12": [
+   "juggernaut_upg.fx",
+   "juggernaut_attackcrit.fx"
+  ],
+  "13": [
+   "juggernaut_upg.fx",
+   "juggernaut_attackcrit.fx"
+  ],
+  "17": [
+   "juggernaut_upg.fx"
+  ],
+  "18": [
+   "juggernaut_upg.fx"
+  ],
+  "19": [
+   "juggernaut_upg.fx"
+  ],
+  "20": [
+   "juggernaut_upg.fx"
+  ],
+  "21": [
+   "juggernaut_upg.fx"
+  ],
+  "30": [
+   "juggernaut_upg.fx"
+  ],
+  "32": [
+   "juggernaut_upg.fx"
+  ],
+  "40": [
+   "juggernaut_upg.fx",
+   "juggernaut_attackcrit.fx"
+  ],
+  "42": [
+   "juggernaut_upg.fx",
+   "juggernaut_attackcrit.fx"
+  ]
+ },
+ "render": "Blender 4.2 Cycles 24spp 3x + sprite_post; fx h6m (fxsim d1=mul mode2=wrap)",
+ "sec": 54,
+ "note426": "battle frames shrunk x0.84 around the foot point (x=217, y=265) after render (Yu, round 426)"
+}

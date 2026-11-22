@@ -1,0 +1,79 @@
+{
+ "fac": "haven",
+ "k": 1.45,
+ "scale": 70.0009304290116,
+ "origin": [
+  247.76953400285169,
+  269.6668
+ ],
+ "baked": {
+  "0": [
+   "celestial.fx"
+  ],
+  "1": [
+   "celestial.fx"
+  ],
+  "2": [
+   "celestial.fx"
+  ],
+  "3": [
+   "celestial.fx"
+  ],
+  "4": [
+   "celestial.fx"
+  ],
+  "5": [
+   "celestial.fx",
+   "celestial_die.fx"
+  ],
+  "7": [
+   "celestial.fx"
+  ],
+  "8": [
+   "celestial.fx"
+  ],
+  "11": [
+   "celestial.fx"
+  ],
+  "12": [
+   "celestial.fx"
+  ],
+  "13": [
+   "celestial.fx"
+  ],
+  "17": [
+   "celestial.fx",
+   "celestial_ability.fx"
+  ],
+  "18": [
+   "celestial.fx",
+   "celestial_ability.fx"
+  ],
+  "19": [
+   "celestial.fx",
+   "celestial_ability.fx"
+  ],
+  "20": [
+   "celestial.fx"
+  ],
+  "21": [
+   "celestial.fx"
+  ],
+  "30": [
+   "celestial.fx",
+   "celestial_ability.fx"
+  ],
+  "32": [
+   "celestial.fx",
+   "celestial_ability.fx"
+  ],
+  "40": [
+   "celestial.fx"
+  ],
+  "42": [
+   "celestial.fx"
+  ]
+ },
+ "render": "Blender 4.2 Cycles 24spp 3x + sprite_post; fx h6m (fxsim d1=mul mode2=wrap)",
+ "sec": 47
+}

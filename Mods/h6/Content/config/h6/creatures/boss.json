@@ -1,0 +1,2287 @@
+// Heroes 6 memorial: bosses and retinue (health and damage = original / 10, Attack and Defense 75)
+{
+	"h6BossAbyssalWorm": {
+		"name": {
+			"singular": "Abyssal Worm",
+			"plural": "Abyssal Worms"
+		},
+		"description": "An avatar of Ur-Vomoc, Demon Lord of Greed, the Abyssal Worm is a gigantic worm-like creature whose soft body is protected by heavy, spiked, ring-shaped plates. Its mouth is lined with rows of fangs that let it bore swiftly through the half-molten rock of Sheogh. Greedy and insatiable, the Abyssal Worm feeds on the dying screams of its victims; some are sacrifices offered to it, others are poor souls unlucky enough to meet it on the battlefield. And the Abyssal Worm never seems to be full.",
+		"faction": "inferno",
+		"level": 10,
+		"special": true,
+		"excludeFromRandomization": true,
+		"cost": {
+			"gold": 1000000,
+			"gems": 100
+		},
+		"speed": 20,
+		"hitPoints": 7500,
+		"attack": 75,
+		"defense": 75,
+		"damage": {
+			"min": 275,
+			"max": 325
+		},
+		"doubleWide": true,
+		"fightValue": 1000000,
+		"aiValue": 1000000,
+		"growth": 1,
+		"advMapAmount": {
+			"min": 1,
+			"max": 1
+		},
+		"abilities": {
+			"toaDemonic": {
+				"type": "tears-of-ashan:DEMONIC",
+				"val": 1,
+				"hidden": true
+			},
+			"king": {
+				"type": "KING",
+				"val": 2
+			},
+			"bossWard": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6BossWard",
+				"val": 0,
+				"icon": "h6/abilities/ab_Boss",
+				"stacking": "h6BossWard",
+				"description": "{Boss}\nSpeed can't drop; immune to Blind, mind, stun"
+			},
+			"mind": {
+				"type": "MIND_IMMUNITY",
+				"hidden": true
+			},
+			"fearless": {
+				"type": "FEARFUL",
+				"valueType": "AT_MOST",
+				"val": 0,
+				"description": "{Fearless}\nCannot be afraid"
+			},
+			"immune_blind": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "spell.blind",
+				"hidden": true
+			},
+			"immune_stoneGaze": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "spell.stoneGaze",
+				"hidden": true
+			},
+			"immune_paralyze": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "spell.paralyze",
+				"hidden": true
+			},
+			"immune_slow": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "spell.slow",
+				"hidden": true
+			},
+			"immune_forgetfulness": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "spell.forgetfulness",
+				"hidden": true
+			},
+			"immune_berserk": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "spell.berserk",
+				"hidden": true
+			},
+			"immune_hypnotize": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "spell.hypnotize",
+				"hidden": true
+			},
+			"demonic": {
+				"type": "H6_EVIL_H6C",
+				"val": 1,
+				"hidden": true
+			},
+			"fireResist": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.fire",
+				"val": 20,
+				"icon": "h6/abilities/ab_Fireproof_Skin",
+				"description": "{Demonic}\nFire spell damage -20%\nLight spell damage +20%"
+			},
+			"lightWeak": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.01lightSchool",
+				"val": -20,
+				"hidden": true
+			},
+			"enrage": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6Enrage",
+				"val": 0,
+				"icon": "h6/abilities/ab_Enrage",
+				"stacking": "h6Enrage",
+				"addInfo": {
+					"mode": "hp",
+					"pct": 35,
+					"attacks": 1,
+					"speed": 5,
+					"dmg": 30,
+					"animation": "h6/boss/fx/enrage"
+				},
+				"description": "{Furious Outburst}\nBelow 35% HP: +1 attack, +5 Speed, +30% dmg"
+			},
+			"dotZone": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6Dot",
+				"val": 0,
+				"hidden": true,
+				"description": "~",
+				"propagator": "BATTLE_WIDE",
+				"stacking": "h6DotZone",
+				"addInfo": {
+					"role": "zone",
+					"animation": "h6/boss/fx/lavaBurn"
+				}
+			},
+			"shooter": {
+				"type": "SHOOTER"
+			},
+			"freeShooting": {
+				"type": "FREE_SHOOTING",
+				"icon": "h6/abilities/ab_Lava_Blood",
+				"description": "{Lava Spit}\nRanged; shoots even when blocked"
+			},
+			"burrow": {
+				"type": "FLYING",
+				"subtype": "movementTeleporting",
+				"icon": "h6/abilities/ab_Nimble",
+				"description": "{Burrow}\nMoves underground straight to its destination"
+			},
+			"worm": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6BossWorm",
+				"val": 0,
+				"icon": "h6/abilities/ab_Evasive",
+				"stacking": "h6BossWorm",
+				"addInfo": {
+					"burn": 100,
+					"digest": 600,
+					"animation": "h6/boss/fx/digest"
+				},
+				"description": "{Evade, Lava Blood}\nMoves off after melee; attackers burn 3 rounds"
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 1,
+				"hidden": true
+			},
+			"noSpellcastByDefault": {
+				"type": "NO_SPELLCAST_BY_DEFAULT",
+				"hidden": true
+			},
+			"cast_h6AbDevour": {
+				"type": "SPELLCASTER",
+				"subtype": "spell.h6AbDevour",
+				"val": 3,
+				"icon": "h6/abilities/ab_Devour",
+				"description": "{Devour}\nActive: swallows adjacent 1-hex foe, 600/round"
+			}
+		},
+		"graphics": {
+			"animation": "h6/boss/AbyssalWorm/AbyssalWorm.json",
+			"map": "h6/units/h6BossAbyssalWorm/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h6/units/h6BossAbyssalWorm/map/atkL.png",
+			"mapAttackFromRight": "h6/units/h6BossAbyssalWorm/map/atkR.png",
+			"iconLarge": "h6/units/h6BossAbyssalWorm/iconLarge.png",
+			"iconSmall": "h6/units/h6BossAbyssalWorm/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"frameAngles": [
+					90,
+					60,
+					45,
+					30,
+					0,
+					-30,
+					-45,
+					-60,
+					-90
+				],
+				"attackClimaxFrame": 5,
+				"projectile": "h6/boss/fireBoltWorm.json",
+				"offset": {
+					"upperX": 53,
+					"upperY": -175,
+					"middleX": 68,
+					"middleY": -170,
+					"lowerX": 63,
+					"lowerY": -165
+				}
+			}
+		},
+		"sound": {
+			"attack": "h6/boss/AbyssalWormBoss_AttackLaunchMelee.wav",
+			"shoot": "h6/boss/AbyssalWormBoss_LavaSpit_Source.wav",
+			"wince": "h6/boss/AbyssalWormBoss_Hit.wav",
+			"killed": "h6/boss/AbyssalWormBoss_Die.wav",
+			"startMoving": "h6/boss/AbyssalWormBoss_MoveStart.wav",
+			"endMoving": "h6/boss/AbyssalWormBoss_MoveEnd.wav"
+		},
+		"shots": 24
+	},
+	"h6BossAzkaal": {
+		"name": {
+			"singular": "Azkaal",
+			"plural": "Azkaal"
+		},
+		"description": "Azkaal was once Lord Kragh's champion, the Prince of Destruction, and the mightiest of the demons who invaded Ashan. In ancient times he led a mighty horde out of the depths of Sheogh, slaughtered thousands of angels and took more than half of the sky cities. But for the last eight centuries he has been trapped, like an insect caught in amber. The mighty archangels Sarah and Michael joined forces to seal his soul in an indestructible artifact, at the very moment when Azkaal was about to win total victory. Naturally, he is not pleased. Worse, although he has recently awakened, he finds that his freedom is a freedom in name only: his soul now dwells in the body of a wretched human. Burning with rage, Azkaal will not rest until all his enemies are destroyed and Ashan is utterly ruined.",
+		"faction": "inferno",
+		"level": 10,
+		"special": true,
+		"excludeFromRandomization": true,
+		"cost": {
+			"gold": 1000000,
+			"gems": 100
+		},
+		"speed": 18,
+		"hitPoints": 7500,
+		"attack": 75,
+		"defense": 75,
+		"damage": {
+			"min": 120,
+			"max": 240
+		},
+		"doubleWide": true,
+		"fightValue": 1000000,
+		"aiValue": 1000000,
+		"growth": 1,
+		"advMapAmount": {
+			"min": 1,
+			"max": 1
+		},
+		"abilities": {
+			"toaDemonic": {
+				"type": "tears-of-ashan:DEMONIC",
+				"val": 1,
+				"hidden": true
+			},
+			"king": {
+				"type": "KING",
+				"val": 2
+			},
+			"bossWard": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6BossWard",
+				"val": 0,
+				"icon": "h6/abilities/ab_Boss",
+				"stacking": "h6BossWard",
+				"description": "{Boss}\nSpeed can't drop; immune to Blind, mind, stun"
+			},
+			"mind": {
+				"type": "MIND_IMMUNITY",
+				"hidden": true
+			},
+			"fearless": {
+				"type": "FEARFUL",
+				"valueType": "AT_MOST",
+				"val": 0,
+				"description": "{Fearless}\nCannot be afraid"
+			},
+			"immune_blind": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "spell.blind",
+				"hidden": true
+			},
+			"immune_stoneGaze": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "spell.stoneGaze",
+				"hidden": true
+			},
+			"immune_paralyze": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "spell.paralyze",
+				"hidden": true
+			},
+			"immune_slow": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "spell.slow",
+				"hidden": true
+			},
+			"immune_forgetfulness": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "spell.forgetfulness",
+				"hidden": true
+			},
+			"immune_berserk": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "spell.berserk",
+				"hidden": true
+			},
+			"immune_hypnotize": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "spell.hypnotize",
+				"hidden": true
+			},
+			"demonic": {
+				"type": "H6_EVIL_H6C",
+				"val": 1,
+				"hidden": true
+			},
+			"fireResist": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.fire",
+				"val": 20,
+				"icon": "h6/abilities/ab_Fireproof_Skin",
+				"description": "{Demonic}\nFire spell damage -20%\nLight spell damage +20%"
+			},
+			"lightWeak": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.01lightSchool",
+				"val": -20,
+				"hidden": true
+			},
+			"azkaal": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6BossAzkaal",
+				"val": 0,
+				"icon": "h6/abilities/ab_Hateful_Retaliation",
+				"stacking": "h6BossAzkaal",
+				"addInfo": {
+					"luck": 1,
+					"animation": "h6/boss/fx/hate"
+				},
+				"description": "{Steal Luck, Vengeflame}\nAttack: -1 Luck; retaliation burns past foes"
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 1,
+				"hidden": true
+			},
+			"noSpellcastByDefault": {
+				"type": "NO_SPELLCAST_BY_DEFAULT",
+				"hidden": true
+			},
+			"cast_h6AbIllBlood": {
+				"type": "SPELLCASTER",
+				"subtype": "spell.h6AbIllBlood",
+				"val": 3,
+				"icon": "h6/abilities/ab_Ill_Blood",
+				"description": "{Ill Blood}\nCooldown 2: foe hits its neighbors, loses turn"
+			},
+			"cast_h6AbMarkOfConsumption": {
+				"type": "SPELLCASTER",
+				"subtype": "spell.h6AbMarkOfConsumption",
+				"val": 3,
+				"icon": "h6/abilities/ab_Mark_of_Consumption",
+				"description": "{Mark of Consumption}\nCooldown 2: foe takes 2x Fire spells, battle"
+			},
+			"cast_h6AbBossBoundlessHate": {
+				"type": "SPELLCASTER",
+				"subtype": "spell.h6AbBossBoundlessHate",
+				"val": 3,
+				"icon": "h6/abilities/ab_Boundless_Hate",
+				"description": "{Endless Hatred}\nActive, Cooldown 3: all foes take 150 Fire dmg"
+			}
+		},
+		"graphics": {
+			"animation": "h6/boss/Azkaal/Azkaal.json",
+			"map": "h6/units/h6BossAzkaal/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h6/units/h6BossAzkaal/map/atkL.png",
+			"mapAttackFromRight": "h6/units/h6BossAzkaal/map/atkR.png",
+			"iconLarge": "h6/units/h6BossAzkaal/iconLarge.png",
+			"iconSmall": "h6/units/h6BossAzkaal/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "ADVLATTK.wav",
+			"defend": "ADVLDFND.wav",
+			"killed": "ADVLKILL.wav",
+			"move": "ADVLMOVE.wav",
+			"wince": "ADVLWNCE.wav",
+			"startMoving": "ADVLEXT1.wav",
+			"endMoving": "ADVLEXT2.wav"
+		}
+	},
+	"h6BossBreederQueen": {
+		"name": {
+			"singular": "Breeder Queen",
+			"plural": "Breeder Queens"
+		},
+		"description": "Everyone has a mother, and the Breeder Queen is called the mother of every Breeder in Ashan. This creature is the masterpiece of Ur-Akkil, Demon Lord of Proliferation, and it exists only to fulfil Ur-Akkil's goal: not to destroy Ashan, but to spread chaotic forms of life across the whole world. The Breeder Queen has no motherly care at all; it simply breeds without end and spreads its offspring around. If they are not quick enough, it may devour them again.",
+		"faction": "inferno",
+		"level": 10,
+		"special": true,
+		"excludeFromRandomization": true,
+		"cost": {
+			"gold": 1000000,
+			"gems": 100
+		},
+		"speed": 0,
+		"hitPoints": 10000,
+		"attack": 75,
+		"defense": 75,
+		"damage": {
+			"min": 850,
+			"max": 900
+		},
+		"doubleWide": true,
+		"fightValue": 1000000,
+		"aiValue": 1000000,
+		"growth": 1,
+		"advMapAmount": {
+			"min": 1,
+			"max": 1
+		},
+		"abilities": {
+			"toaDemonic": {
+				"type": "tears-of-ashan:DEMONIC",
+				"val": 1,
+				"hidden": true
+			},
+			"king": {
+				"type": "KING",
+				"val": 2
+			},
+			"bossWard": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6BossWard",
+				"val": 0,
+				"icon": "h6/abilities/ab_Boss",
+				"stacking": "h6BossWard",
+				"description": "{Boss}\nSpeed can't drop; immune to Blind, mind, stun"
+			},
+			"mind": {
+				"type": "MIND_IMMUNITY",
+				"hidden": true
+			},
+			"fearless": {
+				"type": "FEARFUL",
+				"valueType": "AT_MOST",
+				"val": 0,
+				"description": "{Fearless}\nCannot be afraid"
+			},
+			"immune_blind": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "spell.blind",
+				"hidden": true
+			},
+			"immune_stoneGaze": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "spell.stoneGaze",
+				"hidden": true
+			},
+			"immune_paralyze": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "spell.paralyze",
+				"hidden": true
+			},
+			"immune_slow": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "spell.slow",
+				"hidden": true
+			},
+			"immune_forgetfulness": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "spell.forgetfulness",
+				"hidden": true
+			},
+			"immune_berserk": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "spell.berserk",
+				"hidden": true
+			},
+			"immune_hypnotize": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "spell.hypnotize",
+				"hidden": true
+			},
+			"demonic": {
+				"type": "H6_EVIL_H6C",
+				"val": 1,
+				"hidden": true
+			},
+			"fireResist": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.fire",
+				"val": 20,
+				"icon": "h6/abilities/ab_Fireproof_Skin",
+				"description": "{Demonic}\nFire spell damage -20%\nLight spell damage +20%"
+			},
+			"lightWeak": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.01lightSchool",
+				"val": -20,
+				"hidden": true
+			},
+			"shooter": {
+				"type": "SHOOTER"
+			},
+			"impShot": {
+				"type": "NO_DISTANCE_PENALTY",
+				"icon": "h6/abilities/ab_Imp_attack",
+				"description": "{Spawn Spray}\nRanged, no range penalty"
+			},
+			"immobile": {
+				"type": "NONE",
+				"icon": "h6/abilities/ab_Boss",
+				"description": "{Entrenched}\nCannot move"
+			},
+			"mowing": {
+				"type": "ATTACKS_ALL_ADJACENT",
+				"icon": "h6/abilities/ab_Mowing_Attack",
+				"description": "{Mowing Sweep}\nHits all adjacent foes,\n-5 Defense for 2 rounds"
+			},
+			"armorCrush": {
+				"type": "SPELL_AFTER_ATTACK",
+				"subtype": "spell.h6ArmorCrush",
+				"val": 100,
+				"addInfo": [
+					3,
+					0
+				],
+				"hidden": true
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 1,
+				"hidden": true
+			},
+			"noSpellcastByDefault": {
+				"type": "NO_SPELLCAST_BY_DEFAULT",
+				"hidden": true
+			},
+			"cast_h6AbStabbingAttack": {
+				"type": "SPELLCASTER",
+				"subtype": "spell.h6AbStabbingAttack",
+				"val": 3,
+				"icon": "h6/abilities/ab_Stabbing_Attack",
+				"description": "{Stabbing Attack}\nActive, Cooldown 1: pierces line, Dazes foes"
+			}
+		},
+		"graphics": {
+			"animation": "h6/boss/MotherBreeder/MotherBreeder.json",
+			"map": "h6/units/h6BossBreederQueen/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h6/units/h6BossBreederQueen/map/atkL.png",
+			"mapAttackFromRight": "h6/units/h6BossBreederQueen/map/atkR.png",
+			"iconLarge": "h6/units/h6BossBreederQueen/iconLarge.png",
+			"iconSmall": "h6/units/h6BossBreederQueen/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"frameAngles": [
+					90,
+					60,
+					45,
+					30,
+					0,
+					-30,
+					-45,
+					-60,
+					-90
+				],
+				"attackClimaxFrame": 6,
+				"projectile": "h6/boss/impQueen.json",
+				"offset": {
+					"upperX": 88,
+					"upperY": -10,
+					"middleX": 91,
+					"middleY": -7,
+					"lowerX": 75,
+					"lowerY": -17
+				}
+			}
+		},
+		"sound": {
+			"attack": "h6/inferno/Breeder_AttackLaunchMelee.wav",
+			"shoot": "h6/boss/BossMotherBreederImp_Impact.wav",
+			"wince": "h6/inferno/Breeder_Hit.wav",
+			"defend": "h6/inferno/Breeder_Defend.wav",
+			"killed": "h6/inferno/Breeder_Die.wav"
+		},
+		"shots": 24
+	},
+	"h6BossDaughterOfMalassa": {
+		"name": {
+			"singular": "Daughter of Malassa",
+			"plural": "Daughters of Malassa"
+		},
+		"description": "\"An avatar of Malassa is one thing; at least they spread destruction only by night. But a Daughter of Malassa is another matter. She is a mad Dragon Knight, a shadow of nightmare, a cursed soul.\" These words from the journal of Johann, a Falcon priest, sum up the little the Holy Empire knows about Dragon Knights and their dragon forms. The mages of the Seven Cities first coined the name Dragon Knight for those who have found the dragon within and sworn to protect Ashan. They may serve Malassa, Elrath or any of the Elemental Dragons. Powerful Dragon Knights master the ability to take the form of an avatar of the dragon they worship. Though their dragon form is smaller than a true dragon, it keeps most of the Dragon Knight's skills, which makes them deadly foes.",
+		"faction": "dungeon",
+		"level": 10,
+		"special": true,
+		"excludeFromRandomization": true,
+		"cost": {
+			"gold": 1000000,
+			"gems": 100
+		},
+		"speed": 20,
+		"hitPoints": 18000,
+		"attack": 75,
+		"defense": 75,
+		"damage": {
+			"min": 650,
+			"max": 750
+		},
+		"doubleWide": true,
+		"fightValue": 1000000,
+		"aiValue": 1000000,
+		"growth": 1,
+		"advMapAmount": {
+			"min": 1,
+			"max": 1
+		},
+		"abilities": {
+			"king": {
+				"type": "KING",
+				"val": 2
+			},
+			"bossWard": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6BossWard",
+				"val": 0,
+				"icon": "h6/abilities/ab_Boss",
+				"stacking": "h6BossWard",
+				"description": "{Boss}\nSpeed can't drop; immune to Blind, mind, stun"
+			},
+			"mind": {
+				"type": "MIND_IMMUNITY",
+				"hidden": true
+			},
+			"fearless": {
+				"type": "FEARFUL",
+				"valueType": "AT_MOST",
+				"val": 0,
+				"description": "{Fearless}\nCannot be afraid"
+			},
+			"immune_blind": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "spell.blind",
+				"hidden": true
+			},
+			"immune_stoneGaze": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "spell.stoneGaze",
+				"hidden": true
+			},
+			"immune_paralyze": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "spell.paralyze",
+				"hidden": true
+			},
+			"immune_slow": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "spell.slow",
+				"hidden": true
+			},
+			"immune_forgetfulness": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "spell.forgetfulness",
+				"hidden": true
+			},
+			"immune_berserk": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "spell.berserk",
+				"hidden": true
+			},
+			"immune_hypnotize": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "spell.hypnotize",
+				"hidden": true
+			},
+			"flying": {
+				"type": "FLYING"
+			},
+			"shooter": {
+				"type": "SHOOTER"
+			},
+			"breath": {
+				"type": "TWO_HEX_ATTACK_BREATH",
+				"icon": "h6/abilities/ab_Ominous_Presence",
+				"description": "{Dragon Breath}\nAttack also hits the hex behind the target"
+			},
+			"malassa": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6BossMalassa",
+				"val": 0,
+				"icon": "h6/abilities/ab_Fatigue",
+				"stacking": "h6BossMalassa",
+				"addInfo": {
+					"role": "carrier",
+					"pct": 40
+				},
+				"description": "{Exhaustion}\nMelee foes -40% dmg 2 rounds, max 2, no dispel"
+			},
+			"doomZone": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6BossMalassa",
+				"val": 0,
+				"hidden": true,
+				"description": "~",
+				"propagator": "BATTLE_WIDE",
+				"stacking": "h6DoomZone",
+				"addInfo": {
+					"role": "zone"
+				}
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 1,
+				"hidden": true
+			},
+			"noSpellcastByDefault": {
+				"type": "NO_SPELLCAST_BY_DEFAULT",
+				"hidden": true
+			},
+			"cast_h6AbDragonFlight": {
+				"type": "SPELLCASTER",
+				"subtype": "spell.h6AbDragonFlight",
+				"val": 3,
+				"icon": "h6/abilities/ab_Dragon_Flight",
+				"description": "{Dragon Flight}\nCooldown 5: flies; Dark Elemental by each foe"
+			},
+			"cast_h6AbMarkOfDoom": {
+				"type": "SPELLCASTER",
+				"subtype": "spell.h6AbMarkOfDoom",
+				"val": 3,
+				"icon": "h6/abilities/ab_Mark_of_Doom",
+				"description": "{Mark of Doom}\nCooldown 2, free: dispels, no buffs 2 rounds"
+			}
+		},
+		"graphics": {
+			"animation": "h6/boss/Lamyaboss/Lamyaboss.json",
+			"map": "h6/units/h6BossDaughterOfMalassa/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h6/units/h6BossDaughterOfMalassa/map/atkL.png",
+			"mapAttackFromRight": "h6/units/h6BossDaughterOfMalassa/map/atkR.png",
+			"iconLarge": "h6/units/h6BossDaughterOfMalassa/iconLarge.png",
+			"iconSmall": "h6/units/h6BossDaughterOfMalassa/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"frameAngles": [
+					90,
+					60,
+					45,
+					30,
+					0,
+					-30,
+					-45,
+					-60,
+					-90
+				],
+				"attackClimaxFrame": 6,
+				"projectile": "h6/boss/eyeBoltDaughter.json",
+				"offset": {
+					"upperX": 118,
+					"upperY": -58,
+					"middleX": 118,
+					"middleY": -50,
+					"lowerX": 55,
+					"lowerY": -5
+				}
+			}
+		},
+		"sound": {
+			"attack": "h6/boss/LamyaBoss_AttackLaunchMelee.wav",
+			"shoot": "h6/boss/LamyaBossDragonBreath_Source.wav",
+			"wince": "h6/boss/LamyaBoss_Hit.wav",
+			"killed": "h6/boss/LamyaBoss_Die.wav",
+			"move": "h6/boss/LamyaBoss_Move_Ground.wav",
+			"startMoving": "h6/boss/LamyaBoss_MoveStart_Ground.wav"
+		},
+		"shots": 24
+	},
+	"h6BossMotherNamtaru": {
+		"name": {
+			"singular": "Mother Namtaru",
+			"plural": "Mother Namtaru"
+		},
+		"description": "Mother Namtaru is the strangest creature to walk (or rather crawl) in Ashan. Half spirit and half ordinary flesh, she is the incarnation of the nightmares of Asha, the Dragon of Order. Like her offspring the Namtaru, the Mother herself is a hybrid of giant spider and woman, a form of Asha's aspect of death. Her three heads correspond to the three realms Asha rules: life, death and fate. Although she was imprisoned by the Naga for hundreds of years before the necromancers rescued her, Mother Namtaru did not choose revenge, but kept her sacred oath to protect the cycle of life and death. Mother Namtaru is worshipped by the necromancers, who use her sacred venom to transform themselves into mighty Vampire Lords. She regularly gives counsel to her worshippers through whispers, rhymes and even dreams. Her power is so great that they place her alongside the six Elemental Dragons.",
+		"faction": "necropolis",
+		"level": 10,
+		"special": true,
+		"excludeFromRandomization": true,
+		"cost": {
+			"gold": 1000000,
+			"gems": 100
+		},
+		"speed": 20,
+		"hitPoints": 6500,
+		"attack": 75,
+		"defense": 75,
+		"damage": {
+			"min": 440,
+			"max": 480
+		},
+		"doubleWide": true,
+		"fightValue": 1000000,
+		"aiValue": 1000000,
+		"growth": 1,
+		"advMapAmount": {
+			"min": 1,
+			"max": 1
+		},
+		"abilities": {
+			"king": {
+				"type": "KING",
+				"val": 2
+			},
+			"bossWard": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6BossWard",
+				"val": 0,
+				"icon": "h6/abilities/ab_Boss",
+				"stacking": "h6BossWard",
+				"description": "{Boss}\nSpeed can't drop; immune to Blind, mind, stun"
+			},
+			"mind": {
+				"type": "MIND_IMMUNITY",
+				"hidden": true
+			},
+			"fearless": {
+				"type": "FEARFUL",
+				"valueType": "AT_MOST",
+				"val": 0,
+				"description": "{Fearless}\nCannot be afraid"
+			},
+			"immune_blind": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "spell.blind",
+				"hidden": true
+			},
+			"immune_stoneGaze": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "spell.stoneGaze",
+				"hidden": true
+			},
+			"immune_paralyze": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "spell.paralyze",
+				"hidden": true
+			},
+			"immune_slow": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "spell.slow",
+				"hidden": true
+			},
+			"immune_forgetfulness": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "spell.forgetfulness",
+				"hidden": true
+			},
+			"immune_berserk": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "spell.berserk",
+				"hidden": true
+			},
+			"immune_hypnotize": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "spell.hypnotize",
+				"hidden": true
+			},
+			"spiritForm": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6SpiritForm",
+				"val": 50,
+				"icon": "h6/abilities/ab_Spirit_Form",
+				"stacking": "h6SpiritForm",
+				"description": "{Spirit Form}\n-50% damage taken until it first acts"
+			},
+			"undead": {
+				"type": "UNDEAD"
+			},
+			"waterResist": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.water",
+				"val": 20,
+				"hidden": true
+			},
+			"lightWeak": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.01lightSchool",
+				"val": -20,
+				"icon": "h6/abilities/ab_Undead",
+				"description": "{Undead}\nWater spell damage -20%\nLight spell damage +20%"
+			},
+			"dotZone": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6Dot",
+				"val": 0,
+				"hidden": true,
+				"description": "~",
+				"propagator": "BATTLE_WIDE",
+				"stacking": "h6DotZone",
+				"addInfo": {
+					"role": "zone",
+					"animation": "h6/dungeon/fx/poison"
+				}
+			},
+			"shooter": {
+				"type": "SHOOTER"
+			},
+			"venom": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6Venom",
+				"val": 0,
+				"icon": "h6/abilities/ab_Venomous_Touch",
+				"stacking": "h6Venom",
+				"addInfo": {
+					"per": 14,
+					"turns": 3
+				},
+				"description": "{Venomous Touch}\nMelee targets take 14 Earth/round for 3 rounds"
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 1,
+				"hidden": true
+			},
+			"noSpellcastByDefault": {
+				"type": "NO_SPELLCAST_BY_DEFAULT",
+				"hidden": true
+			},
+			"cast_h6AbNightmareWeb": {
+				"type": "SPELLCASTER",
+				"subtype": "spell.h6AbNightmareWeb",
+				"val": 3,
+				"icon": "h6/abilities/ab_Nightmare_Web",
+				"description": "{Nightmare Web}\nCooldown 1: target and neighbors lose a turn"
+			},
+			"cast_h6AbDreamShield": {
+				"type": "SPELLCASTER",
+				"subtype": "spell.h6AbDreamShield",
+				"val": 3,
+				"icon": "h6/abilities/ab_Dream_Shield",
+				"description": "{Dream Shield}\nCooldown 2: -90% damage taken (dispellable)"
+			},
+			"cast_h6AbSpiderLeap": {
+				"type": "SPELLCASTER",
+				"subtype": "spell.h6AbSpiderLeap",
+				"val": 3,
+				"icon": "h6/abilities/ab_Spider_Leap",
+				"description": "{Spider Leap}\nCooldown 3: leaps 3 hexes, hits all adjacent"
+			},
+			"cast_h6AbSpiritDevour": {
+				"type": "SPELLCASTER",
+				"subtype": "spell.h6AbSpiritDevour",
+				"val": 3,
+				"icon": "h6/abilities/ab_Spirit_Devourer",
+				"description": "{Spirit Devour}\nActive: drains adjacent ghosts, heals 300%"
+			}
+		},
+		"graphics": {
+			"animation": "h6/boss/MotherNamtaru/MotherNamtaru.json",
+			"map": "h6/units/h6BossMotherNamtaru/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h6/units/h6BossMotherNamtaru/map/atkL.png",
+			"mapAttackFromRight": "h6/units/h6BossMotherNamtaru/map/atkR.png",
+			"iconLarge": "h6/units/h6BossMotherNamtaru/iconLarge.png",
+			"iconSmall": "h6/units/h6BossMotherNamtaru/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"frameAngles": [
+					90,
+					60,
+					45,
+					30,
+					0,
+					-30,
+					-45,
+					-60,
+					-90
+				],
+				"attackClimaxFrame": 6,
+				"projectile": "h6/boss/namtaruBolt.json",
+				"offset": {
+					"upperX": 118,
+					"upperY": -103,
+					"middleX": 118,
+					"middleY": -95,
+					"lowerX": 116,
+					"lowerY": -87
+				}
+			}
+		},
+		"sound": {
+			"attack": "h6/boss/MotherNamtaruBoss_AttackLaunchMelee.wav",
+			"shoot": "h6/boss/MotherNamtaruBoss_AttackLaunchMeleeCrit.wav",
+			"wince": "h6/boss/MotherNamtaruBoss_Hit1.wav",
+			"killed": "h6/boss/MotherNamtaruBoss_Die.wav",
+			"move": "h6/boss/MotherNamtaruBoss_Move1.wav"
+		},
+		"shots": 24
+	},
+	"h6BossMichael": {
+		"name": {
+			"singular": "Michael",
+			"plural": "Michael"
+		},
+		"description": "Born into a family of angelic healers, Michael was nonetheless destined for another path. As a child, this charismatic leader was already seen as a military genius. His first battle as a commander saved Ashan from the demon invasion and defeated the infamous Prince of Destruction, Azkaal. When the conflict between the angels and the Faceless finally erupted into all-out war, Michael was charged with leading the Children of Light against the Children of Darkness. Those turbulent years came to be known as the Elder Wars, and tales of Michael's glorious victories have been told ever since, but they always end with the archangel's tragic death. So his sudden return to Ashan was proclaimed a miracle by the Holy Emperor Liam Falcon, and Michael soon became the emperor's personal military advisor.",
+		"faction": "castle",
+		"level": 10,
+		"special": true,
+		"excludeFromRandomization": true,
+		"cost": {
+			"gold": 1000000,
+			"gems": 100
+		},
+		"speed": 20,
+		"hitPoints": 10000,
+		"attack": 75,
+		"defense": 75,
+		"damage": {
+			"min": 750,
+			"max": 800
+		},
+		"doubleWide": true,
+		"fightValue": 1000000,
+		"aiValue": 1000000,
+		"growth": 1,
+		"advMapAmount": {
+			"min": 1,
+			"max": 1
+		},
+		"abilities": {
+			"king": {
+				"type": "KING",
+				"val": 2
+			},
+			"bossWard": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6BossWard",
+				"val": 0,
+				"icon": "h6/abilities/ab_Boss",
+				"stacking": "h6BossWard",
+				"description": "{Boss}\nSpeed can't drop; immune to Blind, mind, stun"
+			},
+			"mind": {
+				"type": "MIND_IMMUNITY",
+				"hidden": true
+			},
+			"fearless": {
+				"type": "FEARFUL",
+				"valueType": "AT_MOST",
+				"val": 0,
+				"description": "{Fearless}\nCannot be afraid"
+			},
+			"immune_blind": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "spell.blind",
+				"hidden": true
+			},
+			"immune_stoneGaze": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "spell.stoneGaze",
+				"hidden": true
+			},
+			"immune_paralyze": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "spell.paralyze",
+				"hidden": true
+			},
+			"immune_slow": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "spell.slow",
+				"hidden": true
+			},
+			"immune_forgetfulness": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "spell.forgetfulness",
+				"hidden": true
+			},
+			"immune_berserk": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "spell.berserk",
+				"hidden": true
+			},
+			"immune_hypnotize": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "spell.hypnotize",
+				"hidden": true
+			},
+			"purity": {
+				"type": "NEGATIVE_EFFECTS_IMMUNITY",
+				"subtype": "spellSchool.any",
+				"icon": "h6/abilities/ab_Absolute_Purity",
+				"description": "{Absolute Purity}\nImmune to all negative spells"
+			},
+			"enrage": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6Enrage",
+				"val": 0,
+				"icon": "h6/abilities/ab_Enrage",
+				"stacking": "h6Enrage",
+				"addInfo": {
+					"mode": "minion",
+					"pct": 35,
+					"attacks": 1,
+					"speed": 5,
+					"dmg": 30,
+					"animation": "h6/boss/fx/enrage",
+					"minion": [
+						"heroes-memorial.h6:h6BossMichaelGuard"
+					]
+				},
+				"description": "{Vengeful Wrath}\nEscorts dead: +1 attack, +5 Speed, +30% damage"
+			},
+			"flying": {
+				"type": "FLYING"
+			},
+			"devotion": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6BossMichael",
+				"val": 0,
+				"icon": "h6/abilities/ab_Avenging_Rage",
+				"stacking": "h6BossMichael",
+				"addInfo": {
+					"pct": 10,
+					"minion": [
+						"heroes-memorial.h6:h6BossMichaelGuard"
+					]
+				},
+				"description": "{Devotion}\nGuards take 10% of the damage it receives"
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 1,
+				"hidden": true
+			},
+			"noSpellcastByDefault": {
+				"type": "NO_SPELLCAST_BY_DEFAULT",
+				"hidden": true
+			},
+			"cast_h6AbWordOfLight": {
+				"type": "SPELLCASTER",
+				"subtype": "spell.h6AbWordOfLight",
+				"val": 3,
+				"icon": "h6/abilities/ab_Improved_Word_of_Light",
+				"description": "{Empowered Word}\nCooldown 3: revives guards, Light dmg to foes"
+			},
+			"cast_h6AbHolyBlades": {
+				"type": "SPELLCASTER",
+				"subtype": "spell.h6AbHolyBlades",
+				"val": 3,
+				"icon": "h6/abilities/ab_Zone_of_Holy_Blades",
+				"description": "{Holy Blades}\nCooldown 2: allies in 3x3 +50% dmg, 2 rounds"
+			},
+			"cast_h6AbLastWish": {
+				"type": "SPELLCASTER",
+				"subtype": "spell.h6AbLastWish",
+				"val": 3,
+				"icon": "h6/abilities/ab_Last_Wish",
+				"description": "{Last Wish}\nCooldown 2: guard corpses deal 1250 Light dmg"
+			}
+		},
+		"graphics": {
+			"animation": "h6/boss/BossMichael/BossMichael.json",
+			"map": "h6/units/h6BossMichael/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h6/units/h6BossMichael/map/atkL.png",
+			"mapAttackFromRight": "h6/units/h6BossMichael/map/atkR.png",
+			"iconLarge": "h6/units/h6BossMichael/iconLarge.png",
+			"iconSmall": "h6/units/h6BossMichael/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h6/boss/BossMichael_AttackLaunchMelee1.wav",
+			"wince": "h6/boss/BossMichael_Hit.wav",
+			"killed": "h6/boss/BossMichael_Die.wav",
+			"move": "h6/boss/BossMichael_FlyLoop1.wav",
+			"startMoving": "h6/boss/BossMichael_FlyStart.wav",
+			"endMoving": "h6/boss/BossMichael_FlyEnd.wav"
+		}
+	},
+	"h6BossThunderbird": {
+		"name": {
+			"singular": "Thunderbird",
+			"plural": "Thunderbirds"
+		},
+		"description": "The spirit world is divided into elemental planes, each with its own kinds of spirits and elementals, the mightiest of which are the dragons themselves. The Thunderbird, which the libraries of the Seven Cities also call the Roc, is the mightiest spirit of the elemental plane of Air. When it comes to the material plane, every beat of the Thunderbird's mighty wings raises storms and hurricanes. Most of the time they can only be summoned by wizards or priests of Ylath through complex rituals, but now and then, when lightning strikes the ground, it brings a Thunderbird egg.",
+		"faction": "neutral",
+		"level": 10,
+		"special": true,
+		"excludeFromRandomization": true,
+		"cost": {
+			"gold": 1000000,
+			"gems": 100
+		},
+		"speed": 20,
+		"hitPoints": 6500,
+		"attack": 75,
+		"defense": 75,
+		"damage": {
+			"min": 45,
+			"max": 52
+		},
+		"doubleWide": true,
+		"fightValue": 1000000,
+		"aiValue": 1000000,
+		"growth": 1,
+		"advMapAmount": {
+			"min": 1,
+			"max": 1
+		},
+		"abilities": {
+			"king": {
+				"type": "KING",
+				"val": 2
+			},
+			"bossWard": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6BossWard",
+				"val": 0,
+				"icon": "h6/abilities/ab_Boss",
+				"stacking": "h6BossWard",
+				"description": "{Boss}\nSpeed can't drop; immune to Blind, mind, stun"
+			},
+			"mind": {
+				"type": "MIND_IMMUNITY",
+				"hidden": true
+			},
+			"fearless": {
+				"type": "FEARFUL",
+				"valueType": "AT_MOST",
+				"val": 0,
+				"description": "{Fearless}\nCannot be afraid"
+			},
+			"immune_blind": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "spell.blind",
+				"hidden": true
+			},
+			"immune_stoneGaze": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "spell.stoneGaze",
+				"hidden": true
+			},
+			"immune_paralyze": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "spell.paralyze",
+				"hidden": true
+			},
+			"immune_slow": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "spell.slow",
+				"hidden": true
+			},
+			"immune_forgetfulness": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "spell.forgetfulness",
+				"hidden": true
+			},
+			"immune_berserk": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "spell.berserk",
+				"hidden": true
+			},
+			"immune_hypnotize": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "spell.hypnotize",
+				"hidden": true
+			},
+			"spiritForm": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6SpiritForm",
+				"val": 50,
+				"icon": "h6/abilities/ab_Spirit_Form",
+				"stacking": "h6SpiritForm",
+				"description": "{Spirit Form}\n-50% damage taken until it first acts"
+			},
+			"flying": {
+				"type": "FLYING"
+			},
+			"affinity": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.air",
+				"val": 50,
+				"icon": "h6/abilities/ab_Elemental_Affinity",
+				"description": "{Elemental Affinity}\nAir: half dmg, no curses. +50% vs Earth Elem."
+			},
+			"affinityImmune": {
+				"type": "NEGATIVE_EFFECTS_IMMUNITY",
+				"subtype": "spellSchool.air",
+				"hidden": true
+			},
+			"hate0": {
+				"type": "HATE",
+				"subtype": "creature.h6NeutralEarthElemental",
+				"val": 50,
+				"hidden": true
+			},
+			"hate1": {
+				"type": "HATE",
+				"subtype": "creature.earthElemental",
+				"val": 50,
+				"hidden": true
+			},
+			"hate2": {
+				"type": "HATE",
+				"subtype": "creature.magmaElemental",
+				"val": 50,
+				"hidden": true
+			},
+			"dotZone": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6Dot",
+				"val": 0,
+				"hidden": true,
+				"description": "~",
+				"propagator": "BATTLE_WIDE",
+				"stacking": "h6DotZone",
+				"addInfo": {
+					"role": "zone",
+					"animation": "h6/boss/fx/strike"
+				}
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 1,
+				"hidden": true
+			},
+			"noSpellcastByDefault": {
+				"type": "NO_SPELLCAST_BY_DEFAULT",
+				"hidden": true
+			},
+			"cast_h6AbDazingWinds": {
+				"type": "SPELLCASTER",
+				"subtype": "spell.h6AbDazingWinds",
+				"val": 3,
+				"icon": "h6/abilities/ab_Dazing_Winds",
+				"description": "{Dazing Winds}\nActive, Cooldown 2: target can't act 2 rounds"
+			},
+			"cast_h6AbStaticDischarge": {
+				"type": "SPELLCASTER",
+				"subtype": "spell.h6AbStaticDischarge",
+				"val": 3,
+				"icon": "h6/abilities/ab_Static_Discharge",
+				"description": "{Static Discharge}\nCooldown 2: 100 Air to foes, +100 per neighbor"
+			},
+			"cast_h6AbBossChainLightning": {
+				"type": "SPELLCASTER",
+				"subtype": "spell.h6AbBossChainLightning",
+				"val": 3,
+				"icon": "h6/abilities/ab_Chain_Lightning",
+				"description": "{Thunder Chain}\nActive, Cooldown 2: 150 Air, 3 halving jumps"
+			},
+			"cast_h6AbLightningStrikes": {
+				"type": "SPELLCASTER",
+				"subtype": "spell.h6AbLightningStrikes",
+				"val": 3,
+				"icon": "h6/abilities/ab_Lightning_Strikes_Thunderbird",
+				"description": "{Lightning Strikes}\nActive, Cooldown 2: 300 Air/round for 4 rounds"
+			},
+			"cast_h6AbHurricane": {
+				"type": "SPELLCASTER",
+				"subtype": "spell.h6AbHurricane",
+				"val": 3,
+				"icon": "h6/abilities/ab_Hurricane",
+				"description": "{Hurricane}\nActive, Cooldown 3: foes in 2 hexes pushed 2"
+			}
+		},
+		"graphics": {
+			"animation": "h6/boss/Boss_Thunderbird/Boss_Thunderbird.json",
+			"map": "h6/units/h6BossThunderbird/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h6/units/h6BossThunderbird/map/atkL.png",
+			"mapAttackFromRight": "h6/units/h6BossThunderbird/map/atkR.png",
+			"iconLarge": "h6/units/h6BossThunderbird/iconLarge.png",
+			"iconSmall": "h6/units/h6BossThunderbird/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "TBRDATTK.wav",
+			"defend": "TBRDDFND.wav",
+			"killed": "TBRDKILL.wav",
+			"move": "TBRDMOVE.wav",
+			"wince": "TBRDWNCE.wav"
+		}
+	},
+	"h6BossDragonwraith": {
+		"name": {
+			"singular": "Dragonwraith",
+			"plural": "Dragonwraiths"
+		},
+		"description": "Even lesser dragons are still powerful magical creatures, and fearsome foes. So it is no surprise that the necromancers of the Cult of the Spider tried from the very start to find a way to raise dead dragons as undead servants. All return to Asha, even her own children. Unfortunately, their efforts failed for decades, until Belketh, founder and Grand Archon of the Cult of the Spider, discovered why. He realized that dragons exist in both the material and the spirit worlds; to raise such a creature from death, a necromancer must first find and control the dragon's spirit form. The ghostly Dragonwraith is the result of Belketh's experiments, and the pride of his army.",
+		"faction": "necropolis",
+		"level": 10,
+		"special": true,
+		"excludeFromRandomization": true,
+		"cost": {
+			"gold": 1000000,
+			"gems": 100
+		},
+		"speed": 20,
+		"hitPoints": 7000,
+		"attack": 75,
+		"defense": 75,
+		"damage": {
+			"min": 100,
+			"max": 150
+		},
+		"doubleWide": true,
+		"fightValue": 1000000,
+		"aiValue": 1000000,
+		"growth": 1,
+		"advMapAmount": {
+			"min": 1,
+			"max": 1
+		},
+		"abilities": {
+			"king": {
+				"type": "KING",
+				"val": 2
+			},
+			"bossWard": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6BossWard",
+				"val": 0,
+				"icon": "h6/abilities/ab_Boss",
+				"stacking": "h6BossWard",
+				"description": "{Boss}\nSpeed can't drop; immune to Blind, mind, stun"
+			},
+			"mind": {
+				"type": "MIND_IMMUNITY",
+				"hidden": true
+			},
+			"fearless": {
+				"type": "FEARFUL",
+				"valueType": "AT_MOST",
+				"val": 0,
+				"description": "{Fearless}\nCannot be afraid"
+			},
+			"immune_blind": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "spell.blind",
+				"hidden": true
+			},
+			"immune_stoneGaze": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "spell.stoneGaze",
+				"hidden": true
+			},
+			"immune_paralyze": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "spell.paralyze",
+				"hidden": true
+			},
+			"immune_slow": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "spell.slow",
+				"hidden": true
+			},
+			"immune_forgetfulness": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "spell.forgetfulness",
+				"hidden": true
+			},
+			"immune_berserk": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "spell.berserk",
+				"hidden": true
+			},
+			"immune_hypnotize": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "spell.hypnotize",
+				"hidden": true
+			},
+			"spiritForm": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6SpiritForm",
+				"val": 50,
+				"icon": "h6/abilities/ab_Spirit_Form",
+				"stacking": "h6SpiritForm",
+				"description": "{Spirit Form}\n-50% damage taken until it first acts"
+			},
+			"undead": {
+				"type": "UNDEAD"
+			},
+			"waterResist": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.water",
+				"val": 20,
+				"hidden": true
+			},
+			"lightWeak": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.01lightSchool",
+				"val": -20,
+				"icon": "h6/abilities/ab_Undead",
+				"description": "{Undead}\nWater spell damage -20%\nLight spell damage +20%"
+			},
+			"flying": {
+				"type": "FLYING"
+			},
+			"dragon": {
+				"type": "DRAGON_NATURE"
+			},
+			"wraith": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6BossWraith",
+				"val": 0,
+				"icon": "h6/abilities/ab_Withering_Wave",
+				"stacking": "h6BossWraith",
+				"addInfo": {
+					"role": "dragon",
+					"per": 80,
+					"minion": [
+						"heroes-memorial.h6:h6BossChanneler"
+					],
+					"step": 600,
+					"bonus": 10,
+					"max": 100,
+					"animation": "h6/boss/fx/wave"
+				},
+				"description": "{Wither Wave, Void Power}\nWith Channelers: foes take 80 Dark/round;\n+10% dmg per 600 HP healed, max +100%"
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 1,
+				"hidden": true
+			},
+			"noSpellcastByDefault": {
+				"type": "NO_SPELLCAST_BY_DEFAULT",
+				"hidden": true
+			},
+			"cast_h6AbShrivellingBreath": {
+				"type": "SPELLCASTER",
+				"subtype": "spell.h6AbShrivellingBreath",
+				"val": 3,
+				"icon": "h6/abilities/ab_Shrivelling_Breath",
+				"description": "{Shrivelling Breath}\nCooldown 1: 100 Dark dmg to foe and neighbors"
+			},
+			"cast_h6AbDragonwraithCurse": {
+				"type": "SPELLCASTER",
+				"subtype": "spell.h6AbDragonwraithCurse",
+				"val": 3,
+				"icon": "h6/abilities/ab_Curse_of_the_Dragonwraith",
+				"description": "{Wraith Curse}\nCooldown 1: Dark dmg; its dmg heals the wraith"
+			},
+			"curseZone": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6CurseLeech",
+				"val": 0,
+				"hidden": true,
+				"description": "~",
+				"propagator": "BATTLE_WIDE",
+				"stacking": "h6CurseLeechZone",
+				"addInfo": {
+					"role": "zone"
+				}
+			}
+		},
+		"graphics": {
+			"animation": "h6/boss/DragonWraith/DragonWraith.json",
+			"map": "h6/units/h6BossDragonwraith/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h6/units/h6BossDragonwraith/map/atkL.png",
+			"mapAttackFromRight": "h6/units/h6BossDragonwraith/map/atkR.png",
+			"iconLarge": "h6/units/h6BossDragonwraith/iconLarge.png",
+			"iconSmall": "h6/units/h6BossDragonwraith/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h6/boss/Dragonwraith_AttackLaunchMelee.wav",
+			"wince": "h6/boss/Dragonwraith_Hit.wav",
+			"defend": "h6/boss/Dragonwraith_Defend.wav",
+			"killed": "h6/boss/Dragonwraith_Die.wav",
+			"move": "h6/boss/Dragonwraith_FlyLoop.wav",
+			"startMoving": "h6/boss/Dragonwraith_FlyStart.wav",
+			"endMoving": "h6/boss/Dragonwraith_FlyEnd.wav"
+		}
+	},
+	"h6BossAvatarOfVoid": {
+		"name": {
+			"singular": "Avatar of the Void",
+			"plural": "Avatars of the Void"
+		},
+		"description": "If a man dies in battle and no one remembers his courage, did he ever truly exist in this world? These words, spoken by Travis, captain of the Wind Blades, while fighting a mysterious sorcerer near Stonehelm, were long taken as a simple tribute to the honor of fallen warriors. But a recent reading of his journal reveals that when Travis said them, he was fighting an Avatar of the Void. \"I saw my men fighting a huge, blurry shadow, but whenever one of them fell, I could no longer remember his name.\" The Avatar of the Void has no feelings at all; it cannot even be called evil, nor does it act from evil motives. It is more like a stain of shadow seeping through the barrier of reality. As it grows and spreads, it affects everything it touches, wiping out objects, souls, even memories.",
+		"faction": "neutral",
+		"level": 10,
+		"special": true,
+		"excludeFromRandomization": true,
+		"cost": {
+			"gold": 1000000,
+			"gems": 100
+		},
+		"speed": 0,
+		"hitPoints": 25000,
+		"attack": 75,
+		"defense": 75,
+		"damage": {
+			"min": 750,
+			"max": 1000
+		},
+		"doubleWide": true,
+		"fightValue": 1000000,
+		"aiValue": 1000000,
+		"growth": 1,
+		"advMapAmount": {
+			"min": 1,
+			"max": 1
+		},
+		"abilities": {
+			"king": {
+				"type": "KING",
+				"val": 2
+			},
+			"bossWard": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6BossWard",
+				"val": 0,
+				"icon": "h6/abilities/ab_Boss",
+				"stacking": "h6BossWard",
+				"description": "{Boss}\nSpeed can't drop; immune to Blind, mind, stun"
+			},
+			"mind": {
+				"type": "MIND_IMMUNITY",
+				"hidden": true
+			},
+			"fearless": {
+				"type": "FEARFUL",
+				"valueType": "AT_MOST",
+				"val": 0,
+				"description": "{Fearless}\nCannot be afraid"
+			},
+			"immune_blind": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "spell.blind",
+				"hidden": true
+			},
+			"immune_stoneGaze": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "spell.stoneGaze",
+				"hidden": true
+			},
+			"immune_paralyze": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "spell.paralyze",
+				"hidden": true
+			},
+			"immune_slow": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "spell.slow",
+				"hidden": true
+			},
+			"immune_forgetfulness": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "spell.forgetfulness",
+				"hidden": true
+			},
+			"immune_berserk": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "spell.berserk",
+				"hidden": true
+			},
+			"immune_hypnotize": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "spell.hypnotize",
+				"hidden": true
+			},
+			"immobile": {
+				"type": "NONE",
+				"icon": "h6/abilities/ab_Boss",
+				"description": "{Void Body}\nCannot move"
+			},
+			"avatar": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6BossAvatar",
+				"val": 0,
+				"icon": "h6/abilities/ab_Curse_of_Oblivion",
+				"stacking": "h6BossAvatar",
+				"addInfo": {
+					"aura": 60,
+					"daze": "heroes-memorial:h6Dazed",
+					"reflect": 10,
+					"gate": 3,
+					"heal": 8,
+					"circle": 100,
+					"animation": "h6/boss/fx/eradication"
+				},
+				"description": "{Oblivion, Dread, Erase}\nIgnores 1st hit; Daze -60% aura; push; reflect"
+			},
+			"dotZone": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6Dot",
+				"val": 0,
+				"hidden": true,
+				"description": "~",
+				"propagator": "BATTLE_WIDE",
+				"stacking": "h6DotZone",
+				"addInfo": {
+					"role": "zone",
+					"animation": "h6/boss/fx/rift"
+				}
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 1,
+				"hidden": true
+			},
+			"noSpellcastByDefault": {
+				"type": "NO_SPELLCAST_BY_DEFAULT",
+				"hidden": true
+			},
+			"cast_h6AbVoidGate": {
+				"type": "SPELLCASTER",
+				"subtype": "spell.h6AbVoidGate",
+				"val": 3,
+				"icon": "h6/abilities/ab_Void_Gate",
+				"description": "{Void Gate}\nCooldown 1: 2-round gate, foe loses 3%/round"
+			},
+			"cast_h6AbVoidRift": {
+				"type": "SPELLCASTER",
+				"subtype": "spell.h6AbVoidRift",
+				"val": 3,
+				"icon": "h6/abilities/ab_Void_Rift",
+				"description": "{Void Rift}\nCooldown 4: pulls foes in, 4 rounds of 200 dmg"
+			},
+			"cast_h6AbVoidCircle": {
+				"type": "SPELLCASTER",
+				"subtype": "spell.h6AbVoidCircle",
+				"val": 3,
+				"icon": "h6/abilities/ab_Circle_of_the_Void",
+				"description": "{Void Circle}\nCooldown 5: outer foes -90% dmg, 4 rounds"
+			},
+			"cast_h6AbVoidQuake": {
+				"type": "SPELLCASTER",
+				"subtype": "spell.h6AbVoidQuake",
+				"val": 3,
+				"icon": "h6/abilities/ab_Void_Quake",
+				"description": "{Void Quake}\nActive, Cooldown 4: hits all nearby, pushes 2"
+			}
+		},
+		"graphics": {
+			"animation": "h6/boss/Avatar_of_void/Avatar_of_void.json",
+			"map": "h6/units/h6BossAvatarOfVoid/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h6/units/h6BossAvatarOfVoid/map/atkL.png",
+			"mapAttackFromRight": "h6/units/h6BossAvatarOfVoid/map/atkR.png",
+			"iconLarge": "h6/units/h6BossAvatarOfVoid/iconLarge.png",
+			"iconSmall": "h6/units/h6BossAvatarOfVoid/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h6/boss/AvatarOfTheVoid_AttackLaunchMelee.wav",
+			"wince": "h6/boss/AvatarOfTheVoid_Hit.wav",
+			"killed": "h6/boss/AvatarOfTheVoid_Die.wav"
+		}
+	},
+	"h6BossEnragedKirin": {
+		"name": {
+			"singular": "Enraged Kirin",
+			"plural": "Enraged Kirin"
+		},
+		"description": "After finding a mighty Tear of Asha during the Autumn Wind expedition, Daimyo Oshiro believed he could use its power to launch a coup and overthrow the Eternal Empress. He failed, and he and his people were to be put to death. Oshiro made a bargain with the Kirin: the Kirin would carry his people to safety, and in return Oshiro would give up his own life. But Oshiro lied. Using the power of the Tear of Asha, he built an impregnable fortress to keep the Kirin from coming to take his life. After 25 years of waiting, the Kirin became an utterly maddened creature that attacks anyone who comes near Oshiro's sanctuary.",
+		"faction": "neutral",
+		"level": 10,
+		"special": true,
+		"excludeFromRandomization": true,
+		"cost": {
+			"gold": 1000000,
+			"gems": 100
+		},
+		"speed": 18,
+		"hitPoints": 8000,
+		"attack": 75,
+		"defense": 75,
+		"damage": {
+			"min": 280,
+			"max": 360
+		},
+		"doubleWide": true,
+		"fightValue": 1000000,
+		"aiValue": 1000000,
+		"growth": 1,
+		"advMapAmount": {
+			"min": 1,
+			"max": 1
+		},
+		"abilities": {
+			"king": {
+				"type": "KING",
+				"val": 2
+			},
+			"bossWard": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6BossWard",
+				"val": 0,
+				"icon": "h6/abilities/ab_Boss",
+				"stacking": "h6BossWard",
+				"description": "{Boss}\nSpeed can't drop; immune to Blind, mind, stun"
+			},
+			"mind": {
+				"type": "MIND_IMMUNITY",
+				"hidden": true
+			},
+			"fearless": {
+				"type": "FEARFUL",
+				"valueType": "AT_MOST",
+				"val": 0,
+				"description": "{Fearless}\nCannot be afraid"
+			},
+			"immune_blind": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "spell.blind",
+				"hidden": true
+			},
+			"immune_stoneGaze": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "spell.stoneGaze",
+				"hidden": true
+			},
+			"immune_paralyze": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "spell.paralyze",
+				"hidden": true
+			},
+			"immune_slow": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "spell.slow",
+				"hidden": true
+			},
+			"immune_forgetfulness": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "spell.forgetfulness",
+				"hidden": true
+			},
+			"immune_berserk": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "spell.berserk",
+				"hidden": true
+			},
+			"immune_hypnotize": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "spell.hypnotize",
+				"hidden": true
+			},
+			"spiritForm": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6SpiritForm",
+				"val": 50,
+				"icon": "h6/abilities/ab_Spirit_Form",
+				"stacking": "h6SpiritForm",
+				"description": "{Spirit Form}\n-50% damage taken until it first acts"
+			},
+			"enrage": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6Enrage",
+				"val": 0,
+				"icon": "h6/abilities/ab_Enrage",
+				"stacking": "h6Enrage",
+				"addInfo": {
+					"mode": "hp",
+					"pct": 35,
+					"attacks": 1,
+					"speed": 5,
+					"dmg": 30,
+					"animation": "h6/boss/fx/enrage"
+				},
+				"description": "{Furious Outburst}\nBelow 35% HP: +1 attack, +5 Speed, +30% dmg"
+			},
+			"kirin": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6BossKirin",
+				"val": 0,
+				"icon": "h6/abilities/ab_Riptide",
+				"stacking": "h6BossKirin",
+				"addInfo": {
+					"per": 350,
+					"animation": "h6/boss/fx/riptideHit"
+				},
+				"hidden": true,
+				"description": "~"
+			},
+			"hail": {
+				"type": "SPELL_AFTER_ATTACK",
+				"subtype": "heroes-memorial:spell.h6Frozen",
+				"val": 100,
+				"addInfo": [
+					3,
+					0
+				],
+				"icon": "h6/abilities/ab_Frenzy_Hailstorm_Aura",
+				"description": "{Raging Hail}\nAttack Freezes target and hits its neighbors"
+			},
+			"hailSplash": {
+				"type": "WIDE_BREATH",
+				"hidden": true
+			},
+			"waterResist": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.water",
+				"val": 50,
+				"icon": "h6/abilities/ab_Resistance_to_Water",
+				"description": "{Water Resistance}\nWater spell damage -50%\nAir spell damage +25%"
+			},
+			"airWeak": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.air",
+				"val": -25,
+				"hidden": true
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 1,
+				"hidden": true
+			},
+			"noSpellcastByDefault": {
+				"type": "NO_SPELLCAST_BY_DEFAULT",
+				"hidden": true
+			},
+			"cast_h6AbMonsoon": {
+				"type": "SPELLCASTER",
+				"subtype": "spell.h6AbMonsoon",
+				"val": 3,
+				"icon": "h6/abilities/ab_Monsoon_Lighting",
+				"description": "{Monsoon}\nActive, Cooldown 4: 200 Air in 2 hexes, Soaked"
+			},
+			"cast_h6AbRiptide": {
+				"type": "SPELLCASTER",
+				"subtype": "spell.h6AbRiptide",
+				"val": 3,
+				"icon": "h6/abilities/ab_Riptide",
+				"description": "{Riptide}\nCooldown 3: marks hex, next round 350 Water"
+			},
+			"cast_h6AbGreatTsunami": {
+				"type": "SPELLCASTER",
+				"subtype": "spell.h6AbGreatTsunami",
+				"val": 3,
+				"icon": "h6/abilities/ab_Great_Tsunami",
+				"description": "{Great Tsunami}\nCooldown 5: all foes 250 Water, Dazed, pushed"
+			}
+		},
+		"graphics": {
+			"animation": "h6/boss/Boss_Enraged_Kirin/Boss_Enraged_Kirin.json",
+			"map": "h6/units/h6BossEnragedKirin/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h6/units/h6BossEnragedKirin/map/atkL.png",
+			"mapAttackFromRight": "h6/units/h6BossEnragedKirin/map/atkR.png",
+			"iconLarge": "h6/units/h6BossEnragedKirin/iconLarge.png",
+			"iconSmall": "h6/units/h6BossEnragedKirin/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h6/boss/EnragedKirin_Ability3.wav",
+			"defend": "WELMDFND.wav",
+			"killed": "WELMKILL.wav",
+			"move": "WELMMOVE.wav",
+			"wince": "WELMWNCE.wav"
+		}
+	},
+	"h6BossMichaelGuard": {
+		"name": {
+			"singular": "Michael's Guard",
+			"plural": "Michael's Guards"
+		},
+		"description": "",
+		"faction": "castle",
+		"level": 7,
+		"special": true,
+		"excludeFromRandomization": true,
+		"cost": {
+			"gold": 2000
+		},
+		"speed": 10,
+		"hitPoints": 1000,
+		"attack": 40,
+		"defense": 40,
+		"damage": {
+			"min": 90,
+			"max": 110
+		},
+		"doubleWide": false,
+		"fightValue": 4000,
+		"aiValue": 5000,
+		"growth": 1,
+		"advMapAmount": {
+			"min": 1,
+			"max": 1
+		},
+		"abilities": {
+			"flying": {
+				"type": "FLYING"
+			},
+			"teleport": {
+				"type": "FLYING",
+				"subtype": "movementTeleporting"
+			},
+			"guard": {
+				"type": "NONE",
+				"icon": "h6/abilities/ab_Spirit_Form",
+				"description": "{Michael's Guard}\nShares his damage; corpse fuels Last Wish"
+			},
+			"lightImmune": {
+				"type": "SPELL_SCHOOL_IMMUNITY",
+				"subtype": "spellSchool.01lightSchool",
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h6/haven/LightElemental_upg/LightElemental_upg.json",
+			"map": "h6/units/h6BossMichaelGuard/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h6/units/h6BossMichaelGuard/map/atkL.png",
+			"mapAttackFromRight": "h6/units/h6BossMichaelGuard/map/atkR.png",
+			"iconLarge": "h6/units/h6HavenBlazingGlory/iconLarge.png",
+			"iconSmall": "h6/units/h6HavenBlazingGlory/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h6/haven/RadiantGlory_Attack.ogg",
+			"wince": "h6/haven/RadiantGlory_Hit.ogg",
+			"defend": "h6/haven/RadiantGlory_Defend.ogg",
+			"killed": "h6/haven/LightElemental_Die.wav",
+			"move": "h6/haven/LightElemental_Move.wav"
+		}
+	},
+	"h6BossChanneler": {
+		"name": {
+			"singular": "Channeler",
+			"plural": "Channelers"
+		},
+		"description": "",
+		"faction": "necropolis",
+		"level": 3,
+		"special": true,
+		"excludeFromRandomization": true,
+		"cost": {
+			"gold": 60
+		},
+		"speed": 5,
+		"hitPoints": 7,
+		"attack": 10,
+		"defense": 10,
+		"damage": {
+			"min": 4,
+			"max": 6
+		},
+		"doubleWide": false,
+		"fightValue": 80,
+		"aiValue": 100,
+		"growth": 1,
+		"advMapAmount": {
+			"min": 1,
+			"max": 1
+		},
+		"abilities": {
+			"channel": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6BossWraith",
+				"val": 0,
+				"icon": "h6/abilities/ab_Withering_Wave",
+				"stacking": "h6Channel",
+				"addInfo": {
+					"role": "channeler",
+					"heal": 11,
+					"charges": 10,
+					"boss": [
+						"heroes-memorial.h6:h6BossDragonwraith"
+					],
+					"animation": "h6/boss/fx/channel"
+				},
+				"description": "{Channel}\nHeals Dragonwraith 11 HP x count/round (x10)"
+			}
+		},
+		"graphics": {
+			"animation": "h6/necropolis/Lich/Lich.json",
+			"map": "h6/units/h6BossChanneler/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h6/units/h6BossChanneler/map/atkL.png",
+			"mapAttackFromRight": "h6/units/h6BossChanneler/map/atkR.png",
+			"iconLarge": "h6/units/h6NecroLich/iconLarge.png",
+			"iconSmall": "h6/units/h6NecroLich/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h6/necropolis/Lich_AttackLaunchMelee.wav",
+			"shoot": "h6/necropolis/Lich_AttackLaunchRanged.wav",
+			"wince": "h6/necropolis/Lich_Hit.wav",
+			"defend": "h6/necropolis/Lich_Defend.wav",
+			"killed": "h6/necropolis/Lich_Die.wav",
+			"move": "h6/necropolis/Lich_Move.wav"
+		}
+	},
+	"h6BossNamtaruGhost": {
+		"name": {
+			"singular": "Namtaru's Ghost",
+			"plural": "Namtaru's Ghosts"
+		},
+		"description": "",
+		"faction": "necropolis",
+		"level": 3,
+		"special": true,
+		"excludeFromRandomization": true,
+		"cost": {
+			"gold": 60
+		},
+		"speed": 6,
+		"hitPoints": 40,
+		"attack": 8,
+		"defense": 8,
+		"damage": {
+			"min": 5,
+			"max": 7
+		},
+		"doubleWide": false,
+		"fightValue": 80,
+		"aiValue": 100,
+		"growth": 1,
+		"advMapAmount": {
+			"min": 1,
+			"max": 1
+		},
+		"abilities": {
+			"flying": {
+				"type": "FLYING"
+			},
+			"undead": {
+				"type": "UNDEAD"
+			},
+			"waterResist": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.water",
+				"val": 20,
+				"hidden": true
+			},
+			"lightWeak": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.01lightSchool",
+				"val": -20,
+				"icon": "h6/abilities/ab_Undead",
+				"description": "{Undead}\nWater spell damage -20%\nLight spell damage +20%"
+			},
+			"spiritForm": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6SpiritForm",
+				"val": 50,
+				"icon": "h6/abilities/ab_Spirit_Form",
+				"stacking": "h6SpiritForm",
+				"description": "{Spirit Form}\n-50% damage taken until it first acts"
+			},
+			"ghost": {
+				"type": "NONE",
+				"icon": "h6/abilities/ab_Spirit_Form",
+				"description": "{Namtaru's Ghost}\nMother Namtaru can drain them to heal"
+			}
+		},
+		"graphics": {
+			"animation": "h6/necropolis/wraith/wraith.json",
+			"map": "h6/units/h6BossNamtaruGhost/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h6/units/h6BossNamtaruGhost/map/atkL.png",
+			"mapAttackFromRight": "h6/units/h6BossNamtaruGhost/map/atkR.png",
+			"iconLarge": "h6/units/h6NecroGhost/iconLarge.png",
+			"iconSmall": "h6/units/h6NecroGhost/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h6/necropolis/Wraith_AttackLaunchMelee.wav",
+			"wince": "h6/necropolis/Wraith_Hit.wav",
+			"defend": "h6/necropolis/Wraith_Defend.wav",
+			"killed": "h6/necropolis/Wraith_Die.wav",
+			"move": "h6/necropolis/Wraith_Move.wav"
+		}
+	}
+}

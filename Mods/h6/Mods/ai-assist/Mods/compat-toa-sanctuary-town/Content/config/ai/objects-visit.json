@@ -1,0 +1,115 @@
+{
+	"heroes-memorial.h6:h6MemorialSanctum": {
+		"types": {
+			"h6MemorialSanctum": {
+				"rewards": {
+					"append": {
+						"limiter": {
+							"anyOf": [
+								{
+									"allOf": [
+										{
+											"anyOf": [
+												{
+													"creatures": [
+														{
+															"type": "tears-of-ashan.toa-sanctuary-town:wanizameAU",
+															"amount": 1
+														}
+													]
+												}
+											]
+										},
+										{
+											"anyOf": [
+												{
+													"creatures": [
+														{
+															"type": "tears-of-ashan.toa-sanctuary-town:kappaShoyaAU",
+															"amount": 1
+														}
+													]
+												}
+											]
+										},
+										{
+											"anyOf": [
+												{
+													"creatures": [
+														{
+															"type": "tears-of-ashan.toa-sanctuary-town:pearlPriestessAU",
+															"amount": 1
+														}
+													]
+												}
+											]
+										},
+										{
+											"anyOf": [
+												{
+													"creatures": [
+														{
+															"type": "tears-of-ashan.toa-sanctuary-town:mizuKamiAU",
+															"amount": 1
+														}
+													]
+												}
+											]
+										},
+										{
+											"anyOf": [
+												{
+													"creatures": [
+														{
+															"type": "tears-of-ashan.toa-sanctuary-town:yukiOnnaAU",
+															"amount": 1
+														}
+													]
+												}
+											]
+										},
+										{
+											"anyOf": [
+												{
+													"creatures": [
+														{
+															"type": "tears-of-ashan.toa-sanctuary-town:kenseiAU",
+															"amount": 1
+														}
+													]
+												}
+											]
+										},
+										{
+											"anyOf": [
+												{
+													"creatures": [
+														{
+															"type": "tears-of-ashan.toa-sanctuary-town:sacredKirinAU",
+															"amount": 1
+														}
+													]
+												},
+												{
+													"creatures": [
+														{
+															"type": "tears-of-ashan.toa-sanctuary-town:enragedKirinAU",
+															"amount": 1
+														}
+													]
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						"primary": {
+							"knowledge": 1
+						}
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,167 @@
+// Heroes 6 memorial: script registration of Inferno creatures
+{
+	"h6Laughter": {
+		"implements": "combatEvent",
+		"script": "combat/h6Laughter",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"val": {
+					"type": "number"
+				},
+				"turns": {
+					"type": "number"
+				},
+				"spell": {
+					"type": "string"
+				},
+				"animation": {
+					"type": "string"
+				},
+				"sound": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": ""
+	},
+	"h6Gluttony": {
+		"implements": "combatEvent",
+		"script": "combat/h6Gluttony",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"val": {
+					"type": "number"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": ""
+	},
+	"h6Reflect": {
+		"implements": "combatEvent",
+		"script": "combat/h6Reflect",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"pct": {
+					"type": "number"
+				},
+				"animation": {
+					"type": "string"
+				},
+				"sound": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": ""
+	},
+	"h6Proliferate": {
+		"implements": "combatEvent",
+		"script": "combat/h6Proliferate",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"pct": {
+					"type": "number"
+				},
+				"animation": {
+					"type": "string"
+				},
+				"sound": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": ""
+	},
+	"h6TasteOfPain": {
+		"implements": "combatEvent",
+		"script": "combat/h6TasteOfPain",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"pct": {
+					"type": "number"
+				},
+				"max": {
+					"type": "number"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": ""
+	},
+	"h6Taunt": {
+		"implements": "combatEvent",
+		"script": "combat/h6Taunt",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"val": {
+					"type": "number"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": ""
+	},
+	"h6HatefulRetaliation": {
+		"implements": "combatEvent",
+		"script": "combat/h6HatefulRetaliation",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"animation": {
+					"type": "string"
+				},
+				"sound": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": ""
+	},
+	"h6Charge": {
+		"implements": "spellEffect",
+		"script": "spells/h6Charge",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"pct": {
+					"type": "number"
+				},
+				"animation": {
+					"type": "string"
+				},
+				"sound": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		}
+	}
+}

@@ -1,0 +1,907 @@
+// Heroes 6 memorial: active abilities and statuses of Dungeon creatures
+{
+	"h6PoisonBlade": {
+		"type": "ability",
+		"name": "Poison Blade",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"targetType": "CREATURE",
+		"flags": {
+			"special": true,
+			"negative": true
+		},
+		"sounds": {
+			"cast": ""
+		},
+		"graphics": {
+			"iconBook": "h6/spells/h6PoisonBlade/Book",
+			"iconScroll": "h6/spells/h6PoisonBlade/Scroll",
+			"iconScenarioBonus": "h6/spells/h6PoisonBlade/Scenario",
+			"iconEffect": "h6/spells/h6PoisonBlade/Effect"
+		},
+		"levels": {
+			"base": {
+				"cost": 0,
+				"power": 0,
+				"range": "0",
+				"targetModifier": {
+					"smart": false
+				},
+				"battleEffects": {
+					"status": {
+						"type": "timed",
+						"bonus": {
+							"slow": {
+								"type": "STACKS_SPEED",
+								"val": -1,
+								"duration": "N_TURNS",
+								"turns": 3
+							}
+						}
+					}
+				}
+			},
+			"none": {
+				"description": "{Poison Blade}\n\nA Shade's poisoned blade: -1 Speed."
+			},
+			"basic": {
+				"description": "{Poison Blade}\n\nA Shade's poisoned blade: -1 Speed."
+			},
+			"advanced": {
+				"description": "{Poison Blade}\n\nA Shade's poisoned blade: -1 Speed."
+			},
+			"expert": {
+				"description": "{Poison Blade}\n\nA Shade's poisoned blade: -1 Speed."
+			}
+		}
+	},
+	"h6ShadowCurse": {
+		"type": "ability",
+		"name": "Shadow Curse",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"targetType": "CREATURE",
+		"flags": {
+			"special": true,
+			"negative": true
+		},
+		"sounds": {
+			"cast": ""
+		},
+		"graphics": {
+			"iconBook": "h6/spells/h6ShadowCurse/Book",
+			"iconScroll": "h6/spells/h6ShadowCurse/Scroll",
+			"iconScenarioBonus": "h6/spells/h6ShadowCurse/Scenario",
+			"iconEffect": "h6/spells/h6ShadowCurse/Effect"
+		},
+		"levels": {
+			"base": {
+				"cost": 0,
+				"power": 0,
+				"range": "0",
+				"targetModifier": {
+					"smart": false
+				},
+				"battleEffects": {
+					"status": {
+						"type": "timed",
+						"bonus": {
+							"slow": {
+								"type": "STACKS_SPEED",
+								"val": -1,
+								"duration": "N_TURNS",
+								"turns": 3
+							}
+						}
+					}
+				}
+			},
+			"none": {
+				"description": "{Shadow Curse}\n\nA Pursuer's curse: -1 Speed for 3 rounds."
+			},
+			"basic": {
+				"description": "{Shadow Curse}\n\nA Pursuer's curse: -1 Speed for 3 rounds."
+			},
+			"advanced": {
+				"description": "{Shadow Curse}\n\nA Pursuer's curse: -1 Speed for 3 rounds."
+			},
+			"expert": {
+				"description": "{Shadow Curse}\n\nA Pursuer's curse: -1 Speed for 3 rounds."
+			}
+		},
+		"animation": {
+			"affect": [
+				"h6/dungeon/fx/curse"
+			]
+		}
+	},
+	"h6CorrodingVenom": {
+		"type": "ability",
+		"name": "Corroding Venom",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"targetType": "CREATURE",
+		"flags": {
+			"special": true,
+			"negative": true
+		},
+		"sounds": {
+			"cast": ""
+		},
+		"graphics": {
+			"iconBook": "h6/spells/h6CorrodingVenom/Book",
+			"iconScroll": "h6/spells/h6CorrodingVenom/Scroll",
+			"iconScenarioBonus": "h6/spells/h6CorrodingVenom/Scenario",
+			"iconEffect": "h6/spells/h6CorrodingVenom/Effect"
+		},
+		"levels": {
+			"base": {
+				"cost": 0,
+				"power": 0,
+				"range": "0",
+				"targetModifier": {
+					"smart": false
+				},
+				"battleEffects": {
+					"status": {
+						"type": "timed",
+						"bonus": {
+							"def": {
+								"type": "PRIMARY_SKILL",
+								"subtype": "primarySkill.defence",
+								"val": -3,
+								"duration": "N_TURNS",
+								"turns": 1
+							}
+						}
+					}
+				}
+			},
+			"none": {
+				"description": "{Corroding Venom}\n\nThe Stingtail Lion's venom: -3 Defense for 1 round."
+			},
+			"basic": {
+				"description": "{Corroding Venom}\n\nThe Stingtail Lion's venom: -3 Defense for 1 round."
+			},
+			"advanced": {
+				"description": "{Corroding Venom}\n\nThe Stingtail Lion's venom: -3 Defense for 1 round."
+			},
+			"expert": {
+				"description": "{Corroding Venom}\n\nThe Stingtail Lion's venom: -3 Defense for 1 round."
+			}
+		},
+		"animation": {
+			"affect": [
+				"h6/dungeon/fx/sting"
+			]
+		}
+	},
+	"h6DissolvingVenom": {
+		"type": "ability",
+		"name": "Dissolving Venom",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"targetType": "CREATURE",
+		"flags": {
+			"special": true,
+			"negative": true
+		},
+		"sounds": {
+			"cast": ""
+		},
+		"graphics": {
+			"iconBook": "h6/spells/h6DissolvingVenom/Book",
+			"iconScroll": "h6/spells/h6DissolvingVenom/Scroll",
+			"iconScenarioBonus": "h6/spells/h6DissolvingVenom/Scenario",
+			"iconEffect": "h6/spells/h6DissolvingVenom/Effect"
+		},
+		"levels": {
+			"base": {
+				"cost": 0,
+				"power": 0,
+				"range": "0",
+				"targetModifier": {
+					"smart": false
+				},
+				"battleEffects": {
+					"status": {
+						"type": "timed",
+						"bonus": {
+							"def": {
+								"type": "PRIMARY_SKILL",
+								"subtype": "primarySkill.defence",
+								"val": -4,
+								"duration": "N_TURNS",
+								"turns": 1
+							}
+						}
+					}
+				}
+			},
+			"none": {
+				"description": "{Dissolving Venom}\n\nThe Scorpicore's venom: -4 Defense for 1 round."
+			},
+			"basic": {
+				"description": "{Dissolving Venom}\n\nThe Scorpicore's venom: -4 Defense for 1 round."
+			},
+			"advanced": {
+				"description": "{Dissolving Venom}\n\nThe Scorpicore's venom: -4 Defense for 1 round."
+			},
+			"expert": {
+				"description": "{Dissolving Venom}\n\nThe Scorpicore's venom: -4 Defense for 1 round."
+			}
+		},
+		"animation": {
+			"affect": [
+				"h6/dungeon/fx/sting"
+			]
+		}
+	},
+	"h6Crippled": {
+		"type": "ability",
+		"name": "Crippling Sting",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"targetType": "CREATURE",
+		"flags": {
+			"special": true,
+			"negative": true
+		},
+		"sounds": {
+			"cast": ""
+		},
+		"graphics": {
+			"iconBook": "h6/spells/h6Crippled/Book",
+			"iconScroll": "h6/spells/h6Crippled/Scroll",
+			"iconScenarioBonus": "h6/spells/h6Crippled/Scenario",
+			"iconEffect": "h6/spells/h6Crippled/Effect"
+		},
+		"levels": {
+			"base": {
+				"cost": 0,
+				"power": 0,
+				"range": "0",
+				"targetModifier": {
+					"smart": false
+				},
+				"battleEffects": {
+					"status": {
+						"type": "timed",
+						"bonus": {
+							"slow": {
+								"type": "STACKS_SPEED",
+								"val": -4,
+								"duration": "N_TURNS",
+								"turns": 2
+							}
+						}
+					}
+				}
+			},
+			"none": {
+				"description": "{Crippling Sting}\n\nStung: -4 Speed for 2 rounds."
+			},
+			"basic": {
+				"description": "{Crippling Sting}\n\nStung: -4 Speed for 2 rounds."
+			},
+			"advanced": {
+				"description": "{Crippling Sting}\n\nStung: -4 Speed for 2 rounds."
+			},
+			"expert": {
+				"description": "{Crippling Sting}\n\nStung: -4 Speed for 2 rounds."
+			}
+		}
+	},
+	"h6Paralyzed": {
+		"type": "ability",
+		"name": "Paralyzing Sting",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"targetType": "CREATURE",
+		"flags": {
+			"special": true,
+			"negative": true
+		},
+		"sounds": {
+			"cast": ""
+		},
+		"graphics": {
+			"iconBook": "h6/spells/h6Paralyzed/Book",
+			"iconScroll": "h6/spells/h6Paralyzed/Scroll",
+			"iconScenarioBonus": "h6/spells/h6Paralyzed/Scenario",
+			"iconEffect": "h6/spells/h6Paralyzed/Effect"
+		},
+		"levels": {
+			"base": {
+				"cost": 0,
+				"power": 0,
+				"range": "0",
+				"targetModifier": {
+					"smart": false
+				},
+				"battleEffects": {
+					"status": {
+						"type": "timed",
+						"bonus": {
+							"slow": {
+								"type": "STACKS_SPEED",
+								"val": -6,
+								"duration": "N_TURNS",
+								"turns": 2
+							}
+						}
+					}
+				}
+			},
+			"none": {
+				"description": "{Paralyzing Sting}\n\nStung: -6 Speed for 2 rounds."
+			},
+			"basic": {
+				"description": "{Paralyzing Sting}\n\nStung: -6 Speed for 2 rounds."
+			},
+			"advanced": {
+				"description": "{Paralyzing Sting}\n\nStung: -6 Speed for 2 rounds."
+			},
+			"expert": {
+				"description": "{Paralyzing Sting}\n\nStung: -6 Speed for 2 rounds."
+			}
+		}
+	},
+	"h6AbDeathSpin": {
+		"type": "ability",
+		"name": "Death Spin",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"targetType": "CREATURE",
+		"flags": {
+			"special": true,
+			"negative": true
+		},
+		"sounds": {
+			"cast": ""
+		},
+		"graphics": {
+			"iconBook": "h6/spells/h6AbDeathSpin/Book",
+			"iconScroll": "h6/spells/h6AbDeathSpin/Scroll",
+			"iconScenarioBonus": "h6/spells/h6AbDeathSpin/Scenario",
+			"iconEffect": "h6/spells/h6AbDeathSpin/Effect"
+		},
+		"levels": {
+			"base": {
+				"cost": 0,
+				"power": 0,
+				"range": "0",
+				"targetModifier": {
+					"smart": false
+				},
+				"battleEffects": {
+					"spin": {
+						"type": "h6DeathSpin",
+						"pct": 100,
+						"key": "h6AbDeathSpin",
+						"animation": "h6/dungeon/fx/hit",
+						"sound": "h6/dungeon/StalkerChakramDacer_AttackLaunchMeleeRangedStart.wav"
+					}
+				}
+			},
+			"none": {
+				"description": "{Death Spin}\n\nCast on an enemy stack: the chakram flies in a straight line, and every stack on its path and on the target hex (friend or foe, except the caster) takes ranged attack damage (standard H3 formula), without retaliation. Cooldown: 1 round."
+			},
+			"basic": {
+				"description": "{Death Spin}\n\nCast on an enemy stack: the chakram flies in a straight line, and every stack on its path and on the target hex (friend or foe, except the caster) takes ranged attack damage (standard H3 formula), without retaliation. Cooldown: 1 round."
+			},
+			"advanced": {
+				"description": "{Death Spin}\n\nCast on an enemy stack: the chakram flies in a straight line, and every stack on its path and on the target hex (friend or foe, except the caster) takes ranged attack damage (standard H3 formula), without retaliation. Cooldown: 1 round."
+			},
+			"expert": {
+				"description": "{Death Spin}\n\nCast on an enemy stack: the chakram flies in a straight line, and every stack on its path and on the target hex (friend or foe, except the caster) takes ranged attack damage (standard H3 formula), without retaliation. Cooldown: 1 round."
+			}
+		}
+	},
+	"h6AbMindProbe": {
+		"type": "ability",
+		"name": "Mind Probe",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"targetType": "CREATURE",
+		"flags": {
+			"special": true,
+			"negative": true
+		},
+		"sounds": {
+			"cast": ""
+		},
+		"graphics": {
+			"iconBook": "h6/spells/h6AbMindProbe/Book",
+			"iconScroll": "h6/spells/h6AbMindProbe/Scroll",
+			"iconScenarioBonus": "h6/spells/h6AbMindProbe/Scenario",
+			"iconEffect": "h6/spells/h6AbMindProbe/Effect"
+		},
+		"levels": {
+			"base": {
+				"cost": 0,
+				"power": 0,
+				"range": "0",
+				"targetModifier": {
+					"smart": false
+				},
+				"battleEffects": {
+					"probe": {
+						"type": "h6UniqueMark",
+						"pct": 15,
+						"key": "h6AbMindProbe",
+						"animation": "h6/dungeon/fx/probe",
+						"sound": "h6/dungeon/ShadowLukerShadowSpawn_Ability1.wav"
+					}
+				}
+			},
+			"none": {
+				"description": "{Mind Probe}\n\nFree action. Cast on an enemy stack: it takes +15% damage from all sources until the end of battle; each side can probe only one target at a time, and probing another enemy removes the old effect. Cooldown: 2 rounds."
+			},
+			"basic": {
+				"description": "{Mind Probe}\n\nFree action. Cast on an enemy stack: it takes +15% damage from all sources until the end of battle; each side can probe only one target at a time, and probing another enemy removes the old effect. Cooldown: 2 rounds."
+			},
+			"advanced": {
+				"description": "{Mind Probe}\n\nFree action. Cast on an enemy stack: it takes +15% damage from all sources until the end of battle; each side can probe only one target at a time, and probing another enemy removes the old effect. Cooldown: 2 rounds."
+			},
+			"expert": {
+				"description": "{Mind Probe}\n\nFree action. Cast on an enemy stack: it takes +15% damage from all sources until the end of battle; each side can probe only one target at a time, and probing another enemy removes the old effect. Cooldown: 2 rounds."
+			}
+		},
+		"canCastWithoutSkip": true
+	},
+	"h6AbCripplingSting": {
+		"type": "ability",
+		"name": "Crippling Sting",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"targetType": "CREATURE",
+		"flags": {
+			"special": true,
+			"negative": true
+		},
+		"sounds": {
+			"cast": ""
+		},
+		"graphics": {
+			"iconBook": "h6/spells/h6AbCripplingSting/Book",
+			"iconScroll": "h6/spells/h6AbCripplingSting/Scroll",
+			"iconScenarioBonus": "h6/spells/h6AbCripplingSting/Scenario",
+			"iconEffect": "h6/spells/h6AbCripplingSting/Effect"
+		},
+		"levels": {
+			"base": {
+				"cost": 0,
+				"power": 0,
+				"range": "0",
+				"targetModifier": {
+					"smart": false
+				},
+				"battleEffects": {
+					"sting": {
+						"type": "h6Slash",
+						"pct": 80,
+						"status": "heroes-memorial.h6:h6Crippled",
+						"statusTurns": 2,
+						"key": "h6AbCripplingSting",
+						"animation": "h6/dungeon/fx/sting",
+						"sound": "h6/dungeon/ManticoreScorpicore_Ability.wav"
+					}
+				}
+			},
+			"none": {
+				"description": "{Crippling Sting}\n\nAn adjacent enemy stack takes 80% of normal attack damage (standard H3 formula), without retaliation, and gets -4 Speed for 2 rounds. Cooldown: 3 rounds."
+			},
+			"basic": {
+				"description": "{Crippling Sting}\n\nAn adjacent enemy stack takes 80% of normal attack damage (standard H3 formula), without retaliation, and gets -4 Speed for 2 rounds. Cooldown: 3 rounds."
+			},
+			"advanced": {
+				"description": "{Crippling Sting}\n\nAn adjacent enemy stack takes 80% of normal attack damage (standard H3 formula), without retaliation, and gets -4 Speed for 2 rounds. Cooldown: 3 rounds."
+			},
+			"expert": {
+				"description": "{Crippling Sting}\n\nAn adjacent enemy stack takes 80% of normal attack damage (standard H3 formula), without retaliation, and gets -4 Speed for 2 rounds. Cooldown: 3 rounds."
+			}
+		}
+	},
+	"h6AbParalyzingSting": {
+		"type": "ability",
+		"name": "Paralyzing Sting",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"targetType": "CREATURE",
+		"flags": {
+			"special": true,
+			"negative": true
+		},
+		"sounds": {
+			"cast": ""
+		},
+		"graphics": {
+			"iconBook": "h6/spells/h6AbParalyzingSting/Book",
+			"iconScroll": "h6/spells/h6AbParalyzingSting/Scroll",
+			"iconScenarioBonus": "h6/spells/h6AbParalyzingSting/Scenario",
+			"iconEffect": "h6/spells/h6AbParalyzingSting/Effect"
+		},
+		"levels": {
+			"base": {
+				"cost": 0,
+				"power": 0,
+				"range": "0",
+				"targetModifier": {
+					"smart": false
+				},
+				"battleEffects": {
+					"sting": {
+						"type": "h6Slash",
+						"pct": 100,
+						"status": "heroes-memorial.h6:h6Paralyzed",
+						"statusTurns": 2,
+						"key": "h6AbParalyzingSting",
+						"animation": "h6/dungeon/fx/sting",
+						"sound": "h6/dungeon/ManticoreScorpicore_Ability.wav"
+					}
+				}
+			},
+			"none": {
+				"description": "{Paralyzing Sting}\n\nAn adjacent enemy stack takes normal attack damage (standard H3 formula), without retaliation, and gets -6 Speed for 2 rounds. Cooldown: 3 rounds."
+			},
+			"basic": {
+				"description": "{Paralyzing Sting}\n\nAn adjacent enemy stack takes normal attack damage (standard H3 formula), without retaliation, and gets -6 Speed for 2 rounds. Cooldown: 3 rounds."
+			},
+			"advanced": {
+				"description": "{Paralyzing Sting}\n\nAn adjacent enemy stack takes normal attack damage (standard H3 formula), without retaliation, and gets -6 Speed for 2 rounds. Cooldown: 3 rounds."
+			},
+			"expert": {
+				"description": "{Paralyzing Sting}\n\nAn adjacent enemy stack takes normal attack damage (standard H3 formula), without retaliation, and gets -6 Speed for 2 rounds. Cooldown: 3 rounds."
+			}
+		}
+	},
+	"h6AbMindLeash": {
+		"type": "ability",
+		"name": "Mind Leash",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"targetType": "CREATURE",
+		"flags": {
+			"special": true,
+			"negative": true
+		},
+		"sounds": {
+			"cast": "h6/dungeon/FacelessMaskedOne_Ability.wav"
+		},
+		"graphics": {
+			"iconBook": "h6/spells/h6AbMindLeash/Book",
+			"iconScroll": "h6/spells/h6AbMindLeash/Scroll",
+			"iconScenarioBonus": "h6/spells/h6AbMindLeash/Scenario",
+			"iconEffect": "h6/spells/h6AbMindLeash/Effect"
+		},
+		"levels": {
+			"base": {
+				"cost": 0,
+				"power": 0,
+				"range": "0",
+				"targetModifier": {
+					"smart": false
+				},
+				"battleEffects": {
+					"leash": {
+						"type": "timed",
+						"bonus": {
+							"hypno": {
+								"type": "HYPNOTIZED",
+								"duration": [
+									"UNTIL_BEING_ATTACKED",
+									"N_TURNS"
+								],
+								"turns": 1
+							}
+						}
+					},
+					"refund": {
+						"type": "h6AbRefund",
+						"key": "h6AbMindLeash",
+						"usedType": "H6_LEASH_USED_H6C"
+					}
+				}
+			},
+			"none": {
+				"description": "{Mind Leash}\n\n1 use per battle. Takes control of an enemy stack for 1 round (it fights for your side); being attacked breaks the effect. Undead, non-living, mechanical and Mind-immune stacks are unaffected."
+			},
+			"basic": {
+				"description": "{Mind Leash}\n\n1 use per battle. Takes control of an enemy stack for 1 round (it fights for your side); being attacked breaks the effect. Undead, non-living, mechanical and Mind-immune stacks are unaffected."
+			},
+			"advanced": {
+				"description": "{Mind Leash}\n\n1 use per battle. Takes control of an enemy stack for 1 round (it fights for your side); being attacked breaks the effect. Undead, non-living, mechanical and Mind-immune stacks are unaffected."
+			},
+			"expert": {
+				"description": "{Mind Leash}\n\n1 use per battle. Takes control of an enemy stack for 1 round (it fights for your side); being attacked breaks the effect. Undead, non-living, mechanical and Mind-immune stacks are unaffected."
+			}
+		},
+		"targetCondition": {
+			"noneOf": {
+				"bonus.MIND_IMMUNITY": "normal",
+				"bonus.NON_LIVING": "absolute",
+				"bonus.MECHANICAL": "absolute",
+				"bonus.UNDEAD": "absolute",
+				"bonus.SIEGE_WEAPON": "absolute"
+			}
+		},
+		"animation": {
+			"affect": [
+				"h6/dungeon/fx/puppet"
+			]
+		}
+	},
+	"h6AbDarkPurge": {
+		"type": "ability",
+		"name": "Dark Purge",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"targetType": "NO_TARGET",
+		"flags": {
+			"special": true,
+			"positive": true
+		},
+		"sounds": {
+			"cast": "h6/dungeon/FacelessMaskedOne_Ability2.wav"
+		},
+		"graphics": {
+			"iconBook": "h6/spells/h6AbDarkPurge/Book",
+			"iconScroll": "h6/spells/h6AbDarkPurge/Scroll",
+			"iconScenarioBonus": "h6/spells/h6AbDarkPurge/Scenario",
+			"iconEffect": "h6/spells/h6AbDarkPurge/Effect"
+		},
+		"levels": {
+			"base": {
+				"cost": 0,
+				"power": 0,
+				"range": "0",
+				"targetModifier": {
+					"smart": false
+				},
+				"battleEffects": {
+					"purge": {
+						"type": "h6SelfBuff",
+						"bonusType": "H6_PURGE_H6C",
+						"turns": 1,
+						"untilAfterAttack": true,
+						"show": "H6_PURGE_H6C",
+						"key": "h6AbDarkPurge"
+					}
+				}
+			},
+			"none": {
+				"description": "{Dark Purge}\n\nCast on self, free action: the enemy hit by its next attack this turn loses all beneficial spells (the effect expires at the end of this round). Cooldown: 3 rounds."
+			},
+			"basic": {
+				"description": "{Dark Purge}\n\nCast on self, free action: the enemy hit by its next attack this turn loses all beneficial spells (the effect expires at the end of this round). Cooldown: 3 rounds."
+			},
+			"advanced": {
+				"description": "{Dark Purge}\n\nCast on self, free action: the enemy hit by its next attack this turn loses all beneficial spells (the effect expires at the end of this round). Cooldown: 3 rounds."
+			},
+			"expert": {
+				"description": "{Dark Purge}\n\nCast on self, free action: the enemy hit by its next attack this turn loses all beneficial spells (the effect expires at the end of this round). Cooldown: 3 rounds."
+			}
+		},
+		"canCastWithoutSkip": true
+	},
+	"h6AbMightySlash": {
+		"type": "ability",
+		"name": "Mighty Slash",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"targetType": "CREATURE",
+		"flags": {
+			"special": true,
+			"negative": true
+		},
+		"sounds": {
+			"cast": ""
+		},
+		"graphics": {
+			"iconBook": "h6/spells/h6AbMightySlash/Book",
+			"iconScroll": "h6/spells/h6AbMightySlash/Scroll",
+			"iconScenarioBonus": "h6/spells/h6AbMightySlash/Scenario",
+			"iconEffect": "h6/spells/h6AbMightySlash/Effect"
+		},
+		"levels": {
+			"base": {
+				"cost": 0,
+				"power": 0,
+				"range": "0",
+				"targetModifier": {
+					"smart": false
+				},
+				"battleEffects": {
+					"slam": {
+						"type": "h6Slash",
+						"pct": 100,
+						"knockback": true,
+						"knockDist": 2,
+						"key": "h6AbMightySlash",
+						"animation": "h6/dungeon/fx/hit",
+						"sound": "h6/dungeon/MinotaurMinotaurGuard_Ability.wav"
+					}
+				}
+			},
+			"none": {
+				"description": "{Mighty Slash}\n\nAn adjacent enemy stack takes normal attack damage (standard H3 formula), without retaliation; a one-hex target is knocked back up to 2 hexes along the line of impact. Cooldown: 3 rounds."
+			},
+			"basic": {
+				"description": "{Mighty Slash}\n\nAn adjacent enemy stack takes normal attack damage (standard H3 formula), without retaliation; a one-hex target is knocked back up to 2 hexes along the line of impact. Cooldown: 3 rounds."
+			},
+			"advanced": {
+				"description": "{Mighty Slash}\n\nAn adjacent enemy stack takes normal attack damage (standard H3 formula), without retaliation; a one-hex target is knocked back up to 2 hexes along the line of impact. Cooldown: 3 rounds."
+			},
+			"expert": {
+				"description": "{Mighty Slash}\n\nAn adjacent enemy stack takes normal attack damage (standard H3 formula), without retaliation; a one-hex target is knocked back up to 2 hexes along the line of impact. Cooldown: 3 rounds."
+			}
+		}
+	},
+	"h6AbWither": {
+		"type": "ability",
+		"name": "Withering Breath",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"targetType": "CREATURE",
+		"flags": {
+			"special": true,
+			"negative": true
+		},
+		"sounds": {
+			"cast": ""
+		},
+		"graphics": {
+			"iconBook": "h6/spells/h6AbWither/Book",
+			"iconScroll": "h6/spells/h6AbWither/Scroll",
+			"iconScenarioBonus": "h6/spells/h6AbWither/Scenario",
+			"iconEffect": "h6/spells/h6AbWither/Effect"
+		},
+		"levels": {
+			"base": {
+				"cost": 0,
+				"power": 0,
+				"range": "0",
+				"targetModifier": {
+					"smart": false
+				},
+				"battleEffects": {
+					"wither": {
+						"type": "h6Wither",
+						"pct": 100,
+						"range": 3,
+						"dotPct": 15,
+						"dotMax": 20,
+						"key": "h6AbWither",
+						"animation": "h6/dungeon/fx/wither",
+						"sound": "h6/dungeon/ShadowDragonBlackDragon_Ability1.wav"
+					}
+				}
+			},
+			"none": {
+				"description": "{Withering Breath}\n\nAn enemy stack within 3 hexes takes normal attack damage as Dark damage (standard H3 formula, reduced by Dark damage reduction), without retaliation; then at the start of each round it takes Dark damage over time equal to 15% of that hit, +1% each round up to 20%, until the end of battle. Cooldown: 3 rounds."
+			},
+			"basic": {
+				"description": "{Withering Breath}\n\nAn enemy stack within 3 hexes takes normal attack damage as Dark damage (standard H3 formula, reduced by Dark damage reduction), without retaliation; then at the start of each round it takes Dark damage over time equal to 15% of that hit, +1% each round up to 20%, until the end of battle. Cooldown: 3 rounds."
+			},
+			"advanced": {
+				"description": "{Withering Breath}\n\nAn enemy stack within 3 hexes takes normal attack damage as Dark damage (standard H3 formula, reduced by Dark damage reduction), without retaliation; then at the start of each round it takes Dark damage over time equal to 15% of that hit, +1% each round up to 20%, until the end of battle. Cooldown: 3 rounds."
+			},
+			"expert": {
+				"description": "{Withering Breath}\n\nAn enemy stack within 3 hexes takes normal attack damage as Dark damage (standard H3 formula, reduced by Dark damage reduction), without retaliation; then at the start of each round it takes Dark damage over time equal to 15% of that hit, +1% each round up to 20%, until the end of battle. Cooldown: 3 rounds."
+			}
+		}
+	}
+}

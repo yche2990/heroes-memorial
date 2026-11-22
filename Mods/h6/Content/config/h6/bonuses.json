@@ -1,0 +1,104 @@
+// Heroes 6 memorial: this mod's bonus types (hidden marks, display types, battle log texts)
+{
+	"H6_MARK_H6C": {
+		"hidden": true,
+		"creatureNature": false
+	},
+	"H6_EVIL_H6C": {
+		"hidden": true,
+		"creatureNature": false
+	},
+	"H6_COOLDOWN_H6C": {
+		"graphics": {
+			"icon": "h6/abilities/ab_cooldown"
+		},
+		"creatureNature": false,
+		"description": "{Cooldown}\nActive ability temporarily unavailable"
+	},
+	"H6_SPIRIT_FORM_H6C": {
+		"graphics": {
+			"icon": "h6/abilities/ab_Spirit_Form"
+		},
+		"creatureNature": false,
+		"description": "{Spirit Form}\nDamage taken -${val}%\nEnds after moving, attacking or casting"
+	},
+	"H6_SHIELDGUARD_H6C": {
+		"graphics": {
+			"icon": "h6/abilities/ab_Shieldguard"
+		},
+		"creatureNature": false,
+		"description": "{Protective Shield}\nTakes ${val}% of the damage for an attacked adjacent ally, reduced by a further 25%"
+	},
+	"H6_SHIELDGUARD_LINK_H6C": {
+		"hidden": true,
+		"creatureNature": false,
+		"valueDescriptions": {
+			"1": "%s raise shields for %s, blocking %d damage."
+		}
+	},
+	"H6_SUN_STEED_H6C": {
+		"graphics": {
+			"icon": "h6/abilities/ab_Sun_Steed"
+		},
+		"creatureNature": false,
+		"description": "{Sun Steed: Light Form}\nPasses over obstacles and units, cannot be slowed\nReverts at the start of next round",
+		"valueDescriptions": {
+			"900001": "%s take on Light Form.",
+			"900002": "%s return to their true form."
+		}
+	},
+	"H6_DIVE_H6C": {
+		"hidden": true,
+		"creatureNature": false,
+		"valueDescriptions": {
+			"1": "%s soar into the air.",
+			"2": "%s dive down on %s for %d damage.",
+			"3": "%s dive down but miss."
+		}
+	},
+	"H6_DIVE_LINE_H6C": {
+		"hidden": true,
+		"creatureNature": false,
+		"valueDescriptions": {
+			"1": "%s soar into the air.",
+			"2": "%s make a Diving Assault on %s for %d damage.",
+			"3": "%s dive down but miss."
+		}
+	},
+	"H6_PACIFY_H6C": {
+		"hidden": true,
+		"creatureNature": false,
+		"valueDescriptions": {
+			"1": "%s pacify %s, who cannot act this round."
+		}
+	},
+	"H6_JUDGMENT_H6C": {
+		"hidden": true,
+		"creatureNature": false,
+		"valueDescriptions": {
+			"1": "%s pass judgment on %s: damage +%d percent."
+		}
+	},
+	"H6_CLEANSE_H6C": {
+		"hidden": true,
+		"creatureNature": false,
+		"valueDescriptions": {
+			"1": "The Purifying Light of %s dispels magic from %d stacks."
+		}
+	},
+	"H6_RESTORE_H6C": {
+		"hidden": true,
+		"creatureNature": false,
+		"valueDescriptions": {
+			"1": "%s heal %s, restoring %d HP and reviving %d.",
+			"2": "%s smite %s with holy light for %d damage."
+		}
+	},
+	"H6_PIERCING_BOLT_H6C": {
+		"hidden": true,
+		"creatureNature": false,
+		"valueDescriptions": {
+			"1": "The Piercing Bolt of %s passes through %d stacks for %d damage in total."
+		}
+	}
+}

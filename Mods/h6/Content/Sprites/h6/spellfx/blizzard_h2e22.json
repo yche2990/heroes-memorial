@@ -1,0 +1,11 @@
+{
+	"basepath": "h6/spellfx/blizzard_h2e22/",
+	"sequences": [
+		{
+			"group": 0,
+			"frames": [
+				"00.png"
+			]
+		}
+	]
+}

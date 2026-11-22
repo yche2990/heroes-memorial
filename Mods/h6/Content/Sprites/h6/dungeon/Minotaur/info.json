@@ -1,0 +1,55 @@
+{
+ "fac": "dungeon",
+ "k": 1.0,
+ "scale": 70.02446573638152,
+ "origin": [
+  202.63265272813453,
+  265.739
+ ],
+ "baked": {
+  "0": [],
+  "1": [],
+  "2": [],
+  "3": [],
+  "4": [],
+  "5": [
+   "minotaur_die.fx"
+  ],
+  "7": [],
+  "8": [],
+  "11": [
+   "minotaur_attack.fx"
+  ],
+  "12": [
+   "minotaur_attack.fx"
+  ],
+  "13": [
+   "minotaur_attack.fx"
+  ],
+  "17": [
+   "minotaur_ability.fx"
+  ],
+  "18": [
+   "minotaur_ability.fx"
+  ],
+  "19": [
+   "minotaur_ability.fx"
+  ],
+  "20": [],
+  "21": [],
+  "30": [
+   "minotaur_ability.fx"
+  ],
+  "32": [
+   "minotaur_ability.fx"
+  ],
+  "40": [
+   "minotaur_attack.fx"
+  ],
+  "42": [
+   "minotaur_attack.fx"
+  ]
+ },
+ "render": "Blender 4.2 Cycles 24spp 3x + sprite_post; fx h6m (fxsim d1=mul mode2=wrap)",
+ "sec": 58
+}

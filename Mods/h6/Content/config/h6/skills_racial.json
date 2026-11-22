@@ -1,0 +1,352 @@
+{
+	"tears-of-ashan:gating": {
+		"base": {
+			"effects": {
+				"h6RcGatingI": {
+					"type": "SPELL",
+					"subtype": "heroes-memorial.h6:h6RcGatingI",
+					"val": 0,
+					"addInfo": true
+				},
+				"h6RcGatingII": {
+					"type": "SPELL",
+					"subtype": "heroes-memorial.h6:h6RcGatingII",
+					"val": 0,
+					"addInfo": true
+				},
+				"h6RcGateOn": {
+					"type": "heroes-memorial.h6:H6_RC_GATE_ON_H6C",
+					"val": 1,
+					"limiters": [
+						"CREATURES_ONLY",
+						{
+							"type": "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "heroes-memorial.h6:H6_GATING_H6C"
+						}
+					],
+					"stacking": "h6RcGateOn"
+				},
+				"h6RcGateCharge": {
+					"type": "COMBAT_EVENT_TRIGGER",
+					"subtype": "heroes-memorial.h6:h6RcGateCharge",
+					"val": 0,
+					"hidden": true,
+					"limiters": [
+						"CREATURES_ONLY",
+						{
+							"type": "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "heroes-memorial.h6:H6_GATING_H6C"
+						}
+					],
+					"stacking": "h6RcGateCharge"
+				}
+			}
+		},
+		"basic": {
+			"description": "{Basic Gating}\n\nGrants the ability to gate Imps, Gogs, and Hell Hounds.\n\n{H6 Gating}\nH6 Inferno units build Gating charge when attacking (max 400); the hero can cast Gating I and II (no Spell Book needed). Only affects H6 Inferno units."
+		},
+		"advanced": {
+			"description": "{Advanced Gating}\n\nGrants the ability to gate Demons, Pit Fiends, and Succubi in addition to previous creatures.\n\n{H6 Gating}\nH6 Inferno units build Gating charge when attacking (max 400); the hero can cast Gating I, II, and III (no Spell Book needed). Only affects H6 Inferno units.",
+			"effects": {
+				"h6RcGatingIII": {
+					"type": "SPELL",
+					"subtype": "heroes-memorial.h6:h6RcGatingIII",
+					"val": 0,
+					"addInfo": true
+				}
+			}
+		},
+		"expert": {
+			"description": "{Expert Gating}\n\nGrants the ability to gate Efreet, Hell Steeds, and Devils in addition to previous creatures.\n\n{H6 Gating}\nH6 Inferno units build Gating charge when attacking (max 400); the hero can cast Gating I, II, III, and IV (no Spell Book needed). Only affects H6 Inferno units.",
+			"effects": {
+				"h6RcGatingIII": {
+					"type": "SPELL",
+					"subtype": "heroes-memorial.h6:h6RcGatingIII",
+					"val": 0,
+					"addInfo": true
+				},
+				"h6RcGatingIV": {
+					"type": "SPELL",
+					"subtype": "heroes-memorial.h6:h6RcGatingIV",
+					"val": 0,
+					"addInfo": true
+				}
+			}
+		}
+	},
+	"tears-of-ashan:gatingDevilSpec": {
+		"base": {
+			"effects": {
+				"h6RcGatingI": {
+					"type": "SPELL",
+					"subtype": "heroes-memorial.h6:h6RcGatingI",
+					"val": 0,
+					"addInfo": true
+				},
+				"h6RcGatingII": {
+					"type": "SPELL",
+					"subtype": "heroes-memorial.h6:h6RcGatingII",
+					"val": 0,
+					"addInfo": true
+				},
+				"h6RcGateOn": {
+					"type": "heroes-memorial.h6:H6_RC_GATE_ON_H6C",
+					"val": 1,
+					"limiters": [
+						"CREATURES_ONLY",
+						{
+							"type": "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "heroes-memorial.h6:H6_GATING_H6C"
+						}
+					],
+					"stacking": "h6RcGateOn"
+				},
+				"h6RcGateCharge": {
+					"type": "COMBAT_EVENT_TRIGGER",
+					"subtype": "heroes-memorial.h6:h6RcGateCharge",
+					"val": 0,
+					"hidden": true,
+					"limiters": [
+						"CREATURES_ONLY",
+						{
+							"type": "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "heroes-memorial.h6:H6_GATING_H6C"
+						}
+					],
+					"stacking": "h6RcGateCharge"
+				}
+			}
+		},
+		"basic": {
+			"description": "{Basic Gating}\n\nGrants the ability to gate Imps, Gogs, and Hell Hounds.\n\n{H6 Gating}\nH6 Inferno units build Gating charge when attacking (max 400); the hero can cast Gating I and II (no Spell Book needed). Only affects H6 Inferno units."
+		},
+		"advanced": {
+			"description": "{Advanced Gating}\n\nGrants the ability to gate Demons, Pit Fiends, and Succubi in addition to previous creatures.\n\n{H6 Gating}\nH6 Inferno units build Gating charge when attacking (max 400); the hero can cast Gating I, II, and III (no Spell Book needed). Only affects H6 Inferno units.",
+			"effects": {
+				"h6RcGatingIII": {
+					"type": "SPELL",
+					"subtype": "heroes-memorial.h6:h6RcGatingIII",
+					"val": 0,
+					"addInfo": true
+				}
+			}
+		},
+		"expert": {
+			"description": "{Expert Gating}\n\nGrants the ability to gate Efreet, Hell Steeds, Devils, and Arch Devils in addition to previous creatures.\n\n{H6 Gating}\nH6 Inferno units build Gating charge when attacking (max 400); the hero can cast Gating I, II, III, and IV (no Spell Book needed). Only affects H6 Inferno units.",
+			"effects": {
+				"h6RcGatingIII": {
+					"type": "SPELL",
+					"subtype": "heroes-memorial.h6:h6RcGatingIII",
+					"val": 0,
+					"addInfo": true
+				},
+				"h6RcGatingIV": {
+					"type": "SPELL",
+					"subtype": "heroes-memorial.h6:h6RcGatingIV",
+					"val": 0,
+					"addInfo": true
+				}
+			}
+		}
+	},
+	"tears-of-ashan:gatingNightmareSpec": {
+		"base": {
+			"effects": {
+				"h6RcGatingI": {
+					"type": "SPELL",
+					"subtype": "heroes-memorial.h6:h6RcGatingI",
+					"val": 0,
+					"addInfo": true
+				},
+				"h6RcGatingII": {
+					"type": "SPELL",
+					"subtype": "heroes-memorial.h6:h6RcGatingII",
+					"val": 0,
+					"addInfo": true
+				},
+				"h6RcGateOn": {
+					"type": "heroes-memorial.h6:H6_RC_GATE_ON_H6C",
+					"val": 1,
+					"limiters": [
+						"CREATURES_ONLY",
+						{
+							"type": "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "heroes-memorial.h6:H6_GATING_H6C"
+						}
+					],
+					"stacking": "h6RcGateOn"
+				},
+				"h6RcGateCharge": {
+					"type": "COMBAT_EVENT_TRIGGER",
+					"subtype": "heroes-memorial.h6:h6RcGateCharge",
+					"val": 0,
+					"hidden": true,
+					"limiters": [
+						"CREATURES_ONLY",
+						{
+							"type": "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "heroes-memorial.h6:H6_GATING_H6C"
+						}
+					],
+					"stacking": "h6RcGateCharge"
+				}
+			}
+		},
+		"basic": {
+			"description": "{Basic Gating}\n\nGrants the ability to gate Imps, Gogs, and Hell Hounds.\n\n{H6 Gating}\nH6 Inferno units build Gating charge when attacking (max 400); the hero can cast Gating I and II (no Spell Book needed). Only affects H6 Inferno units."
+		},
+		"advanced": {
+			"description": "{Advanced Gating}\n\nGrants the ability to gate Demons, Pit Fiends, and Succubi in addition to previous creatures.\n\n{H6 Gating}\nH6 Inferno units build Gating charge when attacking (max 400); the hero can cast Gating I, II, and III (no Spell Book needed). Only affects H6 Inferno units.",
+			"effects": {
+				"h6RcGatingIII": {
+					"type": "SPELL",
+					"subtype": "heroes-memorial.h6:h6RcGatingIII",
+					"val": 0,
+					"addInfo": true
+				}
+			}
+		},
+		"expert": {
+			"description": "{Expert Gating}\n\nGrants the ability to gate Efreet, Hell Steeds, Nightmares, and Devils in addition to previous creatures.\n\n{H6 Gating}\nH6 Inferno units build Gating charge when attacking (max 400); the hero can cast Gating I, II, III, and IV (no Spell Book needed). Only affects H6 Inferno units.",
+			"effects": {
+				"h6RcGatingIII": {
+					"type": "SPELL",
+					"subtype": "heroes-memorial.h6:h6RcGatingIII",
+					"val": 0,
+					"addInfo": true
+				},
+				"h6RcGatingIV": {
+					"type": "SPELL",
+					"subtype": "heroes-memorial.h6:h6RcGatingIV",
+					"val": 0,
+					"addInfo": true
+				}
+			}
+		}
+	},
+	"tears-of-ashan:gatingSuccubusSpec": {
+		"base": {
+			"effects": {
+				"h6RcGatingI": {
+					"type": "SPELL",
+					"subtype": "heroes-memorial.h6:h6RcGatingI",
+					"val": 0,
+					"addInfo": true
+				},
+				"h6RcGatingII": {
+					"type": "SPELL",
+					"subtype": "heroes-memorial.h6:h6RcGatingII",
+					"val": 0,
+					"addInfo": true
+				},
+				"h6RcGateOn": {
+					"type": "heroes-memorial.h6:H6_RC_GATE_ON_H6C",
+					"val": 1,
+					"limiters": [
+						"CREATURES_ONLY",
+						{
+							"type": "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "heroes-memorial.h6:H6_GATING_H6C"
+						}
+					],
+					"stacking": "h6RcGateOn"
+				},
+				"h6RcGateCharge": {
+					"type": "COMBAT_EVENT_TRIGGER",
+					"subtype": "heroes-memorial.h6:h6RcGateCharge",
+					"val": 0,
+					"hidden": true,
+					"limiters": [
+						"CREATURES_ONLY",
+						{
+							"type": "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "heroes-memorial.h6:H6_GATING_H6C"
+						}
+					],
+					"stacking": "h6RcGateCharge"
+				}
+			}
+		},
+		"basic": {
+			"description": "{Basic Gating}\n\nGrants the ability to gate Imps, Gogs, and Hell Hounds.\n\n{H6 Gating}\nH6 Inferno units build Gating charge when attacking (max 400); the hero can cast Gating I and II (no Spell Book needed). Only affects H6 Inferno units."
+		},
+		"advanced": {
+			"description": "{Advanced Gating}\n\nGrants the ability to gate Demons, Pit Fiends, Succubi, and Succubus Seducers in addition to previous creatures.\n\n{H6 Gating}\nH6 Inferno units build Gating charge when attacking (max 400); the hero can cast Gating I, II, and III (no Spell Book needed). Only affects H6 Inferno units.",
+			"effects": {
+				"h6RcGatingIII": {
+					"type": "SPELL",
+					"subtype": "heroes-memorial.h6:h6RcGatingIII",
+					"val": 0,
+					"addInfo": true
+				}
+			}
+		},
+		"expert": {
+			"description": "{Expert Gating}\n\nGrants the ability to gate Efreet, Hell Steeds, and Devils in addition to previous creatures.\n\n{H6 Gating}\nH6 Inferno units build Gating charge when attacking (max 400); the hero can cast Gating I, II, III, and IV (no Spell Book needed). Only affects H6 Inferno units.",
+			"effects": {
+				"h6RcGatingIII": {
+					"type": "SPELL",
+					"subtype": "heroes-memorial.h6:h6RcGatingIII",
+					"val": 0,
+					"addInfo": true
+				},
+				"h6RcGatingIV": {
+					"type": "SPELL",
+					"subtype": "heroes-memorial.h6:h6RcGatingIV",
+					"val": 0,
+					"addInfo": true
+				}
+			}
+		}
+	},
+	"tears-of-ashan:bloodRage": {
+		"base": {
+			"effects": {
+				"h6RcRageOn": {
+					"type": "heroes-memorial.h6:H6_RC_RAGE_ON_H6C",
+					"val": 2,
+					"limiters": [
+						"CREATURES_ONLY",
+						{
+							"type": "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "heroes-memorial.h6:H6_BLOODRAGE_H6C"
+						}
+					],
+					"stacking": "h6RcRageOn"
+				},
+				"h6RcRageCharge": {
+					"type": "COMBAT_EVENT_TRIGGER",
+					"subtype": "heroes-memorial.h6:h6RcRageCharge",
+					"val": 0,
+					"hidden": true,
+					"propagator": "BATTLE_WIDE",
+					"stacking": "h6RcRageCharge",
+					"addInfo": {
+						"animation": "h6/spellfx/rc_rage",
+						"sound": "h6/spells/h6RcBloodrage",
+						"turns": 1
+					}
+				}
+			}
+		},
+		"basic": {
+			"description": "{Basic Blood Rage}\n\nBasic Blood Rage allows the hero's Stronghold units to accumulate up to 5 Rage Levels in combat. Each Rage Level gives bonuses to the unit's stats:\n\n{1}: +1 Damage, {2}: +1 Attack, {3}: +1 Health, {4}: +1 Defense, {5}: +1 Speed\n\nThe bonuses of all achieved Rage Levels are cumulative. Units gain +3 Rage Levels when a buffing Warcry is cast; +2 Rage Levels when they attack; +1 Rage Levels when they take damage; -1 Rage levels when they move, and -2 Rage Levels when they take a defensive stance.\n\n{H6 Blood Rage}\nBlood Rage charge: whenever any unit on the battlefield takes damage, it gains +16 for enemy losses and +8 for friendly losses (damage over time does not count); the bar fills at 400.\nAt the start of each round, Blood Rage automatically activates at the level matching the number of filled charge tiers (max level II), spending that much charge:\nAll your H6 Stronghold units get that Blood Rage level for the round:\n  Blood Rage I: +1 Speed\n  Blood Rage II: +1 Speed, +2 Attack\nOnly affects H6 Stronghold units (they are not affected by Tears of Ashan Blood Rage)."
+		},
+		"advanced": {
+			"description": "{Advanced Blood Rage}\n\nAdvanced Blood Rage allows the hero's Stronghold units to accumulate up to 10 Rage Levels in combat. Each Rage Level gives bonuses to the unit's stats:\n\n{1}: +1 Damage, {2}: +1 Attack, {3}: +1 Health, {4}: +1 Defense, {5}: +1 Speed\n\n{6}: +2 Damage, {7}: +2 Attack, {8}: +2 Health, {9}: +2 Defense, {10}: +2 Speed\n\nThe bonuses of all achieved Rage Levels are cumulative. Units gain +3 Rage Levels when a buffing Warcry is cast; +2 Rage Levels when they attack; +1 Rage Levels when they take damage; -1 Rage levels when they move, and -2 Rage Levels when they take a defensive stance.\n\n{H6 Blood Rage}\nBlood Rage charge: whenever any unit on the battlefield takes damage, it gains +16 for enemy losses and +8 for friendly losses (damage over time does not count); the bar fills at 400.\nAt the start of each round, Blood Rage automatically activates at the level matching the number of filled charge tiers (max level III), spending that much charge:\nAll your H6 Stronghold units get that Blood Rage level for the round:\n  Blood Rage I: +1 Speed\n  Blood Rage II: +1 Speed, +2 Attack\n  Blood Rage III: +1 Speed, +2 Attack, 1 extra retaliation\nOnly affects H6 Stronghold units (they are not affected by Tears of Ashan Blood Rage).",
+			"effects": {
+				"h6RcRageOn": {
+					"val": 3
+				}
+			}
+		},
+		"expert": {
+			"description": "{Expert Blood Rage}\n\nExpert Blood Rage allows the hero's Stronghold units to accumulate up to 15 Rage Levels in combat. Each Rage Level gives bonuses to the unit's stats:\n\n{1}: +1 Damage, {2}: +1 Attack, {3}: +1 Health, {4}: +1 Defense, {5}: +1 Speed\n\n{6}: +2 Damage, {7}: +2 Attack, {8}: +2 Health, {9}: +2 Defense, {10}: +2 Speed\n\n{11}: +3 Damage, {12}: +3 Attack, {13}: +3 Health, {14}: +3 Defense, {15}: No enemy retaliation\n\nThe bonuses of all achieved Rage Levels are cumulative. Units gain +3 Rage Levels when a buffing Warcry is cast; +2 Rage Levels when they attack; +1 Rage Levels when they take damage; -1 Rage levels when they move, and -2 Rage Levels when they take a defensive stance.\n\n{H6 Blood Rage}\nBlood Rage charge: whenever any unit on the battlefield takes damage, it gains +16 for enemy losses and +8 for friendly losses (damage over time does not count); the bar fills at 400.\nAt the start of each round, Blood Rage automatically activates at the level matching the number of filled charge tiers (max level IV), spending that much charge:\nAll your H6 Stronghold units get that Blood Rage level for the round:\n  Blood Rage I: +1 Speed\n  Blood Rage II: +1 Speed, +2 Attack\n  Blood Rage III: +1 Speed, +2 Attack, 1 extra retaliation\n  Blood Rage IV: +2 Speed, +3 Attack, 1 extra retaliation, targets cannot retaliate\nOnly affects H6 Stronghold units (they are not affected by Tears of Ashan Blood Rage).",
+			"effects": {
+				"h6RcRageOn": {
+					"val": 4
+				}
+			}
+		}
+	}
+}

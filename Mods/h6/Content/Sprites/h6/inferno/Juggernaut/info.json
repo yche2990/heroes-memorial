@@ -1,0 +1,79 @@
+{
+ "fac": "inferno",
+ "k": 1.0,
+ "scale": 69.97868404748787,
+ "origin": [
+  206.13016238765573,
+  255.572
+ ],
+ "baked": {
+  "0": [
+   "juggernaut_basic.fx"
+  ],
+  "1": [
+   "juggernaut_basic.fx"
+  ],
+  "2": [
+   "juggernaut_basic.fx"
+  ],
+  "3": [
+   "juggernaut_basic.fx"
+  ],
+  "4": [
+   "juggernaut_basic.fx"
+  ],
+  "5": [
+   "juggernaut_basic.fx",
+   "juggernaut_die.fx"
+  ],
+  "7": [
+   "juggernaut_basic.fx"
+  ],
+  "8": [
+   "juggernaut_basic.fx"
+  ],
+  "11": [
+   "juggernaut_basic.fx",
+   "juggernaut_attackcrit.fx"
+  ],
+  "12": [
+   "juggernaut_basic.fx",
+   "juggernaut_attackcrit.fx"
+  ],
+  "13": [
+   "juggernaut_basic.fx",
+   "juggernaut_attackcrit.fx"
+  ],
+  "17": [
+   "juggernaut_basic.fx"
+  ],
+  "18": [
+   "juggernaut_basic.fx"
+  ],
+  "19": [
+   "juggernaut_basic.fx"
+  ],
+  "20": [
+   "juggernaut_basic.fx"
+  ],
+  "21": [
+   "juggernaut_basic.fx"
+  ],
+  "30": [
+   "juggernaut_basic.fx"
+  ],
+  "32": [
+   "juggernaut_basic.fx"
+  ],
+  "40": [
+   "juggernaut_basic.fx",
+   "juggernaut_attackcrit.fx"
+  ],
+  "42": [
+   "juggernaut_basic.fx",
+   "juggernaut_attackcrit.fx"
+  ]
+ },
+ "render": "Blender 4.2 Cycles 24spp 3x + sprite_post; fx h6m (fxsim d1=mul mode2=wrap)",
+ "sec": 40
+}

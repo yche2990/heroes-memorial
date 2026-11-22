@@ -1,0 +1,949 @@
+{
+	"h6MemorialSanctum": {
+		"name": "H6 Memorial Shrine",
+		"handler": "configurable",
+		"types": {
+			"h6MemorialSanctum": {
+				"name": "H6 Memorial Shrine",
+				"aiValue": 20000,
+				"rmg": {
+					"value": 20000,
+					"rarity": 100,
+					"zoneLimit": 1,
+					"mapLimit": 1
+				},
+				"sounds": {
+					"ambient": [
+						"h6/objects/h6MemorialSanctum_ambient"
+					],
+					"visit": [
+						"h6/objects/h6MemorialSanctum_visit"
+					]
+				},
+				"description": "{H6 Memorial Shrine}\n\nA shrine in memory of H6, guarded by a full army of upgraded level 1-7 creatures from one H6 faction. After defeating the guards, a hero whose army contains upgraded level 1-7 creatures of one H6 faction (one stack per level) can permanently master all the active skills of that faction's Might class here (for the Sanctuary, Jinx). Each player can do this only once.\n\nHaven: {Divine Justice}, {Anathema}, {Hour of Judgement}\nInferno: {Seal of Power}, {Mark of Chaos}\nNecropolis: {Destruction}\nStronghold: {Unfettered}, {Might over Magic}, {Blood Fury}, {Power of the Horde}\nDungeon: {Feign Death}, {Diversion}, {Stalking Shade}, {Dark Transfer}\nSanctuary: {Jinx} — at the start of combat, each enemy stack randomly gets one of Chilled, Frozen, Soaked or Dazed.",
+				"visitMode": "playerGlobal",
+				"selectMode": "selectFirst",
+				"canRefuse": true,
+				"onEmptyMessage": "{H6 Memorial Shrine}\n\nOnly a hero whose army contains upgraded level 1-7 creatures of a single H6 faction (one stack per level; for the Sanctuary, either Sacred Kirin or Celestial Kirin at level 7) can master skills here.\n\nHaven: {Divine Justice}, {Anathema}, {Hour of Judgement}\nInferno: {Seal of Power}, {Mark of Chaos}\nNecropolis: {Destruction}\nStronghold: {Unfettered}, {Might over Magic}, {Blood Fury}, {Power of the Horde}\nDungeon: {Feign Death}, {Diversion}, {Stalking Shade}, {Dark Transfer}\nSanctuary: {Jinx} — at the start of combat, each enemy stack randomly gets one of Chilled, Frozen, Soaked or Dazed.",
+				"onVisitedMessage": "{H6 Memorial Shrine}\n\nYou have already mastered skills at the H6 Memorial Shrine; each player can do this only once.",
+				"guardsLayout": "creatureBankWide",
+				"onGuardedMessage": "{H6 Memorial Shrine}\n\nAn army of one H6 faction guards the shrine: one full stack of upgraded creatures of each level 1-7. After defeating the guards, a hero whose army contains upgraded level 1-7 creatures of a single H6 faction can master skills here.\n\nWill you attack?",
+				"rewards": [
+					{
+						"limiter": {
+							"allOf": [
+								{
+									"anyOf": [
+										{
+											"creatures": [
+												{
+													"type": "heroes-memorial.h6:h6HavenPraetorian",
+													"amount": 1
+												}
+											]
+										}
+									]
+								},
+								{
+									"anyOf": [
+										{
+											"creatures": [
+												{
+													"type": "heroes-memorial.h6:h6HavenMarksman",
+													"amount": 1
+												}
+											]
+										}
+									]
+								},
+								{
+									"anyOf": [
+										{
+											"creatures": [
+												{
+													"type": "heroes-memorial.h6:h6HavenVestal",
+													"amount": 1
+												}
+											]
+										}
+									]
+								},
+								{
+									"anyOf": [
+										{
+											"creatures": [
+												{
+													"type": "heroes-memorial.h6:h6HavenImperialGriffin",
+													"amount": 1
+												}
+											]
+										}
+									]
+								},
+								{
+									"anyOf": [
+										{
+											"creatures": [
+												{
+													"type": "heroes-memorial.h6:h6HavenBlazingGlory",
+													"amount": 1
+												}
+											]
+										}
+									]
+								},
+								{
+									"anyOf": [
+										{
+											"creatures": [
+												{
+													"type": "heroes-memorial.h6:h6HavenSunCrusader",
+													"amount": 1
+												}
+											]
+										}
+									]
+								},
+								{
+									"anyOf": [
+										{
+											"creatures": [
+												{
+													"type": "heroes-memorial.h6:h6HavenCelestial",
+													"amount": 1
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						"bonuses": [
+							{
+								"type": "SPELL",
+								"subtype": "heroes-memorial.h6:h6MmDivineJustice",
+								"addInfo": true,
+								"updater": {
+									"type": "GROWS_WITH_LEVEL",
+									"valPer20": 40,
+									"stepSize": 10
+								},
+								"duration": "PERMANENT",
+								"stacking": "h6MemorialSanctum_h6MmDivineJustice"
+							},
+							{
+								"type": "SPELL",
+								"subtype": "heroes-memorial.h6:h6MmAnathema",
+								"addInfo": true,
+								"updater": {
+									"type": "GROWS_WITH_LEVEL",
+									"valPer20": 40,
+									"stepSize": 10
+								},
+								"duration": "PERMANENT",
+								"stacking": "h6MemorialSanctum_h6MmAnathema"
+							},
+							{
+								"type": "SPELL",
+								"subtype": "heroes-memorial.h6:h6MmHourOfJudgement",
+								"addInfo": true,
+								"updater": {
+									"type": "GROWS_WITH_LEVEL",
+									"valPer20": 40,
+									"stepSize": 10
+								},
+								"duration": "PERMANENT",
+								"stacking": "h6MemorialSanctum_h6MmHourOfJudgement"
+							},
+							{
+								"type": "COMBAT_EVENT_TRIGGER",
+								"subtype": "heroes-memorial.h6:h6MmDmgTrack",
+								"val": 0,
+								"propagator": "BATTLE_WIDE",
+								"hidden": true,
+								"duration": "PERMANENT",
+								"stacking": "h6MmDmgTrack"
+							},
+							{
+								"type": "heroes-memorial.h6:H6_ULTIMATE_H6C",
+								"val": 1,
+								"icon": "h6/abilities/mm_Anathema",
+								"description": "{H6 Memorial Shrine · Haven}\nThe hero can cast (no spellbook needed):\nDivine Justice, Anathema, Hour of Judgement",
+								"limiters": [
+									"CREATURES_ONLY"
+								],
+								"duration": "PERMANENT",
+								"stacking": "h6MemorialSanctum_castle_ultimate"
+							}
+						],
+						"message": "{H6 Memorial Shrine}\n\nYour army has gathered upgraded level 1-7 creatures of the H6 Haven faction. Do you want your hero to permanently master the Haven skills?\n\n{Divine Justice}\nThe target enemy takes part of the total damage its attacks have dealt this battle.\n{Anathema}\nLowers the damage, Defense, Morale and Luck of all enemies; cannot be dispelled.\n{Hour of Judgement}\nThis round, your troops deal more damage to enemies under Anathema.\n\nThese skills go into the hero's spells and can be cast without a spellbook; their effects improve with hero level (three tiers: levels 1-9, 10-19, 20+).\n\nEach player can master skills at the H6 Memorial Shrine only once."
+					},
+					{
+						"limiter": {
+							"allOf": [
+								{
+									"anyOf": [
+										{
+											"creatures": [
+												{
+													"type": "heroes-memorial.h6:h6InfernoDemented",
+													"amount": 1
+												}
+											]
+										}
+									]
+								},
+								{
+									"anyOf": [
+										{
+											"creatures": [
+												{
+													"type": "heroes-memorial.h6:h6InfernoCerberus",
+													"amount": 1
+												}
+											]
+										}
+									]
+								},
+								{
+									"anyOf": [
+										{
+											"creatures": [
+												{
+													"type": "heroes-memorial.h6:h6InfernoLilim",
+													"amount": 1
+												}
+											]
+										}
+									]
+								},
+								{
+									"anyOf": [
+										{
+											"creatures": [
+												{
+													"type": "heroes-memorial.h6:h6InfernoMotherBreeder",
+													"amount": 1
+												}
+											]
+										}
+									]
+								},
+								{
+									"anyOf": [
+										{
+											"creatures": [
+												{
+													"type": "heroes-memorial.h6:h6InfernoLacerator",
+													"amount": 1
+												}
+											]
+										}
+									]
+								},
+								{
+									"anyOf": [
+										{
+											"creatures": [
+												{
+													"type": "heroes-memorial.h6:h6InfernoRavager",
+													"amount": 1
+												}
+											]
+										}
+									]
+								},
+								{
+									"anyOf": [
+										{
+											"creatures": [
+												{
+													"type": "heroes-memorial.h6:h6InfernoPitLord",
+													"amount": 1
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						"bonuses": [
+							{
+								"type": "SPELL",
+								"subtype": "heroes-memorial.h6:h6MmSealOfPower",
+								"addInfo": true,
+								"updater": {
+									"type": "GROWS_WITH_LEVEL",
+									"valPer20": 40,
+									"stepSize": 10
+								},
+								"duration": "PERMANENT",
+								"stacking": "h6MemorialSanctum_h6MmSealOfPower"
+							},
+							{
+								"type": "SPELL",
+								"subtype": "heroes-memorial.h6:h6MmMarkOfChaos",
+								"addInfo": true,
+								"updater": {
+									"type": "GROWS_WITH_LEVEL",
+									"valPer20": 40,
+									"stepSize": 10
+								},
+								"duration": "PERMANENT",
+								"stacking": "h6MemorialSanctum_h6MmMarkOfChaos"
+							},
+							{
+								"type": "heroes-memorial.h6:H6_ULTIMATE_H6C",
+								"val": 1,
+								"icon": "h6/abilities/mm_MarkOfChaos",
+								"description": "{H6 Memorial Shrine · Inferno}\nThe hero can cast (no spellbook needed):\nSeal of Power, Mark of Chaos",
+								"limiters": [
+									"CREATURES_ONLY"
+								],
+								"duration": "PERMANENT",
+								"stacking": "h6MemorialSanctum_inferno_ultimate"
+							}
+						],
+						"message": "{H6 Memorial Shrine}\n\nYour army has gathered upgraded level 1-7 creatures of the H6 Inferno faction. Do you want your hero to permanently master the Inferno skills?\n\n{Seal of Power}\nDemons summoned by your H6 Gating restore the losses of their source stack (they stay after combat).\n{Mark of Chaos}\nThe next 5 attacks on the target enemy are always critical hits.\n\nThese skills go into the hero's spells and can be cast without a spellbook; their effects improve with hero level (three tiers: levels 1-9, 10-19, 20+).\n\nEach player can master skills at the H6 Memorial Shrine only once."
+					},
+					{
+						"limiter": {
+							"allOf": [
+								{
+									"anyOf": [
+										{
+											"creatures": [
+												{
+													"type": "heroes-memorial.h6:h6NecroSkeletalSpearman",
+													"amount": 1
+												}
+											]
+										}
+									]
+								},
+								{
+									"anyOf": [
+										{
+											"creatures": [
+												{
+													"type": "heroes-memorial.h6:h6NecroRavenous",
+													"amount": 1
+												}
+											]
+										}
+									]
+								},
+								{
+									"anyOf": [
+										{
+											"creatures": [
+												{
+													"type": "heroes-memorial.h6:h6NecroSpectre",
+													"amount": 1
+												}
+											]
+										}
+									]
+								},
+								{
+									"anyOf": [
+										{
+											"creatures": [
+												{
+													"type": "heroes-memorial.h6:h6NecroArchlich",
+													"amount": 1
+												}
+											]
+										}
+									]
+								},
+								{
+									"anyOf": [
+										{
+											"creatures": [
+												{
+													"type": "heroes-memorial.h6:h6NecroPutrid",
+													"amount": 1
+												}
+											]
+										}
+									]
+								},
+								{
+									"anyOf": [
+										{
+											"creatures": [
+												{
+													"type": "heroes-memorial.h6:h6NecroVampireLord",
+													"amount": 1
+												}
+											]
+										}
+									]
+								},
+								{
+									"anyOf": [
+										{
+											"creatures": [
+												{
+													"type": "heroes-memorial.h6:h6NecroFateWeaver",
+													"amount": 1
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						"bonuses": [
+							{
+								"type": "SPELL",
+								"subtype": "heroes-memorial.h6:h6MmDoom",
+								"addInfo": true,
+								"updater": {
+									"type": "GROWS_WITH_LEVEL",
+									"valPer20": 40,
+									"stepSize": 10
+								},
+								"duration": "PERMANENT",
+								"stacking": "h6MemorialSanctum_h6MmDoom"
+							},
+							{
+								"type": "heroes-memorial.h6:H6_ULTIMATE_H6C",
+								"val": 1,
+								"icon": "h6/abilities/mm_Doom",
+								"description": "{H6 Memorial Shrine · Necropolis}\nThe hero can cast (no spellbook needed):\nDestruction",
+								"limiters": [
+									"CREATURES_ONLY"
+								],
+								"duration": "PERMANENT",
+								"stacking": "h6MemorialSanctum_necropolis_ultimate"
+							}
+						],
+						"message": "{H6 Memorial Shrine}\n\nYour army has gathered upgraded level 1-7 creatures of the H6 Necropolis faction. Do you want your hero to permanently master the Necropolis skills?\n\n{Destruction}\nThe target enemy Core or Elite stack dies completely after several rounds.\n\nThese skills go into the hero's spells and can be cast without a spellbook; their effects improve with hero level (three tiers: levels 1-9, 10-19, 20+).\n\nEach player can master skills at the H6 Memorial Shrine only once."
+					},
+					{
+						"limiter": {
+							"allOf": [
+								{
+									"anyOf": [
+										{
+											"creatures": [
+												{
+													"type": "heroes-memorial.h6:h6StrongholdCrusher",
+													"amount": 1
+												}
+											]
+										}
+									]
+								},
+								{
+									"anyOf": [
+										{
+											"creatures": [
+												{
+													"type": "heroes-memorial.h6:h6StrongholdGoblinHunter",
+													"amount": 1
+												}
+											]
+										}
+									]
+								},
+								{
+									"anyOf": [
+										{
+											"creatures": [
+												{
+													"type": "heroes-memorial.h6:h6StrongholdFury",
+													"amount": 1
+												}
+											]
+										}
+									]
+								},
+								{
+									"anyOf": [
+										{
+											"creatures": [
+												{
+													"type": "heroes-memorial.h6:h6StrongholdDreamreaver",
+													"amount": 1
+												}
+											]
+										}
+									]
+								},
+								{
+									"anyOf": [
+										{
+											"creatures": [
+												{
+													"type": "heroes-memorial.h6:h6StrongholdMarauderCentaur",
+													"amount": 1
+												}
+											]
+										}
+									]
+								},
+								{
+									"anyOf": [
+										{
+											"creatures": [
+												{
+													"type": "heroes-memorial.h6:h6StrongholdPantherWarrior",
+													"amount": 1
+												}
+											]
+										}
+									]
+								},
+								{
+									"anyOf": [
+										{
+											"creatures": [
+												{
+													"type": "heroes-memorial.h6:h6StrongholdEnragedCyclops",
+													"amount": 1
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						"bonuses": [
+							{
+								"type": "SPELL",
+								"subtype": "heroes-memorial.h6:h6MmUnfettered",
+								"addInfo": true,
+								"updater": {
+									"type": "GROWS_WITH_LEVEL",
+									"valPer20": 40,
+									"stepSize": 10
+								},
+								"duration": "PERMANENT",
+								"stacking": "h6MemorialSanctum_h6MmUnfettered"
+							},
+							{
+								"type": "SPELL",
+								"subtype": "heroes-memorial.h6:h6MmMightOverMagic",
+								"addInfo": true,
+								"updater": {
+									"type": "GROWS_WITH_LEVEL",
+									"valPer20": 40,
+									"stepSize": 10
+								},
+								"duration": "PERMANENT",
+								"stacking": "h6MemorialSanctum_h6MmMightOverMagic"
+							},
+							{
+								"type": "SPELL",
+								"subtype": "heroes-memorial.h6:h6MmBloodFury",
+								"addInfo": true,
+								"updater": {
+									"type": "GROWS_WITH_LEVEL",
+									"valPer20": 40,
+									"stepSize": 10
+								},
+								"duration": "PERMANENT",
+								"stacking": "h6MemorialSanctum_h6MmBloodFury"
+							},
+							{
+								"type": "SPELL",
+								"subtype": "heroes-memorial.h6:h6MmPowerOfTheHorde",
+								"addInfo": true,
+								"updater": {
+									"type": "GROWS_WITH_LEVEL",
+									"valPer20": 40,
+									"stepSize": 10
+								},
+								"duration": "PERMANENT",
+								"stacking": "h6MemorialSanctum_h6MmPowerOfTheHorde"
+							},
+							{
+								"type": "heroes-memorial.h6:H6_ULTIMATE_H6C",
+								"val": 1,
+								"icon": "h6/abilities/mm_Unfettered",
+								"description": "{H6 Memorial Shrine · Stronghold}\nThe hero can cast (no spellbook needed):\nUnfettered, Might over Magic, Blood Fury, Power of the Horde",
+								"limiters": [
+									"CREATURES_ONLY"
+								],
+								"duration": "PERMANENT",
+								"stacking": "h6MemorialSanctum_stronghold_ultimate"
+							}
+						],
+						"message": "{H6 Memorial Shrine}\n\nYour army has gathered upgraded level 1-7 creatures of the H6 Stronghold faction. Do you want your hero to permanently master the Stronghold skills?\n\n{Unfettered}\nDispels slowing, Morale-lowering and Attack-lowering negative spells from all your troops.\n{Might over Magic}\nFor 2 rounds, magic damage taken by all your troops is reduced.\n{Blood Fury}\nThe target friendly H6 Stronghold stack gets +2 H6 Blood Rage level and +2 rounds of duration.\n{Power of the Horde}\nDeals physical damage to the target enemy based on the total Hit Points of your whole army.\n\nThese skills go into the hero's spells and can be cast without a spellbook; their effects improve with hero level (three tiers: levels 1-9, 10-19, 20+).\n\nEach player can master skills at the H6 Memorial Shrine only once."
+					},
+					{
+						"limiter": {
+							"allOf": [
+								{
+									"anyOf": [
+										{
+											"creatures": [
+												{
+													"type": "heroes-memorial.h6:h6DungeonShade",
+													"amount": 1
+												}
+											]
+										}
+									]
+								},
+								{
+									"anyOf": [
+										{
+											"creatures": [
+												{
+													"type": "heroes-memorial.h6:h6DungeonChakramDancer",
+													"amount": 1
+												}
+											]
+										}
+									]
+								},
+								{
+									"anyOf": [
+										{
+											"creatures": [
+												{
+													"type": "heroes-memorial.h6:h6DungeonShadowWatcher",
+													"amount": 1
+												}
+											]
+										}
+									]
+								},
+								{
+									"anyOf": [
+										{
+											"creatures": [
+												{
+													"type": "heroes-memorial.h6:h6DungeonScorpicore",
+													"amount": 1
+												}
+											]
+										}
+									]
+								},
+								{
+									"anyOf": [
+										{
+											"creatures": [
+												{
+													"type": "heroes-memorial.h6:h6DungeonFacelessPuppeteer",
+													"amount": 1
+												}
+											]
+										}
+									]
+								},
+								{
+									"anyOf": [
+										{
+											"creatures": [
+												{
+													"type": "heroes-memorial.h6:h6DungeonMinotaurGuard",
+													"amount": 1
+												}
+											]
+										}
+									]
+								},
+								{
+									"anyOf": [
+										{
+											"creatures": [
+												{
+													"type": "heroes-memorial.h6:h6DungeonBlackDragon",
+													"amount": 1
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						"bonuses": [
+							{
+								"type": "SPELL",
+								"subtype": "heroes-memorial.h6:h6MmFeignDeath",
+								"addInfo": true,
+								"updater": {
+									"type": "GROWS_WITH_LEVEL",
+									"valPer20": 40,
+									"stepSize": 10
+								},
+								"duration": "PERMANENT",
+								"stacking": "h6MemorialSanctum_h6MmFeignDeath"
+							},
+							{
+								"type": "SPELL",
+								"subtype": "heroes-memorial.h6:h6MmDiversion",
+								"addInfo": true,
+								"updater": {
+									"type": "GROWS_WITH_LEVEL",
+									"valPer20": 40,
+									"stepSize": 10
+								},
+								"duration": "PERMANENT",
+								"stacking": "h6MemorialSanctum_h6MmDiversion"
+							},
+							{
+								"type": "SPELL",
+								"subtype": "heroes-memorial.h6:h6MmStalkingShade",
+								"addInfo": true,
+								"updater": {
+									"type": "GROWS_WITH_LEVEL",
+									"valPer20": 40,
+									"stepSize": 10
+								},
+								"duration": "PERMANENT",
+								"stacking": "h6MemorialSanctum_h6MmStalkingShade"
+							},
+							{
+								"type": "SPELL",
+								"subtype": "heroes-memorial.h6:h6MmDarkTransfer",
+								"addInfo": true,
+								"updater": {
+									"type": "GROWS_WITH_LEVEL",
+									"valPer20": 40,
+									"stepSize": 10
+								},
+								"duration": "PERMANENT",
+								"stacking": "h6MemorialSanctum_h6MmDarkTransfer"
+							},
+							{
+								"type": "heroes-memorial.h6:H6_ULTIMATE_H6C",
+								"val": 1,
+								"icon": "h6/abilities/mm_StalkingShade",
+								"description": "{H6 Memorial Shrine · Dungeon}\nThe hero can cast (no spellbook needed):\nFeign Death, Diversion, Stalking Shade, Dark Transfer",
+								"limiters": [
+									"CREATURES_ONLY"
+								],
+								"duration": "PERMANENT",
+								"stacking": "h6MemorialSanctum_dungeon_ultimate"
+							}
+						],
+						"message": "{H6 Memorial Shrine}\n\nYour army has gathered upgraded level 1-7 creatures of the H6 Dungeon faction. Do you want your hero to permanently master the Dungeon skills?\n\n{Feign Death}\nThe first time your stack is attacked, it takes no damage and lies down until the next round.\n{Diversion}\nPlaces a decoy; nearby enemies lose control.\n{Stalking Shade}\nPlaces an illusion next to your stack; adjacent enemies deal less damage.\n{Dark Transfer}\nThe target friendly stack acts next.\n\nThese skills go into the hero's spells and can be cast without a spellbook; their effects improve with hero level (three tiers: levels 1-9, 10-19, 20+).\n\nEach player can master skills at the H6 Memorial Shrine only once."
+					},
+					{
+						"appearChance": {
+							"dice": 1,
+							"min": 0,
+							"max": 20
+						},
+						"limiter": {
+							"heroLevel": 999
+						},
+						"guards": [
+							{
+								"type": "heroes-memorial.h6:h6HavenPraetorian",
+								"amount": 1514
+							},
+							{
+								"type": "heroes-memorial.h6:h6HavenMarksman",
+								"amount": 865
+							},
+							{
+								"type": "heroes-memorial.h6:h6HavenVestal",
+								"amount": 649
+							},
+							{
+								"type": "heroes-memorial.h6:h6HavenImperialGriffin",
+								"amount": 541
+							},
+							{
+								"type": "heroes-memorial.h6:h6HavenBlazingGlory",
+								"amount": 324
+							},
+							{
+								"type": "heroes-memorial.h6:h6HavenSunCrusader",
+								"amount": 216
+							},
+							{
+								"type": "heroes-memorial.h6:h6HavenCelestial",
+								"amount": 108
+							}
+						]
+					},
+					{
+						"appearChance": {
+							"dice": 1,
+							"min": 20,
+							"max": 40
+						},
+						"limiter": {
+							"heroLevel": 999
+						},
+						"guards": [
+							{
+								"type": "heroes-memorial.h6:h6InfernoDemented",
+								"amount": 1276
+							},
+							{
+								"type": "heroes-memorial.h6:h6InfernoCerberus",
+								"amount": 729
+							},
+							{
+								"type": "heroes-memorial.h6:h6InfernoLilim",
+								"amount": 547
+							},
+							{
+								"type": "heroes-memorial.h6:h6InfernoMotherBreeder",
+								"amount": 456
+							},
+							{
+								"type": "heroes-memorial.h6:h6InfernoLacerator",
+								"amount": 273
+							},
+							{
+								"type": "heroes-memorial.h6:h6InfernoRavager",
+								"amount": 182
+							},
+							{
+								"type": "heroes-memorial.h6:h6InfernoPitLord",
+								"amount": 91
+							}
+						]
+					},
+					{
+						"appearChance": {
+							"dice": 1,
+							"min": 40,
+							"max": 60
+						},
+						"limiter": {
+							"heroLevel": 999
+						},
+						"guards": [
+							{
+								"type": "heroes-memorial.h6:h6NecroSkeletalSpearman",
+								"amount": 1369
+							},
+							{
+								"type": "heroes-memorial.h6:h6NecroRavenous",
+								"amount": 782
+							},
+							{
+								"type": "heroes-memorial.h6:h6NecroSpectre",
+								"amount": 587
+							},
+							{
+								"type": "heroes-memorial.h6:h6NecroArchlich",
+								"amount": 489
+							},
+							{
+								"type": "heroes-memorial.h6:h6NecroPutrid",
+								"amount": 293
+							},
+							{
+								"type": "heroes-memorial.h6:h6NecroVampireLord",
+								"amount": 196
+							},
+							{
+								"type": "heroes-memorial.h6:h6NecroFateWeaver",
+								"amount": 98
+							}
+						]
+					},
+					{
+						"appearChance": {
+							"dice": 1,
+							"min": 60,
+							"max": 80
+						},
+						"limiter": {
+							"heroLevel": 999
+						},
+						"guards": [
+							{
+								"type": "heroes-memorial.h6:h6StrongholdCrusher",
+								"amount": 1371
+							},
+							{
+								"type": "heroes-memorial.h6:h6StrongholdGoblinHunter",
+								"amount": 783
+							},
+							{
+								"type": "heroes-memorial.h6:h6StrongholdFury",
+								"amount": 587
+							},
+							{
+								"type": "heroes-memorial.h6:h6StrongholdDreamreaver",
+								"amount": 490
+							},
+							{
+								"type": "heroes-memorial.h6:h6StrongholdMarauderCentaur",
+								"amount": 294
+							},
+							{
+								"type": "heroes-memorial.h6:h6StrongholdPantherWarrior",
+								"amount": 196
+							},
+							{
+								"type": "heroes-memorial.h6:h6StrongholdEnragedCyclops",
+								"amount": 98
+							}
+						]
+					},
+					{
+						"appearChance": {
+							"dice": 1,
+							"min": 80,
+							"max": 100
+						},
+						"limiter": {
+							"heroLevel": 999
+						},
+						"guards": [
+							{
+								"type": "heroes-memorial.h6:h6DungeonShade",
+								"amount": 1342
+							},
+							{
+								"type": "heroes-memorial.h6:h6DungeonChakramDancer",
+								"amount": 767
+							},
+							{
+								"type": "heroes-memorial.h6:h6DungeonShadowWatcher",
+								"amount": 575
+							},
+							{
+								"type": "heroes-memorial.h6:h6DungeonScorpicore",
+								"amount": 479
+							},
+							{
+								"type": "heroes-memorial.h6:h6DungeonFacelessPuppeteer",
+								"amount": 288
+							},
+							{
+								"type": "heroes-memorial.h6:h6DungeonMinotaurGuard",
+								"amount": 192
+							},
+							{
+								"type": "heroes-memorial.h6:h6DungeonBlackDragon",
+								"amount": 96
+							}
+						]
+					}
+				],
+				"templates": {
+					"h6MemorialSanctum": {
+						"animation": "h6/objects/h6MemorialSanctum/map.json",
+						"editorAnimation": "h6/objects/h6MemorialSanctum/map.json",
+						"mask": [
+							"VVV",
+							"BBB",
+							"BAB"
+						],
+						"visitableFrom": [
+							"---",
+							"+-+",
+							"+++"
+						]
+					}
+				}
+			}
+		}
+	}
+}

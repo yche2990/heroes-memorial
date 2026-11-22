@@ -1,0 +1,48 @@
+// Heroes 6 memorial: bonus types used by Dungeon creatures
+{
+	"H6_TERROR_H6C": {
+		"graphics": {
+			"icon": "h6/abilities/ab_Terrifying_Presence"
+		},
+		"creatureNature": false,
+		"description": "{Terrifying Presence}\nAdjacent enemies have a ${val}% chance to only defend"
+	},
+	"H6_TERRIFIED_H6C": {
+		"graphics": {
+			"icon": "h6/abilities/ab_Terrifying_Presence"
+		},
+		"creatureNature": false,
+		"description": "{Fear}\nFrightened by a Terrifying Presence",
+		"valueDescriptions": {
+			"900001": "%s are so frightened by the Terrifying Presence they can only defend."
+		}
+	},
+	"H6_PROBED_H6C": {
+		"graphics": {
+			"icon": "h6/abilities/ab_Mind_Probe"
+		},
+		"creatureNature": false,
+		"description": "{Mind Probe}\nDamage taken +${val}%"
+	},
+	"H6_LEASH_USED_H6C": {
+		"hidden": true,
+		"creatureNature": false
+	},
+	"H6_PURGE_H6C": {
+		"graphics": {
+			"icon": "h6/abilities/ab_Dark_Purge"
+		},
+		"creatureNature": false,
+		"description": "{Dark Purge}\nNext attack dispels the target's beneficial spells"
+	},
+	"H6_WITHER_H6C": {
+		"graphics": {
+			"icon": "h6/abilities/ab_Withering_Breath"
+		},
+		"creatureNature": false,
+		"description": "{Withered}\nTakes Dark damage over time each round",
+		"valueDescriptions": {
+			"900001": "%s wither, taking %d damage; %d perish."
+		}
+	}
+}

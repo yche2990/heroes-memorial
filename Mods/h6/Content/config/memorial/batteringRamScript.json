@@ -1,0 +1,41 @@
+{
+	"batteringRam" : {
+		"implements" : "spellEffect",
+		"script" : "spells/h6BatteringRam.lua",
+		"patches" : [],
+		"schema" : {
+			"required" : [
+				"singular",
+				"plural"
+			],
+			"properties" : {
+				"type" : {},
+				"canAttackGate" : {
+					"type" : "boolean",
+					"description" : "Allows attacking the gate"
+				},
+				"canAttackTowers" : {
+					"type" : "boolean",
+					"description" : "Allows attacking the upper and lower towers"
+				},
+				"canAttackKeep" : {
+					"type" : "boolean",
+					"description" : "Allows attacking the keep"
+				},
+				"singular" : {
+					"type" : "string",
+					"description" : "Battle log message when a single creature casts this spell"
+				},
+				"plural" : {
+					"type" : "string",
+					"description" : "Battle log message when a stack of several creatures casts this spell"
+				}
+			},
+			"additionalProperties" : false
+		},
+		"stringRegistrations" : [
+			"singular",
+			"plural"
+		]
+	}
+}

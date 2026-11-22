@@ -1,0 +1,43 @@
+{
+ "fac": "stronghold",
+ "k": 1.0,
+ "scale": 70.04290101106818,
+ "origin": [
+  211.70256962490478,
+  258.955
+ ],
+ "baked": {
+  "0": [],
+  "1": [],
+  "2": [],
+  "3": [],
+  "4": [],
+  "5": [],
+  "7": [],
+  "8": [],
+  "11": [],
+  "12": [],
+  "13": [],
+  "17": [
+   "jaguarwarrior_ability1.fx"
+  ],
+  "18": [
+   "jaguarwarrior_ability1.fx"
+  ],
+  "19": [
+   "jaguarwarrior_ability1.fx"
+  ],
+  "20": [],
+  "21": [],
+  "30": [
+   "jaguarwarrior_ability1.fx"
+  ],
+  "32": [
+   "jaguarwarrior_ability1.fx"
+  ],
+  "40": [],
+  "42": []
+ },
+ "render": "Blender 4.2 Cycles 24spp 3x + sprite_post; fx h6m (fxsim d1=mul mode2=wrap)",
+ "sec": 28
+}

@@ -1,0 +1,4456 @@
+// Heroes 6 memorial: the 14 Necropolis creatures and the spider forms of the Fate Spinner and Fate Weaver (stats converted by H3 same-level averages)
+{
+	"h6NecroSkeleton": {
+		"name": {
+			"singular": "Skeleton",
+			"plural": "Skeletons"
+		},
+		"description": "Skeletons are nothing more than the dead, their rotting bodies driven by the will of a necromancer. Blindly obedient, untroubled by hunger or thirst, never afraid and never doubting, they are thought of as excellent servants.",
+		"faction": "necropolis",
+		"level": 1,
+		"cost": {
+			"gold": 40
+		},
+		"speed": 3,
+		"hitPoints": 5,
+		"attack": 3,
+		"defense": 3,
+		"damage": {
+			"min": 1,
+			"max": 2
+		},
+		"doubleWide": false,
+		"fightValue": 68,
+		"aiValue": 60,
+		"growth": 14,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"upgrades": [
+			"h6NecroSkeletalSpearman"
+		],
+		"shots": 24,
+		"abilities": {
+			"h6NecroRaise": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6NecroRaise",
+				"hidden": true
+			},
+			"h6NecroRaiseInfo": {
+				"type": "H6_NECRO_RAISE_H6C"
+			},
+			"shooter": {
+				"type": "SHOOTER"
+			},
+			"hollowBones": {
+				"type": "GENERAL_DAMAGE_REDUCTION",
+				"subtype": "damageTypeRanged",
+				"val": 50,
+				"stacking": "h6NecroSkeletonExpHollow",
+				"icon": "h6/abilities/ab_Hollow_Bones",
+				"description": "{Hollow Bones}\nRanged damage taken -50%"
+			},
+			"undead": {
+				"type": "UNDEAD",
+				"icon": "h6/abilities/ab_Undead",
+				"description": "{Undead}\nUnaffected by Morale, immune to mind spells"
+			},
+			"lightWeak": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.01lightSchool",
+				"val": -20,
+				"icon": "h6/abilities/ab_Vulnerability_to_Light",
+				"description": "{Light Weakness}\nLight Magic damage taken +20%"
+			}
+		},
+		"graphics": {
+			"animation": "h6/necropolis/Skeleton/Skeleton.json",
+			"map": "h6/units/h6NecroSkeleton/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h6/units/h6NecroSkeleton/map/atkL.png",
+			"mapAttackFromRight": "h6/units/h6NecroSkeleton/map/atkR.png",
+			"iconLarge": "h6/units/h6NecroSkeleton/iconLarge.png",
+			"iconSmall": "h6/units/h6NecroSkeleton/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"frameAngles": [
+					90,
+					60,
+					45,
+					30,
+					0,
+					-30,
+					-45,
+					-60,
+					-90
+				],
+				"offset": {
+					"upperX": 32,
+					"upperY": -74,
+					"middleX": 30,
+					"middleY": -69,
+					"lowerX": 32,
+					"lowerY": -63
+				},
+				"attackClimaxFrame": 4,
+				"projectile": "h6/necropolis/spear.json"
+			}
+		},
+		"sound": {
+			"attack": "h6/necropolis/Skeleton_AttackLaunchMelee.wav",
+			"shoot": "h6/necropolis/Skeleton_AttackLaunchRanged.wav",
+			"wince": "h6/necropolis/Skeleton_Hit.wav",
+			"defend": "h6/necropolis/Skeleton_Defend.wav",
+			"killed": "h6/necropolis/Skeleton_Die.wav",
+			"move": "h6/necropolis/Skeleton_Move_Earth1.wav"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.attack"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.defence"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "GENERAL_DAMAGE_REDUCTION",
+					"subtype": "damageTypeRanged",
+					"stacking": "h6NecroSkeletonExpHollow"
+				},
+				"values": [
+					50,
+					51,
+					52,
+					54,
+					56,
+					58,
+					60,
+					62,
+					64,
+					66
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_WALL_PENALTY"
+				},
+				"values": [
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h6NecroSkeletalSpearman": {
+		"name": {
+			"singular": "Skeletal Spearman",
+			"plural": "Skeletal Spearmen"
+		},
+		"description": "Some skeletons are carefully chosen by necromancers to wear enchanted armor and weapons, which keeps them from being mere dragon fodder. These outstanding servants carry special spears fitted with a ball of Fate Spinner silk that bursts into a web on impact.",
+		"faction": "necropolis",
+		"level": 1,
+		"cost": {
+			"gold": 55
+		},
+		"speed": 5,
+		"hitPoints": 5,
+		"attack": 5,
+		"defense": 4,
+		"damage": {
+			"min": 1,
+			"max": 2
+		},
+		"doubleWide": false,
+		"fightValue": 81,
+		"aiValue": 87,
+		"growth": 14,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"shots": 24,
+		"abilities": {
+			"h6NecroRaise": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6NecroRaise",
+				"hidden": true
+			},
+			"h6NecroRaiseInfo": {
+				"type": "H6_NECRO_RAISE_H6C"
+			},
+			"shooter": {
+				"type": "SHOOTER"
+			},
+			"hollowBones": {
+				"type": "GENERAL_DAMAGE_REDUCTION",
+				"subtype": "damageTypeRanged",
+				"val": 50,
+				"stacking": "h6NecroSkeletalSpearmanExpHollow",
+				"icon": "h6/abilities/ab_Hollow_Bones",
+				"description": "{Hollow Bones}\nRanged damage taken -50%"
+			},
+			"undead": {
+				"type": "UNDEAD",
+				"icon": "h6/abilities/ab_Undead",
+				"description": "{Undead}\nUnaffected by Morale, immune to mind spells"
+			},
+			"lightWeak": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.01lightSchool",
+				"val": -20,
+				"icon": "h6/abilities/ab_Vulnerability_to_Light",
+				"description": "{Light Weakness}\nLight Magic damage taken +20%"
+			},
+			"webbingSpears": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6AttackStatus",
+				"val": 2,
+				"icon": "h6/abilities/ab_Webbing_Spears",
+				"stacking": "h6WebbingSpears",
+				"description": "{Spear Web}\nHit: target, neighbors -2 Speed for 2 rounds",
+				"addInfo": {
+					"spell": "heroes-memorial.h6:h6Webbed",
+					"turns": 2,
+					"adjacent": true,
+					"animation": "h6/necropolis/fx/web",
+					"sound": "h6/necropolis/SkeletonWebbingSpears_Impact.wav"
+				}
+			}
+		},
+		"graphics": {
+			"animation": "h6/necropolis/SkeletonUpgrade/SkeletonUpgrade.json",
+			"map": "h6/units/h6NecroSkeletalSpearman/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h6/units/h6NecroSkeletalSpearman/map/atkL.png",
+			"mapAttackFromRight": "h6/units/h6NecroSkeletalSpearman/map/atkR.png",
+			"iconLarge": "h6/units/h6NecroSkeletalSpearman/iconLarge.png",
+			"iconSmall": "h6/units/h6NecroSkeletalSpearman/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"frameAngles": [
+					90,
+					60,
+					45,
+					30,
+					0,
+					-30,
+					-45,
+					-60,
+					-90
+				],
+				"offset": {
+					"upperX": 32,
+					"upperY": -73,
+					"middleX": 30,
+					"middleY": -68,
+					"lowerX": 32,
+					"lowerY": -62
+				},
+				"attackClimaxFrame": 4,
+				"projectile": "h6/necropolis/spear.json"
+			}
+		},
+		"sound": {
+			"attack": "h6/necropolis/Skeleton_AttackLaunchMelee.wav",
+			"shoot": "h6/necropolis/Skeleton_AttackLaunchRanged.wav",
+			"wince": "h6/necropolis/Skeleton_Hit.wav",
+			"defend": "h6/necropolis/Skeleton_Defend.wav",
+			"killed": "h6/necropolis/Skeleton_Die.wav",
+			"move": "h6/necropolis/SkeletonUpg_Move_Earth1.wav"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.attack"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.defence"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "GENERAL_DAMAGE_REDUCTION",
+					"subtype": "damageTypeRanged",
+					"stacking": "h6NecroSkeletalSpearmanExpHollow"
+				},
+				"values": [
+					51,
+					52,
+					54,
+					56,
+					58,
+					60,
+					62,
+					64,
+					66,
+					68
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_WALL_PENALTY"
+				},
+				"values": [
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h6NecroGhoul": {
+		"name": {
+			"singular": "Ghoul",
+			"plural": "Ghouls"
+		},
+		"description": "Ghouls are the dead with greedy souls, bound inside lifeless corpses. Ghouls are punished beings, filled with hatred for the living. Powerful necromancers can control them, but they are also mad and extremely destructive. Being turned into a Ghoul is Heresh's harshest punishment, for it means the soul is cast out of the cycle of life and death forever. Ghouls feed on corpses, and their blood and saliva often carry disease.",
+		"faction": "necropolis",
+		"level": 2,
+		"cost": {
+			"gold": 125
+		},
+		"speed": 4,
+		"hitPoints": 15,
+		"attack": 7,
+		"defense": 6,
+		"damage": {
+			"min": 3,
+			"max": 4
+		},
+		"doubleWide": false,
+		"fightValue": 204,
+		"aiValue": 198,
+		"growth": 8,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"upgrades": [
+			"h6NecroRavenous"
+		],
+		"abilities": {
+			"h6NecroRaise": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6NecroRaise",
+				"hidden": true
+			},
+			"h6NecroRaiseInfo": {
+				"type": "H6_NECRO_RAISE_H6C"
+			},
+			"deadFlesh": {
+				"type": "GENERAL_DAMAGE_REDUCTION",
+				"subtype": "damageTypeAll",
+				"val": 20,
+				"stacking": "h6NecroGhoulExpFlesh",
+				"icon": "h6/abilities/ab_Dead_Flesh",
+				"description": "{Dead Flesh}\nAttack damage taken -20%"
+			},
+			"undead": {
+				"type": "UNDEAD",
+				"icon": "h6/abilities/ab_Undead",
+				"description": "{Undead}\nUnaffected by Morale, immune to mind spells"
+			},
+			"lightWeak": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.01lightSchool",
+				"val": -20,
+				"icon": "h6/abilities/ab_Vulnerability_to_Light",
+				"description": "{Light Weakness}\nLight Magic damage taken +20%"
+			}
+		},
+		"graphics": {
+			"animation": "h6/necropolis/ghoul/ghoul.json",
+			"map": "h6/units/h6NecroGhoul/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h6/units/h6NecroGhoul/map/atkL.png",
+			"mapAttackFromRight": "h6/units/h6NecroGhoul/map/atkR.png",
+			"iconLarge": "h6/units/h6NecroGhoul/iconLarge.png",
+			"iconSmall": "h6/units/h6NecroGhoul/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h6/necropolis/Ghoul_AttackLaunchMelee.wav",
+			"wince": "h6/necropolis/Ghoul_Hit.wav",
+			"defend": "h6/necropolis/Ghoul_Defend.wav",
+			"killed": "h6/necropolis/Ghoul_Die.wav",
+			"move": "h6/necropolis/Ghoul_Move_Earth2.wav"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.attack"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					3,
+					3,
+					3,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.defence"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					3,
+					4,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					0,
+					1,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					3,
+					3,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "GENERAL_DAMAGE_REDUCTION",
+					"subtype": "damageTypeAll",
+					"stacking": "h6NecroGhoulExpFlesh"
+				},
+				"values": [
+					20,
+					21,
+					22,
+					23,
+					24,
+					25,
+					26,
+					27,
+					28,
+					30
+				]
+			},
+			{
+				"bonus": {
+					"type": "HP_REGENERATION",
+					"description": "{Scavenger}\nRegains Hit Points each round"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					5,
+					5,
+					10,
+					10
+				]
+			}
+		]
+	},
+	"h6NecroRavenous": {
+		"name": {
+			"singular": "Ravenous Ghoul",
+			"plural": "Ravenous Ghouls"
+		},
+		"description": "Ravenous Ghouls are trained for battle by their masters. They are even more savage and vicious than their \"wild\" kin. When the necromancer lords of the Seven Cities bring them to the battlefield, they are often leashed together like war dogs.",
+		"faction": "necropolis",
+		"level": 2,
+		"cost": {
+			"gold": 170
+		},
+		"speed": 6,
+		"hitPoints": 17,
+		"attack": 7,
+		"defense": 6,
+		"damage": {
+			"min": 3,
+			"max": 4
+		},
+		"doubleWide": false,
+		"fightValue": 251,
+		"aiValue": 290,
+		"growth": 8,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"h6NecroRaise": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6NecroRaise",
+				"hidden": true
+			},
+			"h6NecroRaiseInfo": {
+				"type": "H6_NECRO_RAISE_H6C"
+			},
+			"deadFlesh": {
+				"type": "GENERAL_DAMAGE_REDUCTION",
+				"subtype": "damageTypeAll",
+				"val": 20,
+				"stacking": "h6NecroRavenousExpFlesh",
+				"icon": "h6/abilities/ab_Dead_Flesh",
+				"description": "{Dead Flesh}\nAttack damage taken -20%"
+			},
+			"undead": {
+				"type": "UNDEAD",
+				"icon": "h6/abilities/ab_Undead",
+				"description": "{Undead}\nUnaffected by Morale, immune to mind spells"
+			},
+			"lightWeak": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.01lightSchool",
+				"val": -20,
+				"icon": "h6/abilities/ab_Vulnerability_to_Light",
+				"description": "{Light Weakness}\nLight Magic damage taken +20%"
+			},
+			"rage": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6Rage",
+				"val": 30,
+				"icon": "h6/abilities/ab_Rage_Against_the_Living",
+				"stacking": "h6Rage",
+				"description": "{Hatred of the Living}\n+30% damage when attacking living creatures",
+				"addInfo": {
+					"val": 30
+				}
+			}
+		},
+		"graphics": {
+			"animation": "h6/necropolis/ghoul_upg/ghoul_upg.json",
+			"map": "h6/units/h6NecroRavenous/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h6/units/h6NecroRavenous/map/atkL.png",
+			"mapAttackFromRight": "h6/units/h6NecroRavenous/map/atkR.png",
+			"iconLarge": "h6/units/h6NecroRavenous/iconLarge.png",
+			"iconSmall": "h6/units/h6NecroRavenous/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h6/necropolis/Ghoul_AttackLaunchMelee.wav",
+			"wince": "h6/necropolis/Ghoul_Hit.wav",
+			"defend": "h6/necropolis/Ghoul_Defend.wav",
+			"killed": "h6/necropolis/Ghoul_Die.wav",
+			"move": "h6/necropolis/Ghoul_Move_Earth2.wav"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.attack"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					3,
+					3,
+					3,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.defence"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					3,
+					4,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					0,
+					1,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					3,
+					3,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "GENERAL_DAMAGE_REDUCTION",
+					"subtype": "damageTypeAll",
+					"stacking": "h6NecroRavenousExpFlesh"
+				},
+				"values": [
+					21,
+					22,
+					23,
+					24,
+					25,
+					26,
+					27,
+					28,
+					30,
+					32
+				]
+			},
+			{
+				"bonus": {
+					"type": "HP_REGENERATION",
+					"description": "{Scavenger}\nRegains Hit Points each round"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					5,
+					5,
+					10,
+					10
+				]
+			}
+		]
+	},
+	"h6NecroGhost": {
+		"name": {
+			"singular": "Phantom",
+			"plural": "Phantoms"
+		},
+		"description": "When the descendants of the Dragon Gods die, their souls go to the moon and, guided by Asha, become immortal. But some traumas give birth to Phantoms: souls bound to the material world by powerful negative emotions. Necromancers can turn these ghosts into utterly loyal servants through special rituals.",
+		"faction": "necropolis",
+		"level": 3,
+		"cost": {
+			"gold": 230
+		},
+		"speed": 5,
+		"hitPoints": 25,
+		"attack": 9,
+		"defense": 8,
+		"damage": {
+			"min": 3,
+			"max": 8
+		},
+		"doubleWide": false,
+		"fightValue": 446,
+		"aiValue": 478,
+		"growth": 6,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"upgrades": [
+			"h6NecroSpectre"
+		],
+		"abilities": {
+			"h6NecroRaise": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6NecroRaise",
+				"hidden": true
+			},
+			"h6NecroRaiseInfo": {
+				"type": "H6_NECRO_RAISE_H6C"
+			},
+			"teleport": {
+				"type": "FLYING",
+				"subtype": "movementTeleporting"
+			},
+			"incorporeal": {
+				"type": "GENERAL_DAMAGE_REDUCTION",
+				"subtype": "damageTypeAll",
+				"val": 25,
+				"stacking": "h6NecroGhostExpIncorporeal",
+				"icon": "h6/abilities/ab_Incorporeal",
+				"description": "{Incorporeal}\nAttack dmg taken -25%\nPasses units/obstacles"
+			},
+			"deathSeal": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6DeathSeal",
+				"val": 50,
+				"stacking": "h6DeathSealCarrier",
+				"icon": "h6/abilities/ab_Death_Seal",
+				"description": "{Death Seal}\nHit: foe & living neighbors -50% heal 2 rounds",
+				"addInfo": {
+					"role": "carrier",
+					"spell": "heroes-memorial.h6:h6DeathSealed",
+					"turns": 2,
+					"animation": "h6/necropolis/fx/seal",
+					"sound": "h6/necropolis/WraithDoom_OtherImpact.wav"
+				}
+			},
+			"deathSealZone": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6DeathSeal",
+				"val": 0,
+				"hidden": true,
+				"description": "~",
+				"propagator": "BATTLE_WIDE",
+				"stacking": "h6DeathSealZone",
+				"addInfo": {
+					"role": "zone"
+				}
+			},
+			"spiritForm": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6SpiritForm",
+				"val": 50,
+				"icon": "h6/abilities/ab_Spirit_Form",
+				"description": "{Spirit Form}\n-50% damage taken until it first acts"
+			},
+			"undead": {
+				"type": "UNDEAD",
+				"icon": "h6/abilities/ab_Undead",
+				"description": "{Undead}\nUnaffected by Morale, immune to mind spells"
+			},
+			"lightWeak": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.01lightSchool",
+				"val": -20,
+				"icon": "h6/abilities/ab_Vulnerability_to_Light",
+				"description": "{Light Weakness}\nLight Magic damage taken +20%"
+			}
+		},
+		"graphics": {
+			"animation": "h6/necropolis/wraith/wraith.json",
+			"map": "h6/units/h6NecroGhost/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h6/units/h6NecroGhost/map/atkL.png",
+			"mapAttackFromRight": "h6/units/h6NecroGhost/map/atkR.png",
+			"iconLarge": "h6/units/h6NecroGhost/iconLarge.png",
+			"iconSmall": "h6/units/h6NecroGhost/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h6/necropolis/Wraith_AttackLaunchMelee.wav",
+			"wince": "h6/necropolis/Wraith_Hit.wav",
+			"defend": "h6/necropolis/Wraith_Defend.wav",
+			"killed": "h6/necropolis/Wraith_Die.wav",
+			"move": "h6/necropolis/Wraith_Move.wav"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.attack"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.defence"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "GENERAL_DAMAGE_REDUCTION",
+					"subtype": "damageTypeAll",
+					"stacking": "h6NecroGhostExpIncorporeal"
+				},
+				"values": [
+					25,
+					25,
+					26,
+					26,
+					27,
+					28,
+					29,
+					30,
+					31,
+					33
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					5,
+					5,
+					10,
+					10,
+					15,
+					15,
+					20
+				]
+			}
+		]
+	},
+	"h6NecroSpectre": {
+		"name": {
+			"singular": "Vengeful Spirit",
+			"plural": "Vengeful Spirits"
+		},
+		"description": "Vengeful Spirits are created by especially slow and painful deaths. Their wounds remain forever plain and terrifying to see, making them relive the agony of dying again and again. A Vengeful Spirit can make its enemies feel the same mental agony. Necromancers use magic to convince Vengeful Spirits that they alone can ease their pain, and so gain control of these tormented souls.",
+		"faction": "necropolis",
+		"level": 3,
+		"cost": {
+			"gold": 270
+		},
+		"speed": 7,
+		"hitPoints": 27,
+		"attack": 9,
+		"defense": 9,
+		"damage": {
+			"min": 4,
+			"max": 8
+		},
+		"doubleWide": false,
+		"fightValue": 587,
+		"aiValue": 690,
+		"growth": 6,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"h6NecroRaise": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6NecroRaise",
+				"hidden": true
+			},
+			"h6NecroRaiseInfo": {
+				"type": "H6_NECRO_RAISE_H6C"
+			},
+			"teleport": {
+				"type": "FLYING",
+				"subtype": "movementTeleporting"
+			},
+			"incorporeal": {
+				"type": "GENERAL_DAMAGE_REDUCTION",
+				"subtype": "damageTypeAll",
+				"val": 35,
+				"stacking": "h6NecroSpectreExpIncorporeal",
+				"icon": "h6/abilities/ab_Immaterial",
+				"description": "{Intangible}\nAttack dmg taken -35%\nPasses units/obstacles"
+			},
+			"deathSeal": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6DeathSeal",
+				"val": 50,
+				"stacking": "h6DeathSealCarrier",
+				"icon": "h6/abilities/ab_Death_Seal",
+				"description": "{Death Seal}\nHit: foe & living neighbors -50% heal 2 rounds",
+				"addInfo": {
+					"role": "carrier",
+					"spell": "heroes-memorial.h6:h6DeathSealed",
+					"turns": 2,
+					"animation": "h6/necropolis/fx/seal",
+					"sound": "h6/necropolis/WraithDoom_OtherImpact.wav"
+				}
+			},
+			"deathSealZone": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6DeathSeal",
+				"val": 0,
+				"hidden": true,
+				"description": "~",
+				"propagator": "BATTLE_WIDE",
+				"stacking": "h6DeathSealZone",
+				"addInfo": {
+					"role": "zone"
+				}
+			},
+			"spiritForm": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6SpiritForm",
+				"val": 50,
+				"icon": "h6/abilities/ab_Spirit_Form",
+				"description": "{Spirit Form}\n-50% damage taken until it first acts"
+			},
+			"undead": {
+				"type": "UNDEAD",
+				"icon": "h6/abilities/ab_Undead",
+				"description": "{Undead}\nUnaffected by Morale, immune to mind spells"
+			},
+			"lightWeak": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.01lightSchool",
+				"val": -20,
+				"icon": "h6/abilities/ab_Vulnerability_to_Light",
+				"description": "{Light Weakness}\nLight Magic damage taken +20%"
+			},
+			"cast_h6AbWail": {
+				"type": "SPELLCASTER",
+				"subtype": "spell.h6AbWail",
+				"val": 3,
+				"description": "{Wail}\n2/battle: heals Undead, drains nearby living",
+				"icon": "h6/abilities/ab_Wail_of_the_Netherworld"
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 1,
+				"hidden": true
+			},
+			"noSpellcastByDefault": {
+				"type": "NO_SPELLCAST_BY_DEFAULT",
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h6/necropolis/Wraith_upg/Wraith_upg.json",
+			"map": "h6/units/h6NecroSpectre/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h6/units/h6NecroSpectre/map/atkL.png",
+			"mapAttackFromRight": "h6/units/h6NecroSpectre/map/atkR.png",
+			"iconLarge": "h6/units/h6NecroSpectre/iconLarge.png",
+			"iconSmall": "h6/units/h6NecroSpectre/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h6/necropolis/Wraith_AttackLaunchMelee.wav",
+			"wince": "h6/necropolis/Wraith_Hit.wav",
+			"defend": "h6/necropolis/Wraith_Defend.wav",
+			"killed": "h6/necropolis/Wraith_Die.wav",
+			"move": "h6/necropolis/Wraith_Move.wav"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.attack"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.defence"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "GENERAL_DAMAGE_REDUCTION",
+					"subtype": "damageTypeAll",
+					"stacking": "h6NecroSpectreExpIncorporeal"
+				},
+				"values": [
+					35,
+					35,
+					36,
+					36,
+					37,
+					38,
+					39,
+					40,
+					41,
+					43
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					5,
+					5,
+					10,
+					10,
+					15,
+					15,
+					20
+				]
+			},
+			{
+				"bonus": {
+					"type": "CASTS"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2
+				]
+			}
+		]
+	},
+	"h6NecroLich": {
+		"name": {
+			"singular": "Lich",
+			"plural": "Liches"
+		},
+		"description": "High-ranking necromancers (priests of the Spider Goddess) are granted an elixir of long life distilled from the venom of the sacred Spider Goddess, which they take mixed with their food. This turns them into Asakku, or Liches: their bodies wither and are freed from fleshly desires. They keep aging until they look little better than walking mummies, and the venom turns their eyes jade green.",
+		"faction": "necropolis",
+		"level": 4,
+		"cost": {
+			"gold": 290
+		},
+		"speed": 4,
+		"hitPoints": 26,
+		"attack": 10,
+		"defense": 8,
+		"damage": {
+			"min": 6,
+			"max": 8
+		},
+		"doubleWide": false,
+		"fightValue": 452,
+		"aiValue": 504,
+		"growth": 5,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"upgrades": [
+			"h6NecroArchlich"
+		],
+		"shots": 24,
+		"abilities": {
+			"h6NecroRaise": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6NecroRaise",
+				"hidden": true
+			},
+			"h6NecroRaiseInfo": {
+				"type": "H6_NECRO_RAISE_H6C"
+			},
+			"shooter": {
+				"type": "SHOOTER"
+			},
+			"darkEmbrace": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6AttackStatus",
+				"val": 15,
+				"icon": "h6/abilities/ab_Dark_Embrace",
+				"stacking": "h6DarkEmbrace",
+				"description": "{Dark Embrace}\nHit: target & neighbors +15% Dark, 2 rounds",
+				"addInfo": {
+					"spell": "heroes-memorial.h6:h6DarkEmbraced",
+					"turns": 2,
+					"adjacent": true,
+					"animation": "h6/necropolis/fx/darkEmbrace"
+				}
+			},
+			"undead": {
+				"type": "UNDEAD",
+				"icon": "h6/abilities/ab_Undead",
+				"description": "{Undead}\nUnaffected by Morale, immune to mind spells"
+			},
+			"lightWeak": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.01lightSchool",
+				"val": -20,
+				"icon": "h6/abilities/ab_Vulnerability_to_Light",
+				"description": "{Light Weakness}\nLight Magic damage taken +20%"
+			}
+		},
+		"graphics": {
+			"animation": "h6/necropolis/Lich/Lich.json",
+			"map": "h6/units/h6NecroLich/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h6/units/h6NecroLich/map/atkL.png",
+			"mapAttackFromRight": "h6/units/h6NecroLich/map/atkR.png",
+			"iconLarge": "h6/units/h6NecroLich/iconLarge.png",
+			"iconSmall": "h6/units/h6NecroLich/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"frameAngles": [
+					90,
+					60,
+					45,
+					30,
+					0,
+					-30,
+					-45,
+					-60,
+					-90
+				],
+				"offset": {
+					"upperX": 53,
+					"upperY": -54,
+					"middleX": 39,
+					"middleY": -47,
+					"lowerX": 35,
+					"lowerY": -41
+				},
+				"attackClimaxFrame": 4,
+				"projectile": "h6/necropolis/lichBolt.json"
+			}
+		},
+		"sound": {
+			"attack": "h6/necropolis/Lich_AttackLaunchMelee.wav",
+			"shoot": "h6/necropolis/Lich_AttackLaunchRanged.wav",
+			"wince": "h6/necropolis/Lich_Hit.wav",
+			"defend": "h6/necropolis/Lich_Defend.wav",
+			"killed": "h6/necropolis/Lich_Die.wav",
+			"move": "h6/necropolis/Lich_Move.wav"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.attack"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					5,
+					6,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.defence"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_WALL_PENALTY"
+				},
+				"values": [
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					5,
+					5,
+					10,
+					10,
+					15,
+					15,
+					20
+				]
+			}
+		]
+	},
+	"h6NecroArchlich": {
+		"name": {
+			"singular": "Archlich",
+			"plural": "Archliches"
+		},
+		"description": "Wizards who earn the title of Archlich go on \"living\" by transcending the limits of the flesh. This may seem cruel, but it is not, for to a Lich death no longer exists; all that is left is the endless passing of time. On their journey outside the sacred cycle of life, Archliches gain even greater powers, some of which can even drain the life force of creatures.",
+		"faction": "necropolis",
+		"level": 4,
+		"cost": {
+			"gold": 345
+		},
+		"speed": 6,
+		"hitPoints": 30,
+		"attack": 10,
+		"defense": 10,
+		"damage": {
+			"min": 6,
+			"max": 8
+		},
+		"doubleWide": false,
+		"fightValue": 588,
+		"aiValue": 689,
+		"growth": 5,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"shots": 24,
+		"abilities": {
+			"h6NecroRaise": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6NecroRaise",
+				"hidden": true
+			},
+			"h6NecroRaiseInfo": {
+				"type": "H6_NECRO_RAISE_H6C"
+			},
+			"shooter": {
+				"type": "SHOOTER"
+			},
+			"darkEmbrace": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6AttackStatus",
+				"val": 15,
+				"icon": "h6/abilities/ab_Dark_Embrace",
+				"stacking": "h6DarkEmbrace",
+				"description": "{Dark Embrace}\nHit: target & neighbors +15% Dark, 2 rounds",
+				"addInfo": {
+					"spell": "heroes-memorial.h6:h6DarkEmbraced",
+					"turns": 2,
+					"adjacent": true,
+					"animation": "h6/necropolis/fx/darkEmbrace"
+				}
+			},
+			"undead": {
+				"type": "UNDEAD",
+				"icon": "h6/abilities/ab_Undead",
+				"description": "{Undead}\nUnaffected by Morale, immune to mind spells"
+			},
+			"lightWeak": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.01lightSchool",
+				"val": -20,
+				"icon": "h6/abilities/ab_Vulnerability_to_Light",
+				"description": "{Light Weakness}\nLight Magic damage taken +20%"
+			},
+			"lifeDrain": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6LifeDrain",
+				"val": 50,
+				"hidden": true,
+				"description": "~",
+				"addInfo": {
+					"pct": 50,
+					"animation": "h6/necropolis/fx/channel",
+					"sound": "h6/necropolis/LichNecromanticChanneling_Impact.wav"
+				}
+			},
+			"cast_h6AbLifeDrain": {
+				"type": "SPELLCASTER",
+				"subtype": "spell.h6AbLifeDrain",
+				"val": 3,
+				"description": "{Vital Drain}\nCooldown 2, free: 50% dmg heals another Undead",
+				"icon": "h6/abilities/ab_Life_Drain",
+				"limiters": [
+					[
+						"noneOf",
+						{
+							"type": "HAS_ANOTHER_BONUS_LIMITER",
+							"parameters": [
+								"H6_COOLDOWN_H6C"
+							]
+						}
+					]
+				]
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 1,
+				"hidden": true
+			},
+			"noSpellcastByDefault": {
+				"type": "NO_SPELLCAST_BY_DEFAULT",
+				"hidden": true
+			},
+			"cooldown_h6AbLifeDrain": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6Cooldown",
+				"val": 0,
+				"hidden": true,
+				"description": "~",
+				"addInfo": {
+					"spell": "heroes-memorial.h6:h6AbLifeDrain",
+					"turns": 2
+				}
+			}
+		},
+		"graphics": {
+			"animation": "h6/necropolis/Lich_upg/Lich_upg.json",
+			"map": "h6/units/h6NecroArchlich/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h6/units/h6NecroArchlich/map/atkL.png",
+			"mapAttackFromRight": "h6/units/h6NecroArchlich/map/atkR.png",
+			"iconLarge": "h6/units/h6NecroArchlich/iconLarge.png",
+			"iconSmall": "h6/units/h6NecroArchlich/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"frameAngles": [
+					90,
+					60,
+					45,
+					30,
+					0,
+					-30,
+					-45,
+					-60,
+					-90
+				],
+				"offset": {
+					"upperX": 53,
+					"upperY": -54,
+					"middleX": 39,
+					"middleY": -47,
+					"lowerX": 35,
+					"lowerY": -41
+				},
+				"attackClimaxFrame": 4,
+				"projectile": "h6/necropolis/lichBolt.json"
+			}
+		},
+		"sound": {
+			"attack": "h6/necropolis/Lich_AttackLaunchMelee.wav",
+			"shoot": "h6/necropolis/Lich_AttackLaunchRanged.wav",
+			"wince": "h6/necropolis/Lich_Hit.wav",
+			"defend": "h6/necropolis/Lich_Defend.wav",
+			"killed": "h6/necropolis/Lich_Die.wav",
+			"move": "h6/necropolis/Lich_Move.wav"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.attack"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					5,
+					6,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.defence"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_WALL_PENALTY"
+				},
+				"values": [
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					5,
+					5,
+					10,
+					10,
+					15,
+					15,
+					20
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_DISTANCE_PENALTY",
+					"description": "{Deathly Aim}\nNo range penalty"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h6NecroLamasu": {
+		"name": {
+			"singular": "Lamasu",
+			"plural": "Lamasu"
+		},
+		"description": "Lamasu are the failed results of mages trying to create higher beast-men, born of the unnatural fusion of humans (usually slaves or criminals) with magical creatures (in this case Manticores). The creatures that came out were too unstable and short-lived, but they proved very useful to necromancers. Raised from death and infected with plague, the Lamasu serve as sources of pestilence. These creatures are strong and highly mobile, which makes them perfect front-line troops for the undead.",
+		"faction": "necropolis",
+		"level": 5,
+		"cost": {
+			"gold": 390
+		},
+		"speed": 4,
+		"hitPoints": 44,
+		"attack": 12,
+		"defense": 12,
+		"damage": {
+			"min": 12,
+			"max": 13
+		},
+		"doubleWide": true,
+		"fightValue": 843,
+		"aiValue": 908,
+		"growth": 3,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"upgrades": [
+			"h6NecroPutrid"
+		],
+		"abilities": {
+			"h6NecroRaise": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6NecroRaise",
+				"hidden": true
+			},
+			"h6NecroRaiseInfo": {
+				"type": "H6_NECRO_RAISE_H6C"
+			},
+			"flying": {
+				"type": "FLYING"
+			},
+			"aura": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6Putrescence",
+				"val": 5,
+				"icon": "h6/abilities/ab_Aura_of_Putrescence",
+				"stacking": "h6PutrescenceCarrier",
+				"description": "{Aura of Rot}\nAdjacent living -5% max HP/round, 2 rounds, x5",
+				"addInfo": {
+					"role": "carrier",
+					"pct": 5,
+					"max": 5,
+					"turns": 2,
+					"contagion": false,
+					"animation": "h6/necropolis/fx/putre",
+					"sound": "h6/necropolis/PutridLamasuPutrescence_Target.wav"
+				}
+			},
+			"undead": {
+				"type": "UNDEAD",
+				"icon": "h6/abilities/ab_Undead",
+				"description": "{Undead}\nUnaffected by Morale, immune to mind spells"
+			},
+			"lightWeak": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.01lightSchool",
+				"val": -20,
+				"icon": "h6/abilities/ab_Vulnerability_to_Light",
+				"description": "{Light Weakness}\nLight Magic damage taken +20%"
+			}
+		},
+		"graphics": {
+			"animation": "h6/necropolis/Lamasu/Lamasu.json",
+			"map": "h6/units/h6NecroLamasu/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h6/units/h6NecroLamasu/map/atkL.png",
+			"mapAttackFromRight": "h6/units/h6NecroLamasu/map/atkR.png",
+			"iconLarge": "h6/units/h6NecroLamasu/iconLarge.png",
+			"iconSmall": "h6/units/h6NecroLamasu/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h6/necropolis/Lamasu_AttackLaunchMelee.wav",
+			"wince": "h6/necropolis/Lamasu_Hit.wav",
+			"defend": "h6/necropolis/Lamasu_Defend.wav",
+			"killed": "h6/necropolis/Lamasu_Die.wav",
+			"move": "h6/necropolis/Lamasu_Flying1.wav",
+			"startMoving": "h6/necropolis/Lamasu_FlyStart1.wav",
+			"endMoving": "h6/necropolis/Lamasu_FlyEnd1.wav"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.attack"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					3,
+					4,
+					5,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					3,
+					4,
+					4,
+					6,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					2,
+					3,
+					3,
+					4,
+					5,
+					6,
+					6,
+					7
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					7
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_RETALIATION"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					5,
+					5,
+					10,
+					10,
+					15,
+					15,
+					20
+				]
+			}
+		]
+	},
+	"h6NecroPutrid": {
+		"name": {
+			"singular": "Putrid Lamasu",
+			"plural": "Putrid Lamasu"
+		},
+		"description": "Some parasites are immune to the innate diseases that fill the bodies of the Lamasu, and they have formed a mutually beneficial partnership with their hosts. They feed on the creatures the Lamasu kill. In return, the Lamasu sometimes gather them into swarms and use them as a weapon. Lamasu living in symbiosis with these parasites are called Putrid Lamasu.",
+		"faction": "necropolis",
+		"level": 5,
+		"cost": {
+			"gold": 455
+		},
+		"speed": 6,
+		"hitPoints": 50,
+		"attack": 12,
+		"defense": 13,
+		"damage": {
+			"min": 12,
+			"max": 14
+		},
+		"doubleWide": true,
+		"fightValue": 1164,
+		"aiValue": 1422,
+		"growth": 3,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"h6NecroRaise": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6NecroRaise",
+				"hidden": true
+			},
+			"h6NecroRaiseInfo": {
+				"type": "H6_NECRO_RAISE_H6C"
+			},
+			"flying": {
+				"type": "FLYING"
+			},
+			"aura": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6Putrescence",
+				"val": 5,
+				"icon": "h6/abilities/ab_Aura_of_Putrescence",
+				"stacking": "h6PutrescenceCarrierC",
+				"description": "{Aura of Rot}\nAdjacent living -5% max HP/round, 2 rounds, x5",
+				"addInfo": {
+					"role": "carrier",
+					"pct": 5,
+					"max": 5,
+					"turns": 2,
+					"contagion": true,
+					"animation": "h6/necropolis/fx/putre",
+					"sound": "h6/necropolis/PutridLamasuPutrescence_Target.wav"
+				}
+			},
+			"contagion": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6Putrescence",
+				"val": 0,
+				"propagator": "BATTLE_WIDE",
+				"stacking": "h6PutrescenceZone",
+				"description": "{Contagion}\nRot spreads 1 stack/round to living allies",
+				"addInfo": {
+					"role": "zone",
+					"pct": 5,
+					"max": 5,
+					"turns": 2,
+					"animation": "h6/necropolis/fx/putre"
+				},
+				"hidden": true
+			},
+			"contagionShow": {
+				"type": "STACKS_SPEED",
+				"val": 0,
+				"icon": "h6/abilities/ab_Contagion",
+				"stacking": "h6ContagionShow",
+				"description": "{Contagion}\nRot spreads 1 stack/round to living allies"
+			},
+			"dotZone": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6Dot",
+				"val": 0,
+				"hidden": true,
+				"description": "~",
+				"propagator": "BATTLE_WIDE",
+				"stacking": "h6DotZone",
+				"addInfo": {
+					"role": "zone",
+					"animation": "h6/necropolis/fx/venom"
+				}
+			},
+			"undead": {
+				"type": "UNDEAD",
+				"icon": "h6/abilities/ab_Undead",
+				"description": "{Undead}\nUnaffected by Morale, immune to mind spells"
+			},
+			"lightWeak": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.01lightSchool",
+				"val": -20,
+				"icon": "h6/abilities/ab_Vulnerability_to_Light",
+				"description": "{Light Weakness}\nLight Magic damage taken +20%"
+			},
+			"cast_h6AbBreathOfVermin": {
+				"type": "SPELLCASTER",
+				"subtype": "spell.h6AbBreathOfVermin",
+				"val": 3,
+				"description": "{Breath of Vermin}\nCooldown 3: area -4 Attack/Defense, Earth dmg",
+				"icon": "h6/abilities/ab_Breath_of_Vermin",
+				"limiters": [
+					[
+						"noneOf",
+						{
+							"type": "HAS_ANOTHER_BONUS_LIMITER",
+							"parameters": [
+								"H6_COOLDOWN_H6C"
+							]
+						}
+					]
+				]
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 1,
+				"hidden": true
+			},
+			"noSpellcastByDefault": {
+				"type": "NO_SPELLCAST_BY_DEFAULT",
+				"hidden": true
+			},
+			"cooldown_h6AbBreathOfVermin": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6Cooldown",
+				"val": 0,
+				"hidden": true,
+				"description": "~",
+				"addInfo": {
+					"spell": "heroes-memorial.h6:h6AbBreathOfVermin",
+					"turns": 3
+				}
+			}
+		},
+		"graphics": {
+			"animation": "h6/necropolis/Lamasu_upg/Lamasu_upg.json",
+			"map": "h6/units/h6NecroPutrid/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h6/units/h6NecroPutrid/map/atkL.png",
+			"mapAttackFromRight": "h6/units/h6NecroPutrid/map/atkR.png",
+			"iconLarge": "h6/units/h6NecroPutrid/iconLarge.png",
+			"iconSmall": "h6/units/h6NecroPutrid/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h6/necropolis/Lamasu_AttackLaunchMelee.wav",
+			"wince": "h6/necropolis/Lamasu_Hit.wav",
+			"defend": "h6/necropolis/Lamasu_Defend.wav",
+			"killed": "h6/necropolis/Lamasu_Die.wav",
+			"move": "h6/necropolis/Lamasu_Flying1.wav",
+			"startMoving": "h6/necropolis/Lamasu_FlyStart1.wav",
+			"endMoving": "h6/necropolis/Lamasu_FlyEnd1.wav"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.attack"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					3,
+					4,
+					5,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					3,
+					4,
+					4,
+					6,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					2,
+					3,
+					3,
+					4,
+					5,
+					6,
+					6,
+					7
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					7
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_RETALIATION"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					5,
+					5,
+					10,
+					10,
+					15,
+					15,
+					20
+				]
+			}
+		]
+	},
+	"h6NecroVampire": {
+		"name": {
+			"singular": "Vampire",
+			"plural": "Vampires"
+		},
+		"description": "As Liches grow more powerful, they may be granted the Spider Goddess's embrace: they die and are reborn as Akhkharu, that is, Vampires. They must go through an extremely painful ritual, but it removes every flaw from their bodies and gives them young, vigorous ones. Vampires no longer need to eat, drink, sleep or breathe; their organs turn to stone, and they have no blood: the venom of the sacred Spider Goddess flows through their veins instead. Still, they must often drink human blood to dilute the venom and keep it from dissolving them from within.",
+		"faction": "necropolis",
+		"level": 6,
+		"cost": {
+			"gold": 805
+		},
+		"speed": 6,
+		"hitPoints": 84,
+		"attack": 14,
+		"defense": 13,
+		"damage": {
+			"min": 15,
+			"max": 17
+		},
+		"doubleWide": false,
+		"fightValue": 1490,
+		"aiValue": 1740,
+		"growth": 2,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"upgrades": [
+			"h6NecroVampireLord"
+		],
+		"abilities": {
+			"h6NecroRaise": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6NecroRaise",
+				"hidden": true
+			},
+			"h6NecroRaiseInfo": {
+				"type": "H6_NECRO_RAISE_H6C"
+			},
+			"teleport": {
+				"type": "FLYING",
+				"subtype": "movementTeleporting"
+			},
+			"drain": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "lifeDrain",
+				"val": 20,
+				"stacking": "h6NecroVampireExpLifeDrain",
+				"icon": "h6/abilities/ab_Vampiric_Embrace",
+				"description": "{Vampiric Embrace}\nHeals 20% of dmg dealt to living (can revive)"
+			},
+			"undead": {
+				"type": "UNDEAD",
+				"icon": "h6/abilities/ab_Undead",
+				"description": "{Undead}\nUnaffected by Morale, immune to mind spells"
+			},
+			"lightWeak": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.01lightSchool",
+				"val": -20,
+				"icon": "h6/abilities/ab_Vulnerability_to_Light",
+				"description": "{Light Weakness}\nLight Magic damage taken +20%"
+			}
+		},
+		"graphics": {
+			"animation": "h6/necropolis/vampire/vampire.json",
+			"map": "h6/units/h6NecroVampire/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h6/units/h6NecroVampire/map/atkL.png",
+			"mapAttackFromRight": "h6/units/h6NecroVampire/map/atkR.png",
+			"iconLarge": "h6/units/h6NecroVampire/iconLarge.png",
+			"iconSmall": "h6/units/h6NecroVampire/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h6/necropolis/Vampire_AttackLaunchMelee.wav",
+			"wince": "h6/necropolis/Vampire_Hit.wav",
+			"defend": "h6/necropolis/Vampire_Defend.wav",
+			"killed": "h6/necropolis/Vampire_Die.wav",
+			"move": "h6/necropolis/Vampire_MoveStart.wav",
+			"endMoving": "h6/necropolis/Vampire_MoveEnd.wav"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.defence"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					2,
+					3,
+					4,
+					5,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "COMBAT_EVENT_TRIGGER",
+					"subtype": "lifeDrain",
+					"stacking": "h6NecroVampireExpLifeDrain"
+				},
+				"values": [
+					20,
+					21,
+					22,
+					23,
+					24,
+					25,
+					26,
+					27,
+					28,
+					30
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_RETALIATION"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			}
+		]
+	},
+	"h6NecroVampireLord": {
+		"name": {
+			"singular": "Vampire Lord",
+			"plural": "Vampire Lords"
+		},
+		"description": "Once a Vampire has fully mastered his new powers, he begins to grow younger, looking one year younger with every century that passes. He is now greeted as a Vampire Lord and joins the necromancers' ruling council as a new member.",
+		"faction": "necropolis",
+		"level": 6,
+		"cost": {
+			"gold": 1035
+		},
+		"speed": 9,
+		"hitPoints": 93,
+		"attack": 15,
+		"defense": 15,
+		"damage": {
+			"min": 17,
+			"max": 19
+		},
+		"doubleWide": false,
+		"fightValue": 2030,
+		"aiValue": 2427,
+		"growth": 2,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"h6NecroRaise": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6NecroRaise",
+				"hidden": true
+			},
+			"h6NecroRaiseInfo": {
+				"type": "H6_NECRO_RAISE_H6C"
+			},
+			"teleport": {
+				"type": "FLYING",
+				"subtype": "movementTeleporting"
+			},
+			"drain": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "lifeDrain",
+				"val": 25,
+				"stacking": "h6NecroVampireLordExpLifeDrain",
+				"icon": "h6/abilities/ab_Vampiric_Grasp",
+				"description": "{Vampiric Grasp}\nHeals 25% of dmg dealt to living (can revive)"
+			},
+			"undead": {
+				"type": "UNDEAD",
+				"icon": "h6/abilities/ab_Undead",
+				"description": "{Undead}\nUnaffected by Morale, immune to mind spells"
+			},
+			"lightWeak": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.01lightSchool",
+				"val": -20,
+				"icon": "h6/abilities/ab_Vulnerability_to_Light",
+				"description": "{Light Weakness}\nLight Magic damage taken +20%"
+			},
+			"cast_h6AbOutOfTime": {
+				"type": "SPELLCASTER",
+				"subtype": "spell.h6AbOutOfTime",
+				"val": 3,
+				"description": "{Out of Time}\nCooldown 2, free: negates next hit this round",
+				"icon": "h6/abilities/ab_Out_of_time",
+				"limiters": [
+					[
+						"noneOf",
+						{
+							"type": "HAS_ANOTHER_BONUS_LIMITER",
+							"parameters": [
+								"H6_COOLDOWN_H6C"
+							]
+						}
+					]
+				]
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 1,
+				"hidden": true
+			},
+			"noSpellcastByDefault": {
+				"type": "NO_SPELLCAST_BY_DEFAULT",
+				"hidden": true
+			},
+			"cooldown_h6AbOutOfTime": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6Cooldown",
+				"val": 0,
+				"hidden": true,
+				"description": "~",
+				"addInfo": {
+					"spell": "heroes-memorial.h6:h6AbOutOfTime",
+					"turns": 2
+				}
+			}
+		},
+		"graphics": {
+			"animation": "h6/necropolis/vampire_upg/vampire_upg.json",
+			"map": "h6/units/h6NecroVampireLord/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h6/units/h6NecroVampireLord/map/atkL.png",
+			"mapAttackFromRight": "h6/units/h6NecroVampireLord/map/atkR.png",
+			"iconLarge": "h6/units/h6NecroVampireLord/iconLarge.png",
+			"iconSmall": "h6/units/h6NecroVampireLord/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h6/necropolis/Vampire_AttackLaunchMelee.wav",
+			"wince": "h6/necropolis/Vampire_Hit.wav",
+			"defend": "h6/necropolis/Vampire_Defend.wav",
+			"killed": "h6/necropolis/Vampire_Die.wav",
+			"move": "h6/necropolis/Vampire_MoveStart.wav",
+			"endMoving": "h6/necropolis/Vampire_MoveEnd.wav"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.defence"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					2,
+					3,
+					4,
+					5,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "COMBAT_EVENT_TRIGGER",
+					"subtype": "lifeDrain",
+					"stacking": "h6NecroVampireLordExpLifeDrain"
+				},
+				"values": [
+					25,
+					26,
+					27,
+					28,
+					29,
+					30,
+					31,
+					32,
+					33,
+					35
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_RETALIATION"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			}
+		]
+	},
+	"h6NecroFateSpinner": {
+		"name": {
+			"singular": "Fate Spinner",
+			"plural": "Fate Spinners"
+		},
+		"description": "The Fate Spinner is an avatar of the Spider Goddess, a divine projection of Asha's aspect of death that has left the Spider Goddess to take shape on the surface of Ashan. Fate Spinners often appear when a necropolis is being built; they can strengthen its foundations and help it grow. Like a queen in a hive, under their protection the undead seek shelter for lost souls, gathering wandering spirits to raise their own rank. A Fate Spinner can switch between two forms: half spider, half woman, or a two-legged, six-armed woman.",
+		"faction": "necropolis",
+		"level": 7,
+		"cost": {
+			"gold": 2170,
+			"mercury": 1
+		},
+		"speed": 8,
+		"hitPoints": 164,
+		"attack": 17,
+		"defense": 18,
+		"damage": {
+			"min": 37,
+			"max": 41
+		},
+		"doubleWide": true,
+		"fightValue": 4300,
+		"aiValue": 5308,
+		"growth": 1,
+		"advMapAmount": {
+			"min": 1,
+			"max": 3
+		},
+		"upgrades": [
+			"h6NecroFateWeaver"
+		],
+		"abilities": {
+			"h6NecroRaise": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6NecroRaise",
+				"hidden": true
+			},
+			"h6NecroRaiseInfo": {
+				"type": "H6_NECRO_RAISE_H6C"
+			},
+			"cast_h6AbSpinnerToSpider": {
+				"type": "SPELLCASTER",
+				"subtype": "spell.h6AbSpinnerToSpider",
+				"val": 3,
+				"description": "{Dual Form}\nCooldown 1: to Spider form, counts as Wait",
+				"icon": "h6/abilities/ab_Dual_Forms",
+				"limiters": [
+					[
+						"noneOf",
+						{
+							"type": "HAS_ANOTHER_BONUS_LIMITER",
+							"parameters": [
+								"H6_COOLDOWN_H6C"
+							]
+						}
+					]
+				]
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 1,
+				"hidden": true
+			},
+			"noSpellcastByDefault": {
+				"type": "NO_SPELLCAST_BY_DEFAULT",
+				"hidden": true
+			},
+			"balefulGaze": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6Gaze",
+				"val": 20,
+				"icon": "h6/abilities/ab_Baleful_Gaze",
+				"stacking": "h6Gaze",
+				"description": "{Baleful Gaze}\n1st attacker this battle: 20 Dark dmg/unit",
+				"addInfo": {
+					"per": 20,
+					"animation": "h6/necropolis/fx/gaze"
+				}
+			},
+			"spiritForm": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6SpiritForm",
+				"val": 50,
+				"icon": "h6/abilities/ab_Spirit_Form",
+				"description": "{Spirit Form}\n-50% damage taken until it first acts"
+			},
+			"dotZone": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6Dot",
+				"val": 0,
+				"hidden": true,
+				"description": "~",
+				"propagator": "BATTLE_WIDE",
+				"stacking": "h6DotZone",
+				"addInfo": {
+					"role": "zone",
+					"animation": "h6/necropolis/fx/venom"
+				}
+			},
+			"undead": {
+				"type": "UNDEAD",
+				"icon": "h6/abilities/ab_Undead",
+				"description": "{Undead}\nUnaffected by Morale, immune to mind spells"
+			},
+			"lightWeak": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.01lightSchool",
+				"val": -20,
+				"icon": "h6/abilities/ab_Vulnerability_to_Light",
+				"description": "{Light Weakness}\nLight Magic damage taken +20%"
+			},
+			"switchForm": {
+				"type": "SPECIAL_UPGRADE",
+				"limiters": [
+					{
+						"type": "CREATURE_TYPE_LIMITER",
+						"creature": "h6NecroFateSpinner"
+					}
+				],
+				"addInfo": "h6NecroFateSpinnerSpider",
+				"val": -100,
+				"hidden": true
+			},
+			"formLink": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6FormLink",
+				"val": 0,
+				"hidden": true,
+				"description": "~"
+			}
+		},
+		"graphics": {
+			"animation": "h6/necropolis/NamtaruHuman/NamtaruHuman.json",
+			"map": "h6/units/h6NecroFateSpinner/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h6/units/h6NecroFateSpinner/map/atkL.png",
+			"mapAttackFromRight": "h6/units/h6NecroFateSpinner/map/atkR.png",
+			"iconLarge": "h6/units/h6NecroFateSpinner/iconLarge.png",
+			"iconSmall": "h6/units/h6NecroFateSpinner/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h6/necropolis/NamtaruHuman_AttackLaunchMelee.wav",
+			"wince": "h6/necropolis/NamtaruHuman_Hit.wav",
+			"defend": "h6/necropolis/NamtaruHuman_Defend.wav",
+			"killed": "h6/necropolis/NamtaruHuman_Die.wav",
+			"move": "h6/necropolis/NamtaruSpider_Move_Earth1.wav"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					10,
+					15,
+					20,
+					25,
+					30
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_RETALIATION"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			}
+		]
+	},
+	"h6NecroFateWeaver": {
+		"name": {
+			"singular": "Fate Weaver",
+			"plural": "Fate Weavers"
+		},
+		"description": "Fate Weavers are Fate Spinners who have won Asha's praise. Where the Spinners unravel the fragile threads of life and death from the fabric of the void, the Weavers weave those threads into their own unique cloth, modelled on the patterns of the Spider Queen. Asha also gave them the power to control time, which they are allowed to use whenever it is needed.",
+		"faction": "necropolis",
+		"level": 7,
+		"cost": {
+			"gold": 3995,
+			"mercury": 2
+		},
+		"speed": 13,
+		"hitPoints": 242,
+		"attack": 23,
+		"defense": 25,
+		"damage": {
+			"min": 38,
+			"max": 42
+		},
+		"doubleWide": true,
+		"fightValue": 7840,
+		"aiValue": 10445,
+		"growth": 1,
+		"advMapAmount": {
+			"min": 1,
+			"max": 3
+		},
+		"abilities": {
+			"h6NecroRaise": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6NecroRaise",
+				"hidden": true
+			},
+			"h6NecroRaiseInfo": {
+				"type": "H6_NECRO_RAISE_H6C"
+			},
+			"cast_h6AbWeaverToSpider": {
+				"type": "SPELLCASTER",
+				"subtype": "spell.h6AbWeaverToSpider",
+				"val": 3,
+				"description": "{Dual Form}\nCooldown 1: to Spider form, counts as Wait",
+				"icon": "h6/abilities/ab_Dual_Forms",
+				"limiters": [
+					[
+						"noneOf",
+						{
+							"type": "HAS_ANOTHER_BONUS_LIMITER",
+							"parameters": [
+								"H6_COOLDOWN_H6C"
+							]
+						}
+					]
+				]
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 1,
+				"hidden": true
+			},
+			"noSpellcastByDefault": {
+				"type": "NO_SPELLCAST_BY_DEFAULT",
+				"hidden": true
+			},
+			"balefulGaze": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6Gaze",
+				"val": 25,
+				"icon": "h6/abilities/ab_Baleful_Gaze",
+				"stacking": "h6Gaze",
+				"description": "{Baleful Gaze}\n1st attacker this battle: 25 Dark dmg/unit",
+				"addInfo": {
+					"per": 25,
+					"animation": "h6/necropolis/fx/gaze"
+				}
+			},
+			"spiritForm": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6SpiritForm",
+				"val": 50,
+				"icon": "h6/abilities/ab_Spirit_Form",
+				"description": "{Spirit Form}\n-50% damage taken until it first acts"
+			},
+			"dotZone": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6Dot",
+				"val": 0,
+				"hidden": true,
+				"description": "~",
+				"propagator": "BATTLE_WIDE",
+				"stacking": "h6DotZone",
+				"addInfo": {
+					"role": "zone",
+					"animation": "h6/necropolis/fx/venom"
+				}
+			},
+			"undead": {
+				"type": "UNDEAD",
+				"icon": "h6/abilities/ab_Undead",
+				"description": "{Undead}\nUnaffected by Morale, immune to mind spells"
+			},
+			"lightWeak": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.01lightSchool",
+				"val": -20,
+				"icon": "h6/abilities/ab_Vulnerability_to_Light",
+				"description": "{Light Weakness}\nLight Magic damage taken +20%"
+			},
+			"cast_h6AbDanceOfDecay": {
+				"type": "SPELLCASTER",
+				"subtype": "spell.h6AbDanceOfDecay",
+				"val": 3,
+				"description": "{Dance of Decay}\n1/battle: adjacent living foes -10% start HP",
+				"icon": "h6/abilities/ab_Dance_of_Decay"
+			},
+			"switchForm": {
+				"type": "SPECIAL_UPGRADE",
+				"limiters": [
+					{
+						"type": "CREATURE_TYPE_LIMITER",
+						"creature": "h6NecroFateWeaver"
+					}
+				],
+				"addInfo": "h6NecroFateWeaverSpider",
+				"val": -100,
+				"hidden": true
+			},
+			"formLink": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6FormLink",
+				"val": 0,
+				"hidden": true,
+				"description": "~"
+			}
+		},
+		"graphics": {
+			"animation": "h6/necropolis/NamtaruHuman_upg/NamtaruHuman_upg.json",
+			"map": "h6/units/h6NecroFateWeaver/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h6/units/h6NecroFateWeaver/map/atkL.png",
+			"mapAttackFromRight": "h6/units/h6NecroFateWeaver/map/atkR.png",
+			"iconLarge": "h6/units/h6NecroFateWeaver/iconLarge.png",
+			"iconSmall": "h6/units/h6NecroFateWeaver/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h6/necropolis/NamtaruHuman_AttackLaunchMelee.wav",
+			"wince": "h6/necropolis/NamtaruHuman_Hit.wav",
+			"defend": "h6/necropolis/NamtaruHuman_Defend.wav",
+			"killed": "h6/necropolis/NamtaruHuman_Die.wav",
+			"move": "h6/necropolis/NamtaruSpider_Move_Earth1.wav"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					10,
+					15,
+					20,
+					25,
+					30
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_RETALIATION"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			}
+		]
+	},
+	"h6NecroFateSpinnerSpider": {
+		"name": {
+			"singular": "Fate Spinner (Spider)",
+			"plural": "Fate Spinners (Spider)"
+		},
+		"description": "The Fate Spinner is an avatar of the Spider Goddess, a divine projection of Asha's aspect of death that has left the Spider Goddess to take shape on the surface of Ashan. Fate Spinners often appear when a necropolis is being built; they can strengthen its foundations and help it grow. Like a queen in a hive, under their protection the undead seek shelter for lost souls, gathering wandering spirits to raise their own rank. A Fate Spinner can switch between two forms: half spider, half woman, or a two-legged, six-armed woman.",
+		"faction": "necropolis",
+		"level": 7,
+		"cost": {
+			"gold": 2170,
+			"mercury": 1
+		},
+		"speed": 8,
+		"hitPoints": 164,
+		"attack": 17,
+		"defense": 13,
+		"damage": {
+			"min": 41,
+			"max": 44
+		},
+		"doubleWide": true,
+		"fightValue": 3887,
+		"aiValue": 4799,
+		"growth": 1,
+		"special": true,
+		"upgrades": [
+			"h6NecroFateWeaverSpider"
+		],
+		"shots": 16,
+		"abilities": {
+			"shooter": {
+				"type": "SHOOTER"
+			},
+			"cast_h6AbSpinnerToHuman": {
+				"type": "SPELLCASTER",
+				"subtype": "spell.h6AbSpinnerToHuman",
+				"val": 3,
+				"description": "{Dual Form}\nCooldown 1: to human form, counts as Wait",
+				"icon": "h6/abilities/ab_Dual_Forms",
+				"limiters": [
+					[
+						"noneOf",
+						{
+							"type": "HAS_ANOTHER_BONUS_LIMITER",
+							"parameters": [
+								"H6_COOLDOWN_H6C"
+							]
+						}
+					]
+				]
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 1,
+				"hidden": true
+			},
+			"noSpellcastByDefault": {
+				"type": "NO_SPELLCAST_BY_DEFAULT",
+				"hidden": true
+			},
+			"venomousTouch": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6Venom",
+				"val": 10,
+				"icon": "h6/abilities/ab_Venomous_Touch",
+				"stacking": "h6Venom",
+				"description": "{Venomous Touch}\nMelee targets: 10 Earth/unit/round, 3 rounds",
+				"addInfo": {
+					"per": 10,
+					"turns": 3
+				}
+			},
+			"dotZone": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6Dot",
+				"val": 0,
+				"hidden": true,
+				"description": "~",
+				"propagator": "BATTLE_WIDE",
+				"stacking": "h6DotZone",
+				"addInfo": {
+					"role": "zone",
+					"animation": "h6/necropolis/fx/venom"
+				}
+			},
+			"undead": {
+				"type": "UNDEAD",
+				"icon": "h6/abilities/ab_Undead",
+				"description": "{Undead}\nUnaffected by Morale, immune to mind spells"
+			},
+			"lightWeak": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.01lightSchool",
+				"val": -20,
+				"icon": "h6/abilities/ab_Vulnerability_to_Light",
+				"description": "{Light Weakness}\nLight Magic damage taken +20%"
+			},
+			"switchForm": {
+				"type": "SPECIAL_UPGRADE",
+				"limiters": [
+					{
+						"type": "CREATURE_TYPE_LIMITER",
+						"creature": "h6NecroFateSpinnerSpider"
+					}
+				],
+				"addInfo": "h6NecroFateSpinner",
+				"val": -100,
+				"hidden": true
+			},
+			"formLink": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6FormLink",
+				"val": 0,
+				"hidden": true,
+				"description": "~"
+			}
+		},
+		"graphics": {
+			"animation": "h6/necropolis/NamtaruSpider/NamtaruSpider.json",
+			"map": "h6/units/h6NecroFateSpinnerSpider/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h6/units/h6NecroFateSpinnerSpider/map/atkL.png",
+			"mapAttackFromRight": "h6/units/h6NecroFateSpinnerSpider/map/atkR.png",
+			"iconLarge": "h6/units/h6NecroFateSpinnerSpider/iconLarge.png",
+			"iconSmall": "h6/units/h6NecroFateSpinnerSpider/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"frameAngles": [
+					90,
+					60,
+					45,
+					30,
+					0,
+					-30,
+					-45,
+					-60,
+					-90
+				],
+				"offset": {
+					"upperX": 104,
+					"upperY": -66,
+					"middleX": 109,
+					"middleY": -61,
+					"lowerX": 104,
+					"lowerY": -55
+				},
+				"attackClimaxFrame": 4,
+				"projectile": "h6/necropolis/spiderBolt.json"
+			}
+		},
+		"sound": {
+			"attack": "h6/necropolis/NamtaruSpider_AttackLaunchMelee.wav",
+			"shoot": "h6/necropolis/NamtaruSpider_AttackLaunchRanged.wav",
+			"wince": "h6/necropolis/NamtaruSpider_Hit.wav",
+			"defend": "h6/necropolis/NamtaruSpider_Defend.wav",
+			"killed": "h6/necropolis/NamtaruSpider_Die.wav",
+			"move": "h6/necropolis/NamtaruSpider_Move_Earth1.wav"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					10,
+					15,
+					20,
+					25,
+					30
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_RETALIATION"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			}
+		]
+	},
+	"h6NecroFateWeaverSpider": {
+		"name": {
+			"singular": "Fate Weaver (Spider)",
+			"plural": "Fate Weavers (Spider)"
+		},
+		"description": "Fate Weavers are Fate Spinners who have won Asha's praise. Where the Spinners unravel the fragile threads of life and death from the fabric of the void, the Weavers weave those threads into their own unique cloth, modelled on the patterns of the Spider Queen. Asha also gave them the power to control time, which they are allowed to use whenever it is needed.",
+		"faction": "necropolis",
+		"level": 7,
+		"cost": {
+			"gold": 3995,
+			"mercury": 2
+		},
+		"speed": 12,
+		"hitPoints": 242,
+		"attack": 23,
+		"defense": 18,
+		"damage": {
+			"min": 41,
+			"max": 46
+		},
+		"doubleWide": true,
+		"fightValue": 6558,
+		"aiValue": 8737,
+		"growth": 1,
+		"special": true,
+		"shots": 16,
+		"abilities": {
+			"shooter": {
+				"type": "SHOOTER"
+			},
+			"cast_h6AbWeaverToHuman": {
+				"type": "SPELLCASTER",
+				"subtype": "spell.h6AbWeaverToHuman",
+				"val": 3,
+				"description": "{Dual Form}\nCooldown 1: to human form, counts as Wait",
+				"icon": "h6/abilities/ab_Dual_Forms",
+				"limiters": [
+					[
+						"noneOf",
+						{
+							"type": "HAS_ANOTHER_BONUS_LIMITER",
+							"parameters": [
+								"H6_COOLDOWN_H6C"
+							]
+						}
+					]
+				]
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 1,
+				"hidden": true
+			},
+			"noSpellcastByDefault": {
+				"type": "NO_SPELLCAST_BY_DEFAULT",
+				"hidden": true
+			},
+			"venomousTouch": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6Venom",
+				"val": 12,
+				"icon": "h6/abilities/ab_Venomous_Touch",
+				"stacking": "h6Venom",
+				"description": "{Venomous Touch}\nMelee targets: 12 Earth/unit/round, 3 rounds",
+				"addInfo": {
+					"per": 12,
+					"turns": 3
+				}
+			},
+			"dotZone": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6Dot",
+				"val": 0,
+				"hidden": true,
+				"description": "~",
+				"propagator": "BATTLE_WIDE",
+				"stacking": "h6DotZone",
+				"addInfo": {
+					"role": "zone",
+					"animation": "h6/necropolis/fx/venom"
+				}
+			},
+			"undead": {
+				"type": "UNDEAD",
+				"icon": "h6/abilities/ab_Undead",
+				"description": "{Undead}\nUnaffected by Morale, immune to mind spells"
+			},
+			"lightWeak": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.01lightSchool",
+				"val": -20,
+				"icon": "h6/abilities/ab_Vulnerability_to_Light",
+				"description": "{Light Weakness}\nLight Magic damage taken +20%"
+			},
+			"cast_h6AbFreezingWeb": {
+				"type": "SPELLCASTER",
+				"subtype": "spell.h6AbFreezingWeb",
+				"val": 3,
+				"description": "{Freezing Web}\nActive, 1/battle: adjacent foes lose this turn",
+				"icon": "h6/abilities/ab_Freezing_Web"
+			},
+			"switchForm": {
+				"type": "SPECIAL_UPGRADE",
+				"limiters": [
+					{
+						"type": "CREATURE_TYPE_LIMITER",
+						"creature": "h6NecroFateWeaverSpider"
+					}
+				],
+				"addInfo": "h6NecroFateWeaver",
+				"val": -100,
+				"hidden": true
+			},
+			"formLink": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6FormLink",
+				"val": 0,
+				"hidden": true,
+				"description": "~"
+			}
+		},
+		"graphics": {
+			"animation": "h6/necropolis/NamtaruSpider_upg/NamtaruSpider_upg.json",
+			"map": "h6/units/h6NecroFateWeaverSpider/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h6/units/h6NecroFateWeaverSpider/map/atkL.png",
+			"mapAttackFromRight": "h6/units/h6NecroFateWeaverSpider/map/atkR.png",
+			"iconLarge": "h6/units/h6NecroFateWeaverSpider/iconLarge.png",
+			"iconSmall": "h6/units/h6NecroFateWeaverSpider/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"frameAngles": [
+					90,
+					60,
+					45,
+					30,
+					0,
+					-30,
+					-45,
+					-60,
+					-90
+				],
+				"offset": {
+					"upperX": 108,
+					"upperY": -70,
+					"middleX": 114,
+					"middleY": -64,
+					"lowerX": 108,
+					"lowerY": -59
+				},
+				"attackClimaxFrame": 4,
+				"projectile": "h6/necropolis/spiderBolt.json"
+			}
+		},
+		"sound": {
+			"attack": "h6/necropolis/NamtaruSpider_AttackLaunchMelee.wav",
+			"shoot": "h6/necropolis/NamtaruSpider_AttackLaunchRanged.wav",
+			"wince": "h6/necropolis/NamtaruSpider_Hit.wav",
+			"defend": "h6/necropolis/NamtaruSpider_Defend.wav",
+			"killed": "h6/necropolis/NamtaruSpider_Die.wav",
+			"move": "h6/necropolis/NamtaruSpider_Move_Earth1.wav"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					10,
+					15,
+					20,
+					25,
+					30
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_RETALIATION"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			}
+		]
+	}
+}

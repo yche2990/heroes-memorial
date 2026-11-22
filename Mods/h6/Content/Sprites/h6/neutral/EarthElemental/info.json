@@ -1,0 +1,80 @@
+{
+ "fac": "neutral",
+ "k": 0.72,
+ "scale": 50.42372805399455,
+ "origin": [
+  221.50270933217496,
+  242.6408
+ ],
+ "baked": {
+  "0": [
+   "earthelemental_basic.fx"
+  ],
+  "1": [
+   "earthelemental_basic.fx"
+  ],
+  "2": [
+   "earthelemental_basic.fx"
+  ],
+  "3": [
+   "earthelemental_basic.fx"
+  ],
+  "4": [
+   "earthelemental_basic.fx"
+  ],
+  "5": [
+   "earthelemental_basic.fx",
+   "earthelemental_die.fx"
+  ],
+  "7": [
+   "earthelemental_basic.fx"
+  ],
+  "8": [
+   "earthelemental_basic.fx"
+  ],
+  "11": [
+   "earthelemental_basic.fx"
+  ],
+  "12": [
+   "earthelemental_basic.fx"
+  ],
+  "13": [
+   "earthelemental_basic.fx"
+  ],
+  "17": [
+   "earthelemental_basic.fx",
+   "earthelemental_ability.fx"
+  ],
+  "18": [
+   "earthelemental_basic.fx",
+   "earthelemental_ability.fx"
+  ],
+  "19": [
+   "earthelemental_basic.fx",
+   "earthelemental_ability.fx"
+  ],
+  "20": [
+   "earthelemental_basic.fx"
+  ],
+  "21": [
+   "earthelemental_basic.fx"
+  ],
+  "30": [
+   "earthelemental_basic.fx",
+   "earthelemental_ability.fx"
+  ],
+  "32": [
+   "earthelemental_basic.fx",
+   "earthelemental_ability.fx"
+  ],
+  "40": [
+   "earthelemental_basic.fx"
+  ],
+  "42": [
+   "earthelemental_basic.fx"
+  ]
+ },
+ "render": "Blender 4.2 Cycles 24spp 3x + sprite_post; fx h6m (fxsim d1=mul mode2=wrap)",
+ "sec": 37,
+ "note426": "battle frames shrunk x0.72 around the foot point (x=217, y=265) after render (Yu, round 426)"
+}

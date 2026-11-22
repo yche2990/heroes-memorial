@@ -1,0 +1,3867 @@
+// Heroes 6 memorial: the 14 Dungeon creatures (merged into Dungeon; stats converted by H3 same-level averages)
+{
+	"h6DungeonAssassin": {
+		"name": {
+			"singular": "Assassin",
+			"plural": "Assassins"
+		},
+		"description": "Assassins are the shadows of Malassa. Just as wood elves are hard to spot in the forest, Assassins are all but invisible in the Underworld. They reveal themselves only at the instant they strike. Assassins usually dress in dark clothes, and their favored weapons are a pair of sharp, serrated daggers.",
+		"faction": "dungeon",
+		"level": 1,
+		"cost": {
+			"gold": 65
+		},
+		"speed": 6,
+		"hitPoints": 6,
+		"attack": 4,
+		"defense": 3,
+		"damage": {
+			"min": 2,
+			"max": 3
+		},
+		"doubleWide": false,
+		"fightValue": 100,
+		"aiValue": 87,
+		"growth": 14,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"upgrades": [
+			"h6DungeonShade"
+		],
+		"abilities": {
+			"shadowCloak": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "heroes-memorial:h47Stealth",
+				"val": 0,
+				"icon": "h6/abilities/ab_Shadow_Cloak",
+				"addInfo": {
+					"spell": "heroes-memorial:h47Stealth",
+					"mark": "H47_STEALTH_ASYLUM"
+				},
+				"description": "{Shadow Cloak}\nInvisible at start; again after 2 idle rounds"
+			},
+			"recloak": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6Recloak",
+				"val": 0,
+				"hidden": true,
+				"description": "~",
+				"addInfo": {
+					"spell": "heroes-memorial:h47Stealth",
+					"rounds": 2
+				}
+			},
+			"ambush": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "heroes-memorial.h6:kadIntercept",
+				"val": 100,
+				"stacking": "kadInterceptor",
+				"hidden": true,
+				"description": "~",
+				"addInfo": {
+					"role": "carrier"
+				},
+				"limiters": [
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"parameters": [
+							"INVINCIBLE"
+						]
+					}
+				]
+			},
+			"ambushZone": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "heroes-memorial.h6:kadIntercept",
+				"val": 0,
+				"hidden": true,
+				"description": "~",
+				"propagator": "BATTLE_WIDE",
+				"stacking": "kadInterceptZone",
+				"addInfo": {
+					"role": "zone"
+				}
+			},
+			"backstab": {
+				"type": "PERCENTAGE_DAMAGE_BOOST",
+				"subtype": "damageTypeMelee",
+				"val": 20,
+				"stacking": "h47Stealth",
+				"icon": "h6/abilities/ab_Backstab",
+				"description": "{Shadow Backstab}\nInvisible: +20% damage, no retaliation",
+				"limiters": [
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"parameters": [
+							"INVINCIBLE"
+						]
+					}
+				]
+			},
+			"malassa": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.02darkSchool",
+				"val": 10,
+				"stacking": "h6DungeonAssassinExpDark",
+				"icon": "h6/abilities/ab_Disciple_of_Malassa",
+				"description": "{Follower of Malassa}\nDark Magic damage -10%\nLight Magic damage +10%"
+			},
+			"malassaLight": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.01lightSchool",
+				"val": -10,
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h6/dungeon/Assassin/Assassin.json",
+			"map": "h6/units/h6DungeonAssassin/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h6/units/h6DungeonAssassin/map/atkL.png",
+			"mapAttackFromRight": "h6/units/h6DungeonAssassin/map/atkR.png",
+			"iconLarge": "h6/units/h6DungeonAssassin/iconLarge.png",
+			"iconSmall": "h6/units/h6DungeonAssassin/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h6/dungeon/AssanssinSilencer_AttackLaunchMelee.wav",
+			"wince": "h6/dungeon/AssanssinSilencer_Hit.wav",
+			"defend": "h6/dungeon/AssanssinSilencer_Defend.wav",
+			"killed": "h6/dungeon/AssanssinSilencer_Die.wav",
+			"move": "h6/dungeon/AssanssinSilencer_Move_Stone_01.wav"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.attack"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.defence"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "DOUBLE_DAMAGE_CHANCE"
+				},
+				"values": [
+					0,
+					2,
+					3,
+					5,
+					6,
+					8,
+					9,
+					11,
+					12,
+					15
+				]
+			},
+			{
+				"bonus": {
+					"type": "SPELL_DAMAGE_REDUCTION",
+					"subtype": "spellSchool.02darkSchool",
+					"stacking": "h6DungeonAssassinExpDark"
+				},
+				"values": [
+					10,
+					11,
+					12,
+					13,
+					14,
+					15,
+					16,
+					17,
+					18,
+					20
+				]
+			}
+		]
+	},
+	"h6DungeonShade": {
+		"name": {
+			"singular": "Shade",
+			"plural": "Shades"
+		},
+		"description": "Shades are elite assassins, strengthened by many enchantments tied to the powers of darkness. Their daggers carry a mysterious nerve poison that slowly eats away at the victim's life.",
+		"faction": "dungeon",
+		"level": 1,
+		"cost": {
+			"gold": 75
+		},
+		"speed": 7,
+		"hitPoints": 6,
+		"attack": 6,
+		"defense": 3,
+		"damage": {
+			"min": 2,
+			"max": 3
+		},
+		"doubleWide": false,
+		"fightValue": 114,
+		"aiValue": 122,
+		"growth": 14,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"shadowCloak": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "heroes-memorial:h47Stealth",
+				"val": 0,
+				"icon": "h6/abilities/ab_Shadow_Cloak",
+				"addInfo": {
+					"spell": "heroes-memorial:h47Stealth",
+					"mark": "H47_STEALTH_ASYLUM"
+				},
+				"description": "{Shadow Cloak}\nInvisible at start; again after 2 idle rounds"
+			},
+			"recloak": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6Recloak",
+				"val": 0,
+				"hidden": true,
+				"description": "~",
+				"addInfo": {
+					"spell": "heroes-memorial:h47Stealth",
+					"rounds": 2
+				}
+			},
+			"ambush": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "heroes-memorial.h6:kadIntercept",
+				"val": 100,
+				"stacking": "kadInterceptor",
+				"hidden": true,
+				"description": "~",
+				"addInfo": {
+					"role": "carrier"
+				},
+				"limiters": [
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"parameters": [
+							"INVINCIBLE"
+						]
+					}
+				]
+			},
+			"ambushZone": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "heroes-memorial.h6:kadIntercept",
+				"val": 0,
+				"hidden": true,
+				"description": "~",
+				"propagator": "BATTLE_WIDE",
+				"stacking": "kadInterceptZone",
+				"addInfo": {
+					"role": "zone"
+				}
+			},
+			"backstab": {
+				"type": "PERCENTAGE_DAMAGE_BOOST",
+				"subtype": "damageTypeMelee",
+				"val": 20,
+				"stacking": "h47Stealth",
+				"icon": "h6/abilities/ab_Backstab",
+				"description": "{Shadow Backstab}\nInvisible: +20% damage, no retaliation",
+				"limiters": [
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"parameters": [
+							"INVINCIBLE"
+						]
+					}
+				]
+			},
+			"malassa": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.02darkSchool",
+				"val": 10,
+				"stacking": "h6DungeonShadeExpDark",
+				"icon": "h6/abilities/ab_Disciple_of_Malassa",
+				"description": "{Follower of Malassa}\nDark Magic damage -10%\nLight Magic damage +10%"
+			},
+			"malassaLight": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.01lightSchool",
+				"val": -10,
+				"hidden": true
+			},
+			"poisonBlade": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6StrikeExtra",
+				"val": 1,
+				"icon": "h6/abilities/ab_Poisoned_Blades",
+				"stacking": "h6PoisonBlade",
+				"description": "{Poison Blade}\n+1 Dark dmg/unit, target -1 Speed for 3 rounds",
+				"addInfo": {
+					"per": 1,
+					"school": "02darkSchool",
+					"spell": "heroes-memorial.h6:h6PoisonBlade",
+					"turns": 3,
+					"animation": "h6/dungeon/fx/poison"
+				}
+			}
+		},
+		"graphics": {
+			"animation": "h6/dungeon/Assassin_upg/Assassin_upg.json",
+			"map": "h6/units/h6DungeonShade/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h6/units/h6DungeonShade/map/atkL.png",
+			"mapAttackFromRight": "h6/units/h6DungeonShade/map/atkR.png",
+			"iconLarge": "h6/units/h6DungeonShade/iconLarge.png",
+			"iconSmall": "h6/units/h6DungeonShade/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h6/dungeon/AssanssinSilencer_AttackLaunchMelee.wav",
+			"wince": "h6/dungeon/AssanssinSilencer_Hit.wav",
+			"defend": "h6/dungeon/AssanssinSilencer_Defend.wav",
+			"killed": "h6/dungeon/AssanssinSilencer_Die.wav",
+			"move": "h6/dungeon/AssanssinSilencer_Move_Stone_01.wav"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.attack"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.defence"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "DOUBLE_DAMAGE_CHANCE"
+				},
+				"values": [
+					0,
+					2,
+					3,
+					5,
+					6,
+					8,
+					9,
+					11,
+					12,
+					15
+				]
+			},
+			{
+				"bonus": {
+					"type": "SPELL_DAMAGE_REDUCTION",
+					"subtype": "spellSchool.02darkSchool",
+					"stacking": "h6DungeonShadeExpDark"
+				},
+				"values": [
+					10,
+					11,
+					12,
+					13,
+					14,
+					15,
+					16,
+					17,
+					18,
+					20
+				]
+			}
+		]
+	},
+	"h6DungeonStalker": {
+		"name": {
+			"singular": "Pursuer",
+			"plural": "Pursuers"
+		},
+		"description": "Pursuers are typical dark elves, their words as smooth as silk soaked in poisoned perfume. Pursuers fear nothing and are deeply feared, not for their long speeches but for their swift deeds. On the battlefields of the Underworld, traditional elven bows are very limited, so the dark elves developed a new weapon designed for tunnel fighting: the chakram. This exotic disc is very deadly at short range and can strike several targets at once.",
+		"faction": "dungeon",
+		"level": 2,
+		"cost": {
+			"gold": 110
+		},
+		"speed": 5,
+		"hitPoints": 13,
+		"attack": 6,
+		"defense": 4,
+		"damage": {
+			"min": 2,
+			"max": 3
+		},
+		"doubleWide": false,
+		"fightValue": 152,
+		"aiValue": 148,
+		"growth": 8,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"upgrades": [
+			"h6DungeonChakramDancer"
+		],
+		"shots": 24,
+		"abilities": {
+			"shooter": {
+				"type": "SHOOTER"
+			},
+			"shadowCurse": {
+				"type": "SPELL_AFTER_ATTACK",
+				"subtype": "spell.h6ShadowCurse",
+				"val": 100,
+				"addInfo": [
+					3,
+					0
+				],
+				"icon": "h6/abilities/ab_Curse_of_Shadow",
+				"description": "{Shadow Curse}\nAttack: target -1 Speed for 3 rounds"
+			},
+			"malassa": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.02darkSchool",
+				"val": 10,
+				"stacking": "h6DungeonStalkerExpDark",
+				"icon": "h6/abilities/ab_Disciple_of_Malassa",
+				"description": "{Follower of Malassa}\nDark Magic damage -10%\nLight Magic damage +10%"
+			},
+			"malassaLight": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.01lightSchool",
+				"val": -10,
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h6/dungeon/Stalker/Stalker.json",
+			"map": "h6/units/h6DungeonStalker/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h6/units/h6DungeonStalker/map/atkL.png",
+			"mapAttackFromRight": "h6/units/h6DungeonStalker/map/atkR.png",
+			"iconLarge": "h6/units/h6DungeonStalker/iconLarge.png",
+			"iconSmall": "h6/units/h6DungeonStalker/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"frameAngles": [
+					90,
+					60,
+					45,
+					30,
+					0,
+					-30,
+					-45,
+					-60,
+					-90
+				],
+				"offset": {
+					"upperX": 46,
+					"upperY": -48,
+					"middleX": 46,
+					"middleY": -43,
+					"lowerX": 44,
+					"lowerY": -38
+				},
+				"attackClimaxFrame": 4,
+				"projectile": "h6/dungeon/chakram.json"
+			}
+		},
+		"sound": {
+			"attack": "h6/dungeon/StalkerChakramDacer_AttackLaunchMelee.wav",
+			"shoot": "h6/dungeon/StalkerChakramDacer_AttackLaunchMeleeRangedStart.wav",
+			"wince": "h6/dungeon/StalkerChakramDacer_Hit.wav",
+			"defend": "h6/dungeon/StalkerChakramDacer_Defend.wav",
+			"killed": "h6/dungeon/StalkerChakramDacer_Die.wav",
+			"move": "h6/dungeon/StalkerChakramDacer_Move_Stone_01.wav"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.attack"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					3,
+					3,
+					3,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.defence"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					3,
+					4,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					0,
+					1,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					3,
+					3,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "SHOTS"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					2,
+					2,
+					4,
+					4,
+					6,
+					6,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_WALL_PENALTY"
+				},
+				"values": [
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h6DungeonChakramDancer": {
+		"name": {
+			"singular": "Chakram Dancer",
+			"plural": "Chakram Dancers"
+		},
+		"description": "To a Chakram Dancer, her chakram is like an extension of her own arm, answering her will perfectly. The crippling curse laid on the chakram makes the weapon all the more deadly.",
+		"faction": "dungeon",
+		"level": 2,
+		"cost": {
+			"gold": 155
+		},
+		"speed": 6,
+		"hitPoints": 14,
+		"attack": 7,
+		"defense": 5,
+		"damage": {
+			"min": 2,
+			"max": 3
+		},
+		"doubleWide": false,
+		"fightValue": 199,
+		"aiValue": 231,
+		"growth": 8,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"shots": 24,
+		"abilities": {
+			"shooter": {
+				"type": "SHOOTER"
+			},
+			"shadowCurse": {
+				"type": "SPELL_AFTER_ATTACK",
+				"subtype": "spell.h6ShadowCurse",
+				"val": 100,
+				"addInfo": [
+					3,
+					0
+				],
+				"icon": "h6/abilities/ab_Curse_of_Shadow",
+				"description": "{Shadow Curse}\nAttack: target -1 Speed for 3 rounds"
+			},
+			"malassa": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.02darkSchool",
+				"val": 10,
+				"stacking": "h6DungeonChakramDancerExpDark",
+				"icon": "h6/abilities/ab_Disciple_of_Malassa",
+				"description": "{Follower of Malassa}\nDark Magic damage -10%\nLight Magic damage +10%"
+			},
+			"malassaLight": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.01lightSchool",
+				"val": -10,
+				"hidden": true
+			},
+			"cast_h6AbDeathSpin": {
+				"type": "SPELLCASTER",
+				"subtype": "spell.h6AbDeathSpin",
+				"val": 3,
+				"description": "{Death Spin}\nCooldown 1: chakram hits all stacks on path",
+				"icon": "h6/abilities/ab_Whirling_Death",
+				"limiters": [
+					[
+						"noneOf",
+						{
+							"type": "HAS_ANOTHER_BONUS_LIMITER",
+							"parameters": [
+								"H6_COOLDOWN_H6C"
+							]
+						}
+					]
+				]
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 1,
+				"hidden": true
+			},
+			"noSpellcastByDefault": {
+				"type": "NO_SPELLCAST_BY_DEFAULT",
+				"hidden": true
+			},
+			"cooldown_h6AbDeathSpin": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6Cooldown",
+				"val": 0,
+				"hidden": true,
+				"description": "~",
+				"addInfo": {
+					"spell": "heroes-memorial.h6:h6AbDeathSpin",
+					"turns": 1
+				}
+			}
+		},
+		"graphics": {
+			"animation": "h6/dungeon/Stalker_upg/Stalker_upg.json",
+			"map": "h6/units/h6DungeonChakramDancer/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h6/units/h6DungeonChakramDancer/map/atkL.png",
+			"mapAttackFromRight": "h6/units/h6DungeonChakramDancer/map/atkR.png",
+			"iconLarge": "h6/units/h6DungeonChakramDancer/iconLarge.png",
+			"iconSmall": "h6/units/h6DungeonChakramDancer/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"frameAngles": [
+					90,
+					60,
+					45,
+					30,
+					0,
+					-30,
+					-45,
+					-60,
+					-90
+				],
+				"offset": {
+					"upperX": 46,
+					"upperY": -48,
+					"middleX": 46,
+					"middleY": -43,
+					"lowerX": 44,
+					"lowerY": -38
+				},
+				"attackClimaxFrame": 4,
+				"projectile": "h6/dungeon/chakram.json"
+			}
+		},
+		"sound": {
+			"attack": "h6/dungeon/StalkerChakramDacer_AttackLaunchMelee.wav",
+			"shoot": "h6/dungeon/StalkerChakramDacer_AttackLaunchMeleeRangedStart.wav",
+			"wince": "h6/dungeon/StalkerChakramDacer_Hit.wav",
+			"defend": "h6/dungeon/StalkerChakramDacer_Defend.wav",
+			"killed": "h6/dungeon/StalkerChakramDacer_Die.wav",
+			"move": "h6/dungeon/StalkerChakramDacer_Move_Stone_01.wav"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.attack"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					3,
+					3,
+					3,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.defence"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					3,
+					4,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					0,
+					1,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					3,
+					3,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "SHOTS"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					2,
+					2,
+					4,
+					4,
+					6,
+					6,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_WALL_PENALTY"
+				},
+				"values": [
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h6DungeonShadowLurker": {
+		"name": {
+			"singular": "Shadow Lurker",
+			"plural": "Shadow Lurkers"
+		},
+		"description": "The Shadow Lurker is a kind of dark spirit. It looks like a floating ball of shadow with a single flickering purple eye in the middle, surrounded by eyestalks like tentacles, each tipped with a smaller eye. These creatures are said to be born under Malassa's dark wings; once separated from their mother, they begin to roam the Underworld. Those unlucky enough to see them find their own worst nightmares in that unblinking eye.",
+		"faction": "dungeon",
+		"level": 3,
+		"cost": {
+			"gold": 260
+		},
+		"speed": 5,
+		"hitPoints": 24,
+		"attack": 8,
+		"defense": 7,
+		"damage": {
+			"min": 3,
+			"max": 7
+		},
+		"doubleWide": false,
+		"fightValue": 379,
+		"aiValue": 406,
+		"growth": 6,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"upgrades": [
+			"h6DungeonShadowWatcher"
+		],
+		"shots": 16,
+		"abilities": {
+			"flying": {
+				"type": "FLYING"
+			},
+			"shooter": {
+				"type": "SHOOTER"
+			},
+			"harrowing": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6StrikeExtra",
+				"val": 20,
+				"icon": "h6/abilities/ab_Harrowing_Vision",
+				"stacking": "h6Harrowing",
+				"description": "{Harrowing Gaze}\nShot hit: target takes 20% as Dark, 2 rounds",
+				"addInfo": {
+					"dotPct": 20,
+					"dotTurns": 2,
+					"ranged": true,
+					"animation": "h6/dungeon/fx/gaze"
+				}
+			},
+			"dotZone": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6Dot",
+				"val": 0,
+				"hidden": true,
+				"description": "~",
+				"propagator": "BATTLE_WIDE",
+				"stacking": "h6DotZone",
+				"addInfo": {
+					"role": "zone",
+					"animation": "h6/dungeon/fx/poison"
+				}
+			},
+			"spiritForm": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6SpiritForm",
+				"val": 50,
+				"icon": "h6/abilities/ab_Spirit_Form",
+				"stacking": "h6SpiritForm",
+				"description": "{Spirit Form}\n-50% damage taken until it first acts"
+			},
+			"malassa": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.02darkSchool",
+				"val": 10,
+				"stacking": "h6DungeonShadowLurkerExpDark",
+				"icon": "h6/abilities/ab_Disciple_of_Malassa",
+				"description": "{Follower of Malassa}\nDark Magic damage -10%\nLight Magic damage +10%"
+			},
+			"malassaLight": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.01lightSchool",
+				"val": -10,
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h6/dungeon/ShadowLurker/ShadowLurker.json",
+			"map": "h6/units/h6DungeonShadowLurker/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h6/units/h6DungeonShadowLurker/map/atkL.png",
+			"mapAttackFromRight": "h6/units/h6DungeonShadowLurker/map/atkR.png",
+			"iconLarge": "h6/units/h6DungeonShadowLurker/iconLarge.png",
+			"iconSmall": "h6/units/h6DungeonShadowLurker/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"frameAngles": [
+					90,
+					60,
+					45,
+					30,
+					0,
+					-30,
+					-45,
+					-60,
+					-90
+				],
+				"offset": {
+					"upperX": 25,
+					"upperY": -64,
+					"middleX": 25,
+					"middleY": -60,
+					"lowerX": 25,
+					"lowerY": -56
+				},
+				"attackClimaxFrame": 5,
+				"projectile": "h6/dungeon/eyeBolt.json"
+			}
+		},
+		"sound": {
+			"attack": "h6/dungeon/ShadowLukerShadowSpawn_AttackLaunchMelee.wav",
+			"shoot": "h6/dungeon/ShadowLukerShadowSpawn_AttackLaunchMeleeRanged.wav",
+			"wince": "h6/dungeon/ShadowLukerShadowSpawn_Hit.wav",
+			"defend": "h6/dungeon/ShadowLukerShadowSpawn_Defend.wav",
+			"killed": "h6/dungeon/ShadowLukerShadowSpawn_Die.wav",
+			"move": "h6/dungeon/ShadowLukerShadowSpawn_Fly.wav"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.attack"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.defence"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					5,
+					5,
+					10,
+					10,
+					15,
+					15,
+					20
+				]
+			},
+			{
+				"bonus": {
+					"type": "SPELL_DAMAGE_REDUCTION",
+					"subtype": "spellSchool.02darkSchool",
+					"stacking": "h6DungeonShadowLurkerExpDark"
+				},
+				"values": [
+					10,
+					11,
+					12,
+					13,
+					14,
+					15,
+					16,
+					17,
+					18,
+					20
+				]
+			}
+		]
+	},
+	"h6DungeonShadowWatcher": {
+		"name": {
+			"singular": "Shadow Watcher",
+			"plural": "Shadow Watchers"
+		},
+		"description": "Shadow Watchers are the advanced form of the Lurkers. Like Malassa, they can see through shadows, secrets and lies. The dark elves often rely on them to reveal hidden truths.",
+		"faction": "dungeon",
+		"level": 3,
+		"cost": {
+			"gold": 305
+		},
+		"speed": 6,
+		"hitPoints": 26,
+		"attack": 9,
+		"defense": 7,
+		"damage": {
+			"min": 4,
+			"max": 7
+		},
+		"doubleWide": false,
+		"fightValue": 472,
+		"aiValue": 555,
+		"growth": 6,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"shots": 16,
+		"abilities": {
+			"shooter": {
+				"type": "SHOOTER"
+			},
+			"harrowing": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6StrikeExtra",
+				"val": 20,
+				"icon": "h6/abilities/ab_Harrowing_Vision",
+				"stacking": "h6Harrowing",
+				"description": "{Harrowing Gaze}\nShot hit: target takes 20% as Dark, 2 rounds",
+				"addInfo": {
+					"dotPct": 20,
+					"dotTurns": 2,
+					"ranged": true,
+					"animation": "h6/dungeon/fx/gaze"
+				}
+			},
+			"dotZone": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6Dot",
+				"val": 0,
+				"hidden": true,
+				"description": "~",
+				"propagator": "BATTLE_WIDE",
+				"stacking": "h6DotZone",
+				"addInfo": {
+					"role": "zone",
+					"animation": "h6/dungeon/fx/poison"
+				}
+			},
+			"spiritForm": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6SpiritForm",
+				"val": 50,
+				"icon": "h6/abilities/ab_Spirit_Form",
+				"stacking": "h6SpiritForm",
+				"description": "{Spirit Form}\n-50% damage taken until it first acts"
+			},
+			"malassa": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.02darkSchool",
+				"val": 10,
+				"stacking": "h6DungeonShadowWatcherExpDark",
+				"icon": "h6/abilities/ab_Disciple_of_Malassa",
+				"description": "{Follower of Malassa}\nDark Magic damage -10%\nLight Magic damage +10%"
+			},
+			"malassaLight": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.01lightSchool",
+				"val": -10,
+				"hidden": true
+			},
+			"cast_h6AbMindProbe": {
+				"type": "SPELLCASTER",
+				"subtype": "spell.h6AbMindProbe",
+				"val": 3,
+				"description": "{Mind Probe}\nCooldown 2, free: a foe takes +15% damage",
+				"icon": "h6/abilities/ab_Mind_Probe",
+				"limiters": [
+					[
+						"noneOf",
+						{
+							"type": "HAS_ANOTHER_BONUS_LIMITER",
+							"parameters": [
+								"H6_COOLDOWN_H6C"
+							]
+						}
+					]
+				]
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 1,
+				"hidden": true
+			},
+			"noSpellcastByDefault": {
+				"type": "NO_SPELLCAST_BY_DEFAULT",
+				"hidden": true
+			},
+			"cooldown_h6AbMindProbe": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6Cooldown",
+				"val": 0,
+				"hidden": true,
+				"description": "~",
+				"addInfo": {
+					"spell": "heroes-memorial.h6:h6AbMindProbe",
+					"turns": 2
+				}
+			}
+		},
+		"graphics": {
+			"animation": "h6/dungeon/ShadowLurker_upg/ShadowLurker_upg.json",
+			"map": "h6/units/h6DungeonShadowWatcher/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h6/units/h6DungeonShadowWatcher/map/atkL.png",
+			"mapAttackFromRight": "h6/units/h6DungeonShadowWatcher/map/atkR.png",
+			"iconLarge": "h6/units/h6DungeonShadowWatcher/iconLarge.png",
+			"iconSmall": "h6/units/h6DungeonShadowWatcher/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"frameAngles": [
+					90,
+					60,
+					45,
+					30,
+					0,
+					-30,
+					-45,
+					-60,
+					-90
+				],
+				"offset": {
+					"upperX": 22,
+					"upperY": -56,
+					"middleX": 22,
+					"middleY": -52,
+					"lowerX": 22,
+					"lowerY": -49
+				},
+				"attackClimaxFrame": 5,
+				"projectile": "h6/dungeon/eyeBoltWatcher.json"
+			}
+		},
+		"sound": {
+			"attack": "h6/dungeon/ShadowLukerShadowSpawn_AttackLaunchMelee.wav",
+			"shoot": "h6/dungeon/ShadowLukerShadowSpawn_AttackLaunchMeleeRanged.wav",
+			"wince": "h6/dungeon/ShadowLukerShadowSpawn_Hit.wav",
+			"defend": "h6/dungeon/ShadowLukerShadowSpawn_Defend.wav",
+			"killed": "h6/dungeon/ShadowLukerShadowSpawn_Die.wav",
+			"move": "h6/dungeon/ShadowLukerShadowSpawn_Fly.wav"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.attack"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.defence"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					5,
+					5,
+					10,
+					10,
+					15,
+					15,
+					20
+				]
+			},
+			{
+				"bonus": {
+					"type": "SPELL_DAMAGE_REDUCTION",
+					"subtype": "spellSchool.02darkSchool",
+					"stacking": "h6DungeonShadowWatcherExpDark"
+				},
+				"values": [
+					10,
+					11,
+					12,
+					13,
+					14,
+					15,
+					16,
+					17,
+					18,
+					20
+				]
+			}
+		]
+	},
+	"h6DungeonManticore": {
+		"name": {
+			"singular": "Stingtail Lion",
+			"plural": "Stingtail Lions"
+		},
+		"description": "Stingtail Lions are magical beasts born in the Mythic Age, when dragon veins covered the surface of Ashan. Creatures that drank from rivers carrying dragon-blood crystals were forever changed by the powerful magic within. The Stingtail Lion seems to blend many animals: lion, bat and scorpion. It is famous for its venomous tail sting. The venom can eat through the strongest metal like acid, and can also paralyze muscles, leaving victims crippled for a long time.",
+		"faction": "dungeon",
+		"level": 4,
+		"cost": {
+			"gold": 330
+		},
+		"speed": 7,
+		"hitPoints": 32,
+		"attack": 11,
+		"defense": 9,
+		"damage": {
+			"min": 7,
+			"max": 9
+		},
+		"doubleWide": true,
+		"fightValue": 638,
+		"aiValue": 711,
+		"growth": 5,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"upgrades": [
+			"h6DungeonScorpicore"
+		],
+		"abilities": {
+			"flying": {
+				"type": "FLYING"
+			},
+			"venom": {
+				"type": "SPELL_AFTER_ATTACK",
+				"subtype": "spell.h6CorrodingVenom",
+				"val": 100,
+				"addInfo": [
+					3,
+					0
+				],
+				"icon": "h6/abilities/ab_Corroding_Venom",
+				"description": "{Corroding Venom}\nAttack: target -3 Defense for 1 round"
+			},
+			"malassa": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.02darkSchool",
+				"val": 10,
+				"stacking": "h6DungeonManticoreExpDark",
+				"icon": "h6/abilities/ab_Disciple_of_Malassa",
+				"description": "{Follower of Malassa}\nDark Magic damage -10%\nLight Magic damage +10%"
+			},
+			"malassaLight": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.01lightSchool",
+				"val": -10,
+				"hidden": true
+			},
+			"cast_h6AbCripplingSting": {
+				"type": "SPELLCASTER",
+				"subtype": "spell.h6AbCripplingSting",
+				"val": 3,
+				"description": "{Crippling Sting}\nCooldown 3: 80% dmg, unretaliated, -4 Speed",
+				"icon": "h6/abilities/ab_Crippling_Sting",
+				"limiters": [
+					[
+						"noneOf",
+						{
+							"type": "HAS_ANOTHER_BONUS_LIMITER",
+							"parameters": [
+								"H6_COOLDOWN_H6C"
+							]
+						}
+					]
+				]
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 1,
+				"hidden": true
+			},
+			"noSpellcastByDefault": {
+				"type": "NO_SPELLCAST_BY_DEFAULT",
+				"hidden": true
+			},
+			"cooldown_h6AbCripplingSting": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6Cooldown",
+				"val": 0,
+				"hidden": true,
+				"description": "~",
+				"addInfo": {
+					"spell": "heroes-memorial.h6:h6AbCripplingSting",
+					"turns": 3
+				}
+			}
+		},
+		"graphics": {
+			"animation": "h6/dungeon/Manticore/Manticore.json",
+			"map": "h6/units/h6DungeonManticore/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h6/units/h6DungeonManticore/map/atkL.png",
+			"mapAttackFromRight": "h6/units/h6DungeonManticore/map/atkR.png",
+			"iconLarge": "h6/units/h6DungeonManticore/iconLarge.png",
+			"iconSmall": "h6/units/h6DungeonManticore/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h6/dungeon/ManticoreScorpicore_AttackLaunchMelee.wav",
+			"wince": "h6/dungeon/ManticoreScorpicore_Hit.wav",
+			"defend": "h6/dungeon/ManticoreScorpicore_Defend.wav",
+			"killed": "h6/dungeon/ManticoreScorpicore_Die.wav",
+			"move": "h6/dungeon/ManticoreScorpicore_FlyLoop.wav",
+			"startMoving": "h6/dungeon/ManticoreScorpicore_FlyStart.wav",
+			"endMoving": "h6/dungeon/ManticoreScorpicore_FlyEnd.wav"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.attack"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					5,
+					6,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.defence"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "DOUBLE_DAMAGE_CHANCE"
+				},
+				"values": [
+					0,
+					2,
+					3,
+					5,
+					6,
+					8,
+					9,
+					11,
+					12,
+					15
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					5,
+					5,
+					10,
+					10,
+					15,
+					15,
+					20
+				]
+			}
+		]
+	},
+	"h6DungeonScorpicore": {
+		"name": {
+			"singular": "Scorpicore",
+			"plural": "Scorpicores"
+		},
+		"description": "Scorpicores are a new breed of Stingtail Lion, attuned to dark magic, found by the dark elves at confluences of dragon-blood crystal in the Underworld. This makes them more powerful, and more willing to obey their masters.",
+		"faction": "dungeon",
+		"level": 4,
+		"cost": {
+			"gold": 400
+		},
+		"speed": 10,
+		"hitPoints": 36,
+		"attack": 11,
+		"defense": 10,
+		"damage": {
+			"min": 7,
+			"max": 9
+		},
+		"doubleWide": true,
+		"fightValue": 732,
+		"aiValue": 857,
+		"growth": 5,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"flying": {
+				"type": "FLYING"
+			},
+			"venom": {
+				"type": "SPELL_AFTER_ATTACK",
+				"subtype": "spell.h6DissolvingVenom",
+				"val": 100,
+				"addInfo": [
+					3,
+					0
+				],
+				"icon": "h6/abilities/ab_Dissolving_Venom",
+				"description": "{Dissolving Venom}\nAttack: target -4 Defense for 1 round"
+			},
+			"malassa": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.02darkSchool",
+				"val": 10,
+				"stacking": "h6DungeonScorpicoreExpDark",
+				"icon": "h6/abilities/ab_Disciple_of_Malassa",
+				"description": "{Follower of Malassa}\nDark Magic damage -10%\nLight Magic damage +10%"
+			},
+			"malassaLight": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.01lightSchool",
+				"val": -10,
+				"hidden": true
+			},
+			"cast_h6AbParalyzingSting": {
+				"type": "SPELLCASTER",
+				"subtype": "spell.h6AbParalyzingSting",
+				"val": 3,
+				"description": "{Paralyzing Sting}\nCooldown 3: unretaliated, -6 Speed, 2 rounds",
+				"icon": "h6/abilities/ab_Paralyzing_Sting",
+				"limiters": [
+					[
+						"noneOf",
+						{
+							"type": "HAS_ANOTHER_BONUS_LIMITER",
+							"parameters": [
+								"H6_COOLDOWN_H6C"
+							]
+						}
+					]
+				]
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 1,
+				"hidden": true
+			},
+			"noSpellcastByDefault": {
+				"type": "NO_SPELLCAST_BY_DEFAULT",
+				"hidden": true
+			},
+			"cooldown_h6AbParalyzingSting": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6Cooldown",
+				"val": 0,
+				"hidden": true,
+				"description": "~",
+				"addInfo": {
+					"spell": "heroes-memorial.h6:h6AbParalyzingSting",
+					"turns": 3
+				}
+			}
+		},
+		"graphics": {
+			"animation": "h6/dungeon/Manticore_upg/Manticore_upg.json",
+			"map": "h6/units/h6DungeonScorpicore/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h6/units/h6DungeonScorpicore/map/atkL.png",
+			"mapAttackFromRight": "h6/units/h6DungeonScorpicore/map/atkR.png",
+			"iconLarge": "h6/units/h6DungeonScorpicore/iconLarge.png",
+			"iconSmall": "h6/units/h6DungeonScorpicore/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h6/dungeon/ManticoreScorpicore_AttackLaunchMelee.wav",
+			"wince": "h6/dungeon/ManticoreScorpicore_Hit.wav",
+			"defend": "h6/dungeon/ManticoreScorpicore_Defend.wav",
+			"killed": "h6/dungeon/ManticoreScorpicore_Die.wav",
+			"move": "h6/dungeon/ManticoreScorpicore_FlyLoop.wav",
+			"startMoving": "h6/dungeon/ManticoreScorpicore_FlyStart.wav",
+			"endMoving": "h6/dungeon/ManticoreScorpicore_FlyEnd.wav"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.attack"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					5,
+					6,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.defence"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "DOUBLE_DAMAGE_CHANCE"
+				},
+				"values": [
+					0,
+					2,
+					3,
+					5,
+					6,
+					8,
+					9,
+					11,
+					12,
+					15
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					5,
+					5,
+					10,
+					10,
+					15,
+					15,
+					20
+				]
+			}
+		]
+	},
+	"h6DungeonFaceless": {
+		"name": {
+			"singular": "Faceless",
+			"plural": "Faceless"
+		},
+		"description": "The Faceless are the children of Malassa, masters of espionage, intelligence and covert action. Of all the followers of the Dragon Gods, the Faceless are the most mysterious and unknown. The little that ordinary people hear of them is that they usually hide in shadow and mystery. Most people know them only as a flickering image glimpsed from the corner of the eye, something half-familiar, or the feeling of being watched... The Faceless walk in the shadows: they step into one shadow and come out of another. The Faceless need no words; they speak to one another by telepathy. They are seldom trusted by their allies, and always feared by their enemies.",
+		"faction": "dungeon",
+		"level": 5,
+		"cost": {
+			"gold": 435
+		},
+		"speed": 6,
+		"hitPoints": 36,
+		"attack": 12,
+		"defense": 10,
+		"damage": {
+			"min": 12,
+			"max": 13
+		},
+		"doubleWide": false,
+		"fightValue": 720,
+		"aiValue": 775,
+		"growth": 3,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"upgrades": [
+			"h6DungeonFacelessPuppeteer"
+		],
+		"abilities": {
+			"shadowStrike": {
+				"type": "RETURN_AFTER_STRIKE",
+				"icon": "h6/abilities/ab_Shadow_Strike",
+				"description": "{Shadow Strike}\nReturns after attacking, no retaliation"
+			},
+			"shadowStrikeNoRet": {
+				"type": "BLOCKS_RETALIATION",
+				"hidden": true
+			},
+			"teleport": {
+				"type": "FLYING",
+				"subtype": "movementTeleporting",
+				"description": "{Shadow Step}\nTeleports straight to its destination"
+			},
+			"malassa": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.02darkSchool",
+				"val": 10,
+				"stacking": "h6DungeonFacelessExpDark",
+				"icon": "h6/abilities/ab_Disciple_of_Malassa",
+				"description": "{Follower of Malassa}\nDark Magic damage -10%\nLight Magic damage +10%"
+			},
+			"malassaLight": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.01lightSchool",
+				"val": -10,
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h6/dungeon/Dungeon_Faceless/Dungeon_Faceless.json",
+			"map": "h6/units/h6DungeonFaceless/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h6/units/h6DungeonFaceless/map/atkL.png",
+			"mapAttackFromRight": "h6/units/h6DungeonFaceless/map/atkR.png",
+			"iconLarge": "h6/units/h6DungeonFaceless/iconLarge.png",
+			"iconSmall": "h6/units/h6DungeonFaceless/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h6/dungeon/FacelessMaskedOne_AttackLaunchMelee.wav",
+			"wince": "h6/dungeon/FacelessMaskedOne_Hit.wav",
+			"defend": "h6/dungeon/FacelessMaskedOne_Defend.wav",
+			"killed": "h6/dungeon/FacelessMaskedOne_Die.wav",
+			"move": "h6/dungeon/FacelessMaskedOne_FlyLoop.wav",
+			"startMoving": "h6/dungeon/FacelessMaskedOne_FlyStart.wav",
+			"endMoving": "h6/dungeon/FacelessMaskedOne_FlyEnd.wav"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.attack"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					3,
+					4,
+					5,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					3,
+					4,
+					4,
+					6,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					2,
+					3,
+					3,
+					4,
+					5,
+					6,
+					6,
+					7
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					7
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE"
+				},
+				"values": [
+					0,
+					0,
+					5,
+					5,
+					10,
+					10,
+					15,
+					15,
+					20,
+					25
+				]
+			},
+			{
+				"bonus": {
+					"type": "SPELL_DAMAGE_REDUCTION",
+					"subtype": "spellSchool.02darkSchool",
+					"stacking": "h6DungeonFacelessExpDark"
+				},
+				"values": [
+					10,
+					11,
+					12,
+					13,
+					14,
+					15,
+					16,
+					17,
+					18,
+					20
+				]
+			}
+		]
+	},
+	"h6DungeonFacelessPuppeteer": {
+		"name": {
+			"singular": "Faceless Puppeteer",
+			"plural": "Faceless Puppeteers"
+		},
+		"description": "Faceless Puppeteers are named for their terrifying power to slip into the minds of others and take control of their victims' bodies. A Puppeteer can control an opponent completely and bend it to its new master's every whim...",
+		"faction": "dungeon",
+		"level": 5,
+		"cost": {
+			"gold": 515
+		},
+		"speed": 9,
+		"hitPoints": 42,
+		"attack": 12,
+		"defense": 12,
+		"damage": {
+			"min": 12,
+			"max": 14
+		},
+		"doubleWide": false,
+		"fightValue": 1122,
+		"aiValue": 1370,
+		"growth": 3,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"shadowStrike": {
+				"type": "RETURN_AFTER_STRIKE",
+				"icon": "h6/abilities/ab_Shadow_Strike",
+				"description": "{Shadow Strike}\nReturns after attacking, no retaliation"
+			},
+			"shadowStrikeNoRet": {
+				"type": "BLOCKS_RETALIATION",
+				"hidden": true
+			},
+			"teleport": {
+				"type": "FLYING",
+				"subtype": "movementTeleporting",
+				"description": "{Shadow Step}\nTeleports straight to its destination"
+			},
+			"malassa": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.02darkSchool",
+				"val": 10,
+				"stacking": "h6DungeonFacelessPuppeteerExpDark",
+				"icon": "h6/abilities/ab_Disciple_of_Malassa",
+				"description": "{Follower of Malassa}\nDark Magic damage -10%\nLight Magic damage +10%"
+			},
+			"malassaLight": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.01lightSchool",
+				"val": -10,
+				"hidden": true
+			},
+			"cast_h6AbMindLeash": {
+				"type": "SPELLCASTER",
+				"subtype": "spell.h6AbMindLeash",
+				"val": 3,
+				"description": "{Mind Leash}\n1/battle: controls a foe 1 round; hit to end",
+				"icon": "h6/abilities/ab_Mind_Leash",
+				"limiters": [
+					[
+						"noneOf",
+						{
+							"type": "HAS_ANOTHER_BONUS_LIMITER",
+							"parameters": [
+								"H6_LEASH_USED_H6C"
+							]
+						}
+					]
+				]
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 1,
+				"hidden": true
+			},
+			"noSpellcastByDefault": {
+				"type": "NO_SPELLCAST_BY_DEFAULT",
+				"hidden": true
+			},
+			"cast_h6AbDarkPurge": {
+				"type": "SPELLCASTER",
+				"subtype": "spell.h6AbDarkPurge",
+				"val": 3,
+				"description": "{Dark Purge}\nCooldown 3, free: next hit dispels all buffs",
+				"icon": "h6/abilities/ab_Dark_Purge",
+				"limiters": [
+					[
+						"noneOf",
+						{
+							"type": "HAS_ANOTHER_BONUS_LIMITER",
+							"parameters": [
+								"H6_COOLDOWN_H6C"
+							]
+						}
+					]
+				]
+			},
+			"cooldown_h6AbDarkPurge": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6Cooldown",
+				"val": 0,
+				"hidden": true,
+				"description": "~",
+				"addInfo": {
+					"spell": "heroes-memorial.h6:h6AbDarkPurge",
+					"turns": 3
+				}
+			},
+			"darkPurge": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6DarkPurge",
+				"val": 0,
+				"hidden": true,
+				"description": "~",
+				"addInfo": {
+					"animation": "h6/dungeon/fx/purge"
+				}
+			}
+		},
+		"graphics": {
+			"animation": "h6/dungeon/Dungeon_Faceless_upg/Dungeon_Faceless_upg.json",
+			"map": "h6/units/h6DungeonFacelessPuppeteer/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h6/units/h6DungeonFacelessPuppeteer/map/atkL.png",
+			"mapAttackFromRight": "h6/units/h6DungeonFacelessPuppeteer/map/atkR.png",
+			"iconLarge": "h6/units/h6DungeonFacelessPuppeteer/iconLarge.png",
+			"iconSmall": "h6/units/h6DungeonFacelessPuppeteer/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h6/dungeon/FacelessMaskedOne_AttackLaunchMelee.wav",
+			"wince": "h6/dungeon/FacelessMaskedOne_Hit.wav",
+			"defend": "h6/dungeon/FacelessMaskedOne_Defend.wav",
+			"killed": "h6/dungeon/FacelessMaskedOne_Die.wav",
+			"move": "h6/dungeon/FacelessMaskedOne_FlyLoop.wav",
+			"startMoving": "h6/dungeon/FacelessMaskedOne_FlyStart.wav",
+			"endMoving": "h6/dungeon/FacelessMaskedOne_FlyEnd.wav"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.attack"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					3,
+					4,
+					5,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					3,
+					4,
+					4,
+					6,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					2,
+					3,
+					3,
+					4,
+					5,
+					6,
+					6,
+					7
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					7
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE"
+				},
+				"values": [
+					0,
+					0,
+					5,
+					5,
+					10,
+					10,
+					15,
+					15,
+					20,
+					25
+				]
+			},
+			{
+				"bonus": {
+					"type": "SPELL_DAMAGE_REDUCTION",
+					"subtype": "spellSchool.02darkSchool",
+					"stacking": "h6DungeonFacelessPuppeteerExpDark"
+				},
+				"values": [
+					10,
+					11,
+					12,
+					13,
+					14,
+					15,
+					16,
+					17,
+					18,
+					20
+				]
+			}
+		]
+	},
+	"h6DungeonMinotaur": {
+		"name": {
+			"singular": "Taurian",
+			"plural": "Taurians"
+		},
+		"description": "Like the Harpies and Centaurs, the Taurians are beast-men created by the mages of the Seven Cities in 512 YSD. Half man, half bull, they were first designed as shock infantry to fight alongside the Centaur cavalry.",
+		"faction": "dungeon",
+		"level": 6,
+		"cost": {
+			"gold": 915
+		},
+		"speed": 6,
+		"hitPoints": 94,
+		"attack": 16,
+		"defense": 15,
+		"damage": {
+			"min": 18,
+			"max": 23
+		},
+		"doubleWide": true,
+		"fightValue": 1780,
+		"aiValue": 2079,
+		"growth": 2,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"upgrades": [
+			"h6DungeonMinotaurGuard"
+		],
+		"abilities": {
+			"preemptive": {
+				"type": "FIRST_STRIKE",
+				"icon": "h6/abilities/ab_Preemptive_Strike",
+				"description": "{Preemptive Strike}\nRetaliates before melee attackers strike"
+			},
+			"malassa": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.02darkSchool",
+				"val": 10,
+				"stacking": "h6DungeonMinotaurExpDark",
+				"icon": "h6/abilities/ab_Disciple_of_Malassa",
+				"description": "{Follower of Malassa}\nDark Magic damage -10%\nLight Magic damage +10%"
+			},
+			"malassaLight": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.01lightSchool",
+				"val": -10,
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h6/dungeon/Minotaur/Minotaur.json",
+			"map": "h6/units/h6DungeonMinotaur/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h6/units/h6DungeonMinotaur/map/atkL.png",
+			"mapAttackFromRight": "h6/units/h6DungeonMinotaur/map/atkR.png",
+			"iconLarge": "h6/units/h6DungeonMinotaur/iconLarge.png",
+			"iconSmall": "h6/units/h6DungeonMinotaur/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h6/dungeon/MinotaurMinotaurGuard_AttackLaunchMelee.wav",
+			"wince": "h6/dungeon/MinotaurMinotaurGuard_Hit.wav",
+			"defend": "h6/dungeon/MinotaurMinotaurGuard_Defend.wav",
+			"killed": "h6/dungeon/MinotaurMinotaurGuard_Die.wav",
+			"move": "h6/dungeon/MinotaurMinotaurGuard_Move_Stone_01.wav"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.defence"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					2,
+					3,
+					4,
+					5,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_RETALIATION"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					5,
+					5,
+					10,
+					10,
+					15,
+					15,
+					20
+				]
+			}
+		]
+	},
+	"h6DungeonMinotaurGuard": {
+		"name": {
+			"singular": "Minotaur Guardsman",
+			"plural": "Minotaur Guardsmen"
+		},
+		"description": "The Scarlet Mages of Al-Rubit sent a thousand loyal Minotaur Guardsmen to the dark elves as a diplomatic gift. This greatly shocked and angered their neighbors, the mages of the Silver Cities. Before long, the minotaurs swore oaths of loyalty to the dark elves and to Malassa. The dark elves, grateful for the Minotaur Guardsmen's strength and loyalty, gave them their freedom and no longer treated them as slaves. Both sides have gained from this new friendship.",
+		"faction": "dungeon",
+		"level": 6,
+		"cost": {
+			"gold": 1090
+		},
+		"speed": 8,
+		"hitPoints": 98,
+		"attack": 17,
+		"defense": 15,
+		"damage": {
+			"min": 22,
+			"max": 27
+		},
+		"doubleWide": true,
+		"fightValue": 2395,
+		"aiValue": 2862,
+		"growth": 2,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"preemptive": {
+				"type": "FIRST_STRIKE",
+				"icon": "h6/abilities/ab_Preemptive_Strike",
+				"description": "{Preemptive Strike}\nRetaliates before melee attackers strike"
+			},
+			"malassa": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.02darkSchool",
+				"val": 10,
+				"stacking": "h6DungeonMinotaurGuardExpDark",
+				"icon": "h6/abilities/ab_Disciple_of_Malassa",
+				"description": "{Follower of Malassa}\nDark Magic damage -10%\nLight Magic damage +10%"
+			},
+			"malassaLight": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.01lightSchool",
+				"val": -10,
+				"hidden": true
+			},
+			"cast_h6AbMightySlash": {
+				"type": "SPELLCASTER",
+				"subtype": "spell.h6AbMightySlash",
+				"val": 3,
+				"description": "{Mighty Slash}\nCooldown 3: heavy hit, unretaliated, pushes 2",
+				"icon": "h6/abilities/ab_Mighty_Slash",
+				"limiters": [
+					[
+						"noneOf",
+						{
+							"type": "HAS_ANOTHER_BONUS_LIMITER",
+							"parameters": [
+								"H6_COOLDOWN_H6C"
+							]
+						}
+					]
+				]
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 1,
+				"hidden": true
+			},
+			"noSpellcastByDefault": {
+				"type": "NO_SPELLCAST_BY_DEFAULT",
+				"hidden": true
+			},
+			"cooldown_h6AbMightySlash": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6Cooldown",
+				"val": 0,
+				"hidden": true,
+				"description": "~",
+				"addInfo": {
+					"spell": "heroes-memorial.h6:h6AbMightySlash",
+					"turns": 3
+				}
+			},
+			"fightingSpirit": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6FightingSpirit",
+				"val": 1,
+				"icon": "h6/abilities/ab_Fighting_Spirit",
+				"stacking": "h6FightingSpirit",
+				"description": "{Fighting Spirit}\n+1 Morale per attack it makes, max +3, battle",
+				"addInfo": {
+					"max": 3,
+					"animation": "h6/dungeon/fx/spirit"
+				}
+			}
+		},
+		"graphics": {
+			"animation": "h6/dungeon/Minotaur_upg/Minotaur_upg.json",
+			"map": "h6/units/h6DungeonMinotaurGuard/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h6/units/h6DungeonMinotaurGuard/map/atkL.png",
+			"mapAttackFromRight": "h6/units/h6DungeonMinotaurGuard/map/atkR.png",
+			"iconLarge": "h6/units/h6DungeonMinotaurGuard/iconLarge.png",
+			"iconSmall": "h6/units/h6DungeonMinotaurGuard/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h6/dungeon/MinotaurMinotaurGuard_AttackLaunchMelee.wav",
+			"wince": "h6/dungeon/MinotaurMinotaurGuard_Hit.wav",
+			"defend": "h6/dungeon/MinotaurMinotaurGuard_Defend.wav",
+			"killed": "h6/dungeon/MinotaurMinotaurGuard_Die.wav",
+			"move": "h6/dungeon/MinotaurMinotaurGuard_Move_Stone_01.wav"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.defence"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					2,
+					3,
+					4,
+					5,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_RETALIATION"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					5,
+					5,
+					10,
+					10,
+					15,
+					15,
+					20
+				]
+			}
+		]
+	},
+	"h6DungeonShadowDragon": {
+		"name": {
+			"singular": "Shade Dragon",
+			"plural": "Shade Dragons"
+		},
+		"description": "Shade Dragons are avatars of Malassa, the Dragon God of Darkness. They take the form of onyx dragons with purple orbs set in their wings: the Eyes of Malassa, which can see every shadow, whether real shadows or what they stand for. The Shadow Lurkers are said to be born from these glowing orbs. When an angry Shade Dragon spreads its wings, the countless eyes bewilder its enemies and summon the most terrible nightmares to destroy their minds. When deadlier means are needed, Shade Dragons also use the strength of their bodies and their withering breath to burn away their enemies' lives, slowly but surely.",
+		"faction": "dungeon",
+		"level": 7,
+		"cost": {
+			"gold": 2175,
+			"sulfur": 1
+		},
+		"speed": 9,
+		"hitPoints": 170,
+		"attack": 18,
+		"defense": 17,
+		"damage": {
+			"min": 41,
+			"max": 46
+		},
+		"doubleWide": true,
+		"fightValue": 4719,
+		"aiValue": 5826,
+		"growth": 1,
+		"advMapAmount": {
+			"min": 1,
+			"max": 3
+		},
+		"upgrades": [
+			"h6DungeonBlackDragon"
+		],
+		"abilities": {
+			"skeletonTarget": {
+				"type": "SKELETON_TRANSFORMER_TARGET",
+				"subtype": "boneDragon",
+				"hidden": true
+			},
+			"flying": {
+				"type": "FLYING"
+			},
+			"dragon": {
+				"type": "DRAGON_NATURE"
+			},
+			"terror": {
+				"type": "H6_TERROR_H6C",
+				"val": 20,
+				"icon": "h6/abilities/ab_Terrifying_Presence",
+				"description": "{Terrifying Presence}\nAdjacent foes: 20% Defend-only, else -2 Morale"
+			},
+			"terrorZone": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6Terror",
+				"val": 0,
+				"hidden": true,
+				"description": "~",
+				"propagator": "BATTLE_WIDE",
+				"stacking": "h6TerrorZone",
+				"addInfo": {
+					"role": "zone",
+					"chance": 20,
+					"morale": 2,
+					"animation": "h6/dungeon/fx/terror"
+				}
+			},
+			"malassa": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.02darkSchool",
+				"val": 10,
+				"stacking": "h6DungeonShadowDragonExpDark",
+				"icon": "h6/abilities/ab_Disciple_of_Malassa",
+				"description": "{Follower of Malassa}\nDark Magic damage -10%\nLight Magic damage +10%"
+			},
+			"malassaLight": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.01lightSchool",
+				"val": -10,
+				"hidden": true
+			},
+			"cast_h6AbWither": {
+				"type": "SPELLCASTER",
+				"subtype": "spell.h6AbWither",
+				"val": 3,
+				"description": "{Withering Breath}\nCooldown 3: Dark dmg, then rising dmg/round",
+				"icon": "h6/abilities/ab_Withering_Breath",
+				"limiters": [
+					[
+						"noneOf",
+						{
+							"type": "HAS_ANOTHER_BONUS_LIMITER",
+							"parameters": [
+								"H6_COOLDOWN_H6C"
+							]
+						}
+					]
+				]
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 1,
+				"hidden": true
+			},
+			"noSpellcastByDefault": {
+				"type": "NO_SPELLCAST_BY_DEFAULT",
+				"hidden": true
+			},
+			"cooldown_h6AbWither": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6Cooldown",
+				"val": 0,
+				"hidden": true,
+				"description": "~",
+				"addInfo": {
+					"spell": "heroes-memorial.h6:h6AbWither",
+					"turns": 3
+				}
+			},
+			"witherZone": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6WitherTick",
+				"val": 0,
+				"hidden": true,
+				"description": "~",
+				"propagator": "BATTLE_WIDE",
+				"stacking": "h6WitherZone",
+				"addInfo": {
+					"role": "zone",
+					"animation": "h6/dungeon/fx/poison"
+				}
+			}
+		},
+		"graphics": {
+			"animation": "h6/dungeon/ShadowDragon/ShadowDragon.json",
+			"map": "h6/units/h6DungeonShadowDragon/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h6/units/h6DungeonShadowDragon/map/atkL.png",
+			"mapAttackFromRight": "h6/units/h6DungeonShadowDragon/map/atkR.png",
+			"iconLarge": "h6/units/h6DungeonShadowDragon/iconLarge.png",
+			"iconSmall": "h6/units/h6DungeonShadowDragon/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h6/dungeon/ShadowDragonBlackDragon_AttackLaunchMeleeCrit.wav",
+			"defend": "h6/dungeon/ShadowDragonBlackDragon_Defend.wav",
+			"wince": "BKDRWNCE.wav",
+			"killed": "BKDRKILL.wav",
+			"move": "BKDRMOVE.wav"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "SPELL_DAMAGE_REDUCTION",
+					"subtype": "spellSchool.02darkSchool",
+					"stacking": "h6DungeonShadowDragonExpDark"
+				},
+				"values": [
+					10,
+					11,
+					12,
+					14,
+					16,
+					18,
+					20,
+					22,
+					25,
+					30
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					10,
+					15,
+					20,
+					25,
+					30
+				]
+			}
+		]
+	},
+	"h6DungeonBlackDragon": {
+		"name": {
+			"singular": "Black Dragon",
+			"plural": "Black Dragons"
+		},
+		"description": "The final evolution of the Shade Dragon is the legendary Black Dragon. On its wings, the Eyes of Malassa are replaced by intricate patterns of fading light, like galaxies being swallowed by the endless dark of space.",
+		"faction": "dungeon",
+		"level": 7,
+		"cost": {
+			"gold": 4015,
+			"sulfur": 2
+		},
+		"speed": 14,
+		"hitPoints": 250,
+		"attack": 24,
+		"defense": 22,
+		"damage": {
+			"min": 42,
+			"max": 47
+		},
+		"doubleWide": true,
+		"fightValue": 7718,
+		"aiValue": 10283,
+		"growth": 1,
+		"advMapAmount": {
+			"min": 1,
+			"max": 3
+		},
+		"abilities": {
+			"skeletonTarget": {
+				"type": "SKELETON_TRANSFORMER_TARGET",
+				"subtype": "boneDragon",
+				"hidden": true
+			},
+			"flying": {
+				"type": "FLYING"
+			},
+			"dragon": {
+				"type": "DRAGON_NATURE"
+			},
+			"terror": {
+				"type": "H6_TERROR_H6C",
+				"val": 20,
+				"icon": "h6/abilities/ab_Terrifying_Presence",
+				"description": "{Terrifying Presence}\nAdjacent foes: 20% Defend-only, else -2 Morale"
+			},
+			"terrorZone": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6Terror",
+				"val": 0,
+				"hidden": true,
+				"description": "~",
+				"propagator": "BATTLE_WIDE",
+				"stacking": "h6TerrorZone",
+				"addInfo": {
+					"role": "zone",
+					"chance": 20,
+					"morale": 2,
+					"animation": "h6/dungeon/fx/terror"
+				}
+			},
+			"malassa": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.02darkSchool",
+				"val": 10,
+				"stacking": "h6DungeonBlackDragonExpDark",
+				"icon": "h6/abilities/ab_Disciple_of_Malassa",
+				"description": "{Follower of Malassa}\nDark Magic damage -10%\nLight Magic damage +10%"
+			},
+			"malassaLight": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.01lightSchool",
+				"val": -10,
+				"hidden": true
+			},
+			"cast_h6AbWither": {
+				"type": "SPELLCASTER",
+				"subtype": "spell.h6AbWither",
+				"val": 3,
+				"description": "{Withering Breath}\nCooldown 3: Dark dmg, then rising dmg/round",
+				"icon": "h6/abilities/ab_Withering_Breath",
+				"limiters": [
+					[
+						"noneOf",
+						{
+							"type": "HAS_ANOTHER_BONUS_LIMITER",
+							"parameters": [
+								"H6_COOLDOWN_H6C"
+							]
+						}
+					]
+				]
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 1,
+				"hidden": true
+			},
+			"noSpellcastByDefault": {
+				"type": "NO_SPELLCAST_BY_DEFAULT",
+				"hidden": true
+			},
+			"cooldown_h6AbWither": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6Cooldown",
+				"val": 0,
+				"hidden": true,
+				"description": "~",
+				"addInfo": {
+					"spell": "heroes-memorial.h6:h6AbWither",
+					"turns": 3
+				}
+			},
+			"witherZone": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6WitherTick",
+				"val": 0,
+				"hidden": true,
+				"description": "~",
+				"propagator": "BATTLE_WIDE",
+				"stacking": "h6WitherZone",
+				"addInfo": {
+					"role": "zone",
+					"animation": "h6/dungeon/fx/poison"
+				}
+			},
+			"magicImmunity": {
+				"type": "LEVEL_SPELL_IMMUNITY",
+				"val": 5,
+				"icon": "h6/abilities/ab_Immunity_to_Magic",
+				"description": "{Magic Immunity}\nImmune to all spells"
+			}
+		},
+		"graphics": {
+			"animation": "h6/dungeon/ShadowDragon_upg/ShadowDragon_upg.json",
+			"map": "h6/units/h6DungeonBlackDragon/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h6/units/h6DungeonBlackDragon/map/atkL.png",
+			"mapAttackFromRight": "h6/units/h6DungeonBlackDragon/map/atkR.png",
+			"iconLarge": "h6/units/h6DungeonBlackDragon/iconLarge.png",
+			"iconSmall": "h6/units/h6DungeonBlackDragon/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h6/dungeon/ShadowDragonBlackDragon_AttackLaunchMeleeCrit.wav",
+			"defend": "h6/dungeon/ShadowDragonBlackDragon_Defend.wav",
+			"wince": "BKDRWNCE.wav",
+			"killed": "BKDRKILL.wav",
+			"move": "BKDRMOVE.wav"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "SPELL_DAMAGE_REDUCTION",
+					"subtype": "spellSchool.02darkSchool",
+					"stacking": "h6DungeonBlackDragonExpDark"
+				},
+				"values": [
+					10,
+					11,
+					12,
+					14,
+					16,
+					18,
+					20,
+					22,
+					25,
+					30
+				]
+			}
+		]
+	}
+}

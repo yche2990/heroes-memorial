@@ -1,0 +1,276 @@
+// Heroes 6 memorial: script registration of Stronghold creatures
+{
+	"h6TasteOfBlood": {
+		"implements": "combatEvent",
+		"script": "combat/h6TasteOfBlood",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"pct": {
+					"type": "number"
+				},
+				"max": {
+					"type": "number"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": ""
+	},
+	"h6Assault": {
+		"implements": "combatEvent",
+		"script": "combat/h6Assault",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"chance": {
+					"type": "number"
+				},
+				"animation": {
+					"type": "string"
+				},
+				"sound": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": ""
+	},
+	"h6Vicious": {
+		"implements": "combatEvent",
+		"script": "combat/h6Vicious",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"role": {
+					"type": "string",
+					"enum": [
+						"carrier",
+						"zone"
+					]
+				},
+				"val": {
+					"type": "number"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": ""
+	},
+	"h6Vigilant": {
+		"implements": "combatEvent",
+		"script": "combat/h6Vigilant",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"range": {
+					"type": "number"
+				},
+				"animation": {
+					"type": "string"
+				},
+				"sound": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": ""
+	},
+	"h6Manoeuvre": {
+		"implements": "combatEvent",
+		"script": "combat/h6Manoeuvre",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"animation": {
+					"type": "string"
+				},
+				"sound": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": ""
+	},
+	"h6WarFury": {
+		"implements": "combatEvent",
+		"script": "combat/h6WarFury",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {},
+			"additionalProperties": false
+		},
+		"description": ""
+	},
+	"h6Impervious": {
+		"implements": "combatEvent",
+		"script": "combat/h6Impervious",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"animation": {
+					"type": "string"
+				},
+				"sound": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": ""
+	},
+	"h6BurningRage": {
+		"implements": "combatEvent",
+		"script": "combat/h6BurningRage",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"pct": {
+					"type": "number"
+				},
+				"turns": {
+					"type": "number"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": ""
+	},
+	"h6SkyEarth": {
+		"implements": "spellEffect",
+		"script": "spells/h6SkyEarth",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"mass": {
+					"type": "boolean"
+				},
+				"sky": {
+					"type": "string"
+				},
+				"earth": {
+					"type": "string"
+				},
+				"per": {
+					"type": "number"
+				},
+				"turns": {
+					"type": "number"
+				},
+				"key": {
+					"type": "string"
+				},
+				"animation": {
+					"type": "string"
+				},
+				"sound": {
+					"type": "string"
+				},
+				"skyAnimation": {
+					"type": "string"
+				},
+				"skySound": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"h6Slash": {
+		"implements": "spellEffect",
+		"script": "spells/h6Slash",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"pct": {
+					"type": "number"
+				},
+				"splash": {
+					"type": "string"
+				},
+				"knockback": {
+					"type": "boolean"
+				},
+				"knockDist": {
+					"type": "number"
+				},
+				"status": {
+					"type": "string"
+				},
+				"statusTurns": {
+					"type": "number"
+				},
+				"key": {
+					"type": "string"
+				},
+				"animation": {
+					"type": "string"
+				},
+				"sound": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"h6TrapArm": {
+		"implements": "spellEffect",
+		"script": "spells/h6TrapArm",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"per": {
+					"type": "number"
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"h6TrapHit": {
+		"implements": "spellEffect",
+		"script": "spells/h6TrapHit",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"animation": {
+					"type": "string"
+				},
+				"sound": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		}
+	}
+}

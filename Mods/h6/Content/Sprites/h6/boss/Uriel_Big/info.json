@@ -1,0 +1,73 @@
+{
+ "fac": "boss",
+ "k": 1.7,
+ "scale": 71.43489164194685,
+ "origin": [
+  197.09174448507838,
+  261.0
+ ],
+ "baked": {
+  "0": [
+   "bossUriel.fx"
+  ],
+  "1": [
+   "bossUriel.fx"
+  ],
+  "2": [
+   "bossUriel.fx"
+  ],
+  "3": [
+   "bossUriel.fx"
+  ],
+  "4": [
+   "bossUriel.fx"
+  ],
+  "5": [
+   "bossUriel.fx"
+  ],
+  "7": [
+   "bossUriel.fx"
+  ],
+  "8": [
+   "bossUriel.fx"
+  ],
+  "11": [
+   "bossUriel.fx"
+  ],
+  "12": [
+   "bossUriel.fx"
+  ],
+  "13": [
+   "bossUriel.fx"
+  ],
+  "17": [
+   "bossUriel.fx"
+  ],
+  "18": [
+   "bossUriel.fx"
+  ],
+  "19": [
+   "bossUriel.fx"
+  ],
+  "20": [
+   "bossUriel.fx"
+  ],
+  "21": [
+   "bossUriel.fx"
+  ],
+  "30": [
+   "bossUriel.fx"
+  ],
+  "32": [
+   "bossUriel.fx"
+  ],
+  "40": [
+   "bossUriel.fx"
+  ],
+  "42": [
+   "bossUriel.fx"
+  ]
+ },
+ "render": "Blender 4.2 Cycles 24spp 3x + sprite_post; fx h6m (fxsim d1=mul mode2=wrap)",
+ "sec": 42
+}

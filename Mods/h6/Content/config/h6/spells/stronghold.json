@@ -1,0 +1,789 @@
+// Heroes 6 memorial: active abilities and statuses of Stronghold creatures
+{
+	"h6TrapTrigger": {
+		"type": "ability",
+		"name": "Crippling Traps",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"targetType": "CREATURE",
+		"flags": {
+			"special": true,
+			"negative": true,
+			"damage": true
+		},
+		"sounds": {
+			"cast": ""
+		},
+		"graphics": {
+			"iconBook": "h6/spells/h6TrapTrigger/Book",
+			"iconScroll": "h6/spells/h6TrapTrigger/Scroll",
+			"iconScenarioBonus": "h6/spells/h6TrapTrigger/Scenario",
+			"iconEffect": "h6/spells/h6TrapTrigger/Effect"
+		},
+		"levels": {
+			"base": {
+				"cost": 0,
+				"power": 0,
+				"range": "0",
+				"targetModifier": {
+					"smart": false
+				},
+				"battleEffects": {
+					"cripple": {
+						"type": "timed",
+						"bonus": {
+							"slow": {
+								"type": "STACKS_SPEED",
+								"val": -3,
+								"duration": "N_TURNS",
+								"turns": 2
+							}
+						}
+					},
+					"hit": {
+						"type": "h6TrapHit",
+						"animation": "h6/stronghold/fx/trap",
+						"sound": "h6/stronghold/GoblinHunterTrap_Activate.wav"
+					}
+				}
+			},
+			"none": {
+				"description": "{Crippling Traps}\n\nStepped on a Goblin trap: takes damage, Speed -3 for 2 rounds."
+			},
+			"basic": {
+				"description": "{Crippling Traps}\n\nStepped on a Goblin trap: takes damage, Speed -3 for 2 rounds."
+			},
+			"advanced": {
+				"description": "{Crippling Traps}\n\nStepped on a Goblin trap: takes damage, Speed -3 for 2 rounds."
+			},
+			"expert": {
+				"description": "{Crippling Traps}\n\nStepped on a Goblin trap: takes damage, Speed -3 for 2 rounds."
+			}
+		}
+	},
+	"h6AbCripplingTraps": {
+		"type": "ability",
+		"name": "Crippling Traps",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"targetType": "LOCATION",
+		"flags": {
+			"special": true,
+			"indifferent": true
+		},
+		"sounds": {
+			"cast": "h6/stronghold/GoblinHunterTrap_Start.wav"
+		},
+		"graphics": {
+			"iconBook": "h6/spells/h6AbCripplingTraps/Book",
+			"iconScroll": "h6/spells/h6AbCripplingTraps/Scroll",
+			"iconScenarioBonus": "h6/spells/h6AbCripplingTraps/Scenario",
+			"iconEffect": "h6/spells/h6AbCripplingTraps/Effect"
+		},
+		"levels": {
+			"base": {
+				"cost": 0,
+				"power": 0,
+				"range": "0",
+				"targetModifier": {
+					"smart": false,
+					"clearAffected": true
+				},
+				"battleEffects": {
+					"obstacle": {
+						"type": "obstacle",
+						"hidden": true,
+						"passable": true,
+						"trap": false,
+						"triggerAbility": "heroes-memorial.h6:h6TrapTrigger",
+						"removeOnTrigger": true,
+						"turnsRemaining": -1,
+						"attacker": {
+							"range": [
+								[
+									""
+								]
+							],
+							"shape": [
+								[
+									""
+								]
+							],
+							"animation": "C09SPF1",
+							"appearAnimation": "C09SPF0",
+							"appearSound": "LANDMINE"
+						},
+						"defender": {
+							"range": [
+								[
+									""
+								]
+							],
+							"shape": [
+								[
+									""
+								]
+							],
+							"animation": "C09SPF1",
+							"appearAnimation": "C09SPF0",
+							"appearSound": "LANDMINE"
+						}
+					},
+					"arm": {
+						"type": "h6TrapArm",
+						"per": 3
+					}
+				}
+			},
+			"none": {
+				"description": "{Crippling Traps}\n\nPlaces a trap on an empty hex (visible only to your side). An enemy that steps on it triggers it: takes 3 × number of Goblins damage (counted when the trap was placed) and gets -3 Speed for 2 rounds; the trap then disappears. Cooldown: 2 rounds."
+			},
+			"basic": {
+				"description": "{Crippling Traps}\n\nPlaces a trap on an empty hex (visible only to your side). An enemy that steps on it triggers it: takes 3 × number of Goblins damage (counted when the trap was placed) and gets -3 Speed for 2 rounds; the trap then disappears. Cooldown: 2 rounds."
+			},
+			"advanced": {
+				"description": "{Crippling Traps}\n\nPlaces a trap on an empty hex (visible only to your side). An enemy that steps on it triggers it: takes 3 × number of Goblins damage (counted when the trap was placed) and gets -3 Speed for 2 rounds; the trap then disappears. Cooldown: 2 rounds."
+			},
+			"expert": {
+				"description": "{Crippling Traps}\n\nPlaces a trap on an empty hex (visible only to your side). An enemy that steps on it triggers it: takes 3 × number of Goblins damage (counted when the trap was placed) and gets -3 Speed for 2 rounds; the trap then disappears. Cooldown: 2 rounds."
+			}
+		}
+	},
+	"h6Sky": {
+		"type": "ability",
+		"name": "Gift of the Sky",
+		"school": {
+			"air": true,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"targetType": "CREATURE",
+		"flags": {
+			"special": true,
+			"positive": true
+		},
+		"sounds": {
+			"cast": ""
+		},
+		"graphics": {
+			"iconBook": "h6/spells/h6Sky/Book",
+			"iconScroll": "h6/spells/h6Sky/Scroll",
+			"iconScenarioBonus": "h6/spells/h6Sky/Scenario",
+			"iconEffect": "h6/spells/h6Sky/Effect"
+		},
+		"levels": {
+			"base": {
+				"cost": 0,
+				"power": 0,
+				"range": "0",
+				"targetModifier": {
+					"smart": false
+				},
+				"battleEffects": {
+					"status": {
+						"type": "timed",
+						"bonus": {
+							"haste": {
+								"type": "STACKS_SPEED",
+								"val": 2,
+								"duration": "N_TURNS",
+								"turns": 2
+							}
+						}
+					}
+				}
+			},
+			"none": {
+				"description": "{Gift of the Sky}\n\nA Dreamwalker calls the wind of the Sky Father: +2 Speed for 2 rounds."
+			},
+			"basic": {
+				"description": "{Gift of the Sky}\n\nA Dreamwalker calls the wind of the Sky Father: +2 Speed for 2 rounds."
+			},
+			"advanced": {
+				"description": "{Gift of the Sky}\n\nA Dreamwalker calls the wind of the Sky Father: +2 Speed for 2 rounds."
+			},
+			"expert": {
+				"description": "{Gift of the Sky}\n\nA Dreamwalker calls the wind of the Sky Father: +2 Speed for 2 rounds."
+			}
+		}
+	},
+	"h6SkyMass": {
+		"type": "ability",
+		"name": "Gift of the Sky",
+		"school": {
+			"air": true,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"targetType": "CREATURE",
+		"flags": {
+			"special": true,
+			"positive": true
+		},
+		"sounds": {
+			"cast": ""
+		},
+		"graphics": {
+			"iconBook": "h6/spells/h6SkyMass/Book",
+			"iconScroll": "h6/spells/h6SkyMass/Scroll",
+			"iconScenarioBonus": "h6/spells/h6SkyMass/Scenario",
+			"iconEffect": "h6/spells/h6SkyMass/Effect"
+		},
+		"levels": {
+			"base": {
+				"cost": 0,
+				"power": 0,
+				"range": "0",
+				"targetModifier": {
+					"smart": false
+				},
+				"battleEffects": {
+					"status": {
+						"type": "timed",
+						"bonus": {
+							"haste": {
+								"type": "STACKS_SPEED",
+								"val": 1,
+								"duration": "N_TURNS",
+								"turns": 2
+							}
+						}
+					}
+				}
+			},
+			"none": {
+				"description": "{Gift of the Sky}\n\nA Dreamwalker calls the wind of the Sky Father: +1 Speed for 2 rounds."
+			},
+			"basic": {
+				"description": "{Gift of the Sky}\n\nA Dreamwalker calls the wind of the Sky Father: +1 Speed for 2 rounds."
+			},
+			"advanced": {
+				"description": "{Gift of the Sky}\n\nA Dreamwalker calls the wind of the Sky Father: +1 Speed for 2 rounds."
+			},
+			"expert": {
+				"description": "{Gift of the Sky}\n\nA Dreamwalker calls the wind of the Sky Father: +1 Speed for 2 rounds."
+			}
+		}
+	},
+	"h6Earth": {
+		"type": "ability",
+		"name": "Earth Bind",
+		"school": {
+			"air": false,
+			"earth": true,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"targetType": "CREATURE",
+		"flags": {
+			"special": true,
+			"negative": true
+		},
+		"sounds": {
+			"cast": ""
+		},
+		"graphics": {
+			"iconBook": "h6/spells/h6Earth/Book",
+			"iconScroll": "h6/spells/h6Earth/Scroll",
+			"iconScenarioBonus": "h6/spells/h6Earth/Scenario",
+			"iconEffect": "h6/spells/h6Earth/Effect"
+		},
+		"levels": {
+			"base": {
+				"cost": 0,
+				"power": 0,
+				"range": "0",
+				"targetModifier": {
+					"smart": false
+				},
+				"battleEffects": {
+					"status": {
+						"type": "timed",
+						"bonus": {
+							"slow": {
+								"type": "STACKS_SPEED",
+								"val": -2,
+								"duration": "N_TURNS",
+								"turns": 2
+							}
+						}
+					}
+				}
+			},
+			"none": {
+				"description": "{Earth Bind}\n\nThe Dreamwalker calls on the power of Mother Earth to bind the feet: -2 Speed for 2 rounds."
+			},
+			"basic": {
+				"description": "{Earth Bind}\n\nThe Dreamwalker calls on the power of Mother Earth to bind the feet: -2 Speed for 2 rounds."
+			},
+			"advanced": {
+				"description": "{Earth Bind}\n\nThe Dreamwalker calls on the power of Mother Earth to bind the feet: -2 Speed for 2 rounds."
+			},
+			"expert": {
+				"description": "{Earth Bind}\n\nThe Dreamwalker calls on the power of Mother Earth to bind the feet: -2 Speed for 2 rounds."
+			}
+		}
+	},
+	"h6EarthMass": {
+		"type": "ability",
+		"name": "Earth Bind",
+		"school": {
+			"air": false,
+			"earth": true,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"targetType": "CREATURE",
+		"flags": {
+			"special": true,
+			"negative": true
+		},
+		"sounds": {
+			"cast": ""
+		},
+		"graphics": {
+			"iconBook": "h6/spells/h6EarthMass/Book",
+			"iconScroll": "h6/spells/h6EarthMass/Scroll",
+			"iconScenarioBonus": "h6/spells/h6EarthMass/Scenario",
+			"iconEffect": "h6/spells/h6EarthMass/Effect"
+		},
+		"levels": {
+			"base": {
+				"cost": 0,
+				"power": 0,
+				"range": "0",
+				"targetModifier": {
+					"smart": false
+				},
+				"battleEffects": {
+					"status": {
+						"type": "timed",
+						"bonus": {
+							"slow": {
+								"type": "STACKS_SPEED",
+								"val": -1,
+								"duration": "N_TURNS",
+								"turns": 2
+							}
+						}
+					}
+				}
+			},
+			"none": {
+				"description": "{Earth Bind}\n\nThe Dreamwalker calls on the power of Mother Earth to bind the feet: -1 Speed for 2 rounds."
+			},
+			"basic": {
+				"description": "{Earth Bind}\n\nThe Dreamwalker calls on the power of Mother Earth to bind the feet: -1 Speed for 2 rounds."
+			},
+			"advanced": {
+				"description": "{Earth Bind}\n\nThe Dreamwalker calls on the power of Mother Earth to bind the feet: -1 Speed for 2 rounds."
+			},
+			"expert": {
+				"description": "{Earth Bind}\n\nThe Dreamwalker calls on the power of Mother Earth to bind the feet: -1 Speed for 2 rounds."
+			}
+		}
+	},
+	"h6AbSkyEarth": {
+		"type": "ability",
+		"name": "Sky and Earth",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"targetType": "CREATURE",
+		"flags": {
+			"special": true,
+			"indifferent": true
+		},
+		"sounds": {
+			"cast": ""
+		},
+		"graphics": {
+			"iconBook": "h6/spells/h6AbSkyEarth/Book",
+			"iconScroll": "h6/spells/h6AbSkyEarth/Scroll",
+			"iconScenarioBonus": "h6/spells/h6AbSkyEarth/Scenario",
+			"iconEffect": "h6/spells/h6AbSkyEarth/Effect"
+		},
+		"levels": {
+			"base": {
+				"cost": 0,
+				"power": 0,
+				"range": "0",
+				"targetModifier": {
+					"smart": false
+				},
+				"battleEffects": {
+					"sky": {
+						"type": "h6SkyEarth",
+						"sky": "heroes-memorial.h6:h6Sky",
+						"earth": "heroes-memorial.h6:h6Earth",
+						"per": 8,
+						"turns": 2,
+						"key": "h6AbSkyEarth",
+						"animation": "h6/stronghold/fx/earth",
+						"skyAnimation": "h6/stronghold/fx/sky",
+						"sound": "h6/stronghold/OrcShaman_Ability1.wav"
+					}
+				}
+			},
+			"none": {
+				"description": "{Sky and Earth}\n\nOn an allied stack: +2 Speed (Air). On a non-flying enemy: -2 Speed and 8 × number of Dreamwalkers Earth damage (Earth). Effects last 2 rounds. Cooldown: 3 rounds (the Dreamreaver's two abilities share a cooldown)."
+			},
+			"basic": {
+				"description": "{Sky and Earth}\n\nOn an allied stack: +2 Speed (Air). On a non-flying enemy: -2 Speed and 8 × number of Dreamwalkers Earth damage (Earth). Effects last 2 rounds. Cooldown: 3 rounds (the Dreamreaver's two abilities share a cooldown)."
+			},
+			"advanced": {
+				"description": "{Sky and Earth}\n\nOn an allied stack: +2 Speed (Air). On a non-flying enemy: -2 Speed and 8 × number of Dreamwalkers Earth damage (Earth). Effects last 2 rounds. Cooldown: 3 rounds (the Dreamreaver's two abilities share a cooldown)."
+			},
+			"expert": {
+				"description": "{Sky and Earth}\n\nOn an allied stack: +2 Speed (Air). On a non-flying enemy: -2 Speed and 8 × number of Dreamwalkers Earth damage (Earth). Effects last 2 rounds. Cooldown: 3 rounds (the Dreamreaver's two abilities share a cooldown)."
+			}
+		}
+	},
+	"h6AbSkyEarthMass": {
+		"type": "ability",
+		"name": "Mass Sky and Earth",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"targetType": "NO_TARGET",
+		"flags": {
+			"special": true,
+			"indifferent": true
+		},
+		"sounds": {
+			"cast": ""
+		},
+		"graphics": {
+			"iconBook": "h6/spells/h6AbSkyEarthMass/Book",
+			"iconScroll": "h6/spells/h6AbSkyEarthMass/Scroll",
+			"iconScenarioBonus": "h6/spells/h6AbSkyEarthMass/Scenario",
+			"iconEffect": "h6/spells/h6AbSkyEarthMass/Effect"
+		},
+		"levels": {
+			"base": {
+				"cost": 0,
+				"power": 0,
+				"range": "0",
+				"targetModifier": {
+					"smart": false
+				},
+				"battleEffects": {
+					"sky": {
+						"type": "h6SkyEarth",
+						"mass": true,
+						"sky": "heroes-memorial.h6:h6SkyMass",
+						"earth": "heroes-memorial.h6:h6EarthMass",
+						"per": 3,
+						"turns": 2,
+						"key": "h6AbSkyEarthMass",
+						"animation": "h6/stronghold/fx/earth",
+						"skyAnimation": "h6/stronghold/fx/sky",
+						"sound": "h6/stronghold/OrcShaman_Ability1.wav"
+					}
+				}
+			},
+			"none": {
+				"description": "{Mass Sky and Earth}\n\nCast on self: all allied stacks get +1 Speed; all non-flying enemies get -1 Speed and take 3 × number of Dreamreavers Earth damage each. Effects last 2 rounds. Cooldown: 3 rounds (shared with Sky and Earth)."
+			},
+			"basic": {
+				"description": "{Mass Sky and Earth}\n\nCast on self: all allied stacks get +1 Speed; all non-flying enemies get -1 Speed and take 3 × number of Dreamreavers Earth damage each. Effects last 2 rounds. Cooldown: 3 rounds (shared with Sky and Earth)."
+			},
+			"advanced": {
+				"description": "{Mass Sky and Earth}\n\nCast on self: all allied stacks get +1 Speed; all non-flying enemies get -1 Speed and take 3 × number of Dreamreavers Earth damage each. Effects last 2 rounds. Cooldown: 3 rounds (shared with Sky and Earth)."
+			},
+			"expert": {
+				"description": "{Mass Sky and Earth}\n\nCast on self: all allied stacks get +1 Speed; all non-flying enemies get -1 Speed and take 3 × number of Dreamreavers Earth damage each. Effects last 2 rounds. Cooldown: 3 rounds (shared with Sky and Earth)."
+			}
+		}
+	},
+	"h6AbFeralCharge": {
+		"type": "ability",
+		"name": "Feral Charge",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"targetType": "NO_TARGET",
+		"flags": {
+			"special": true,
+			"positive": true
+		},
+		"sounds": {
+			"cast": "h6/stronghold/JaguarWarrior_Ability1.wav"
+		},
+		"graphics": {
+			"iconBook": "h6/spells/h6AbFeralCharge/Book",
+			"iconScroll": "h6/spells/h6AbFeralCharge/Scroll",
+			"iconScenarioBonus": "h6/spells/h6AbFeralCharge/Scenario",
+			"iconEffect": "h6/spells/h6AbFeralCharge/Effect"
+		},
+		"levels": {
+			"base": {
+				"cost": 0,
+				"power": 0,
+				"range": "0",
+				"targetModifier": {
+					"smart": false
+				},
+				"battleEffects": {
+					"charge": {
+						"type": "h6SelfBuff",
+						"bonusType": "BLOCKS_RETALIATION",
+						"turns": 1,
+						"untilAfterAttack": true,
+						"show": "H6_FERAL_H6C",
+						"key": "h6AbFeralCharge"
+					}
+				}
+			},
+			"none": {
+				"description": "{Feral Charge}\n\nCast on self, free action: its next attack this turn cannot be retaliated against (the effect expires at the end of this round). Cooldown: 2 rounds."
+			},
+			"basic": {
+				"description": "{Feral Charge}\n\nCast on self, free action: its next attack this turn cannot be retaliated against (the effect expires at the end of this round). Cooldown: 2 rounds."
+			},
+			"advanced": {
+				"description": "{Feral Charge}\n\nCast on self, free action: its next attack this turn cannot be retaliated against (the effect expires at the end of this round). Cooldown: 2 rounds."
+			},
+			"expert": {
+				"description": "{Feral Charge}\n\nCast on self, free action: its next attack this turn cannot be retaliated against (the effect expires at the end of this round). Cooldown: 2 rounds."
+			}
+		},
+		"canCastWithoutSkip": true
+	},
+	"h6AbAllAroundSlash": {
+		"type": "ability",
+		"name": "All-Around Slash",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"targetType": "CREATURE",
+		"flags": {
+			"special": true,
+			"negative": true
+		},
+		"sounds": {
+			"cast": ""
+		},
+		"graphics": {
+			"iconBook": "h6/spells/h6AbAllAroundSlash/Book",
+			"iconScroll": "h6/spells/h6AbAllAroundSlash/Scroll",
+			"iconScenarioBonus": "h6/spells/h6AbAllAroundSlash/Scenario",
+			"iconEffect": "h6/spells/h6AbAllAroundSlash/Effect"
+		},
+		"levels": {
+			"base": {
+				"cost": 0,
+				"power": 0,
+				"range": "0",
+				"targetModifier": {
+					"smart": false
+				},
+				"battleEffects": {
+					"slash": {
+						"type": "h6Slash",
+						"pct": 100,
+						"splash": "all",
+						"key": "h6AbAllAroundSlash",
+						"animation": "h6/stronghold/fx/hit",
+						"sound": "h6/stronghold/JaguarWarrior_Ability2.wav"
+					}
+				}
+			},
+			"none": {
+				"description": "{All-Around Slash}\n\nTargets an adjacent enemy: it and every other stack adjacent to it (friend or foe, except the caster) take normal attack damage (standard H3 formula), without retaliation. Cooldown: 2 rounds."
+			},
+			"basic": {
+				"description": "{All-Around Slash}\n\nTargets an adjacent enemy: it and every other stack adjacent to it (friend or foe, except the caster) take normal attack damage (standard H3 formula), without retaliation. Cooldown: 2 rounds."
+			},
+			"advanced": {
+				"description": "{All-Around Slash}\n\nTargets an adjacent enemy: it and every other stack adjacent to it (friend or foe, except the caster) take normal attack damage (standard H3 formula), without retaliation. Cooldown: 2 rounds."
+			},
+			"expert": {
+				"description": "{All-Around Slash}\n\nTargets an adjacent enemy: it and every other stack adjacent to it (friend or foe, except the caster) take normal attack damage (standard H3 formula), without retaliation. Cooldown: 2 rounds."
+			}
+		}
+	},
+	"h6AbSlam": {
+		"type": "ability",
+		"name": "Cyclops Slam",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"targetType": "CREATURE",
+		"flags": {
+			"special": true,
+			"negative": true
+		},
+		"sounds": {
+			"cast": ""
+		},
+		"graphics": {
+			"iconBook": "h6/spells/h6AbSlam/Book",
+			"iconScroll": "h6/spells/h6AbSlam/Scroll",
+			"iconScenarioBonus": "h6/spells/h6AbSlam/Scenario",
+			"iconEffect": "h6/spells/h6AbSlam/Effect"
+		},
+		"levels": {
+			"base": {
+				"cost": 0,
+				"power": 0,
+				"range": "0",
+				"targetModifier": {
+					"smart": false
+				},
+				"battleEffects": {
+					"slam": {
+						"type": "h6Slash",
+						"pct": 100,
+						"knockback": true,
+						"key": "h6AbSlam",
+						"animation": "h6/stronghold/fx/slam",
+						"sound": "h6/stronghold/Cyclops_Ability.wav"
+					}
+				}
+			},
+			"none": {
+				"description": "{Cyclops Slam}\n\nAn adjacent enemy stack takes normal attack damage (standard H3 formula), without retaliation; a one-hex target is knocked back one hex along the line of impact (only if there is room). Cooldown: 2 rounds."
+			},
+			"basic": {
+				"description": "{Cyclops Slam}\n\nAn adjacent enemy stack takes normal attack damage (standard H3 formula), without retaliation; a one-hex target is knocked back one hex along the line of impact (only if there is room). Cooldown: 2 rounds."
+			},
+			"advanced": {
+				"description": "{Cyclops Slam}\n\nAn adjacent enemy stack takes normal attack damage (standard H3 formula), without retaliation; a one-hex target is knocked back one hex along the line of impact (only if there is room). Cooldown: 2 rounds."
+			},
+			"expert": {
+				"description": "{Cyclops Slam}\n\nAn adjacent enemy stack takes normal attack damage (standard H3 formula), without retaliation; a one-hex target is knocked back one hex along the line of impact (only if there is room). Cooldown: 2 rounds."
+			}
+		}
+	},
+	"h6AbMightySlam": {
+		"type": "ability",
+		"name": "Mighty Slam",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"targetType": "CREATURE",
+		"flags": {
+			"special": true,
+			"negative": true
+		},
+		"sounds": {
+			"cast": ""
+		},
+		"graphics": {
+			"iconBook": "h6/spells/h6AbMightySlam/Book",
+			"iconScroll": "h6/spells/h6AbMightySlam/Scroll",
+			"iconScenarioBonus": "h6/spells/h6AbMightySlam/Scenario",
+			"iconEffect": "h6/spells/h6AbMightySlam/Effect"
+		},
+		"levels": {
+			"base": {
+				"cost": 0,
+				"power": 0,
+				"range": "0",
+				"targetModifier": {
+					"smart": false
+				},
+				"battleEffects": {
+					"slam": {
+						"type": "h6Slash",
+						"pct": 100,
+						"splash": "enemy",
+						"knockback": true,
+						"key": "h6AbMightySlam",
+						"animation": "h6/stronghold/fx/slam",
+						"sound": "h6/stronghold/Cyclops_Ability.wav"
+					}
+				}
+			},
+			"none": {
+				"description": "{Mighty Slam}\n\nTargets an adjacent enemy: it and the enemies adjacent to it take normal attack damage (standard H3 formula), without retaliation; a one-hex target is knocked back one hex. Cooldown: 2 rounds."
+			},
+			"basic": {
+				"description": "{Mighty Slam}\n\nTargets an adjacent enemy: it and the enemies adjacent to it take normal attack damage (standard H3 formula), without retaliation; a one-hex target is knocked back one hex. Cooldown: 2 rounds."
+			},
+			"advanced": {
+				"description": "{Mighty Slam}\n\nTargets an adjacent enemy: it and the enemies adjacent to it take normal attack damage (standard H3 formula), without retaliation; a one-hex target is knocked back one hex. Cooldown: 2 rounds."
+			},
+			"expert": {
+				"description": "{Mighty Slam}\n\nTargets an adjacent enemy: it and the enemies adjacent to it take normal attack damage (standard H3 formula), without retaliation; a one-hex target is knocked back one hex. Cooldown: 2 rounds."
+			}
+		}
+	}
+}

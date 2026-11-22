@@ -1,0 +1,75 @@
+{
+ "fac": "boss",
+ "k": 1.0,
+ "scale": 31.11819215356743,
+ "origin": [
+  219.91618826019996,
+  242.0
+ ],
+ "baked": {
+  "0": [
+   "bossvoid_basic.fx"
+  ],
+  "1": [
+   "bossvoid_basic.fx"
+  ],
+  "2": [
+   "bossvoid_basic.fx"
+  ],
+  "3": [
+   "bossvoid_basic.fx",
+   "bossvoid_hit.fx"
+  ],
+  "4": [
+   "bossvoid_basic.fx"
+  ],
+  "5": [
+   "bossvoid_basic.fx",
+   "bossvoid_die.fx"
+  ],
+  "7": [
+   "bossvoid_basic.fx"
+  ],
+  "8": [
+   "bossvoid_basic.fx"
+  ],
+  "11": [
+   "bossvoid_basic.fx"
+  ],
+  "12": [
+   "bossvoid_basic.fx"
+  ],
+  "13": [
+   "bossvoid_basic.fx"
+  ],
+  "17": [
+   "bossvoid_basic.fx"
+  ],
+  "18": [
+   "bossvoid_basic.fx"
+  ],
+  "19": [
+   "bossvoid_basic.fx"
+  ],
+  "20": [
+   "bossvoid_basic.fx"
+  ],
+  "21": [
+   "bossvoid_basic.fx"
+  ],
+  "30": [
+   "bossvoid_basic.fx"
+  ],
+  "32": [
+   "bossvoid_basic.fx"
+  ],
+  "40": [
+   "bossvoid_basic.fx"
+  ],
+  "42": [
+   "bossvoid_basic.fx"
+  ]
+ },
+ "render": "Blender 4.2 Cycles 24spp 3x + sprite_post; fx h6m (fxsim d1=mul mode2=wrap)",
+ "sec": 311
+}

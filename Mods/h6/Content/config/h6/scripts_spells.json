@@ -1,0 +1,865 @@
+// Heroes 6 memorial: script registration for hero spells (goes with build_spells.py)
+{
+	"h6SpCd": {
+		"implements": "spellEffect",
+		"script": "spells/h6SpCd",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"index": {
+					"type": "number"
+				},
+				"cooldown": {
+					"type": "number"
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"h6SpStatus": {
+		"implements": "spellEffect",
+		"script": "spells/h6SpStatus",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"status": {
+					"type": "string"
+				},
+				"hostileOnly": {
+					"type": "boolean"
+				},
+				"livingOnly": {
+					"type": "boolean"
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"h6SpMoraleStrip": {
+		"implements": "spellEffect",
+		"script": "spells/h6SpMoraleStrip",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"sign": {
+					"type": "number"
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"h6SpFrenzy": {
+		"implements": "spellEffect",
+		"script": "spells/h6SpFrenzy",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"pct": {
+					"type": "array",
+					"items": {
+						"type": "number"
+					}
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"h6SpPetrify": {
+		"implements": "spellEffect",
+		"script": "spells/h6SpPetrify",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"turns": {
+					"type": "array",
+					"items": {
+						"type": "number"
+					}
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"h6SpShield": {
+		"implements": "spellEffect",
+		"script": "spells/h6SpShield",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"base": {
+					"type": "array",
+					"items": {
+						"type": "number"
+					}
+				},
+				"per": {
+					"type": "array",
+					"items": {
+						"type": "number"
+					}
+				},
+				"def": {
+					"type": "array",
+					"items": {
+						"type": "number"
+					}
+				},
+				"mres": {
+					"type": "array",
+					"items": {
+						"type": "number"
+					}
+				},
+				"pct": {
+					"type": "number"
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"h6SpHolyHeal": {
+		"implements": "spellEffect",
+		"script": "spells/h6SpHolyHeal",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"base": {
+					"type": "array",
+					"items": {
+						"type": "number"
+					}
+				},
+				"per": {
+					"type": "array",
+					"items": {
+						"type": "number"
+					}
+				},
+				"dmgBase": {
+					"type": "array",
+					"items": {
+						"type": "number"
+					}
+				},
+				"dmgPer": {
+					"type": "array",
+					"items": {
+						"type": "number"
+					}
+				},
+				"deadOnly": {
+					"type": "boolean"
+				},
+				"noEnemy": {
+					"type": "boolean"
+				},
+				"protect": {
+					"type": "boolean"
+				},
+				"cleanse": {
+					"type": "boolean"
+				},
+				"speed": {
+					"type": "number"
+				},
+				"speedTurns": {
+					"type": "number"
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"h6SpRays": {
+		"implements": "spellEffect",
+		"script": "spells/h6SpRays",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"base": {
+					"type": "array",
+					"items": {
+						"type": "number"
+					}
+				},
+				"per": {
+					"type": "array",
+					"items": {
+						"type": "number"
+					}
+				},
+				"animation": {
+					"type": "string"
+				},
+				"sound": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"h6SpImplosion": {
+		"implements": "spellEffect",
+		"script": "spells/h6SpImplosion",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"base": {
+					"type": "array",
+					"items": {
+						"type": "number"
+					}
+				},
+				"per": {
+					"type": "array",
+					"items": {
+						"type": "number"
+					}
+				},
+				"animation": {
+					"type": "string"
+				},
+				"sound": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"h6SpChillOnHit": {
+		"implements": "combatEvent",
+		"script": "combat/h6SpChillOnHit",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {},
+			"additionalProperties": false
+		},
+		"description": "{Ice Armor}\nMelee attackers are Chilled"
+	},
+	"h6SpFireShieldHit": {
+		"implements": "combatEvent",
+		"script": "combat/h6SpFireShieldHit",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"perCreature": {
+					"type": "number"
+				},
+				"spell": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": "{Fire Shield}\nMelee attackers take ${perCreature} Fire damage per creature"
+	},
+	"h6SpMoraleGuard": {
+		"implements": "combatEvent",
+		"script": "combat/h6SpMoraleGuard",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {},
+			"additionalProperties": false
+		},
+		"description": "{Burning Determination}\nMorale cannot be lowered by spells"
+	},
+	"h6SpRetribution": {
+		"implements": "combatEvent",
+		"script": "combat/h6SpRetribution",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"spell": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": "{Retribution Aura}\nMelee attackers take ${val}% of the damage dealt back as Light damage"
+	},
+	"h6SpShieldAbsorb": {
+		"implements": "combatEvent",
+		"script": "combat/h6SpShieldAbsorb",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"pct": {
+					"type": "number"
+				},
+				"spell": {
+					"type": "string"
+				},
+				"key": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": "{Celestial Armor}\nAbsorbs ${pct}% of damage taken until its absorb limit is reached"
+	},
+	"h6SpAgonyTick": {
+		"implements": "combatEvent",
+		"script": "combat/h6SpAgonyTick",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"spell": {
+					"type": "string"
+				},
+				"animation": {
+					"type": "string"
+				},
+				"sound": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": "{Agony}\nTakes ${val} Dark damage at the start of each turn"
+	},
+	"h6SpBlockPositive": {
+		"implements": "combatEvent",
+		"script": "combat/h6SpBlockPositive",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {},
+			"additionalProperties": false
+		},
+		"description": "{Abolish}\nCannot receive beneficial spells"
+	},
+	"h6SpPetrifyBreak": {
+		"implements": "combatEvent",
+		"script": "combat/h6SpPetrifyBreak",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"spell": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": "{Petrification}\nPetrification ends as soon as it acts"
+	},
+	"h6SpImplosionCap": {
+		"implements": "combatEvent",
+		"script": "combat/h6SpImplosionCap",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"key": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": ""
+	},
+	"h6SpManaLeech": {
+		"implements": "spellEffect",
+		"script": "spells/h6SpManaLeech",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"pct": {
+					"type": "array",
+					"items": {
+						"type": "number"
+					}
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"h6SpManaLeechProbe": {
+		"implements": "combatEvent",
+		"script": "combat/h6SpManaLeechProbe",
+		"patches": [],
+		"priority": 0,
+		"description": "Mana Leech (H6): once the stack acting at cast time finishes its action, passes the mana-draining effect to another allied stack",
+		"schema": {
+			"type": "object",
+			"properties": {
+				"spell": {
+					"type": "string"
+				},
+				"amount": {
+					"type": "number"
+				},
+				"level": {
+					"type": "number"
+				}
+			}
+		}
+	},
+	"h6SpManaLeechEnd": {
+		"implements": "combatEvent",
+		"script": "combat/h6SpManaLeechEnd",
+		"patches": [],
+		"priority": 0,
+		"description": "Mana Leech (H6): removes the effect after draining mana once",
+		"schema": {
+			"type": "object",
+			"properties": {
+				"spell": {
+					"type": "string"
+				},
+				"minTurns": {
+					"type": "number"
+				}
+			}
+		}
+	},
+	"h6SpZone": {
+		"implements": "spellEffect",
+		"script": "spells/h6SpZone",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"mode": {
+					"type": "string"
+				},
+				"radius": {
+					"type": "number"
+				},
+				"turns": {
+					"type": "array",
+					"items": {
+						"type": "number"
+					}
+				},
+				"passable": {
+					"type": "boolean"
+				},
+				"hidden": {
+					"type": "boolean"
+				},
+				"trap": {
+					"type": "boolean"
+				},
+				"animation": {
+					"type": "string"
+				},
+				"appear": {
+					"type": "string"
+				},
+				"removal": {
+					"type": "string"
+				},
+				"centerOnly": {
+					"type": "boolean"
+				},
+				"tick": {
+					"type": "object"
+				},
+				"single": {
+					"type": "boolean"
+				},
+				"fx": {
+					"type": "object"
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"h6SpQuake": {
+		"implements": "spellEffect",
+		"script": "spells/h6SpQuake",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"dmg": {
+					"type": "array",
+					"items": {
+						"type": "number"
+					}
+				},
+				"status": {
+					"type": "string"
+				},
+				"all": {
+					"type": "boolean"
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"h6SpZoneTick": {
+		"implements": "combatEvent",
+		"script": "combat/h6SpZoneTick",
+		"patches": [],
+		"priority": 0,
+		"description": "H6 Memorial: start-of-turn resolution for Blizzard, Acid Cloud and Ice Wall",
+		"schema": {
+			"type": "object",
+			"properties": {
+				"spell": {
+					"type": "string"
+				},
+				"side": {
+					"type": "number"
+				},
+				"mode": {
+					"type": "string"
+				},
+				"center": {
+					"type": "number"
+				},
+				"radius": {
+					"type": "number"
+				},
+				"who": {
+					"type": "string"
+				},
+				"hostileOnly": {
+					"type": "boolean"
+				},
+				"amount": {
+					"type": "number"
+				},
+				"school": {
+					"type": "string"
+				},
+				"status": {
+					"type": "string"
+				},
+				"animation": {
+					"type": "string"
+				},
+				"sound": {
+					"type": "string"
+				},
+				"aura": {
+					"type": "number"
+				},
+				"alliedOnly": {
+					"type": "boolean"
+				},
+				"chain": {
+					"type": "number"
+				},
+				"bonus": {
+					"type": "array"
+				}
+			}
+		}
+	},
+	"h6SpSplit": {
+		"implements": "spellEffect",
+		"script": "spells/h6SpSplit",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"dmgBase": {
+					"type": "array",
+					"items": {
+						"type": "number"
+					}
+				},
+				"dmgPer": {
+					"type": "array",
+					"items": {
+						"type": "number"
+					}
+				},
+				"dmgWho": {
+					"type": "string"
+				},
+				"school": {
+					"type": "string"
+				},
+				"healBase": {
+					"type": "array",
+					"items": {
+						"type": "number"
+					}
+				},
+				"healPer": {
+					"type": "array",
+					"items": {
+						"type": "number"
+					}
+				},
+				"healFromDamage": {
+					"type": "number"
+				},
+				"healWho": {
+					"type": "string"
+				},
+				"animation": {
+					"type": "string"
+				},
+				"sound": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"h6SpInferno": {
+		"implements": "spellEffect",
+		"script": "spells/h6SpInferno",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"base": {
+					"type": "array",
+					"items": {
+						"type": "number"
+					}
+				},
+				"per": {
+					"type": "array",
+					"items": {
+						"type": "number"
+					}
+				},
+				"jumpRange": {
+					"type": "number"
+				},
+				"animation": {
+					"type": "string"
+				},
+				"sound": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"h6SpColumns": {
+		"implements": "spellEffect",
+		"script": "spells/h6SpColumns",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"base": {
+					"type": "array",
+					"items": {
+						"type": "number"
+					}
+				},
+				"per": {
+					"type": "array",
+					"items": {
+						"type": "number"
+					}
+				},
+				"status": {
+					"type": "string"
+				},
+				"animation": {
+					"type": "string"
+				},
+				"sound": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"h6SpSacrifice": {
+		"implements": "spellEffect",
+		"script": "spells/h6SpSacrifice",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"turns": {
+					"type": "array",
+					"items": {
+						"type": "number"
+					}
+				},
+				"reduce": {
+					"type": "array",
+					"items": {
+						"type": "number"
+					}
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"h6SpAbyssGate": {
+		"implements": "spellEffect",
+		"script": "spells/h6SpAbyssGate",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"base": {
+					"type": "array",
+					"items": {
+						"type": "number"
+					}
+				},
+				"per": {
+					"type": "array",
+					"items": {
+						"type": "number"
+					}
+				},
+				"animation": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"h6SpEarthBless": {
+		"implements": "spellEffect",
+		"script": "spells/h6SpEarthBless",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"pct": {
+					"type": "array",
+					"items": {
+						"type": "number"
+					}
+				},
+				"turns": {
+					"type": "array",
+					"items": {
+						"type": "number"
+					}
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"h6SpShadowImplosion": {
+		"implements": "spellEffect",
+		"script": "spells/h6SpShadowImplosion",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"pct": {
+					"type": "array",
+					"items": {
+						"type": "number"
+					}
+				},
+				"animation": {
+					"type": "string"
+				},
+				"sound": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"h6SpSacrificeLink": {
+		"implements": "combatEvent",
+		"script": "combat/h6SpSacrificeLink",
+		"patches": [],
+		"priority": 0,
+		"description": "Sacrifice (H6): damage taken by the protected stack is borne by the sacrificer instead",
+		"schema": {
+			"type": "object",
+			"properties": {
+				"spell": {
+					"type": "string"
+				},
+				"partner": {
+					"type": "number"
+				},
+				"reduce": {
+					"type": "number"
+				}
+			}
+		}
+	},
+	"h6SpAbyssReturn": {
+		"implements": "combatEvent",
+		"script": "combat/h6SpAbyssReturn",
+		"patches": [],
+		"priority": 0,
+		"description": "Abyss Gate (H6): the stack returns with reinforcements at the start of the next turn",
+		"schema": {
+			"type": "object",
+			"properties": {
+				"spell": {
+					"type": "string"
+				},
+				"hp": {
+					"type": "number"
+				}
+			}
+		}
+	}
+}

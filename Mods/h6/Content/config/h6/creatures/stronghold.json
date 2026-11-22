@@ -1,0 +1,3867 @@
+// Heroes 6 memorial: the 14 Stronghold creatures (stats converted by H3 same-level averages)
+{
+	"h6StrongholdMauler": {
+		"name": {
+			"singular": "Mauler",
+			"plural": "Maulers"
+		},
+		"description": "Lightly armored and wielding heavy weapons, Maulers are the cornerstone of the orcs' front line. Their usual tactic is to charge straight at the enemy and break through its lines with their numbers, speed, ferocity and toughness, pounding the foe to pulp. The heavy shields they carry are no mere ornaments; they are used to deflect the missiles they cannot dodge.",
+		"faction": "stronghold",
+		"level": 1,
+		"cost": {
+			"gold": 65
+		},
+		"speed": 4,
+		"hitPoints": 8,
+		"attack": 4,
+		"defense": 3,
+		"damage": {
+			"min": 2,
+			"max": 3
+		},
+		"doubleWide": false,
+		"fightValue": 111,
+		"aiValue": 97,
+		"growth": 14,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"upgrades": [
+			"h6StrongholdCrusher"
+		],
+		"abilities": {
+			"toaDemonic": {
+				"type": "tears-of-ashan:DEMONIC",
+				"val": 1,
+				"hidden": true
+			},
+			"h6Bloodrage": {
+				"type": "H6_BLOODRAGE_H6C",
+				"val": 1
+			},
+			"shielded": {
+				"type": "GENERAL_DAMAGE_REDUCTION",
+				"subtype": "damageTypeRanged",
+				"val": 25,
+				"stacking": "h6StrongholdMaulerExpShielded",
+				"icon": "h6/abilities/ab_Shielded_Orc",
+				"description": "{Orc Shield}\nTakes 25% less ranged damage"
+			},
+			"tasteOfBlood": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6TasteOfBlood",
+				"val": 10,
+				"icon": "h6/abilities/ab_Taste_of_Blood",
+				"stacking": "h6Blood",
+				"description": "{Taste of Blood}\n+10% dmg per hit taken (max 4), this battle",
+				"addInfo": {
+					"pct": 10,
+					"max": 4
+				}
+			},
+			"demonicLineage": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.fire",
+				"val": 10,
+				"stacking": "h6StrongholdMaulerExpFire",
+				"icon": "h6/abilities/ab_Demonic_Lineage",
+				"description": "{Demonic Lineage}\nTakes 10% less damage from Fire magic,\nbut 10% more from Light magic"
+			},
+			"lineageLight": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.01lightSchool",
+				"val": -10,
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h6/stronghold/OrcWarrior/OrcWarrior.json",
+			"map": "h6/units/h6StrongholdMauler/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h6/units/h6StrongholdMauler/map/atkL.png",
+			"mapAttackFromRight": "h6/units/h6StrongholdMauler/map/atkR.png",
+			"iconLarge": "h6/units/h6StrongholdMauler/iconLarge.png",
+			"iconSmall": "h6/units/h6StrongholdMauler/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h6/stronghold/OrcWarrior_AttackLaunchMelee.wav",
+			"wince": "h6/stronghold/OrcWarrior_Hit.wav",
+			"defend": "h6/stronghold/OrcWarrior_Defend.wav",
+			"killed": "h6/stronghold/OrcWarrior_Die.wav",
+			"move": "h6/stronghold/OrcShaman_Move.wav"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.attack"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.defence"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "GENERAL_DAMAGE_REDUCTION",
+					"subtype": "damageTypeRanged",
+					"stacking": "h6StrongholdMaulerExpShielded"
+				},
+				"values": [
+					25,
+					26,
+					27,
+					29,
+					31,
+					33,
+					35,
+					37,
+					39,
+					40
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_RETALIATION"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			}
+		]
+	},
+	"h6StrongholdCrusher": {
+		"name": {
+			"singular": "Crusher",
+			"plural": "Crushers"
+		},
+		"description": "Crushers are hammer warriors who have gained a kind of battle instinct. In combat they receive revelations that let them see through the enemy's intent to strike. Some claim it is a gift from the Sky Father; others believe it is the power of Chaos, born of the demon blood within them.",
+		"faction": "stronghold",
+		"level": 1,
+		"cost": {
+			"gold": 80
+		},
+		"speed": 6,
+		"hitPoints": 8,
+		"attack": 5,
+		"defense": 4,
+		"damage": {
+			"min": 2,
+			"max": 3
+		},
+		"doubleWide": false,
+		"fightValue": 129,
+		"aiValue": 138,
+		"growth": 14,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"toaDemonic": {
+				"type": "tears-of-ashan:DEMONIC",
+				"val": 1,
+				"hidden": true
+			},
+			"h6Bloodrage": {
+				"type": "H6_BLOODRAGE_H6C",
+				"val": 1
+			},
+			"shielded": {
+				"type": "GENERAL_DAMAGE_REDUCTION",
+				"subtype": "damageTypeRanged",
+				"val": 25,
+				"stacking": "h6StrongholdCrusherExpShielded",
+				"icon": "h6/abilities/ab_Shielded_Orc",
+				"description": "{Orc Shield}\nTakes 25% less ranged damage"
+			},
+			"tasteOfBlood": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6TasteOfBlood",
+				"val": 10,
+				"icon": "h6/abilities/ab_Taste_of_Blood",
+				"stacking": "h6Blood",
+				"description": "{Taste of Blood}\n+10% dmg per hit taken (max 4), this battle",
+				"addInfo": {
+					"pct": 10,
+					"max": 4
+				}
+			},
+			"demonicLineage": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.fire",
+				"val": 10,
+				"stacking": "h6StrongholdCrusherExpFire",
+				"icon": "h6/abilities/ab_Demonic_Lineage",
+				"description": "{Demonic Lineage}\nTakes 10% less damage from Fire magic,\nbut 10% more from Light magic"
+			},
+			"lineageLight": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.01lightSchool",
+				"val": -10,
+				"hidden": true
+			},
+			"assault": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6Assault",
+				"val": 25,
+				"icon": "h6/abilities/ab_Assault",
+				"stacking": "h6Assault",
+				"description": "{Assault}\n25% chance: unretaliated 2nd hit after melee",
+				"addInfo": {
+					"chance": 25,
+					"animation": "h6/stronghold/fx/hit"
+				}
+			}
+		},
+		"graphics": {
+			"animation": "h6/stronghold/OrcWarrior_upg/OrcWarrior_upg.json",
+			"map": "h6/units/h6StrongholdCrusher/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h6/units/h6StrongholdCrusher/map/atkL.png",
+			"mapAttackFromRight": "h6/units/h6StrongholdCrusher/map/atkR.png",
+			"iconLarge": "h6/units/h6StrongholdCrusher/iconLarge.png",
+			"iconSmall": "h6/units/h6StrongholdCrusher/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h6/stronghold/OrcWarrior_AttackLaunchMelee.wav",
+			"wince": "h6/stronghold/OrcWarrior_Hit.wav",
+			"defend": "h6/stronghold/OrcWarrior_Defend.wav",
+			"killed": "h6/stronghold/OrcWarrior_Die.wav",
+			"move": "h6/stronghold/OrcShaman_Move.wav"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.attack"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.defence"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "GENERAL_DAMAGE_REDUCTION",
+					"subtype": "damageTypeRanged",
+					"stacking": "h6StrongholdCrusherExpShielded"
+				},
+				"values": [
+					25,
+					26,
+					27,
+					29,
+					31,
+					33,
+					35,
+					37,
+					39,
+					40
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_RETALIATION"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			}
+		]
+	},
+	"h6StrongholdGoblin": {
+		"name": {
+			"singular": "Goblin",
+			"plural": "Goblins"
+		},
+		"description": "Goblins are \"degenerate\" orcs; they are the failures of the experiments that created the orcs, with blood that comes from lesser demons (mainly Imps). Goblins are short (usually four to five feet tall), skinny and frail, but very quick and nimble. The average goblin is cunning, cowardly and stupid. Unless in large groups, they rarely attack openly, preferring ambushes and (crude) traps. In orc armies, goblins serve as servants, spies, skirmishers, ritual sacrifices for shamans, throwing weapons for Cyclopes, and even food when rations run short.",
+		"faction": "stronghold",
+		"level": 2,
+		"cost": {
+			"gold": 80
+		},
+		"speed": 5,
+		"hitPoints": 12,
+		"attack": 4,
+		"defense": 4,
+		"damage": {
+			"min": 1,
+			"max": 2
+		},
+		"doubleWide": false,
+		"fightValue": 115,
+		"aiValue": 111,
+		"growth": 8,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"upgrades": [
+			"h6StrongholdGoblinHunter"
+		],
+		"shots": 24,
+		"abilities": {
+			"toaDemonic": {
+				"type": "tears-of-ashan:DEMONIC",
+				"val": 1,
+				"hidden": true
+			},
+			"h6Bloodrage": {
+				"type": "H6_BLOODRAGE_H6C",
+				"val": 1
+			},
+			"shooter": {
+				"type": "SHOOTER"
+			},
+			"cast_h6AbCripplingTraps": {
+				"type": "SPELLCASTER",
+				"subtype": "spell.h6AbCripplingTraps",
+				"val": 3,
+				"description": "{Crippling Traps}\nCooldown 2: hidden trap, 3 dmg/unit, Speed -3",
+				"icon": "h6/abilities/ab_Crippling_Traps",
+				"limiters": [
+					[
+						"noneOf",
+						{
+							"type": "HAS_ANOTHER_BONUS_LIMITER",
+							"parameters": [
+								"H6_COOLDOWN_H6C"
+							]
+						}
+					]
+				]
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 1,
+				"hidden": true
+			},
+			"noSpellcastByDefault": {
+				"type": "NO_SPELLCAST_BY_DEFAULT",
+				"hidden": true
+			},
+			"cooldown_h6AbCripplingTraps": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6Cooldown",
+				"val": 0,
+				"hidden": true,
+				"description": "~",
+				"addInfo": {
+					"spell": "heroes-memorial.h6:h6AbCripplingTraps",
+					"turns": 2
+				}
+			},
+			"demonicLineage": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.fire",
+				"val": 10,
+				"stacking": "h6StrongholdGoblinExpFire",
+				"icon": "h6/abilities/ab_Demonic_Lineage",
+				"description": "{Demonic Lineage}\nTakes 10% less damage from Fire magic,\nbut 10% more from Light magic"
+			},
+			"lineageLight": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.01lightSchool",
+				"val": -10,
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h6/stronghold/GoblinHunters/GoblinHunters.json",
+			"map": "h6/units/h6StrongholdGoblin/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h6/units/h6StrongholdGoblin/map/atkL.png",
+			"mapAttackFromRight": "h6/units/h6StrongholdGoblin/map/atkR.png",
+			"iconLarge": "h6/units/h6StrongholdGoblin/iconLarge.png",
+			"iconSmall": "h6/units/h6StrongholdGoblin/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"frameAngles": [
+					90,
+					60,
+					45,
+					30,
+					0,
+					-30,
+					-45,
+					-60,
+					-90
+				],
+				"offset": {
+					"upperX": 7,
+					"upperY": -46,
+					"middleX": 7,
+					"middleY": -44,
+					"lowerX": 10,
+					"lowerY": -41
+				},
+				"attackClimaxFrame": 3,
+				"projectile": "h6/stronghold/boomerang.json"
+			}
+		},
+		"sound": {
+			"attack": "h6/stronghold/GoblinHunter_AttackLaunchMelee.wav",
+			"shoot": "h6/stronghold/GoblinHunter_AttackLaunchRangedStart.wav",
+			"wince": "h6/stronghold/GoblinHunter_Hit.wav",
+			"defend": "h6/stronghold/GoblinHunter_Defend.wav",
+			"killed": "h6/stronghold/GoblinHunter_Die.wav",
+			"move": "h6/stronghold/OrcShaman_Move.wav"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.attack"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					3,
+					3,
+					3,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.defence"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					3,
+					4,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					0,
+					1,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					3,
+					3,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_WALL_PENALTY"
+				},
+				"values": [
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "DOUBLE_DAMAGE_CHANCE"
+				},
+				"values": [
+					0,
+					2,
+					3,
+					5,
+					6,
+					8,
+					9,
+					11,
+					12,
+					15
+				]
+			}
+		]
+	},
+	"h6StrongholdGoblinHunter": {
+		"name": {
+			"singular": "Goblin Hunter",
+			"plural": "Goblin Hunters"
+		},
+		"description": "Goblin Hunters are clever goblins able to survive alone in the wild. These independent goblin tribes live in the forests of Irollan, on the eastern steppes and on Pao. Sometimes a common goal leads them to join the orcs. Goblin Hunters should never be underestimated: they are especially good at finishing off helpless enemies.",
+		"faction": "stronghold",
+		"level": 2,
+		"cost": {
+			"gold": 100
+		},
+		"speed": 7,
+		"hitPoints": 12,
+		"attack": 5,
+		"defense": 5,
+		"damage": {
+			"min": 1,
+			"max": 2
+		},
+		"doubleWide": false,
+		"fightValue": 139,
+		"aiValue": 160,
+		"growth": 8,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"shots": 24,
+		"abilities": {
+			"toaDemonic": {
+				"type": "tears-of-ashan:DEMONIC",
+				"val": 1,
+				"hidden": true
+			},
+			"h6Bloodrage": {
+				"type": "H6_BLOODRAGE_H6C",
+				"val": 1
+			},
+			"shooter": {
+				"type": "SHOOTER"
+			},
+			"cast_h6AbCripplingTraps": {
+				"type": "SPELLCASTER",
+				"subtype": "spell.h6AbCripplingTraps",
+				"val": 3,
+				"description": "{Crippling Traps}\nCooldown 2: hidden trap, 3 dmg/unit, Speed -3",
+				"icon": "h6/abilities/ab_Crippling_Traps",
+				"limiters": [
+					[
+						"noneOf",
+						{
+							"type": "HAS_ANOTHER_BONUS_LIMITER",
+							"parameters": [
+								"H6_COOLDOWN_H6C"
+							]
+						}
+					]
+				]
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 1,
+				"hidden": true
+			},
+			"noSpellcastByDefault": {
+				"type": "NO_SPELLCAST_BY_DEFAULT",
+				"hidden": true
+			},
+			"cooldown_h6AbCripplingTraps": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6Cooldown",
+				"val": 0,
+				"hidden": true,
+				"description": "~",
+				"addInfo": {
+					"spell": "heroes-memorial.h6:h6AbCripplingTraps",
+					"turns": 2
+				}
+			},
+			"demonicLineage": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.fire",
+				"val": 10,
+				"stacking": "h6StrongholdGoblinHunterExpFire",
+				"icon": "h6/abilities/ab_Demonic_Lineage",
+				"description": "{Demonic Lineage}\nTakes 10% less damage from Fire magic,\nbut 10% more from Light magic"
+			},
+			"lineageLight": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.01lightSchool",
+				"val": -10,
+				"hidden": true
+			},
+			"vicious": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6Vicious",
+				"val": 50,
+				"icon": "h6/abilities/ab_Vicious_Strike",
+				"stacking": "h6Vicious",
+				"description": "{Ambush}\n+50% dmg vs foes yet to act this round",
+				"addInfo": {
+					"role": "carrier",
+					"val": 50
+				}
+			},
+			"viciousZone": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6Vicious",
+				"val": 0,
+				"hidden": true,
+				"description": "~",
+				"propagator": "BATTLE_WIDE",
+				"stacking": "h6ViciousZone",
+				"addInfo": {
+					"role": "zone"
+				}
+			}
+		},
+		"graphics": {
+			"animation": "h6/stronghold/GoblinHunters_upg/GoblinHunters_upg.json",
+			"map": "h6/units/h6StrongholdGoblinHunter/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h6/units/h6StrongholdGoblinHunter/map/atkL.png",
+			"mapAttackFromRight": "h6/units/h6StrongholdGoblinHunter/map/atkR.png",
+			"iconLarge": "h6/units/h6StrongholdGoblinHunter/iconLarge.png",
+			"iconSmall": "h6/units/h6StrongholdGoblinHunter/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"frameAngles": [
+					90,
+					60,
+					45,
+					30,
+					0,
+					-30,
+					-45,
+					-60,
+					-90
+				],
+				"offset": {
+					"upperX": 14,
+					"upperY": -47,
+					"middleX": 15,
+					"middleY": -45,
+					"lowerX": 17,
+					"lowerY": -42
+				},
+				"attackClimaxFrame": 3,
+				"projectile": "h6/stronghold/boomerang.json"
+			}
+		},
+		"sound": {
+			"attack": "h6/stronghold/GoblinHunter_AttackLaunchMelee.wav",
+			"shoot": "h6/stronghold/GoblinHunter_AttackLaunchRangedStart.wav",
+			"wince": "h6/stronghold/GoblinHunter_Hit.wav",
+			"defend": "h6/stronghold/GoblinHunter_Defend.wav",
+			"killed": "h6/stronghold/GoblinHunter_Die.wav",
+			"move": "h6/stronghold/OrcShaman_Move.wav"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.attack"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					3,
+					3,
+					3,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.defence"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					3,
+					4,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					0,
+					1,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					3,
+					3,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_WALL_PENALTY"
+				},
+				"values": [
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "DOUBLE_DAMAGE_CHANCE"
+				},
+				"values": [
+					0,
+					2,
+					3,
+					5,
+					6,
+					8,
+					9,
+					11,
+					12,
+					15
+				]
+			}
+		]
+	},
+	"h6StrongholdHarpy": {
+		"name": {
+			"singular": "Kite Harpy",
+			"plural": "Kite Harpies"
+		},
+		"description": "Half woman and half bird of prey, Kite Harpies were first used in the wizards' armies as scouts, messengers and skirmishers. They won their freedom in the great orc uprising. The orcs accepted them as allies and regard them as the favored children of the Sky Father. The Kite Harpies living on the island of Pao were made from various tropical birds of prey, which is why they have such colorful feathers. Kite Harpies are one of the many branches of the \"beastmen\", first born in 512 YSD, when the Seven Cities created them to replace the orcs as guards, servants and even \"playthings\". Of mixed human and raptor blood, Kite Harpies first served in the wizards' armies as spies, messengers and guerrillas. They won their freedom in the orc revolution. The orcs see them as allies and as the Sky Father's most beloved children. There are many kinds of Kite Harpies, with the blood of ravens, eagles or vultures. The Kite Harpies settled on Pao carry much blood of tropical raptors from the eastern jungles, which explains their colorful plumage.",
+		"faction": "stronghold",
+		"level": 3,
+		"cost": {
+			"gold": 230
+		},
+		"speed": 7,
+		"hitPoints": 39,
+		"attack": 9,
+		"defense": 7,
+		"damage": {
+			"min": 4,
+			"max": 7
+		},
+		"doubleWide": false,
+		"fightValue": 465,
+		"aiValue": 499,
+		"growth": 6,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"upgrades": [
+			"h6StrongholdFury"
+		],
+		"abilities": {
+			"h6Bloodrage": {
+				"type": "H6_BLOODRAGE_H6C",
+				"val": 1
+			},
+			"flying": {
+				"type": "FLYING"
+			},
+			"return": {
+				"type": "RETURN_AFTER_STRIKE",
+				"icon": "h6/abilities/ab_Strike_and_Return",
+				"description": "{Strike and Return}\nReturns to its start hex after attacking"
+			}
+		},
+		"graphics": {
+			"animation": "h6/stronghold/Harpy/Harpy.json",
+			"map": "h6/units/h6StrongholdHarpy/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h6/units/h6StrongholdHarpy/map/atkL.png",
+			"mapAttackFromRight": "h6/units/h6StrongholdHarpy/map/atkR.png",
+			"iconLarge": "h6/units/h6StrongholdHarpy/iconLarge.png",
+			"iconSmall": "h6/units/h6StrongholdHarpy/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h6/stronghold/Harpy_AttackLaunchMelee.wav",
+			"wince": "h6/stronghold/Harpy_Hit.wav",
+			"defend": "h6/stronghold/Harpy_Defend.wav",
+			"killed": "h6/stronghold/Harpy_Die.wav",
+			"move": "h6/stronghold/Harpy_FlyLoop1.wav",
+			"startMoving": "h6/stronghold/Harpy_FlyStart.wav",
+			"endMoving": "h6/stronghold/Harpy_FlyEnd.wav"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.attack"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.defence"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "DOUBLE_DAMAGE_CHANCE"
+				},
+				"values": [
+					0,
+					2,
+					3,
+					5,
+					6,
+					8,
+					9,
+					11,
+					12,
+					15
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					5,
+					5,
+					10,
+					10,
+					15,
+					15,
+					20
+				]
+			}
+		]
+	},
+	"h6StrongholdFury": {
+		"name": {
+			"singular": "Fury",
+			"plural": "Furies"
+		},
+		"description": "Furies are battle-hardened Kite Harpies, masters of aerial assault. Their astonishing flying speed and agility leave their foes unable to strike back.",
+		"faction": "stronghold",
+		"level": 3,
+		"cost": {
+			"gold": 270
+		},
+		"speed": 9,
+		"hitPoints": 39,
+		"attack": 10,
+		"defense": 7,
+		"damage": {
+			"min": 4,
+			"max": 8
+		},
+		"doubleWide": false,
+		"fightValue": 561,
+		"aiValue": 660,
+		"growth": 6,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"h6Bloodrage": {
+				"type": "H6_BLOODRAGE_H6C",
+				"val": 1
+			},
+			"flying": {
+				"type": "FLYING"
+			},
+			"return": {
+				"type": "RETURN_AFTER_STRIKE",
+				"icon": "h6/abilities/ab_Strike_and_Return",
+				"description": "{Strike and Return}\nReturns to its start hex after attacking"
+			},
+			"noRet": {
+				"type": "BLOCKS_RETALIATION",
+				"icon": "h6/abilities/ab_No_Retaliation",
+				"description": "{Unanswered Fury}\nAttacks cannot be retaliated against"
+			}
+		},
+		"graphics": {
+			"animation": "h6/stronghold/Harpy_upg/Harpy_upg.json",
+			"map": "h6/units/h6StrongholdFury/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h6/units/h6StrongholdFury/map/atkL.png",
+			"mapAttackFromRight": "h6/units/h6StrongholdFury/map/atkR.png",
+			"iconLarge": "h6/units/h6StrongholdFury/iconLarge.png",
+			"iconSmall": "h6/units/h6StrongholdFury/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h6/stronghold/Harpy_AttackLaunchMelee.wav",
+			"wince": "h6/stronghold/Harpy_Hit.wav",
+			"defend": "h6/stronghold/Harpy_Defend.wav",
+			"killed": "h6/stronghold/Harpy_Die.wav",
+			"move": "h6/stronghold/Harpy_FlyLoop1.wav",
+			"startMoving": "h6/stronghold/Harpy_FlyStart.wav",
+			"endMoving": "h6/stronghold/Harpy_FlyEnd.wav"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.attack"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.defence"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "DOUBLE_DAMAGE_CHANCE"
+				},
+				"values": [
+					0,
+					2,
+					3,
+					5,
+					6,
+					8,
+					9,
+					11,
+					12,
+					15
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					5,
+					5,
+					10,
+					10,
+					15,
+					15,
+					20
+				]
+			}
+		]
+	},
+	"h6StrongholdDreamwalker": {
+		"name": {
+			"singular": "Dreamwalker",
+			"plural": "Dreamwalkers"
+		},
+		"description": "Orcs pray to Mother Earth and the Sky Father, but the Dreamwalkers speak with the voice of the tribe's ancestors. To become a Dreamwalker, a shaman must travel in dreams to the spirit world and meet the souls of his forefathers. On this journey of the mind, the Dreamwalker must face the demonic heritage within himself and defeat this source of Chaos from the inside. Countless Dreamwalkers have died in this trial. Those who survive are changed beyond recognition: the struggle with their own chaotic blood has twisted their bodies, but at the price of this deformity they gain a deeper understanding of blood magic and the realm of spirits.",
+		"faction": "stronghold",
+		"level": 4,
+		"cost": {
+			"gold": 245
+		},
+		"speed": 5,
+		"hitPoints": 34,
+		"attack": 9,
+		"defense": 8,
+		"damage": {
+			"min": 6,
+			"max": 7
+		},
+		"doubleWide": false,
+		"fightValue": 480,
+		"aiValue": 536,
+		"growth": 5,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"upgrades": [
+			"h6StrongholdDreamreaver"
+		],
+		"abilities": {
+			"toaDemonic": {
+				"type": "tears-of-ashan:DEMONIC",
+				"val": 1,
+				"hidden": true
+			},
+			"h6Bloodrage": {
+				"type": "H6_BLOODRAGE_H6C",
+				"val": 1
+			},
+			"demonicLineage": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.fire",
+				"val": 10,
+				"stacking": "h6StrongholdDreamwalkerExpFire",
+				"icon": "h6/abilities/ab_Demonic_Lineage",
+				"description": "{Demonic Lineage}\nTakes 10% less damage from Fire magic,\nbut 10% more from Light magic"
+			},
+			"lineageLight": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.01lightSchool",
+				"val": -10,
+				"hidden": true
+			},
+			"cast_h6AbSkyEarth": {
+				"type": "SPELLCASTER",
+				"subtype": "spell.h6AbSkyEarth",
+				"val": 3,
+				"description": "{Sky and Earth}\nCooldown 3: ally Speed +2, or ground foe -2",
+				"icon": "h6/abilities/ab_Sky_and_Earth",
+				"limiters": [
+					[
+						"noneOf",
+						{
+							"type": "HAS_ANOTHER_BONUS_LIMITER",
+							"parameters": [
+								"H6_COOLDOWN_H6C"
+							]
+						}
+					]
+				]
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 1,
+				"hidden": true
+			},
+			"noSpellcastByDefault": {
+				"type": "NO_SPELLCAST_BY_DEFAULT",
+				"hidden": true
+			},
+			"cooldown_h6AbSkyEarth": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6Cooldown",
+				"val": 0,
+				"hidden": true,
+				"description": "~",
+				"addInfo": {
+					"spell": "heroes-memorial.h6:h6AbSkyEarth",
+					"turns": 3
+				}
+			}
+		},
+		"graphics": {
+			"animation": "h6/stronghold/OrcShaman/OrcShaman.json",
+			"map": "h6/units/h6StrongholdDreamwalker/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h6/units/h6StrongholdDreamwalker/map/atkL.png",
+			"mapAttackFromRight": "h6/units/h6StrongholdDreamwalker/map/atkR.png",
+			"iconLarge": "h6/units/h6StrongholdDreamwalker/iconLarge.png",
+			"iconSmall": "h6/units/h6StrongholdDreamwalker/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h6/stronghold/OrcShaman_AttackLaunchMelee.wav",
+			"wince": "h6/stronghold/OrcShaman_Hit.wav",
+			"defend": "h6/stronghold/OrcShaman_Defend.wav",
+			"killed": "h6/stronghold/OrcShaman_Die.wav",
+			"move": "h6/stronghold/OrcShaman_Move.wav"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.attack"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					5,
+					6,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.defence"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE"
+				},
+				"values": [
+					0,
+					0,
+					5,
+					5,
+					10,
+					10,
+					15,
+					15,
+					20,
+					25
+				]
+			},
+			{
+				"bonus": {
+					"type": "SPELL_DAMAGE_REDUCTION",
+					"subtype": "spellSchool.fire",
+					"stacking": "h6StrongholdDreamwalkerExpFire"
+				},
+				"values": [
+					10,
+					11,
+					12,
+					13,
+					14,
+					15,
+					16,
+					17,
+					18,
+					20
+				]
+			}
+		]
+	},
+	"h6StrongholdDreamreaver": {
+		"name": {
+			"singular": "Dreamreaver",
+			"plural": "Dreamreavers"
+		},
+		"description": "Through their frequent wanderings in the realm of dreams, Dreamreavers have gained the power to call parts of the dream world onto the battlefield. These shamans are not only respected by other orcs, but may be the only creatures the orcs truly fear. Talking to a Dreamreaver is like talking to your worst nightmare, and worse still, they decide when you get to wake up.",
+		"faction": "stronghold",
+		"level": 4,
+		"cost": {
+			"gold": 295
+		},
+		"speed": 8,
+		"hitPoints": 42,
+		"attack": 10,
+		"defense": 9,
+		"damage": {
+			"min": 6,
+			"max": 8
+		},
+		"doubleWide": false,
+		"fightValue": 687,
+		"aiValue": 804,
+		"growth": 5,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"toaDemonic": {
+				"type": "tears-of-ashan:DEMONIC",
+				"val": 1,
+				"hidden": true
+			},
+			"h6Bloodrage": {
+				"type": "H6_BLOODRAGE_H6C",
+				"val": 1
+			},
+			"demonicLineage": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.fire",
+				"val": 10,
+				"stacking": "h6StrongholdDreamreaverExpFire",
+				"icon": "h6/abilities/ab_Demonic_Lineage",
+				"description": "{Demonic Lineage}\nTakes 10% less damage from Fire magic,\nbut 10% more from Light magic"
+			},
+			"lineageLight": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.01lightSchool",
+				"val": -10,
+				"hidden": true
+			},
+			"cast_h6AbSkyEarth": {
+				"type": "SPELLCASTER",
+				"subtype": "spell.h6AbSkyEarth",
+				"val": 3,
+				"description": "{Sky and Earth}\nCooldown 3: ally Speed +2, or ground foe -2",
+				"icon": "h6/abilities/ab_Sky_and_Earth",
+				"limiters": [
+					[
+						"noneOf",
+						{
+							"type": "HAS_ANOTHER_BONUS_LIMITER",
+							"parameters": [
+								"H6_COOLDOWN_H6C"
+							]
+						}
+					]
+				]
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 1,
+				"hidden": true
+			},
+			"noSpellcastByDefault": {
+				"type": "NO_SPELLCAST_BY_DEFAULT",
+				"hidden": true
+			},
+			"cooldown_h6AbSkyEarth": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6Cooldown",
+				"val": 0,
+				"hidden": true,
+				"description": "~",
+				"addInfo": {
+					"spell": "heroes-memorial.h6:h6AbSkyEarth",
+					"turns": 3
+				}
+			},
+			"cast_h6AbSkyEarthMass": {
+				"type": "SPELLCASTER",
+				"subtype": "spell.h6AbSkyEarthMass",
+				"val": 3,
+				"description": "{Mass Sky and Earth}\nCooldown 3: allies Speed +1, ground foes -1",
+				"icon": "h6/abilities/ab_Sky_and_Earth_Mass",
+				"limiters": [
+					[
+						"noneOf",
+						{
+							"type": "HAS_ANOTHER_BONUS_LIMITER",
+							"parameters": [
+								"H6_COOLDOWN_H6C"
+							]
+						}
+					]
+				]
+			},
+			"cooldown_h6AbSkyEarthMass": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6Cooldown",
+				"val": 0,
+				"hidden": true,
+				"description": "~",
+				"addInfo": {
+					"spell": "heroes-memorial.h6:h6AbSkyEarthMass",
+					"turns": 3
+				}
+			}
+		},
+		"graphics": {
+			"animation": "h6/stronghold/OrcShaman_upg/OrcShaman_upg.json",
+			"map": "h6/units/h6StrongholdDreamreaver/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h6/units/h6StrongholdDreamreaver/map/atkL.png",
+			"mapAttackFromRight": "h6/units/h6StrongholdDreamreaver/map/atkR.png",
+			"iconLarge": "h6/units/h6StrongholdDreamreaver/iconLarge.png",
+			"iconSmall": "h6/units/h6StrongholdDreamreaver/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h6/stronghold/OrcShaman_AttackLaunchMelee.wav",
+			"wince": "h6/stronghold/OrcShaman_Hit.wav",
+			"defend": "h6/stronghold/OrcShaman_Defend.wav",
+			"killed": "h6/stronghold/OrcShaman_Die.wav",
+			"move": "h6/stronghold/OrcShaman_Move.wav"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.attack"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					5,
+					6,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.defence"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE"
+				},
+				"values": [
+					0,
+					0,
+					5,
+					5,
+					10,
+					10,
+					15,
+					15,
+					20,
+					25
+				]
+			},
+			{
+				"bonus": {
+					"type": "SPELL_DAMAGE_REDUCTION",
+					"subtype": "spellSchool.fire",
+					"stacking": "h6StrongholdDreamreaverExpFire"
+				},
+				"values": [
+					10,
+					11,
+					12,
+					13,
+					14,
+					15,
+					16,
+					17,
+					18,
+					20
+				]
+			}
+		]
+	},
+	"h6StrongholdCentaur": {
+		"name": {
+			"singular": "Centaur",
+			"plural": "Centaurs"
+		},
+		"description": "Like the harpies (Kite Harpies), centaurs are beastmen, created by the wizards of the Seven Cities in the year 512 YSD. Half man and half horse, they served in the armies as scouts and mounted archers. But their days of glory came to an end when the wizards replaced them with animated constructs. Golems, gargoyles, titans and other constructs of every kind were far easier to manage, cheaper to maintain and more obedient. The centaurs were given ever more menial work, until they were reduced to carrying messages and pulling carts. Stripped of their status, they were filled with rage, which led them to join the beastmen's uprising of their own accord and then scatter across Ashan in search of living space, dignity and freedom. They soon met the orc tribes and became their allies, for they shared common interests and temperament.",
+		"faction": "stronghold",
+		"level": 5,
+		"cost": {
+			"gold": 555
+		},
+		"speed": 6,
+		"hitPoints": 39,
+		"attack": 12,
+		"defense": 9,
+		"damage": {
+			"min": 12,
+			"max": 13
+		},
+		"doubleWide": true,
+		"fightValue": 729,
+		"aiValue": 785,
+		"growth": 3,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"upgrades": [
+			"h6StrongholdMarauderCentaur"
+		],
+		"shots": 24,
+		"abilities": {
+			"h6Bloodrage": {
+				"type": "H6_BLOODRAGE_H6C",
+				"val": 1
+			},
+			"shooter": {
+				"type": "SHOOTER"
+			},
+			"noRetaliation": {
+				"type": "NO_RETALIATION",
+				"hidden": true
+			},
+			"vigilant": {
+				"type": "H6_VIGILANT_H6C",
+				"val": 10,
+				"icon": "h6/abilities/ab_Vigilant_Scout",
+				"stacking": "h6Vigilant",
+				"description": "{Vigilant Scout}\nAuto-shoots a foe first moving within 10 hexes"
+			},
+			"vigilantZone": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6Vigilant",
+				"val": 0,
+				"hidden": true,
+				"description": "~",
+				"propagator": "BATTLE_WIDE",
+				"stacking": "h6VigilantZone",
+				"addInfo": {
+					"range": 10,
+					"animation": "h6/stronghold/fx/hit"
+				}
+			},
+			"manoeuvre": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6Manoeuvre",
+				"val": 0,
+				"icon": "h6/abilities/ab_Manoeuvre",
+				"stacking": "h6Manoeuvre",
+				"description": "{Evasive Maneuver}\nNo melee retaliation. When meleed, falls back\n3+ hexes from all foes and shoots the attacker",
+				"addInfo": {
+					"animation": "h6/stronghold/fx/hit"
+				}
+			}
+		},
+		"graphics": {
+			"animation": "h6/stronghold/Centaur/Centaur.json",
+			"map": "h6/units/h6StrongholdCentaur/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h6/units/h6StrongholdCentaur/map/atkL.png",
+			"mapAttackFromRight": "h6/units/h6StrongholdCentaur/map/atkR.png",
+			"iconLarge": "h6/units/h6StrongholdCentaur/iconLarge.png",
+			"iconSmall": "h6/units/h6StrongholdCentaur/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"frameAngles": [
+					90,
+					60,
+					45,
+					30,
+					0,
+					-30,
+					-45,
+					-60,
+					-90
+				],
+				"offset": {
+					"upperX": 62,
+					"upperY": -69,
+					"middleX": 58,
+					"middleY": -61,
+					"lowerX": 55,
+					"lowerY": -55
+				},
+				"attackClimaxFrame": 4,
+				"projectile": "h6/stronghold/arrow.json"
+			}
+		},
+		"sound": {
+			"attack": "h6/stronghold/Centaur_AttackLaunchMelee.wav",
+			"shoot": "h6/stronghold/Centaur_AttackLaunchRanged.wav",
+			"wince": "h6/stronghold/Centaur_Hit.wav",
+			"defend": "h6/stronghold/Centaur_Defend.wav",
+			"killed": "h6/stronghold/Centaur_Die.wav",
+			"move": "h6/stronghold/Centaur_Move_Earth1.wav"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.attack"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					3,
+					4,
+					5,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					3,
+					4,
+					4,
+					6,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					2,
+					3,
+					3,
+					4,
+					5,
+					6,
+					6,
+					7
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					7
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_WALL_PENALTY"
+				},
+				"values": [
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					5,
+					5,
+					10,
+					10,
+					15,
+					15,
+					20
+				]
+			}
+		]
+	},
+	"h6StrongholdMarauderCentaur": {
+		"name": {
+			"singular": "Centaur Marauder",
+			"plural": "Centaur Marauders"
+		},
+		"description": "Centaur Marauders are centaurs who have devoted their lives to the art of war. They have sworn to wipe out slavery for good, and those who join their ranks must renounce the bonds of marriage. This does not mean they cannot have or adopt children, and other members of the tribe may seek mates, but Centaur Marauders are forbidden to do so.",
+		"faction": "stronghold",
+		"level": 5,
+		"cost": {
+			"gold": 640
+		},
+		"speed": 9,
+		"hitPoints": 47,
+		"attack": 12,
+		"defense": 10,
+		"damage": {
+			"min": 12,
+			"max": 14
+		},
+		"doubleWide": true,
+		"fightValue": 957,
+		"aiValue": 1169,
+		"growth": 3,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"shots": 24,
+		"abilities": {
+			"h6Bloodrage": {
+				"type": "H6_BLOODRAGE_H6C",
+				"val": 1
+			},
+			"shooter": {
+				"type": "SHOOTER"
+			},
+			"noRetaliation": {
+				"type": "NO_RETALIATION",
+				"hidden": true
+			},
+			"vigilant": {
+				"type": "H6_VIGILANT_H6C",
+				"val": 10,
+				"icon": "h6/abilities/ab_Vigilant_Scout",
+				"stacking": "h6Vigilant",
+				"description": "{Vigilant Scout}\nAuto-shoots a foe first moving within 10 hexes"
+			},
+			"vigilantZone": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6Vigilant",
+				"val": 0,
+				"hidden": true,
+				"description": "~",
+				"propagator": "BATTLE_WIDE",
+				"stacking": "h6VigilantZone",
+				"addInfo": {
+					"range": 10,
+					"animation": "h6/stronghold/fx/hit"
+				}
+			},
+			"manoeuvre": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6Manoeuvre",
+				"val": 0,
+				"icon": "h6/abilities/ab_Manoeuvre",
+				"stacking": "h6Manoeuvre",
+				"description": "{Evasive Maneuver}\nNo melee retaliation. When meleed, falls back\n3+ hexes from all foes and shoots the attacker",
+				"addInfo": {
+					"animation": "h6/stronghold/fx/hit"
+				}
+			},
+			"mobileShooter": {
+				"type": "FREE_SHOOTING",
+				"icon": "h6/abilities/ab_Mobile_Shooter",
+				"description": "{Mobile Shooter}\nCan shoot even when adjacent to foes"
+			}
+		},
+		"graphics": {
+			"animation": "h6/stronghold/Centaur_upg/Centaur_upg.json",
+			"map": "h6/units/h6StrongholdMarauderCentaur/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h6/units/h6StrongholdMarauderCentaur/map/atkL.png",
+			"mapAttackFromRight": "h6/units/h6StrongholdMarauderCentaur/map/atkR.png",
+			"iconLarge": "h6/units/h6StrongholdMarauderCentaur/iconLarge.png",
+			"iconSmall": "h6/units/h6StrongholdMarauderCentaur/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"frameAngles": [
+					90,
+					60,
+					45,
+					30,
+					0,
+					-30,
+					-45,
+					-60,
+					-90
+				],
+				"offset": {
+					"upperX": 58,
+					"upperY": -63,
+					"middleX": 55,
+					"middleY": -56,
+					"lowerX": 52,
+					"lowerY": -50
+				},
+				"attackClimaxFrame": 4,
+				"projectile": "h6/stronghold/arrowMarauder.json"
+			}
+		},
+		"sound": {
+			"attack": "h6/stronghold/Centaur_AttackLaunchMelee.wav",
+			"shoot": "h6/stronghold/Centaur_AttackLaunchRanged.wav",
+			"wince": "h6/stronghold/Centaur_Hit.wav",
+			"defend": "h6/stronghold/Centaur_Defend.wav",
+			"killed": "h6/stronghold/Centaur_Die.wav",
+			"move": "h6/stronghold/Centaur_Move_Earth1.wav"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.attack"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					3,
+					4,
+					5,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					3,
+					4,
+					4,
+					6,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					2,
+					3,
+					3,
+					4,
+					5,
+					6,
+					6,
+					7
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					7
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_WALL_PENALTY"
+				},
+				"values": [
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					5,
+					5,
+					10,
+					10,
+					15,
+					15,
+					20
+				]
+			}
+		]
+	},
+	"h6StrongholdJaguarWarrior": {
+		"name": {
+			"singular": "Jaguar Warrior",
+			"plural": "Jaguar Warriors"
+		},
+		"description": "Among the orcs of Pao, Jaguar Warriors are the finest berserkers. They are the tallest, strongest and most short-tempered of all orcs. To become a Jaguar Warrior, an orc warrior must first kill one of the island's fiercest predators, the sabre-toothed panther, with his bare hands. Needless to say, the mask of a Jaguar Warrior hides countless scars left by this life-or-death rite. In battle, they charge recklessly into the enemy ranks in a frenzy, tearing everything apart with their obsidian claws. Jaguar Warriors often serve as honor guards for the mightiest orc chieftains and shamans.",
+		"faction": "stronghold",
+		"level": 6,
+		"cost": {
+			"gold": 925
+		},
+		"speed": 8,
+		"hitPoints": 89,
+		"attack": 15,
+		"defense": 11,
+		"damage": {
+			"min": 18,
+			"max": 21
+		},
+		"doubleWide": true,
+		"fightValue": 1740,
+		"aiValue": 2032,
+		"growth": 2,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"upgrades": [
+			"h6StrongholdPantherWarrior"
+		],
+		"abilities": {
+			"toaDemonic": {
+				"type": "tears-of-ashan:DEMONIC",
+				"val": 1,
+				"hidden": true
+			},
+			"h6Bloodrage": {
+				"type": "H6_BLOODRAGE_H6C",
+				"val": 1
+			},
+			"warFury": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6WarFury",
+				"val": 0,
+				"icon": "h6/abilities/ab_War_Fury",
+				"stacking": "h6WarFury",
+				"description": "{War Fury}\nAfter first damaging a foe, immune to\nMind spells for the rest of the battle"
+			},
+			"demonicLineage": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.fire",
+				"val": 10,
+				"stacking": "h6StrongholdJaguarWarriorExpFire",
+				"icon": "h6/abilities/ab_Demonic_Lineage",
+				"description": "{Demonic Lineage}\nTakes 10% less damage from Fire magic,\nbut 10% more from Light magic"
+			},
+			"lineageLight": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.01lightSchool",
+				"val": -10,
+				"hidden": true
+			},
+			"cast_h6AbFeralCharge": {
+				"type": "SPELLCASTER",
+				"subtype": "spell.h6AbFeralCharge",
+				"val": 3,
+				"description": "{Feral Charge}\nFree, cooldown 2: next attack is unretaliated",
+				"icon": "h6/abilities/ab_Feral_Charge",
+				"limiters": [
+					[
+						"noneOf",
+						{
+							"type": "HAS_ANOTHER_BONUS_LIMITER",
+							"parameters": [
+								"H6_COOLDOWN_H6C"
+							]
+						}
+					]
+				]
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 1,
+				"hidden": true
+			},
+			"noSpellcastByDefault": {
+				"type": "NO_SPELLCAST_BY_DEFAULT",
+				"hidden": true
+			},
+			"cooldown_h6AbFeralCharge": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6Cooldown",
+				"val": 0,
+				"hidden": true,
+				"description": "~",
+				"addInfo": {
+					"spell": "heroes-memorial.h6:h6AbFeralCharge",
+					"turns": 2
+				}
+			}
+		},
+		"graphics": {
+			"animation": "h6/stronghold/JaguarWarrior/JaguarWarrior.json",
+			"map": "h6/units/h6StrongholdJaguarWarrior/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h6/units/h6StrongholdJaguarWarrior/map/atkL.png",
+			"mapAttackFromRight": "h6/units/h6StrongholdJaguarWarrior/map/atkR.png",
+			"iconLarge": "h6/units/h6StrongholdJaguarWarrior/iconLarge.png",
+			"iconSmall": "h6/units/h6StrongholdJaguarWarrior/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h6/stronghold/JaguarWarrior_AttackLaunchMelee.wav",
+			"wince": "h6/stronghold/JaguarWarrior_Hit.wav",
+			"defend": "h6/stronghold/JaguarWarrior_Defend.wav",
+			"killed": "h6/stronghold/JaguarWarrior_Die.wav",
+			"move": "h6/stronghold/OrcShaman_Move.wav"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.defence"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					2,
+					3,
+					4,
+					5,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "DOUBLE_DAMAGE_CHANCE"
+				},
+				"values": [
+					0,
+					2,
+					3,
+					5,
+					6,
+					8,
+					9,
+					11,
+					12,
+					15
+				]
+			},
+			{
+				"bonus": {
+					"type": "SPELL_DAMAGE_REDUCTION",
+					"subtype": "spellSchool.fire",
+					"stacking": "h6StrongholdJaguarWarriorExpFire"
+				},
+				"values": [
+					10,
+					11,
+					12,
+					13,
+					14,
+					15,
+					16,
+					17,
+					18,
+					20
+				]
+			}
+		]
+	},
+	"h6StrongholdPantherWarrior": {
+		"name": {
+			"singular": "Panther Warrior",
+			"plural": "Panther Warriors"
+		},
+		"description": "Among the orcs of Pao there is a legend of the Shadow Panther, a legendary creature larger and fiercer than the dreaded panthers of Pao. Orcs who manage to kill a Shadow Panther are called Panther Warriors. As their name suggests, they are both rare and powerful.",
+		"faction": "stronghold",
+		"level": 6,
+		"cost": {
+			"gold": 1230
+		},
+		"speed": 11,
+		"hitPoints": 89,
+		"attack": 16,
+		"defense": 11,
+		"damage": {
+			"min": 19,
+			"max": 24
+		},
+		"doubleWide": true,
+		"fightValue": 1898,
+		"aiValue": 2268,
+		"growth": 2,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"toaDemonic": {
+				"type": "tears-of-ashan:DEMONIC",
+				"val": 1,
+				"hidden": true
+			},
+			"h6Bloodrage": {
+				"type": "H6_BLOODRAGE_H6C",
+				"val": 1
+			},
+			"warFury": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6WarFury",
+				"val": 0,
+				"icon": "h6/abilities/ab_War_Fury",
+				"stacking": "h6WarFury",
+				"description": "{War Fury}\nAfter first damaging a foe, immune to\nMind spells for the rest of the battle"
+			},
+			"demonicLineage": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.fire",
+				"val": 10,
+				"stacking": "h6StrongholdPantherWarriorExpFire",
+				"icon": "h6/abilities/ab_Demonic_Lineage",
+				"description": "{Demonic Lineage}\nTakes 10% less damage from Fire magic,\nbut 10% more from Light magic"
+			},
+			"lineageLight": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.01lightSchool",
+				"val": -10,
+				"hidden": true
+			},
+			"cast_h6AbAllAroundSlash": {
+				"type": "SPELLCASTER",
+				"subtype": "spell.h6AbAllAroundSlash",
+				"val": 3,
+				"description": "{All-Around Slash}\nCooldown 2: hits foe & neighbors, unretaliated",
+				"icon": "h6/abilities/ab_All-around_Slash",
+				"limiters": [
+					[
+						"noneOf",
+						{
+							"type": "HAS_ANOTHER_BONUS_LIMITER",
+							"parameters": [
+								"H6_COOLDOWN_H6C"
+							]
+						}
+					]
+				]
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 1,
+				"hidden": true
+			},
+			"noSpellcastByDefault": {
+				"type": "NO_SPELLCAST_BY_DEFAULT",
+				"hidden": true
+			},
+			"cooldown_h6AbAllAroundSlash": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6Cooldown",
+				"val": 0,
+				"hidden": true,
+				"description": "~",
+				"addInfo": {
+					"spell": "heroes-memorial.h6:h6AbAllAroundSlash",
+					"turns": 2
+				}
+			}
+		},
+		"graphics": {
+			"animation": "h6/stronghold/JaguarWarrior_upg/JaguarWarrior_upg.json",
+			"map": "h6/units/h6StrongholdPantherWarrior/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h6/units/h6StrongholdPantherWarrior/map/atkL.png",
+			"mapAttackFromRight": "h6/units/h6StrongholdPantherWarrior/map/atkR.png",
+			"iconLarge": "h6/units/h6StrongholdPantherWarrior/iconLarge.png",
+			"iconSmall": "h6/units/h6StrongholdPantherWarrior/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h6/stronghold/JaguarWarrior_AttackLaunchMelee.wav",
+			"wince": "h6/stronghold/JaguarWarrior_Hit.wav",
+			"defend": "h6/stronghold/JaguarWarrior_Defend.wav",
+			"killed": "h6/stronghold/JaguarWarrior_Die.wav",
+			"move": "h6/stronghold/OrcShaman_Move.wav"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.defence"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					2,
+					3,
+					4,
+					5,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "DOUBLE_DAMAGE_CHANCE"
+				},
+				"values": [
+					0,
+					2,
+					3,
+					5,
+					6,
+					8,
+					9,
+					11,
+					12,
+					15
+				]
+			},
+			{
+				"bonus": {
+					"type": "SPELL_DAMAGE_REDUCTION",
+					"subtype": "spellSchool.fire",
+					"stacking": "h6StrongholdPantherWarriorExpFire"
+				},
+				"values": [
+					10,
+					11,
+					12,
+					13,
+					14,
+					15,
+					16,
+					17,
+					18,
+					20
+				]
+			}
+		]
+	},
+	"h6StrongholdCyclops": {
+		"name": {
+			"singular": "Cyclops",
+			"plural": "Cyclopes"
+		},
+		"description": "Cyclopes are the opposite of goblins. They too are \"failures\" of the orc experiments, but the cause lies in the blood of greater demons. The demonic half of their blood became dominant, and they turned into misshapen giants, twisted in body and mind by chaotic urges. Cyclopes usually stand over ten feet tall and look far more demon than human. One curious trait they all share is that they have only one eye: a huge, pupilless eye that glows red. No one knows where this mutation comes from; a theory widely accepted among wizards holds that it comes from the \"Sign of Chaos\", the ring-shaped serpent devouring itself, emblem of the Dragon God Urgash. Although they are peaceful by nature and as simple-minded as children, when they are hurt (in body or in spirit) they fall into an explosive, terrifying rage. This makes them a danger to everyone, their own kind included. Although many novels love tales of harnessing their power, in truth only the orcs have the strength, patience and courage to \"tame\" them, and to give them their rightful place in the villages as \"laborers\", and on the battlefield as heavy shock troops and \"siege weapons\".",
+		"faction": "stronghold",
+		"level": 7,
+		"cost": {
+			"gold": 2160,
+			"crystal": 1
+		},
+		"speed": 8,
+		"hitPoints": 200,
+		"attack": 19,
+		"defense": 17,
+		"damage": {
+			"min": 43,
+			"max": 49
+		},
+		"doubleWide": true,
+		"fightValue": 5362,
+		"aiValue": 6620,
+		"growth": 1,
+		"advMapAmount": {
+			"min": 1,
+			"max": 3
+		},
+		"upgrades": [
+			"h6StrongholdEnragedCyclops"
+		],
+		"abilities": {
+			"toaDemonic": {
+				"type": "tears-of-ashan:DEMONIC",
+				"val": 1,
+				"hidden": true
+			},
+			"h6Bloodrage": {
+				"type": "H6_BLOODRAGE_H6C",
+				"val": 1
+			},
+			"impervious": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6Impervious",
+				"val": 0,
+				"icon": "h6/abilities/ab_Impervious_to_Pain",
+				"stacking": "h6Impervious",
+				"description": "{Impervious}\nAttack damage taken is delayed to next turn",
+				"addInfo": {
+					"animation": "h6/stronghold/fx/debt"
+				}
+			},
+			"demonicLineage": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.fire",
+				"val": 10,
+				"stacking": "h6StrongholdCyclopsExpFire",
+				"icon": "h6/abilities/ab_Demonic_Lineage",
+				"description": "{Demonic Lineage}\nTakes 10% less damage from Fire magic,\nbut 10% more from Light magic"
+			},
+			"lineageLight": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.01lightSchool",
+				"val": -10,
+				"hidden": true
+			},
+			"cast_h6AbSlam": {
+				"type": "SPELLCASTER",
+				"subtype": "spell.h6AbSlam",
+				"val": 3,
+				"description": "{Cyclops Slam}\nCooldown 2: unretaliated slam, knockback 1",
+				"icon": "h6/abilities/ab_Slam",
+				"limiters": [
+					[
+						"noneOf",
+						{
+							"type": "HAS_ANOTHER_BONUS_LIMITER",
+							"parameters": [
+								"H6_COOLDOWN_H6C"
+							]
+						}
+					]
+				]
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 99,
+				"hidden": true
+			},
+			"noSpellcastByDefault": {
+				"type": "NO_SPELLCAST_BY_DEFAULT",
+				"hidden": true
+			},
+			"cooldown_h6AbSlam": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6Cooldown",
+				"val": 0,
+				"hidden": true,
+				"description": "~",
+				"addInfo": {
+					"spell": "heroes-memorial.h6:h6AbSlam",
+					"turns": 2
+				}
+			},
+			"batteringRam": {
+				"type": "H6_BATTERING_RAM",
+				"val": 150,
+				"icon": "h6/abilities/ab_Sunder",
+				"description": "{Battering Ram}\nSiege: hits adjacent walls, gate, towers (1-2)"
+			},
+			"cast_batteringRam": {
+				"type": "SPELLCASTER",
+				"subtype": "spell.batteringRam",
+				"val": 3,
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h6/stronghold/Cyclops/Cyclops.json",
+			"map": "h6/units/h6StrongholdCyclops/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h6/units/h6StrongholdCyclops/map/atkL.png",
+			"mapAttackFromRight": "h6/units/h6StrongholdCyclops/map/atkR.png",
+			"iconLarge": "h6/units/h6StrongholdCyclops/iconLarge.png",
+			"iconSmall": "h6/units/h6StrongholdCyclops/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h6/stronghold/Cyclops_AttackLaunchMelee.wav",
+			"wince": "h6/stronghold/Cyclops_Hit.wav",
+			"defend": "h6/stronghold/Cyclops_Defend.wav",
+			"killed": "h6/stronghold/Cyclops_Die.wav",
+			"move": "h6/stronghold/OrcShaman_Move.wav"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "SPELL_DAMAGE_REDUCTION",
+					"subtype": "spellSchool.fire",
+					"stacking": "h6StrongholdCyclopsExpFire"
+				},
+				"values": [
+					10,
+					11,
+					12,
+					14,
+					16,
+					18,
+					20,
+					22,
+					25,
+					30
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					10,
+					15,
+					20,
+					25,
+					30
+				]
+			}
+		]
+	},
+	"h6StrongholdEnragedCyclops": {
+		"name": {
+			"singular": "Enraged Cyclops",
+			"plural": "Enraged Cyclopes"
+		},
+		"description": "Although Cyclopes are gentle by nature and as innocent as children, when they are hurt (in body or in spirit), the tainted blood of Chaos within them sparks a terrible, explosive rage. They then become extremely dangerous, even to their own kind. A few Cyclopes can instinctively channel this rage through their \"evil eye\", burning distant enemies to ashes.",
+		"faction": "stronghold",
+		"level": 7,
+		"cost": {
+			"gold": 3995,
+			"crystal": 2
+		},
+		"speed": 13,
+		"hitPoints": 294,
+		"attack": 24,
+		"defense": 21,
+		"damage": {
+			"min": 43,
+			"max": 49
+		},
+		"doubleWide": true,
+		"fightValue": 8561,
+		"aiValue": 11405,
+		"growth": 1,
+		"advMapAmount": {
+			"min": 1,
+			"max": 3
+		},
+		"shots": 12,
+		"abilities": {
+			"toaDemonic": {
+				"type": "tears-of-ashan:DEMONIC",
+				"val": 1,
+				"hidden": true
+			},
+			"h6Bloodrage": {
+				"type": "H6_BLOODRAGE_H6C",
+				"val": 1
+			},
+			"impervious": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6Impervious",
+				"val": 0,
+				"icon": "h6/abilities/ab_Impervious_to_Pain",
+				"stacking": "h6Impervious",
+				"description": "{Impervious}\nAttack damage taken is delayed to next turn",
+				"addInfo": {
+					"animation": "h6/stronghold/fx/debt"
+				}
+			},
+			"demonicLineage": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.fire",
+				"val": 10,
+				"stacking": "h6StrongholdEnragedCyclopsExpFire",
+				"icon": "h6/abilities/ab_Demonic_Lineage",
+				"description": "{Demonic Lineage}\nTakes 10% less damage from Fire magic,\nbut 10% more from Light magic"
+			},
+			"lineageLight": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "spellSchool.01lightSchool",
+				"val": -10,
+				"hidden": true
+			},
+			"shooter": {
+				"type": "SHOOTER"
+			},
+			"burningRage": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6BurningRage",
+				"val": 20,
+				"icon": "h6/abilities/ab_Burning_Rage",
+				"stacking": "h6BurningRage",
+				"description": "{Burning Rage}\nFire shots: target burns 20% of the hit, 2 rds",
+				"addInfo": {
+					"pct": 20,
+					"turns": 2
+				}
+			},
+			"dotZone": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6Dot",
+				"val": 0,
+				"hidden": true,
+				"description": "~",
+				"propagator": "BATTLE_WIDE",
+				"stacking": "h6DotZone",
+				"addInfo": {
+					"role": "zone",
+					"animation": "h6/stronghold/fx/burn"
+				}
+			},
+			"cast_h6AbMightySlam": {
+				"type": "SPELLCASTER",
+				"subtype": "spell.h6AbMightySlam",
+				"val": 3,
+				"description": "{Mighty Slam}\nCooldown 2: hits foe & neighbors, unretaliated",
+				"icon": "h6/abilities/ab_Mighty_Slam",
+				"limiters": [
+					[
+						"noneOf",
+						{
+							"type": "HAS_ANOTHER_BONUS_LIMITER",
+							"parameters": [
+								"H6_COOLDOWN_H6C"
+							]
+						}
+					]
+				]
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 99,
+				"hidden": true
+			},
+			"noSpellcastByDefault": {
+				"type": "NO_SPELLCAST_BY_DEFAULT",
+				"hidden": true
+			},
+			"cooldown_h6AbMightySlam": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h6Cooldown",
+				"val": 0,
+				"hidden": true,
+				"description": "~",
+				"addInfo": {
+					"spell": "heroes-memorial.h6:h6AbMightySlam",
+					"turns": 2
+				}
+			},
+			"batteringRam": {
+				"type": "H6_BATTERING_RAM",
+				"val": 200,
+				"icon": "h6/abilities/ab_Sunder",
+				"description": "{Battering Ram}\nSiege: hits adjacent walls, gate, towers (2)"
+			},
+			"cast_batteringRam": {
+				"type": "SPELLCASTER",
+				"subtype": "spell.batteringRam",
+				"val": 3,
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h6/stronghold/Cyclops_upg/Cyclops_upg.json",
+			"map": "h6/units/h6StrongholdEnragedCyclops/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h6/units/h6StrongholdEnragedCyclops/map/atkL.png",
+			"mapAttackFromRight": "h6/units/h6StrongholdEnragedCyclops/map/atkR.png",
+			"iconLarge": "h6/units/h6StrongholdEnragedCyclops/iconLarge.png",
+			"iconSmall": "h6/units/h6StrongholdEnragedCyclops/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"frameAngles": [
+					90,
+					60,
+					45,
+					30,
+					0,
+					-30,
+					-45,
+					-60,
+					-90
+				],
+				"offset": {
+					"upperX": 66,
+					"upperY": -108,
+					"middleX": 66,
+					"middleY": -102,
+					"lowerX": 65,
+					"lowerY": -91
+				},
+				"attackClimaxFrame": 4,
+				"ray": [
+					{
+						"start": [
+							255,
+							120,
+							20,
+							255
+						],
+						"end": [
+							255,
+							60,
+							0,
+							96
+						]
+					},
+					{
+						"start": [
+							255,
+							200,
+							60,
+							255
+						],
+						"end": [
+							255,
+							140,
+							20,
+							160
+						]
+					},
+					{
+						"start": [
+							255,
+							250,
+							200,
+							255
+						],
+						"end": [
+							255,
+							230,
+							120,
+							255
+						]
+					},
+					{
+						"start": [
+							255,
+							200,
+							60,
+							255
+						],
+						"end": [
+							255,
+							140,
+							20,
+							160
+						]
+					},
+					{
+						"start": [
+							255,
+							120,
+							20,
+							255
+						],
+						"end": [
+							255,
+							60,
+							0,
+							96
+						]
+					}
+				]
+			}
+		},
+		"sound": {
+			"attack": "h6/stronghold/Cyclops_AttackLaunchMelee.wav",
+			"shoot": "h6/stronghold/CyclopsLaserBeam_Eye.wav",
+			"wince": "h6/stronghold/Cyclops_Hit.wav",
+			"defend": "h6/stronghold/Cyclops_Defend.wav",
+			"killed": "h6/stronghold/Cyclops_Die.wav",
+			"move": "h6/stronghold/OrcShaman_Move.wav"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "SPELL_DAMAGE_REDUCTION",
+					"subtype": "spellSchool.fire",
+					"stacking": "h6StrongholdEnragedCyclopsExpFire"
+				},
+				"values": [
+					10,
+					11,
+					12,
+					14,
+					16,
+					18,
+					20,
+					22,
+					25,
+					30
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					10,
+					15,
+					20,
+					25,
+					30
+				]
+			}
+		]
+	}
+}

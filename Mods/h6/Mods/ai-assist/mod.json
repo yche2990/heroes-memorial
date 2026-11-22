@@ -1,0 +1,21 @@
+{
+	"name": "Heroes VI Memorial: AI Assist",
+	"description": "Helps the computer players use this content: they visit the memorial objects and value the creatures and artifacts properly. What human players get and see is unchanged.",
+	"chinese": {
+		"name": "英雄无敌6纪念版：电脑辅助",
+		"description": "让电脑玩家用上这些内容：会去拜访纪念设施，也能正确估计兵种和宝物的价值。人类玩家拿到和看到的都不变。"
+	},
+	"version": "0.1.0",
+	"author": "yche2990",
+	"modType": "AI",
+	"compatibility": {
+		"min": "1.8.0"
+	},
+	"creatures": [
+		"config/ai/creatures.json"
+	],
+	"objects": [
+		"config/ai/objects-school.json",
+		"config/ai/objects-visit.json"
+	]
+}

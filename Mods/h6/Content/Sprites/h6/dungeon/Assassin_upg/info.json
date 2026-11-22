@@ -1,0 +1,83 @@
+{
+ "fac": "dungeon",
+ "k": 1.0,
+ "scale": 65.11517450117647,
+ "origin": [
+  202.011381514522,
+  261.0
+ ],
+ "baked": {
+  "0": [
+   "assassin_basic.fx"
+  ],
+  "1": [
+   "assassin_basic.fx"
+  ],
+  "2": [
+   "assassin_basic.fx"
+  ],
+  "3": [
+   "assassin_basic.fx"
+  ],
+  "4": [
+   "assassin_basic.fx"
+  ],
+  "5": [
+   "assassin_basic.fx"
+  ],
+  "7": [
+   "assassin_basic.fx"
+  ],
+  "8": [
+   "assassin_basic.fx"
+  ],
+  "11": [
+   "assassin_basic.fx",
+   "assassin_attack.fx"
+  ],
+  "12": [
+   "assassin_basic.fx",
+   "assassin_attack.fx"
+  ],
+  "13": [
+   "assassin_basic.fx",
+   "assassin_attack.fx"
+  ],
+  "17": [
+   "assassin_basic.fx",
+   "assassin_attackcrit.fx"
+  ],
+  "18": [
+   "assassin_basic.fx",
+   "assassin_attackcrit.fx"
+  ],
+  "19": [
+   "assassin_basic.fx",
+   "assassin_attackcrit.fx"
+  ],
+  "20": [
+   "assassin_basic.fx"
+  ],
+  "21": [
+   "assassin_basic.fx"
+  ],
+  "30": [
+   "assassin_basic.fx",
+   "assassin_attackcrit.fx"
+  ],
+  "32": [
+   "assassin_basic.fx",
+   "assassin_attackcrit.fx"
+  ],
+  "40": [
+   "assassin_basic.fx",
+   "assassin_attack.fx"
+  ],
+  "42": [
+   "assassin_basic.fx",
+   "assassin_attack.fx"
+  ]
+ },
+ "render": "Blender 4.2 Cycles 24spp 3x + sprite_post; fx h6m (fxsim d1=mul mode2=wrap)",
+ "sec": 42
+}

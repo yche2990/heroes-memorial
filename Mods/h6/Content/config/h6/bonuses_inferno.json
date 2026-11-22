@@ -1,0 +1,62 @@
+// Heroes 6 memorial: bonus types used by Inferno creatures
+{
+	"H6_LAUGHTER_H6C": {
+		"graphics": {
+			"icon": "h6/abilities/ab_Manic_Laughter"
+		},
+		"creatureNature": false,
+		"description": "{Mockery}\nDamage +${val} per creature"
+	},
+	"H6_GLUTTONY_H6C": {
+		"graphics": {
+			"icon": "h6/abilities/ab_Eye_of_Gluttony"
+		},
+		"creatureNature": false,
+		"description": "{Eye of Gluttony}\nMarked by a Hell Hound: damage from Hell Hounds and Demon Hounds +${val}%"
+	},
+	"H6_REFLECT_H6C": {
+		"hidden": true,
+		"creatureNature": false,
+		"valueDescriptions": {
+			"1": "%s reflect damage back at %s: %d."
+		}
+	},
+	"H6_PROLIFERATE_H6C": {
+		"hidden": true,
+		"creatureNature": false,
+		"valueDescriptions": {
+			"1": "%s proliferate, adding %d."
+		}
+	},
+	"H6_TASTE_H6C": {
+		"graphics": {
+			"icon": "h6/abilities/ab_Taste_of_Pain"
+		},
+		"creatureNature": false,
+		"description": "{Taste of Pain}\nNext attack damage +${val}%"
+	},
+	"H6_TAUNT_H6C": {
+		"graphics": {
+			"icon": "h6/abilities/ab_Taunting_Presence"
+		},
+		"creatureNature": false,
+		"description": "{Taunting Stance}\nEnemies within 2 hexes deal -${val}% damage to targets other than it",
+		"valueDescriptions": {
+			"900001": "The Taunting Stance of %s distracts %s: damage -%d percent."
+		}
+	},
+	"H6_HATEFUL_H6C": {
+		"hidden": true,
+		"creatureNature": false,
+		"valueDescriptions": {
+			"1": "%s repay every slight: %d stacks take %d fire damage in total."
+		}
+	},
+	"H6_CHARGE_H6C": {
+		"hidden": true,
+		"creatureNature": false,
+		"valueDescriptions": {
+			"1": "%s make an Unstoppable Charge, hitting %d stacks for %d damage in total."
+		}
+	}
+}
