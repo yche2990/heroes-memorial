@@ -1,0 +1,4049 @@
+{
+	"h7AcademyApprentice": {
+		"name": {
+			"singular": "Apprentice",
+			"plural": "Apprentices"
+		},
+		"description": "Joining the Academy is free, but every student, whatever their age, must serve four years of duty in the mage army. For the first two years they hold the title of Apprentice.\nNo Apprentice wants trouble while on duty. Dull desert patrols, flying-carpet rounds, a little magical mischief for fun: that is quite enough.",
+		"faction": "tower",
+		"level": 4,
+		"cost": {
+			"gold": 370
+		},
+		"speed": 4,
+		"hitPoints": 41,
+		"attack": 15,
+		"defense": 11,
+		"damage": {
+			"min": 8,
+			"max": 10
+		},
+		"doubleWide": true,
+		"fightValue": 515,
+		"aiValue": 590,
+		"growth": 3,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"shooter": {
+				"type": "SHOOTER"
+			},
+			"h7PiercingShot": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7PiercingShotApprentice",
+				"icon": "h7/abilities/h7PiercingShotApprentice",
+				"description": "{Piercing Shot}\nPierces a line; others on it (allies too) burn"
+			}
+		},
+		"graphics": {
+			"animation": "h7/Apprentice/battle.json",
+			"map": "h7/Apprentice/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/Apprentice/map/atkL.png",
+			"mapAttackFromRight": "h7/Apprentice/map/atkR.png",
+			"iconLarge": "h7/Apprentice/iconLarge.png",
+			"iconSmall": "h7/Apprentice/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"frameAngles": [
+					90,
+					60,
+					45,
+					30,
+					0,
+					-30,
+					-45,
+					-60,
+					-90
+				],
+				"offset": {
+					"upperX": 13,
+					"upperY": -39,
+					"middleX": 4,
+					"middleY": -36,
+					"lowerX": -11,
+					"lowerY": -37
+				},
+				"attackClimaxFrame": 7,
+				"projectile": "h7/projectiles/A_Projectile_Prime_Bullet_s85.json"
+			}
+		},
+		"sound": {
+			"attack": "h7/creature_apprentice_attack.ogg",
+			"shoot": "h7/creature_apprentice_attack_ranged.ogg",
+			"defend": "h7/creature_apprentice_defend.ogg",
+			"wince": "h7/creature_apprentice_hit.ogg",
+			"killed": "h7/creature_apprentice_die.ogg",
+			"move": "h7/creature_apprentice_move.ogg"
+		},
+		"shots": 15,
+		"upgrades": [
+			"h7AcademyDisciple"
+		],
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					5,
+					6,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_WALL_PENALTY",
+					"description": "{Siege Shooter}\nNo damage loss when shooting over walls"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_DISTANCE_PENALTY",
+					"description": "{Sharpshooter}\nNo penalty for long-range shots"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h7AcademyArcaneEagle": {
+		"name": {
+			"singular": "Arcane Eagle",
+			"plural": "Arcane Eagles"
+		},
+		"description": "In his treatise On the Nature of the Spirit World, the great scholar Sar-Aggreth tried to classify spirits. He noted that higher spirits often take the form of noble birds. So when the mages of the School of Spirit tried to give form to the Spirit World's mightiest energies, it was no surprise that the result was a proud eagle made of pure mana.\nArcane Eagles began as a mere tool for ambitious mages, a way to show off their ambition to rival the gods and their skill at turning Prime energy into living things. And they truly reached that height! Then the Arcane Eagles began to breed, and they can now be seen even in the Spirit World. Life finds a way...",
+		"faction": "tower",
+		"level": 7,
+		"cost": {
+			"gold": 2590,
+			"gems": 1
+		},
+		"speed": 19,
+		"hitPoints": 182,
+		"attack": 17,
+		"defense": 18,
+		"damage": {
+			"min": 38,
+			"max": 40
+		},
+		"doubleWide": true,
+		"fightValue": 3800,
+		"aiValue": 4950,
+		"growth": 1,
+		"advMapAmount": {
+			"min": 1,
+			"max": 3
+		},
+		"abilities": {
+			"h7WarfareGuard": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7WarfareGuard",
+				"hidden": true,
+				"description": "~",
+				"addInfo": {
+					"faction": "tower",
+					"army": "h7AcademyGargoyle,h7AcademyCabir,h7AcademyGolem,h7AcademyApprentice,h7AcademyDjinn,h7AcademyRakshasa"
+				}
+			},
+			"flying": {
+				"type": "FLYING"
+			},
+			"noCorpse": {
+				"type": "DISINTEGRATE",
+				"hidden": true
+			},
+			"h7ArcaneWings": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7ArcaneWings",
+				"icon": "h7/abilities/h7ArcaneWings",
+				"description": "{Arcane Wings}\nRound end: each adjacent foe gets random curse"
+			}
+		},
+		"graphics": {
+			"animation": "h7/ArcaneEagle/battle.json",
+			"map": "h7/ArcaneEagle/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/ArcaneEagle/map/atkL.png",
+			"mapAttackFromRight": "h7/ArcaneEagle/map/atkR.png",
+			"iconLarge": "h7/ArcaneEagle/iconLarge.png",
+			"iconSmall": "h7/ArcaneEagle/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h7/creature_magic_bird_attack_01.ogg",
+			"defend": "h7/creature_magic_bird_defend_01.ogg",
+			"wince": "h7/creature_magic_bird_hit_01.ogg",
+			"killed": "h7/creature_magic_bird_die_01.ogg"
+		},
+		"upgrades": [
+			"h7AcademySimurgh"
+		],
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_RETALIATION",
+					"description": "{Nimbleness}\nExtra retaliation each round"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "MIND_IMMUNITY",
+					"description": "{Steadfast Mind}\nImmune to Mind spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE",
+					"description": "{Magic Resistance}\nChance to resist enemy spells"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					10,
+					20,
+					30,
+					40,
+					50
+				]
+			}
+		]
+	},
+	"h7AcademyCabir": {
+		"name": {
+			"singular": "Cabir",
+			"plural": "Cabirs"
+		},
+		"description": "Cabirs are lesser fire spirits summoned by mages to help in their arcane forges and laboratories. Not very bright, they are nonetheless obedient, eager, and have a natural mastery over anything hot. Their task is to help build and repair constructs such as Golems and Titans.\nDid you know the correct plural of Cabir is Cabiri? Nobody says that anymore. Today's students just call them sprites, like the ones in the old folk tales of the Duchy of the Unicorn. And like the sprites of legend, Cabirs are prone to accidents, though mostly not out of malice; they are just a little scatterbrained.",
+		"faction": "tower",
+		"level": 2,
+		"cost": {
+			"gold": 160
+		},
+		"speed": 4,
+		"hitPoints": 13,
+		"attack": 6,
+		"defense": 4,
+		"damage": {
+			"min": 2,
+			"max": 4
+		},
+		"doubleWide": false,
+		"fightValue": 169,
+		"aiValue": 189,
+		"growth": 6,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"shooter": {
+				"type": "SHOOTER"
+			},
+			"immFire": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "fire",
+				"val": 50,
+				"description": "{Fire Immunity}\nImmune to Fire curses; half Fire damage."
+			},
+			"vulnWater": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "water",
+				"val": -25,
+				"description": "{Water Vulnerability}\nTakes 25% more Water damage."
+			},
+			"h7SchoolImmunity_fire": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7SchoolImmunity",
+				"val": 0,
+				"addInfo": {
+					"school": "fire"
+				},
+				"stacking": "h7SchoolImmunity_fire",
+				"hidden": true,
+				"description": "~"
+			}
+		},
+		"graphics": {
+			"animation": "h7/Cabir/battle.json",
+			"map": "h7/Cabir/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/Cabir/map/atkL.png",
+			"mapAttackFromRight": "h7/Cabir/map/atkR.png",
+			"iconLarge": "h7/Cabir/iconLarge.png",
+			"iconSmall": "h7/Cabir/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"frameAngles": [
+					90,
+					60,
+					45,
+					30,
+					0,
+					-30,
+					-45,
+					-60,
+					-90
+				],
+				"offset": {
+					"upperX": 15,
+					"upperY": -46,
+					"middleX": 21,
+					"middleY": -40,
+					"lowerX": 7,
+					"lowerY": -34
+				},
+				"attackClimaxFrame": 6,
+				"projectile": "h7/projectiles/H7CabirProjectile.json"
+			}
+		},
+		"sound": {
+			"attack": "h7/creature_cabir_attack_01.ogg",
+			"defend": "h7/creature_cabir_defend_01.ogg",
+			"wince": "h7/creature_cabir_hit_01.ogg",
+			"killed": "h7/creature_cabir_die_01.ogg",
+			"shoot": "h7/creature_cabir_attack_01.ogg"
+		},
+		"shots": 19,
+		"upgrades": [
+			"h7AcademyCabirMaster"
+		],
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					3,
+					3,
+					3,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					3,
+					4,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					0,
+					1,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					3,
+					3,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_WALL_PENALTY",
+					"description": "{Siege Shooter}\nNo damage loss when shooting over walls"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h7AcademyCabirMaster": {
+		"name": {
+			"singular": "Cabir Master",
+			"plural": "Cabir Masters"
+		},
+		"description": "When Cabirs earn recognition in the mages' service for outstanding skill or talent, they may be granted the title of Cabir Master. Cabir Masters understand constructs more deeply and are often sent to oversee their repair.\nCabirs are also often found near dwarven forges. The dwarves treat them with more respect than the mages do, mainly because they believe the Cabirs are linked to their dragon god Arkath. Most mages consider this nonsense, but it does explain why Cabirs look so much like lizards...",
+		"faction": "tower",
+		"level": 2,
+		"cost": {
+			"gold": 210
+		},
+		"speed": 5,
+		"hitPoints": 16,
+		"attack": 6,
+		"defense": 7,
+		"damage": {
+			"min": 4,
+			"max": 5
+		},
+		"doubleWide": false,
+		"fightValue": 244,
+		"aiValue": 273,
+		"growth": 6,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"shooter": {
+				"type": "SHOOTER"
+			},
+			"immFire": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "fire",
+				"val": 50,
+				"description": "{Fire Immunity}\nImmune to Fire curses; half Fire damage."
+			},
+			"vulnWater": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "water",
+				"val": -25,
+				"description": "{Water Vulnerability}\nTakes 25% more Water damage."
+			},
+			"h7SchoolImmunity_fire": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7SchoolImmunity",
+				"val": 0,
+				"addInfo": {
+					"school": "fire"
+				},
+				"stacking": "h7SchoolImmunity_fire",
+				"hidden": true,
+				"description": "~"
+			},
+			"cast_h7AbSolderingHands": {
+				"type": "SPELLCASTER",
+				"subtype": "h7AbSolderingHands",
+				"val": 0,
+				"icon": "h7/abilities/h7SolderingHands",
+				"description": "{Soldering Hands}\n1/battle: construct heals 6 HP/unit, revives"
+			},
+			"casts_h7AbSolderingHands": {
+				"type": "CASTS",
+				"val": 1
+			},
+			"noDefault_h7AbSolderingHands": {
+				"type": "NO_SPELLCAST_BY_DEFAULT",
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h7/CabirMaster/battle.json",
+			"map": "h7/CabirMaster/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/CabirMaster/map/atkL.png",
+			"mapAttackFromRight": "h7/CabirMaster/map/atkR.png",
+			"iconLarge": "h7/CabirMaster/iconLarge.png",
+			"iconSmall": "h7/CabirMaster/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"frameAngles": [
+					90,
+					60,
+					45,
+					30,
+					0,
+					-30,
+					-45,
+					-60,
+					-90
+				],
+				"offset": {
+					"upperX": 17,
+					"upperY": -48,
+					"middleX": 24,
+					"middleY": -41,
+					"lowerX": 8,
+					"lowerY": -34
+				},
+				"attackClimaxFrame": 6,
+				"projectile": "h7/projectiles/H7CabirProjectile.json"
+			}
+		},
+		"sound": {
+			"attack": "h7/creature_cabir_attack_01.ogg",
+			"defend": "h7/creature_cabir_defend_01.ogg",
+			"wince": "h7/creature_cabir_hit_01.ogg",
+			"killed": "h7/creature_cabir_die_01.ogg",
+			"shoot": "h7/creature_cabir_attack_01.ogg"
+		},
+		"shots": 19,
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					3,
+					3,
+					3,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					3,
+					4,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					0,
+					1,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					3,
+					3,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_WALL_PENALTY",
+					"description": "{Siege Shooter}\nNo damage loss when shooting over walls"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h7AcademyColossus": {
+		"name": {
+			"singular": "Colossus",
+			"plural": "Colossi"
+		},
+		"description": "The first Titans were giant statues made by the Shantiri in ancient times from costly metals and minerals, the most important being starsilver. For years the mages tried to recreate these huge, complex constructs. Their first result, the Colossus, is not as mighty as the ancient Titans, but still impressive.\nA Colossus is usually controlled remotely by a team of mages. Its makers project their own souls into its body, giving the Colossus some intelligence and resistance to magic.",
+		"faction": "tower",
+		"level": 7,
+		"cost": {
+			"gold": 2590,
+			"mercury": 1
+		},
+		"speed": 7,
+		"hitPoints": 227,
+		"attack": 17,
+		"defense": 21,
+		"damage": {
+			"min": 35,
+			"max": 46
+		},
+		"doubleWide": true,
+		"fightValue": 3514,
+		"aiValue": 4579,
+		"growth": 1,
+		"advMapAmount": {
+			"min": 1,
+			"max": 3
+		},
+		"abilities": {
+			"nonLiving": {
+				"type": "NON_LIVING",
+				"description": "{Construct}\nImmune: poison, blind, Mind, Morale; no heals"
+			},
+			"mindImmunity": {
+				"type": "MIND_IMMUNITY"
+			},
+			"poisonImmunity": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "poison",
+				"hidden": true
+			},
+			"h7MagicAbsorption": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7MagicAbsorption",
+				"icon": "h7/abilities/h7MagicAbsorption",
+				"description": "{Magic Absorption}\nNext attack adds spell damage taken (capped)"
+			}
+		},
+		"graphics": {
+			"animation": "h7/Colossus/battle.json",
+			"map": "h7/Colossus/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/Colossus/map/atkL.png",
+			"mapAttackFromRight": "h7/Colossus/map/atkR.png",
+			"iconLarge": "h7/Colossus/iconLarge.png",
+			"iconSmall": "h7/Colossus/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h7/creature_colossus_attack_01.ogg",
+			"defend": "h7/creature_colossus_defend_01.ogg",
+			"wince": "h7/creature_colossus_hit_01.ogg",
+			"killed": "h7/creature_colossus_die_01.ogg",
+			"move": "h7/creature_colossus_move_01.ogg"
+		},
+		"upgrades": [
+			"h7AcademyTitan"
+		],
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE",
+					"description": "{Magic Resistance}\nChance to resist enemy spells"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					10,
+					20,
+					30,
+					40,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "BLOCKS_RETALIATION",
+					"description": "{No Retaliation}\nEnemy cannot retaliate when attacked"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true
+				]
+			}
+		]
+	},
+	"h7AcademyDisciple": {
+		"name": {
+			"singular": "Disciple",
+			"plural": "Disciples"
+		},
+		"description": "In the last two years of service, students earn the title of Disciple. Under a master's leadership, they must manage the new Apprentices. A mage or an elder Blade Mage comes to teach them the art of magical warfare.\nOne big risk of sending untested, eager young mages into battle is that their spells may well hit their own side. A dark joke says that this is why constructs and beastmen are sent in first.",
+		"faction": "tower",
+		"level": 4,
+		"cost": {
+			"gold": 480
+		},
+		"speed": 5,
+		"hitPoints": 47,
+		"attack": 18,
+		"defense": 14,
+		"damage": {
+			"min": 8,
+			"max": 11
+		},
+		"doubleWide": true,
+		"fightValue": 728,
+		"aiValue": 835,
+		"growth": 3,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"shooter": {
+				"type": "SHOOTER"
+			},
+			"h7PiercingShot": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7PiercingShotApprentice",
+				"icon": "h7/abilities/h7PiercingShotApprentice",
+				"description": "{Piercing Shot}\nPierces a line; others on it (allies too) burn"
+			},
+			"cast_h7AbNova": {
+				"type": "SPELLCASTER",
+				"subtype": "h7AbNova",
+				"val": 0,
+				"icon": "h7/abilities/h7Nova",
+				"description": "{Nova}\nNext shot hits all units in 3×3 around target."
+			},
+			"casts_h7AbNova": {
+				"type": "CASTS",
+				"val": 1
+			},
+			"noDefault_h7AbNova": {
+				"type": "NO_SPELLCAST_BY_DEFAULT",
+				"hidden": true
+			},
+			"novaShot": {
+				"type": "SPELL_LIKE_ATTACK",
+				"subtype": "h7AbNovaArea",
+				"val": 0,
+				"hidden": true,
+				"limiters": [
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "H7_NOVA_ARMED_H7C"
+					}
+				]
+			}
+		},
+		"graphics": {
+			"animation": "h7/Disciple/battle.json",
+			"map": "h7/Disciple/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/Disciple/map/atkL.png",
+			"mapAttackFromRight": "h7/Disciple/map/atkR.png",
+			"iconLarge": "h7/Disciple/iconLarge.png",
+			"iconSmall": "h7/Disciple/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"frameAngles": [
+					90,
+					60,
+					45,
+					30,
+					0,
+					-30,
+					-45,
+					-60,
+					-90
+				],
+				"offset": {
+					"upperX": 13,
+					"upperY": -42,
+					"middleX": 4,
+					"middleY": -39,
+					"lowerX": -11,
+					"lowerY": -40
+				},
+				"attackClimaxFrame": 7,
+				"projectile": "h7/projectiles/A_Projectile_Prime_Bullet_s85.json"
+			}
+		},
+		"sound": {
+			"attack": "h7/creature_apprentice_attack.ogg",
+			"shoot": "h7/creature_apprentice_attack_ranged.ogg",
+			"defend": "h7/creature_apprentice_defend.ogg",
+			"wince": "h7/creature_apprentice_hit.ogg",
+			"killed": "h7/creature_apprentice_die.ogg",
+			"move": "h7/creature_apprentice_move.ogg"
+		},
+		"shots": 15,
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					5,
+					6,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_WALL_PENALTY",
+					"description": "{Siege Shooter}\nNo damage loss when shooting over walls"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_DISTANCE_PENALTY",
+					"description": "{Sharpshooter}\nNo penalty for long-range shots"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h7AcademyDjinn": {
+		"name": {
+			"singular": "Djinn",
+			"plural": "Djinn"
+		},
+		"description": "Djinn are humanoid spirits from the Plane of Magic, often seen as embodiments of Sar-Elam's power and wisdom. Depending on the time, place and manner of summoning, a Djinn may appear as either gender.\nAs for Sar-Elam's gender, opinions differ. That Djinn are both male and female only makes the truth more elusive.",
+		"faction": "tower",
+		"level": 5,
+		"cost": {
+			"gold": 635
+		},
+		"speed": 7,
+		"hitPoints": 58,
+		"attack": 8,
+		"defense": 11,
+		"damage": {
+			"min": 12,
+			"max": 17
+		},
+		"doubleWide": false,
+		"fightValue": 875,
+		"aiValue": 974,
+		"growth": 2,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"flying": {
+				"type": "FLYING"
+			},
+			"h7PrimeImmunity": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7PrimeImmunity",
+				"val": 50,
+				"icon": "h7/abilities/h7PrimeImmunity",
+				"description": "{Prime Immunity}\nImmune to Prime curses; half Prime damage."
+			},
+			"h7PrimeImmunityMark": {
+				"type": "H7_PRIME_IMMUNITY_H7C",
+				"hidden": true,
+				"val": 50
+			},
+			"h7ManaDrain": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7ManaDrain",
+				"val": 1,
+				"icon": "h7/abilities/h7ManaDrain",
+				"description": "{Mana Drain}\nPer kill: hero's spells cost 1 less next round"
+			}
+		},
+		"graphics": {
+			"animation": "h7/Djinn/battle.json",
+			"map": "h7/Djinn/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/Djinn/map/atkL.png",
+			"mapAttackFromRight": "h7/Djinn/map/atkR.png",
+			"iconLarge": "h7/Djinn/iconLarge.png",
+			"iconSmall": "h7/Djinn/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"defend": "h7/creature_djinn_defend_01.ogg",
+			"wince": "h7/creature_djinn_hit_01.ogg",
+			"killed": "h7/creature_djinn_die_01.ogg",
+			"startMoving": "h7/creature_djinn_fly_start.ogg",
+			"endMoving": "h7/creature_djinn_fly_end.ogg",
+			"attack": "h7/creature_djinn_attack_critical_01.ogg"
+		},
+		"upgrades": [
+			"h7AcademyDjinnChanneler"
+		],
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					3,
+					4,
+					5,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					3,
+					4,
+					4,
+					6,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					2,
+					3,
+					3,
+					4,
+					5,
+					6,
+					6,
+					7
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					7
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_RETALIATION",
+					"description": "{Nimbleness}\nExtra retaliation each round"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "MIND_IMMUNITY",
+					"description": "{Steadfast Mind}\nImmune to Mind spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h7AcademyDjinnChanneler": {
+		"name": {
+			"singular": "Djinn Channeler",
+			"plural": "Djinn Channelers"
+		},
+		"description": "Djinn Channelers are the mages' most valuable allies. Their arcane knowledge and natural affinity with the flow of mana can extend the reach of a mage's skills while inflicting harmful magic on the mage's enemies.\nA Djinn must bind itself to an object, such as a gem, a ring or a lamp, to manifest in the material world. Back when I was a Disciple, a group of us used to joke that our master Eshtrel kept a Djinn in his turban. Turns out we were right!",
+		"faction": "tower",
+		"level": 5,
+		"cost": {
+			"gold": 830
+		},
+		"speed": 10,
+		"hitPoints": 72,
+		"attack": 8,
+		"defense": 11,
+		"damage": {
+			"min": 12,
+			"max": 17
+		},
+		"doubleWide": false,
+		"fightValue": 1175,
+		"aiValue": 1307,
+		"growth": 2,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"flying": {
+				"type": "FLYING"
+			},
+			"h7PrimeImmunity": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7PrimeImmunity",
+				"val": 50,
+				"icon": "h7/abilities/h7PrimeImmunity",
+				"description": "{Prime Immunity}\nImmune to Prime curses; half Prime damage."
+			},
+			"h7PrimeImmunityMark": {
+				"type": "H7_PRIME_IMMUNITY_H7C",
+				"hidden": true,
+				"val": 50
+			},
+			"h7MagicTouch": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7MagicTouch",
+				"icon": "h7/abilities/h7MagicTouch",
+				"description": "{Magic Touch}\nAttacks apply a random curse (replaces old)"
+			},
+			"h7ManaDrain": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7ManaDrain",
+				"val": 1,
+				"icon": "h7/abilities/h7ManaDrain",
+				"description": "{Mana Drain}\nPer kill: hero's spells cost 1 less next round"
+			}
+		},
+		"graphics": {
+			"animation": "h7/DjinnChanneler/battle.json",
+			"map": "h7/DjinnChanneler/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/DjinnChanneler/map/atkL.png",
+			"mapAttackFromRight": "h7/DjinnChanneler/map/atkR.png",
+			"iconLarge": "h7/DjinnChanneler/iconLarge.png",
+			"iconSmall": "h7/DjinnChanneler/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"defend": "h7/creature_djinn_defend_01.ogg",
+			"wince": "h7/creature_djinn_hit_01.ogg",
+			"killed": "h7/creature_djinn_die_01.ogg",
+			"startMoving": "h7/creature_djinn_fly_start.ogg",
+			"endMoving": "h7/creature_djinn_fly_end.ogg",
+			"attack": "h7/creature_djinn_attack_critical_01.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					3,
+					4,
+					5,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					3,
+					4,
+					4,
+					6,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					2,
+					3,
+					3,
+					4,
+					5,
+					6,
+					6,
+					7
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					7
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_RETALIATION",
+					"description": "{Nimbleness}\nExtra retaliation each round"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "MIND_IMMUNITY",
+					"description": "{Steadfast Mind}\nImmune to Mind spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h7AcademyGargoyle": {
+		"name": {
+			"singular": "Gargoyle",
+			"plural": "Gargoyles"
+		},
+		"description": "Gargoyles are flying statues brought to life by magic. Mages value these constructs for their flight and the tactical edge it brings. To keep them in the field for a long time, mages often imbue Gargoyles with strong magic shields against enemy spells.\nAnimating a construct is no small feat, and animating one that flies is an unmatched achievement. Gargoyles may look a bit clumsy, but to me their very existence is a miracle.",
+		"faction": "tower",
+		"level": 1,
+		"cost": {
+			"gold": 55
+		},
+		"speed": 4,
+		"hitPoints": 8,
+		"attack": 4,
+		"defense": 8,
+		"damage": {
+			"min": 1,
+			"max": 2
+		},
+		"doubleWide": false,
+		"fightValue": 75,
+		"aiValue": 76,
+		"growth": 12,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"flying": {
+				"type": "FLYING"
+			},
+			"nonLiving": {
+				"type": "NON_LIVING",
+				"description": "{Construct}\nImmune: poison, blind, Mind, Morale; no heals"
+			},
+			"mindImmunity": {
+				"type": "MIND_IMMUNITY"
+			},
+			"poisonImmunity": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "poison",
+				"hidden": true
+			},
+			"magicResist": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "any",
+				"val": 50,
+				"description": "{Magic Immunity}\nImmune to curses; takes half spell damage."
+			},
+			"noCorpse": {
+				"type": "DISINTEGRATE",
+				"hidden": true
+			},
+			"h7MagicImmunity": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7MagicImmunity",
+				"val": 0,
+				"addInfo": {
+					"school": "any"
+				},
+				"hidden": true,
+				"description": "~"
+			}
+		},
+		"graphics": {
+			"animation": "h7/Gargoyle/battle.json",
+			"map": "h7/Gargoyle/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/Gargoyle/map/atkL.png",
+			"mapAttackFromRight": "h7/Gargoyle/map/atkR.png",
+			"iconLarge": "h7/Gargoyle/iconLarge.png",
+			"iconSmall": "h7/Gargoyle/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h7/creature_gargoyle_attack_01.ogg",
+			"defend": "h7/creature_gargoyle_defend_01.ogg",
+			"wince": "h7/creature_gargoyle_hit_01.ogg",
+			"killed": "h7/creature_gargoyle_die_01.ogg",
+			"startMoving": "h7/creature_obsidian_gargoyle_fly_start.ogg",
+			"endMoving": "h7/creature_obsidian_gargoyle_fly_end.ogg"
+		},
+		"upgrades": [
+			"h7AcademyObsidianGargoyle"
+		],
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_RETALIATION",
+					"description": "{Nimbleness}\nExtra retaliation each round"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			}
+		]
+	},
+	"h7AcademyGolem": {
+		"name": {
+			"singular": "Golem",
+			"plural": "Golems"
+		},
+		"description": "Golems are magical constructs widely used in battle by the Silver Cities. They come in many sizes and shapes depending on who makes them, but they are usually tough, heavy humanoid constructs.\nLike the Titans, today's Golems are inspired by the ancient Shantiri constructs. When the ancient civilization collapsed, much knowledge was forgotten...",
+		"faction": "tower",
+		"level": 3,
+		"cost": {
+			"gold": 235
+		},
+		"speed": 3,
+		"hitPoints": 26,
+		"attack": 6,
+		"defense": 12,
+		"damage": {
+			"min": 5,
+			"max": 7
+		},
+		"doubleWide": false,
+		"fightValue": 260,
+		"aiValue": 308,
+		"growth": 6,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"nonLiving": {
+				"type": "NON_LIVING",
+				"description": "{Construct}\nImmune: poison, blind, Mind, Morale; no heals"
+			},
+			"mindImmunity": {
+				"type": "MIND_IMMUNITY"
+			},
+			"poisonImmunity": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "poison",
+				"hidden": true
+			},
+			"unfettered": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "slow",
+				"description": "{Unfettered}\nImmune to all slowing effects."
+			},
+			"h7Unfettered": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7Unfettered",
+				"val": 0,
+				"hidden": true,
+				"description": "~"
+			}
+		},
+		"graphics": {
+			"animation": "h7/Golem/battle.json",
+			"map": "h7/Golem/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/Golem/map/atkL.png",
+			"mapAttackFromRight": "h7/Golem/map/atkR.png",
+			"iconLarge": "h7/Golem/iconLarge.png",
+			"iconSmall": "h7/Golem/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h7/creature_golem_attack.ogg",
+			"defend": "h7/creature_golem_defend.ogg",
+			"wince": "h7/creature_golem_hit.ogg",
+			"killed": "h7/creature_golem_die.ogg",
+			"move": "h7/creature_golem_move.ogg"
+		},
+		"upgrades": [
+			"h7AcademySandstoneGolem"
+		],
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "CHARGE_IMMUNITY",
+					"description": "{Steady Ranks}\nImmune to charge damage bonuses"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h7AcademyObsidianGargoyle": {
+		"name": {
+			"singular": "Obsidian Gargoyle",
+			"plural": "Obsidian Gargoyles"
+		},
+		"description": "The first Gargoyles were relatively fragile and slow, which made them easy targets. The special material of Obsidian Gargoyles is far more durable, and their design lets them fly farther.\nAccording to School of Matter lore, the great mage Masfa created the first Gargoyle. Some say he made it to preserve the soul of his late daughter, but in the end he got only an illusion of life...",
+		"faction": "tower",
+		"level": 1,
+		"cost": {
+			"gold": 70
+		},
+		"speed": 5,
+		"hitPoints": 8,
+		"attack": 4,
+		"defense": 8,
+		"damage": {
+			"min": 2,
+			"max": 2
+		},
+		"doubleWide": false,
+		"fightValue": 107,
+		"aiValue": 108,
+		"growth": 12,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"flying": {
+				"type": "FLYING"
+			},
+			"nonLiving": {
+				"type": "NON_LIVING",
+				"description": "{Construct}\nImmune: poison, blind, Mind, Morale; no heals"
+			},
+			"mindImmunity": {
+				"type": "MIND_IMMUNITY"
+			},
+			"poisonImmunity": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "poison",
+				"hidden": true
+			},
+			"magicResist": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "any",
+				"val": 50,
+				"description": "{Magic Immunity}\nImmune to curses; takes half spell damage."
+			},
+			"noCorpse": {
+				"type": "DISINTEGRATE",
+				"hidden": true
+			},
+			"h7MagicImmunity": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7MagicImmunity",
+				"val": 0,
+				"addInfo": {
+					"school": "any"
+				},
+				"hidden": true,
+				"description": "~"
+			}
+		},
+		"graphics": {
+			"animation": "h7/ObsidianGargoyle/battle.json",
+			"map": "h7/ObsidianGargoyle/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/ObsidianGargoyle/map/atkL.png",
+			"mapAttackFromRight": "h7/ObsidianGargoyle/map/atkR.png",
+			"iconLarge": "h7/ObsidianGargoyle/iconLarge.png",
+			"iconSmall": "h7/ObsidianGargoyle/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h7/creature_gargoyle_attack_01.ogg",
+			"defend": "h7/creature_gargoyle_defend_01.ogg",
+			"wince": "h7/creature_gargoyle_hit_01.ogg",
+			"killed": "h7/creature_gargoyle_die_01.ogg",
+			"move": "h7/creature_sand_wyvern_move.ogg",
+			"startMoving": "h7/creature_obsidian_gargoyle_fly_start.ogg",
+			"endMoving": "h7/creature_obsidian_gargoyle_fly_end.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_RETALIATION",
+					"description": "{Nimbleness}\nExtra retaliation each round"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			}
+		]
+	},
+	"h7AcademyRakshasa": {
+		"name": {
+			"singular": "Rakshasa",
+			"plural": "Rakshasas"
+		},
+		"description": "Rakshasas are half-human, half-feline beastmen. With their feral speed and reflexes, unmatched swordsmanship and the enchanted weapons granted by their mage masters, Rakshasas may be the most dangerous melee fighters in all of Ashan.\nWhen the orcs and beastmen rebelled, the Rakshasas chose to stay by their masters' side. This was rather unexpected. The main reason is that they were treated better and were widely feared and respected.",
+		"faction": "tower",
+		"level": 6,
+		"cost": {
+			"gold": 900
+		},
+		"speed": 7,
+		"hitPoints": 94,
+		"attack": 17,
+		"defense": 16,
+		"damage": {
+			"min": 19,
+			"max": 25
+		},
+		"doubleWide": true,
+		"fightValue": 1267,
+		"aiValue": 1496,
+		"growth": 2,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"noRetaliation": {
+				"type": "BLOCKS_RETALIATION",
+				"description": "{No Enemy Retaliation}\nTarget cannot retaliate."
+			}
+		},
+		"graphics": {
+			"animation": "h7/Rakshasa/battle.json",
+			"map": "h7/Rakshasa/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/Rakshasa/map/atkL.png",
+			"mapAttackFromRight": "h7/Rakshasa/map/atkR.png",
+			"iconLarge": "h7/Rakshasa/iconLarge.png",
+			"iconSmall": "h7/Rakshasa/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h7/creature_rakshasa_attack.ogg",
+			"defend": "h7/creature_rakshasa_basic_defend.ogg",
+			"wince": "h7/creature_rakshasa_hit.ogg",
+			"killed": "h7/creature_rakshasa_basic_die.ogg"
+		},
+		"upgrades": [
+			"h7AcademyRakshasaRaja"
+		],
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					2,
+					3,
+					4,
+					5,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "MIND_IMMUNITY",
+					"description": "{Steadfast Mind}\nImmune to Mind spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h7AcademyRakshasaRaja": {
+		"name": {
+			"singular": "Rakshasa Raja",
+			"plural": "Rakshasa Rajas"
+		},
+		"description": "Mighty Rakshasa Rajas are blessed by magic. Most of them gain an extra pair of arms bearing protective tattoos; the strongest are infused with the essence of ancient air spirits, making them even swifter and more agile.\nThey say most Rakshasas have a bit of an ego. When I worked at the sanatorium in Kasar, a bunch of conceited Rakshasas even founded a cult to worship themselves. A cat never changes its ways.",
+		"faction": "tower",
+		"level": 6,
+		"cost": {
+			"gold": 1170
+		},
+		"speed": 8,
+		"hitPoints": 109,
+		"attack": 17,
+		"defense": 16,
+		"damage": {
+			"min": 21,
+			"max": 27
+		},
+		"doubleWide": true,
+		"fightValue": 1806,
+		"aiValue": 2132,
+		"growth": 2,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"noRetaliation": {
+				"type": "BLOCKS_RETALIATION",
+				"description": "{No Enemy Retaliation}\nTarget cannot retaliate."
+			},
+			"sweep": {
+				"type": "THREE_HEADED_ATTACK",
+				"description": "{Sweep}\nAlso hits adjacent foes flanking the target"
+			}
+		},
+		"graphics": {
+			"animation": "h7/RakshasaRaja/battle.json",
+			"map": "h7/RakshasaRaja/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/RakshasaRaja/map/atkL.png",
+			"mapAttackFromRight": "h7/RakshasaRaja/map/atkR.png",
+			"iconLarge": "h7/RakshasaRaja/iconLarge.png",
+			"iconSmall": "h7/RakshasaRaja/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h7/creature_rakshasa_attack.ogg",
+			"defend": "h7/creature_rakshasa_basic_defend.ogg",
+			"wince": "h7/creature_rakshasa_hit.ogg",
+			"killed": "h7/creature_rakshasa_basic_die.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					2,
+					3,
+					4,
+					5,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "MIND_IMMUNITY",
+					"description": "{Steadfast Mind}\nImmune to Mind spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h7AcademySandstoneGolem": {
+		"name": {
+			"singular": "Sandstone Golem",
+			"plural": "Sandstone Golems"
+		},
+		"description": "",
+		"faction": "tower",
+		"level": 3,
+		"cost": {
+			"gold": 300
+		},
+		"speed": 6,
+		"hitPoints": 32,
+		"attack": 6,
+		"defense": 18,
+		"damage": {
+			"min": 6,
+			"max": 8
+		},
+		"doubleWide": false,
+		"fightValue": 369,
+		"aiValue": 437,
+		"growth": 6,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"nonLiving": {
+				"type": "NON_LIVING",
+				"description": "{Construct}\nImmune: poison, blind, Mind, Morale; no heals"
+			},
+			"mindImmunity": {
+				"type": "MIND_IMMUNITY"
+			},
+			"poisonImmunity": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "poison",
+				"hidden": true
+			},
+			"unfettered": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "slow",
+				"description": "{Unfettered}\nImmune to all slowing effects."
+			},
+			"h7Unfettered": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7Unfettered",
+				"val": 0,
+				"hidden": true,
+				"description": "~"
+			}
+		},
+		"graphics": {
+			"animation": "h7/SandstoneGolem/battle.json",
+			"map": "h7/SandstoneGolem/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/SandstoneGolem/map/atkL.png",
+			"mapAttackFromRight": "h7/SandstoneGolem/map/atkR.png",
+			"iconLarge": "h7/SandstoneGolem/iconLarge.png",
+			"iconSmall": "h7/SandstoneGolem/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h7/creature_golem_attack.ogg",
+			"defend": "h7/creature_golem_defend.ogg",
+			"wince": "h7/creature_golem_hit.ogg",
+			"killed": "h7/creature_golem_die.ogg",
+			"move": "h7/creature_golem_move.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "CHARGE_IMMUNITY",
+					"description": "{Steady Ranks}\nImmune to charge damage bonuses"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h7AcademySimurgh": {
+		"name": {
+			"singular": "Simurgh",
+			"plural": "Simurghs"
+		},
+		"description": "For a long time Simurghs were thought by apprentices to be mere legend, until they were finally found among the sublime landscapes of the Plane of Magic. It took the mages a long time (and many disastrous failures) to understand the nature of this powerful creature and bend it to their will.\nYou can find all kinds of divine birds in legend: the phoenix, the roc, the spirit vulture... In the old myths, the Simurgh was also thought to be a unique divine bird, king of the Plane of Magic. Now we know there are many Simurghs, and that they are the final stage of the Arcane Eagle's evolution.",
+		"faction": "tower",
+		"level": 7,
+		"cost": {
+			"gold": 3365,
+			"crystal": 1,
+			"gems": 2
+		},
+		"speed": 21,
+		"hitPoints": 200,
+		"attack": 22,
+		"defense": 21,
+		"damage": {
+			"min": 40,
+			"max": 50
+		},
+		"doubleWide": true,
+		"fightValue": 5187,
+		"aiValue": 6758,
+		"growth": 1,
+		"advMapAmount": {
+			"min": 1,
+			"max": 3
+		},
+		"abilities": {
+			"flying": {
+				"type": "FLYING"
+			},
+			"catalyst": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "any",
+				"val": -50,
+				"stacking": "h7Catalyst",
+				"propagator": "BATTLE_WIDE",
+				"propagationUpdater": "BONUS_OWNER_UPDATER",
+				"limiters": [
+					"allOf",
+					{
+						"type": "UNIT_ADJACENT",
+						"creature": "h7AcademySimurgh"
+					},
+					"OPPOSITE_SIDE"
+				],
+				"description": "{Catalyst}\nAdjacent enemies take +50% spell damage."
+			},
+			"noCorpse": {
+				"type": "DISINTEGRATE",
+				"hidden": true
+			},
+			"h7ArcaneWings": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7ArcaneWings",
+				"icon": "h7/abilities/h7ArcaneWings",
+				"description": "{Arcane Wings}\nRound end: each adjacent foe gets random curse"
+			},
+			"h7SanctumTwin": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7SanctumTwin",
+				"hidden": true,
+				"description": "~",
+				"addInfo": {
+					"twin": "h7AcademyTitan",
+					"army": "h7AcademyObsidianGargoyle,h7AcademyCabirMaster,h7AcademySandstoneGolem,h7AcademyDisciple,h7AcademyDjinnChanneler,h7AcademyRakshasaRaja"
+				}
+			}
+		},
+		"graphics": {
+			"animation": "h7/Simurgh/battle.json",
+			"map": "h7/Simurgh/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/Simurgh/map/atkL.png",
+			"mapAttackFromRight": "h7/Simurgh/map/atkR.png",
+			"iconLarge": "h7/Simurgh/iconLarge.png",
+			"iconSmall": "h7/Simurgh/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h7/creature_magic_bird_attack_01.ogg",
+			"defend": "h7/creature_magic_bird_defend_01.ogg",
+			"wince": "h7/creature_magic_bird_hit_01.ogg",
+			"killed": "h7/creature_magic_bird_die_01.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_RETALIATION",
+					"description": "{Nimbleness}\nExtra retaliation each round"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "MIND_IMMUNITY",
+					"description": "{Steadfast Mind}\nImmune to Mind spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE",
+					"description": "{Magic Resistance}\nChance to resist enemy spells"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					10,
+					20,
+					30,
+					40,
+					50
+				]
+			}
+		]
+	},
+	"h7AcademyTitan": {
+		"name": {
+			"singular": "Titan",
+			"plural": "Titans"
+		},
+		"description": "The few Shantiri Titans that survive today have become objects of worship. The mages carefully protect them and study them to build smaller copies, and they remain extraordinarily powerful in battle. Their size and weight let them trample enemies, and their earth-shaking fists can channel devastating bolts of Prime magic.\nThe materials for making Titans are rare and costly, so they are not sent into battle lightly. Then again, enemies usually surrender at the mere sight of a Titan...",
+		"faction": "tower",
+		"level": 7,
+		"cost": {
+			"gold": 3365,
+			"sulfur": 1,
+			"mercury": 2
+		},
+		"speed": 8,
+		"hitPoints": 227,
+		"attack": 17,
+		"defense": 21,
+		"damage": {
+			"min": 35,
+			"max": 46
+		},
+		"doubleWide": true,
+		"fightValue": 5808,
+		"aiValue": 7566,
+		"growth": 1,
+		"advMapAmount": {
+			"min": 1,
+			"max": 3
+		},
+		"abilities": {
+			"shooter": {
+				"type": "SHOOTER"
+			},
+			"nonLiving": {
+				"type": "NON_LIVING",
+				"description": "{Construct}\nImmune: poison, blind, Mind, Morale; no heals"
+			},
+			"mindImmunity": {
+				"type": "MIND_IMMUNITY"
+			},
+			"poisonImmunity": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "poison",
+				"hidden": true
+			},
+			"h7MagicAbsorption": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7MagicAbsorption",
+				"icon": "h7/abilities/h7MagicAbsorption",
+				"description": "{Magic Absorption}\nNext attack adds spell damage taken (capped)"
+			},
+			"h7SanctumTwin": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7SanctumTwin",
+				"hidden": true,
+				"description": "~",
+				"addInfo": {
+					"twin": "h7AcademySimurgh",
+					"army": "h7AcademyObsidianGargoyle,h7AcademyCabirMaster,h7AcademySandstoneGolem,h7AcademyDisciple,h7AcademyDjinnChanneler,h7AcademyRakshasaRaja"
+				}
+			}
+		},
+		"graphics": {
+			"animation": "h7/Titan/battle.json",
+			"map": "h7/Titan/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/Titan/map/atkL.png",
+			"mapAttackFromRight": "h7/Titan/map/atkR.png",
+			"iconLarge": "h7/Titan/iconLarge.png",
+			"iconSmall": "h7/Titan/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"frameAngles": [
+					90,
+					60,
+					45,
+					30,
+					0,
+					-30,
+					-45,
+					-60,
+					-90
+				],
+				"offset": {
+					"upperX": 33,
+					"upperY": -98,
+					"middleX": 48,
+					"middleY": -84,
+					"lowerX": 18,
+					"lowerY": -70
+				},
+				"attackClimaxFrame": 6,
+				"ray": [
+					{
+						"start": [
+							16,
+							32,
+							92,
+							10
+						],
+						"end": [
+							16,
+							32,
+							92,
+							10
+						]
+					},
+					{
+						"start": [
+							27,
+							55,
+							158,
+							40
+						],
+						"end": [
+							27,
+							55,
+							158,
+							40
+						]
+					},
+					{
+						"start": [
+							29,
+							59,
+							168,
+							62
+						],
+						"end": [
+							29,
+							59,
+							168,
+							62
+						]
+					},
+					{
+						"start": [
+							34,
+							67,
+							189,
+							98
+						],
+						"end": [
+							34,
+							67,
+							189,
+							98
+						]
+					},
+					{
+						"start": [
+							52,
+							94,
+							219,
+							126
+						],
+						"end": [
+							52,
+							94,
+							219,
+							126
+						]
+					},
+					{
+						"start": [
+							81,
+							141,
+							245,
+							179
+						],
+						"end": [
+							81,
+							141,
+							245,
+							179
+						]
+					},
+					{
+						"start": [
+							101,
+							174,
+							252,
+							203
+						],
+						"end": [
+							101,
+							174,
+							252,
+							203
+						]
+					},
+					{
+						"start": [
+							114,
+							188,
+							255,
+							225
+						],
+						"end": [
+							114,
+							188,
+							255,
+							225
+						]
+					},
+					{
+						"start": [
+							136,
+							205,
+							255,
+							249
+						],
+						"end": [
+							136,
+							205,
+							255,
+							249
+						]
+					},
+					{
+						"start": [
+							165,
+							222,
+							255,
+							253
+						],
+						"end": [
+							165,
+							222,
+							255,
+							253
+						]
+					},
+					{
+						"start": [
+							194,
+							242,
+							255,
+							255
+						],
+						"end": [
+							194,
+							242,
+							255,
+							255
+						]
+					},
+					{
+						"start": [
+							216,
+							249,
+							255,
+							255
+						],
+						"end": [
+							216,
+							249,
+							255,
+							255
+						]
+					},
+					{
+						"start": [
+							225,
+							254,
+							255,
+							255
+						],
+						"end": [
+							225,
+							254,
+							255,
+							255
+						]
+					},
+					{
+						"start": [
+							221,
+							252,
+							255,
+							255
+						],
+						"end": [
+							221,
+							252,
+							255,
+							255
+						]
+					},
+					{
+						"start": [
+							201,
+							242,
+							255,
+							255
+						],
+						"end": [
+							201,
+							242,
+							255,
+							255
+						]
+					},
+					{
+						"start": [
+							172,
+							228,
+							255,
+							255
+						],
+						"end": [
+							172,
+							228,
+							255,
+							255
+						]
+					},
+					{
+						"start": [
+							140,
+							208,
+							255,
+							255
+						],
+						"end": [
+							140,
+							208,
+							255,
+							255
+						]
+					},
+					{
+						"start": [
+							109,
+							179,
+							252,
+							250
+						],
+						"end": [
+							109,
+							179,
+							252,
+							250
+						]
+					},
+					{
+						"start": [
+							90,
+							155,
+							255,
+							214
+						],
+						"end": [
+							90,
+							155,
+							255,
+							214
+						]
+					},
+					{
+						"start": [
+							79,
+							138,
+							252,
+							182
+						],
+						"end": [
+							79,
+							138,
+							252,
+							182
+						]
+					},
+					{
+						"start": [
+							77,
+							134,
+							250,
+							165
+						],
+						"end": [
+							77,
+							134,
+							250,
+							165
+						]
+					},
+					{
+						"start": [
+							67,
+							121,
+							214,
+							154
+						],
+						"end": [
+							67,
+							121,
+							214,
+							154
+						]
+					},
+					{
+						"start": [
+							41,
+							81,
+							171,
+							139
+						],
+						"end": [
+							41,
+							81,
+							171,
+							139
+						]
+					},
+					{
+						"start": [
+							35,
+							69,
+							163,
+							120
+						],
+						"end": [
+							35,
+							69,
+							163,
+							120
+						]
+					},
+					{
+						"start": [
+							28,
+							56,
+							153,
+							85
+						],
+						"end": [
+							28,
+							56,
+							153,
+							85
+						]
+					},
+					{
+						"start": [
+							23,
+							47,
+							130,
+							81
+						],
+						"end": [
+							23,
+							47,
+							130,
+							81
+						]
+					},
+					{
+						"start": [
+							17,
+							35,
+							99,
+							28
+						],
+						"end": [
+							17,
+							35,
+							99,
+							28
+						]
+					}
+				]
+			}
+		},
+		"sound": {
+			"attack": "h7/creature_colossus_attack_01.ogg",
+			"shoot": "h7/creature_apprentice_attack_ranged.ogg",
+			"defend": "h7/creature_colossus_defend_01.ogg",
+			"wince": "h7/creature_colossus_hit_01.ogg",
+			"killed": "h7/creature_colossus_die_01.ogg",
+			"move": "h7/creature_colossus_move_01.ogg"
+		},
+		"shots": 24,
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_WALL_PENALTY",
+					"description": "{Siege Shooter}\nNo damage loss when shooting over walls"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_DISTANCE_PENALTY",
+					"description": "{Sharpshooter}\nNo penalty for long-range shots"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "SHOTS",
+					"description": "{Ammunition}\nMore shots"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			}
+		]
+	}
+}

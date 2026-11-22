@@ -1,0 +1,16 @@
+{
+ "basepath": "h7/runeStone/Fortune/map/",
+ "sequences": [
+  {
+   "group": 0,
+   "frames": [
+    "stand_00.png",
+    "stand_02.png",
+    "stand_04.png",
+    "stand_06.png",
+    "stand_08.png",
+    "stand_10.png"
+   ]
+  }
+ ]
+}

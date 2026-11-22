@@ -1,0 +1,20 @@
+{
+	"name": "Heroes VII Memorial: Inquisitors at the Blacksmith",
+	"description": "Takes effect when the Cathedral town of Tears of Ashan is enabled: at the Heroes VII Memorial Blacksmith, Inquisitors count as Knights and Clerics, like in the Haven faction.",
+	"chinese": {
+		"name": "英雄无敌7纪念版：铁匠铺认审判官",
+		"description": "开着亚山之泪的教廷时生效：英雄无敌7纪念铁匠铺把审判官和骑士、牧师一样看待。"
+	},
+	"version": "0.1.0",
+	"author": "yche2990",
+	"modType": "Compatibility",
+	"compatibility": {
+		"min": "1.8.0"
+	},
+	"depends": [
+		"tears-of-ashan.toa-cathedral-town"
+	],
+	"objects": [
+		"config/compat/smithy.json"
+	]
+}

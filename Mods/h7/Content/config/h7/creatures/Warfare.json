@@ -1,0 +1,2318 @@
+{
+	"h7WarfareHavenBallista": {
+		"name": {
+			"singular": "Haven Ballista",
+			"plural": "Haven Ballistas"
+		},
+		"description": "The Haven's Ballista, which fires heavy bolts.\n\nH7 Warfare Unit: when a Haven hero has received the Ballista slot token at the H7 Memorial Blacksmith and has Artillery, it replaces the original Ballista at the start of combat (level: Basic Artillery 2, Advanced 3, Expert 4; level 5 with Artillery, Engineering and First Aid together, and Reaper Arts from Undead King counts as all three). When it dies, the original Ballista is lost too.",
+		"faction": "neutral",
+		"special": true,
+		"excludeFromRandomization": true,
+		"level": 5,
+		"cost": {
+			"gold": 0
+		},
+		"speed": 3,
+		"hitPoints": 292,
+		"attack": 17,
+		"defense": 21,
+		"damage": {
+			"min": 3,
+			"max": 4
+		},
+		"doubleWide": true,
+		"fightValue": 650,
+		"aiValue": 600,
+		"growth": 0,
+		"abilities": {
+			"siegeWeapon": {
+				"type": "SIEGE_WEAPON"
+			},
+			"h7WarfareLink": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7WarfareLink",
+				"hidden": true,
+				"description": "~"
+			},
+			"shooter": {
+				"type": "SHOOTER"
+			},
+			"cpuControlled": {
+				"type": "CPU_CONTROLLED",
+				"hidden": true
+			},
+			"noRetaliation": {
+				"type": "NO_RETALIATION",
+				"description": "{War Machines}\nWar machines cannot retaliate."
+			},
+			"noRangedRetaliation": {
+				"type": "BLOCKS_RANGED_RETALIATION",
+				"hidden": true
+			},
+			"h7wfBallistaK": {
+				"type": "heroes-memorial.h7:H7_WARFARE_MARK_H7C",
+				"stacking": "h7WfBallistaK",
+				"val": 5,
+				"valueType": "BASE_NUMBER",
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h7/warfare/HavenBallista/battle.json",
+			"iconLarge": "h7/warfare/HavenBallista/iconLarge.png",
+			"iconSmall": "h7/warfare/HavenBallista/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"frameAngles": [
+					90,
+					60,
+					45,
+					30,
+					0,
+					-30,
+					-45,
+					-60,
+					-90
+				],
+				"offset": {
+					"upperX": 21,
+					"upperY": -92,
+					"middleX": 31,
+					"middleY": -83,
+					"lowerX": 11,
+					"lowerY": -74
+				},
+				"attackClimaxFrame": 6,
+				"projectile": "h7/warfare/projectiles/A_Projectile_Haven_Ballista.json"
+			}
+		},
+		"sound": {
+			"shoot": "h7/warfare/building_ballista_attack.ogg",
+			"wince": "h7/warfare/building_ballista_hit.ogg",
+			"killed": "h7/warfare/building_ballista_die.ogg"
+		},
+		"shots": 24
+	},
+	"h7WarfareHealingSister": {
+		"name": {
+			"singular": "Healing Sister",
+			"plural": "Healing Sisters"
+		},
+		"description": "The Haven's Healing Sister, who tends allies' wounds on the battlefield.\n\nH7 Warfare Unit: when a Haven hero has received the First Aid Tent slot token at the H7 Memorial Blacksmith and has First Aid, it replaces the original First Aid Tent at the start of combat (level: Basic First Aid 2, Advanced 3, Expert 4; level 5 with Artillery, Engineering and First Aid together, and Reaper Arts from Undead King counts as all three). On level 5 her healing can also resurrect. When she dies, the original First Aid Tent is lost too.",
+		"faction": "neutral",
+		"special": true,
+		"excludeFromRandomization": true,
+		"level": 0,
+		"cost": {
+			"gold": 0
+		},
+		"speed": 1,
+		"hitPoints": 100,
+		"attack": 0,
+		"defense": 0,
+		"damage": {
+			"min": 0,
+			"max": 0
+		},
+		"doubleWide": false,
+		"fightValue": 10,
+		"aiValue": 300,
+		"growth": 0,
+		"abilities": {
+			"siegeWeapon": {
+				"type": "SIEGE_WEAPON"
+			},
+			"h7WarfareLink": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7WarfareLink",
+				"hidden": true,
+				"description": "~"
+			},
+			"cast": {
+				"type": "SPELLCASTER",
+				"subtype": "heroes-memorial.h7:h7wfSisterHeal",
+				"val": 0,
+				"icon": "h7/abilities/h7wfSisterHeal",
+				"description": "{Sister Healing}\nHeals a living ally by level: 38/75/113/188."
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 999,
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h7/warfare/HealingSister/battle.json",
+			"iconLarge": "h7/warfare/HealingSister/iconLarge.png",
+			"iconSmall": "h7/warfare/HealingSister/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h7/warfare/building_priestess_attack.ogg",
+			"wince": "h7/warfare/creature_priestess_hit.ogg",
+			"killed": "h7/warfare/creature_priestess_die.ogg"
+		}
+	},
+	"h7WarfareHealingSister5": {
+		"name": {
+			"singular": "Healing Sister",
+			"plural": "Healing Sisters"
+		},
+		"description": "The Haven's Healing Sister, who tends allies' wounds on the battlefield.\n\nH7 Warfare Unit: when a Haven hero has received the First Aid Tent slot token at the H7 Memorial Blacksmith and has First Aid, it replaces the original First Aid Tent at the start of combat (level: Basic First Aid 2, Advanced 3, Expert 4; level 5 with Artillery, Engineering and First Aid together, and Reaper Arts from Undead King counts as all three). On level 5 her healing can also resurrect. When she dies, the original First Aid Tent is lost too.",
+		"faction": "neutral",
+		"special": true,
+		"excludeFromRandomization": true,
+		"level": 0,
+		"cost": {
+			"gold": 0
+		},
+		"speed": 1,
+		"hitPoints": 100,
+		"attack": 0,
+		"defense": 0,
+		"damage": {
+			"min": 0,
+			"max": 0
+		},
+		"doubleWide": false,
+		"fightValue": 10,
+		"aiValue": 300,
+		"growth": 0,
+		"abilities": {
+			"siegeWeapon": {
+				"type": "SIEGE_WEAPON"
+			},
+			"h7WarfareLink": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7WarfareLink",
+				"hidden": true,
+				"description": "~"
+			},
+			"cast": {
+				"type": "SPELLCASTER",
+				"subtype": "heroes-memorial.h7:h7wfSisterRevive",
+				"val": 0,
+				"icon": "h7/abilities/h7wfSisterHeal",
+				"description": "{Reviving Heal}\nHeals and revives a living ally: 188 HP."
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 999,
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h7/warfare/HealingSister/battle.json",
+			"iconLarge": "h7/warfare/HealingSister/iconLarge.png",
+			"iconSmall": "h7/warfare/HealingSister/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h7/warfare/building_priestess_attack.ogg",
+			"wince": "h7/warfare/creature_priestess_hit.ogg",
+			"killed": "h7/warfare/creature_priestess_die.ogg"
+		}
+	},
+	"h7WarfareHavenCatapult": {
+		"name": {
+			"singular": "Haven Catapult",
+			"plural": "Haven Catapults"
+		},
+		"description": "The Haven's Catapult, used only to attack town defenses.\n\nH7 Warfare Unit: when a Haven hero has received the Catapult slot token at the H7 Memorial Blacksmith and has Engineering, it replaces the original Catapult during sieges (level: Basic Engineering 2, Advanced 3, Expert 4; level 5 with Artillery, Engineering and First Aid together, and Reaper Arts from Undead King counts as all three). On level 5 it throws one extra time per round. The Catapult is never lost when destroyed anyway.",
+		"faction": "neutral",
+		"special": true,
+		"excludeFromRandomization": true,
+		"level": 0,
+		"cost": {
+			"gold": 0
+		},
+		"speed": 0,
+		"hitPoints": 2167,
+		"attack": 10,
+		"defense": 23,
+		"damage": {
+			"min": 0,
+			"max": 0
+		},
+		"doubleWide": true,
+		"fightValue": 10,
+		"aiValue": 500,
+		"growth": 0,
+		"abilities": {
+			"siegeWeapon": {
+				"type": "SIEGE_WEAPON"
+			},
+			"h7WarfareLink": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7WarfareLink",
+				"hidden": true,
+				"description": "~"
+			},
+			"noDistancePenalty": {
+				"type": "NO_DISTANCE_PENALTY",
+				"hidden": true
+			},
+			"siegeMachine": {
+				"type": "CATAPULT",
+				"subtype": "catapultShot",
+				"description": "{Siege}\nOnly hits walls; auto-throws when defending."
+			}
+		},
+		"graphics": {
+			"animation": "h7/warfare/HavenCatapult/battle.json",
+			"iconLarge": "h7/warfare/HavenCatapult/iconLarge.png",
+			"iconSmall": "h7/warfare/HavenCatapult/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"frameAngles": [
+					90,
+					60,
+					45,
+					30,
+					0,
+					-30,
+					-45,
+					-60,
+					-90
+				],
+				"offset": {
+					"upperX": -10,
+					"upperY": -142,
+					"middleX": -14,
+					"middleY": -146,
+					"lowerX": -6,
+					"lowerY": -149
+				},
+				"attackClimaxFrame": 6,
+				"projectile": "h7/warfare/projectiles/A_Projectile_Haven_Catapult.json"
+			}
+		},
+		"sound": {
+			"shoot": "h7/warfare/building_catapult_attack.ogg",
+			"wince": "h7/warfare/building_catapult_hit_01.ogg",
+			"killed": "h7/warfare/building_catapult_die.ogg"
+		}
+	},
+	"h7WarfareHavenCatapult5": {
+		"name": {
+			"singular": "Haven Catapult",
+			"plural": "Haven Catapults"
+		},
+		"description": "The Haven's Catapult, used only to attack town defenses.\n\nH7 Warfare Unit: when a Haven hero has received the Catapult slot token at the H7 Memorial Blacksmith and has Engineering, it replaces the original Catapult during sieges (level: Basic Engineering 2, Advanced 3, Expert 4; level 5 with Artillery, Engineering and First Aid together, and Reaper Arts from Undead King counts as all three). On level 5 it throws one extra time per round. The Catapult is never lost when destroyed anyway.",
+		"faction": "neutral",
+		"special": true,
+		"excludeFromRandomization": true,
+		"level": 0,
+		"cost": {
+			"gold": 0
+		},
+		"speed": 0,
+		"hitPoints": 2167,
+		"attack": 10,
+		"defense": 23,
+		"damage": {
+			"min": 0,
+			"max": 0
+		},
+		"doubleWide": true,
+		"fightValue": 10,
+		"aiValue": 500,
+		"growth": 0,
+		"abilities": {
+			"siegeWeapon": {
+				"type": "SIEGE_WEAPON"
+			},
+			"h7WarfareLink": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7WarfareLink",
+				"hidden": true,
+				"description": "~"
+			},
+			"noDistancePenalty": {
+				"type": "NO_DISTANCE_PENALTY",
+				"hidden": true
+			},
+			"siegeMachine": {
+				"type": "CATAPULT",
+				"subtype": "heroes-memorial.h7:h7wfCatapultShot5",
+				"description": "{Siege}\nOnly hits walls; auto-throws when defending."
+			}
+		},
+		"graphics": {
+			"animation": "h7/warfare/HavenCatapult/battle.json",
+			"iconLarge": "h7/warfare/HavenCatapult/iconLarge.png",
+			"iconSmall": "h7/warfare/HavenCatapult/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"frameAngles": [
+					90,
+					60,
+					45,
+					30,
+					0,
+					-30,
+					-45,
+					-60,
+					-90
+				],
+				"offset": {
+					"upperX": -10,
+					"upperY": -142,
+					"middleX": -14,
+					"middleY": -146,
+					"lowerX": -6,
+					"lowerY": -149
+				},
+				"attackClimaxFrame": 6,
+				"projectile": "h7/warfare/projectiles/A_Projectile_Haven_Catapult.json"
+			}
+		},
+		"sound": {
+			"shoot": "h7/warfare/building_catapult_attack.ogg",
+			"wince": "h7/warfare/building_catapult_hit_01.ogg",
+			"killed": "h7/warfare/building_catapult_die.ogg"
+		}
+	},
+	"h7WarfareSmallPyramid": {
+		"name": {
+			"singular": "Small Pyramid",
+			"plural": "Small Pyramids"
+		},
+		"description": "The Academy's Small Pyramid, which shoots Prime bolts.\n\nH7 Warfare Unit: when a Academy hero has received the Ballista slot token at the H7 Memorial Blacksmith and has Artillery, it replaces the original Ballista at the start of combat (level: Basic Artillery 2, Advanced 3, Expert 4; level 5 with Artillery, Engineering and First Aid together, and Reaper Arts from Undead King counts as all three). When it dies, the original Ballista is lost too.",
+		"faction": "neutral",
+		"special": true,
+		"excludeFromRandomization": true,
+		"level": 5,
+		"cost": {
+			"gold": 0
+		},
+		"speed": 2,
+		"hitPoints": 500,
+		"attack": 17,
+		"defense": 14,
+		"damage": {
+			"min": 3,
+			"max": 4
+		},
+		"doubleWide": true,
+		"fightValue": 650,
+		"aiValue": 600,
+		"growth": 0,
+		"abilities": {
+			"siegeWeapon": {
+				"type": "SIEGE_WEAPON"
+			},
+			"h7WarfareLink": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7WarfareLink",
+				"hidden": true,
+				"description": "~"
+			},
+			"shooter": {
+				"type": "SHOOTER"
+			},
+			"cpuControlled": {
+				"type": "CPU_CONTROLLED",
+				"hidden": true
+			},
+			"noRetaliation": {
+				"type": "NO_RETALIATION",
+				"description": "{War Machines}\nWar machines cannot retaliate."
+			},
+			"noRangedRetaliation": {
+				"type": "BLOCKS_RANGED_RETALIATION",
+				"hidden": true
+			},
+			"h7wfBallistaK": {
+				"type": "heroes-memorial.h7:H7_WARFARE_MARK_H7C",
+				"stacking": "h7WfBallistaK",
+				"val": 5,
+				"valueType": "BASE_NUMBER",
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h7/warfare/SmallPyramid/battle.json",
+			"iconLarge": "h7/warfare/SmallPyramid/iconLarge.png",
+			"iconSmall": "h7/warfare/SmallPyramid/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"frameAngles": [
+					90,
+					60,
+					45,
+					30,
+					0,
+					-30,
+					-45,
+					-60,
+					-90
+				],
+				"offset": {
+					"upperX": -1,
+					"upperY": -69,
+					"middleX": -1,
+					"middleY": -69,
+					"lowerX": -1,
+					"lowerY": -69
+				},
+				"attackClimaxFrame": 6,
+				"projectile": "h7/warfare/projectiles/H7PyramidProjectile.json"
+			}
+		},
+		"sound": {
+			"shoot": "h7/warfare/building_small_pyramid_cast.ogg",
+			"wince": "h7/creature_golem_hit.ogg",
+			"killed": "h7/creature_golem_die.ogg"
+		},
+		"shots": 24
+	},
+	"h7WarfareHealingTent": {
+		"name": {
+			"singular": "Healing Tent",
+			"plural": "Healing Tents"
+		},
+		"description": "The Academy's Healing Tent, which tends allies' wounds.\n\nH7 Warfare Unit: when a Academy hero has received the First Aid Tent slot token at the H7 Memorial Blacksmith and has First Aid, it replaces the original First Aid Tent at the start of combat (level: Basic First Aid 2, Advanced 3, Expert 4; level 5 with Artillery, Engineering and First Aid together, and Reaper Arts from Undead King counts as all three). When it dies, the original First Aid Tent is lost too.",
+		"faction": "neutral",
+		"special": true,
+		"excludeFromRandomization": true,
+		"level": 0,
+		"cost": {
+			"gold": 0
+		},
+		"speed": 1,
+		"hitPoints": 100,
+		"attack": 0,
+		"defense": 0,
+		"damage": {
+			"min": 0,
+			"max": 0
+		},
+		"doubleWide": true,
+		"fightValue": 10,
+		"aiValue": 300,
+		"growth": 0,
+		"abilities": {
+			"siegeWeapon": {
+				"type": "SIEGE_WEAPON"
+			},
+			"h7WarfareLink": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7WarfareLink",
+				"hidden": true,
+				"description": "~"
+			},
+			"cast": {
+				"type": "SPELLCASTER",
+				"subtype": "heroes-memorial.h7:h7wfTentHeal",
+				"val": 0,
+				"icon": "h7/abilities/h7wfTentHeal",
+				"description": "{Tent Healing}\nHeals an ally by level: 38/75/150/300."
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 999,
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h7/warfare/HealingTent/battle.json",
+			"iconLarge": "h7/warfare/HealingTent/iconLarge.png",
+			"iconSmall": "h7/warfare/HealingTent/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h7/warfare/building_priestess_attack.ogg",
+			"wince": "h7/warfare/building_ballista_hit.ogg",
+			"killed": "h7/warfare/building_ballista_die.ogg"
+		}
+	},
+	"h7WarfareGreatPyramid": {
+		"name": {
+			"singular": "Great Pyramid",
+			"plural": "Great Pyramids"
+		},
+		"description": "The Academy's Great Pyramid, which pounds town defenses with great Prime bolts.\n\nH7 Warfare Unit: when a Academy hero has received the Catapult slot token at the H7 Memorial Blacksmith and has Engineering, it replaces the original Catapult during sieges (level: Basic Engineering 2, Advanced 3, Expert 4; level 5 with Artillery, Engineering and First Aid together, and Reaper Arts from Undead King counts as all three). On level 5 it throws one extra time per round. The Catapult is never lost when destroyed anyway.",
+		"faction": "neutral",
+		"special": true,
+		"excludeFromRandomization": true,
+		"level": 0,
+		"cost": {
+			"gold": 0
+		},
+		"speed": 0,
+		"hitPoints": 1667,
+		"attack": 10,
+		"defense": 19,
+		"damage": {
+			"min": 0,
+			"max": 0
+		},
+		"doubleWide": true,
+		"fightValue": 10,
+		"aiValue": 500,
+		"growth": 0,
+		"abilities": {
+			"siegeWeapon": {
+				"type": "SIEGE_WEAPON"
+			},
+			"h7WarfareLink": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7WarfareLink",
+				"hidden": true,
+				"description": "~"
+			},
+			"noDistancePenalty": {
+				"type": "NO_DISTANCE_PENALTY",
+				"hidden": true
+			},
+			"siegeMachine": {
+				"type": "CATAPULT",
+				"subtype": "catapultShot",
+				"description": "{Siege}\nOnly hits walls; auto-throws when defending."
+			}
+		},
+		"graphics": {
+			"animation": "h7/warfare/GreatPyramid/battle.json",
+			"iconLarge": "h7/warfare/GreatPyramid/iconLarge.png",
+			"iconSmall": "h7/warfare/GreatPyramid/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"frameAngles": [
+					90,
+					60,
+					45,
+					30,
+					0,
+					-30,
+					-45,
+					-60,
+					-90
+				],
+				"offset": {
+					"upperX": -5,
+					"upperY": -74,
+					"middleX": -6,
+					"middleY": -75,
+					"lowerX": -3,
+					"lowerY": -77
+				},
+				"attackClimaxFrame": 6,
+				"projectile": "h7/warfare/projectiles/H7PyramidBigProjectile.json"
+			}
+		},
+		"sound": {
+			"shoot": "h7/warfare/building_small_pyramid_cast.ogg",
+			"wince": "h7/creature_golem_hit.ogg",
+			"killed": "h7/creature_golem_die.ogg"
+		}
+	},
+	"h7WarfareGreatPyramid5": {
+		"name": {
+			"singular": "Great Pyramid",
+			"plural": "Great Pyramids"
+		},
+		"description": "The Academy's Great Pyramid, which pounds town defenses with great Prime bolts.\n\nH7 Warfare Unit: when a Academy hero has received the Catapult slot token at the H7 Memorial Blacksmith and has Engineering, it replaces the original Catapult during sieges (level: Basic Engineering 2, Advanced 3, Expert 4; level 5 with Artillery, Engineering and First Aid together, and Reaper Arts from Undead King counts as all three). On level 5 it throws one extra time per round. The Catapult is never lost when destroyed anyway.",
+		"faction": "neutral",
+		"special": true,
+		"excludeFromRandomization": true,
+		"level": 0,
+		"cost": {
+			"gold": 0
+		},
+		"speed": 0,
+		"hitPoints": 1667,
+		"attack": 10,
+		"defense": 19,
+		"damage": {
+			"min": 0,
+			"max": 0
+		},
+		"doubleWide": true,
+		"fightValue": 10,
+		"aiValue": 500,
+		"growth": 0,
+		"abilities": {
+			"siegeWeapon": {
+				"type": "SIEGE_WEAPON"
+			},
+			"h7WarfareLink": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7WarfareLink",
+				"hidden": true,
+				"description": "~"
+			},
+			"noDistancePenalty": {
+				"type": "NO_DISTANCE_PENALTY",
+				"hidden": true
+			},
+			"siegeMachine": {
+				"type": "CATAPULT",
+				"subtype": "heroes-memorial.h7:h7wfCatapultShot5",
+				"description": "{Siege}\nOnly hits walls; auto-throws when defending."
+			}
+		},
+		"graphics": {
+			"animation": "h7/warfare/GreatPyramid/battle.json",
+			"iconLarge": "h7/warfare/GreatPyramid/iconLarge.png",
+			"iconSmall": "h7/warfare/GreatPyramid/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"frameAngles": [
+					90,
+					60,
+					45,
+					30,
+					0,
+					-30,
+					-45,
+					-60,
+					-90
+				],
+				"offset": {
+					"upperX": -5,
+					"upperY": -74,
+					"middleX": -6,
+					"middleY": -75,
+					"lowerX": -3,
+					"lowerY": -77
+				},
+				"attackClimaxFrame": 6,
+				"projectile": "h7/warfare/projectiles/H7PyramidBigProjectile.json"
+			}
+		},
+		"sound": {
+			"shoot": "h7/warfare/building_small_pyramid_cast.ogg",
+			"wince": "h7/creature_golem_hit.ogg",
+			"killed": "h7/creature_golem_die.ogg"
+		}
+	},
+	"h7WarfareNamtaru": {
+		"name": {
+			"singular": "Namtaru",
+			"plural": "Namtaru"
+		},
+		"description": "The Necropolis's Namtaru, which shoots dark bolts and can empower allies with the power of darkness.\n\nH7 Warfare Unit: when a Necropolis hero has received the Ammo Cart slot token at the H7 Memorial Blacksmith and has Artillery, it replaces the original Ammo Cart at the start of combat (level: Basic Artillery 2, Advanced 3, Expert 4; level 5 with Artillery, Engineering and First Aid together, and Reaper Arts from Undead King counts as all three). Each round it can first cast Dark Touch once, then shoot. When it dies, the original Ammo Cart is lost too.",
+		"faction": "neutral",
+		"special": true,
+		"excludeFromRandomization": true,
+		"level": 5,
+		"cost": {
+			"gold": 0
+		},
+		"speed": 2,
+		"hitPoints": 117,
+		"attack": 17,
+		"defense": 10,
+		"damage": {
+			"min": 3,
+			"max": 4
+		},
+		"doubleWide": true,
+		"fightValue": 5,
+		"aiValue": 400,
+		"growth": 0,
+		"abilities": {
+			"siegeWeapon": {
+				"type": "SIEGE_WEAPON"
+			},
+			"h7WarfareLink": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7WarfareLink",
+				"hidden": true,
+				"description": "~"
+			},
+			"shooter": {
+				"type": "SHOOTER"
+			},
+			"cpuControlled": {
+				"type": "CPU_CONTROLLED",
+				"hidden": true
+			},
+			"noRetaliation": {
+				"type": "NO_RETALIATION",
+				"description": "{War Machines}\nWar machines cannot retaliate."
+			},
+			"noRangedRetaliation": {
+				"type": "BLOCKS_RANGED_RETALIATION",
+				"hidden": true
+			},
+			"h7wfBallistaK": {
+				"type": "heroes-memorial.h7:H7_WARFARE_MARK_H7C",
+				"stacking": "h7WfBallistaK",
+				"val": 5,
+				"valueType": "BASE_NUMBER",
+				"hidden": true
+			},
+			"cast": {
+				"type": "SPELLCASTER",
+				"subtype": "heroes-memorial.h7:h7wfDarkTouch",
+				"val": 0,
+				"icon": "h7/abilities/h7wfDarkTouch",
+				"description": "{Dark Touch}\nAllies add Dark dmg 3 rounds; can still shoot."
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 999,
+				"hidden": true
+			},
+			"noSpellDefault": {
+				"type": "NO_SPELLCAST_BY_DEFAULT",
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h7/warfare/Namtaru/battle.json",
+			"iconLarge": "h7/warfare/Namtaru/iconLarge.png",
+			"iconSmall": "h7/warfare/Namtaru/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"frameAngles": [
+					90,
+					60,
+					45,
+					30,
+					0,
+					-30,
+					-45,
+					-60,
+					-90
+				],
+				"offset": {
+					"upperX": 66,
+					"upperY": -96,
+					"middleX": 94,
+					"middleY": -69,
+					"lowerX": 34,
+					"lowerY": -43
+				},
+				"attackClimaxFrame": 6,
+				"projectile": "h7/warfare/projectiles/A_Projectile_Necropolis_Namtaru.json"
+			}
+		},
+		"sound": {
+			"shoot": "h7/warfare/Namtaru_Ability1.ogg",
+			"attack": "h7/warfare/Namtaru_Ability2Start.ogg",
+			"wince": "h7/warfare/Namtaru_Hit1.ogg",
+			"killed": "h7/warfare/Namtaru_Die.ogg"
+		},
+		"shots": 24
+	},
+	"h7WarfareSpittingSpider": {
+		"name": {
+			"singular": "Spitting Spider",
+			"plural": "Spitting Spiders"
+		},
+		"description": "The Necropolis's Spitting Spider, which corrodes town defenses with venom.\n\nH7 Warfare Unit: when a Necropolis hero has received the Catapult slot token at the H7 Memorial Blacksmith and has Engineering, it replaces the original Catapult during sieges (level: Basic Engineering 2, Advanced 3, Expert 4; level 5 with Artillery, Engineering and First Aid together, and Reaper Arts from Undead King counts as all three). On level 5 it throws one extra time per round. The Catapult is never lost when destroyed anyway.",
+		"faction": "neutral",
+		"special": true,
+		"excludeFromRandomization": true,
+		"level": 0,
+		"cost": {
+			"gold": 0
+		},
+		"speed": 0,
+		"hitPoints": 1167,
+		"attack": 10,
+		"defense": 16,
+		"damage": {
+			"min": 0,
+			"max": 0
+		},
+		"doubleWide": true,
+		"fightValue": 10,
+		"aiValue": 500,
+		"growth": 0,
+		"abilities": {
+			"siegeWeapon": {
+				"type": "SIEGE_WEAPON"
+			},
+			"h7WarfareLink": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7WarfareLink",
+				"hidden": true,
+				"description": "~"
+			},
+			"noDistancePenalty": {
+				"type": "NO_DISTANCE_PENALTY",
+				"hidden": true
+			},
+			"siegeMachine": {
+				"type": "CATAPULT",
+				"subtype": "catapultShot",
+				"description": "{Siege}\nOnly hits walls; auto-throws when defending."
+			}
+		},
+		"graphics": {
+			"animation": "h7/warfare/SpittingSpider/battle.json",
+			"iconLarge": "h7/warfare/SpittingSpider/iconLarge.png",
+			"iconSmall": "h7/warfare/SpittingSpider/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"frameAngles": [
+					90,
+					60,
+					45,
+					30,
+					0,
+					-30,
+					-45,
+					-60,
+					-90
+				],
+				"offset": {
+					"upperX": 25,
+					"upperY": -48,
+					"middleX": 36,
+					"middleY": -38,
+					"lowerX": 12,
+					"lowerY": -28
+				},
+				"attackClimaxFrame": 6,
+				"projectile": "h7/warfare/projectiles/A_Projectile_Necropolis_SpittingSpider.json"
+			}
+		},
+		"sound": {
+			"shoot": "h7/warfare/building_spitting_spider_attack.ogg",
+			"wince": "h7/warfare/building_spitting_spider_hit.ogg",
+			"killed": "h7/warfare/building_spitting_spider_die.ogg"
+		}
+	},
+	"h7WarfareSpittingSpider5": {
+		"name": {
+			"singular": "Spitting Spider",
+			"plural": "Spitting Spiders"
+		},
+		"description": "The Necropolis's Spitting Spider, which corrodes town defenses with venom.\n\nH7 Warfare Unit: when a Necropolis hero has received the Catapult slot token at the H7 Memorial Blacksmith and has Engineering, it replaces the original Catapult during sieges (level: Basic Engineering 2, Advanced 3, Expert 4; level 5 with Artillery, Engineering and First Aid together, and Reaper Arts from Undead King counts as all three). On level 5 it throws one extra time per round. The Catapult is never lost when destroyed anyway.",
+		"faction": "neutral",
+		"special": true,
+		"excludeFromRandomization": true,
+		"level": 0,
+		"cost": {
+			"gold": 0
+		},
+		"speed": 0,
+		"hitPoints": 1167,
+		"attack": 10,
+		"defense": 16,
+		"damage": {
+			"min": 0,
+			"max": 0
+		},
+		"doubleWide": true,
+		"fightValue": 10,
+		"aiValue": 500,
+		"growth": 0,
+		"abilities": {
+			"siegeWeapon": {
+				"type": "SIEGE_WEAPON"
+			},
+			"h7WarfareLink": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7WarfareLink",
+				"hidden": true,
+				"description": "~"
+			},
+			"noDistancePenalty": {
+				"type": "NO_DISTANCE_PENALTY",
+				"hidden": true
+			},
+			"siegeMachine": {
+				"type": "CATAPULT",
+				"subtype": "heroes-memorial.h7:h7wfCatapultShot5",
+				"description": "{Siege}\nOnly hits walls; auto-throws when defending."
+			}
+		},
+		"graphics": {
+			"animation": "h7/warfare/SpittingSpider/battle.json",
+			"iconLarge": "h7/warfare/SpittingSpider/iconLarge.png",
+			"iconSmall": "h7/warfare/SpittingSpider/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"frameAngles": [
+					90,
+					60,
+					45,
+					30,
+					0,
+					-30,
+					-45,
+					-60,
+					-90
+				],
+				"offset": {
+					"upperX": 25,
+					"upperY": -48,
+					"middleX": 36,
+					"middleY": -38,
+					"lowerX": 12,
+					"lowerY": -28
+				},
+				"attackClimaxFrame": 6,
+				"projectile": "h7/warfare/projectiles/A_Projectile_Necropolis_SpittingSpider.json"
+			}
+		},
+		"sound": {
+			"shoot": "h7/warfare/building_spitting_spider_attack.ogg",
+			"wince": "h7/warfare/building_spitting_spider_hit.ogg",
+			"killed": "h7/warfare/building_spitting_spider_die.ogg"
+		}
+	},
+	"h7WarfareDreamwalker": {
+		"name": {
+			"singular": "Dreamwalker",
+			"plural": "Dreamwalkers"
+		},
+		"description": "The Stronghold's Dreamwalker, which shoots earth bolts and can heal allies.\n\nH7 Warfare Unit: when a Stronghold hero has received the Ammo Cart slot token at the H7 Memorial Blacksmith and has Artillery, it replaces the original Ammo Cart at the start of combat (level: Basic Artillery 2, Advanced 3, Expert 4; level 5 with Artillery, Engineering and First Aid together, and Reaper Arts from Undead King counts as all three). Each round it can first cast Shaman Healing once, then shoot. When it dies, the original Ammo Cart is lost too.",
+		"faction": "neutral",
+		"special": true,
+		"excludeFromRandomization": true,
+		"level": 5,
+		"cost": {
+			"gold": 0
+		},
+		"speed": 3,
+		"hitPoints": 117,
+		"attack": 17,
+		"defense": 10,
+		"damage": {
+			"min": 4,
+			"max": 5
+		},
+		"doubleWide": false,
+		"fightValue": 5,
+		"aiValue": 400,
+		"growth": 0,
+		"abilities": {
+			"siegeWeapon": {
+				"type": "SIEGE_WEAPON"
+			},
+			"h7WarfareLink": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7WarfareLink",
+				"hidden": true,
+				"description": "~"
+			},
+			"shooter": {
+				"type": "SHOOTER"
+			},
+			"cpuControlled": {
+				"type": "CPU_CONTROLLED",
+				"hidden": true
+			},
+			"noRetaliation": {
+				"type": "NO_RETALIATION",
+				"description": "{War Machines}\nWar machines cannot retaliate."
+			},
+			"noRangedRetaliation": {
+				"type": "BLOCKS_RANGED_RETALIATION",
+				"hidden": true
+			},
+			"h7wfBallistaK": {
+				"type": "heroes-memorial.h7:H7_WARFARE_MARK_H7C",
+				"stacking": "h7WfBallistaK",
+				"val": 5,
+				"valueType": "BASE_NUMBER",
+				"hidden": true
+			},
+			"cast": {
+				"type": "SPELLCASTER",
+				"subtype": "heroes-memorial.h7:h7wfShamanHeal",
+				"val": 0,
+				"icon": "h7/abilities/h7wfShamanHeal",
+				"description": "{Shaman Healing}\nLiving ally heals 30/45/90/225, then can shoot"
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 999,
+				"hidden": true
+			},
+			"noSpellDefault": {
+				"type": "NO_SPELLCAST_BY_DEFAULT",
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h7/warfare/Dreamwalker/battle.json",
+			"iconLarge": "h7/warfare/Dreamwalker/iconLarge.png",
+			"iconSmall": "h7/warfare/Dreamwalker/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"frameAngles": [
+					90,
+					60,
+					45,
+					30,
+					0,
+					-30,
+					-45,
+					-60,
+					-90
+				],
+				"offset": {
+					"upperX": 17,
+					"upperY": -134,
+					"middleX": -11,
+					"middleY": -132,
+					"lowerX": -32,
+					"lowerY": -141
+				},
+				"attackClimaxFrame": 6,
+				"projectile": "h7/warfare/projectiles/A_Projectile_Stronghold_Dreamcatcher.json"
+			}
+		},
+		"sound": {
+			"shoot": "h7/warfare/building_dreamcatcher_attack.ogg",
+			"wince": "h7/warfare/building_dreamcatcher_hit.ogg",
+			"killed": "h7/warfare/building_dreamcatcher_die.ogg"
+		},
+		"shots": 24
+	},
+	"h7WarfareTamedCyclops": {
+		"name": {
+			"singular": "Tamed Cyclops",
+			"plural": "Tamed Cyclopes"
+		},
+		"description": "A Cyclops tamed by the Stronghold, which hurls boulders at town defenses.\n\nH7 Warfare Unit: when a Stronghold hero has received the Catapult slot token at the H7 Memorial Blacksmith and has Engineering, it replaces the original Catapult during sieges (level: Basic Engineering 2, Advanced 3, Expert 4; level 5 with Artillery, Engineering and First Aid together, and Reaper Arts from Undead King counts as all three). On level 5 it throws one extra time per round. The Catapult is never lost when destroyed anyway.",
+		"faction": "neutral",
+		"special": true,
+		"excludeFromRandomization": true,
+		"level": 0,
+		"cost": {
+			"gold": 0
+		},
+		"speed": 0,
+		"hitPoints": 2167,
+		"attack": 10,
+		"defense": 23,
+		"damage": {
+			"min": 0,
+			"max": 0
+		},
+		"doubleWide": true,
+		"fightValue": 10,
+		"aiValue": 500,
+		"growth": 0,
+		"abilities": {
+			"siegeWeapon": {
+				"type": "SIEGE_WEAPON"
+			},
+			"h7WarfareLink": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7WarfareLink",
+				"hidden": true,
+				"description": "~"
+			},
+			"noDistancePenalty": {
+				"type": "NO_DISTANCE_PENALTY",
+				"hidden": true
+			},
+			"siegeMachine": {
+				"type": "CATAPULT",
+				"subtype": "catapultShot",
+				"description": "{Siege}\nOnly hits walls; auto-throws when defending."
+			}
+		},
+		"graphics": {
+			"animation": "h7/warfare/TamedCyclops/battle.json",
+			"iconLarge": "h7/warfare/TamedCyclops/iconLarge.png",
+			"iconSmall": "h7/warfare/TamedCyclops/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"frameAngles": [
+					90,
+					60,
+					45,
+					30,
+					0,
+					-30,
+					-45,
+					-60,
+					-90
+				],
+				"offset": {
+					"upperX": -1,
+					"upperY": -83,
+					"middleX": -31,
+					"middleY": -88,
+					"lowerX": -36,
+					"lowerY": -101
+				},
+				"attackClimaxFrame": 6,
+				"projectile": "h7/warfare/projectiles/H7StrongholdCatapultProjectile.json"
+			}
+		},
+		"sound": {
+			"shoot": "h7/warfare/building_stronghold_catapult_attack.ogg",
+			"wince": "h7/warfare/building_stronghold_catapult_hit.ogg",
+			"killed": "h7/warfare/building_stronghold_catapult_die.ogg"
+		}
+	},
+	"h7WarfareTamedCyclops5": {
+		"name": {
+			"singular": "Tamed Cyclops",
+			"plural": "Tamed Cyclopes"
+		},
+		"description": "A Cyclops tamed by the Stronghold, which hurls boulders at town defenses.\n\nH7 Warfare Unit: when a Stronghold hero has received the Catapult slot token at the H7 Memorial Blacksmith and has Engineering, it replaces the original Catapult during sieges (level: Basic Engineering 2, Advanced 3, Expert 4; level 5 with Artillery, Engineering and First Aid together, and Reaper Arts from Undead King counts as all three). On level 5 it throws one extra time per round. The Catapult is never lost when destroyed anyway.",
+		"faction": "neutral",
+		"special": true,
+		"excludeFromRandomization": true,
+		"level": 0,
+		"cost": {
+			"gold": 0
+		},
+		"speed": 0,
+		"hitPoints": 2167,
+		"attack": 10,
+		"defense": 23,
+		"damage": {
+			"min": 0,
+			"max": 0
+		},
+		"doubleWide": true,
+		"fightValue": 10,
+		"aiValue": 500,
+		"growth": 0,
+		"abilities": {
+			"siegeWeapon": {
+				"type": "SIEGE_WEAPON"
+			},
+			"h7WarfareLink": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7WarfareLink",
+				"hidden": true,
+				"description": "~"
+			},
+			"noDistancePenalty": {
+				"type": "NO_DISTANCE_PENALTY",
+				"hidden": true
+			},
+			"siegeMachine": {
+				"type": "CATAPULT",
+				"subtype": "heroes-memorial.h7:h7wfCatapultShot5",
+				"description": "{Siege}\nOnly hits walls; auto-throws when defending."
+			}
+		},
+		"graphics": {
+			"animation": "h7/warfare/TamedCyclops/battle.json",
+			"iconLarge": "h7/warfare/TamedCyclops/iconLarge.png",
+			"iconSmall": "h7/warfare/TamedCyclops/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"frameAngles": [
+					90,
+					60,
+					45,
+					30,
+					0,
+					-30,
+					-45,
+					-60,
+					-90
+				],
+				"offset": {
+					"upperX": -1,
+					"upperY": -83,
+					"middleX": -31,
+					"middleY": -88,
+					"lowerX": -36,
+					"lowerY": -101
+				},
+				"attackClimaxFrame": 6,
+				"projectile": "h7/warfare/projectiles/H7StrongholdCatapultProjectile.json"
+			}
+		},
+		"sound": {
+			"shoot": "h7/warfare/building_stronghold_catapult_attack.ogg",
+			"wince": "h7/warfare/building_stronghold_catapult_hit.ogg",
+			"killed": "h7/warfare/building_stronghold_catapult_die.ogg"
+		}
+	},
+	"h7WarfareSylvanBallista": {
+		"name": {
+			"singular": "Sylvan Ballista",
+			"plural": "Sylvan Ballistas"
+		},
+		"description": "The Sylvan Ballista, light and agile.\n\nH7 Warfare Unit: when a Sylvan hero has received the Ballista slot token at the H7 Memorial Blacksmith and has Artillery, it replaces the original Ballista at the start of combat (level: Basic Artillery 2, Advanced 3, Expert 4; level 5 with Artillery, Engineering and First Aid together, and Reaper Arts from Undead King counts as all three). Tears of Ashan synergy: after hitting an enemy with an Avenger's Mark or Death Mark, it immediately shoots that enemy again (once per round). When it dies, the original Ballista is lost too.",
+		"faction": "neutral",
+		"special": true,
+		"excludeFromRandomization": true,
+		"level": 5,
+		"cost": {
+			"gold": 0
+		},
+		"speed": 4,
+		"hitPoints": 250,
+		"attack": 17,
+		"defense": 14,
+		"damage": {
+			"min": 3,
+			"max": 4
+		},
+		"doubleWide": true,
+		"fightValue": 650,
+		"aiValue": 600,
+		"growth": 0,
+		"abilities": {
+			"siegeWeapon": {
+				"type": "SIEGE_WEAPON"
+			},
+			"h7WarfareLink": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7WarfareLink",
+				"hidden": true,
+				"description": "~"
+			},
+			"shooter": {
+				"type": "SHOOTER"
+			},
+			"cpuControlled": {
+				"type": "CPU_CONTROLLED",
+				"hidden": true
+			},
+			"noRetaliation": {
+				"type": "NO_RETALIATION",
+				"description": "{War Machines}\nWar machines cannot retaliate."
+			},
+			"noRangedRetaliation": {
+				"type": "BLOCKS_RANGED_RETALIATION",
+				"hidden": true
+			},
+			"h7wfBallistaK": {
+				"type": "heroes-memorial.h7:H7_WARFARE_MARK_H7C",
+				"stacking": "h7WfBallistaK",
+				"val": 5,
+				"valueType": "BASE_NUMBER",
+				"hidden": true
+			},
+			"h7WarfareFastReload": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7WarfareFastReload",
+				"icon": "h7/abilities/h7wfFastReload"
+			}
+		},
+		"graphics": {
+			"animation": "h7/warfare/SylvanBallista/battle.json",
+			"iconLarge": "h7/warfare/SylvanBallista/iconLarge.png",
+			"iconSmall": "h7/warfare/SylvanBallista/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"frameAngles": [
+					90,
+					60,
+					45,
+					30,
+					0,
+					-30,
+					-45,
+					-60,
+					-90
+				],
+				"offset": {
+					"upperX": 0,
+					"upperY": -55,
+					"middleX": -1,
+					"middleY": -55,
+					"lowerX": -2,
+					"lowerY": -56
+				},
+				"attackClimaxFrame": 6,
+				"projectile": "h7/warfare/projectiles/A_Projectile_Sylvan_Ballista.json"
+			}
+		},
+		"sound": {
+			"shoot": "h7/warfare/building_sylvan_ballista_attack.ogg",
+			"wince": "h7/warfare/building_sylvan_ballista_hit.ogg",
+			"killed": "h7/warfare/building_sylvan_ballista_die.ogg"
+		},
+		"shots": 24
+	},
+	"h7WarfareMotherTreant": {
+		"name": {
+			"singular": "Mother Treant",
+			"plural": "Mother Treants"
+		},
+		"description": "The Sylvan Mother Treant, which keeps allies recovering over the following rounds.\n\nH7 Warfare Unit: when a Sylvan hero has received the First Aid Tent slot token at the H7 Memorial Blacksmith and has First Aid, it replaces the original First Aid Tent at the start of combat (level: Basic First Aid 2, Advanced 3, Expert 4; level 5 with Artillery, Engineering and First Aid together, and Reaper Arts from Undead King counts as all three). When it dies, the original First Aid Tent is lost too.",
+		"faction": "neutral",
+		"special": true,
+		"excludeFromRandomization": true,
+		"level": 0,
+		"cost": {
+			"gold": 0
+		},
+		"speed": 2,
+		"hitPoints": 100,
+		"attack": 0,
+		"defense": 0,
+		"damage": {
+			"min": 0,
+			"max": 0
+		},
+		"doubleWide": true,
+		"fightValue": 10,
+		"aiValue": 300,
+		"growth": 0,
+		"abilities": {
+			"siegeWeapon": {
+				"type": "SIEGE_WEAPON"
+			},
+			"h7WarfareLink": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7WarfareLink",
+				"hidden": true,
+				"description": "~"
+			},
+			"cast": {
+				"type": "SPELLCASTER",
+				"subtype": "heroes-memorial.h7:h7wfRenewal",
+				"val": 0,
+				"icon": "h7/abilities/h7wfRenewal",
+				"description": "{Renewal}\nLiving ally heals 30/45/90/225/round, 3 rounds"
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 999,
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h7/warfare/MotherTreant/battle.json",
+			"iconLarge": "h7/warfare/MotherTreant/iconLarge.png",
+			"iconSmall": "h7/warfare/MotherTreant/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h7/warfare/building_mother_treant_attack.ogg",
+			"wince": "h7/warfare/building_mother_treant_hit.ogg",
+			"killed": "h7/warfare/building_mother_treant_die.ogg"
+		}
+	},
+	"h7WarfareGreaterEarthElemental": {
+		"name": {
+			"singular": "Greater Earth Elemental",
+			"plural": "Greater Earth Elementals"
+		},
+		"description": "A Greater Earth Elemental summoned by the Sylvan, which hurls boulders at town defenses.\n\nH7 Warfare Unit: when a Sylvan hero has received the Catapult slot token at the H7 Memorial Blacksmith and has Engineering, it replaces the original Catapult during sieges (level: Basic Engineering 2, Advanced 3, Expert 4; level 5 with Artillery, Engineering and First Aid together, and Reaper Arts from Undead King counts as all three). On level 5 it throws one extra time per round. The Catapult is never lost when destroyed anyway.",
+		"faction": "neutral",
+		"special": true,
+		"excludeFromRandomization": true,
+		"level": 0,
+		"cost": {
+			"gold": 0
+		},
+		"speed": 0,
+		"hitPoints": 1167,
+		"attack": 10,
+		"defense": 16,
+		"damage": {
+			"min": 0,
+			"max": 0
+		},
+		"doubleWide": true,
+		"fightValue": 10,
+		"aiValue": 500,
+		"growth": 0,
+		"abilities": {
+			"siegeWeapon": {
+				"type": "SIEGE_WEAPON"
+			},
+			"h7WarfareLink": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7WarfareLink",
+				"hidden": true,
+				"description": "~"
+			},
+			"noDistancePenalty": {
+				"type": "NO_DISTANCE_PENALTY",
+				"hidden": true
+			},
+			"siegeMachine": {
+				"type": "CATAPULT",
+				"subtype": "catapultShot",
+				"description": "{Siege}\nOnly hits walls; auto-throws when defending."
+			}
+		},
+		"graphics": {
+			"animation": "h7/warfare/GreaterEarthElemental/battle.json",
+			"iconLarge": "h7/warfare/GreaterEarthElemental/iconLarge.png",
+			"iconSmall": "h7/warfare/GreaterEarthElemental/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"frameAngles": [
+					90,
+					60,
+					45,
+					30,
+					0,
+					-30,
+					-45,
+					-60,
+					-90
+				],
+				"offset": {
+					"upperX": -7,
+					"upperY": -127,
+					"middleX": -14,
+					"middleY": -130,
+					"lowerX": -10,
+					"lowerY": -135
+				},
+				"attackClimaxFrame": 6,
+				"projectile": "h7/warfare/projectiles/A_Projectile_Sylvan_GreaterEarthElemental.json"
+			}
+		},
+		"sound": {
+			"shoot": "h7/warfare/creature_greater_earth_elemantal_attack.ogg",
+			"wince": "h7/earthelemental_hit.ogg",
+			"killed": "h7/earthelemental_die.ogg"
+		}
+	},
+	"h7WarfareGreaterEarthElemental5": {
+		"name": {
+			"singular": "Greater Earth Elemental",
+			"plural": "Greater Earth Elementals"
+		},
+		"description": "A Greater Earth Elemental summoned by the Sylvan, which hurls boulders at town defenses.\n\nH7 Warfare Unit: when a Sylvan hero has received the Catapult slot token at the H7 Memorial Blacksmith and has Engineering, it replaces the original Catapult during sieges (level: Basic Engineering 2, Advanced 3, Expert 4; level 5 with Artillery, Engineering and First Aid together, and Reaper Arts from Undead King counts as all three). On level 5 it throws one extra time per round. The Catapult is never lost when destroyed anyway.",
+		"faction": "neutral",
+		"special": true,
+		"excludeFromRandomization": true,
+		"level": 0,
+		"cost": {
+			"gold": 0
+		},
+		"speed": 0,
+		"hitPoints": 1167,
+		"attack": 10,
+		"defense": 16,
+		"damage": {
+			"min": 0,
+			"max": 0
+		},
+		"doubleWide": true,
+		"fightValue": 10,
+		"aiValue": 500,
+		"growth": 0,
+		"abilities": {
+			"siegeWeapon": {
+				"type": "SIEGE_WEAPON"
+			},
+			"h7WarfareLink": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7WarfareLink",
+				"hidden": true,
+				"description": "~"
+			},
+			"noDistancePenalty": {
+				"type": "NO_DISTANCE_PENALTY",
+				"hidden": true
+			},
+			"siegeMachine": {
+				"type": "CATAPULT",
+				"subtype": "heroes-memorial.h7:h7wfCatapultShot5",
+				"description": "{Siege}\nOnly hits walls; auto-throws when defending."
+			}
+		},
+		"graphics": {
+			"animation": "h7/warfare/GreaterEarthElemental/battle.json",
+			"iconLarge": "h7/warfare/GreaterEarthElemental/iconLarge.png",
+			"iconSmall": "h7/warfare/GreaterEarthElemental/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"frameAngles": [
+					90,
+					60,
+					45,
+					30,
+					0,
+					-30,
+					-45,
+					-60,
+					-90
+				],
+				"offset": {
+					"upperX": -7,
+					"upperY": -127,
+					"middleX": -14,
+					"middleY": -130,
+					"lowerX": -10,
+					"lowerY": -135
+				},
+				"attackClimaxFrame": 6,
+				"projectile": "h7/warfare/projectiles/A_Projectile_Sylvan_GreaterEarthElemental.json"
+			}
+		},
+		"sound": {
+			"shoot": "h7/warfare/creature_greater_earth_elemantal_attack.ogg",
+			"wince": "h7/earthelemental_hit.ogg",
+			"killed": "h7/earthelemental_die.ogg"
+		}
+	},
+	"h7WarfareShadowLurker": {
+		"name": {
+			"singular": "Shadow Lurker",
+			"plural": "Shadow Lurkers"
+		},
+		"description": "The Dungeon's Shadow Lurker, which torments enemies with Horrid Visions.\n\nH7 Warfare Unit: when a Dungeon hero has received the Ballista slot token at the H7 Memorial Blacksmith and has Artillery, it replaces the original Ballista at the start of combat (level: Basic Artillery 2, Advanced 3, Expert 4; level 5 with Artillery, Engineering and First Aid together, and Reaper Arts from Undead King counts as all three). Enemies it hits take Dark damage equal to 40% of that hit at the start of each of the next 2 rounds. When it dies, the original Ballista is lost too.",
+		"faction": "neutral",
+		"special": true,
+		"excludeFromRandomization": true,
+		"level": 5,
+		"cost": {
+			"gold": 0
+		},
+		"speed": 4,
+		"hitPoints": 292,
+		"attack": 25,
+		"defense": 14,
+		"damage": {
+			"min": 3,
+			"max": 4
+		},
+		"doubleWide": true,
+		"fightValue": 650,
+		"aiValue": 600,
+		"growth": 0,
+		"abilities": {
+			"siegeWeapon": {
+				"type": "SIEGE_WEAPON"
+			},
+			"h7WarfareLink": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7WarfareLink",
+				"hidden": true,
+				"description": "~"
+			},
+			"shooter": {
+				"type": "SHOOTER"
+			},
+			"cpuControlled": {
+				"type": "CPU_CONTROLLED",
+				"hidden": true
+			},
+			"noRetaliation": {
+				"type": "NO_RETALIATION",
+				"description": "{War Machines}\nWar machines cannot retaliate."
+			},
+			"noRangedRetaliation": {
+				"type": "BLOCKS_RANGED_RETALIATION",
+				"hidden": true
+			},
+			"h7wfBallistaK": {
+				"type": "heroes-memorial.h7:H7_WARFARE_MARK_H7C",
+				"stacking": "h7WfBallistaK",
+				"val": 5,
+				"valueType": "BASE_NUMBER",
+				"hidden": true
+			},
+			"h7WarfareHarrowShot": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7WarfareHarrowShot",
+				"icon": "h7/abilities/h7wfHarrowingVision"
+			}
+		},
+		"graphics": {
+			"animation": "h7/warfare/ShadowLurker/battle.json",
+			"iconLarge": "h7/warfare/ShadowLurker/iconLarge.png",
+			"iconSmall": "h7/warfare/ShadowLurker/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"frameAngles": [
+					90,
+					60,
+					45,
+					30,
+					0,
+					-30,
+					-45,
+					-60,
+					-90
+				],
+				"offset": {
+					"upperX": 35,
+					"upperY": -66,
+					"middleX": 50,
+					"middleY": -51,
+					"lowerX": 18,
+					"lowerY": -36
+				},
+				"attackClimaxFrame": 6,
+				"projectile": "h7/warfare/projectiles/A_Projectile_Dungeon_ShadowLurker_Bullet.json"
+			}
+		},
+		"sound": {
+			"shoot": "h7/warfare/building_shadow_lurker_attack.ogg",
+			"wince": "h7/warfare/building_shadow_lurker_hit.ogg",
+			"killed": "h7/warfare/building_shadow_lurker_die.ogg"
+		},
+		"shots": 24
+	},
+	"h7WarfareFaceless": {
+		"name": {
+			"singular": "Faceless",
+			"plural": "Faceless"
+		},
+		"description": "The Dungeon's Faceless, which wraps allies in a Cloak of Death.\n\nH7 Warfare Unit: when a Dungeon hero has received the First Aid Tent slot token at the H7 Memorial Blacksmith and has First Aid, it replaces the original First Aid Tent at the start of combat (level: Basic First Aid 2, Advanced 3, Expert 4; level 5 with Artillery, Engineering and First Aid together, and Reaper Arts from Undead King counts as all three). Level 5: if the cloak is still there at the end of the round, it explodes against nearby enemies. When it dies, the original First Aid Tent is lost too.",
+		"faction": "neutral",
+		"special": true,
+		"excludeFromRandomization": true,
+		"level": 0,
+		"cost": {
+			"gold": 0
+		},
+		"speed": 5,
+		"hitPoints": 100,
+		"attack": 0,
+		"defense": 0,
+		"damage": {
+			"min": 0,
+			"max": 0
+		},
+		"doubleWide": true,
+		"fightValue": 10,
+		"aiValue": 300,
+		"growth": 0,
+		"abilities": {
+			"siegeWeapon": {
+				"type": "SIEGE_WEAPON"
+			},
+			"h7WarfareLink": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7WarfareLink",
+				"hidden": true,
+				"description": "~"
+			},
+			"cast": {
+				"type": "SPELLCASTER",
+				"subtype": "heroes-memorial.h7:h7wfCloak",
+				"val": 0,
+				"icon": "h7/abilities/h7wfDeathCloak",
+				"description": "{Cloak of Death}\nMelee attackers take 34/45/68/90 Dark damage."
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 999,
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h7/warfare/Faceless/battle.json",
+			"iconLarge": "h7/warfare/Faceless/iconLarge.png",
+			"iconSmall": "h7/warfare/Faceless/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h7/warfare/building_faceless_ability.ogg",
+			"wince": "h7/warfare/building_faceless_hit.ogg",
+			"killed": "h7/warfare/building_faceless_die.ogg"
+		}
+	},
+	"h7WarfareCaveWyvern": {
+		"name": {
+			"singular": "Cave Wyvern",
+			"plural": "Cave Wyverns"
+		},
+		"description": "The Dungeon's Cave Wyvern, which corrodes town defenses with acid.\n\nH7 Warfare Unit: when a Dungeon hero has received the Catapult slot token at the H7 Memorial Blacksmith and has Engineering, it replaces the original Catapult during sieges (level: Basic Engineering 2, Advanced 3, Expert 4; level 5 with Artillery, Engineering and First Aid together, and Reaper Arts from Undead King counts as all three). On level 5 it throws one extra time per round. The Catapult is never lost when destroyed anyway.",
+		"faction": "neutral",
+		"special": true,
+		"excludeFromRandomization": true,
+		"level": 0,
+		"cost": {
+			"gold": 0
+		},
+		"speed": 0,
+		"hitPoints": 1667,
+		"attack": 10,
+		"defense": 19,
+		"damage": {
+			"min": 0,
+			"max": 0
+		},
+		"doubleWide": true,
+		"fightValue": 10,
+		"aiValue": 500,
+		"growth": 0,
+		"abilities": {
+			"siegeWeapon": {
+				"type": "SIEGE_WEAPON"
+			},
+			"h7WarfareLink": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7WarfareLink",
+				"hidden": true,
+				"description": "~"
+			},
+			"noDistancePenalty": {
+				"type": "NO_DISTANCE_PENALTY",
+				"hidden": true
+			},
+			"siegeMachine": {
+				"type": "CATAPULT",
+				"subtype": "catapultShot",
+				"description": "{Siege}\nOnly hits walls; auto-throws when defending."
+			}
+		},
+		"graphics": {
+			"animation": "h7/warfare/CaveWyvern/battle.json",
+			"iconLarge": "h7/warfare/CaveWyvern/iconLarge.png",
+			"iconSmall": "h7/warfare/CaveWyvern/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"frameAngles": [
+					90,
+					60,
+					45,
+					30,
+					0,
+					-30,
+					-45,
+					-60,
+					-90
+				],
+				"offset": {
+					"upperX": 21,
+					"upperY": -66,
+					"middleX": 29,
+					"middleY": -58,
+					"lowerX": 8,
+					"lowerY": -50
+				},
+				"attackClimaxFrame": 6,
+				"projectile": "h7/warfare/projectiles/A_Projectile_Dungeon_CaveWyvern_Attack.json"
+			}
+		},
+		"sound": {
+			"shoot": "h7/warfare/building_cave_wyvern_attack.ogg",
+			"wince": "h7/warfare/building_cave_wyvern_hit.ogg",
+			"killed": "h7/warfare/building_cave_wyvern_die.ogg"
+		}
+	},
+	"h7WarfareCaveWyvern5": {
+		"name": {
+			"singular": "Cave Wyvern",
+			"plural": "Cave Wyverns"
+		},
+		"description": "The Dungeon's Cave Wyvern, which corrodes town defenses with acid.\n\nH7 Warfare Unit: when a Dungeon hero has received the Catapult slot token at the H7 Memorial Blacksmith and has Engineering, it replaces the original Catapult during sieges (level: Basic Engineering 2, Advanced 3, Expert 4; level 5 with Artillery, Engineering and First Aid together, and Reaper Arts from Undead King counts as all three). On level 5 it throws one extra time per round. The Catapult is never lost when destroyed anyway.",
+		"faction": "neutral",
+		"special": true,
+		"excludeFromRandomization": true,
+		"level": 0,
+		"cost": {
+			"gold": 0
+		},
+		"speed": 0,
+		"hitPoints": 1667,
+		"attack": 10,
+		"defense": 19,
+		"damage": {
+			"min": 0,
+			"max": 0
+		},
+		"doubleWide": true,
+		"fightValue": 10,
+		"aiValue": 500,
+		"growth": 0,
+		"abilities": {
+			"siegeWeapon": {
+				"type": "SIEGE_WEAPON"
+			},
+			"h7WarfareLink": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7WarfareLink",
+				"hidden": true,
+				"description": "~"
+			},
+			"noDistancePenalty": {
+				"type": "NO_DISTANCE_PENALTY",
+				"hidden": true
+			},
+			"siegeMachine": {
+				"type": "CATAPULT",
+				"subtype": "heroes-memorial.h7:h7wfCatapultShot5",
+				"description": "{Siege}\nOnly hits walls; auto-throws when defending."
+			}
+		},
+		"graphics": {
+			"animation": "h7/warfare/CaveWyvern/battle.json",
+			"iconLarge": "h7/warfare/CaveWyvern/iconLarge.png",
+			"iconSmall": "h7/warfare/CaveWyvern/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"frameAngles": [
+					90,
+					60,
+					45,
+					30,
+					0,
+					-30,
+					-45,
+					-60,
+					-90
+				],
+				"offset": {
+					"upperX": 21,
+					"upperY": -66,
+					"middleX": 29,
+					"middleY": -58,
+					"lowerX": 8,
+					"lowerY": -50
+				},
+				"attackClimaxFrame": 6,
+				"projectile": "h7/warfare/projectiles/A_Projectile_Dungeon_CaveWyvern_Attack.json"
+			}
+		},
+		"sound": {
+			"shoot": "h7/warfare/building_cave_wyvern_attack.ogg",
+			"wince": "h7/warfare/building_cave_wyvern_hit.ogg",
+			"killed": "h7/warfare/building_cave_wyvern_die.ogg"
+		}
+	},
+	"h7WarfareDwarvenBallista": {
+		"name": {
+			"singular": "Dwarven Ballista",
+			"plural": "Dwarven Ballistas"
+		},
+		"description": "The Fortress's Dwarven Ballista, sturdy and durable.\n\nH7 Warfare Unit: when a Fortress hero has received the Ballista slot token at the H7 Memorial Blacksmith and has Artillery, it replaces the original Ballista at the start of combat (level: Basic Artillery 2, Advanced 3, Expert 4; level 5 with Artillery, Engineering and First Aid together, and Reaper Arts from Undead King counts as all three). When it dies, the original Ballista is lost too.",
+		"faction": "neutral",
+		"special": true,
+		"excludeFromRandomization": true,
+		"level": 5,
+		"cost": {
+			"gold": 0
+		},
+		"speed": 2,
+		"hitPoints": 333,
+		"attack": 17,
+		"defense": 21,
+		"damage": {
+			"min": 3,
+			"max": 4
+		},
+		"doubleWide": true,
+		"fightValue": 650,
+		"aiValue": 600,
+		"growth": 0,
+		"abilities": {
+			"siegeWeapon": {
+				"type": "SIEGE_WEAPON"
+			},
+			"h7WarfareLink": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7WarfareLink",
+				"hidden": true,
+				"description": "~"
+			},
+			"shooter": {
+				"type": "SHOOTER"
+			},
+			"cpuControlled": {
+				"type": "CPU_CONTROLLED",
+				"hidden": true
+			},
+			"noRetaliation": {
+				"type": "NO_RETALIATION",
+				"description": "{War Machines}\nWar machines cannot retaliate."
+			},
+			"noRangedRetaliation": {
+				"type": "BLOCKS_RANGED_RETALIATION",
+				"hidden": true
+			},
+			"h7wfBallistaK": {
+				"type": "heroes-memorial.h7:H7_WARFARE_MARK_H7C",
+				"stacking": "h7WfBallistaK",
+				"val": 5,
+				"valueType": "BASE_NUMBER",
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h7/warfare/DwarvenBallista/battle.json",
+			"iconLarge": "h7/warfare/DwarvenBallista/iconLarge.png",
+			"iconSmall": "h7/warfare/DwarvenBallista/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"frameAngles": [
+					90,
+					60,
+					45,
+					30,
+					0,
+					-30,
+					-45,
+					-60,
+					-90
+				],
+				"offset": {
+					"upperX": 8496,
+					"upperY": -2991,
+					"middleX": 12164,
+					"middleY": 456,
+					"lowerX": 4581,
+					"lowerY": 3897
+				},
+				"attackClimaxFrame": 6,
+				"projectile": "h7/warfare/projectiles/A_Projectile_Fortress_Ballista.json"
+			}
+		},
+		"sound": {
+			"shoot": "h7/warfare/building_fortress_ballista_attack.ogg",
+			"wince": "h7/warfare/building_fortress_ballista_hit.ogg",
+			"killed": "h7/warfare/building_fortress_ballista_die.ogg"
+		},
+		"shots": 24
+	},
+	"h7WarfareRunestone": {
+		"name": {
+			"singular": "Rune Stone",
+			"plural": "Rune Stones"
+		},
+		"description": "The Fortress's Rune Stone, which heals front-line allies with the power of runes.\n\nH7 Warfare Unit: when a Fortress hero has received the First Aid Tent slot token at the H7 Memorial Blacksmith and has First Aid, it replaces the original First Aid Tent at the start of combat (level: Basic First Aid 2, Advanced 3, Expert 4; level 5 with Artillery, Engineering and First Aid together, and Reaper Arts from Undead King counts as all three). Level 5: heals one extra time for each friendly rune on the target. When it dies, the original First Aid Tent is lost too.",
+		"faction": "neutral",
+		"special": true,
+		"excludeFromRandomization": true,
+		"level": 0,
+		"cost": {
+			"gold": 0
+		},
+		"speed": 1,
+		"hitPoints": 100,
+		"attack": 0,
+		"defense": 0,
+		"damage": {
+			"min": 0,
+			"max": 0
+		},
+		"doubleWide": false,
+		"fightValue": 10,
+		"aiValue": 300,
+		"growth": 0,
+		"abilities": {
+			"siegeWeapon": {
+				"type": "SIEGE_WEAPON"
+			},
+			"h7WarfareLink": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7WarfareLink",
+				"hidden": true,
+				"description": "~"
+			},
+			"cast": {
+				"type": "SPELLCASTER",
+				"subtype": "heroes-memorial.h7:h7wfRuneHeal",
+				"val": 0,
+				"icon": "h7/abilities/h7wfRuneHeal",
+				"description": "{Rune Healing}\nFront 3 columns, living allies: 11/13/15/38"
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 999,
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h7/warfare/Runestone/battle.json",
+			"iconLarge": "h7/warfare/Runestone/iconLarge.png",
+			"iconSmall": "h7/warfare/Runestone/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h7/warfare/building_rune_emblem_heal.ogg",
+			"wince": "h7/warfare/building_rune_emblem_hit.ogg",
+			"killed": "h7/warfare/building_rune_emblem_die.ogg"
+		}
+	},
+	"h7WarfareFireCannon": {
+		"name": {
+			"singular": "Fire Cannon",
+			"plural": "Fire Cannons"
+		},
+		"description": "The Fortress's Fire Cannon, which pounds town defenses with flames.\n\nH7 Warfare Unit: when a Fortress hero has received the Catapult slot token at the H7 Memorial Blacksmith and has Engineering, it replaces the original Catapult during sieges (level: Basic Engineering 2, Advanced 3, Expert 4; level 5 with Artillery, Engineering and First Aid together, and Reaper Arts from Undead King counts as all three). On level 5 it throws one extra time per round. The Catapult is never lost when destroyed anyway.",
+		"faction": "neutral",
+		"special": true,
+		"excludeFromRandomization": true,
+		"level": 0,
+		"cost": {
+			"gold": 0
+		},
+		"speed": 0,
+		"hitPoints": 1667,
+		"attack": 10,
+		"defense": 23,
+		"damage": {
+			"min": 0,
+			"max": 0
+		},
+		"doubleWide": true,
+		"fightValue": 10,
+		"aiValue": 500,
+		"growth": 0,
+		"abilities": {
+			"siegeWeapon": {
+				"type": "SIEGE_WEAPON"
+			},
+			"h7WarfareLink": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7WarfareLink",
+				"hidden": true,
+				"description": "~"
+			},
+			"noDistancePenalty": {
+				"type": "NO_DISTANCE_PENALTY",
+				"hidden": true
+			},
+			"siegeMachine": {
+				"type": "CATAPULT",
+				"subtype": "catapultShot",
+				"description": "{Siege}\nOnly hits walls; auto-throws when defending."
+			}
+		},
+		"graphics": {
+			"animation": "h7/warfare/FireCannon/battle.json",
+			"iconLarge": "h7/warfare/FireCannon/iconLarge.png",
+			"iconSmall": "h7/warfare/FireCannon/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"frameAngles": [
+					90,
+					60,
+					45,
+					30,
+					0,
+					-30,
+					-45,
+					-60,
+					-90
+				],
+				"offset": {
+					"upperX": 12,
+					"upperY": -75,
+					"middleX": 17,
+					"middleY": -70,
+					"lowerX": 6,
+					"lowerY": -65
+				},
+				"attackClimaxFrame": 6,
+				"projectile": "h7/projectiles/H7FireElementalProjectile_s85.json"
+			}
+		},
+		"sound": {
+			"shoot": "h7/warfare/building_fire_cannon_attack.ogg",
+			"wince": "h7/warfare/building_fire_cannon_hit.ogg",
+			"killed": "h7/warfare/building_fire_cannon_die.ogg"
+		}
+	},
+	"h7WarfareFireCannon5": {
+		"name": {
+			"singular": "Fire Cannon",
+			"plural": "Fire Cannons"
+		},
+		"description": "The Fortress's Fire Cannon, which pounds town defenses with flames.\n\nH7 Warfare Unit: when a Fortress hero has received the Catapult slot token at the H7 Memorial Blacksmith and has Engineering, it replaces the original Catapult during sieges (level: Basic Engineering 2, Advanced 3, Expert 4; level 5 with Artillery, Engineering and First Aid together, and Reaper Arts from Undead King counts as all three). On level 5 it throws one extra time per round. The Catapult is never lost when destroyed anyway.",
+		"faction": "neutral",
+		"special": true,
+		"excludeFromRandomization": true,
+		"level": 0,
+		"cost": {
+			"gold": 0
+		},
+		"speed": 0,
+		"hitPoints": 1667,
+		"attack": 10,
+		"defense": 23,
+		"damage": {
+			"min": 0,
+			"max": 0
+		},
+		"doubleWide": true,
+		"fightValue": 10,
+		"aiValue": 500,
+		"growth": 0,
+		"abilities": {
+			"siegeWeapon": {
+				"type": "SIEGE_WEAPON"
+			},
+			"h7WarfareLink": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7WarfareLink",
+				"hidden": true,
+				"description": "~"
+			},
+			"noDistancePenalty": {
+				"type": "NO_DISTANCE_PENALTY",
+				"hidden": true
+			},
+			"siegeMachine": {
+				"type": "CATAPULT",
+				"subtype": "heroes-memorial.h7:h7wfCatapultShot5",
+				"description": "{Siege}\nOnly hits walls; auto-throws when defending."
+			}
+		},
+		"graphics": {
+			"animation": "h7/warfare/FireCannon/battle.json",
+			"iconLarge": "h7/warfare/FireCannon/iconLarge.png",
+			"iconSmall": "h7/warfare/FireCannon/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"frameAngles": [
+					90,
+					60,
+					45,
+					30,
+					0,
+					-30,
+					-45,
+					-60,
+					-90
+				],
+				"offset": {
+					"upperX": 12,
+					"upperY": -75,
+					"middleX": 17,
+					"middleY": -70,
+					"lowerX": 6,
+					"lowerY": -65
+				},
+				"attackClimaxFrame": 6,
+				"projectile": "h7/projectiles/H7FireElementalProjectile_s85.json"
+			}
+		},
+		"sound": {
+			"shoot": "h7/warfare/building_fire_cannon_attack.ogg",
+			"wince": "h7/warfare/building_fire_cannon_hit.ogg",
+			"killed": "h7/warfare/building_fire_cannon_die.ogg"
+		}
+	}
+}

@@ -1,0 +1,3756 @@
+{
+	"h7SylvanAncientTreant": {
+		"name": {
+			"singular": "Ancient Treant",
+			"plural": "Ancient Treants"
+		},
+		"description": "Treants can live for centuries, even millennia. The oldest Treants are slow but resilient, their bodies protected by thick bark hardened over thousands of years. They can also animate the plants around them, turning them into weapons against the enemies of the forest.\nAncient Treants may well be the oldest creatures walking the land of Ashan. If they could talk, they might tell fairy tales! Alas... they only growl and roar.",
+		"faction": "rampart",
+		"level": 7,
+		"cost": {
+			"gold": 3365,
+			"crystal": 1,
+			"gems": 2
+		},
+		"speed": 6,
+		"hitPoints": 209,
+		"attack": 17,
+		"defense": 30,
+		"damage": {
+			"min": 34,
+			"max": 45
+		},
+		"doubleWide": true,
+		"fightValue": 4988,
+		"aiValue": 6499,
+		"growth": 1,
+		"advMapAmount": {
+			"min": 1,
+			"max": 3
+		},
+		"abilities": {
+			"shooter": {
+				"type": "SHOOTER"
+			},
+			"h7EntanglingRoots": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7EntanglingRoots",
+				"icon": "h7/abilities/h7EntanglingRoots",
+				"description": "{Entangling Roots}\nHit foes can't move until Treant moves or dies"
+			},
+			"h7LivingShelter": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7LivingShelter",
+				"val": 7,
+				"icon": "h7/abilities/h7LivingShelter",
+				"description": "{Living Shelter}\nDefend: +7 Defense, adjacent hexes block foes",
+				"addInfo": {
+					"def": 7
+				}
+			},
+			"h7SanctumTwin": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7SanctumTwin",
+				"hidden": true,
+				"description": "~",
+				"addInfo": {
+					"twin": "h7SylvanEmeraldDragon",
+					"army": "h7SylvanSprite,h7SylvanOakDryad,h7SylvanMasterHunter,h7SylvanDruidElder,h7SylvanBladeMaster,h7SylvanSunDeer"
+				}
+			}
+		},
+		"graphics": {
+			"animation": "h7/AncientTreant/battle.json",
+			"map": "h7/AncientTreant/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/AncientTreant/map/atkL.png",
+			"mapAttackFromRight": "h7/AncientTreant/map/atkR.png",
+			"iconLarge": "h7/AncientTreant/iconLarge.png",
+			"iconSmall": "h7/AncientTreant/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"frameAngles": [
+					90,
+					60,
+					45,
+					30,
+					0,
+					-30,
+					-45,
+					-60,
+					-90
+				],
+				"offset": {
+					"upperX": 45,
+					"upperY": -71,
+					"middleX": 58,
+					"middleY": -53,
+					"lowerX": 16,
+					"lowerY": -38
+				},
+				"attackClimaxFrame": 6,
+				"projectile": "h7/projectiles/_none.json"
+			}
+		},
+		"sound": {
+			"attack": "h7/creature_treant_attack.ogg",
+			"shoot": "h7/creature_treant_attack_ranged.ogg",
+			"defend": "h7/creature_treant_defend.ogg",
+			"wince": "h7/creature_treant_hit.ogg",
+			"killed": "h7/creature_treant_die.ogg",
+			"move": "h7/creature_treant_move.ogg"
+		},
+		"shots": 24,
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_WALL_PENALTY",
+					"description": "{Siege Shooter}\nNo damage loss when shooting over walls"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_DISTANCE_PENALTY",
+					"description": "{Sharpshooter}\nNo penalty for long-range shots"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "SHOTS",
+					"description": "{Ammunition}\nMore shots"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			}
+		]
+	},
+	"h7SylvanBladeDancer": {
+		"name": {
+			"singular": "Blade Dancer",
+			"plural": "Blade Dancers"
+		},
+		"description": "The elite of the forest warriors. Elves who devote their lives to the elven martial arts are called War Dancers. They rely mainly on dodging and swift movement rather than toughness or brute strength. Blade Dancers wear no armor, but often tattoo protective magic onto their skin.\nThe elves have many different kinds of blade dances, and mastering even one of them is a remarkable achievement.",
+		"faction": "rampart",
+		"level": 5,
+		"cost": {
+			"gold": 420
+		},
+		"speed": 6,
+		"hitPoints": 36,
+		"attack": 15,
+		"defense": 9,
+		"damage": {
+			"min": 11,
+			"max": 15
+		},
+		"doubleWide": false,
+		"fightValue": 558,
+		"aiValue": 621,
+		"growth": 3,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"h7Vigilance": {
+				"type": "H7_NO_FLANK_H7C",
+				"val": 1,
+				"description": "{Vigilance}\nCan't be flanked or backstabbed by any effect"
+			},
+			"h7VigilanceMark": {
+				"type": "H7_VIGILANCE_H7C",
+				"hidden": true,
+				"val": 1
+			}
+		},
+		"graphics": {
+			"animation": "h7/BladeDancer/battle.json",
+			"map": "h7/BladeDancer/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/BladeDancer/map/atkL.png",
+			"mapAttackFromRight": "h7/BladeDancer/map/atkR.png",
+			"iconLarge": "h7/BladeDancer/iconLarge.png",
+			"iconSmall": "h7/BladeDancer/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h7/creature_blade_dancer_attack.ogg",
+			"defend": "h7/creature_blade_dancer_defend.ogg",
+			"wince": "h7/creature_blade_dancer_hit.ogg",
+			"killed": "h7/creature_blade_dancer_die.ogg",
+			"move": "h7/creature_blade_dancer_move.ogg"
+		},
+		"upgrades": [
+			"h7SylvanBladeMaster"
+		],
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					3,
+					4,
+					5,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					3,
+					4,
+					4,
+					6,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					2,
+					3,
+					3,
+					4,
+					5,
+					6,
+					6,
+					7
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					7
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "MIND_IMMUNITY",
+					"description": "{Steadfast Mind}\nImmune to Mind spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "BLOCKS_RETALIATION",
+					"description": "{No Retaliation}\nEnemy cannot retaliate when attacked"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h7SylvanBladeMaster": {
+		"name": {
+			"singular": "Blade Master",
+			"plural": "Blade Masters"
+		},
+		"description": "These warriors learn from the finest swordsmen of Irollan. They move nimbly, like feathers in the wind. In battle, the swordplay of Blade Masters is swift and precise, like leaves in a hurricane, and few survive the flash of their silver blades.\nRemember the many blade dances I mentioned earlier? These Blade Masters have mastered more than one.",
+		"faction": "rampart",
+		"level": 5,
+		"cost": {
+			"gold": 560
+		},
+		"speed": 7,
+		"hitPoints": 46,
+		"attack": 15,
+		"defense": 9,
+		"damage": {
+			"min": 11,
+			"max": 15
+		},
+		"doubleWide": false,
+		"fightValue": 834,
+		"aiValue": 928,
+		"growth": 3,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"whirlingDeath": {
+				"type": "ATTACKS_ALL_ADJACENT",
+				"description": "{Whirling Death}\nAttacks all adjacent enemies."
+			},
+			"h7Vigilance": {
+				"type": "H7_NO_FLANK_H7C",
+				"val": 1,
+				"description": "{Vigilance}\nCan't be flanked or backstabbed by any effect"
+			},
+			"h7VigilanceMark": {
+				"type": "H7_VIGILANCE_H7C",
+				"hidden": true,
+				"val": 1
+			}
+		},
+		"graphics": {
+			"animation": "h7/BladeMaster/battle.json",
+			"map": "h7/BladeMaster/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/BladeMaster/map/atkL.png",
+			"mapAttackFromRight": "h7/BladeMaster/map/atkR.png",
+			"iconLarge": "h7/BladeMaster/iconLarge.png",
+			"iconSmall": "h7/BladeMaster/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h7/creature_blade_dancer_attack.ogg",
+			"defend": "h7/creature_blade_dancer_defend.ogg",
+			"wince": "h7/creature_blade_dancer_hit.ogg",
+			"killed": "h7/creature_blade_dancer_die.ogg",
+			"move": "h7/creature_blade_dancer_move.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					3,
+					4,
+					5,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					3,
+					4,
+					4,
+					6,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					2,
+					3,
+					3,
+					4,
+					5,
+					6,
+					6,
+					7
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					7
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "MIND_IMMUNITY",
+					"description": "{Steadfast Mind}\nImmune to Mind spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "BLOCKS_RETALIATION",
+					"description": "{No Retaliation}\nEnemy cannot retaliate when attacked"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h7SylvanDruid": {
+		"name": {
+			"singular": "Druid",
+			"plural": "Druids"
+		},
+		"description": "Druids are priests of Sylanna, Dragon of Earth. Through her they gain the ability to command all kinds of natural forces, which helps them through all sorts of perils.\nMorrin, as they are called in the elven tongue (by MMX's breakdown, meaning “earth song”); the word for druid has no gender in the elven tongue, and all of them are called “druids”, or literally, “those who know plants well”.",
+		"faction": "rampart",
+		"level": 4,
+		"cost": {
+			"gold": 270
+		},
+		"speed": 6,
+		"hitPoints": 26,
+		"attack": 9,
+		"defense": 8,
+		"damage": {
+			"min": 4,
+			"max": 7
+		},
+		"doubleWide": false,
+		"fightValue": 337,
+		"aiValue": 386,
+		"growth": 5,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"shooter": {
+				"type": "SHOOTER"
+			},
+			"cast_h7AbLeafDaggers": {
+				"type": "SPELLCASTER",
+				"subtype": "h7AbLeafDaggers",
+				"val": 0,
+				"icon": "h7/abilities/h7LeafDaggers",
+				"description": "{Leaf Daggers}\n1/battle: shot pierces line, ignores Defense"
+			},
+			"casts_h7AbLeafDaggers": {
+				"type": "CASTS",
+				"val": 1
+			},
+			"noDefault_h7AbLeafDaggers": {
+				"type": "NO_SPELLCAST_BY_DEFAULT",
+				"hidden": true
+			},
+			"leafShot": {
+				"type": "SPELL_LIKE_ATTACK",
+				"subtype": "h7AbLeafDaggersLine",
+				"val": 0,
+				"hidden": true,
+				"limiters": [
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "H7_LEAF_ARMED_H7C"
+					}
+				]
+			},
+			"leafRange": {
+				"type": "NO_DISTANCE_PENALTY",
+				"hidden": true,
+				"limiters": [
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "H7_LEAF_ARMED_H7C"
+					}
+				]
+			},
+			"leafWall": {
+				"type": "NO_WALL_PENALTY",
+				"hidden": true,
+				"limiters": [
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "H7_LEAF_ARMED_H7C"
+					}
+				]
+			},
+			"leafDefence": {
+				"type": "ENEMY_DEFENCE_REDUCTION",
+				"val": 100,
+				"hidden": true,
+				"limiters": [
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "H7_LEAF_ARMED_H7C"
+					}
+				]
+			}
+		},
+		"graphics": {
+			"animation": "h7/Druid/battle.json",
+			"map": "h7/Druid/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/Druid/map/atkL.png",
+			"mapAttackFromRight": "h7/Druid/map/atkR.png",
+			"iconLarge": "h7/Druid/iconLarge.png",
+			"iconSmall": "h7/Druid/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"frameAngles": [
+					90,
+					60,
+					45,
+					30,
+					0,
+					-30,
+					-45,
+					-60,
+					-90
+				],
+				"offset": {
+					"upperX": -22,
+					"upperY": -61,
+					"middleX": -38,
+					"middleY": -70,
+					"lowerX": -19,
+					"lowerY": -82
+				},
+				"attackClimaxFrame": 8,
+				"projectile": "h7/projectiles/A_Projectile_Earth_Bullet_s85.json"
+			}
+		},
+		"sound": {
+			"attack": "h7/creature_druid_attack.ogg",
+			"shoot": "h7/creature_druid_attack_ranged.ogg",
+			"defend": "h7/creature_druid_defend.ogg",
+			"wince": "h7/creature_druid_hit.ogg",
+			"killed": "h7/creature_druid_die.ogg",
+			"move": "h7/creature_druid_move.ogg"
+		},
+		"shots": 15,
+		"upgrades": [
+			"h7SylvanDruidElder"
+		],
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					5,
+					6,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_WALL_PENALTY",
+					"description": "{Siege Shooter}\nNo damage loss when shooting over walls"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_DISTANCE_PENALTY",
+					"description": "{Sharpshooter}\nNo penalty for long-range shots"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h7SylvanDruidElder": {
+		"name": {
+			"singular": "Druid Elder",
+			"plural": "Druid Elders"
+		},
+		"description": "Before High King Alaron seized power, the duty of choosing the elven king fell mainly to the Druid Elders, who had to endure in a sweltering sauna until they agreed on who would be the new ruler. That tradition is gone now, but the Druid Elders remain the social and spiritual pillars of elven society.\nThe Druid Elders' headdresses are not obtained by killing. A stag nearing the end of its life will seek out a druid of its own will and offer its hide, after its death, for the druid to use as they see fit. For a druid, receiving such a gift is a very great honor.",
+		"faction": "rampart",
+		"level": 4,
+		"cost": {
+			"gold": 350
+		},
+		"speed": 6,
+		"hitPoints": 30,
+		"attack": 10,
+		"defense": 10,
+		"damage": {
+			"min": 5,
+			"max": 8
+		},
+		"doubleWide": false,
+		"fightValue": 483,
+		"aiValue": 554,
+		"growth": 5,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"shooter": {
+				"type": "SHOOTER"
+			},
+			"cast_h7AbThorns": {
+				"type": "SPELLCASTER",
+				"subtype": "h7AbThorns",
+				"val": 0,
+				"icon": "h7/abilities/h7Thorns",
+				"description": "{Thorns}\n1/battle: 2×2 thorns, 3 rounds, foes -3 Speed"
+			},
+			"casts_h7AbThorns": {
+				"type": "CASTS",
+				"val": 1
+			},
+			"noDefault_h7AbThorns": {
+				"type": "NO_SPELLCAST_BY_DEFAULT",
+				"hidden": true
+			},
+			"cast_h7AbLeafDaggers": {
+				"type": "SPELLCASTER",
+				"subtype": "h7AbLeafDaggers",
+				"val": 0,
+				"icon": "h7/abilities/h7LeafDaggers",
+				"description": "{Leaf Daggers}\n1/battle: shot pierces line, ignores Defense"
+			},
+			"casts_h7AbLeafDaggers": {
+				"type": "CASTS",
+				"val": 1
+			},
+			"noDefault_h7AbLeafDaggers": {
+				"type": "NO_SPELLCAST_BY_DEFAULT",
+				"hidden": true
+			},
+			"leafShot": {
+				"type": "SPELL_LIKE_ATTACK",
+				"subtype": "h7AbLeafDaggersLine",
+				"val": 0,
+				"hidden": true,
+				"limiters": [
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "H7_LEAF_ARMED_H7C"
+					}
+				]
+			},
+			"leafRange": {
+				"type": "NO_DISTANCE_PENALTY",
+				"hidden": true,
+				"limiters": [
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "H7_LEAF_ARMED_H7C"
+					}
+				]
+			},
+			"leafWall": {
+				"type": "NO_WALL_PENALTY",
+				"hidden": true,
+				"limiters": [
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "H7_LEAF_ARMED_H7C"
+					}
+				]
+			},
+			"leafDefence": {
+				"type": "ENEMY_DEFENCE_REDUCTION",
+				"val": 100,
+				"hidden": true,
+				"limiters": [
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "H7_LEAF_ARMED_H7C"
+					}
+				]
+			}
+		},
+		"graphics": {
+			"animation": "h7/DruidElder/battle.json",
+			"map": "h7/DruidElder/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/DruidElder/map/atkL.png",
+			"mapAttackFromRight": "h7/DruidElder/map/atkR.png",
+			"iconLarge": "h7/DruidElder/iconLarge.png",
+			"iconSmall": "h7/DruidElder/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"frameAngles": [
+					90,
+					60,
+					45,
+					30,
+					0,
+					-30,
+					-45,
+					-60,
+					-90
+				],
+				"offset": {
+					"upperX": -21,
+					"upperY": -67,
+					"middleX": -36,
+					"middleY": -76,
+					"lowerX": -19,
+					"lowerY": -87
+				},
+				"attackClimaxFrame": 8,
+				"projectile": "h7/projectiles/A_Projectile_Earth_Bullet_s85.json"
+			}
+		},
+		"sound": {
+			"attack": "h7/creature_druid_attack.ogg",
+			"shoot": "h7/creature_druid_attack_ranged.ogg",
+			"defend": "h7/creature_druid_defend.ogg",
+			"wince": "h7/creature_druid_hit.ogg",
+			"killed": "h7/creature_druid_die.ogg",
+			"move": "h7/creature_druid_move.ogg"
+		},
+		"shots": 15,
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					5,
+					6,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_WALL_PENALTY",
+					"description": "{Siege Shooter}\nNo damage loss when shooting over walls"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_DISTANCE_PENALTY",
+					"description": "{Sharpshooter}\nNo penalty for long-range shots"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h7SylvanDryad": {
+		"name": {
+			"singular": "Dryad",
+			"plural": "Dryads"
+		},
+		"description": "When close to death, an elf may ask to be buried in the trunk of a living Treant. Needless to say, this requires a close bond between the elf and the chosen vessel for this rare burial rite to succeed. The tree's living heart wraps the elf's remains, forming the shape of an unborn child. The elf's soul then returns to the world of Ashan as a forest spirit known as a Dryad.\nDryads can sing trees into tools, weapons and even buildings to help their elven kin. A chorus of Dryads can even shape an ancient tree into an elven city.",
+		"faction": "rampart",
+		"level": 2,
+		"cost": {
+			"gold": 120
+		},
+		"speed": 6,
+		"hitPoints": 12,
+		"attack": 6,
+		"defense": 4,
+		"damage": {
+			"min": 2,
+			"max": 2
+		},
+		"doubleWide": false,
+		"fightValue": 138,
+		"aiValue": 155,
+		"growth": 8,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"flying": {
+				"type": "FLYING"
+			},
+			"h7TreantSynergy": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7TreantSynergy",
+				"val": 9,
+				"addInfo": {
+					"heal": 1
+				},
+				"icon": "h7/abilities/h7TreantSynergy",
+				"description": "{Treant Symbiosis}\nIt & adjacent allies +9 Defense; heals Treants"
+			},
+			"h7AuraZone": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7AuraZone",
+				"val": 0,
+				"stacking": "h7AuraZone",
+				"propagator": "BATTLE_WIDE",
+				"hidden": true,
+				"description": "~"
+			}
+		},
+		"graphics": {
+			"animation": "h7/Dryad/battle.json",
+			"map": "h7/Dryad/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/Dryad/map/atkL.png",
+			"mapAttackFromRight": "h7/Dryad/map/atkR.png",
+			"iconLarge": "h7/Dryad/iconLarge.png",
+			"iconSmall": "h7/Dryad/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h7/creature_dryad_attack.ogg",
+			"defend": "h7/creature_dryad_defend.ogg",
+			"wince": "h7/creature_dryad_hit.ogg",
+			"killed": "h7/creature_dryad_die.ogg",
+			"move": "h7/creature_dryad_move.ogg"
+		},
+		"upgrades": [
+			"h7SylvanOakDryad"
+		],
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					3,
+					3,
+					3,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					3,
+					4,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					0,
+					1,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					3,
+					3,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_RETALIATION",
+					"description": "{Nimbleness}\nExtra retaliation each round"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			}
+		]
+	},
+	"h7SylvanEmeraldDragon": {
+		"name": {
+			"singular": "Emerald Dragon",
+			"plural": "Emerald Dragons"
+		},
+		"description": "As they age, a Green Dragon's scales slowly turn into emerald, until it dies, or rather, until its draconic essence returns to the Spirit World, leaving only an emerald shell in the world of Ashan. Many treasure hunters and adventurers have tried to travel to Irollan in search of these precious shells, but none has ever returned...\nLike their ancestor Sylanna, Emerald Dragons are the most patient and unhurried of dragons. Only when provoked do they breathe corrosive gas to dissolve intruders.",
+		"faction": "rampart",
+		"level": 7,
+		"cost": {
+			"gold": 3365,
+			"sulfur": 2,
+			"mercury": 1
+		},
+		"speed": 9,
+		"hitPoints": 273,
+		"attack": 21,
+		"defense": 18,
+		"damage": {
+			"min": 38,
+			"max": 39
+		},
+		"doubleWide": true,
+		"fightValue": 5181,
+		"aiValue": 6750,
+		"growth": 1,
+		"advMapAmount": {
+			"min": 1,
+			"max": 3
+		},
+		"abilities": {
+			"breath": {
+				"type": "TWO_HEX_ATTACK_BREATH",
+				"description": "{Acid Breath}\nBreath attack hits two hexes."
+			},
+			"immEarth": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "earth",
+				"val": 50,
+				"description": "{Earth Immunity}\nImmune to Earth curses; half Earth damage."
+			},
+			"regeneration": {
+				"type": "HP_REGENERATION",
+				"val": 136,
+				"description": "{Regeneration}\nTop unit heals ${val} HP each round start."
+			},
+			"dragonNature": {
+				"type": "DRAGON_NATURE"
+			},
+			"skeletonTarget": {
+				"type": "SKELETON_TRANSFORMER_TARGET",
+				"subtype": "boneDragon",
+				"hidden": true
+			},
+			"h7SchoolImmunity_earth": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7SchoolImmunity",
+				"val": 0,
+				"addInfo": {
+					"school": "earth"
+				},
+				"stacking": "h7SchoolImmunity_earth",
+				"hidden": true,
+				"description": "~"
+			},
+			"h7AcidDot": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7AcidDot",
+				"icon": "h7/abilities/h7AcidDot",
+				"description": "{Acid Breath}\nActive hit: 50%, then 25% dmg over 2 rounds.",
+				"addInfo": {
+					"kind": "acid",
+					"school": "earth"
+				}
+			},
+			"h7SanctumTwin": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7SanctumTwin",
+				"hidden": true,
+				"description": "~",
+				"addInfo": {
+					"twin": "h7SylvanAncientTreant",
+					"army": "h7SylvanSprite,h7SylvanOakDryad,h7SylvanMasterHunter,h7SylvanDruidElder,h7SylvanBladeMaster,h7SylvanSunDeer"
+				}
+			}
+		},
+		"graphics": {
+			"animation": "h7/EmeraldDragon/battle.json",
+			"map": "h7/EmeraldDragon/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/EmeraldDragon/map/atkL.png",
+			"mapAttackFromRight": "h7/EmeraldDragon/map/atkR.png",
+			"iconLarge": "h7/EmeraldDragon/iconLarge.png",
+			"iconSmall": "h7/EmeraldDragon/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h7/creature_green_dragon_attack.ogg",
+			"defend": "h7/creature_green_dragon_defend.ogg",
+			"wince": "h7/creature_green_dragon_hit.ogg",
+			"killed": "h7/creature_green_dragon_die.ogg",
+			"move": "h7/creature_green_dragon_move.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "MIND_IMMUNITY",
+					"description": "{Steadfast Mind}\nImmune to Mind spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE",
+					"description": "{Magic Resistance}\nChance to resist enemy spells"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					10,
+					20,
+					30,
+					40,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "BLOCKS_RETALIATION",
+					"description": "{No Retaliation}\nEnemy cannot retaliate when attacked"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true
+				]
+			}
+		]
+	},
+	"h7SylvanGreenDragon": {
+		"name": {
+			"singular": "Green Dragon",
+			"plural": "Green Dragons"
+		},
+		"description": "As avatars of the Elemental Dragons, dragons come in all shapes and sizes. The scales of young Green Dragons look like stones covered in moss or other plants. Green Dragons are the guardians of earth and nature; they answer the call of the elven war horns echoing through the forest and join in its defense.\nBecause a Green Dragon's hide is made of rock and covered in moss and all kinds of plants, sleeping Green Dragons are often mistaken for mounds or hills. Their heavy, hoarse breathing, however, serves as a good warning to unsuspecting travelers.",
+		"faction": "rampart",
+		"level": 7,
+		"cost": {
+			"gold": 2590,
+			"sulfur": 1
+		},
+		"speed": 8,
+		"hitPoints": 227,
+		"attack": 17,
+		"defense": 18,
+		"damage": {
+			"min": 38,
+			"max": 39
+		},
+		"doubleWide": true,
+		"fightValue": 3664,
+		"aiValue": 4773,
+		"growth": 1,
+		"advMapAmount": {
+			"min": 1,
+			"max": 3
+		},
+		"abilities": {
+			"h7WarfareGuard": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7WarfareGuard",
+				"hidden": true,
+				"description": "~",
+				"addInfo": {
+					"faction": "rampart",
+					"army": "h7SylvanPixie,h7SylvanDryad,h7SylvanHunter,h7SylvanDruid,h7SylvanBladeDancer,h7SylvanMoonDoe"
+				}
+			},
+			"immEarth": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "earth",
+				"val": 50,
+				"description": "{Earth Immunity}\nImmune to Earth curses; half Earth damage."
+			},
+			"regeneration": {
+				"type": "HP_REGENERATION",
+				"val": 136,
+				"description": "{Regeneration}\nTop unit heals ${val} HP each round start."
+			},
+			"dragonNature": {
+				"type": "DRAGON_NATURE"
+			},
+			"skeletonTarget": {
+				"type": "SKELETON_TRANSFORMER_TARGET",
+				"subtype": "boneDragon",
+				"hidden": true
+			},
+			"h7SchoolImmunity_earth": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7SchoolImmunity",
+				"val": 0,
+				"addInfo": {
+					"school": "earth"
+				},
+				"stacking": "h7SchoolImmunity_earth",
+				"hidden": true,
+				"description": "~"
+			}
+		},
+		"graphics": {
+			"animation": "h7/GreenDragon/battle.json",
+			"map": "h7/GreenDragon/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/GreenDragon/map/atkL.png",
+			"mapAttackFromRight": "h7/GreenDragon/map/atkR.png",
+			"iconLarge": "h7/GreenDragon/iconLarge.png",
+			"iconSmall": "h7/GreenDragon/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h7/creature_green_dragon_attack.ogg",
+			"defend": "h7/creature_green_dragon_defend.ogg",
+			"wince": "h7/creature_green_dragon_hit.ogg",
+			"killed": "h7/creature_green_dragon_die.ogg",
+			"move": "h7/creature_green_dragon_move.ogg"
+		},
+		"upgrades": [
+			"h7SylvanEmeraldDragon"
+		],
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "MIND_IMMUNITY",
+					"description": "{Steadfast Mind}\nImmune to Mind spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE",
+					"description": "{Magic Resistance}\nChance to resist enemy spells"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					10,
+					20,
+					30,
+					40,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "BLOCKS_RETALIATION",
+					"description": "{No Retaliation}\nEnemy cannot retaliate when attacked"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true
+				]
+			}
+		]
+	},
+	"h7SylvanHunter": {
+		"name": {
+			"singular": "Huntsman",
+			"plural": "Huntsmen"
+		},
+		"description": "In times of peace, Huntsmen are mainly responsible for feeding the forest communities. They are respected for their superb skill and courage. Huntsmen roam all over Irollan, living in harmony with nature and its many unwritten laws. They never kill needlessly. But in times of war, they feel no regret about using their talents to strike enemies from afar. Some may find it odd that Irollan has Huntsmen, but it is not: elves are not vegetarians, although many druids choose to be.",
+		"faction": "rampart",
+		"level": 3,
+		"cost": {
+			"gold": 170
+		},
+		"speed": 5,
+		"hitPoints": 13,
+		"attack": 10,
+		"defense": 6,
+		"damage": {
+			"min": 2,
+			"max": 4
+		},
+		"doubleWide": false,
+		"fightValue": 170,
+		"aiValue": 201,
+		"growth": 8,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"shooter": {
+				"type": "SHOOTER"
+			}
+		},
+		"graphics": {
+			"animation": "h7/Hunter/battle.json",
+			"map": "h7/Hunter/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/Hunter/map/atkL.png",
+			"mapAttackFromRight": "h7/Hunter/map/atkR.png",
+			"iconLarge": "h7/Hunter/iconLarge.png",
+			"iconSmall": "h7/Hunter/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"frameAngles": [
+					90,
+					60,
+					45,
+					30,
+					0,
+					-30,
+					-45,
+					-60,
+					-90
+				],
+				"offset": {
+					"upperX": 35,
+					"upperY": -65,
+					"middleX": 32,
+					"middleY": -59,
+					"lowerX": 17,
+					"lowerY": -53
+				},
+				"attackClimaxFrame": 10,
+				"projectile": "h7/projectiles/H7ArrowProjectile.json"
+			}
+		},
+		"sound": {
+			"attack": "h7/creature_hunter_attack.ogg",
+			"shoot": "h7/creature_hunter_attack_ranged.ogg",
+			"defend": "h7/creature_hunter_defend.ogg",
+			"wince": "h7/creature_hunter_hit.ogg",
+			"killed": "h7/creature_hunter_die.ogg",
+			"move": "h7/creature_hunter_move.ogg"
+		},
+		"shots": 21,
+		"upgrades": [
+			"h7SylvanMasterHunter"
+		],
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_WALL_PENALTY",
+					"description": "{Siege Shooter}\nNo damage loss when shooting over walls"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h7SylvanMasterHunter": {
+		"name": {
+			"singular": "Master Huntsman",
+			"plural": "Master Huntsmen"
+		},
+		"description": "Master Huntsmen devote themselves to the defense of the forest realm and will rise to stop any intruder. Their enchanted bows let them loose two arrows before the enemy can react.\nA Huntsman earns the title of Master Huntsman through a special ritual in which an Ancient Treant gives the elf a branch taken from its own body, to be carved into a bow. The Master Huntsman uses this bow until the end of his life, and in the end it is buried with him.",
+		"faction": "rampart",
+		"level": 3,
+		"cost": {
+			"gold": 220
+		},
+		"speed": 6,
+		"hitPoints": 15,
+		"attack": 10,
+		"defense": 6,
+		"damage": {
+			"min": 2,
+			"max": 4
+		},
+		"doubleWide": false,
+		"fightValue": 256,
+		"aiValue": 304,
+		"growth": 8,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"shooter": {
+				"type": "SHOOTER"
+			},
+			"h7DoubleShot": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7DoubleShot",
+				"icon": "h7/abilities/h7DoubleShot",
+				"description": "{Double Shot}\nKills 1+: shoots again; target may retaliate"
+			}
+		},
+		"graphics": {
+			"animation": "h7/MasterHunter/battle.json",
+			"map": "h7/MasterHunter/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/MasterHunter/map/atkL.png",
+			"mapAttackFromRight": "h7/MasterHunter/map/atkR.png",
+			"iconLarge": "h7/MasterHunter/iconLarge.png",
+			"iconSmall": "h7/MasterHunter/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"frameAngles": [
+					90,
+					60,
+					45,
+					30,
+					0,
+					-30,
+					-45,
+					-60,
+					-90
+				],
+				"offset": {
+					"upperX": 35,
+					"upperY": -67,
+					"middleX": 32,
+					"middleY": -60,
+					"lowerX": 17,
+					"lowerY": -54
+				},
+				"attackClimaxFrame": 10,
+				"projectile": "h7/projectiles/H7ArrowProjectile.json"
+			}
+		},
+		"sound": {
+			"attack": "h7/creature_hunter_attack.ogg",
+			"shoot": "h7/creature_hunter_attack_ranged.ogg",
+			"defend": "h7/creature_hunter_defend.ogg",
+			"wince": "h7/creature_hunter_hit.ogg",
+			"killed": "h7/creature_hunter_die.ogg",
+			"move": "h7/creature_hunter_move.ogg"
+		},
+		"shots": 21,
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_WALL_PENALTY",
+					"description": "{Siege Shooter}\nNo damage loss when shooting over walls"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h7SylvanMoonDoe": {
+		"name": {
+			"singular": "Moon Doe",
+			"plural": "Moon Does"
+		},
+		"description": "The most mysterious and wondrous creatures one can meet in the forest maze are the Moon Does and Sun Deer, which are in fact two kinds of a species called Twilight Deer. Moon Does are serene and lovely creatures, yet they are still able to protect their fawns from any threat. More than one poacher has met a tragic end at the hands of an angry Moon Doe.\nFemale Twilight Deer are nocturnal. Although they do not burn to ashes in sunlight as some old nursery rhymes claim, they prefer to come out at night, especially when Asha's moon hangs high in the sky, which is how they got their name.",
+		"faction": "rampart",
+		"level": 6,
+		"cost": {
+			"gold": 900
+		},
+		"speed": 11,
+		"hitPoints": 87,
+		"attack": 16,
+		"defense": 15,
+		"damage": {
+			"min": 16,
+			"max": 21
+		},
+		"doubleWide": true,
+		"fightValue": 1276,
+		"aiValue": 1506,
+		"growth": 2,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"unfettered": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "slow",
+				"description": "{Unfettered}\nImmune to all slowing effects."
+			},
+			"h7Unfettered": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7Unfettered",
+				"val": 0,
+				"hidden": true,
+				"description": "~"
+			}
+		},
+		"graphics": {
+			"animation": "h7/MoonDoe/battle.json",
+			"map": "h7/MoonDoe/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/MoonDoe/map/atkL.png",
+			"mapAttackFromRight": "h7/MoonDoe/map/atkR.png",
+			"iconLarge": "h7/MoonDoe/iconLarge.png",
+			"iconSmall": "h7/MoonDoe/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h7/creature_sun_deer_attack.ogg",
+			"defend": "h7/creature_sun_deer_defend.ogg",
+			"wince": "h7/creature_sun_deer_hit.ogg",
+			"killed": "h7/creature_sun_deer_die.ogg",
+			"move": "h7/creature_sun_deer_move_01.ogg"
+		},
+		"upgrades": [
+			"h7SylvanSunDeer"
+		],
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					2,
+					3,
+					4,
+					5,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "MIND_IMMUNITY",
+					"description": "{Steadfast Mind}\nImmune to Mind spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "BLOCKS_RETALIATION",
+					"description": "{No Retaliation}\nEnemy cannot retaliate when attacked"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h7SylvanOakDryad": {
+		"name": {
+			"singular": "Oak Dryad",
+			"plural": "Oak Dryads"
+		},
+		"description": "A Dryad's appearance is shaped by the Treant that gave it life, and its body and soul remain closely bound to that Treant. They protect and support each other until the end of their lives. Oak Dryads, born of oak Treants, are stronger and tougher than other Dryads, which makes them good helpers in wartime.\nLike spirits, Dryads are very hard to destroy once and for all. I suppose, much like nature itself",
+		"faction": "rampart",
+		"level": 2,
+		"cost": {
+			"gold": 160
+		},
+		"speed": 6,
+		"hitPoints": 18,
+		"attack": 6,
+		"defense": 4,
+		"damage": {
+			"min": 2,
+			"max": 4
+		},
+		"doubleWide": false,
+		"fightValue": 198,
+		"aiValue": 221,
+		"growth": 8,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"flying": {
+				"type": "FLYING"
+			},
+			"h7TreantSynergy": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7TreantSynergy",
+				"val": 9,
+				"addInfo": {
+					"heal": 1
+				},
+				"icon": "h7/abilities/h7TreantSynergy",
+				"description": "{Treant Symbiosis}\nIt & adjacent allies +9 Defense; heals Treants"
+			},
+			"h7AuraZone": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7AuraZone",
+				"val": 0,
+				"stacking": "h7AuraZone",
+				"propagator": "BATTLE_WIDE",
+				"hidden": true,
+				"description": "~"
+			},
+			"h7GiftOfLife": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7GiftOfLife",
+				"val": 1,
+				"icon": "h7/abilities/h7GiftOfLife",
+				"description": "{Gift of Life}\nAfter acting, Dryad heals also reach adj. Tent"
+			}
+		},
+		"graphics": {
+			"animation": "h7/OakDryad/battle.json",
+			"map": "h7/OakDryad/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/OakDryad/map/atkL.png",
+			"mapAttackFromRight": "h7/OakDryad/map/atkR.png",
+			"iconLarge": "h7/OakDryad/iconLarge.png",
+			"iconSmall": "h7/OakDryad/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h7/creature_dryad_attack.ogg",
+			"defend": "h7/creature_dryad_defend.ogg",
+			"wince": "h7/creature_dryad_hit.ogg",
+			"killed": "h7/creature_dryad_die.ogg",
+			"move": "h7/creature_dryad_move.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					3,
+					3,
+					3,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					3,
+					4,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					0,
+					1,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					3,
+					3,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_RETALIATION",
+					"description": "{Nimbleness}\nExtra retaliation each round"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			}
+		]
+	},
+	"h7SylvanPixie": {
+		"name": {
+			"singular": "Flower Sprite",
+			"plural": "Flower Sprites"
+		},
+		"description": "Flower Sprites are spirits born naturally from flowers, and the scent of the flower stays with them all their lives. The kind of flower determines a Flower Sprite's type, personality and abilities. Flower Sprites are tiny humanoids, no more than a foot tall. Elves enjoy their company, and druids in particular often look after these mischievous little beings.\nThere are marked differences between Flower Sprites born of wildflowers and those born in flower beds. The former are wilder and more solitary, and die quickly once captured or tamed.",
+		"faction": "rampart",
+		"level": 1,
+		"cost": {
+			"gold": 55
+		},
+		"speed": 8,
+		"hitPoints": 5,
+		"attack": 6,
+		"defense": 1,
+		"damage": {
+			"min": 2,
+			"max": 2
+		},
+		"doubleWide": false,
+		"fightValue": 68,
+		"aiValue": 69,
+		"growth": 13,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"flying": {
+				"type": "FLYING"
+			}
+		},
+		"graphics": {
+			"animation": "h7/Pixie/battle.json",
+			"map": "h7/Pixie/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/Pixie/map/atkL.png",
+			"mapAttackFromRight": "h7/Pixie/map/atkR.png",
+			"iconLarge": "h7/Pixie/iconLarge.png",
+			"iconSmall": "h7/Pixie/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h7/creature_pixie_attack.ogg",
+			"defend": "h7/creature_pixie_defend.ogg",
+			"wince": "h7/creature_pixie_hit.ogg",
+			"killed": "h7/creature_pixie_die.ogg",
+			"move": "h7/creature_pixie_move.ogg"
+		},
+		"upgrades": [
+			"h7SylvanSprite"
+		],
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_RETALIATION",
+					"description": "{Nimbleness}\nExtra retaliation each round"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			}
+		]
+	},
+	"h7SylvanSprite": {
+		"name": {
+			"singular": "Sprite",
+			"plural": "Sprites"
+		},
+		"description": "Sprites usually have brightly colored skin, hair and eyes. Their wings look much like a butterfly's, but actually come from the leaves and petals of the flower they were born from. Their wings let them fly fast and nimbly. In battle, Sprites scatter a pollen called “Pixie Dust”, which makes enemies itch all over, sneeze or cough, leaving them unable to strike back.\nSprites are closely tied to the change of seasons: they are rarely seen in winter, but are relatively numerous in spring and summer.",
+		"faction": "rampart",
+		"level": 1,
+		"cost": {
+			"gold": 70
+		},
+		"speed": 9,
+		"hitPoints": 5,
+		"attack": 6,
+		"defense": 1,
+		"damage": {
+			"min": 2,
+			"max": 3
+		},
+		"doubleWide": false,
+		"fightValue": 100,
+		"aiValue": 101,
+		"growth": 13,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"flying": {
+				"type": "FLYING"
+			},
+			"noRetaliation": {
+				"type": "BLOCKS_RETALIATION",
+				"description": "{No Enemy Retaliation}\nTarget cannot retaliate."
+			}
+		},
+		"graphics": {
+			"animation": "h7/Sprite/battle.json",
+			"map": "h7/Sprite/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/Sprite/map/atkL.png",
+			"mapAttackFromRight": "h7/Sprite/map/atkR.png",
+			"iconLarge": "h7/Sprite/iconLarge.png",
+			"iconSmall": "h7/Sprite/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h7/creature_pixie_attack.ogg",
+			"defend": "h7/creature_pixie_defend.ogg",
+			"wince": "h7/creature_pixie_hit.ogg",
+			"killed": "h7/creature_pixie_die.ogg",
+			"move": "h7/creature_pixie_move.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_RETALIATION",
+					"description": "{Nimbleness}\nExtra retaliation each round"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			}
+		]
+	},
+	"h7SylvanSunDeer": {
+		"name": {
+			"singular": "Sun Deer",
+			"plural": "Sun Deer"
+		},
+		"description": "Male Twilight Deer are diurnal, drawing their power from sunlight. The magnificent antlers of the Sun Deer are shaped like the sun or the stars. Both bucks and does are wondrous creatures, and the Sun Deer radiate a peaceful aura.\nNeedless to say, mating is a very complicated matter for Twilight Deer, partly because males and females only have a chance to meet during the brief times when the sun and moon share the sky.",
+		"faction": "rampart",
+		"level": 6,
+		"cost": {
+			"gold": 1170
+		},
+		"speed": 13,
+		"hitPoints": 94,
+		"attack": 18,
+		"defense": 15,
+		"damage": {
+			"min": 17,
+			"max": 23
+		},
+		"doubleWide": true,
+		"fightValue": 1835,
+		"aiValue": 2167,
+		"growth": 2,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"unfettered": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "slow",
+				"description": "{Unfettered}\nImmune to all slowing effects."
+			},
+			"h7Unfettered": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7Unfettered",
+				"val": 0,
+				"hidden": true,
+				"description": "~"
+			},
+			"h7InspiringPresence": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7InspiringPresence",
+				"val": 1,
+				"icon": "h7/abilities/h7InspiringPresence",
+				"description": "{Inspiring Presence}\nSelf and adjacent allies +1 Morale, +1 Luck."
+			},
+			"h7AuraZone": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7AuraZone",
+				"val": 0,
+				"stacking": "h7AuraZone",
+				"propagator": "BATTLE_WIDE",
+				"hidden": true,
+				"description": "~"
+			}
+		},
+		"graphics": {
+			"animation": "h7/SunDeer/battle.json",
+			"map": "h7/SunDeer/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/SunDeer/map/atkL.png",
+			"mapAttackFromRight": "h7/SunDeer/map/atkR.png",
+			"iconLarge": "h7/SunDeer/iconLarge.png",
+			"iconSmall": "h7/SunDeer/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h7/creature_sun_deer_attack.ogg",
+			"defend": "h7/creature_sun_deer_defend.ogg",
+			"wince": "h7/creature_sun_deer_hit.ogg",
+			"killed": "h7/creature_sun_deer_die.ogg",
+			"move": "h7/creature_sun_deer_move_01.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					2,
+					3,
+					4,
+					5,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "MIND_IMMUNITY",
+					"description": "{Steadfast Mind}\nImmune to Mind spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "BLOCKS_RETALIATION",
+					"description": "{No Retaliation}\nEnemy cannot retaliate when attacked"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h7SylvanTreant": {
+		"name": {
+			"singular": "Treant",
+			"plural": "Treants"
+		},
+		"description": "Treants are rare and precious forest spirits, usually looking like huge walking trees. As embodiments of nature's fertile power, they are the guardians and caretakers of other trees, plants and flowers. They are natural allies of the elves, and share a unique symbiosis with them: they can rebirth the elves buried in their trunks as Dryads.\nTreants are only born in the sacred soil of the deepest parts of the Irollan forest, a land close to the ley lines or dragon veins most attuned to the essence of Earth.",
+		"faction": "rampart",
+		"level": 7,
+		"cost": {
+			"gold": 2590,
+			"gems": 1
+		},
+		"speed": 5,
+		"hitPoints": 182,
+		"attack": 15,
+		"defense": 25,
+		"damage": {
+			"min": 25,
+			"max": 35
+		},
+		"doubleWide": true,
+		"fightValue": 3667,
+		"aiValue": 4777,
+		"growth": 1,
+		"advMapAmount": {
+			"min": 1,
+			"max": 3
+		},
+		"abilities": {
+			"shooter": {
+				"type": "SHOOTER"
+			},
+			"h7LivingShelter": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7LivingShelter",
+				"val": 7,
+				"icon": "h7/abilities/h7LivingShelter",
+				"description": "{Living Shelter}\nDefend: +7 Defense, adjacent hexes block foes",
+				"addInfo": {
+					"def": 7
+				}
+			}
+		},
+		"graphics": {
+			"animation": "h7/Treant/battle.json",
+			"map": "h7/Treant/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/Treant/map/atkL.png",
+			"mapAttackFromRight": "h7/Treant/map/atkR.png",
+			"iconLarge": "h7/Treant/iconLarge.png",
+			"iconSmall": "h7/Treant/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"frameAngles": [
+					90,
+					60,
+					45,
+					30,
+					0,
+					-30,
+					-45,
+					-60,
+					-90
+				],
+				"offset": {
+					"upperX": 45,
+					"upperY": -68,
+					"middleX": 57,
+					"middleY": -51,
+					"lowerX": 15,
+					"lowerY": -36
+				},
+				"attackClimaxFrame": 6,
+				"projectile": "h7/projectiles/_none.json"
+			}
+		},
+		"sound": {
+			"attack": "h7/creature_treant_attack.ogg",
+			"shoot": "h7/creature_treant_attack_ranged.ogg",
+			"defend": "h7/creature_treant_defend.ogg",
+			"wince": "h7/creature_treant_hit.ogg",
+			"killed": "h7/creature_treant_die.ogg",
+			"move": "h7/creature_treant_move.ogg"
+		},
+		"shots": 24,
+		"upgrades": [
+			"h7SylvanAncientTreant"
+		],
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_WALL_PENALTY",
+					"description": "{Siege Shooter}\nNo damage loss when shooting over walls"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_DISTANCE_PENALTY",
+					"description": "{Sharpshooter}\nNo penalty for long-range shots"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "SHOTS",
+					"description": "{Ammunition}\nMore shots"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			}
+		]
+	}
+}

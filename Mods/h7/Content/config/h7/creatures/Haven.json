@@ -1,0 +1,3530 @@
+{
+	"h7HavenAbbot": {
+		"name": {
+			"singular": "Abbot",
+			"plural": "Abbots"
+		},
+		"description": "Abbots are veteran battle priests promoted from the ranks of Chaplains. Guided by holy power, these zealots are the bane of every heretic who refuses to bow to Elrath.\nThey were once called Inquisitors. The Holy Inquisition is no longer what it was, but these zealots carry on the old spirit: punish, don't preach.",
+		"faction": "castle",
+		"level": 4,
+		"cost": {
+			"gold": 400
+		},
+		"speed": 5,
+		"hitPoints": 33,
+		"attack": 9,
+		"defense": 18,
+		"damage": {
+			"min": 6,
+			"max": 9
+		},
+		"doubleWide": false,
+		"fightValue": 564,
+		"aiValue": 646,
+		"growth": 4,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"shooter": {
+				"type": "SHOOTER"
+			},
+			"rangedRetaliation": {
+				"type": "RANGED_RETALIATION",
+				"description": "{Ranged Retaliation}\nRetaliates at range when shot at."
+			},
+			"h7AuraOfCleansing": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7AuraOfCleansing",
+				"val": 6,
+				"icon": "h7/abilities/h7AuraOfCleansing",
+				"description": "{Aura of Cleansing}\nIt & adjacent allies +6 Defense, 1 cure/round"
+			},
+			"h7AuraZone": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7AuraZone",
+				"val": 0,
+				"stacking": "h7AuraZone",
+				"propagator": "BATTLE_WIDE",
+				"hidden": true,
+				"description": "~"
+			}
+		},
+		"graphics": {
+			"animation": "h7/Abbot/battle.json",
+			"map": "h7/Abbot/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/Abbot/map/atkL.png",
+			"mapAttackFromRight": "h7/Abbot/map/atkR.png",
+			"iconLarge": "h7/Abbot/iconLarge.png",
+			"iconSmall": "h7/Abbot/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"frameAngles": [
+					90,
+					60,
+					45,
+					30,
+					0,
+					-30,
+					-45,
+					-60,
+					-90
+				],
+				"offset": {
+					"upperX": 43,
+					"upperY": -57,
+					"middleX": 53,
+					"middleY": -41,
+					"lowerX": 13,
+					"lowerY": -27
+				},
+				"attackClimaxFrame": 6,
+				"projectile": "h7/projectiles/A_Projectile_Light_Bullet_s85.json"
+			}
+		},
+		"sound": {
+			"attack": "h7/creature_chaplain_attack.ogg",
+			"defend": "h7/creature_chaplain_defend.ogg",
+			"wince": "h7/creature_chaplain_hit.ogg",
+			"killed": "h7/creature_chaplain_die.ogg",
+			"move": "h7/creature_chaplain_move.ogg",
+			"shoot": "h7/creature_chaplain_attack.ogg"
+		},
+		"shots": 15,
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					5,
+					6,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_WALL_PENALTY",
+					"description": "{Siege Shooter}\nNo damage loss when shooting over walls"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_DISTANCE_PENALTY",
+					"description": "{Sharpshooter}\nNo penalty for long-range shots"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h7HavenCavalier": {
+		"name": {
+			"singular": "Cavalier",
+			"plural": "Cavaliers"
+		},
+		"description": "Cavaliers are the shock troops of the Holy Empire. Riding powerful steeds and clad in heavy armor, they charge distant enemies with all their might.\nI have fought in countless battles, but when I saw the Imperial Cavaliers sweep over their foes like an unstoppable wave of holy steel, it still made my blood run cold.",
+		"faction": "castle",
+		"level": 6,
+		"cost": {
+			"gold": 900
+		},
+		"speed": 9,
+		"hitPoints": 76,
+		"attack": 12,
+		"defense": 13,
+		"damage": {
+			"min": 17,
+			"max": 21
+		},
+		"doubleWide": true,
+		"fightValue": 1248,
+		"aiValue": 1473,
+		"growth": 2,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"charge": {
+				"type": "JOUSTING",
+				"val": 10,
+				"description": "{Charge}\n+2 Attack per hex traveled before attacking.",
+				"stacking": "h7HavenCavalierExpJousting"
+			},
+			"skeletonTarget": {
+				"type": "SKELETON_TRANSFORMER_TARGET",
+				"subtype": "blackKnight",
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h7/Cavalier/battle.json",
+			"map": "h7/Cavalier/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/Cavalier/map/atkL.png",
+			"mapAttackFromRight": "h7/Cavalier/map/atkR.png",
+			"iconLarge": "h7/Cavalier/iconLarge.png",
+			"iconSmall": "h7/Cavalier/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h7/creature_horseman_attack_01.ogg",
+			"defend": "h7/creature_horseman_defend_01.ogg",
+			"wince": "h7/creature_horseman_hit_01.ogg",
+			"killed": "h7/creature_horseman_die_01.ogg"
+		},
+		"upgrades": [
+			"h7HavenCuirassier"
+		],
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					2,
+					3,
+					4,
+					5,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "JOUSTING",
+					"stacking": "h7HavenCavalierExpJousting"
+				},
+				"values": [
+					10,
+					10,
+					12,
+					12,
+					14,
+					14,
+					16,
+					16,
+					18,
+					20
+				]
+			},
+			{
+				"bonus": {
+					"type": "MIND_IMMUNITY",
+					"description": "{Steadfast Mind}\nImmune to Mind spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h7HavenCelestial": {
+		"name": {
+			"singular": "Celestial",
+			"plural": "Celestials"
+		},
+		"description": "Celestials are the fighters among the Seraphs. They are often named after legendary angels who fell in the Elder Wars, and this is no mere coincidence... Celestials are highly skilled in combat and show heroism and fearlessness in battle. They also use their Light Magic to heal allies and can even bring them back from the brink of death.\nWhen a Seraph is created, his or her human side still dominates. With time and training the balance shifts, and these beings slowly regain some of the abilities they had long lost. At that point, these Seraphs become Celestials.",
+		"faction": "castle",
+		"level": 7,
+		"cost": {
+			"gold": 3365,
+			"crystal": 2,
+			"mercury": 1
+		},
+		"speed": 17,
+		"hitPoints": 273,
+		"attack": 17,
+		"defense": 29,
+		"damage": {
+			"min": 35,
+			"max": 38
+		},
+		"doubleWide": true,
+		"fightValue": 5039,
+		"aiValue": 6565,
+		"growth": 1,
+		"advMapAmount": {
+			"min": 1,
+			"max": 3
+		},
+		"abilities": {
+			"flying": {
+				"type": "FLYING"
+			},
+			"h7AuraOfPurity": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7AuraOfPurity",
+				"val": 1,
+				"icon": "h7/abilities/h7AuraOfPurity",
+				"description": "{Aura of Purity}\nIt and adjacent allies can't be cursed."
+			},
+			"h7AuraZone": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7AuraZone",
+				"val": 0,
+				"stacking": "h7AuraZone",
+				"propagator": "BATTLE_WIDE",
+				"hidden": true,
+				"description": "~"
+			},
+			"cast_h7AbResurrection": {
+				"type": "SPELLCASTER",
+				"subtype": "h7AbResurrection",
+				"val": 0,
+				"icon": "h7/abilities/h7Resurrection",
+				"description": "{Revival}\n1/battle: living ally +114 HP/unit, can revive"
+			},
+			"casts_h7AbResurrection": {
+				"type": "CASTS",
+				"val": 1
+			},
+			"h7SanctumTwin": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7SanctumTwin",
+				"hidden": true,
+				"description": "~",
+				"addInfo": {
+					"twin": "h7HavenSwordmaster",
+					"army": "h7HavenLegionnaire,h7HavenMarksman,h7HavenSilverback,h7HavenAbbot,h7HavenJusticar,h7HavenCuirassier"
+				}
+			}
+		},
+		"graphics": {
+			"animation": "h7/Celestial/battle.json",
+			"map": "h7/Celestial/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/Celestial/map/atkL.png",
+			"mapAttackFromRight": "h7/Celestial/map/atkR.png",
+			"iconLarge": "h7/Celestial/iconLarge.png",
+			"iconSmall": "h7/Celestial/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h7/creature_seraph_attack.ogg",
+			"defend": "h7/creature_seraph_defend.ogg",
+			"wince": "h7/creature_seraph_hit.ogg",
+			"killed": "h7/creature_seraph_die.ogg",
+			"move": "h7/creature_seraph_fly_loop_01.ogg",
+			"startMoving": "h7/creature_seraph_fly_start.ogg",
+			"endMoving": "h7/creature_seraph_fly_end.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_RETALIATION",
+					"description": "{Nimbleness}\nExtra retaliation each round"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "MIND_IMMUNITY",
+					"description": "{Steadfast Mind}\nImmune to Mind spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE",
+					"description": "{Magic Resistance}\nChance to resist enemy spells"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					10,
+					20,
+					30,
+					40,
+					50
+				]
+			}
+		]
+	},
+	"h7HavenChaplain": {
+		"name": {
+			"singular": "Chaplain",
+			"plural": "Chaplains"
+		},
+		"description": "Chaplains are Elrath's battle priests. They bravely fight all unbelievers and any enemy who threatens the Church of Light. They can not only defend themselves in battle but also bear the duty of channeling the power of Light to protect their allies.\nMost priests of Light are kind souls who don't really enjoy going to war. But make no mistake: when needed, they will rise to defend their homes.",
+		"faction": "castle",
+		"level": 4,
+		"cost": {
+			"gold": 305
+		},
+		"speed": 5,
+		"hitPoints": 27,
+		"attack": 9,
+		"defense": 12,
+		"damage": {
+			"min": 5,
+			"max": 8
+		},
+		"doubleWide": false,
+		"fightValue": 394,
+		"aiValue": 451,
+		"growth": 4,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"shooter": {
+				"type": "SHOOTER"
+			},
+			"h7AuraOfCleansing": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7AuraOfCleansing",
+				"val": 6,
+				"icon": "h7/abilities/h7AuraOfCleansing",
+				"description": "{Aura of Cleansing}\nIt & adjacent allies +6 Defense, 1 cure/round"
+			},
+			"h7AuraZone": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7AuraZone",
+				"val": 0,
+				"stacking": "h7AuraZone",
+				"propagator": "BATTLE_WIDE",
+				"hidden": true,
+				"description": "~"
+			}
+		},
+		"graphics": {
+			"animation": "h7/Chaplain/battle.json",
+			"map": "h7/Chaplain/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/Chaplain/map/atkL.png",
+			"mapAttackFromRight": "h7/Chaplain/map/atkR.png",
+			"iconLarge": "h7/Chaplain/iconLarge.png",
+			"iconSmall": "h7/Chaplain/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"frameAngles": [
+					90,
+					60,
+					45,
+					30,
+					0,
+					-30,
+					-45,
+					-60,
+					-90
+				],
+				"offset": {
+					"upperX": 42,
+					"upperY": -57,
+					"middleX": 53,
+					"middleY": -41,
+					"lowerX": 13,
+					"lowerY": -27
+				},
+				"attackClimaxFrame": 6,
+				"projectile": "h7/projectiles/A_Projectile_Light_Bullet_s85.json"
+			}
+		},
+		"sound": {
+			"attack": "h7/creature_chaplain_attack.ogg",
+			"defend": "h7/creature_chaplain_defend.ogg",
+			"wince": "h7/creature_chaplain_hit.ogg",
+			"killed": "h7/creature_chaplain_die.ogg",
+			"move": "h7/creature_chaplain_move.ogg",
+			"shoot": "h7/creature_chaplain_attack.ogg"
+		},
+		"shots": 15,
+		"upgrades": [
+			"h7HavenAbbot"
+		],
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					5,
+					6,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_WALL_PENALTY",
+					"description": "{Siege Shooter}\nNo damage loss when shooting over walls"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_DISTANCE_PENALTY",
+					"description": "{Sharpshooter}\nNo penalty for long-range shots"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h7HavenCrossbowman": {
+		"name": {
+			"singular": "Crossbow Trooper",
+			"plural": "Crossbow Troopers"
+		},
+		"description": "Ordinary soldiers and even knights fear the Crossbow Troopers of the Holy Empire. Their deadly reputation comes from the great power of their weapons. Their bolts are said to pierce dwarven dragon steel.\nLegend says that the power of the first crossbow is what let High King Ronan Falcon of the Falcon clan defeat the other clans and found a united empire.",
+		"faction": "castle",
+		"level": 2,
+		"cost": {
+			"gold": 120
+		},
+		"speed": 3,
+		"hitPoints": 12,
+		"attack": 3,
+		"defense": 4,
+		"damage": {
+			"min": 1,
+			"max": 4
+		},
+		"doubleWide": false,
+		"fightValue": 138,
+		"aiValue": 155,
+		"growth": 8,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"shooter": {
+				"type": "SHOOTER"
+			}
+		},
+		"graphics": {
+			"animation": "h7/Crossbowman/battle.json",
+			"map": "h7/Crossbowman/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/Crossbowman/map/atkL.png",
+			"mapAttackFromRight": "h7/Crossbowman/map/atkR.png",
+			"iconLarge": "h7/Crossbowman/iconLarge.png",
+			"iconSmall": "h7/Crossbowman/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"frameAngles": [
+					90,
+					60,
+					45,
+					30,
+					0,
+					-30,
+					-45,
+					-60,
+					-90
+				],
+				"offset": {
+					"upperX": 33,
+					"upperY": -68,
+					"middleX": 34,
+					"middleY": -56,
+					"lowerX": 2,
+					"lowerY": -48
+				},
+				"attackClimaxFrame": 5,
+				"projectile": "h7/projectiles/H7CrossbowmanProjectile.json"
+			}
+		},
+		"sound": {
+			"attack": "h7/creature_crossbowman_attack_01.ogg",
+			"shoot": "h7/creature_crossbowman_attack_ranged_01.ogg",
+			"defend": "h7/creature_crossbowman_defend_01.ogg",
+			"wince": "h7/creature_crossbowman_hit_01.ogg",
+			"killed": "h7/creature_crossbowman_die_01.ogg"
+		},
+		"shots": 19,
+		"upgrades": [
+			"h7HavenMarksman"
+		],
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					3,
+					3,
+					3,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					3,
+					4,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					0,
+					1,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					3,
+					3,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_WALL_PENALTY",
+					"description": "{Siege Shooter}\nNo damage loss when shooting over walls"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h7HavenCuirassier": {
+		"name": {
+			"singular": "Cuirassier",
+			"plural": "Cuirassiers"
+		},
+		"description": "For infantry, nothing is more terrifying than a Cuirassier charge. Using brute force to trample enemy foot soldiers at will, these elite knights defeat every foe in their path with their mighty weapons.\nI still remember the Sun Riders of old, mounted on their magical golden horses. You rarely see them anymore, and I wonder why. Today's Cuirassiers are more, how shall I put it... worldly. Even so, you still would not want to stand in the path of their charge.",
+		"faction": "castle",
+		"level": 6,
+		"cost": {
+			"gold": 1170
+		},
+		"speed": 9,
+		"hitPoints": 83,
+		"attack": 12,
+		"defense": 16,
+		"damage": {
+			"min": 18,
+			"max": 23
+		},
+		"doubleWide": true,
+		"fightValue": 1765,
+		"aiValue": 2083,
+		"growth": 2,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"charge": {
+				"type": "JOUSTING",
+				"val": 10,
+				"description": "{Charge}\n+2 Attack per hex traveled before attacking.",
+				"stacking": "h7HavenCuirassierExpJousting"
+			},
+			"skeletonTarget": {
+				"type": "SKELETON_TRANSFORMER_TARGET",
+				"subtype": "blackKnight",
+				"hidden": true
+			},
+			"h7Bash": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7Bash",
+				"icon": "h7/abilities/h7Bash",
+				"description": "{Bash}\nLucky hit: no retaliation; stuns 1 turn"
+			}
+		},
+		"graphics": {
+			"animation": "h7/Cuirassier/battle.json",
+			"map": "h7/Cuirassier/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/Cuirassier/map/atkL.png",
+			"mapAttackFromRight": "h7/Cuirassier/map/atkR.png",
+			"iconLarge": "h7/Cuirassier/iconLarge.png",
+			"iconSmall": "h7/Cuirassier/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h7/creature_horseman_attack_01.ogg",
+			"defend": "h7/creature_horseman_defend_01.ogg",
+			"wince": "h7/creature_horseman_hit_01.ogg",
+			"killed": "h7/creature_horseman_die_01.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					2,
+					3,
+					4,
+					5,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "JOUSTING",
+					"stacking": "h7HavenCuirassierExpJousting"
+				},
+				"values": [
+					10,
+					10,
+					12,
+					12,
+					14,
+					14,
+					16,
+					16,
+					18,
+					20
+				]
+			},
+			{
+				"bonus": {
+					"type": "MIND_IMMUNITY",
+					"description": "{Steadfast Mind}\nImmune to Mind spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h7HavenDireWolf": {
+		"name": {
+			"singular": "Dire Wolf",
+			"plural": "Dire Wolves"
+		},
+		"description": "In the Holy Empire, Dire Wolves are the most feared predators of the wilds. The fearless warriors of the Duchy of the Wolf chose these bloodthirsty beasts as their emblem, and they have learned how to train Dire Wolves well, turning these supposedly unreliable companions into partners for the hunt and even for war.\nThough the imperial army calls them Dire Wolves, they are not pure-blooded wolves but a cross between wolves and dogs. This also explains why they do not fear humans.",
+		"faction": "castle",
+		"level": 3,
+		"cost": {
+			"gold": 185
+		},
+		"speed": 8,
+		"hitPoints": 18,
+		"attack": 8,
+		"defense": 4,
+		"damage": {
+			"min": 3,
+			"max": 6
+		},
+		"doubleWide": true,
+		"fightValue": 210,
+		"aiValue": 248,
+		"growth": 7,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"unlimitedRetaliations": {
+				"type": "UNLIMITED_RETALIATIONS",
+				"description": "{Unlimited Retaliations}\nRetaliates whenever it can."
+			}
+		},
+		"graphics": {
+			"animation": "h7/DireWolf/battle.json",
+			"map": "h7/DireWolf/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/DireWolf/map/atkL.png",
+			"mapAttackFromRight": "h7/DireWolf/map/atkR.png",
+			"iconLarge": "h7/DireWolf/iconLarge.png",
+			"iconSmall": "h7/DireWolf/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h7/creature_direwolf_attack_01.ogg",
+			"defend": "h7/creature_direwolf_defend_01.ogg",
+			"wince": "h7/creature_direwolf_hit_01.ogg",
+			"killed": "h7/creature_direwolf_die_01.ogg",
+			"move": "h7/creature_direwolf_move.ogg"
+		},
+		"upgrades": [
+			"h7HavenSilverback"
+		],
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "MIND_IMMUNITY",
+					"description": "{Steadfast Mind}\nImmune to Mind spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h7HavenGuardian": {
+		"name": {
+			"singular": "Guardian",
+			"plural": "Guardians"
+		},
+		"description": "Guardians of the Faith have always been part of the Empire's military history, but they only rose to prominence under Empress Maeve, winning fame as one of the Holy Empire's most dangerous units. Apart from their trusty shields they wear only light armor, relying mainly on agility and swordsmanship.\nThe Canticles of Elrath clearly state that men and women are equal under the Light, yet in the past the Guardians of the Faith were almost all men. That changed when Irina of the Duchy of the Wolf began her military reforms in the duchy...",
+		"faction": "castle",
+		"level": 5,
+		"cost": {
+			"gold": 420
+		},
+		"speed": 5,
+		"hitPoints": 42,
+		"attack": 15,
+		"defense": 14,
+		"damage": {
+			"min": 8,
+			"max": 14
+		},
+		"doubleWide": false,
+		"fightValue": 553,
+		"aiValue": 615,
+		"growth": 3,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"h7OpportunityRetaliation": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7OpportunityRetaliation",
+				"icon": "h7/abilities/h7OpportunityRetaliation",
+				"description": "{Opportunity Retaliation}\nAlly meleed: retaliates if attacker adjacent"
+			},
+			"h7OpportunityRetaliationZone": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7OpportunityRetaliation",
+				"hidden": true,
+				"description": "~",
+				"propagator": "BATTLE_WIDE",
+				"stacking": "h7OppRetZone"
+			},
+			"h7OpportunityRetaliationMark": {
+				"type": "H7_OPP_RETALIATION_H7C",
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h7/Guardian/battle.json",
+			"map": "h7/Guardian/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/Guardian/map/atkL.png",
+			"mapAttackFromRight": "h7/Guardian/map/atkR.png",
+			"iconLarge": "h7/Guardian/iconLarge.png",
+			"iconSmall": "h7/Guardian/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h7/creature_watcher_attack.ogg",
+			"defend": "h7/creature_watcher_defend.ogg",
+			"wince": "h7/creature_watcher_hit.ogg",
+			"killed": "h7/creature_watcher_die.ogg"
+		},
+		"upgrades": [
+			"h7HavenJusticar"
+		],
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					3,
+					4,
+					5,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					3,
+					4,
+					4,
+					6,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					2,
+					3,
+					3,
+					4,
+					5,
+					6,
+					6,
+					7
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					7
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "MIND_IMMUNITY",
+					"description": "{Steadfast Mind}\nImmune to Mind spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "BLOCKS_RETALIATION",
+					"description": "{No Retaliation}\nEnemy cannot retaliate when attacked"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h7HavenJusticar": {
+		"name": {
+			"singular": "Justicar",
+			"plural": "Justicars"
+		},
+		"description": "Justicars fear neither man nor demon. They always lead the assault, cutting through enemy lines and opening the way for other troops. In melee they guard their allies' rear and watch for chances to flank the enemy.\nThe word Justicar once referred only to the troops of the Holy Inquisition. Today the name has lost its original meaning, but it still denotes the brave.",
+		"faction": "castle",
+		"level": 5,
+		"cost": {
+			"gold": 560
+		},
+		"speed": 6,
+		"hitPoints": 42,
+		"attack": 15,
+		"defense": 14,
+		"damage": {
+			"min": 8,
+			"max": 14
+		},
+		"doubleWide": false,
+		"fightValue": 850,
+		"aiValue": 946,
+		"growth": 3,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"cleave": {
+				"type": "ADDITIONAL_ATTACK",
+				"val": 1,
+				"description": "{Cleave}\nStrikes twice; target retaliates after 1st"
+			},
+			"h7OpportunityRetaliation": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7OpportunityRetaliation",
+				"icon": "h7/abilities/h7OpportunityRetaliation",
+				"description": "{Opportunity Retaliation}\nAlly meleed: retaliates if attacker adjacent"
+			},
+			"h7OpportunityRetaliationZone": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7OpportunityRetaliation",
+				"hidden": true,
+				"description": "~",
+				"propagator": "BATTLE_WIDE",
+				"stacking": "h7OppRetZone"
+			},
+			"h7OpportunityRetaliationMark": {
+				"type": "H7_OPP_RETALIATION_H7C",
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h7/Justicar/battle.json",
+			"map": "h7/Justicar/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/Justicar/map/atkL.png",
+			"mapAttackFromRight": "h7/Justicar/map/atkR.png",
+			"iconLarge": "h7/Justicar/iconLarge.png",
+			"iconSmall": "h7/Justicar/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h7/creature_watcher_attack.ogg",
+			"defend": "h7/creature_watcher_defend.ogg",
+			"wince": "h7/creature_watcher_hit.ogg",
+			"killed": "h7/creature_watcher_die.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					3,
+					4,
+					5,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					3,
+					4,
+					4,
+					6,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					2,
+					3,
+					3,
+					4,
+					5,
+					6,
+					6,
+					7
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					7
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "MIND_IMMUNITY",
+					"description": "{Steadfast Mind}\nImmune to Mind spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "BLOCKS_RETALIATION",
+					"description": "{No Retaliation}\nEnemy cannot retaliate when attacked"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h7HavenLandsknecht": {
+		"name": {
+			"singular": "Landsknecht",
+			"plural": "Landsknechts"
+		},
+		"description": "Landsknechts first appeared in the Duchy of the Wolf; in the Wolf dialect, their name originally meant \"servants of the land\". Clad in heavy armor and wielding two-handed greatswords, Landsknechts are without doubt the mightiest warriors of the Duchy of the Wolf, and among the finest in the entire Holy Empire.\nThe blood of the dragon gods flows in every one of us. But I believe that in some, that blood runs stronger. These men and women command the forces of nature and are extraordinary. Some become great mages; others become the mightiest of warriors.",
+		"faction": "castle",
+		"level": 7,
+		"cost": {
+			"gold": 2590,
+			"gems": 1
+		},
+		"speed": 10,
+		"hitPoints": 177,
+		"attack": 24,
+		"defense": 14,
+		"damage": {
+			"min": 45,
+			"max": 56
+		},
+		"doubleWide": true,
+		"fightValue": 3581,
+		"aiValue": 4665,
+		"growth": 1,
+		"advMapAmount": {
+			"min": 1,
+			"max": 3
+		},
+		"abilities": {
+			"h7WarfareGuard": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7WarfareGuard",
+				"hidden": true,
+				"description": "~",
+				"addInfo": {
+					"faction": "castle",
+					"army": "h7HavenSentinel,h7HavenCrossbowman,h7HavenDireWolf,h7HavenChaplain,h7HavenGuardian,h7HavenCavalier"
+				}
+			},
+			"mindImmunity": {
+				"type": "MIND_IMMUNITY",
+				"description": "{Indomitable}\nImmune to Mind, fear, sleep; Morale can't drop"
+			},
+			"h7IndomitableMorale": {
+				"type": "MORALE",
+				"hidden": true,
+				"val": 0,
+				"valueType": "AT_LEAST",
+				"stacking": "h7Indomitable"
+			},
+			"h7IndomitableMark": {
+				"type": "H7_INDOMITABLE_H7C",
+				"hidden": true,
+				"val": 1
+			}
+		},
+		"graphics": {
+			"animation": "h7/Landsknecht/battle.json",
+			"map": "h7/Landsknecht/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/Landsknecht/map/atkL.png",
+			"mapAttackFromRight": "h7/Landsknecht/map/atkR.png",
+			"iconLarge": "h7/Landsknecht/iconLarge.png",
+			"iconSmall": "h7/Landsknecht/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h7/creature_swordbearer_attack_01.ogg",
+			"defend": "h7/creature_swordbearer_defend_01.ogg",
+			"wince": "h7/creature_swordbearer_hit_01.ogg",
+			"killed": "h7/creature_swordbearer_die_01.ogg"
+		},
+		"upgrades": [
+			"h7HavenSwordmaster"
+		],
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE",
+					"description": "{Magic Resistance}\nChance to resist enemy spells"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					10,
+					20,
+					30,
+					40,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "BLOCKS_RETALIATION",
+					"description": "{No Retaliation}\nEnemy cannot retaliate when attacked"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true
+				]
+			}
+		]
+	},
+	"h7HavenLegionnaire": {
+		"name": {
+			"singular": "Legionnaire",
+			"plural": "Legionnaires"
+		},
+		"description": "Hand-picked from the Imperial Guard, the Legionnaires are a veteran force tasked with patrolling the Empire's borders and defending imperial strongholds deep in hostile lands, such as the mountains of the Dragon Spine or the Sahaar Desert. They are highly disciplined and show firm resolve on the battlefield.\nPeople may have long forgotten that the first Legionnaires were trained by the famous dwarven weapon master Liefstan Steelskull Jansen. In his honor, the Legionnaires' signature tactic is called the Dwarven Turtle: the legion advances slowly, keeping its allies safe behind a moving wall of shields.",
+		"faction": "castle",
+		"level": 1,
+		"cost": {
+			"gold": 60
+		},
+		"speed": 5,
+		"hitPoints": 8,
+		"attack": 6,
+		"defense": 10,
+		"damage": {
+			"min": 1,
+			"max": 2
+		},
+		"doubleWide": false,
+		"fightValue": 88,
+		"aiValue": 89,
+		"growth": 14,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"h7SHIELDING": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7SHIELDING",
+				"val": 75,
+				"icon": "h7/abilities/h7SHIELDING",
+				"description": "{Shielding}\nAdjacent allies -75% attack dmg; it takes that"
+			},
+			"h7AuraZone": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7AuraZone",
+				"val": 0,
+				"stacking": "h7AuraZone",
+				"propagator": "BATTLE_WIDE",
+				"hidden": true,
+				"description": "~"
+			}
+		},
+		"graphics": {
+			"animation": "h7/Legionnaire/battle.json",
+			"map": "h7/Legionnaire/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/Legionnaire/map/atkL.png",
+			"mapAttackFromRight": "h7/Legionnaire/map/atkR.png",
+			"iconLarge": "h7/Legionnaire/iconLarge.png",
+			"iconSmall": "h7/Legionnaire/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h7/creature_guard_attack.ogg",
+			"defend": "h7/creature_guard_defend.ogg",
+			"wince": "h7/creature_guard_hit.ogg",
+			"killed": "h7/creature_guard_die.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "CHARGE_IMMUNITY",
+					"description": "{Steady Ranks}\nImmune to charge damage bonuses"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h7HavenMarksman": {
+		"name": {
+			"singular": "Marksman",
+			"plural": "Marksmen"
+		},
+		"description": "Marksmen are masters of the crossbow who know how to get the most out of their powerful bolts. Every enemy fears their Piercing Shot, even those standing behind the main target.\nEvery year on the 21st of the Month of the Sun (March), every city in the Empire holds a grand shooting contest. The winners earn a place among the Marksmen.",
+		"faction": "castle",
+		"level": 2,
+		"cost": {
+			"gold": 160
+		},
+		"speed": 3,
+		"hitPoints": 13,
+		"attack": 3,
+		"defense": 4,
+		"damage": {
+			"min": 2,
+			"max": 4
+		},
+		"doubleWide": false,
+		"fightValue": 191,
+		"aiValue": 214,
+		"growth": 8,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"shooter": {
+				"type": "SHOOTER"
+			},
+			"h7PiercingShot": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7PiercingShot",
+				"icon": "h7/abilities/h7PiercingShot",
+				"description": "{Piercing Shot}\nPierces a line; others on it (allies too) hit"
+			}
+		},
+		"graphics": {
+			"animation": "h7/Marksman/battle.json",
+			"map": "h7/Marksman/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/Marksman/map/atkL.png",
+			"mapAttackFromRight": "h7/Marksman/map/atkR.png",
+			"iconLarge": "h7/Marksman/iconLarge.png",
+			"iconSmall": "h7/Marksman/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"frameAngles": [
+					90,
+					60,
+					45,
+					30,
+					0,
+					-30,
+					-45,
+					-60,
+					-90
+				],
+				"offset": {
+					"upperX": 33,
+					"upperY": -68,
+					"middleX": 35,
+					"middleY": -57,
+					"lowerX": 2,
+					"lowerY": -49
+				},
+				"attackClimaxFrame": 5,
+				"projectile": "h7/projectiles/H7CrossbowmanProjectile.json"
+			}
+		},
+		"sound": {
+			"attack": "h7/creature_crossbowman_attack_01.ogg",
+			"shoot": "h7/creature_crossbowman_attack_ranged_01.ogg",
+			"defend": "h7/creature_crossbowman_defend_01.ogg",
+			"wince": "h7/creature_crossbowman_hit_01.ogg",
+			"killed": "h7/creature_crossbowman_die_01.ogg"
+		},
+		"shots": 19,
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					3,
+					3,
+					3,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					3,
+					4,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					0,
+					1,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					3,
+					3,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_WALL_PENALTY",
+					"description": "{Siege Shooter}\nNo damage loss when shooting over walls"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h7HavenSentinel": {
+		"name": {
+			"singular": "Sentinel",
+			"plural": "Sentinels"
+		},
+		"description": "Imperial Sentinels are the backbone of the imperial army. Equipped with a shield and a spear, they usually stand on the front line, advancing relentlessly on the enemy.\nIn the past, Sentinels were usually volunteers willing to give their lives to defend the Empire, especially during the Blood Moon Eclipse. Today Sentinels are professional soldiers. As a result, they rely more on hard training than on unshakable faith.",
+		"faction": "castle",
+		"level": 1,
+		"cost": {
+			"gold": 45
+		},
+		"speed": 5,
+		"hitPoints": 6,
+		"attack": 3,
+		"defense": 10,
+		"damage": {
+			"min": 1,
+			"max": 2
+		},
+		"doubleWide": false,
+		"fightValue": 65,
+		"aiValue": 66,
+		"growth": 14,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {},
+		"graphics": {
+			"animation": "h7/Sentinel/battle.json",
+			"map": "h7/Sentinel/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/Sentinel/map/atkL.png",
+			"mapAttackFromRight": "h7/Sentinel/map/atkR.png",
+			"iconLarge": "h7/Sentinel/iconLarge.png",
+			"iconSmall": "h7/Sentinel/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h7/creature_guard_attack.ogg",
+			"defend": "h7/creature_guard_defend.ogg",
+			"wince": "h7/creature_guard_hit.ogg",
+			"killed": "h7/creature_guard_die.ogg"
+		},
+		"upgrades": [
+			"h7HavenLegionnaire"
+		],
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "CHARGE_IMMUNITY",
+					"description": "{Steady Ranks}\nImmune to charge damage bonuses"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h7HavenSeraph": {
+		"name": {
+			"singular": "Seraph",
+			"plural": "Seraphs"
+		},
+		"description": "Angels' perfection gives them a commanding physical presence: angels of Light are taller and far more beautiful than humans, and they radiate power and confidence. Seraphs, by comparison, are smaller and more human in appearance. Even so, their very presence brings hope and resolve to the hearts of soldiers on the battlefield.\nMany Seraphs were created during the Second Eclipse as part of a desperate plan to counter the slow decline of the angel race. After the war, it came out that Seraphs were made by fusing angel and human souls. This caused great unrest in the Empire, until Empress Gwendolyn decreed that Seraphs would answer directly to the Emperor rather than to their angel masters.",
+		"faction": "castle",
+		"level": 7,
+		"cost": {
+			"gold": 2590,
+			"crystal": 1
+		},
+		"speed": 14,
+		"hitPoints": 227,
+		"attack": 17,
+		"defense": 25,
+		"damage": {
+			"min": 30,
+			"max": 35
+		},
+		"doubleWide": true,
+		"fightValue": 3531,
+		"aiValue": 4601,
+		"growth": 1,
+		"advMapAmount": {
+			"min": 1,
+			"max": 3
+		},
+		"abilities": {
+			"flying": {
+				"type": "FLYING"
+			},
+			"h7AuraOfPurity": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7AuraOfPurity",
+				"val": 1,
+				"icon": "h7/abilities/h7AuraOfPurity",
+				"description": "{Aura of Purity}\nIt and adjacent allies can't be cursed."
+			},
+			"h7AuraZone": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7AuraZone",
+				"val": 0,
+				"stacking": "h7AuraZone",
+				"propagator": "BATTLE_WIDE",
+				"hidden": true,
+				"description": "~"
+			}
+		},
+		"graphics": {
+			"animation": "h7/Seraph/battle.json",
+			"map": "h7/Seraph/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/Seraph/map/atkL.png",
+			"mapAttackFromRight": "h7/Seraph/map/atkR.png",
+			"iconLarge": "h7/Seraph/iconLarge.png",
+			"iconSmall": "h7/Seraph/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h7/creature_seraph_attack.ogg",
+			"defend": "h7/creature_seraph_defend.ogg",
+			"wince": "h7/creature_seraph_hit.ogg",
+			"killed": "h7/creature_seraph_die.ogg",
+			"move": "h7/creature_seraph_fly_loop_01.ogg",
+			"startMoving": "h7/creature_seraph_fly_start.ogg",
+			"endMoving": "h7/creature_seraph_fly_end.ogg"
+		},
+		"upgrades": [
+			"h7HavenCelestial"
+		],
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_RETALIATION",
+					"description": "{Nimbleness}\nExtra retaliation each round"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "MIND_IMMUNITY",
+					"description": "{Steadfast Mind}\nImmune to Mind spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE",
+					"description": "{Magic Resistance}\nChance to resist enemy spells"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					10,
+					20,
+					30,
+					40,
+					50
+				]
+			}
+		]
+	},
+	"h7HavenSilverback": {
+		"name": {
+			"singular": "Silverback",
+			"plural": "Silverbacks"
+		},
+		"description": "It takes decades of breeding to produce a Silverback, a larger, fiercer and more aggressive strain of Dire Wolf. Once on the battlefield, these powerful beasts never stop until their enemies are torn to pieces.\nOnce, a necromancer who had risen to the rank of a high Lich was attacked by a Silverback. My poor colleague is still searching the world for his thighbone.",
+		"faction": "castle",
+		"level": 3,
+		"cost": {
+			"gold": 240
+		},
+		"speed": 13,
+		"hitPoints": 22,
+		"attack": 8,
+		"defense": 4,
+		"damage": {
+			"min": 4,
+			"max": 6
+		},
+		"doubleWide": true,
+		"fightValue": 298,
+		"aiValue": 353,
+		"growth": 7,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"unlimitedRetaliations": {
+				"type": "UNLIMITED_RETALIATIONS",
+				"description": "{Unlimited Retaliations}\nRetaliates whenever it can."
+			},
+			"cast_h7AbFeralCharge": {
+				"type": "SPELLCASTER",
+				"subtype": "h7AbFeralCharge",
+				"val": 0,
+				"icon": "h7/abilities/h7FeralCharge",
+				"description": "{Savage Charge}\nRush any foe once: +10 Attack, no retaliation"
+			},
+			"casts_h7AbFeralCharge": {
+				"type": "CASTS",
+				"val": 1
+			},
+			"noDefault_h7AbFeralCharge": {
+				"type": "NO_SPELLCAST_BY_DEFAULT",
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h7/Silverback/battle.json",
+			"map": "h7/Silverback/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/Silverback/map/atkL.png",
+			"mapAttackFromRight": "h7/Silverback/map/atkR.png",
+			"iconLarge": "h7/Silverback/iconLarge.png",
+			"iconSmall": "h7/Silverback/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h7/creature_direwolf_attack_01.ogg",
+			"defend": "h7/creature_direwolf_defend_01.ogg",
+			"wince": "h7/creature_direwolf_hit_01.ogg",
+			"killed": "h7/creature_direwolf_die_01.ogg",
+			"move": "h7/creature_direwolf_move.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "MIND_IMMUNITY",
+					"description": "{Steadfast Mind}\nImmune to Mind spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h7HavenSwordmaster": {
+		"name": {
+			"singular": "Swordmaster",
+			"plural": "Swordmasters"
+		},
+		"description": "Only the tallest, strongest and toughest Landsknechts can become Swordmasters. Trained in the most dangerous forests and frozen mountains of the Duchy of the Wolf, these fearless swordsmen are the Sword of Elrath, the embodiment of the Dragon of Light's power and wrath.\nI once saw a Swordmaster cut off the head of a Cyclops empowered by Blood Rage with a single stroke. If these extraordinary warriors were not so rare, the mages would never have needed to create the orcs.",
+		"faction": "castle",
+		"level": 7,
+		"cost": {
+			"gold": 3365,
+			"gems": 2,
+			"sulfur": 1
+		},
+		"speed": 11,
+		"hitPoints": 204,
+		"attack": 28,
+		"defense": 16,
+		"damage": {
+			"min": 56,
+			"max": 66
+		},
+		"doubleWide": true,
+		"fightValue": 5053,
+		"aiValue": 6583,
+		"growth": 1,
+		"advMapAmount": {
+			"min": 1,
+			"max": 3
+		},
+		"abilities": {
+			"mindImmunity": {
+				"type": "MIND_IMMUNITY",
+				"description": "{Indomitable}\nImmune to Mind, fear, sleep; Morale can't drop"
+			},
+			"sweep": {
+				"type": "THREE_HEADED_ATTACK",
+				"description": "{Sweep}\nAlso hits adjacent foes flanking the target"
+			},
+			"h7IndomitableMorale": {
+				"type": "MORALE",
+				"hidden": true,
+				"val": 0,
+				"valueType": "AT_LEAST",
+				"stacking": "h7Indomitable"
+			},
+			"h7IndomitableMark": {
+				"type": "H7_INDOMITABLE_H7C",
+				"hidden": true,
+				"val": 1
+			},
+			"h7SanctumTwin": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7SanctumTwin",
+				"hidden": true,
+				"description": "~",
+				"addInfo": {
+					"twin": "h7HavenCelestial",
+					"army": "h7HavenLegionnaire,h7HavenMarksman,h7HavenSilverback,h7HavenAbbot,h7HavenJusticar,h7HavenCuirassier"
+				}
+			}
+		},
+		"graphics": {
+			"animation": "h7/Swordmaster/battle.json",
+			"map": "h7/Swordmaster/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/Swordmaster/map/atkL.png",
+			"mapAttackFromRight": "h7/Swordmaster/map/atkR.png",
+			"iconLarge": "h7/Swordmaster/iconLarge.png",
+			"iconSmall": "h7/Swordmaster/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h7/creature_swordbearer_attack_01.ogg",
+			"defend": "h7/creature_swordbearer_defend_01.ogg",
+			"wince": "h7/creature_swordbearer_hit_01.ogg",
+			"killed": "h7/creature_swordbearer_die_01.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE",
+					"description": "{Magic Resistance}\nChance to resist enemy spells"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					10,
+					20,
+					30,
+					40,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "BLOCKS_RETALIATION",
+					"description": "{No Retaliation}\nEnemy cannot retaliate when attacked"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true
+				]
+			}
+		]
+	}
+}

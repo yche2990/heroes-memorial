@@ -1,0 +1,1180 @@
+{
+	"core:artillery": {
+		"base": {
+			"effects": {
+				"h7wfLvl": {
+					"type": "heroes-memorial.h7:H7_WARFARE_MARK_H7C",
+					"stacking": "h7WfSkill|artillery",
+					"valueType": "BASE_NUMBER",
+					"hidden": true
+				},
+				"h7wfSwap": {
+					"type": "COMBAT_EVENT_TRIGGER",
+					"subtype": "heroes-memorial.h7:h7WarfareSwap",
+					"hidden": true,
+					"limiters": [
+						[
+							"anyOf",
+							{
+								"type": "CREATURE_TYPE_LIMITER",
+								"creature": "core:ballista"
+							},
+							{
+								"type": "CREATURE_TYPE_LIMITER",
+								"creature": "core:ammoCart"
+							}
+						]
+					]
+				},
+				"h7WarfareHavenBallistaCtrl": {
+					"type": "MANUAL_CONTROL",
+					"subtype": "h7WarfareHavenBallista",
+					"val": 100,
+					"valueType": "BASE_NUMBER"
+				},
+				"h7WarfareHavenBallistaChance": {
+					"type": "BONUS_DAMAGE_CHANCE",
+					"subtype": "h7WarfareHavenBallista",
+					"valueType": "BASE_NUMBER"
+				},
+				"h7WarfareHavenBallistaPower": {
+					"type": "BONUS_DAMAGE_PERCENTAGE",
+					"subtype": "h7WarfareHavenBallista",
+					"val": 100,
+					"valueType": "BASE_NUMBER"
+				},
+				"h7WarfareHavenBallistaAttack": {
+					"type": "ADDITIONAL_ATTACK",
+					"valueType": "BASE_NUMBER",
+					"limiters": [
+						{
+							"type": "CREATURE_TYPE_LIMITER",
+							"creature": "h7WarfareHavenBallista"
+						}
+					]
+				},
+				"h7WarfareHavenBallistaCap": {
+					"type": "DAMAGE_RECEIVED_CAP",
+					"propagator": "ARMY",
+					"valueType": "AT_MOST",
+					"limiters": [
+						{
+							"type": "CREATURE_TYPE_LIMITER",
+							"creature": "h7WarfareHavenBallista"
+						}
+					]
+				},
+				"h7WarfareSmallPyramidCtrl": {
+					"type": "MANUAL_CONTROL",
+					"subtype": "h7WarfareSmallPyramid",
+					"val": 100,
+					"valueType": "BASE_NUMBER"
+				},
+				"h7WarfareSmallPyramidChance": {
+					"type": "BONUS_DAMAGE_CHANCE",
+					"subtype": "h7WarfareSmallPyramid",
+					"valueType": "BASE_NUMBER"
+				},
+				"h7WarfareSmallPyramidPower": {
+					"type": "BONUS_DAMAGE_PERCENTAGE",
+					"subtype": "h7WarfareSmallPyramid",
+					"val": 100,
+					"valueType": "BASE_NUMBER"
+				},
+				"h7WarfareSmallPyramidAttack": {
+					"type": "ADDITIONAL_ATTACK",
+					"valueType": "BASE_NUMBER",
+					"limiters": [
+						{
+							"type": "CREATURE_TYPE_LIMITER",
+							"creature": "h7WarfareSmallPyramid"
+						}
+					]
+				},
+				"h7WarfareSmallPyramidCap": {
+					"type": "DAMAGE_RECEIVED_CAP",
+					"propagator": "ARMY",
+					"valueType": "AT_MOST",
+					"limiters": [
+						{
+							"type": "CREATURE_TYPE_LIMITER",
+							"creature": "h7WarfareSmallPyramid"
+						}
+					]
+				},
+				"h7WarfareNamtaruCtrl": {
+					"type": "MANUAL_CONTROL",
+					"subtype": "h7WarfareNamtaru",
+					"val": 100,
+					"valueType": "BASE_NUMBER"
+				},
+				"h7WarfareNamtaruChance": {
+					"type": "BONUS_DAMAGE_CHANCE",
+					"subtype": "h7WarfareNamtaru",
+					"valueType": "BASE_NUMBER"
+				},
+				"h7WarfareNamtaruPower": {
+					"type": "BONUS_DAMAGE_PERCENTAGE",
+					"subtype": "h7WarfareNamtaru",
+					"val": 100,
+					"valueType": "BASE_NUMBER"
+				},
+				"h7WarfareNamtaruAttack": {
+					"type": "ADDITIONAL_ATTACK",
+					"valueType": "BASE_NUMBER",
+					"limiters": [
+						{
+							"type": "CREATURE_TYPE_LIMITER",
+							"creature": "h7WarfareNamtaru"
+						}
+					]
+				},
+				"h7WarfareNamtaruCap": {
+					"type": "DAMAGE_RECEIVED_CAP",
+					"propagator": "ARMY",
+					"valueType": "AT_MOST",
+					"limiters": [
+						{
+							"type": "CREATURE_TYPE_LIMITER",
+							"creature": "h7WarfareNamtaru"
+						}
+					]
+				},
+				"h7WarfareDreamwalkerCtrl": {
+					"type": "MANUAL_CONTROL",
+					"subtype": "h7WarfareDreamwalker",
+					"val": 100,
+					"valueType": "BASE_NUMBER"
+				},
+				"h7WarfareDreamwalkerChance": {
+					"type": "BONUS_DAMAGE_CHANCE",
+					"subtype": "h7WarfareDreamwalker",
+					"valueType": "BASE_NUMBER"
+				},
+				"h7WarfareDreamwalkerPower": {
+					"type": "BONUS_DAMAGE_PERCENTAGE",
+					"subtype": "h7WarfareDreamwalker",
+					"val": 100,
+					"valueType": "BASE_NUMBER"
+				},
+				"h7WarfareDreamwalkerAttack": {
+					"type": "ADDITIONAL_ATTACK",
+					"valueType": "BASE_NUMBER",
+					"limiters": [
+						{
+							"type": "CREATURE_TYPE_LIMITER",
+							"creature": "h7WarfareDreamwalker"
+						}
+					]
+				},
+				"h7WarfareDreamwalkerCap": {
+					"type": "DAMAGE_RECEIVED_CAP",
+					"propagator": "ARMY",
+					"valueType": "AT_MOST",
+					"limiters": [
+						{
+							"type": "CREATURE_TYPE_LIMITER",
+							"creature": "h7WarfareDreamwalker"
+						}
+					]
+				},
+				"h7WarfareSylvanBallistaCtrl": {
+					"type": "MANUAL_CONTROL",
+					"subtype": "h7WarfareSylvanBallista",
+					"val": 100,
+					"valueType": "BASE_NUMBER"
+				},
+				"h7WarfareSylvanBallistaChance": {
+					"type": "BONUS_DAMAGE_CHANCE",
+					"subtype": "h7WarfareSylvanBallista",
+					"valueType": "BASE_NUMBER"
+				},
+				"h7WarfareSylvanBallistaPower": {
+					"type": "BONUS_DAMAGE_PERCENTAGE",
+					"subtype": "h7WarfareSylvanBallista",
+					"val": 100,
+					"valueType": "BASE_NUMBER"
+				},
+				"h7WarfareSylvanBallistaAttack": {
+					"type": "ADDITIONAL_ATTACK",
+					"valueType": "BASE_NUMBER",
+					"limiters": [
+						{
+							"type": "CREATURE_TYPE_LIMITER",
+							"creature": "h7WarfareSylvanBallista"
+						}
+					]
+				},
+				"h7WarfareSylvanBallistaCap": {
+					"type": "DAMAGE_RECEIVED_CAP",
+					"propagator": "ARMY",
+					"valueType": "AT_MOST",
+					"limiters": [
+						{
+							"type": "CREATURE_TYPE_LIMITER",
+							"creature": "h7WarfareSylvanBallista"
+						}
+					]
+				},
+				"h7WarfareShadowLurkerCtrl": {
+					"type": "MANUAL_CONTROL",
+					"subtype": "h7WarfareShadowLurker",
+					"val": 100,
+					"valueType": "BASE_NUMBER"
+				},
+				"h7WarfareShadowLurkerChance": {
+					"type": "BONUS_DAMAGE_CHANCE",
+					"subtype": "h7WarfareShadowLurker",
+					"valueType": "BASE_NUMBER"
+				},
+				"h7WarfareShadowLurkerPower": {
+					"type": "BONUS_DAMAGE_PERCENTAGE",
+					"subtype": "h7WarfareShadowLurker",
+					"val": 100,
+					"valueType": "BASE_NUMBER"
+				},
+				"h7WarfareShadowLurkerAttack": {
+					"type": "ADDITIONAL_ATTACK",
+					"valueType": "BASE_NUMBER",
+					"limiters": [
+						{
+							"type": "CREATURE_TYPE_LIMITER",
+							"creature": "h7WarfareShadowLurker"
+						}
+					]
+				},
+				"h7WarfareShadowLurkerCap": {
+					"type": "DAMAGE_RECEIVED_CAP",
+					"propagator": "ARMY",
+					"valueType": "AT_MOST",
+					"limiters": [
+						{
+							"type": "CREATURE_TYPE_LIMITER",
+							"creature": "h7WarfareShadowLurker"
+						}
+					]
+				},
+				"h7WarfareDwarvenBallistaCtrl": {
+					"type": "MANUAL_CONTROL",
+					"subtype": "h7WarfareDwarvenBallista",
+					"val": 100,
+					"valueType": "BASE_NUMBER"
+				},
+				"h7WarfareDwarvenBallistaChance": {
+					"type": "BONUS_DAMAGE_CHANCE",
+					"subtype": "h7WarfareDwarvenBallista",
+					"valueType": "BASE_NUMBER"
+				},
+				"h7WarfareDwarvenBallistaPower": {
+					"type": "BONUS_DAMAGE_PERCENTAGE",
+					"subtype": "h7WarfareDwarvenBallista",
+					"val": 100,
+					"valueType": "BASE_NUMBER"
+				},
+				"h7WarfareDwarvenBallistaAttack": {
+					"type": "ADDITIONAL_ATTACK",
+					"valueType": "BASE_NUMBER",
+					"limiters": [
+						{
+							"type": "CREATURE_TYPE_LIMITER",
+							"creature": "h7WarfareDwarvenBallista"
+						}
+					]
+				},
+				"h7WarfareDwarvenBallistaCap": {
+					"type": "DAMAGE_RECEIVED_CAP",
+					"propagator": "ARMY",
+					"valueType": "AT_MOST",
+					"limiters": [
+						{
+							"type": "CREATURE_TYPE_LIMITER",
+							"creature": "h7WarfareDwarvenBallista"
+						}
+					]
+				},
+				"h7wfComboBallistics": {
+					"type": "ADDITIONAL_ATTACK",
+					"val": 1,
+					"valueType": "BASE_NUMBER",
+					"limiters": [
+						"allOf",
+						{
+							"type": "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "CATAPULT_EXTRA_SHOTS",
+							"bonusSubtype": "catapultShot",
+							"bonusSourceType": "SECONDARY_SKILL",
+							"bonusSourceID": "ballistics"
+						},
+						[
+							"anyOf",
+							{
+								"type": "CREATURE_TYPE_LIMITER",
+								"creature": "h7WarfareHavenBallista"
+							},
+							{
+								"type": "CREATURE_TYPE_LIMITER",
+								"creature": "h7WarfareSmallPyramid"
+							},
+							{
+								"type": "CREATURE_TYPE_LIMITER",
+								"creature": "h7WarfareNamtaru"
+							},
+							{
+								"type": "CREATURE_TYPE_LIMITER",
+								"creature": "h7WarfareDreamwalker"
+							},
+							{
+								"type": "CREATURE_TYPE_LIMITER",
+								"creature": "h7WarfareSylvanBallista"
+							},
+							{
+								"type": "CREATURE_TYPE_LIMITER",
+								"creature": "h7WarfareShadowLurker"
+							},
+							{
+								"type": "CREATURE_TYPE_LIMITER",
+								"creature": "h7WarfareDwarvenBallista"
+							}
+						]
+					]
+				},
+				"h7wfComboArchery": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageBoth",
+					"val": 5,
+					"valueType": "ADDITIVE_VALUE",
+					"limiters": [
+						"allOf",
+						{
+							"type": "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "PERCENTAGE_DAMAGE_BOOST",
+							"bonusSubtype": "damageTypeRanged",
+							"bonusSourceType": "SECONDARY_SKILL",
+							"bonusSourceID": "archery"
+						},
+						[
+							"anyOf",
+							{
+								"type": "CREATURE_TYPE_LIMITER",
+								"creature": "h7WarfareHavenBallista"
+							},
+							{
+								"type": "CREATURE_TYPE_LIMITER",
+								"creature": "h7WarfareSmallPyramid"
+							},
+							{
+								"type": "CREATURE_TYPE_LIMITER",
+								"creature": "h7WarfareNamtaru"
+							},
+							{
+								"type": "CREATURE_TYPE_LIMITER",
+								"creature": "h7WarfareDreamwalker"
+							},
+							{
+								"type": "CREATURE_TYPE_LIMITER",
+								"creature": "h7WarfareSylvanBallista"
+							},
+							{
+								"type": "CREATURE_TYPE_LIMITER",
+								"creature": "h7WarfareShadowLurker"
+							},
+							{
+								"type": "CREATURE_TYPE_LIMITER",
+								"creature": "h7WarfareDwarvenBallista"
+							}
+						]
+					]
+				}
+			}
+		},
+		"basic": {
+			"effects": {
+				"h7wfLvl": {
+					"val": 1
+				},
+				"h7WarfareHavenBallistaChance": {
+					"val": 50
+				},
+				"h7WarfareHavenBallistaAttack": {
+					"val": 0,
+					"hidden": true
+				},
+				"h7WarfareHavenBallistaCap": {
+					"val": 40
+				},
+				"h7WarfareSmallPyramidChance": {
+					"val": 50
+				},
+				"h7WarfareSmallPyramidAttack": {
+					"val": 0,
+					"hidden": true
+				},
+				"h7WarfareSmallPyramidCap": {
+					"val": 40
+				},
+				"h7WarfareNamtaruChance": {
+					"val": 50
+				},
+				"h7WarfareNamtaruAttack": {
+					"val": 0,
+					"hidden": true
+				},
+				"h7WarfareNamtaruCap": {
+					"val": 40
+				},
+				"h7WarfareDreamwalkerChance": {
+					"val": 50
+				},
+				"h7WarfareDreamwalkerAttack": {
+					"val": 0,
+					"hidden": true
+				},
+				"h7WarfareDreamwalkerCap": {
+					"val": 40
+				},
+				"h7WarfareSylvanBallistaChance": {
+					"val": 50
+				},
+				"h7WarfareSylvanBallistaAttack": {
+					"val": 0,
+					"hidden": true
+				},
+				"h7WarfareSylvanBallistaCap": {
+					"val": 40
+				},
+				"h7WarfareShadowLurkerChance": {
+					"val": 50
+				},
+				"h7WarfareShadowLurkerAttack": {
+					"val": 0,
+					"hidden": true
+				},
+				"h7WarfareShadowLurkerCap": {
+					"val": 40
+				},
+				"h7WarfareDwarvenBallistaChance": {
+					"val": 50
+				},
+				"h7WarfareDwarvenBallistaAttack": {
+					"val": 0,
+					"hidden": true
+				},
+				"h7WarfareDwarvenBallistaCap": {
+					"val": 40
+				}
+			}
+		},
+		"advanced": {
+			"effects": {
+				"h7wfLvl": {
+					"val": 2
+				},
+				"h7WarfareHavenBallistaChance": {
+					"val": 75
+				},
+				"h7WarfareHavenBallistaAttack": {
+					"val": 1
+				},
+				"h7WarfareHavenBallistaCap": {
+					"val": 40
+				},
+				"h7WarfareSmallPyramidChance": {
+					"val": 75
+				},
+				"h7WarfareSmallPyramidAttack": {
+					"val": 1
+				},
+				"h7WarfareSmallPyramidCap": {
+					"val": 40
+				},
+				"h7WarfareNamtaruChance": {
+					"val": 75
+				},
+				"h7WarfareNamtaruAttack": {
+					"val": 1
+				},
+				"h7WarfareNamtaruCap": {
+					"val": 40
+				},
+				"h7WarfareDreamwalkerChance": {
+					"val": 75
+				},
+				"h7WarfareDreamwalkerAttack": {
+					"val": 1
+				},
+				"h7WarfareDreamwalkerCap": {
+					"val": 40
+				},
+				"h7WarfareSylvanBallistaChance": {
+					"val": 75
+				},
+				"h7WarfareSylvanBallistaAttack": {
+					"val": 1
+				},
+				"h7WarfareSylvanBallistaCap": {
+					"val": 40
+				},
+				"h7WarfareShadowLurkerChance": {
+					"val": 75
+				},
+				"h7WarfareShadowLurkerAttack": {
+					"val": 1
+				},
+				"h7WarfareShadowLurkerCap": {
+					"val": 40
+				},
+				"h7WarfareDwarvenBallistaChance": {
+					"val": 75
+				},
+				"h7WarfareDwarvenBallistaAttack": {
+					"val": 1
+				},
+				"h7WarfareDwarvenBallistaCap": {
+					"val": 40
+				}
+			}
+		},
+		"expert": {
+			"effects": {
+				"h7wfLvl": {
+					"val": 3
+				},
+				"h7WarfareHavenBallistaChance": {
+					"val": 100
+				},
+				"h7WarfareHavenBallistaPower": {
+					"val": 150
+				},
+				"h7WarfareHavenBallistaNoDist": {
+					"type": "NO_DISTANCE_PENALTY",
+					"limiters": [
+						{
+							"type": "CREATURE_TYPE_LIMITER",
+							"creature": "h7WarfareHavenBallista"
+						}
+					]
+				},
+				"h7WarfareHavenBallistaAttack": {
+					"val": 1
+				},
+				"h7WarfareHavenBallistaCap": {
+					"val": 40
+				},
+				"h7WarfareSmallPyramidChance": {
+					"val": 100
+				},
+				"h7WarfareSmallPyramidPower": {
+					"val": 150
+				},
+				"h7WarfareSmallPyramidNoDist": {
+					"type": "NO_DISTANCE_PENALTY",
+					"limiters": [
+						{
+							"type": "CREATURE_TYPE_LIMITER",
+							"creature": "h7WarfareSmallPyramid"
+						}
+					]
+				},
+				"h7WarfareSmallPyramidAttack": {
+					"val": 1
+				},
+				"h7WarfareSmallPyramidCap": {
+					"val": 40
+				},
+				"h7WarfareNamtaruChance": {
+					"val": 100
+				},
+				"h7WarfareNamtaruPower": {
+					"val": 150
+				},
+				"h7WarfareNamtaruNoDist": {
+					"type": "NO_DISTANCE_PENALTY",
+					"limiters": [
+						{
+							"type": "CREATURE_TYPE_LIMITER",
+							"creature": "h7WarfareNamtaru"
+						}
+					]
+				},
+				"h7WarfareNamtaruAttack": {
+					"val": 1
+				},
+				"h7WarfareNamtaruCap": {
+					"val": 40
+				},
+				"h7WarfareDreamwalkerChance": {
+					"val": 100
+				},
+				"h7WarfareDreamwalkerPower": {
+					"val": 150
+				},
+				"h7WarfareDreamwalkerNoDist": {
+					"type": "NO_DISTANCE_PENALTY",
+					"limiters": [
+						{
+							"type": "CREATURE_TYPE_LIMITER",
+							"creature": "h7WarfareDreamwalker"
+						}
+					]
+				},
+				"h7WarfareDreamwalkerAttack": {
+					"val": 1
+				},
+				"h7WarfareDreamwalkerCap": {
+					"val": 40
+				},
+				"h7WarfareSylvanBallistaChance": {
+					"val": 100
+				},
+				"h7WarfareSylvanBallistaPower": {
+					"val": 150
+				},
+				"h7WarfareSylvanBallistaNoDist": {
+					"type": "NO_DISTANCE_PENALTY",
+					"limiters": [
+						{
+							"type": "CREATURE_TYPE_LIMITER",
+							"creature": "h7WarfareSylvanBallista"
+						}
+					]
+				},
+				"h7WarfareSylvanBallistaAttack": {
+					"val": 1
+				},
+				"h7WarfareSylvanBallistaCap": {
+					"val": 40
+				},
+				"h7WarfareShadowLurkerChance": {
+					"val": 100
+				},
+				"h7WarfareShadowLurkerPower": {
+					"val": 150
+				},
+				"h7WarfareShadowLurkerNoDist": {
+					"type": "NO_DISTANCE_PENALTY",
+					"limiters": [
+						{
+							"type": "CREATURE_TYPE_LIMITER",
+							"creature": "h7WarfareShadowLurker"
+						}
+					]
+				},
+				"h7WarfareShadowLurkerAttack": {
+					"val": 1
+				},
+				"h7WarfareShadowLurkerCap": {
+					"val": 40
+				},
+				"h7WarfareDwarvenBallistaChance": {
+					"val": 100
+				},
+				"h7WarfareDwarvenBallistaPower": {
+					"val": 150
+				},
+				"h7WarfareDwarvenBallistaNoDist": {
+					"type": "NO_DISTANCE_PENALTY",
+					"limiters": [
+						{
+							"type": "CREATURE_TYPE_LIMITER",
+							"creature": "h7WarfareDwarvenBallista"
+						}
+					]
+				},
+				"h7WarfareDwarvenBallistaAttack": {
+					"val": 1
+				},
+				"h7WarfareDwarvenBallistaCap": {
+					"val": 40
+				}
+			}
+		}
+	},
+	"core:firstAid": {
+		"base": {
+			"effects": {
+				"h7wfLvl": {
+					"type": "heroes-memorial.h7:H7_WARFARE_MARK_H7C",
+					"stacking": "h7WfSkill|firstAid",
+					"valueType": "BASE_NUMBER",
+					"hidden": true
+				},
+				"h7wfSwap": {
+					"type": "COMBAT_EVENT_TRIGGER",
+					"subtype": "heroes-memorial.h7:h7WarfareSwap",
+					"hidden": true,
+					"limiters": [
+						{
+							"type": "CREATURE_TYPE_LIMITER",
+							"creature": "core:firstAidTent"
+						}
+					]
+				},
+				"h7WarfareHealingSisterCap": {
+					"type": "DAMAGE_RECEIVED_CAP",
+					"propagator": "ARMY",
+					"valueType": "AT_MOST",
+					"limiters": [
+						{
+							"type": "CREATURE_TYPE_LIMITER",
+							"creature": "h7WarfareHealingSister"
+						}
+					]
+				},
+				"h7WarfareHealingTentCap": {
+					"type": "DAMAGE_RECEIVED_CAP",
+					"propagator": "ARMY",
+					"valueType": "AT_MOST",
+					"limiters": [
+						{
+							"type": "CREATURE_TYPE_LIMITER",
+							"creature": "h7WarfareHealingTent"
+						}
+					]
+				},
+				"h7WarfareMotherTreantCap": {
+					"type": "DAMAGE_RECEIVED_CAP",
+					"propagator": "ARMY",
+					"valueType": "AT_MOST",
+					"limiters": [
+						{
+							"type": "CREATURE_TYPE_LIMITER",
+							"creature": "h7WarfareMotherTreant"
+						}
+					]
+				},
+				"h7WarfareFacelessCap": {
+					"type": "DAMAGE_RECEIVED_CAP",
+					"propagator": "ARMY",
+					"valueType": "AT_MOST",
+					"limiters": [
+						{
+							"type": "CREATURE_TYPE_LIMITER",
+							"creature": "h7WarfareFaceless"
+						}
+					]
+				},
+				"h7WarfareRunestoneCap": {
+					"type": "DAMAGE_RECEIVED_CAP",
+					"propagator": "ARMY",
+					"valueType": "AT_MOST",
+					"limiters": [
+						{
+							"type": "CREATURE_TYPE_LIMITER",
+							"creature": "h7WarfareRunestone"
+						}
+					]
+				},
+				"h7WarfareHealingSister5Cap": {
+					"type": "DAMAGE_RECEIVED_CAP",
+					"propagator": "ARMY",
+					"valueType": "AT_MOST",
+					"limiters": [
+						{
+							"type": "CREATURE_TYPE_LIMITER",
+							"creature": "h7WarfareHealingSister5"
+						}
+					]
+				}
+			}
+		},
+		"basic": {
+			"effects": {
+				"h7wfLvl": {
+					"val": 1
+				},
+				"h7WarfareHealingSisterCap": {
+					"val": 40
+				},
+				"h7WarfareHealingTentCap": {
+					"val": 40
+				},
+				"h7WarfareMotherTreantCap": {
+					"val": 40
+				},
+				"h7WarfareFacelessCap": {
+					"val": 40
+				},
+				"h7WarfareRunestoneCap": {
+					"val": 40
+				},
+				"h7WarfareHealingSister5Cap": {
+					"val": 40
+				}
+			}
+		},
+		"advanced": {
+			"effects": {
+				"h7wfLvl": {
+					"val": 2
+				},
+				"h7WarfareHealingSisterCap": {
+					"val": 40
+				},
+				"h7WarfareHealingTentCap": {
+					"val": 40
+				},
+				"h7WarfareMotherTreantCap": {
+					"val": 40
+				},
+				"h7WarfareFacelessCap": {
+					"val": 40
+				},
+				"h7WarfareRunestoneCap": {
+					"val": 40
+				},
+				"h7WarfareHealingSister5Cap": {
+					"val": 40
+				}
+			}
+		},
+		"expert": {
+			"effects": {
+				"h7wfLvl": {
+					"val": 3
+				},
+				"h7WarfareHealingSisterCap": {
+					"val": 40
+				},
+				"h7WarfareHealingTentCap": {
+					"val": 40
+				},
+				"h7WarfareMotherTreantCap": {
+					"val": 40
+				},
+				"h7WarfareFacelessCap": {
+					"val": 40
+				},
+				"h7WarfareRunestoneCap": {
+					"val": 40
+				},
+				"h7WarfareHealingSister5Cap": {
+					"val": 40
+				}
+			}
+		}
+	},
+	"core:ballistics": {
+		"base": {
+			"effects": {
+				"h7wfLvl": {
+					"type": "heroes-memorial.h7:H7_WARFARE_MARK_H7C",
+					"stacking": "h7WfSkill|ballistics",
+					"valueType": "BASE_NUMBER",
+					"hidden": true
+				},
+				"h7wfSwap": {
+					"type": "COMBAT_EVENT_TRIGGER",
+					"subtype": "heroes-memorial.h7:h7WarfareSwap",
+					"hidden": true,
+					"limiters": [
+						{
+							"type": "CREATURE_TYPE_LIMITER",
+							"creature": "core:catapult"
+						}
+					]
+				},
+				"h7WarfareHavenCatapultCap": {
+					"type": "DAMAGE_RECEIVED_CAP",
+					"propagator": "ARMY",
+					"valueType": "AT_MOST",
+					"limiters": [
+						{
+							"type": "CREATURE_TYPE_LIMITER",
+							"creature": "h7WarfareHavenCatapult"
+						}
+					]
+				},
+				"h7WarfareGreatPyramidCap": {
+					"type": "DAMAGE_RECEIVED_CAP",
+					"propagator": "ARMY",
+					"valueType": "AT_MOST",
+					"limiters": [
+						{
+							"type": "CREATURE_TYPE_LIMITER",
+							"creature": "h7WarfareGreatPyramid"
+						}
+					]
+				},
+				"h7WarfareSpittingSpiderCap": {
+					"type": "DAMAGE_RECEIVED_CAP",
+					"propagator": "ARMY",
+					"valueType": "AT_MOST",
+					"limiters": [
+						{
+							"type": "CREATURE_TYPE_LIMITER",
+							"creature": "h7WarfareSpittingSpider"
+						}
+					]
+				},
+				"h7WarfareTamedCyclopsCap": {
+					"type": "DAMAGE_RECEIVED_CAP",
+					"propagator": "ARMY",
+					"valueType": "AT_MOST",
+					"limiters": [
+						{
+							"type": "CREATURE_TYPE_LIMITER",
+							"creature": "h7WarfareTamedCyclops"
+						}
+					]
+				},
+				"h7WarfareGreaterEarthElementalCap": {
+					"type": "DAMAGE_RECEIVED_CAP",
+					"propagator": "ARMY",
+					"valueType": "AT_MOST",
+					"limiters": [
+						{
+							"type": "CREATURE_TYPE_LIMITER",
+							"creature": "h7WarfareGreaterEarthElemental"
+						}
+					]
+				},
+				"h7WarfareCaveWyvernCap": {
+					"type": "DAMAGE_RECEIVED_CAP",
+					"propagator": "ARMY",
+					"valueType": "AT_MOST",
+					"limiters": [
+						{
+							"type": "CREATURE_TYPE_LIMITER",
+							"creature": "h7WarfareCaveWyvern"
+						}
+					]
+				},
+				"h7WarfareFireCannonCap": {
+					"type": "DAMAGE_RECEIVED_CAP",
+					"propagator": "ARMY",
+					"valueType": "AT_MOST",
+					"limiters": [
+						{
+							"type": "CREATURE_TYPE_LIMITER",
+							"creature": "h7WarfareFireCannon"
+						}
+					]
+				},
+				"h7WarfareHavenCatapult5Cap": {
+					"type": "DAMAGE_RECEIVED_CAP",
+					"propagator": "ARMY",
+					"valueType": "AT_MOST",
+					"limiters": [
+						{
+							"type": "CREATURE_TYPE_LIMITER",
+							"creature": "h7WarfareHavenCatapult5"
+						}
+					]
+				},
+				"h7WarfareGreatPyramid5Cap": {
+					"type": "DAMAGE_RECEIVED_CAP",
+					"propagator": "ARMY",
+					"valueType": "AT_MOST",
+					"limiters": [
+						{
+							"type": "CREATURE_TYPE_LIMITER",
+							"creature": "h7WarfareGreatPyramid5"
+						}
+					]
+				},
+				"h7WarfareSpittingSpider5Cap": {
+					"type": "DAMAGE_RECEIVED_CAP",
+					"propagator": "ARMY",
+					"valueType": "AT_MOST",
+					"limiters": [
+						{
+							"type": "CREATURE_TYPE_LIMITER",
+							"creature": "h7WarfareSpittingSpider5"
+						}
+					]
+				},
+				"h7WarfareTamedCyclops5Cap": {
+					"type": "DAMAGE_RECEIVED_CAP",
+					"propagator": "ARMY",
+					"valueType": "AT_MOST",
+					"limiters": [
+						{
+							"type": "CREATURE_TYPE_LIMITER",
+							"creature": "h7WarfareTamedCyclops5"
+						}
+					]
+				},
+				"h7WarfareGreaterEarthElemental5Cap": {
+					"type": "DAMAGE_RECEIVED_CAP",
+					"propagator": "ARMY",
+					"valueType": "AT_MOST",
+					"limiters": [
+						{
+							"type": "CREATURE_TYPE_LIMITER",
+							"creature": "h7WarfareGreaterEarthElemental5"
+						}
+					]
+				},
+				"h7WarfareCaveWyvern5Cap": {
+					"type": "DAMAGE_RECEIVED_CAP",
+					"propagator": "ARMY",
+					"valueType": "AT_MOST",
+					"limiters": [
+						{
+							"type": "CREATURE_TYPE_LIMITER",
+							"creature": "h7WarfareCaveWyvern5"
+						}
+					]
+				},
+				"h7WarfareFireCannon5Cap": {
+					"type": "DAMAGE_RECEIVED_CAP",
+					"propagator": "ARMY",
+					"valueType": "AT_MOST",
+					"limiters": [
+						{
+							"type": "CREATURE_TYPE_LIMITER",
+							"creature": "h7WarfareFireCannon5"
+						}
+					]
+				}
+			}
+		},
+		"basic": {
+			"effects": {
+				"h7wfLvl": {
+					"val": 1
+				},
+				"h7WarfareHavenCatapultCap": {
+					"val": 40
+				},
+				"h7WarfareGreatPyramidCap": {
+					"val": 40
+				},
+				"h7WarfareSpittingSpiderCap": {
+					"val": 40
+				},
+				"h7WarfareTamedCyclopsCap": {
+					"val": 40
+				},
+				"h7WarfareGreaterEarthElementalCap": {
+					"val": 40
+				},
+				"h7WarfareCaveWyvernCap": {
+					"val": 40
+				},
+				"h7WarfareFireCannonCap": {
+					"val": 40
+				},
+				"h7WarfareHavenCatapult5Cap": {
+					"val": 40
+				},
+				"h7WarfareGreatPyramid5Cap": {
+					"val": 40
+				},
+				"h7WarfareSpittingSpider5Cap": {
+					"val": 40
+				},
+				"h7WarfareTamedCyclops5Cap": {
+					"val": 40
+				},
+				"h7WarfareGreaterEarthElemental5Cap": {
+					"val": 40
+				},
+				"h7WarfareCaveWyvern5Cap": {
+					"val": 40
+				},
+				"h7WarfareFireCannon5Cap": {
+					"val": 40
+				}
+			}
+		},
+		"advanced": {
+			"effects": {
+				"h7wfLvl": {
+					"val": 2
+				},
+				"h7WarfareHavenCatapultCap": {
+					"val": 40
+				},
+				"h7WarfareGreatPyramidCap": {
+					"val": 40
+				},
+				"h7WarfareSpittingSpiderCap": {
+					"val": 40
+				},
+				"h7WarfareTamedCyclopsCap": {
+					"val": 40
+				},
+				"h7WarfareGreaterEarthElementalCap": {
+					"val": 40
+				},
+				"h7WarfareCaveWyvernCap": {
+					"val": 40
+				},
+				"h7WarfareFireCannonCap": {
+					"val": 40
+				},
+				"h7WarfareHavenCatapult5Cap": {
+					"val": 40
+				},
+				"h7WarfareGreatPyramid5Cap": {
+					"val": 40
+				},
+				"h7WarfareSpittingSpider5Cap": {
+					"val": 40
+				},
+				"h7WarfareTamedCyclops5Cap": {
+					"val": 40
+				},
+				"h7WarfareGreaterEarthElemental5Cap": {
+					"val": 40
+				},
+				"h7WarfareCaveWyvern5Cap": {
+					"val": 40
+				},
+				"h7WarfareFireCannon5Cap": {
+					"val": 40
+				}
+			}
+		},
+		"expert": {
+			"effects": {
+				"h7wfLvl": {
+					"val": 3
+				},
+				"h7WarfareHavenCatapultCap": {
+					"val": 40
+				},
+				"h7WarfareGreatPyramidCap": {
+					"val": 40
+				},
+				"h7WarfareSpittingSpiderCap": {
+					"val": 40
+				},
+				"h7WarfareTamedCyclopsCap": {
+					"val": 40
+				},
+				"h7WarfareGreaterEarthElementalCap": {
+					"val": 40
+				},
+				"h7WarfareCaveWyvernCap": {
+					"val": 40
+				},
+				"h7WarfareFireCannonCap": {
+					"val": 40
+				},
+				"h7WarfareHavenCatapult5Cap": {
+					"val": 40
+				},
+				"h7WarfareGreatPyramid5Cap": {
+					"val": 40
+				},
+				"h7WarfareSpittingSpider5Cap": {
+					"val": 40
+				},
+				"h7WarfareTamedCyclops5Cap": {
+					"val": 40
+				},
+				"h7WarfareGreaterEarthElemental5Cap": {
+					"val": 40
+				},
+				"h7WarfareCaveWyvern5Cap": {
+					"val": 40
+				},
+				"h7WarfareFireCannon5Cap": {
+					"val": 40
+				}
+			}
+		}
+	}
+}

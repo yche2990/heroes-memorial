@@ -1,0 +1,72 @@
+{
+	"core:creatureGeneratorSpecial": {
+		"types": {
+			"elementalConfluxH7": {
+				"name": "Elemental Conflux H7",
+				"kingdomOverviewImage": "icons/kingdomOverview/object-pack-elemental-conflux-h567/elementalConfluxH7",
+				"bannedForRandomDwelling": true,
+				"creatures": [
+					[
+						"heroes-memorial.h7:h7NeutralAirElemental"
+					],
+					[
+						"heroes-memorial.h7:h7NeutralWaterElemental"
+					],
+					[
+						"heroes-memorial.h7:h7NeutralFireElemental"
+					],
+					[
+						"heroes-memorial.h7:h7NeutralEarthElemental"
+					],
+					[
+						"heroes-memorial.h7:h7NeutralLightElemental"
+					],
+					[
+						"heroes-memorial.h7:h7NeutralDarknessElemental"
+					]
+				],
+				"guards": [
+					{
+						"amount": 2,
+						"type": "heroes-memorial.h7:h7NeutralAirElemental"
+					},
+					{
+						"amount": 2,
+						"type": "heroes-memorial.h7:h7NeutralWaterElemental"
+					},
+					{
+						"amount": 2,
+						"type": "heroes-memorial.h7:h7NeutralFireElemental"
+					},
+					{
+						"amount": 2,
+						"type": "heroes-memorial.h7:h7NeutralEarthElemental"
+					},
+					{
+						"amount": 2,
+						"type": "heroes-memorial.h7:h7NeutralLightElemental"
+					},
+					{
+						"amount": 2,
+						"type": "heroes-memorial.h7:h7NeutralDarknessElemental"
+					}
+				],
+				"sounds": {
+					"ambient": [
+						"LOOPTITA"
+					]
+				},
+				"templates": {
+					"default": {
+						"animation": "objects/elementalConflux/elementalConfluxH7.json",
+						"mask": [
+							"VVVV",
+							"VBBB",
+							"VBAB"
+						]
+					}
+				}
+			}
+		}
+	}
+}

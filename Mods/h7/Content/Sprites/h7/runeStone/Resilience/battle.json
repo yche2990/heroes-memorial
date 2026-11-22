@@ -1,0 +1,126 @@
+{
+ "basepath": "h7/runeStone/Resilience/battle/",
+ "sequences": [
+  {
+   "group": 0,
+   "frames": [
+    "stand_00.png",
+    "stand_01.png",
+    "stand_02.png",
+    "stand_03.png",
+    "stand_04.png",
+    "stand_05.png",
+    "stand_06.png",
+    "stand_07.png",
+    "stand_08.png",
+    "stand_09.png",
+    "stand_10.png",
+    "stand_11.png"
+   ]
+  },
+  {
+   "group": 1,
+   "frames": [
+    "stand_00.png",
+    "stand_01.png",
+    "stand_02.png",
+    "stand_03.png",
+    "stand_04.png",
+    "stand_05.png",
+    "stand_06.png",
+    "stand_07.png",
+    "stand_08.png",
+    "stand_09.png",
+    "stand_10.png",
+    "stand_11.png"
+   ]
+  },
+  {
+   "group": 2,
+   "frames": [
+    "stand_00.png",
+    "stand_01.png",
+    "stand_02.png",
+    "stand_03.png",
+    "stand_04.png",
+    "stand_05.png",
+    "stand_06.png",
+    "stand_07.png",
+    "stand_08.png",
+    "stand_09.png",
+    "stand_10.png",
+    "stand_11.png"
+   ]
+  },
+  {
+   "group": 3,
+   "frames": [
+    "hit_00.png",
+    "hit_01.png",
+    "hit_02.png",
+    "hit_03.png"
+   ]
+  },
+  {
+   "group": 4,
+   "frames": [
+    "hit_00.png",
+    "hit_01.png",
+    "hit_02.png",
+    "hit_03.png"
+   ]
+  },
+  {
+   "group": 5,
+   "frames": [
+    "death_00.png",
+    "death_01.png",
+    "death_02.png",
+    "death_03.png",
+    "death_04.png",
+    "death_05.png",
+    "death_06.png",
+    "death_07.png"
+   ]
+  },
+  {
+   "group": 30,
+   "frames": [
+    "cast_00.png",
+    "cast_01.png",
+    "cast_02.png",
+    "cast_03.png",
+    "cast_04.png",
+    "cast_05.png",
+    "cast_06.png",
+    "cast_07.png"
+   ]
+  },
+  {
+   "group": 31,
+   "frames": [
+    "cast_00.png",
+    "cast_01.png",
+    "cast_02.png",
+    "cast_03.png",
+    "cast_04.png",
+    "cast_05.png",
+    "cast_06.png",
+    "cast_07.png"
+   ]
+  },
+  {
+   "group": 32,
+   "frames": [
+    "cast_00.png",
+    "cast_01.png",
+    "cast_02.png",
+    "cast_03.png",
+    "cast_04.png",
+    "cast_05.png",
+    "cast_06.png",
+    "cast_07.png"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,6 @@
+{
+	"basepath" : "icons/kingdomOverview/object-pack-elemental-conflux-h567/",
+	"images" : [
+		{ "group" : 0, "frame" : 0, "file" : "elementalConfluxH7.png" }
+	]
+}

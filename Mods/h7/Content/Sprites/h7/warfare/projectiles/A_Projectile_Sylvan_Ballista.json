@@ -1,0 +1,19 @@
+{
+ "basepath": "h7/warfare/projectiles/A_Projectile_Sylvan_Ballista/",
+ "sequences": [
+  {
+   "group": 0,
+   "frames": [
+    "a+90_11.png",
+    "a+60_11.png",
+    "a+45_11.png",
+    "a+30_11.png",
+    "a+00_11.png",
+    "a-30_11.png",
+    "a-45_11.png",
+    "a-60_11.png",
+    "a-90_11.png"
+   ]
+  }
+ ]
+}

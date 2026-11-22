@@ -1,0 +1,660 @@
+{
+	"H7_AURA_MARK_H7C": {
+		"hidden": true,
+		"creatureNature": false
+	},
+	"H7_LOG_A_H7C": {
+		"hidden": true,
+		"creatureNature": false,
+		"valueDescriptions": {
+			"1": "The Cleansing Aura removes a harmful spell from %s.",
+			"2": "%s raise shields to cover %s, taking %d damage.",
+			"3": "The Aura of Purity shields %s from the harmful spell.",
+			"4": "%s heal %s for %d HP.",
+			"5": "%s are unaffected by this harmful spell.",
+			"6": "Magma Blood saves %s from losing %d HP.",
+			"7": "The Dwarven Shield Wall keeps %s from being incapacitated."
+		}
+	},
+	"H7_AURA_CLEANSING_H7C": {
+		"creatureNature": false,
+		"graphics": {
+			"icon": "h7/abilities/h7AuraOfCleansing"
+		},
+		"description": "{Cleansing Aura}\nDefense +${val}; removes one harmful spell at the start of each round."
+	},
+	"H7_AURA_PURITY_H7C": {
+		"creatureNature": false,
+		"graphics": {
+			"icon": "h7/abilities/h7AuraOfPurity"
+		},
+		"description": "{Aura of Purity}\nCannot be targeted by harmful spells."
+	},
+	"H7_AURA_HEARTDARK_H7C": {
+		"creatureNature": false,
+		"graphics": {
+			"icon": "h7/abilities/h7HeartOfDarkness"
+		},
+		"description": "{Heart of Darkness}\nLight spell damage taken -${val}%."
+	},
+	"H7_AURA_SHIELD_H7C": {
+		"creatureNature": false,
+		"graphics": {
+			"icon": "h7/abilities/h7SHIELDING"
+		},
+		"description": "{Raise Shields}\nAttack damage taken -${val}%; an adjacent Legionnaire takes the same amount."
+	},
+	"H7_AURA_SOULFIRE_H7C": {
+		"creatureNature": false,
+		"graphics": {
+			"icon": "h7/abilities/h7Soulfire"
+		},
+		"description": "{Soulfire}\nMorale +1, Speed +${val} until the end of its next action."
+	},
+	"H7_AURA_TREANT_H7C": {
+		"creatureNature": false,
+		"graphics": {
+			"icon": "h7/abilities/h7TreantSynergy"
+		},
+		"description": "{Treant Symbiosis}\nDefense +${val}."
+	},
+	"H7_AURA_INSPIRE_H7C": {
+		"creatureNature": false,
+		"graphics": {
+			"icon": "h7/abilities/h7InspiringPresence"
+		},
+		"description": "{Inspiration}\nMorale +${val}, Luck +${val}."
+	},
+	"H7_AURA_FIRE_H7C": {
+		"creatureNature": false,
+		"graphics": {
+			"icon": "h7/abilities/h7AuraOfFire"
+		},
+		"description": "{Fire Aura}\nImmune to harmful Earth spells."
+	},
+	"H7_DEFENSIVE_H7C": {
+		"creatureNature": false,
+		"graphics": {
+			"icon": "h7/abilities/h7Defensive"
+		},
+		"description": "{Defensive Stance}\nUnlimited retaliations, immune to flank and rear attacks until its next action."
+	},
+	"H7_NO_FLANK_H7C": {
+		"creatureNature": false,
+		"graphics": {
+			"icon": "h7/abilities/h7Vigilance"
+		},
+		"description": "{Vigilance}\nImmune to flank and rear attacks."
+	},
+	"H7_SEA_WARFARE_H7C": {
+		"creatureNature": false,
+		"graphics": {
+			"icon": "h7/abilities/h7SeaWarfare"
+		},
+		"description": "{Naval Warfare}\nOn water: Speed +2, Hit Points +3, Attack +6, Defense +6, Damage +3"
+	},
+	"H7_PRIME_IMMUNITY_H7C": {
+		"hidden": true,
+		"creatureNature": false
+	},
+	"H7_INDOMITABLE_H7C": {
+		"hidden": true,
+		"creatureNature": false
+	},
+	"H7_VIGILANCE_H7C": {
+		"hidden": true,
+		"creatureNature": false
+	},
+	"H7_NO_INCAPACITATE_H7C": {
+		"hidden": true,
+		"creatureNature": false
+	},
+	"H7_STATE_H7C": {
+		"hidden": true,
+		"creatureNature": false,
+		"valueDescriptions": {
+			"1": "%s are incapacitated.",
+			"2": "%s take %d acid damage.",
+			"3": "%s take %d Blighting Breath damage.",
+			"4": "%s take %d Blighting Venom damage.",
+			"5": "%s take %d Poisoned Blades damage.",
+			"6": "%s are afflicted with %s.",
+			"7": "%s are incapacitated until they take damage.",
+			"8": "%s are Rooted and cannot move.",
+			"9": "%s are entangled and cannot move.",
+			"10": "Deadly Strike hits %s for %d damage.",
+			"11": "%s Backstab %s for +%d percent damage.",
+			"12": "%s take %d Pestilent Miasma damage.",
+			"20": "{Rooted}\nCannot move or use movement-related abilities.",
+			"21": "{Entangling Roots}\nCannot move or use movement abilities until the Ancient Treant moves or dies.",
+			"22": "{Bound}\nCannot move until the Kraken's next action, or until it leaves or dies."
+		}
+	},
+	"H7_INCAP_H7C": {
+		"creatureNature": false,
+		"graphics": {
+			"icon": "h7/abilities/h7Incapacitated"
+		},
+		"description": "{Incapacitated}\nCannot act or retaliate until the end of its next action."
+	},
+	"H7_INCAP_FRAGILE_H7C": {
+		"creatureNature": false,
+		"graphics": {
+			"icon": "h7/abilities/h7Incapacitated"
+		},
+		"description": "{Incapacitated}\nCannot act or retaliate until its next action ends; taking damage breaks it."
+	},
+	"H7_ACID_H7C": {
+		"creatureNature": false,
+		"graphics": {
+			"icon": "h7/abilities/h7AcidDot"
+		},
+		"description": "{Acid}\nTakes ${val} Earth damage at round start, halving each round."
+	},
+	"H7_WITHER_H7C": {
+		"creatureNature": false,
+		"graphics": {
+			"icon": "h7/abilities/h7WitheringBreath"
+		},
+		"description": "{Blighting Breath}\nTakes ${val} Dark damage at round start, halving each round."
+	},
+	"H7_VENOM_H7C": {
+		"creatureNature": false,
+		"graphics": {
+			"icon": "h7/abilities/h7WitheringVenom"
+		},
+		"description": "{Blighting Venom}\nTakes ${val} Dark damage at round start, rising each round."
+	},
+	"H7_BLADES_H7C": {
+		"creatureNature": false,
+		"graphics": {
+			"icon": "h7/abilities/h7PoisonedBlades"
+		},
+		"description": "{Poisoned Blades}\nTakes ${val} Dark damage at round start, rising each round."
+	},
+	"H7_ROOTED_H7C": {
+		"creatureNature": false,
+		"graphics": {
+			"icon": "h7/abilities/h7Rooting"
+		},
+		"description": "{Rooted}\nSpeed -${val}."
+	},
+	"H7_CORRODE_H7C": {
+		"creatureNature": false,
+		"graphics": {
+			"icon": "h7/abilities/h7CorrodingVenom"
+		},
+		"description": "{Corrosive Venom}\nDefense -${val} until the end of its next action."
+	},
+	"H7_DISRUPT_H7C": {
+		"creatureNature": false,
+		"graphics": {
+			"icon": "h7/abilities/h7HexOfDisruption"
+		},
+		"description": "{Disruption Hex}\nDefense -${val}."
+	},
+	"H7_PESTILENCE_H7C": {
+		"creatureNature": false,
+		"graphics": {
+			"icon": "h7/abilities/h7AuraOfPestilence"
+		},
+		"description": "{Pestilent Miasma}\nAttack -${val}, Speed -1."
+	},
+	"H7_BLOODRAGE_H7C": {
+		"creatureNature": false,
+		"graphics": {
+			"icon": "h7/abilities/h7BloodRage"
+		},
+		"description": "{Blood Rage}\nWith a hero: +6 Attack at battle start, -2 each round and on wait or defend"
+	},
+	"H7_RAGE_SHOW_H7C": {
+		"creatureNature": false,
+		"graphics": {
+			"icon": "h7/abilities/h7BloodRage"
+		},
+		"description": "{Blood Rage}\nAttack +${val}."
+	},
+	"H7_RAGE_LV_H7C": {
+		"hidden": true,
+		"creatureNature": false
+	},
+	"H7_ATK_MARK_H7C": {
+		"hidden": true,
+		"creatureNature": false,
+		"valueDescriptions": {
+			"1": "%s seize the moment to retaliate for %d damage.",
+			"2": "%s strike through an opening for %d damage.",
+			"3": "The Piercing Snipe of %s goes through %s for %d damage.",
+			"4": "The Hammer of Arkath from %s strikes %s for %d fire damage.",
+			"5": "%s evade and retaliate with a shot for %d damage.",
+			"6": "%s move and shoot %s for %d damage.",
+			"7": "%s release absorbed magic for %d extra Prime damage.",
+			"8": "The Soulflay Breath of %s hits %s for %d Dark damage.",
+			"9": "%s go Wild.",
+			"10": "%s fly into a Fury.",
+			"11": "%s absorb %d magic damage.",
+			"12": "%s are burned by Fire Breath, taking %d fire damage.",
+			"13": "%s are burned by the Trail of Fire, taking %d fire damage."
+		}
+	},
+	"H7_OPP_RETALIATION_H7C": {
+		"hidden": true,
+		"creatureNature": false
+	},
+	"H7_OPP_ATTACK_H7C": {
+		"hidden": true,
+		"creatureNature": false
+	},
+	"H7_WILD_H7C": {
+		"graphics": {
+			"icon": "h7/abilities/h7Wild"
+		},
+		"creatureNature": false,
+		"description": "{Wild}\nEvery attack strikes twice until its next action ends."
+	},
+	"H7_RAGE_H7C": {
+		"graphics": {
+			"icon": "h7/abilities/h7Rage"
+		},
+		"creatureNature": false,
+		"description": "{Fury}\nUntil its next action ends: damage +${val}, Speed +2, immune to Mind spells."
+	},
+	"H7_MAGIC_ABSORB_H7C": {
+		"graphics": {
+			"icon": "h7/abilities/h7MagicAbsorption"
+		},
+		"creatureNature": false,
+		"description": "{Absorb Magic}\nNext attack deals ${val} extra Prime damage."
+	},
+	"H7_LOG_D_H7C": {
+		"hidden": true,
+		"creatureNature": false,
+		"valueDescriptions": {
+			"1": "%s drain mana: next round your hero's spells cost %d less mana.",
+			"2": "%s plunder souls: the enemy hero will lose %d mana, and next round your hero's spells cost %d less mana.",
+			"3": "The Rune of Balance splits the damage dealt to %s (%d) among %d allied stacks.",
+			"4": "%s set down a Rune of Balance.",
+			"5": "The Rune of Balance dispels magic from %d stacks.",
+			"6": "%s teleport onto the Rune of Balance and take over its aura.",
+			"7": "%s summon a Magma Pond.",
+			"8": "%s are scorched by magma, taking %d damage.",
+			"9": "%s spread Thorns.",
+			"10": "%s are pricked by Thorns, taking %d damage.",
+			"11": "%s raise a Living Shelter: Defense +%d."
+		}
+	},
+	"H7_MANA_PENDING_H7C": {
+		"hidden": true,
+		"creatureNature": false,
+		"valueDescriptions": {}
+	},
+	"H7_MANA_CREDIT_H7C": {
+		"graphics": {
+			"icon": "h7/abilities/h7ManaDrain"
+		},
+		"creatureNature": false,
+		"description": "{Drained Mana}\nYour hero's spells cost ${val} less mana this round."
+	},
+	"H7_RUNE_CARRY_H7C": {
+		"graphics": {
+			"icon": "h7/abilities/h7RuneBalanceAura"
+		},
+		"creatureNature": false,
+		"description": "{Rune of Balance Aura}\nIt and the allies around it share attack damage evenly until the battle ends."
+	},
+	"H7_RUNE_GONE_H7C": {
+		"hidden": true,
+		"creatureNature": false,
+		"valueDescriptions": {}
+	},
+	"H7_RUNE_CLEANSED_H7C": {
+		"hidden": true,
+		"creatureNature": false,
+		"valueDescriptions": {}
+	},
+	"H7_RUNE_LINK_H7C": {
+		"hidden": true,
+		"creatureNature": false,
+		"valueDescriptions": {}
+	},
+	"H7_SHELTER_H7C": {
+		"graphics": {
+			"icon": "h7/abilities/h7LivingShelter"
+		},
+		"creatureNature": false,
+		"description": "{Living Shelter}\nDefense +${val}; adjacent empty hexes block enemies until it moves or attacks."
+	},
+	"H7_ZONE_HIT_H7C": {
+		"hidden": true,
+		"creatureNature": false,
+		"valueDescriptions": {}
+	},
+	"H7_THORNS_USED_H7C": {
+		"hidden": true,
+		"creatureNature": false,
+		"valueDescriptions": {}
+	},
+	"H7_AB_USED_H7C": {
+		"hidden": true,
+		"creatureNature": false
+	},
+	"H7_IMPLODE_PENDING_H7C": {
+		"hidden": true,
+		"creatureNature": false
+	},
+	"H7_ABE_LOG_H7C": {
+		"hidden": true,
+		"creatureNature": false,
+		"valueDescriptions": {
+			"1": "%s resurrect %s: %d HP restored, %d revived.",
+			"2": "%s repair %s: %d HP restored, %d repaired.",
+			"3": "%s make a Savage Charge up to %s.",
+			"4": "%s make a Mighty Pounce onto %s.",
+			"5": "%s gather a Nova.",
+			"6": "%s raise their hammers to throw.",
+			"7": "%s ready a volley of Leaf Daggers.",
+			"8": "%s nock an Imploding Arrow.",
+			"9": "%s prepare a Scatter Shot.",
+			"10": "%s prepare an Ink Spray.",
+			"11": "%s ready a Maiming Sting.",
+			"12": "The Imploding Arrow of %s pulls %d stacks toward the target.",
+			"13": "%s are hit by a Maiming Sting and cannot retaliate.",
+			"14": "The Ink Spray of %s hits %d enemy stacks."
+		}
+	},
+	"H7_DIVE_H7C": {
+		"hidden": true,
+		"creatureNature": false,
+		"valueDescriptions": {
+			"1": "%s soar into the air.",
+			"2": "%s make a Swoop Attack on %s for %d damage.",
+			"3": "%s swoop down but miss."
+		}
+	},
+	"H7_NOVA_ARMED_H7C": {
+		"creatureNature": false,
+		"graphics": {
+			"icon": "h7/abilities/h7Nova"
+		},
+		"description": "{Nova}\nThis shot hits every unit in the 3x3 area around the target."
+	},
+	"H7_SCATTER_ARMED_H7C": {
+		"creatureNature": false,
+		"graphics": {
+			"icon": "h7/abilities/h7ScatterShot"
+		},
+		"description": "{Scatter Shot}\nThis shot hits every unit in the 3x3 area around the target for half damage."
+	},
+	"H7_HAMMER_ARMED_H7C": {
+		"creatureNature": false,
+		"graphics": {
+			"icon": "h7/abilities/h7ThrowingHammer"
+		},
+		"description": "{Throwing Hammer}\nThis shot: Attack +7, no range penalty."
+	},
+	"H7_LEAF_ARMED_H7C": {
+		"creatureNature": false,
+		"graphics": {
+			"icon": "h7/abilities/h7LeafDaggers"
+		},
+		"description": "{Leaf Daggers}\nThis shot pierces enemies in a line, ignoring Defense, range and walls."
+	},
+	"H7_IMPLODE_ARMED_H7C": {
+		"creatureNature": false,
+		"graphics": {
+			"icon": "h7/abilities/h7ImplodingArrow"
+		},
+		"description": "{Imploding Arrow}\nOn hit, units within 3 hexes are pulled 1 hex toward the target."
+	},
+	"H7_INK_ARMED_H7C": {
+		"creatureNature": false,
+		"graphics": {
+			"icon": "h7/abilities/h7InkSpray"
+		},
+		"description": "{Ink Spray}\nThis melee hits the target and the enemies beside it; inked units deal half damage."
+	},
+	"H7_STING_ARMED_H7C": {
+		"creatureNature": false,
+		"graphics": {
+			"icon": "h7/abilities/h7CripplingSting"
+		},
+		"description": "{Maiming Sting}\nThis melee deals half damage and draws no retaliation; the target cannot retaliate."
+	},
+	"H7_FERAL_SHOW_H7C": {
+		"creatureNature": false,
+		"graphics": {
+			"icon": "h7/abilities/h7FeralCharge"
+		},
+		"description": "{Savage Charge}\nThis strike: Attack +${val}, no retaliation;\nown Defense drops to 0 this round."
+	},
+	"H7_POUNCE_SHOW_H7C": {
+		"creatureNature": false,
+		"graphics": {
+			"icon": "h7/abilities/h7MightyPounce"
+		},
+		"description": "{Mighty Pounce}\nThis strike hits all adjacent enemies, no retaliation."
+	},
+	"H7_INKED_H7C": {
+		"creatureNature": false,
+		"graphics": {
+			"icon": "h7/abilities/h7InkSpray"
+		},
+		"description": "{Ink Spray}\nMelee and retaliation damage halved until the end of next round."
+	},
+	"H7_CRIPPLED_H7C": {
+		"creatureNature": false,
+		"graphics": {
+			"icon": "h7/abilities/h7CripplingSting"
+		},
+		"description": "{Maiming Sting}\nCannot retaliate until the end of next round."
+	},
+	"H7_NECRO_RAISE_H7C": {
+		"creatureNature": false,
+		"graphics": {
+			"icon": "h7/abilities/h7NecroRaise"
+		},
+		"description": "{H7 Necromancy}\nWith 4+ stacks of H7 undead, Necromancy raises their H7 counterparts."
+	},
+	"H7_SOURCE_H7C": {
+		"hidden": true,
+		"creatureNature": false
+	},
+	"H7_RUNE_STONE_H7C": {
+		"hidden": true,
+		"creatureNature": false,
+		"valueDescriptions": {}
+	},
+	"H7_RUNE_INFO_H7C": {
+		"creatureNature": false,
+		"graphics": {
+			"icon": "h7/abilities/h7RuneStoneFortune"
+		},
+		"description": "{Rune Stone}\nA rune stone called forth by the H7 Memorial runes."
+	},
+	"H7_RUNE_RADIANT_H7C": {
+		"creatureNature": false,
+		"graphics": {
+			"icon": "h7/abilities/h7RuneRadiance"
+		},
+		"description": "{Rune of Radiance}\nAura effects tripled until the end of next round."
+	},
+	"H7_RUNE_FORTUNE_H7C": {
+		"creatureNature": false,
+		"graphics": {
+			"icon": "h7/abilities/h7RuneFortuneAura"
+		},
+		"description": "{Rune of Fortune Aura}\nLuck +${val}."
+	},
+	"H7_RUNE_MISFORTUNE_H7C": {
+		"creatureNature": false,
+		"graphics": {
+			"icon": "h7/abilities/h7RuneFortuneAura"
+		},
+		"description": "{Enemy Fortune Rune Aura}\nLuck -${val}."
+	},
+	"H7_RUNE_DESTRUCTION_H7C": {
+		"creatureNature": false,
+		"graphics": {
+			"icon": "h7/abilities/h7RuneDestructionAura"
+		},
+		"description": "{Rune of Destruction Aura}\nAttack +${val}."
+	},
+	"H7_RUNE_RESILIENCE_H7C": {
+		"creatureNature": false,
+		"graphics": {
+			"icon": "h7/abilities/h7RuneResilienceAura"
+		},
+		"description": "{Rune of Resilience Aura}\nDefense +${val}."
+	},
+	"H7_RUNE_LOG_H7C": {
+		"hidden": true,
+		"creatureNature": false,
+		"valueDescriptions": {
+			"1": "Fortune Burst: %d allied stacks each gain a %d-point shield.",
+			"2": "Destruction Burst: %d enemy stacks take %d damage in total.",
+			"3": "Resilience Burst: %d stacks are pushed away.",
+			"4": "%s shine with radiance: aura effects are tripled until the end of next round.",
+			"5": "The Rune of Fortune shield on %s absorbs %d damage."
+		}
+	},
+	"H7_AIRBURST_DONE_H7C": {
+		"hidden": true,
+		"creatureNature": false
+	},
+	"H7_AIRSTORM_H7C": {
+		"hidden": true,
+		"creatureNature": false
+	},
+	"H7_EARTHMARK_H7C": {
+		"hidden": true,
+		"creatureNature": false,
+		"valueDescriptions": {}
+	},
+	"H7_ENTANGLED_H7C": {
+		"hidden": true,
+		"creatureNature": false,
+		"valueDescriptions": {}
+	},
+	"H7_FIRESENTRY_H7C": {
+		"hidden": true,
+		"creatureNature": false,
+		"valueDescriptions": {}
+	},
+	"H7_FIRESENTRY_LIFE_H7C": {
+		"hidden": true,
+		"creatureNature": false,
+		"valueDescriptions": {}
+	},
+	"H7_FIRESENTRY_FIRED_H7C": {
+		"hidden": true,
+		"creatureNature": false,
+		"valueDescriptions": {}
+	},
+	"H7_BURN_TICKED_H7C": {
+		"hidden": true,
+		"creatureNature": false,
+		"valueDescriptions": {}
+	},
+	"H7_SHARE_LINK_H7C": {
+		"hidden": true,
+		"creatureNature": false,
+		"valueDescriptions": {}
+	},
+	"H7_SL_LOG_H7C": {
+		"hidden": true,
+		"creatureNature": false,
+		"valueDescriptions": {
+			"1": "The Celestial Armor of %s absorbs %d damage.",
+			"2": "The Retribution of %s hits %s for %d Light damage.",
+			"3": "%s are tormented by Suffering, taking %d Dark damage.",
+			"4": "%s are cursed, and the %s effect is removed.",
+			"5": "%s shield %s, sharing %d damage.",
+			"6": "The Shadow Cloak of %s lets the mirror image dodge the blow.",
+			"7": "A haunting spirit torments %s for %d Dark damage.",
+			"8": "%s are Haunted."
+		}
+	},
+	"H7_MARTYR_H7C": {
+		"graphics": {
+			"icon": "h7/spells/h7Martyr/Effect"
+		},
+		"creatureNature": false,
+		"description": "{Martyr}\nTakes ${val}% of the damage dealt to all allies."
+	},
+	"H7_CLOAK_H7C": {
+		"graphics": {
+			"icon": "h7/spells/h7ShadowCloak/Effect"
+		},
+		"creatureNature": false,
+		"description": "{Shadow Cloak (H7)}\n${val} charges left: attacks miss completely (spell damage still hits)."
+	},
+	"H7_CLOAK_HIT_H7C": {
+		"hidden": true,
+		"creatureNature": false,
+		"valueDescriptions": {
+			"1": "The Shadow Cloak of %s makes the attack miss (%d charges left)."
+		}
+	},
+	"H7_HAUNTED_H7C": {
+		"graphics": {
+			"icon": "h7/spells/h7HauntingPlague/Effect"
+		},
+		"creatureNature": false,
+		"description": "{Haunted}\nAttack -10 this round; takes ${val} Dark damage at round end."
+	},
+	"H7_HAUNT_ROUND_H7C": {
+		"hidden": true,
+		"creatureNature": false,
+		"valueDescriptions": {}
+	},
+	"H7_FEAR_H7C": {
+		"graphics": {
+			"icon": "h7/spells/h7FaceOfFear/Effect"
+		},
+		"creatureNature": false,
+		"description": "{Fear}\nMorale -${val}."
+	},
+	"H47_SHOVE_FEAR_H7C": {
+		"hidden": true,
+		"creatureNature": false,
+		"valueDescriptions": {
+			"1": "%s scare off %s.",
+			"2": "%s pull %s closer."
+		}
+	},
+	"H7_FOGSHROUD_H7C": {
+		"hidden": true,
+		"creatureNature": false
+	},
+	"H7_ORB_H7C": {
+		"hidden": true,
+		"creatureNature": false
+	},
+	"H7_ULTIMATE_H7C": {
+		"creatureNature": false
+	},
+	"H7_SANCTUM_H7C": {
+		"hidden": true,
+		"creatureNature": false,
+		"valueDescriptions": {
+			"1": "Unstoppable Momentum: %s deal +%d percent damage on their extra Morale action.",
+			"2": "Eternal Servitude: %s raise %d of their fallen.",
+			"3": "Second Nature: %s took no retaliation and strike again at once.",
+			"4": "Sky Wrath: %s are wiped out, Blood Rage +2.",
+			"5": "Nature's Luck: %s land a sure lucky strike on %s.",
+			"6": "Rune of Scattering: %d damage scatters to %d enemy stacks inside the rune aura.",
+			"7": "Sanctum Garrison: %s (%d) arrive to join the fight."
+		}
+	},
+	"H7_SKYFURY_H7C": {
+		"creatureNature": false,
+		"graphics": {
+			"icon": "h7/abilities/h7FatherSkyFury"
+		},
+		"description": "{Sky Wrath}\nBlood Rage +2 at battle start,\nand +2 each time a stack is wiped out."
+	},
+	"H7_RUNE_AURA_H7C": {
+		"hidden": true,
+		"creatureNature": false
+	}
+}

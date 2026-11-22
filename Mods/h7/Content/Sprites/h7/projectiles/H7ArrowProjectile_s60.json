@@ -1,0 +1,19 @@
+{
+ "basepath": "h7/projectiles/H7ArrowProjectile_s60/",
+ "sequences": [
+  {
+   "group": 0,
+   "frames": [
+    "a+90_11.png",
+    "a+60_11.png",
+    "a+45_11.png",
+    "a+30_11.png",
+    "a+00_11.png",
+    "a-30_11.png",
+    "a-45_11.png",
+    "a-60_11.png",
+    "a-90_11.png"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,889 @@
+{
+	"h7wfSisterHeal": {
+		"targetType": "CREATURE",
+		"type": "ability",
+		"name": "Sister Healing",
+		"school": {},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"graphics": {
+			"iconBook": "h7/spells/h7wfSisterHeal/Book",
+			"iconScroll": "h7/spells/h7wfSisterHeal/Scroll",
+			"iconScenarioBonus": "h7/spells/h7wfSisterHeal/ScenarioBonus",
+			"iconEffect": "h7/spells/h7wfSisterHeal/Effect"
+		},
+		"levels": {
+			"base": {
+				"power": 0,
+				"cost": 0,
+				"range": "0",
+				"targetModifier": {
+					"smart": true
+				},
+				"description": "{Sister Healing}\nThe Healing Sister restores Hit Points to an allied living stack (no effect on Undead or constructs).",
+				"battleEffects": {
+					"heal": {
+						"type": "core:heal",
+						"healLevel": "heal",
+						"healPower": "permanent"
+					}
+				}
+			},
+			"none": {
+				"power": 0,
+				"description": "{Sister Healing}\nThe Healing Sister restores Hit Points to an allied living stack (no effect on Undead or constructs)."
+			},
+			"basic": {
+				"power": 0,
+				"description": "{Sister Healing}\nThe Healing Sister restores Hit Points to an allied living stack (no effect on Undead or constructs)."
+			},
+			"advanced": {
+				"power": 0,
+				"description": "{Sister Healing}\nThe Healing Sister restores Hit Points to an allied living stack (no effect on Undead or constructs)."
+			},
+			"expert": {
+				"power": 0,
+				"description": "{Sister Healing}\nThe Healing Sister restores Hit Points to an allied living stack (no effect on Undead or constructs)."
+			}
+		},
+		"flags": {
+			"nonMagical": true,
+			"positive": true,
+			"special": true
+		},
+		"targetCondition": {
+			"noneOf": {
+				"bonus.SIEGE_WEAPON": "absolute",
+				"bonus.UNDEAD": "absolute",
+				"bonus.NON_LIVING": "absolute",
+				"bonus.MECHANICAL": "absolute"
+			}
+		},
+		"animation": {
+			"affect": [
+				"h7/fx/h7wfSisterHeal"
+			]
+		},
+		"sounds": {
+			"cast": "h7/warfare/building_priestess_attack.ogg"
+		}
+	},
+	"h7wfSisterRevive": {
+		"targetType": "CREATURE",
+		"type": "ability",
+		"name": "Reviving Heal",
+		"school": {},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"graphics": {
+			"iconBook": "h7/spells/h7wfSisterHeal/Book",
+			"iconScroll": "h7/spells/h7wfSisterHeal/Scroll",
+			"iconScenarioBonus": "h7/spells/h7wfSisterHeal/ScenarioBonus",
+			"iconEffect": "h7/spells/h7wfSisterHeal/Effect"
+		},
+		"levels": {
+			"base": {
+				"power": 0,
+				"cost": 0,
+				"range": "0",
+				"targetModifier": {
+					"smart": true
+				},
+				"description": "{Reviving Heal}\nThe Healing Sister restores Hit Points to an allied living stack and resurrects its fallen (no effect on Undead or constructs).",
+				"battleEffects": {
+					"heal": {
+						"type": "core:heal",
+						"healLevel": "resurrect",
+						"healPower": "permanent"
+					}
+				}
+			},
+			"none": {
+				"power": 0,
+				"description": "{Reviving Heal}\nThe Healing Sister restores Hit Points to an allied living stack and resurrects its fallen (no effect on Undead or constructs)."
+			},
+			"basic": {
+				"power": 0,
+				"description": "{Reviving Heal}\nThe Healing Sister restores Hit Points to an allied living stack and resurrects its fallen (no effect on Undead or constructs)."
+			},
+			"advanced": {
+				"power": 0,
+				"description": "{Reviving Heal}\nThe Healing Sister restores Hit Points to an allied living stack and resurrects its fallen (no effect on Undead or constructs)."
+			},
+			"expert": {
+				"power": 0,
+				"description": "{Reviving Heal}\nThe Healing Sister restores Hit Points to an allied living stack and resurrects its fallen (no effect on Undead or constructs)."
+			}
+		},
+		"flags": {
+			"nonMagical": true,
+			"positive": true,
+			"special": true
+		},
+		"targetCondition": {
+			"noneOf": {
+				"bonus.SIEGE_WEAPON": "absolute",
+				"bonus.UNDEAD": "absolute",
+				"bonus.NON_LIVING": "absolute",
+				"bonus.MECHANICAL": "absolute"
+			}
+		},
+		"animation": {
+			"affect": [
+				"h7/fx/h7wfSisterHeal"
+			]
+		},
+		"sounds": {
+			"cast": "h7/warfare/building_priestess_attack.ogg"
+		}
+	},
+	"h7wfTentHeal": {
+		"targetType": "CREATURE",
+		"type": "ability",
+		"name": "Tent Healing",
+		"school": {},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"graphics": {
+			"iconBook": "h7/spells/h7wfTentHeal/Book",
+			"iconScroll": "h7/spells/h7wfTentHeal/Scroll",
+			"iconScenarioBonus": "h7/spells/h7wfTentHeal/ScenarioBonus",
+			"iconEffect": "h7/spells/h7wfTentHeal/Effect"
+		},
+		"levels": {
+			"base": {
+				"power": 0,
+				"cost": 0,
+				"range": "0",
+				"targetModifier": {
+					"smart": true
+				},
+				"description": "{Tent Healing}\nThe Healing Tent restores Hit Points to an allied stack (no effect on Undead).",
+				"battleEffects": {
+					"heal": {
+						"type": "core:heal",
+						"healLevel": "heal",
+						"healPower": "permanent"
+					}
+				}
+			},
+			"none": {
+				"power": 0,
+				"description": "{Tent Healing}\nThe Healing Tent restores Hit Points to an allied stack (no effect on Undead)."
+			},
+			"basic": {
+				"power": 0,
+				"description": "{Tent Healing}\nThe Healing Tent restores Hit Points to an allied stack (no effect on Undead)."
+			},
+			"advanced": {
+				"power": 0,
+				"description": "{Tent Healing}\nThe Healing Tent restores Hit Points to an allied stack (no effect on Undead)."
+			},
+			"expert": {
+				"power": 0,
+				"description": "{Tent Healing}\nThe Healing Tent restores Hit Points to an allied stack (no effect on Undead)."
+			}
+		},
+		"flags": {
+			"nonMagical": true,
+			"positive": true,
+			"special": true
+		},
+		"targetCondition": {
+			"noneOf": {
+				"bonus.SIEGE_WEAPON": "absolute",
+				"bonus.UNDEAD": "absolute"
+			}
+		},
+		"animation": {
+			"affect": [
+				"h7/fx/h7wfTentHeal"
+			]
+		},
+		"sounds": {
+			"cast": "h7/warfare/building_priestess_attack.ogg"
+		}
+	},
+	"h7wfShamanHeal": {
+		"targetType": "CREATURE",
+		"type": "ability",
+		"name": "Shaman Healing",
+		"school": {},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"graphics": {
+			"iconBook": "h7/spells/h7wfShamanHeal/Book",
+			"iconScroll": "h7/spells/h7wfShamanHeal/Scroll",
+			"iconScenarioBonus": "h7/spells/h7wfShamanHeal/ScenarioBonus",
+			"iconEffect": "h7/spells/h7wfShamanHeal/Effect"
+		},
+		"levels": {
+			"base": {
+				"power": 0,
+				"cost": 0,
+				"range": "0",
+				"targetModifier": {
+					"smart": true
+				},
+				"description": "{Shaman Healing}\nThe Dreamwalker restores Hit Points to an allied living stack (no effect on Undead or constructs). Once per round; does not end the turn.",
+				"battleEffects": {
+					"heal": {
+						"type": "core:heal",
+						"healLevel": "heal",
+						"healPower": "permanent"
+					},
+					"once": {
+						"type": "h7wfOnce",
+						"key": "h7wfShamanHeal"
+					}
+				}
+			},
+			"none": {
+				"power": 0,
+				"description": "{Shaman Healing}\nThe Dreamwalker restores Hit Points to an allied living stack (no effect on Undead or constructs). Once per round; does not end the turn."
+			},
+			"basic": {
+				"power": 0,
+				"description": "{Shaman Healing}\nThe Dreamwalker restores Hit Points to an allied living stack (no effect on Undead or constructs). Once per round; does not end the turn."
+			},
+			"advanced": {
+				"power": 0,
+				"description": "{Shaman Healing}\nThe Dreamwalker restores Hit Points to an allied living stack (no effect on Undead or constructs). Once per round; does not end the turn."
+			},
+			"expert": {
+				"power": 0,
+				"description": "{Shaman Healing}\nThe Dreamwalker restores Hit Points to an allied living stack (no effect on Undead or constructs). Once per round; does not end the turn."
+			}
+		},
+		"flags": {
+			"nonMagical": true,
+			"positive": true,
+			"special": true
+		},
+		"targetCondition": {
+			"noneOf": {
+				"bonus.SIEGE_WEAPON": "absolute",
+				"bonus.UNDEAD": "absolute",
+				"bonus.NON_LIVING": "absolute",
+				"bonus.MECHANICAL": "absolute"
+			}
+		},
+		"animation": {
+			"affect": [
+				"h7/fx/h7wfShamanHeal"
+			]
+		},
+		"sounds": {
+			"cast": "h7/warfare/building_dreamcatcher_attack.ogg"
+		},
+		"canCastWithoutSkip": true
+	},
+	"h7wfRenewal": {
+		"targetType": "CREATURE",
+		"type": "ability",
+		"name": "Renewal",
+		"school": {},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"graphics": {
+			"iconBook": "h7/spells/h7wfRenewal/Book",
+			"iconScroll": "h7/spells/h7wfRenewal/Scroll",
+			"iconScenarioBonus": "h7/spells/h7wfRenewal/ScenarioBonus",
+			"iconEffect": "h7/spells/h7wfRenewal/Effect"
+		},
+		"levels": {
+			"base": {
+				"power": 0,
+				"cost": 0,
+				"range": "0",
+				"targetModifier": {
+					"smart": true
+				},
+				"description": "{Renewal}\nThe Mother Treant makes an allied living stack restore Hit Points at the start of each of the next 3 rounds (no effect on Undead or constructs).",
+				"battleEffects": {
+					"renewal": {
+						"type": "h7wfRenewal"
+					}
+				}
+			},
+			"none": {
+				"power": 0,
+				"description": "{Renewal}\nThe Mother Treant makes an allied living stack restore Hit Points at the start of each of the next 3 rounds (no effect on Undead or constructs)."
+			},
+			"basic": {
+				"power": 0,
+				"description": "{Renewal}\nThe Mother Treant makes an allied living stack restore Hit Points at the start of each of the next 3 rounds (no effect on Undead or constructs)."
+			},
+			"advanced": {
+				"power": 0,
+				"description": "{Renewal}\nThe Mother Treant makes an allied living stack restore Hit Points at the start of each of the next 3 rounds (no effect on Undead or constructs)."
+			},
+			"expert": {
+				"power": 0,
+				"description": "{Renewal}\nThe Mother Treant makes an allied living stack restore Hit Points at the start of each of the next 3 rounds (no effect on Undead or constructs)."
+			}
+		},
+		"flags": {
+			"nonMagical": true,
+			"positive": true,
+			"special": true
+		},
+		"targetCondition": {
+			"noneOf": {
+				"bonus.SIEGE_WEAPON": "absolute",
+				"bonus.UNDEAD": "absolute",
+				"bonus.NON_LIVING": "absolute",
+				"bonus.MECHANICAL": "absolute"
+			}
+		},
+		"sounds": {
+			"cast": "h7/warfare/building_mother_treant_attack.ogg"
+		}
+	},
+	"h7wfCloak": {
+		"targetType": "CREATURE",
+		"type": "ability",
+		"name": "Cloak of Death",
+		"school": {},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"graphics": {
+			"iconBook": "h7/spells/h7wfCloak/Book",
+			"iconScroll": "h7/spells/h7wfCloak/Scroll",
+			"iconScenarioBonus": "h7/spells/h7wfCloak/ScenarioBonus",
+			"iconEffect": "h7/spells/h7wfCloak/Effect"
+		},
+		"levels": {
+			"base": {
+				"power": 0,
+				"cost": 0,
+				"range": "0",
+				"targetModifier": {
+					"smart": true
+				},
+				"description": "{Cloak of Death}\nThe Faceless cloak an allied stack until the end of this round: the next enemy to attack it in melee first takes Dark damage.",
+				"battleEffects": {
+					"cloak": {
+						"type": "h7wfCloak"
+					}
+				}
+			},
+			"none": {
+				"power": 0,
+				"description": "{Cloak of Death}\nThe Faceless cloak an allied stack until the end of this round: the next enemy to attack it in melee first takes Dark damage."
+			},
+			"basic": {
+				"power": 0,
+				"description": "{Cloak of Death}\nThe Faceless cloak an allied stack until the end of this round: the next enemy to attack it in melee first takes Dark damage."
+			},
+			"advanced": {
+				"power": 0,
+				"description": "{Cloak of Death}\nThe Faceless cloak an allied stack until the end of this round: the next enemy to attack it in melee first takes Dark damage."
+			},
+			"expert": {
+				"power": 0,
+				"description": "{Cloak of Death}\nThe Faceless cloak an allied stack until the end of this round: the next enemy to attack it in melee first takes Dark damage."
+			}
+		},
+		"flags": {
+			"nonMagical": true,
+			"positive": true,
+			"special": true
+		},
+		"targetCondition": {
+			"noneOf": {
+				"bonus.SIEGE_WEAPON": "absolute"
+			}
+		},
+		"sounds": {
+			"cast": "h7/warfare/building_faceless_ability.ogg"
+		}
+	},
+	"h7wfRuneHeal": {
+		"targetType": "CREATURE",
+		"type": "ability",
+		"name": "Rune Healing",
+		"school": {},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"graphics": {
+			"iconBook": "h7/spells/h7wfRuneHeal/Book",
+			"iconScroll": "h7/spells/h7wfRuneHeal/Scroll",
+			"iconScenarioBonus": "h7/spells/h7wfRuneHeal/ScenarioBonus",
+			"iconEffect": "h7/spells/h7wfRuneHeal/Effect"
+		},
+		"levels": {
+			"base": {
+				"power": 0,
+				"cost": 0,
+				"range": "0",
+				"targetModifier": {
+					"smart": true
+				},
+				"description": "{Rune Healing}\nCast by selecting any allied stack: the Rune Stone heals all allied living stacks in your first three columns (no effect on Undead or constructs).",
+				"battleEffects": {
+					"rune": {
+						"type": "h7wfRuneHeal"
+					}
+				}
+			},
+			"none": {
+				"power": 0,
+				"description": "{Rune Healing}\nCast by selecting any allied stack: the Rune Stone heals all allied living stacks in your first three columns (no effect on Undead or constructs)."
+			},
+			"basic": {
+				"power": 0,
+				"description": "{Rune Healing}\nCast by selecting any allied stack: the Rune Stone heals all allied living stacks in your first three columns (no effect on Undead or constructs)."
+			},
+			"advanced": {
+				"power": 0,
+				"description": "{Rune Healing}\nCast by selecting any allied stack: the Rune Stone heals all allied living stacks in your first three columns (no effect on Undead or constructs)."
+			},
+			"expert": {
+				"power": 0,
+				"description": "{Rune Healing}\nCast by selecting any allied stack: the Rune Stone heals all allied living stacks in your first three columns (no effect on Undead or constructs)."
+			}
+		},
+		"flags": {
+			"nonMagical": true,
+			"positive": true,
+			"special": true
+		},
+		"targetCondition": {
+			"noneOf": {
+				"bonus.SIEGE_WEAPON": "absolute"
+			}
+		},
+		"sounds": {
+			"cast": "h7/warfare/building_rune_emblem_heal.ogg"
+		}
+	},
+	"h7wfDarkTouch": {
+		"targetType": "CREATURE",
+		"type": "ability",
+		"name": "Dark Touch",
+		"school": {},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"graphics": {
+			"iconBook": "h7/spells/h7wfDarkTouch/Book",
+			"iconScroll": "h7/spells/h7wfDarkTouch/Scroll",
+			"iconScenarioBonus": "h7/spells/h7wfDarkTouch/ScenarioBonus",
+			"iconEffect": "h7/spells/h7wfDarkTouch/Effect"
+		},
+		"levels": {
+			"base": {
+				"power": 0,
+				"cost": 0,
+				"range": "0",
+				"targetModifier": {
+					"smart": true
+				},
+				"description": "{Dark Touch}\nThe Namtaru dispels negative Light spells from an allied stack; for the next 3 rounds, its attacks deal extra Dark damage. Once per round; does not end the turn.",
+				"battleEffects": {
+					"touch": {
+						"type": "h7wfDarkTouch"
+					},
+					"once": {
+						"type": "h7wfOnce",
+						"key": "h7wfDarkTouch"
+					}
+				}
+			},
+			"none": {
+				"power": 0,
+				"description": "{Dark Touch}\nThe Namtaru dispels negative Light spells from an allied stack; for the next 3 rounds, its attacks deal extra Dark damage. Once per round; does not end the turn."
+			},
+			"basic": {
+				"power": 0,
+				"description": "{Dark Touch}\nThe Namtaru dispels negative Light spells from an allied stack; for the next 3 rounds, its attacks deal extra Dark damage. Once per round; does not end the turn."
+			},
+			"advanced": {
+				"power": 0,
+				"description": "{Dark Touch}\nThe Namtaru dispels negative Light spells from an allied stack; for the next 3 rounds, its attacks deal extra Dark damage. Once per round; does not end the turn."
+			},
+			"expert": {
+				"power": 0,
+				"description": "{Dark Touch}\nThe Namtaru dispels negative Light spells from an allied stack; for the next 3 rounds, its attacks deal extra Dark damage. Once per round; does not end the turn."
+			}
+		},
+		"flags": {
+			"nonMagical": true,
+			"positive": true,
+			"special": true
+		},
+		"targetCondition": {
+			"noneOf": {
+				"bonus.SIEGE_WEAPON": "absolute"
+			}
+		},
+		"sounds": {
+			"cast": "h7/warfare/Namtaru_Ability2Start.ogg"
+		},
+		"canCastWithoutSkip": true
+	},
+	"h7wfCatapultShot5": {
+		"targetType": "LOCATION",
+		"type": "ability",
+		"name": "Empowered Catapult Shot",
+		"school": {},
+		"level": 0,
+		"power": 1,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"levels": {
+			"base": {
+				"description": "",
+				"power": 1,
+				"cost": 0,
+				"targetModifier": {
+					"smart": true
+				},
+				"range": "0",
+				"battleEffects": {
+					"catapult": {
+						"type": "catapult"
+					}
+				}
+			},
+			"none": {
+				"battleEffects": {
+					"catapult": {
+						"targetsToAttack": 2,
+						"chanceToHitKeep": 5,
+						"chanceToHitGate": 25,
+						"chanceToHitTower": 10,
+						"chanceToHitWall": 50,
+						"chanceToNormalHit": 60,
+						"chanceToCrit": 30
+					}
+				}
+			},
+			"basic": {
+				"battleEffects": {
+					"catapult": {
+						"targetsToAttack": 2,
+						"chanceToHitKeep": 7,
+						"chanceToHitGate": 60,
+						"chanceToHitTower": 15,
+						"chanceToHitWall": 60,
+						"chanceToNormalHit": 50,
+						"chanceToCrit": 50
+					}
+				}
+			},
+			"advanced": {
+				"battleEffects": {
+					"catapult": {
+						"targetsToAttack": 3,
+						"chanceToHitKeep": 7,
+						"chanceToHitGate": 60,
+						"chanceToHitTower": 15,
+						"chanceToHitWall": 60,
+						"chanceToNormalHit": 50,
+						"chanceToCrit": 50
+					}
+				}
+			},
+			"expert": {
+				"battleEffects": {
+					"catapult": {
+						"targetsToAttack": 3,
+						"chanceToHitKeep": 100,
+						"chanceToHitGate": 100,
+						"chanceToHitTower": 100,
+						"chanceToHitWall": 100,
+						"chanceToNormalHit": 0,
+						"chanceToCrit": 100
+					}
+				}
+			}
+		},
+		"flags": {
+			"nonMagical": true,
+			"indifferent": true,
+			"special": true
+		}
+	},
+	"h7wfShamanHealC": {
+		"targetType": "CREATURE",
+		"type": "ability",
+		"name": "Shaman Healing",
+		"school": {},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"graphics": {
+			"iconBook": "h7/spells/h7wfShamanHeal/Book",
+			"iconScroll": "h7/spells/h7wfShamanHeal/Scroll",
+			"iconScenarioBonus": "h7/spells/h7wfShamanHeal/ScenarioBonus",
+			"iconEffect": "h7/spells/h7wfShamanHeal/Effect"
+		},
+		"levels": {
+			"base": {
+				"power": 0,
+				"cost": 0,
+				"range": "0",
+				"targetModifier": {
+					"smart": true
+				},
+				"description": "{Shaman Healing}\nAn allied living stack restores “8 × number of Dreamwalkers” Hit Points (no effect on Undead or constructs). Once per round; does not end the turn.",
+				"battleEffects": {
+					"heal": {
+						"type": "h7wfHeal",
+						"per": 8,
+						"animation": "h7/fx/h7wfShamanHeal"
+					},
+					"once": {
+						"type": "h7wfOnce",
+						"key": "h7wfShamanHealC"
+					}
+				}
+			},
+			"none": {
+				"power": 0,
+				"description": "{Shaman Healing}\nAn allied living stack restores “8 × number of Dreamwalkers” Hit Points (no effect on Undead or constructs). Once per round; does not end the turn."
+			},
+			"basic": {
+				"power": 0,
+				"description": "{Shaman Healing}\nAn allied living stack restores “8 × number of Dreamwalkers” Hit Points (no effect on Undead or constructs). Once per round; does not end the turn."
+			},
+			"advanced": {
+				"power": 0,
+				"description": "{Shaman Healing}\nAn allied living stack restores “8 × number of Dreamwalkers” Hit Points (no effect on Undead or constructs). Once per round; does not end the turn."
+			},
+			"expert": {
+				"power": 0,
+				"description": "{Shaman Healing}\nAn allied living stack restores “8 × number of Dreamwalkers” Hit Points (no effect on Undead or constructs). Once per round; does not end the turn."
+			}
+		},
+		"flags": {
+			"nonMagical": true,
+			"positive": true,
+			"special": true
+		},
+		"targetCondition": {
+			"noneOf": {
+				"bonus.SIEGE_WEAPON": "absolute",
+				"bonus.UNDEAD": "absolute",
+				"bonus.NON_LIVING": "absolute",
+				"bonus.MECHANICAL": "absolute"
+			}
+		},
+		"sounds": {
+			"cast": "h7/warfare/building_dreamcatcher_attack.ogg"
+		},
+		"canCastWithoutSkip": true
+	},
+	"h7wfRenewalC": {
+		"targetType": "CREATURE",
+		"type": "ability",
+		"name": "Renewal",
+		"school": {},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"graphics": {
+			"iconBook": "h7/spells/h7wfRenewal/Book",
+			"iconScroll": "h7/spells/h7wfRenewal/Scroll",
+			"iconScenarioBonus": "h7/spells/h7wfRenewal/ScenarioBonus",
+			"iconEffect": "h7/spells/h7wfRenewal/Effect"
+		},
+		"levels": {
+			"base": {
+				"power": 0,
+				"cost": 0,
+				"range": "0",
+				"targetModifier": {
+					"smart": true
+				},
+				"description": "{Renewal}\nFor the next 3 rounds, an allied living stack restores “30 × number of Mother Treants” Hit Points at the start of each round (no effect on Undead or constructs).",
+				"battleEffects": {
+					"renewal": {
+						"type": "h7wfRenewal",
+						"per": 30
+					}
+				}
+			},
+			"none": {
+				"power": 0,
+				"description": "{Renewal}\nFor the next 3 rounds, an allied living stack restores “30 × number of Mother Treants” Hit Points at the start of each round (no effect on Undead or constructs)."
+			},
+			"basic": {
+				"power": 0,
+				"description": "{Renewal}\nFor the next 3 rounds, an allied living stack restores “30 × number of Mother Treants” Hit Points at the start of each round (no effect on Undead or constructs)."
+			},
+			"advanced": {
+				"power": 0,
+				"description": "{Renewal}\nFor the next 3 rounds, an allied living stack restores “30 × number of Mother Treants” Hit Points at the start of each round (no effect on Undead or constructs)."
+			},
+			"expert": {
+				"power": 0,
+				"description": "{Renewal}\nFor the next 3 rounds, an allied living stack restores “30 × number of Mother Treants” Hit Points at the start of each round (no effect on Undead or constructs)."
+			}
+		},
+		"flags": {
+			"nonMagical": true,
+			"positive": true,
+			"special": true
+		},
+		"targetCondition": {
+			"noneOf": {
+				"bonus.SIEGE_WEAPON": "absolute",
+				"bonus.UNDEAD": "absolute",
+				"bonus.NON_LIVING": "absolute",
+				"bonus.MECHANICAL": "absolute"
+			}
+		},
+		"sounds": {
+			"cast": "h7/warfare/building_mother_treant_attack.ogg"
+		}
+	},
+	"h7wfCloakC": {
+		"targetType": "CREATURE",
+		"type": "ability",
+		"name": "Cloak of Death",
+		"school": {},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"graphics": {
+			"iconBook": "h7/spells/h7wfCloak/Book",
+			"iconScroll": "h7/spells/h7wfCloak/Scroll",
+			"iconScenarioBonus": "h7/spells/h7wfCloak/ScenarioBonus",
+			"iconEffect": "h7/spells/h7wfCloak/Effect"
+		},
+		"levels": {
+			"base": {
+				"power": 0,
+				"cost": 0,
+				"range": "0",
+				"targetModifier": {
+					"smart": true
+				},
+				"description": "{Cloak of Death}\nCloaks an allied stack until the end of this round: the next enemy to attack it in melee first takes “15 × number of Faceless” Dark damage.",
+				"battleEffects": {
+					"cloak": {
+						"type": "h7wfCloak",
+						"per": 15
+					}
+				}
+			},
+			"none": {
+				"power": 0,
+				"description": "{Cloak of Death}\nCloaks an allied stack until the end of this round: the next enemy to attack it in melee first takes “15 × number of Faceless” Dark damage."
+			},
+			"basic": {
+				"power": 0,
+				"description": "{Cloak of Death}\nCloaks an allied stack until the end of this round: the next enemy to attack it in melee first takes “15 × number of Faceless” Dark damage."
+			},
+			"advanced": {
+				"power": 0,
+				"description": "{Cloak of Death}\nCloaks an allied stack until the end of this round: the next enemy to attack it in melee first takes “15 × number of Faceless” Dark damage."
+			},
+			"expert": {
+				"power": 0,
+				"description": "{Cloak of Death}\nCloaks an allied stack until the end of this round: the next enemy to attack it in melee first takes “15 × number of Faceless” Dark damage."
+			}
+		},
+		"flags": {
+			"nonMagical": true,
+			"positive": true,
+			"special": true
+		},
+		"targetCondition": {
+			"noneOf": {
+				"bonus.SIEGE_WEAPON": "absolute"
+			}
+		},
+		"sounds": {
+			"cast": "h7/warfare/building_faceless_ability.ogg"
+		}
+	},
+	"h7wfDarkTouchC": {
+		"targetType": "CREATURE",
+		"type": "ability",
+		"name": "Dark Touch",
+		"school": {},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"graphics": {
+			"iconBook": "h7/spells/h7wfDarkTouch/Book",
+			"iconScroll": "h7/spells/h7wfDarkTouch/Scroll",
+			"iconScenarioBonus": "h7/spells/h7wfDarkTouch/ScenarioBonus",
+			"iconEffect": "h7/spells/h7wfDarkTouch/Effect"
+		},
+		"levels": {
+			"base": {
+				"power": 0,
+				"cost": 0,
+				"range": "0",
+				"targetModifier": {
+					"smart": true
+				},
+				"description": "{Dark Touch}\nDispels negative Light spells from an allied stack; for the next 3 rounds, each enemy it hits takes extra Dark damage of “1 per creature”. Once per round; does not end the turn.",
+				"battleEffects": {
+					"touch": {
+						"type": "h7wfDarkTouch",
+						"per": 1
+					},
+					"once": {
+						"type": "h7wfOnce",
+						"key": "h7wfDarkTouchC"
+					}
+				}
+			},
+			"none": {
+				"power": 0,
+				"description": "{Dark Touch}\nDispels negative Light spells from an allied stack; for the next 3 rounds, each enemy it hits takes extra Dark damage of “1 per creature”. Once per round; does not end the turn."
+			},
+			"basic": {
+				"power": 0,
+				"description": "{Dark Touch}\nDispels negative Light spells from an allied stack; for the next 3 rounds, each enemy it hits takes extra Dark damage of “1 per creature”. Once per round; does not end the turn."
+			},
+			"advanced": {
+				"power": 0,
+				"description": "{Dark Touch}\nDispels negative Light spells from an allied stack; for the next 3 rounds, each enemy it hits takes extra Dark damage of “1 per creature”. Once per round; does not end the turn."
+			},
+			"expert": {
+				"power": 0,
+				"description": "{Dark Touch}\nDispels negative Light spells from an allied stack; for the next 3 rounds, each enemy it hits takes extra Dark damage of “1 per creature”. Once per round; does not end the turn."
+			}
+		},
+		"flags": {
+			"nonMagical": true,
+			"positive": true,
+			"special": true
+		},
+		"targetCondition": {
+			"noneOf": {
+				"bonus.SIEGE_WEAPON": "absolute"
+			}
+		},
+		"sounds": {
+			"cast": "h7/warfare/Namtaru_Ability2Start.ogg"
+		},
+		"canCastWithoutSkip": true
+	}
+}

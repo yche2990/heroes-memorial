@@ -1,0 +1,988 @@
+{
+	"h7NecropolisNamtaru": {
+		"name": {
+			"singular": "Namtaru",
+			"plural": "Namtaru"
+		},
+		"description": "Namtaru are servants of Asha the Spider Mother, half woman and half spider. They shoot bolts of darkness and can also empower allies with darkness.\n\nH7 Memorial: in the H7 original this is only a Warfare Unit; here it is a regular creature, with stats based on a similar unit (the Fate Spinner). It cannot be recruited in towns and appears only as a random wandering monster.",
+		"faction": "necropolis",
+		"level": 7,
+		"cost": {
+			"gold": 2170,
+			"mercury": 1
+		},
+		"speed": 8,
+		"hitPoints": 164,
+		"attack": 17,
+		"defense": 18,
+		"damage": {
+			"min": 37,
+			"max": 41
+		},
+		"growth": 1,
+		"aiValue": 5308,
+		"fightValue": 4300,
+		"advMapAmount": {
+			"min": 1,
+			"max": 3
+		},
+		"doubleWide": true,
+		"abilities": {
+			"undead": {
+				"type": "UNDEAD",
+				"description": "{Undead}\nNo Morale; poison/Mind/fear immune; +25% Light"
+			},
+			"lightVulnerability": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "01lightSchool",
+				"val": -25,
+				"hidden": true
+			},
+			"h7NecroRaise": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7NecroRaise",
+				"hidden": true
+			},
+			"h7NecroRaiseInfo": {
+				"type": "H7_NECRO_RAISE_H7C"
+			},
+			"shooter": {
+				"type": "SHOOTER"
+			},
+			"cast": {
+				"type": "SPELLCASTER",
+				"subtype": "heroes-memorial.h7:h7wfDarkTouchC",
+				"val": 0,
+				"icon": "h7/abilities/h7wfDarkTouch",
+				"description": "{Dark Touch}\nAllies add Dark dmg 3 rounds; can still shoot."
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 999,
+				"hidden": true
+			},
+			"noSpellcastByDefault": {
+				"type": "NO_SPELLCAST_BY_DEFAULT",
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h7/warfare/Namtaru/battle.json",
+			"map": "h7/warfare/Namtaru/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/warfare/Namtaru/map/atkL.png",
+			"mapAttackFromRight": "h7/warfare/Namtaru/map/atkR.png",
+			"iconLarge": "h7/warfare/Namtaru/cr_iconLarge.png",
+			"iconSmall": "h7/warfare/Namtaru/cr_iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"frameAngles": [
+					90,
+					60,
+					45,
+					30,
+					0,
+					-30,
+					-45,
+					-60,
+					-90
+				],
+				"offset": {
+					"upperX": 66,
+					"upperY": -96,
+					"middleX": 94,
+					"middleY": -69,
+					"lowerX": 34,
+					"lowerY": -43
+				},
+				"attackClimaxFrame": 6,
+				"projectile": "h7/warfare/projectiles/A_Projectile_Necropolis_Namtaru.json"
+			}
+		},
+		"sound": {
+			"shoot": "h7/warfare/Namtaru_Ability1.ogg",
+			"attack": "h7/warfare/Namtaru_Ability2Start.ogg",
+			"wince": "h7/warfare/Namtaru_Hit1.ogg",
+			"killed": "h7/warfare/Namtaru_Die.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					10,
+					15,
+					20,
+					25,
+					30
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_RETALIATION"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_WALL_PENALTY",
+					"description": "{Siege Shooter}\nNo damage loss when shooting over walls"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_DISTANCE_PENALTY",
+					"description": "{Sharpshooter}\nNo penalty for long-range shots"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "SHOTS",
+					"description": "{Ammunition}\nMore shots"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			}
+		],
+		"shots": 24
+	},
+	"h7StrongholdDreamwalker": {
+		"name": {
+			"singular": "Dreamwalker",
+			"plural": "Dreamwalkers"
+		},
+		"description": "Dreamwalkers are the shamans of the Stronghold. They walk in dreams, can hurl the power of the earth, and can heal their companions.\n\nH7 Memorial: in the H7 original this is only a warfare unit; here it is a regular creature, with stats based on a similar creature (Dreamwalker). It cannot be recruited in towns and only appears as a random neutral stack.",
+		"faction": "stronghold",
+		"level": 4,
+		"cost": {
+			"gold": 245
+		},
+		"speed": 5,
+		"hitPoints": 34,
+		"attack": 9,
+		"defense": 8,
+		"damage": {
+			"min": 6,
+			"max": 7
+		},
+		"growth": 5,
+		"aiValue": 536,
+		"fightValue": 480,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"doubleWide": false,
+		"abilities": {
+			"h7BloodRaged": {
+				"type": "H7_BLOODRAGE_H7C",
+				"val": 1,
+				"description": "{Blood Rage}\nHero: +6 Attack; -2 per round, wait, defend"
+			},
+			"h7BloodRageLv": {
+				"type": "H7_RAGE_LV_H7C",
+				"val": 1,
+				"hidden": true,
+				"propagator": "HERO",
+				"stacking": "h7BloodRageLv",
+				"updater": {
+					"type": "TIMES_HERO_LEVEL",
+					"stepSize": 1
+				}
+			},
+			"h7BloodRageWatch": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7BloodRage",
+				"hidden": true,
+				"stacking": "h7BloodRageWatch"
+			},
+			"shooter": {
+				"type": "SHOOTER"
+			},
+			"cast": {
+				"type": "SPELLCASTER",
+				"subtype": "heroes-memorial.h7:h7wfShamanHealC",
+				"val": 0,
+				"icon": "h7/abilities/h7wfShamanHeal",
+				"description": "{Shaman Healing}\nHeals an ally 8×count HP; may shoot after."
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 999,
+				"hidden": true
+			},
+			"noSpellcastByDefault": {
+				"type": "NO_SPELLCAST_BY_DEFAULT",
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h7/warfare/Dreamwalker/battle.json",
+			"map": "h7/warfare/Dreamwalker/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/warfare/Dreamwalker/map/atkL.png",
+			"mapAttackFromRight": "h7/warfare/Dreamwalker/map/atkR.png",
+			"iconLarge": "h7/warfare/Dreamwalker/cr_iconLarge.png",
+			"iconSmall": "h7/warfare/Dreamwalker/cr_iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"frameAngles": [
+					90,
+					60,
+					45,
+					30,
+					0,
+					-30,
+					-45,
+					-60,
+					-90
+				],
+				"offset": {
+					"upperX": 17,
+					"upperY": -134,
+					"middleX": -11,
+					"middleY": -132,
+					"lowerX": -32,
+					"lowerY": -141
+				},
+				"attackClimaxFrame": 6,
+				"projectile": "h7/warfare/projectiles/A_Projectile_Stronghold_Dreamcatcher.json"
+			}
+		},
+		"sound": {
+			"shoot": "h7/warfare/building_dreamcatcher_attack.ogg",
+			"wince": "h7/warfare/building_dreamcatcher_hit.ogg",
+			"killed": "h7/warfare/building_dreamcatcher_die.ogg",
+			"attack": "h7/warfare/building_dreamcatcher_attack.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.attack"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					5,
+					6,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.defence"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE"
+				},
+				"values": [
+					0,
+					0,
+					5,
+					5,
+					10,
+					10,
+					15,
+					15,
+					20,
+					25
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_WALL_PENALTY",
+					"description": "{Siege Shooter}\nNo damage loss when shooting over walls"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_DISTANCE_PENALTY",
+					"description": "{Sharpshooter}\nNo penalty for long-range shots"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "SHOTS",
+					"description": "{Ammunition}\nMore shots"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			}
+		],
+		"shots": 15
+	},
+	"h7SylvanMotherTreant": {
+		"name": {
+			"singular": "Mother Treant",
+			"plural": "Mother Treants"
+		},
+		"description": "The Mother Treant is one of the oldest Treants of the forest, constantly reviving the life around her.\n\nH7 Memorial: in the H7 original this is only a warfare unit; here it is a regular creature, with stats based on a similar creature (Treant). It cannot be recruited in towns and only appears as a random neutral stack.",
+		"faction": "rampart",
+		"level": 7,
+		"cost": {
+			"gold": 2590,
+			"gems": 1
+		},
+		"speed": 5,
+		"hitPoints": 182,
+		"attack": 15,
+		"defense": 25,
+		"damage": {
+			"min": 25,
+			"max": 35
+		},
+		"growth": 1,
+		"aiValue": 4777,
+		"fightValue": 3667,
+		"advMapAmount": {
+			"min": 1,
+			"max": 3
+		},
+		"doubleWide": true,
+		"abilities": {
+			"cast": {
+				"type": "SPELLCASTER",
+				"subtype": "heroes-memorial.h7:h7wfRenewalC",
+				"val": 0,
+				"icon": "h7/abilities/h7wfRenewal",
+				"description": "{Renewal}\nAlly heals 30×count HP per round, 3 rounds."
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 999,
+				"hidden": true
+			},
+			"noSpellcastByDefault": {
+				"type": "NO_SPELLCAST_BY_DEFAULT",
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h7/warfare/MotherTreant/battle.json",
+			"map": "h7/warfare/MotherTreant/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/warfare/MotherTreant/map/atkL.png",
+			"mapAttackFromRight": "h7/warfare/MotherTreant/map/atkR.png",
+			"iconLarge": "h7/warfare/MotherTreant/cr_iconLarge.png",
+			"iconSmall": "h7/warfare/MotherTreant/cr_iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h7/warfare/building_mother_treant_attack.ogg",
+			"wince": "h7/warfare/building_mother_treant_hit.ogg",
+			"killed": "h7/warfare/building_mother_treant_die.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			}
+		]
+	},
+	"h7DungeonFaceless": {
+		"name": {
+			"singular": "Faceless",
+			"plural": "Faceless"
+		},
+		"description": "The Faceless are mysterious beings that walk in the shadows and can wrap their companions in a deadly Cloak of Death.\n\nH7 Memorial: in the H7 original this is only a Warfare Unit; here it is a regular creature, with stats based on a similar unit (the Faceless). It cannot be recruited in towns and appears only as a random wandering monster.",
+		"faction": "dungeon",
+		"level": 5,
+		"cost": {
+			"gold": 435
+		},
+		"speed": 6,
+		"hitPoints": 36,
+		"attack": 12,
+		"defense": 10,
+		"damage": {
+			"min": 12,
+			"max": 13
+		},
+		"growth": 3,
+		"aiValue": 775,
+		"fightValue": 720,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"doubleWide": true,
+		"abilities": {
+			"cast": {
+				"type": "SPELLCASTER",
+				"subtype": "heroes-memorial.h7:h7wfCloakC",
+				"val": 0,
+				"icon": "h7/abilities/h7wfDeathCloak",
+				"description": "{Cloak of Death}\nMelee attackers take 15×stack size Dark dmg."
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 999,
+				"hidden": true
+			},
+			"noSpellcastByDefault": {
+				"type": "NO_SPELLCAST_BY_DEFAULT",
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h7/warfare/Faceless/battle.json",
+			"map": "h7/warfare/Faceless/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/warfare/Faceless/map/atkL.png",
+			"mapAttackFromRight": "h7/warfare/Faceless/map/atkR.png",
+			"iconLarge": "h7/warfare/Faceless/cr_iconLarge.png",
+			"iconSmall": "h7/warfare/Faceless/cr_iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h7/warfare/building_faceless_ability.ogg",
+			"wince": "h7/warfare/building_faceless_hit.ogg",
+			"killed": "h7/warfare/building_faceless_die.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.attack"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					3,
+					4,
+					5,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "primarySkill.defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					3,
+					4,
+					4,
+					6,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					2,
+					3,
+					3,
+					4,
+					5,
+					6,
+					6,
+					7
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					7
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE"
+				},
+				"values": [
+					0,
+					0,
+					5,
+					5,
+					10,
+					10,
+					15,
+					15,
+					20,
+					25
+				]
+			}
+		]
+	}
+}

@@ -1,0 +1,28 @@
+{
+	"heroes-memorial.h7:h7WarfareSmithy": {
+		"types": {
+			"h7WarfareSmithy": {
+				"rewards": {
+					"modify@4": {
+						"limiter": {
+							"heroClasses": {
+								"append": "tears-of-ashan.toa-cathedral-town:inquisitorClass"
+							}
+						}
+					},
+					"modify@11": {
+						"limiter": {
+							"noneOf": {
+								"modify@1": {
+									"heroClasses": {
+										"append": "tears-of-ashan.toa-cathedral-town:inquisitorClass"
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

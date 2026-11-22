@@ -1,0 +1,675 @@
+{
+	"h7WarfareSmithy": {
+		"name": "H7 Memorial Blacksmith",
+		"handler": "configurable",
+		"types": {
+			"h7WarfareSmithy": {
+				"name": "H7 Memorial Blacksmith",
+				"aiValue": 0,
+				"rmg": {
+					"value": 15000,
+					"rarity": 1000,
+					"zoneLimit": 1,
+					"mapLimit": 3
+				},
+				"sounds": {
+					"ambient": [
+						"LOOPFACT"
+					],
+					"visit": [
+						"MILITARY"
+					]
+				},
+				"description": "{H7 Memorial Blacksmith}\n\nA blacksmith in memory of H7. It is guarded by a great army of level 1-7 creatures from one H7 faction, along with that faction's level 5 Warfare Units. After defeating the guards, a hero with at least Basic Artillery, Engineering or First Aid can claim the marker for the matching slot here: from then on, at the start of combat, the hero's original war machines are replaced by H7 Warfare Units of this faction (Artillery: Ballista and Ammo Cart slots; Engineering: Catapult slot; First Aid: First Aid Tent slot).\nLevel: 2 with Basic, 3 with Advanced, 4 with Expert in the matching skill; 5 with Artillery, Engineering and First Aid all together (the Undead King's Reaper Arts counts as having all three). Come back to claim more after learning a new skill.",
+				"visitMode": "unlimited",
+				"selectMode": "selectAll",
+				"onEmptyMessage": "{H7 Memorial Blacksmith}\n\nYou need at least Basic Artillery, Engineering or First Aid to claim a Warfare Unit marker here.",
+				"guardsLayout": "creatureBankWide",
+				"onGuardedMessage": "{H7 Memorial Blacksmith}\n\nA great army of one of the H7 factions guards the blacksmith, along with that faction's level 5 warfare units. Will you attack?",
+				"rewards": [
+					{
+						"limiter": {
+							"secondary": {
+								"artillery": 1
+							}
+						},
+						"bonuses": [
+							{
+								"type": "heroes-memorial.h7:H7_WARFARE_MARK_H7C",
+								"stacking": "h7WfSlot|ballista",
+								"val": 1,
+								"duration": "PERMANENT",
+								"hidden": true
+							},
+							{
+								"type": "heroes-memorial.h7:H7_WARFARE_MARK_H7C",
+								"stacking": "h7WfSlot|cart",
+								"val": 1,
+								"duration": "PERMANENT",
+								"hidden": true
+							}
+						],
+						"message": "{H7 Memorial Blacksmith}\nYou have Artillery: you receive the Ballista slot and Ammo Cart slot tokens."
+					},
+					{
+						"limiter": {
+							"secondary": {
+								"ballistics": 1
+							}
+						},
+						"bonuses": [
+							{
+								"type": "heroes-memorial.h7:H7_WARFARE_MARK_H7C",
+								"stacking": "h7WfSlot|catapult",
+								"val": 1,
+								"duration": "PERMANENT",
+								"hidden": true
+							}
+						],
+						"message": "{H7 Memorial Blacksmith}\nYou have Engineering: you receive the Catapult slot token."
+					},
+					{
+						"limiter": {
+							"secondary": {
+								"firstAid": 1
+							}
+						},
+						"bonuses": [
+							{
+								"type": "heroes-memorial.h7:H7_WARFARE_MARK_H7C",
+								"stacking": "h7WfSlot|tent",
+								"val": 1,
+								"duration": "PERMANENT",
+								"hidden": true
+							}
+						],
+						"message": "{H7 Memorial Blacksmith}\nYou have First Aid: you receive the First Aid Tent slot token."
+					},
+					{
+						"limiter": {
+							"heroClasses": [
+								"core:knight",
+								"core:cleric"
+							],
+							"anyOf": [
+								{
+									"secondary": {
+										"artillery": 1
+									}
+								},
+								{
+									"secondary": {
+										"ballistics": 1
+									}
+								},
+								{
+									"secondary": {
+										"firstAid": 1
+									}
+								}
+							]
+						},
+						"bonuses": [
+							{
+								"type": "heroes-memorial.h7:H7_WARFARE_MARK_H7C",
+								"stacking": "h7WfFaction",
+								"val": 1,
+								"duration": "PERMANENT",
+								"hidden": true
+							}
+						],
+						"message": "{H7 Memorial Blacksmith}\nYour hero is of the Haven: at the start of combat you switch to the Haven's H7 Warfare Units — Haven Ballista (Ballista slot), Healing Sister (Tent slot), Haven Catapult (Catapult slot)."
+					},
+					{
+						"limiter": {
+							"heroClasses": [
+								"core:alchemist",
+								"core:wizard"
+							],
+							"anyOf": [
+								{
+									"secondary": {
+										"artillery": 1
+									}
+								},
+								{
+									"secondary": {
+										"ballistics": 1
+									}
+								},
+								{
+									"secondary": {
+										"firstAid": 1
+									}
+								}
+							]
+						},
+						"bonuses": [
+							{
+								"type": "heroes-memorial.h7:H7_WARFARE_MARK_H7C",
+								"stacking": "h7WfFaction",
+								"val": 2,
+								"duration": "PERMANENT",
+								"hidden": true
+							}
+						],
+						"message": "{H7 Memorial Blacksmith}\nYour hero is of the Academy: at the start of combat you switch to the Academy's H7 Warfare Units — Small Pyramid (Ballista slot), Healing Tent (Tent slot), Great Pyramid (Catapult slot)."
+					},
+					{
+						"limiter": {
+							"heroClasses": [
+								"core:deathknight",
+								"core:necromancer"
+							],
+							"anyOf": [
+								{
+									"secondary": {
+										"artillery": 1
+									}
+								},
+								{
+									"secondary": {
+										"ballistics": 1
+									}
+								},
+								{
+									"secondary": {
+										"firstAid": 1
+									}
+								}
+							]
+						},
+						"bonuses": [
+							{
+								"type": "heroes-memorial.h7:H7_WARFARE_MARK_H7C",
+								"stacking": "h7WfFaction",
+								"val": 3,
+								"duration": "PERMANENT",
+								"hidden": true
+							}
+						],
+						"message": "{H7 Memorial Blacksmith}\nYour hero is of the Necropolis: at the start of combat you switch to the Necropolis's H7 Warfare Units — Namtaru (Ammo Cart slot), Spitting Spider (Catapult slot) (the Ballista and Tent slots keep the original war machines)."
+					},
+					{
+						"limiter": {
+							"heroClasses": [
+								"core:barbarian",
+								"core:battlemage"
+							],
+							"anyOf": [
+								{
+									"secondary": {
+										"artillery": 1
+									}
+								},
+								{
+									"secondary": {
+										"ballistics": 1
+									}
+								},
+								{
+									"secondary": {
+										"firstAid": 1
+									}
+								}
+							]
+						},
+						"bonuses": [
+							{
+								"type": "heroes-memorial.h7:H7_WARFARE_MARK_H7C",
+								"stacking": "h7WfFaction",
+								"val": 4,
+								"duration": "PERMANENT",
+								"hidden": true
+							}
+						],
+						"message": "{H7 Memorial Blacksmith}\nYour hero is of the Stronghold: at the start of combat you switch to the Stronghold's H7 Warfare Units — Dreamwalker (Ammo Cart slot), Tamed Cyclops (Catapult slot) (the Ballista and Tent slots keep the original war machines)."
+					},
+					{
+						"limiter": {
+							"heroClasses": [
+								"core:ranger",
+								"core:druid"
+							],
+							"anyOf": [
+								{
+									"secondary": {
+										"artillery": 1
+									}
+								},
+								{
+									"secondary": {
+										"ballistics": 1
+									}
+								},
+								{
+									"secondary": {
+										"firstAid": 1
+									}
+								}
+							]
+						},
+						"bonuses": [
+							{
+								"type": "heroes-memorial.h7:H7_WARFARE_MARK_H7C",
+								"stacking": "h7WfFaction",
+								"val": 5,
+								"duration": "PERMANENT",
+								"hidden": true
+							}
+						],
+						"message": "{H7 Memorial Blacksmith}\nYour hero is of the Sylvan: at the start of combat you switch to the Sylvan's H7 Warfare Units — Sylvan Ballista (Ballista slot), Mother Treant (Tent slot), Greater Earth Elemental (Catapult slot)."
+					},
+					{
+						"limiter": {
+							"heroClasses": [
+								"core:overlord",
+								"core:warlock"
+							],
+							"anyOf": [
+								{
+									"secondary": {
+										"artillery": 1
+									}
+								},
+								{
+									"secondary": {
+										"ballistics": 1
+									}
+								},
+								{
+									"secondary": {
+										"firstAid": 1
+									}
+								}
+							]
+						},
+						"bonuses": [
+							{
+								"type": "heroes-memorial.h7:H7_WARFARE_MARK_H7C",
+								"stacking": "h7WfFaction",
+								"val": 6,
+								"duration": "PERMANENT",
+								"hidden": true
+							}
+						],
+						"message": "{H7 Memorial Blacksmith}\nYour hero is of the Dungeon: at the start of combat you switch to the Dungeon's H7 Warfare Units — Shadow Lurker (Ballista slot), Faceless (Tent slot), Cave Wyvern (Catapult slot)."
+					},
+					{
+						"limiter": {
+							"heroClasses": [
+								"highlands-town:bwarlord",
+								"highlands-town:bpyromancer"
+							],
+							"anyOf": [
+								{
+									"secondary": {
+										"artillery": 1
+									}
+								},
+								{
+									"secondary": {
+										"ballistics": 1
+									}
+								},
+								{
+									"secondary": {
+										"firstAid": 1
+									}
+								}
+							]
+						},
+						"bonuses": [
+							{
+								"type": "heroes-memorial.h7:H7_WARFARE_MARK_H7C",
+								"stacking": "h7WfFaction",
+								"val": 7,
+								"duration": "PERMANENT",
+								"hidden": true
+							}
+						],
+						"message": "{H7 Memorial Blacksmith}\nYour hero is of the Fortress: at the start of combat you switch to the Fortress's H7 Warfare Units — Dwarven Ballista (Ballista slot), Rune Stone (Tent slot), Fire Cannon (Catapult slot)."
+					},
+					{
+						"limiter": {
+							"noneOf": [
+								{
+									"heroClasses": [
+										"core:knight",
+										"core:cleric",
+										"core:alchemist",
+										"core:wizard",
+										"core:deathknight",
+										"core:necromancer",
+										"core:barbarian",
+										"core:battlemage",
+										"core:ranger",
+										"core:druid",
+										"core:overlord",
+										"core:warlock",
+										"highlands-town:bwarlord",
+										"highlands-town:bpyromancer"
+									]
+								}
+							],
+							"anyOf": [
+								{
+									"secondary": {
+										"artillery": 1
+									}
+								},
+								{
+									"secondary": {
+										"ballistics": 1
+									}
+								},
+								{
+									"secondary": {
+										"firstAid": 1
+									}
+								}
+							]
+						},
+						"message": "{H7 Memorial Blacksmith}\nOnly heroes of the seven H7 factions (Haven, Academy, Necropolis, Stronghold, Sylvan, Dungeon, Fortress) can swap in their own faction's warfare units, and your hero belongs to none of these seven."
+					},
+					{
+						"appearChance": {
+							"dice": 1,
+							"min": 0,
+							"max": 13
+						},
+						"limiter": {
+							"heroLevel": 999
+						},
+						"guards": [
+							{
+								"type": "heroes-memorial.h7:h7HavenSentinel",
+								"amount": 55
+							},
+							{
+								"type": "heroes-memorial.h7:h7HavenCrossbowman",
+								"amount": 32
+							},
+							{
+								"type": "heroes-memorial.h7:h7HavenDireWolf",
+								"amount": 28
+							},
+							{
+								"type": "heroes-memorial.h7:h7HavenChaplain",
+								"amount": 16
+							},
+							{
+								"type": "heroes-memorial.h7:h7HavenGuardian",
+								"amount": 12
+							},
+							{
+								"type": "heroes-memorial.h7:h7HavenCavalier",
+								"amount": 8
+							},
+							{
+								"type": "heroes-memorial.h7:h7HavenLandsknecht",
+								"amount": 4
+							}
+						]
+					},
+					{
+						"appearChance": {
+							"dice": 1,
+							"min": 14,
+							"max": 28
+						},
+						"limiter": {
+							"heroLevel": 999
+						},
+						"guards": [
+							{
+								"type": "heroes-memorial.h7:h7AcademyGargoyle",
+								"amount": 46
+							},
+							{
+								"type": "heroes-memorial.h7:h7AcademyCabir",
+								"amount": 23
+							},
+							{
+								"type": "heroes-memorial.h7:h7AcademyGolem",
+								"amount": 23
+							},
+							{
+								"type": "heroes-memorial.h7:h7AcademyApprentice",
+								"amount": 12
+							},
+							{
+								"type": "heroes-memorial.h7:h7AcademyDjinn",
+								"amount": 8
+							},
+							{
+								"type": "heroes-memorial.h7:h7AcademyRakshasa",
+								"amount": 8
+							},
+							{
+								"type": "heroes-memorial.h7:h7AcademyArcaneEagle",
+								"amount": 4
+							}
+						]
+					},
+					{
+						"appearChance": {
+							"dice": 1,
+							"min": 29,
+							"max": 42
+						},
+						"limiter": {
+							"heroLevel": 999
+						},
+						"guards": [
+							{
+								"type": "heroes-memorial.h7:h7NecropolisSkeleton",
+								"amount": 65
+							},
+							{
+								"type": "heroes-memorial.h7:h7NecropolisGhost",
+								"amount": 30
+							},
+							{
+								"type": "heroes-memorial.h7:h7NecropolisEbonSpider",
+								"amount": 27
+							},
+							{
+								"type": "heroes-memorial.h7:h7NecropolisLamasu",
+								"amount": 15
+							},
+							{
+								"type": "heroes-memorial.h7:h7NecropolisLich",
+								"amount": 11
+							},
+							{
+								"type": "heroes-memorial.h7:h7NecropolisVampire",
+								"amount": 8
+							},
+							{
+								"type": "heroes-memorial.h7:h7NecropolisBoneDragon",
+								"amount": 4
+							}
+						]
+					},
+					{
+						"appearChance": {
+							"dice": 1,
+							"min": 43,
+							"max": 56
+						},
+						"limiter": {
+							"heroLevel": 999
+						},
+						"guards": [
+							{
+								"type": "heroes-memorial.h7:h7StrongholdGnoll",
+								"amount": 67
+							},
+							{
+								"type": "heroes-memorial.h7:h7StrongholdHarpy",
+								"amount": 31
+							},
+							{
+								"type": "heroes-memorial.h7:h7StrongholdBrute",
+								"amount": 31
+							},
+							{
+								"type": "heroes-memorial.h7:h7StrongholdCentaur",
+								"amount": 20
+							},
+							{
+								"type": "heroes-memorial.h7:h7StrongholdSandWyvern",
+								"amount": 16
+							},
+							{
+								"type": "heroes-memorial.h7:h7StrongholdBasiliskRider",
+								"amount": 8
+							},
+							{
+								"type": "heroes-memorial.h7:h7StrongholdBehemoth",
+								"amount": 4
+							}
+						]
+					},
+					{
+						"appearChance": {
+							"dice": 1,
+							"min": 57,
+							"max": 70
+						},
+						"limiter": {
+							"heroLevel": 999
+						},
+						"guards": [
+							{
+								"type": "heroes-memorial.h7:h7SylvanPixie",
+								"amount": 51
+							},
+							{
+								"type": "heroes-memorial.h7:h7SylvanDryad",
+								"amount": 31
+							},
+							{
+								"type": "heroes-memorial.h7:h7SylvanHunter",
+								"amount": 31
+							},
+							{
+								"type": "heroes-memorial.h7:h7SylvanDruid",
+								"amount": 20
+							},
+							{
+								"type": "heroes-memorial.h7:h7SylvanBladeDancer",
+								"amount": 12
+							},
+							{
+								"type": "heroes-memorial.h7:h7SylvanMoonDoe",
+								"amount": 8
+							},
+							{
+								"type": "heroes-memorial.h7:h7SylvanGreenDragon",
+								"amount": 4
+							}
+						]
+					},
+					{
+						"appearChance": {
+							"dice": 1,
+							"min": 71,
+							"max": 85
+						},
+						"limiter": {
+							"heroLevel": 999
+						},
+						"guards": [
+							{
+								"type": "heroes-memorial.h7:h7DungeonStalker",
+								"amount": 49
+							},
+							{
+								"type": "heroes-memorial.h7:h7DungeonAssassin",
+								"amount": 30
+							},
+							{
+								"type": "heroes-memorial.h7:h7DungeonTroglodyte",
+								"amount": 23
+							},
+							{
+								"type": "heroes-memorial.h7:h7DungeonMedusa",
+								"amount": 15
+							},
+							{
+								"type": "heroes-memorial.h7:h7DungeonStrider",
+								"amount": 11
+							},
+							{
+								"type": "heroes-memorial.h7:h7DungeonMinotaur",
+								"amount": 8
+							},
+							{
+								"type": "heroes-memorial.h7:h7DungeonCaveHydra",
+								"amount": 4
+							}
+						]
+					},
+					{
+						"appearChance": {
+							"dice": 1,
+							"min": 86,
+							"max": 100
+						},
+						"limiter": {
+							"heroLevel": 999
+						},
+						"guards": [
+							{
+								"type": "heroes-memorial.h7:h7FortressKoboldScout",
+								"amount": 62
+							},
+							{
+								"type": "heroes-memorial.h7:h7FortressDefender",
+								"amount": 35
+							},
+							{
+								"type": "heroes-memorial.h7:h7FortressBear",
+								"amount": 19
+							},
+							{
+								"type": "heroes-memorial.h7:h7FortressDis",
+								"amount": 15
+							},
+							{
+								"type": "heroes-memorial.h7:h7FortressLavaElemental",
+								"amount": 12
+							},
+							{
+								"type": "heroes-memorial.h7:h7FortressRunePriest",
+								"amount": 8
+							},
+							{
+								"type": "heroes-memorial.h7:h7FortressFireGiant",
+								"amount": 4
+							}
+						]
+					}
+				],
+				"templates": {
+					"h7WarfareSmithy": {
+						"animation": "h7/objects/h7WarfareSmithy/map.json",
+						"editorAnimation": "h7/objects/h7WarfareSmithy/map.json",
+						"mask": [
+							"VVV",
+							"VBB",
+							"VAB"
+						],
+						"visitableFrom": [
+							"---",
+							"+-+",
+							"+++"
+						]
+					}
+				}
+			}
+		}
+	}
+}

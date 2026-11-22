@@ -1,0 +1,70 @@
+{
+	"name": "Heroes VII Memorial",
+	"description": "Heroes VII creatures, spells and runes, warfare units with the Memorial Blacksmith, and the Memorial Magic Academies, Troop Exchanges and Sanctum.",
+	"chinese": {
+		"name": "英雄无敌7纪念版",
+		"translations": [
+			"config/translations/chinese.json"
+		],
+		"description": "英雄无敌7的兵种、魔法和符文，军备单位和纪念铁匠铺，以及纪念魔法学院、换兵所和纪念圣殿。"
+	},
+	"version": "0.1.0",
+	"author": "yche2990",
+	"modType": "Creatures",
+	"compatibility": {
+		"min": "1.8.0"
+	},
+	"depends": [
+		"highlands-town",
+		"tears-of-ashan"
+	],
+	"creatures": [
+		"config/h7/creatures/Haven.json",
+		"config/h7/creatures/Academy.json",
+		"config/h7/creatures/Necropolis.json",
+		"config/h7/creatures/Dungeon.json",
+		"config/h7/creatures/Fortress.json",
+		"config/h7/creatures/Stronghold.json",
+		"config/h7/creatures/Sylvan.json",
+		"config/h7/creatures/Neutral.json",
+		"config/h7/creatures/Warfare.json",
+		"config/h7/creatures/WarfareCreatures.json"
+	],
+	"spells": [
+		"config/h7/spells.json",
+		"config/h7/warfareSpells.json"
+	],
+	"scripts": [
+		"config/h7/scripts.json",
+		"config/h7/warfareScripts.json"
+	],
+	"skills": [
+		"config/h7/warfareSkills.json"
+	],
+	"bonuses": [
+		"config/h7/bonuses.json",
+		"config/h7/warfareBonuses.json"
+	],
+	"artifacts": [
+		"config/h7/artifacts.json"
+	],
+	"factions": [
+		"config/h7/runeShop.json"
+	],
+	"rumors": [
+		"config/rumors/h7creaturesRumors.json",
+		"config/rumors/objectpackh7memorialRumors.json"
+	],
+	"objects": [
+		"config/h7memorial/swap.json",
+		"config/h7memorial/magic.json",
+		"config/h7sanctum/sanctum.json",
+		"config/h7warfare/smithy.json",
+		"config/memorial/elementalConflux.json"
+	],
+	"english": {
+		"translations": [
+			"config/translations/english.json"
+		]
+	}
+}

@@ -1,0 +1,213 @@
+{
+	"h7WarfareSwap": {
+		"implements": "combatEvent",
+		"script": "combat/h7WarfareSwap",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {},
+			"additionalProperties": false
+		},
+		"description": ""
+	},
+	"h7WarfareLink": {
+		"implements": "combatEvent",
+		"script": "combat/h7WarfareLink",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {},
+			"additionalProperties": false
+		},
+		"description": ""
+	},
+	"h7WarfareGuard": {
+		"implements": "combatEvent",
+		"script": "combat/h7WarfareGuard",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"faction": {
+					"type": "string"
+				},
+				"army": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": ""
+	},
+	"h7WarfareHarrowShot": {
+		"implements": "combatEvent",
+		"script": "combat/h7WarfareHarrowShot",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {},
+			"additionalProperties": false
+		},
+		"description": "{Horrid Visions}\nFoes shot take 40% of the damage as Dark for 2 rounds."
+	},
+	"h7WarfareHarrow": {
+		"implements": "combatEvent",
+		"script": "combat/h7WarfareHarrow",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {},
+			"additionalProperties": false
+		},
+		"description": "{Horrid Visions}\nTakes ${val} Dark damage at the start of each round."
+	},
+	"h7WarfareRenewal": {
+		"implements": "combatEvent",
+		"script": "combat/h7WarfareRenewal",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {},
+			"additionalProperties": false
+		},
+		"description": "{Renewal}\nRestores ${val} HP at the start of each round."
+	},
+	"h7WarfareCloak": {
+		"implements": "combatEvent",
+		"script": "combat/h7WarfareCloak",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {},
+			"additionalProperties": false
+		},
+		"description": "{Cloak of Death}\nMelee attackers first take ${val} Dark damage."
+	},
+	"h7WarfareDarkTouch": {
+		"implements": "combatEvent",
+		"script": "combat/h7WarfareDarkTouch",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {},
+			"additionalProperties": false
+		},
+		"description": "{Dark Touch}\nAttacks deal an extra ${val} Dark damage per creature."
+	},
+	"h7WarfareFastReload": {
+		"implements": "combatEvent",
+		"script": "combat/h7WarfareFastReload",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {},
+			"additionalProperties": false
+		},
+		"description": "{Fast Reload}\nAfter hitting a marked foe, shoots it again at once."
+	},
+	"h7wfOnce": {
+		"implements": "spellEffect",
+		"script": "spells/h7wfOnce",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"key": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"h7wfRenewal": {
+		"implements": "spellEffect",
+		"script": "spells/h7wfRenewal",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"per": {
+					"type": "number"
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"h7wfCloak": {
+		"implements": "spellEffect",
+		"script": "spells/h7wfCloak",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"per": {
+					"type": "number"
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"h7wfDarkTouch": {
+		"implements": "spellEffect",
+		"script": "spells/h7wfDarkTouch",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"per": {
+					"type": "number"
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"h7wfRuneHeal": {
+		"implements": "spellEffect",
+		"script": "spells/h7wfRuneHeal",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {}
+			},
+			"additionalProperties": false
+		}
+	},
+	"h7wfHeal": {
+		"implements": "spellEffect",
+		"script": "spells/h7wfHeal",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"per": {
+					"type": "number"
+				},
+				"animation": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		}
+	}
+}

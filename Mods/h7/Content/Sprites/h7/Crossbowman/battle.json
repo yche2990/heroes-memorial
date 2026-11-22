@@ -1,0 +1,267 @@
+{
+ "basepath": "h7/Crossbowman/battle/",
+ "sequences": [
+  {
+   "group": 0,
+   "frames": [
+    "move_01.png",
+    "move_02.png",
+    "move_03.png",
+    "move_04.png",
+    "move_05.png",
+    "move_06.png",
+    "move_07.png",
+    "move_08.png",
+    "move_09.png"
+   ]
+  },
+  {
+   "group": 1,
+   "frames": [
+    "mouseon_01.png",
+    "mouseon_02.png",
+    "mouseon_03.png",
+    "mouseon_04.png",
+    "mouseon_05.png",
+    "mouseon_06.png"
+   ]
+  },
+  {
+   "group": 2,
+   "frames": [
+    "stand_01.png",
+    "stand_02.png",
+    "stand_03.png",
+    "stand_04.png",
+    "stand_05.png",
+    "stand_06.png",
+    "stand_07.png",
+    "stand_08.png",
+    "stand_09.png",
+    "stand_10.png",
+    "stand_11.png",
+    "stand_12.png"
+   ]
+  },
+  {
+   "group": 3,
+   "frames": [
+    "hit_01.png",
+    "hit_02.png",
+    "hit_03.png",
+    "hit_04.png",
+    "hit_05.png",
+    "hit_06.png",
+    "hit_07.png",
+    "hit_08.png"
+   ]
+  },
+  {
+   "group": 4,
+   "frames": [
+    "defend_01.png",
+    "defend_02.png",
+    "defend_03.png",
+    "defend_04.png",
+    "defend_05.png",
+    "defend_06.png",
+    "defend_07.png",
+    "defend_08.png"
+   ]
+  },
+  {
+   "group": 5,
+   "frames": [
+    "death_01.png",
+    "death_02.png",
+    "death_03.png",
+    "death_04.png",
+    "death_05.png",
+    "death_06.png",
+    "death_07.png",
+    "death_08.png",
+    "death_09.png",
+    "death_10.png",
+    "death_11.png",
+    "death_12.png",
+    "death_13.png",
+    "death_14.png"
+   ]
+  },
+  {
+   "group": 7,
+   "frames": [
+    "turnL_01.png",
+    "turnL_02.png",
+    "turnL_03.png"
+   ]
+  },
+  {
+   "group": 8,
+   "frames": [
+    "turnR_01.png",
+    "turnR_02.png",
+    "turnR_03.png"
+   ]
+  },
+  {
+   "group": 11,
+   "frames": [
+    "attackUp_01.png",
+    "attackUp_02.png",
+    "attackUp_03.png",
+    "attackUp_04.png",
+    "attackUp_05.png",
+    "attackUp_06.png",
+    "attackUp_07.png",
+    "attackUp_08.png",
+    "attackUp_09.png",
+    "attackUp_10.png",
+    "attackUp_11.png",
+    "attackUp_12.png"
+   ]
+  },
+  {
+   "group": 12,
+   "frames": [
+    "attackFront_01.png",
+    "attackFront_02.png",
+    "attackFront_03.png",
+    "attackFront_04.png",
+    "attackFront_05.png",
+    "attackFront_06.png",
+    "attackFront_07.png",
+    "attackFront_08.png",
+    "attackFront_09.png",
+    "attackFront_10.png",
+    "attackFront_11.png",
+    "attackFront_12.png"
+   ]
+  },
+  {
+   "group": 13,
+   "frames": [
+    "attackDown_01.png",
+    "attackDown_02.png",
+    "attackDown_03.png",
+    "attackDown_04.png",
+    "attackDown_05.png",
+    "attackDown_06.png",
+    "attackDown_07.png",
+    "attackDown_08.png",
+    "attackDown_09.png",
+    "attackDown_10.png",
+    "attackDown_11.png",
+    "attackDown_12.png"
+   ]
+  },
+  {
+   "group": 14,
+   "frames": [
+    "shootUp_01.png",
+    "shootUp_02.png",
+    "shootUp_03.png",
+    "shootUp_04.png",
+    "shootUp_05.png",
+    "shootUp_06.png",
+    "shootUp_07.png",
+    "shootUp_08.png",
+    "shootUp_09.png",
+    "shootUp_10.png",
+    "shootUp_11.png",
+    "shootUp_12.png"
+   ]
+  },
+  {
+   "group": 15,
+   "frames": [
+    "shootFront_01.png",
+    "shootFront_02.png",
+    "shootFront_03.png",
+    "shootFront_04.png",
+    "shootFront_05.png",
+    "shootFront_06.png",
+    "shootFront_07.png",
+    "shootFront_08.png",
+    "shootFront_09.png",
+    "shootFront_10.png",
+    "shootFront_11.png",
+    "shootFront_12.png"
+   ]
+  },
+  {
+   "group": 16,
+   "frames": [
+    "shootDown_01.png",
+    "shootDown_02.png",
+    "shootDown_03.png",
+    "shootDown_04.png",
+    "shootDown_05.png",
+    "shootDown_06.png",
+    "shootDown_07.png",
+    "shootDown_08.png",
+    "shootDown_09.png",
+    "shootDown_10.png",
+    "shootDown_11.png",
+    "shootDown_12.png"
+   ]
+  },
+  {
+   "group": 17,
+   "frames": [
+    "specialUp_01.png",
+    "specialUp_02.png",
+    "specialUp_03.png",
+    "specialUp_04.png",
+    "specialUp_05.png",
+    "specialUp_06.png",
+    "specialUp_07.png",
+    "specialUp_08.png",
+    "specialUp_09.png",
+    "specialUp_10.png",
+    "specialUp_11.png",
+    "specialUp_12.png"
+   ]
+  },
+  {
+   "group": 18,
+   "frames": [
+    "specialFront_01.png",
+    "specialFront_02.png",
+    "specialFront_03.png",
+    "specialFront_04.png",
+    "specialFront_05.png",
+    "specialFront_06.png",
+    "specialFront_07.png",
+    "specialFront_08.png",
+    "specialFront_09.png",
+    "specialFront_10.png",
+    "specialFront_11.png",
+    "specialFront_12.png"
+   ]
+  },
+  {
+   "group": 19,
+   "frames": [
+    "specialDown_01.png",
+    "specialDown_02.png",
+    "specialDown_03.png",
+    "specialDown_04.png",
+    "specialDown_05.png",
+    "specialDown_06.png",
+    "specialDown_07.png",
+    "specialDown_08.png",
+    "specialDown_09.png",
+    "specialDown_10.png",
+    "specialDown_11.png",
+    "specialDown_12.png"
+   ]
+  },
+  {
+   "group": 22,
+   "frames": [
+    "dead_01.png"
+   ]
+  }
+ ]
+}

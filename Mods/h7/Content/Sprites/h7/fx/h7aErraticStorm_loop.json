@@ -1,0 +1,22 @@
+{
+	"basepath": "h7/fx/h7aErraticStorm/",
+	"sequences": [
+		{
+			"group": 0,
+			"frames": [
+				"21.png",
+				"21.png",
+				"22.png",
+				"22.png",
+				"23.png",
+				"23.png",
+				"24.png",
+				"24.png",
+				"23.png",
+				"23.png",
+				"22.png",
+				"22.png"
+			]
+		}
+	]
+}

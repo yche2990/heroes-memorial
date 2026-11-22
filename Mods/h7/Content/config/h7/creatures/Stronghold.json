@@ -1,0 +1,4071 @@
+{
+	"h7StrongholdAncientBehemoth": {
+		"name": {
+			"singular": "Ancient Behemoth",
+			"plural": "Ancient Behemoths"
+		},
+		"description": "Behemoths are highly social creatures. Young Behemoths usually serve as the hunters of the pack, while the elders, recognizable by their grey fur, take on the role of guards. For the poor souls who stray into a pack's territory, Ancient Behemoths are bigger, stronger and more cunning, with a surprising agility that belies their bulky appearance.\nEvery Behemoth pack is led by an old female, the matriarch. I suspect this is why they ally with the Desert Orcs, since both share a tradition of being led by females...",
+		"faction": "stronghold",
+		"level": 7,
+		"cost": {
+			"gold": 3365,
+			"sulfur": 1,
+			"mercury": 2
+		},
+		"speed": 15,
+		"hitPoints": 204,
+		"attack": 24,
+		"defense": 18,
+		"damage": {
+			"min": 40,
+			"max": 50
+		},
+		"doubleWide": true,
+		"fightValue": 5079,
+		"aiValue": 6616,
+		"growth": 1,
+		"advMapAmount": {
+			"min": 1,
+			"max": 3
+		},
+		"abilities": {
+			"piercingClaws": {
+				"type": "ENEMY_DEFENCE_REDUCTION",
+				"val": 50,
+				"description": "{Piercing Claws}\nIgnores half of the target's Defense."
+			},
+			"h7BloodRaged": {
+				"type": "H7_BLOODRAGE_H7C",
+				"val": 1,
+				"description": "{Blood Rage}\nHero: +6 Attack; -2 per round, wait, defend"
+			},
+			"h7BloodRageLv": {
+				"type": "H7_RAGE_LV_H7C",
+				"val": 1,
+				"hidden": true,
+				"propagator": "HERO",
+				"stacking": "h7BloodRageLv",
+				"updater": {
+					"type": "TIMES_HERO_LEVEL",
+					"stepSize": 1
+				}
+			},
+			"h7BloodRageWatch": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7BloodRage",
+				"hidden": true,
+				"stacking": "h7BloodRageWatch"
+			},
+			"cast_h7AbMightyPounce": {
+				"type": "SPELLCASTER",
+				"subtype": "h7AbMightyPounce",
+				"val": 0,
+				"icon": "h7/abilities/h7MightyPounce",
+				"description": "{Mighty Pounce}\n1/battle: leap 2× Speed, hit all adjacent foes"
+			},
+			"casts_h7AbMightyPounce": {
+				"type": "CASTS",
+				"val": 1
+			},
+			"noDefault_h7AbMightyPounce": {
+				"type": "NO_SPELLCAST_BY_DEFAULT",
+				"hidden": true
+			},
+			"h7SanctumTwin": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7SanctumTwin",
+				"hidden": true,
+				"description": "~",
+				"addInfo": {
+					"twin": "h7StrongholdEnragedCyclops",
+					"army": "h7StrongholdGnollHunter,h7StrongholdFury,h7StrongholdCrusher,h7StrongholdCentaurMarauder,h7StrongholdVenomousWyvern,h7StrongholdBasiliskLancer"
+				}
+			}
+		},
+		"graphics": {
+			"animation": "h7/AncientBehemoth/battle.json",
+			"map": "h7/AncientBehemoth/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/AncientBehemoth/map/atkL.png",
+			"mapAttackFromRight": "h7/AncientBehemoth/map/atkR.png",
+			"iconLarge": "h7/AncientBehemoth/iconLarge.png",
+			"iconSmall": "h7/AncientBehemoth/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h7/creature_behemoth_attack.ogg",
+			"defend": "h7/creature_behemoth_defend.ogg",
+			"wince": "h7/creature_behemoth_hit.ogg",
+			"killed": "h7/creature_behemoth_die.ogg",
+			"move": "h7/creature_behemoth_move.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "MIND_IMMUNITY",
+					"description": "{Steadfast Mind}\nImmune to Mind spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE",
+					"description": "{Magic Resistance}\nChance to resist enemy spells"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					10,
+					20,
+					30,
+					40,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "BLOCKS_RETALIATION",
+					"description": "{No Retaliation}\nEnemy cannot retaliate when attacked"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true
+				]
+			}
+		]
+	},
+	"h7StrongholdBasiliskLancer": {
+		"name": {
+			"singular": "Basilisk Lancer",
+			"plural": "Basilisk Lancers"
+		},
+		"description": "Goblins are failed products of the orc experiments, born from the blood of lesser demons. They breed like rats, despite the wizards' best efforts to wipe them out. Goblins are deceitful and cowardly, but once mounted on a basilisk they can muster some courage and drive enemies into a corner with their lances.\nIn the wild, a basilisk rarely mates and breeds more than 6 to 8 times in its life, and can live to 200 years. So the Desert Orcs do their best to keep their basilisks alive; as for the goblin riders, they are just cannon fodder.",
+		"faction": "stronghold",
+		"level": 6,
+		"cost": {
+			"gold": 1170
+		},
+		"speed": 7,
+		"hitPoints": 112,
+		"attack": 15,
+		"defense": 11,
+		"damage": {
+			"min": 23,
+			"max": 25
+		},
+		"doubleWide": true,
+		"fightValue": 1780,
+		"aiValue": 2101,
+		"growth": 2,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"skeletonTarget": {
+				"type": "SKELETON_TRANSFORMER_TARGET",
+				"subtype": "blackKnight",
+				"hidden": true
+			},
+			"h7Petrification": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7Petrification",
+				"icon": "h7/abilities/h7Petrification",
+				"description": "{Petrification}\nLucky hit: foe loses next turn; damage frees",
+				"addInfo": {
+					"fragile": true,
+					"school": "earth",
+					"spell": "stoneGaze"
+				}
+			},
+			"h7BloodRaged": {
+				"type": "H7_BLOODRAGE_H7C",
+				"val": 1,
+				"description": "{Blood Rage}\nHero: +6 Attack; -2 per round, wait, defend"
+			},
+			"h7BloodRageLv": {
+				"type": "H7_RAGE_LV_H7C",
+				"val": 1,
+				"hidden": true,
+				"propagator": "HERO",
+				"stacking": "h7BloodRageLv",
+				"updater": {
+					"type": "TIMES_HERO_LEVEL",
+					"stepSize": 1
+				}
+			},
+			"h7BloodRageWatch": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7BloodRage",
+				"hidden": true,
+				"stacking": "h7BloodRageWatch"
+			},
+			"h7LongRange": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7LongRange",
+				"icon": "h7/abilities/h7LongRange",
+				"description": "{Long Reach}\nSingle-hex targets cannot retaliate."
+			}
+		},
+		"graphics": {
+			"animation": "h7/BasiliskLancer/battle.json",
+			"map": "h7/BasiliskLancer/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/BasiliskLancer/map/atkL.png",
+			"mapAttackFromRight": "h7/BasiliskLancer/map/atkR.png",
+			"iconLarge": "h7/BasiliskLancer/iconLarge.png",
+			"iconSmall": "h7/BasiliskLancer/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h7/creature_basilisk_rider_attack.ogg",
+			"defend": "h7/creature_basilisk_rider_defend.ogg",
+			"wince": "h7/creature_basilisk_rider_hit.ogg",
+			"killed": "h7/creature_basilisk_rider_die.ogg",
+			"move": "h7/creature_basilisk_rider_move.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					2,
+					3,
+					4,
+					5,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "MIND_IMMUNITY",
+					"description": "{Steadfast Mind}\nImmune to Mind spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "BLOCKS_RETALIATION",
+					"description": "{No Retaliation}\nEnemy cannot retaliate when attacked"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h7StrongholdBasiliskRider": {
+		"name": {
+			"singular": "Basilisk Rider",
+			"plural": "Basilisk Riders"
+		},
+		"description": "Scaly, ugly and hard to look at, basilisks are giant lizards living in desolate lands. Basilisks were born after the Elder Wars. As wounded dragons passed over the surface of Ashan, their spilled blood turned primitive animals into magical creatures. The basilisk's most dangerous weapon is its gaze, which temporarily turns enemies to stone.\nFor some mysterious reason, goblins have a way of getting along with animals and beasts, and so can tame these fearsome reptiles, or at least befriend them.",
+		"faction": "stronghold",
+		"level": 6,
+		"cost": {
+			"gold": 900
+		},
+		"speed": 7,
+		"hitPoints": 87,
+		"attack": 12,
+		"defense": 11,
+		"damage": {
+			"min": 17,
+			"max": 21
+		},
+		"doubleWide": true,
+		"fightValue": 1255,
+		"aiValue": 1482,
+		"growth": 2,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"skeletonTarget": {
+				"type": "SKELETON_TRANSFORMER_TARGET",
+				"subtype": "blackKnight",
+				"hidden": true
+			},
+			"h7Petrification": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7Petrification",
+				"icon": "h7/abilities/h7Petrification",
+				"description": "{Petrification}\nLucky hit: foe loses next turn; damage frees",
+				"addInfo": {
+					"fragile": true,
+					"school": "earth",
+					"spell": "stoneGaze"
+				}
+			},
+			"h7BloodRaged": {
+				"type": "H7_BLOODRAGE_H7C",
+				"val": 1,
+				"description": "{Blood Rage}\nHero: +6 Attack; -2 per round, wait, defend"
+			},
+			"h7BloodRageLv": {
+				"type": "H7_RAGE_LV_H7C",
+				"val": 1,
+				"hidden": true,
+				"propagator": "HERO",
+				"stacking": "h7BloodRageLv",
+				"updater": {
+					"type": "TIMES_HERO_LEVEL",
+					"stepSize": 1
+				}
+			},
+			"h7BloodRageWatch": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7BloodRage",
+				"hidden": true,
+				"stacking": "h7BloodRageWatch"
+			}
+		},
+		"graphics": {
+			"animation": "h7/BasiliskRider/battle.json",
+			"map": "h7/BasiliskRider/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/BasiliskRider/map/atkL.png",
+			"mapAttackFromRight": "h7/BasiliskRider/map/atkR.png",
+			"iconLarge": "h7/BasiliskRider/iconLarge.png",
+			"iconSmall": "h7/BasiliskRider/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h7/creature_basilisk_rider_attack.ogg",
+			"defend": "h7/creature_basilisk_rider_defend.ogg",
+			"wince": "h7/creature_basilisk_rider_hit.ogg",
+			"killed": "h7/creature_basilisk_rider_die.ogg",
+			"move": "h7/creature_basilisk_rider_move.ogg"
+		},
+		"upgrades": [
+			"h7StrongholdBasiliskLancer"
+		],
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					2,
+					3,
+					4,
+					5,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "MIND_IMMUNITY",
+					"description": "{Steadfast Mind}\nImmune to Mind spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "BLOCKS_RETALIATION",
+					"description": "{No Retaliation}\nEnemy cannot retaliate when attacked"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h7StrongholdBehemoth": {
+		"name": {
+			"singular": "Behemoth",
+			"plural": "Behemoths"
+		},
+		"description": "Few know that these huge ape-like beasts nest in the rocky hills of the Sahaar desert. Scholars speculate that they are the Behemoths mentioned in ancient legends. A Behemoth's long claws are sharp enough to rend anything.\nHow did the Desert Orcs come across these legendary creatures? And how did they tame them? These are questions I have long wanted to answer...",
+		"faction": "stronghold",
+		"level": 7,
+		"cost": {
+			"gold": 2590,
+			"mercury": 1
+		},
+		"speed": 11,
+		"hitPoints": 191,
+		"attack": 24,
+		"defense": 18,
+		"damage": {
+			"min": 35,
+			"max": 43
+		},
+		"doubleWide": true,
+		"fightValue": 3667,
+		"aiValue": 4777,
+		"growth": 1,
+		"advMapAmount": {
+			"min": 1,
+			"max": 3
+		},
+		"abilities": {
+			"h7WarfareGuard": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7WarfareGuard",
+				"hidden": true,
+				"description": "~",
+				"addInfo": {
+					"faction": "stronghold",
+					"army": "h7StrongholdGnoll,h7StrongholdHarpy,h7StrongholdBrute,h7StrongholdCentaur,h7StrongholdSandWyvern,h7StrongholdBasiliskRider"
+				}
+			},
+			"piercingClaws": {
+				"type": "ENEMY_DEFENCE_REDUCTION",
+				"val": 50,
+				"description": "{Piercing Claws}\nIgnores half of the target's Defense."
+			},
+			"h7BloodRaged": {
+				"type": "H7_BLOODRAGE_H7C",
+				"val": 1,
+				"description": "{Blood Rage}\nHero: +6 Attack; -2 per round, wait, defend"
+			},
+			"h7BloodRageLv": {
+				"type": "H7_RAGE_LV_H7C",
+				"val": 1,
+				"hidden": true,
+				"propagator": "HERO",
+				"stacking": "h7BloodRageLv",
+				"updater": {
+					"type": "TIMES_HERO_LEVEL",
+					"stepSize": 1
+				}
+			},
+			"h7BloodRageWatch": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7BloodRage",
+				"hidden": true,
+				"stacking": "h7BloodRageWatch"
+			}
+		},
+		"graphics": {
+			"animation": "h7/Behemoth/battle.json",
+			"map": "h7/Behemoth/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/Behemoth/map/atkL.png",
+			"mapAttackFromRight": "h7/Behemoth/map/atkR.png",
+			"iconLarge": "h7/Behemoth/iconLarge.png",
+			"iconSmall": "h7/Behemoth/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h7/creature_behemoth_attack.ogg",
+			"defend": "h7/creature_behemoth_defend.ogg",
+			"wince": "h7/creature_behemoth_hit.ogg",
+			"killed": "h7/creature_behemoth_die.ogg",
+			"move": "h7/creature_behemoth_move.ogg"
+		},
+		"upgrades": [
+			"h7StrongholdAncientBehemoth"
+		],
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "MIND_IMMUNITY",
+					"description": "{Steadfast Mind}\nImmune to Mind spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE",
+					"description": "{Magic Resistance}\nChance to resist enemy spells"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					10,
+					20,
+					30,
+					40,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "BLOCKS_RETALIATION",
+					"description": "{No Retaliation}\nEnemy cannot retaliate when attacked"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true
+				]
+			}
+		]
+	},
+	"h7StrongholdBrute": {
+		"name": {
+			"singular": "Marauder",
+			"plural": "Marauders"
+		},
+		"description": "All orcs are born fighters, and nothing appeals to them more than the very heart of the battlefield, where enemy blood flows like rivers. Their usual tactic is to charge straight at the enemy, relying on their numbers, speed, ferocity and toughness to smash the enemy line. That is why the crusaders of the Empire mockingly call them Marauders.\nThe orcs' reputation for brutishness also comes from the way they speak. In fact, when Kunyak led the orc rebellion, he encouraged the orcs to shed the accent of the warlocks and develop their own dialect.",
+		"faction": "stronghold",
+		"level": 3,
+		"cost": {
+			"gold": 155
+		},
+		"speed": 5,
+		"hitPoints": 18,
+		"attack": 10,
+		"defense": 2,
+		"damage": {
+			"min": 2,
+			"max": 6
+		},
+		"doubleWide": false,
+		"fightValue": 171,
+		"aiValue": 203,
+		"growth": 8,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"demonic": {
+				"type": "tears-of-ashan:DEMONIC",
+				"description": "{Demonic Blood}\nTakes less Fire damage, +25% Light damage."
+			},
+			"fireResistance": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "fire",
+				"val": 25
+			},
+			"lightVulnerability": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "01lightSchool",
+				"val": -25,
+				"hidden": true
+			},
+			"h7BloodRaged": {
+				"type": "H7_BLOODRAGE_H7C",
+				"val": 1,
+				"description": "{Blood Rage}\nHero: +6 Attack; -2 per round, wait, defend"
+			},
+			"h7BloodRageLv": {
+				"type": "H7_RAGE_LV_H7C",
+				"val": 1,
+				"hidden": true,
+				"propagator": "HERO",
+				"stacking": "h7BloodRageLv",
+				"updater": {
+					"type": "TIMES_HERO_LEVEL",
+					"stepSize": 1
+				}
+			},
+			"h7BloodRageWatch": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7BloodRage",
+				"hidden": true,
+				"stacking": "h7BloodRageWatch"
+			}
+		},
+		"graphics": {
+			"animation": "h7/Brute/battle.json",
+			"map": "h7/Brute/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/Brute/map/atkL.png",
+			"mapAttackFromRight": "h7/Brute/map/atkR.png",
+			"iconLarge": "h7/Brute/iconLarge.png",
+			"iconSmall": "h7/Brute/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h7/creature_brute_attack.ogg",
+			"defend": "h7/creature_brute_defend.ogg",
+			"wince": "h7/creature_brute_hit.ogg",
+			"killed": "h7/creature_brute_die.ogg",
+			"move": "h7/creature_brute_move.ogg"
+		},
+		"upgrades": [
+			"h7StrongholdCrusher"
+		],
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "MIND_IMMUNITY",
+					"description": "{Steadfast Mind}\nImmune to Mind spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h7StrongholdCentaur": {
+		"name": {
+			"singular": "Centaur",
+			"plural": "Centaurs"
+		},
+		"description": "Like Harpies and Gnolls, Centaurs are beastmen, created by the wizards of the Seven Cities. Half human and half horse, they at first did only menial work in the army, such as carrying messages, pulling carts and mining. Both mount and rider, they can loose deadly arrows and then move to high ground, or gallop to the most favorable position to fire.\nThe Centaurs willingly joined the orc rebellion and spread across the continent of Ashan, seeking living space, dignity and freedom.",
+		"faction": "stronghold",
+		"level": 4,
+		"cost": {
+			"gold": 235
+		},
+		"speed": 6,
+		"hitPoints": 27,
+		"attack": 13,
+		"defense": 4,
+		"damage": {
+			"min": 4,
+			"max": 7
+		},
+		"doubleWide": true,
+		"fightValue": 284,
+		"aiValue": 326,
+		"growth": 5,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"shooter": {
+				"type": "SHOOTER"
+			},
+			"h7BloodRaged": {
+				"type": "H7_BLOODRAGE_H7C",
+				"val": 1,
+				"description": "{Blood Rage}\nHero: +6 Attack; -2 per round, wait, defend"
+			},
+			"h7BloodRageLv": {
+				"type": "H7_RAGE_LV_H7C",
+				"val": 1,
+				"hidden": true,
+				"propagator": "HERO",
+				"stacking": "h7BloodRageLv",
+				"updater": {
+					"type": "TIMES_HERO_LEVEL",
+					"stepSize": 1
+				}
+			},
+			"h7BloodRageWatch": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7BloodRage",
+				"hidden": true,
+				"stacking": "h7BloodRageWatch"
+			},
+			"h7Maneuver": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7Maneuver",
+				"val": 100,
+				"icon": "h7/abilities/h7Maneuver",
+				"description": "{Evasive Maneuver}\nMelee: steps back, then shoots back. 1/round"
+			}
+		},
+		"graphics": {
+			"animation": "h7/Centaur/battle.json",
+			"map": "h7/Centaur/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/Centaur/map/atkL.png",
+			"mapAttackFromRight": "h7/Centaur/map/atkR.png",
+			"iconLarge": "h7/Centaur/iconLarge.png",
+			"iconSmall": "h7/Centaur/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"frameAngles": [
+					90,
+					60,
+					45,
+					30,
+					0,
+					-30,
+					-45,
+					-60,
+					-90
+				],
+				"offset": {
+					"upperX": 14,
+					"upperY": -77,
+					"middleX": 32,
+					"middleY": -69,
+					"lowerX": 20,
+					"lowerY": -58
+				},
+				"attackClimaxFrame": 8,
+				"projectile": "h7/projectiles/H7ArrowProjectile_s85.json"
+			}
+		},
+		"sound": {
+			"attack": "h7/creature_centaur_attack.ogg",
+			"defend": "h7/creature_centaur_defend.ogg",
+			"wince": "h7/creature_centaur_hit.ogg",
+			"killed": "h7/creature_centaur_die.ogg",
+			"move": "h7/creature_centaur_move.ogg",
+			"shoot": "h7/creature_centaur_attack.ogg"
+		},
+		"shots": 15,
+		"upgrades": [
+			"h7StrongholdCentaurMarauder"
+		],
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					5,
+					6,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_WALL_PENALTY",
+					"description": "{Siege Shooter}\nNo damage loss when shooting over walls"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_DISTANCE_PENALTY",
+					"description": "{Sharpshooter}\nNo penalty for long-range shots"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h7StrongholdCentaurMarauder": {
+		"name": {
+			"singular": "Centaur Marauder",
+			"plural": "Centaur Marauders"
+		},
+		"description": "Centaur Marauders are Centaurs who have devoted their whole lives to the art of war. They have mastered the technique of breaking away from melee. When enemies come too close, they move a few steps back from the front line and shoot at them. They are among the best harassing units in all of Ashan, and flanking them takes dedicated tactics.",
+		"faction": "stronghold",
+		"level": 4,
+		"cost": {
+			"gold": 305
+		},
+		"speed": 7,
+		"hitPoints": 32,
+		"attack": 13,
+		"defense": 7,
+		"damage": {
+			"min": 5,
+			"max": 9
+		},
+		"doubleWide": true,
+		"fightValue": 370,
+		"aiValue": 424,
+		"growth": 5,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"shooter": {
+				"type": "SHOOTER"
+			},
+			"h7BloodRaged": {
+				"type": "H7_BLOODRAGE_H7C",
+				"val": 1,
+				"description": "{Blood Rage}\nHero: +6 Attack; -2 per round, wait, defend"
+			},
+			"h7BloodRageLv": {
+				"type": "H7_RAGE_LV_H7C",
+				"val": 1,
+				"hidden": true,
+				"propagator": "HERO",
+				"stacking": "h7BloodRageLv",
+				"updater": {
+					"type": "TIMES_HERO_LEVEL",
+					"stepSize": 1
+				}
+			},
+			"h7BloodRageWatch": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7BloodRage",
+				"hidden": true,
+				"stacking": "h7BloodRageWatch"
+			},
+			"h7Maneuver": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7Maneuver",
+				"val": 100,
+				"icon": "h7/abilities/h7Maneuver",
+				"description": "{Evasive Maneuver}\nMelee: steps back, then shoots back. 1/round"
+			},
+			"h7MobileShooter": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7MobileShooter",
+				"val": 100,
+				"icon": "h7/abilities/h7MobileShooter",
+				"description": "{Mobile Shooter}\nIf it only moves, it then shoots nearest foe."
+			}
+		},
+		"graphics": {
+			"animation": "h7/CentaurMarauder/battle.json",
+			"map": "h7/CentaurMarauder/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/CentaurMarauder/map/atkL.png",
+			"mapAttackFromRight": "h7/CentaurMarauder/map/atkR.png",
+			"iconLarge": "h7/CentaurMarauder/iconLarge.png",
+			"iconSmall": "h7/CentaurMarauder/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"frameAngles": [
+					90,
+					60,
+					45,
+					30,
+					0,
+					-30,
+					-45,
+					-60,
+					-90
+				],
+				"offset": {
+					"upperX": 0,
+					"upperY": -82,
+					"middleX": 25,
+					"middleY": -78,
+					"lowerX": 27,
+					"lowerY": -66
+				},
+				"attackClimaxFrame": 8,
+				"projectile": "h7/projectiles/H7ArrowProjectile_s85.json"
+			}
+		},
+		"sound": {
+			"attack": "h7/creature_centaur_attack.ogg",
+			"defend": "h7/creature_centaur_defend.ogg",
+			"wince": "h7/creature_centaur_hit.ogg",
+			"killed": "h7/creature_centaur_die.ogg",
+			"move": "h7/creature_centaur_move.ogg",
+			"shoot": "h7/creature_centaur_attack.ogg"
+		},
+		"shots": 15,
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					5,
+					6,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_WALL_PENALTY",
+					"description": "{Siege Shooter}\nNo damage loss when shooting over walls"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_DISTANCE_PENALTY",
+					"description": "{Sharpshooter}\nNo penalty for long-range shots"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h7StrongholdCrusher": {
+		"name": {
+			"singular": "Crusher",
+			"plural": "Crushers"
+		},
+		"description": "As the main assault troops of the orcs, Crushers are steadfast and fierce warriors. They can march for miles across the scorching sands of the Sahaar and then throw themselves into battle without pausing for breath. Some believe Crushers are driven by the divine wind of their patron god, the Sky Father.\nAlthough orcs fight in a rather simple way, their great shields are not just for show: Crushers use them to deflect the arrows of enemy ranged troops.",
+		"faction": "stronghold",
+		"level": 3,
+		"cost": {
+			"gold": 200
+		},
+		"speed": 7,
+		"hitPoints": 22,
+		"attack": 12,
+		"defense": 4,
+		"damage": {
+			"min": 3,
+			"max": 7
+		},
+		"doubleWide": false,
+		"fightValue": 249,
+		"aiValue": 296,
+		"growth": 8,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"demonic": {
+				"type": "tears-of-ashan:DEMONIC",
+				"description": "{Demonic Blood}\nTakes less Fire damage, +25% Light damage."
+			},
+			"fireResistance": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "fire",
+				"val": 25
+			},
+			"lightVulnerability": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "01lightSchool",
+				"val": -25,
+				"hidden": true
+			},
+			"unfettered": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "slow",
+				"description": "{Unfettered}\nImmune to all slowing effects."
+			},
+			"h7Unfettered": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7Unfettered",
+				"val": 0,
+				"hidden": true,
+				"description": "~"
+			},
+			"h7BloodRaged": {
+				"type": "H7_BLOODRAGE_H7C",
+				"val": 1,
+				"description": "{Blood Rage}\nHero: +6 Attack; -2 per round, wait, defend"
+			},
+			"h7BloodRageLv": {
+				"type": "H7_RAGE_LV_H7C",
+				"val": 1,
+				"hidden": true,
+				"propagator": "HERO",
+				"stacking": "h7BloodRageLv",
+				"updater": {
+					"type": "TIMES_HERO_LEVEL",
+					"stepSize": 1
+				}
+			},
+			"h7BloodRageWatch": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7BloodRage",
+				"hidden": true,
+				"stacking": "h7BloodRageWatch"
+			}
+		},
+		"graphics": {
+			"animation": "h7/Crusher/battle.json",
+			"map": "h7/Crusher/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/Crusher/map/atkL.png",
+			"mapAttackFromRight": "h7/Crusher/map/atkR.png",
+			"iconLarge": "h7/Crusher/iconLarge.png",
+			"iconSmall": "h7/Crusher/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h7/creature_brute_attack.ogg",
+			"defend": "h7/creature_brute_defend.ogg",
+			"wince": "h7/creature_brute_hit.ogg",
+			"killed": "h7/creature_brute_die.ogg",
+			"move": "h7/creature_brute_move.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "MIND_IMMUNITY",
+					"description": "{Steadfast Mind}\nImmune to Mind spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h7StrongholdCyclops": {
+		"name": {
+			"singular": "Cyclops",
+			"plural": "Cyclopes"
+		},
+		"description": "Like goblins, Cyclopes are “failed” products of the orc experiments. Born of the blood of greater demons, these giants have bodies and minds twisted by the tides of Chaos. Although many factions have tried to tame their power, only the orcs had the strength, patience and courage to welcome them into the family, treating them as tireless workers in the villages and heavy infantry on the battlefield.\nIt is said that goblins are the Cyclopes' favorite food. I have indeed seen Cyclopes eat goblins to ease their rage and hunger, but as far as I know, the diet of these one-eyed monsters is actually quite varied.",
+		"faction": "stronghold",
+		"level": 7,
+		"cost": {
+			"gold": 2590,
+			"crystal": 1
+		},
+		"speed": 6,
+		"hitPoints": 204,
+		"attack": 15,
+		"defense": 23,
+		"damage": {
+			"min": 38,
+			"max": 45
+		},
+		"doubleWide": true,
+		"fightValue": 3526,
+		"aiValue": 4594,
+		"growth": 1,
+		"advMapAmount": {
+			"min": 1,
+			"max": 3
+		},
+		"abilities": {
+			"demonic": {
+				"type": "tears-of-ashan:DEMONIC",
+				"description": "{Demonic Blood}\nTakes less Fire damage, +25% Light damage."
+			},
+			"fireResistance": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "fire",
+				"val": 25
+			},
+			"lightVulnerability": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "01lightSchool",
+				"val": -25,
+				"hidden": true
+			},
+			"h7SweepingBash": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7SweepingBash",
+				"icon": "h7/abilities/h7SweepingBash",
+				"description": "{Sweeping Bash}\nAlso hits foes beside target; lucky hit stuns",
+				"addInfo": {
+					"all": true
+				}
+			},
+			"h7SweepingBashHexes": {
+				"type": "MULTIHEX_ENEMY_ATTACK",
+				"addInfo": [
+					"L",
+					"R"
+				],
+				"hidden": true
+			},
+			"h7BloodRaged": {
+				"type": "H7_BLOODRAGE_H7C",
+				"val": 1,
+				"description": "{Blood Rage}\nHero: +6 Attack; -2 per round, wait, defend"
+			},
+			"h7BloodRageLv": {
+				"type": "H7_RAGE_LV_H7C",
+				"val": 1,
+				"hidden": true,
+				"propagator": "HERO",
+				"stacking": "h7BloodRageLv",
+				"updater": {
+					"type": "TIMES_HERO_LEVEL",
+					"stepSize": 1
+				}
+			},
+			"h7BloodRageWatch": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7BloodRage",
+				"hidden": true,
+				"stacking": "h7BloodRageWatch"
+			}
+		},
+		"graphics": {
+			"animation": "h7/Cyclops/battle.json",
+			"map": "h7/Cyclops/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/Cyclops/map/atkL.png",
+			"mapAttackFromRight": "h7/Cyclops/map/atkR.png",
+			"iconLarge": "h7/Cyclops/iconLarge.png",
+			"iconSmall": "h7/Cyclops/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h7/creature_cyclops_attack.ogg",
+			"defend": "h7/creature_cyclops_defend.ogg",
+			"wince": "h7/creature_cyclops_hit.ogg",
+			"killed": "h7/creature_cyclops_die.ogg",
+			"move": "h7/creature_cyclops_move.ogg"
+		},
+		"upgrades": [
+			"h7StrongholdEnragedCyclops"
+		],
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "MIND_IMMUNITY",
+					"description": "{Steadfast Mind}\nImmune to Mind spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE",
+					"description": "{Magic Resistance}\nChance to resist enemy spells"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					10,
+					20,
+					30,
+					40,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "BLOCKS_RETALIATION",
+					"description": "{No Retaliation}\nEnemy cannot retaliate when attacked"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true
+				]
+			}
+		]
+	},
+	"h7StrongholdEnragedCyclops": {
+		"name": {
+			"singular": "Enraged Cyclops",
+			"plural": "Enraged Cyclopes"
+		},
+		"description": "Although their childlike innocence keeps Cyclopes calm day to day, when they are hurt in body or mind, they erupt in a terrifying fury that springs from their chaotic blood. This makes them extremely dangerous to anyone, including their own kind. Only a chosen few Cyclopes can channel this rage at will, shooting it out through their “evil eye” to burn distant enemies to ashes.\nIt is said that the Chaos in a Cyclops's blood calms with age. Some elder Cyclopes are very kind and wise. Honestly, though, other old grumps just complain about everything all day or throw huge rocks at crowds for fun.",
+		"faction": "stronghold",
+		"level": 7,
+		"cost": {
+			"gold": 3365,
+			"crystal": 2,
+			"gems": 1
+		},
+		"speed": 7,
+		"hitPoints": 227,
+		"attack": 17,
+		"defense": 27,
+		"damage": {
+			"min": 43,
+			"max": 50
+		},
+		"doubleWide": true,
+		"fightValue": 4954,
+		"aiValue": 6455,
+		"growth": 1,
+		"advMapAmount": {
+			"min": 1,
+			"max": 3
+		},
+		"abilities": {
+			"shooter": {
+				"type": "SHOOTER"
+			},
+			"demonic": {
+				"type": "tears-of-ashan:DEMONIC",
+				"description": "{Demonic Blood}\nTakes less Fire damage, +25% Light damage."
+			},
+			"fireResistance": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "fire",
+				"val": 25
+			},
+			"lightVulnerability": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "01lightSchool",
+				"val": -25,
+				"hidden": true
+			},
+			"h7SweepingBash": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7SweepingBash",
+				"icon": "h7/abilities/h7SweepingBash",
+				"description": "{Sweeping Bash}\nAlso hits foes beside target; lucky hit stuns",
+				"addInfo": {
+					"all": true
+				}
+			},
+			"h7SweepingBashHexes": {
+				"type": "MULTIHEX_ENEMY_ATTACK",
+				"addInfo": [
+					"L",
+					"R"
+				],
+				"hidden": true
+			},
+			"h7BloodRaged": {
+				"type": "H7_BLOODRAGE_H7C",
+				"val": 1,
+				"description": "{Blood Rage}\nHero: +6 Attack; -2 per round, wait, defend"
+			},
+			"h7BloodRageLv": {
+				"type": "H7_RAGE_LV_H7C",
+				"val": 1,
+				"hidden": true,
+				"propagator": "HERO",
+				"stacking": "h7BloodRageLv",
+				"updater": {
+					"type": "TIMES_HERO_LEVEL",
+					"stepSize": 1
+				}
+			},
+			"h7BloodRageWatch": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7BloodRage",
+				"hidden": true,
+				"stacking": "h7BloodRageWatch"
+			},
+			"fieryEye": {
+				"type": "NO_DISTANCE_PENALTY",
+				"icon": "h7/abilities/h7FieryEye",
+				"description": "{Fiery Eye}\nNo range penalty, 20-24 damage, full melee."
+			},
+			"fieryEyeDamage": {
+				"type": "PERCENTAGE_DAMAGE_BOOST",
+				"subtype": "damageTypeRanged",
+				"val": -53,
+				"hidden": true
+			},
+			"fieryEyeMelee": {
+				"type": "NO_MELEE_PENALTY",
+				"hidden": true
+			},
+			"fieryEyeFx": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7AbStrike",
+				"val": 0,
+				"hidden": true,
+				"stacking": "h7AbStrikeFieryEye",
+				"addInfo": {
+					"mode": "fx",
+					"ranged": true,
+					"animation": "h7/fx/h7abFieryEye",
+					"sound": "h7/h7ab_fiery_eye"
+				}
+			},
+			"h7SanctumTwin": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7SanctumTwin",
+				"hidden": true,
+				"description": "~",
+				"addInfo": {
+					"twin": "h7StrongholdAncientBehemoth",
+					"army": "h7StrongholdGnollHunter,h7StrongholdFury,h7StrongholdCrusher,h7StrongholdCentaurMarauder,h7StrongholdVenomousWyvern,h7StrongholdBasiliskLancer"
+				}
+			}
+		},
+		"graphics": {
+			"animation": "h7/EnragedCyclops/battle.json",
+			"map": "h7/EnragedCyclops/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/EnragedCyclops/map/atkL.png",
+			"mapAttackFromRight": "h7/EnragedCyclops/map/atkR.png",
+			"iconLarge": "h7/EnragedCyclops/iconLarge.png",
+			"iconSmall": "h7/EnragedCyclops/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"frameAngles": [
+					90,
+					60,
+					45,
+					30,
+					0,
+					-30,
+					-45,
+					-60,
+					-90
+				],
+				"offset": {
+					"upperX": 26,
+					"upperY": -73,
+					"middleX": 30,
+					"middleY": -65,
+					"lowerX": 14,
+					"lowerY": -58
+				},
+				"attackClimaxFrame": 9,
+				"ray": [
+					{
+						"start": [
+							242,
+							141,
+							78,
+							146
+						],
+						"end": [
+							242,
+							141,
+							78,
+							146
+						]
+					},
+					{
+						"start": [
+							255,
+							255,
+							236,
+							255
+						],
+						"end": [
+							255,
+							255,
+							236,
+							255
+						]
+					},
+					{
+						"start": [
+							255,
+							218,
+							135,
+							254
+						],
+						"end": [
+							255,
+							218,
+							135,
+							254
+						]
+					},
+					{
+						"start": [
+							120,
+							53,
+							24,
+							16
+						],
+						"end": [
+							120,
+							53,
+							24,
+							16
+						]
+					}
+				]
+			}
+		},
+		"sound": {
+			"attack": "h7/creature_cyclops_attack.ogg",
+			"shoot": "h7/creature_cyclops_ability.ogg",
+			"defend": "h7/creature_cyclops_defend.ogg",
+			"wince": "h7/creature_cyclops_hit.ogg",
+			"killed": "h7/creature_cyclops_die.ogg",
+			"move": "h7/creature_cyclops_move.ogg"
+		},
+		"shots": 24,
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_WALL_PENALTY",
+					"description": "{Siege Shooter}\nNo damage loss when shooting over walls"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "SHOTS",
+					"description": "{Ammunition}\nMore shots"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "MIND_IMMUNITY",
+					"description": "{Steadfast Mind}\nImmune to Mind spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h7StrongholdFury": {
+		"name": {
+			"singular": "Raging Fury",
+			"plural": "Raging Furies"
+		},
+		"description": "Raging Furies are Harpies who have survived many battles and mastered advanced techniques of surprise attack. Thanks to their incredible speed and agility, they suffer no retaliation.\nThe infamous barbarian Kenlo-Hag was a master at using Raging Furies, especially when raiding Bevoss.",
+		"faction": "stronghold",
+		"level": 2,
+		"cost": {
+			"gold": 160
+		},
+		"speed": 9,
+		"hitPoints": 14,
+		"attack": 3,
+		"defense": 0,
+		"damage": {
+			"min": 2,
+			"max": 4
+		},
+		"doubleWide": false,
+		"fightValue": 185,
+		"aiValue": 207,
+		"growth": 8,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"flying": {
+				"type": "FLYING"
+			},
+			"noRetaliation": {
+				"type": "BLOCKS_RETALIATION",
+				"description": "{No Enemy Retaliation}\nTarget cannot retaliate."
+			},
+			"returnAfterStrike": {
+				"type": "RETURN_AFTER_STRIKE",
+				"description": "{Strike and Return}\nReturns to its starting hex after attacking."
+			},
+			"h7BloodRaged": {
+				"type": "H7_BLOODRAGE_H7C",
+				"val": 1,
+				"description": "{Blood Rage}\nHero: +6 Attack; -2 per round, wait, defend"
+			},
+			"h7BloodRageLv": {
+				"type": "H7_RAGE_LV_H7C",
+				"val": 1,
+				"hidden": true,
+				"propagator": "HERO",
+				"stacking": "h7BloodRageLv",
+				"updater": {
+					"type": "TIMES_HERO_LEVEL",
+					"stepSize": 1
+				}
+			},
+			"h7BloodRageWatch": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7BloodRage",
+				"hidden": true,
+				"stacking": "h7BloodRageWatch"
+			}
+		},
+		"graphics": {
+			"animation": "h7/Fury/battle.json",
+			"map": "h7/Fury/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/Fury/map/atkL.png",
+			"mapAttackFromRight": "h7/Fury/map/atkR.png",
+			"iconLarge": "h7/Fury/iconLarge.png",
+			"iconSmall": "h7/Fury/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h7/creature_harpy_attack.ogg",
+			"defend": "h7/creature_harpy_defend.ogg",
+			"wince": "h7/creature_harpy_hit.ogg",
+			"killed": "h7/creature_harpy_die.ogg",
+			"move": "h7/griffin_flying1.ogg",
+			"endMoving": "h7/griffin_flying1.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					3,
+					3,
+					3,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					3,
+					4,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					0,
+					1,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					3,
+					3,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_RETALIATION",
+					"description": "{Nimbleness}\nExtra retaliation each round"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			}
+		]
+	},
+	"h7StrongholdGnoll": {
+		"name": {
+			"singular": "Gnoll",
+			"plural": "Gnolls"
+		},
+		"description": "After the wizards' School of Transmutation mastered the art of fusing humans and animals, they created many kinds of beastmen, and Gnolls are one of them. Half human and half hyena, they were designed as trackers, able to follow an enemy's scent relentlessly. Once they find the enemy, Gnolls prefer to avoid close combat and attack from afar by throwing knives.\nThe knives Gnolls use are common recurved blades designed by the wizards, even though these knives were never designed for throwing.",
+		"faction": "stronghold",
+		"level": 1,
+		"cost": {
+			"gold": 40
+		},
+		"speed": 4,
+		"hitPoints": 4,
+		"attack": 5,
+		"defense": 0,
+		"damage": {
+			"min": 1,
+			"max": 2
+		},
+		"doubleWide": false,
+		"fightValue": 57,
+		"aiValue": 58,
+		"growth": 17,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"shooter": {
+				"type": "SHOOTER"
+			},
+			"h7BloodRaged": {
+				"type": "H7_BLOODRAGE_H7C",
+				"val": 1,
+				"description": "{Blood Rage}\nHero: +6 Attack; -2 per round, wait, defend"
+			},
+			"h7BloodRageLv": {
+				"type": "H7_RAGE_LV_H7C",
+				"val": 1,
+				"hidden": true,
+				"propagator": "HERO",
+				"stacking": "h7BloodRageLv",
+				"updater": {
+					"type": "TIMES_HERO_LEVEL",
+					"stepSize": 1
+				}
+			},
+			"h7BloodRageWatch": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7BloodRage",
+				"hidden": true,
+				"stacking": "h7BloodRageWatch"
+			}
+		},
+		"graphics": {
+			"animation": "h7/Gnoll/battle.json",
+			"map": "h7/Gnoll/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/Gnoll/map/atkL.png",
+			"mapAttackFromRight": "h7/Gnoll/map/atkR.png",
+			"iconLarge": "h7/Gnoll/iconLarge.png",
+			"iconSmall": "h7/Gnoll/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"frameAngles": [
+					90,
+					60,
+					45,
+					30,
+					0,
+					-30,
+					-45,
+					-60,
+					-90
+				],
+				"offset": {
+					"upperX": 33,
+					"upperY": -50,
+					"middleX": 70,
+					"middleY": -33,
+					"lowerX": 44,
+					"lowerY": -9
+				},
+				"attackClimaxFrame": 5,
+				"projectile": "h7/projectiles/H7KnifeProjectile.json"
+			}
+		},
+		"sound": {
+			"attack": "h7/creature_gnoll_attack.ogg",
+			"defend": "h7/creature_gnoll_defend.ogg",
+			"wince": "h7/creature_gnoll_hit.ogg",
+			"killed": "h7/creature_gnoll_die.ogg",
+			"move": "h7/creature_gnoll_move.ogg",
+			"shoot": "h7/creature_gnoll_attack.ogg"
+		},
+		"shots": 8,
+		"upgrades": [
+			"h7StrongholdGnollHunter"
+		],
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_WALL_PENALTY",
+					"description": "{Siege Shooter}\nNo damage loss when shooting over walls"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h7StrongholdGnollHunter": {
+		"name": {
+			"singular": "Gnoll Stalker",
+			"plural": "Gnoll Stalkers"
+		},
+		"description": "When a beastman is created, most of the human intellect is preserved, but animal instincts and nature are inherited as well. For Gnoll Stalkers, this means opportunism (some would call it cowardice). They let their allies do the close fighting and join in to attack only when there is no direct danger to themselves.\nAmong the most unexpected of the beastman species, Gnolls were created by a wizard named Ag. Yet, quite contrary to most of Ag's intentions, Gnolls proved very useful in desert warfare. Too bad the wizards treated them poorly, which led to the rebellion.",
+		"faction": "stronghold",
+		"level": 1,
+		"cost": {
+			"gold": 55
+		},
+		"speed": 5,
+		"hitPoints": 4,
+		"attack": 5,
+		"defense": 0,
+		"damage": {
+			"min": 2,
+			"max": 2
+		},
+		"doubleWide": false,
+		"fightValue": 75,
+		"aiValue": 76,
+		"growth": 17,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"shooter": {
+				"type": "SHOOTER"
+			},
+			"h7BloodRaged": {
+				"type": "H7_BLOODRAGE_H7C",
+				"val": 1,
+				"description": "{Blood Rage}\nHero: +6 Attack; -2 per round, wait, defend"
+			},
+			"h7BloodRageLv": {
+				"type": "H7_RAGE_LV_H7C",
+				"val": 1,
+				"hidden": true,
+				"propagator": "HERO",
+				"stacking": "h7BloodRageLv",
+				"updater": {
+					"type": "TIMES_HERO_LEVEL",
+					"stepSize": 1
+				}
+			},
+			"h7BloodRageWatch": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7BloodRage",
+				"hidden": true,
+				"stacking": "h7BloodRageWatch"
+			},
+			"h7OpportunityAttack": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7OpportunityAttack",
+				"val": 50,
+				"icon": "h7/abilities/h7OpportunityAttack",
+				"description": "{Opportunity Attack}\nShoots a foe hit in melee: 50% dmg, 1/round"
+			},
+			"h7OpportunityAttackZone": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7OpportunityAttack",
+				"hidden": true,
+				"description": "~",
+				"propagator": "BATTLE_WIDE",
+				"stacking": "h7OppAtkZone",
+				"val": 50
+			},
+			"h7OpportunityAttackMark": {
+				"type": "H7_OPP_ATTACK_H7C",
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h7/GnollHunter/battle.json",
+			"map": "h7/GnollHunter/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/GnollHunter/map/atkL.png",
+			"mapAttackFromRight": "h7/GnollHunter/map/atkR.png",
+			"iconLarge": "h7/GnollHunter/iconLarge.png",
+			"iconSmall": "h7/GnollHunter/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"frameAngles": [
+					90,
+					60,
+					45,
+					30,
+					0,
+					-30,
+					-45,
+					-60,
+					-90
+				],
+				"offset": {
+					"upperX": 32,
+					"upperY": -51,
+					"middleX": 70,
+					"middleY": -33,
+					"lowerX": 44,
+					"lowerY": -10
+				},
+				"attackClimaxFrame": 5,
+				"projectile": "h7/projectiles/H7KnifeProjectile.json"
+			}
+		},
+		"sound": {
+			"attack": "h7/creature_gnoll_attack.ogg",
+			"defend": "h7/creature_gnoll_defend.ogg",
+			"wince": "h7/creature_gnoll_hit.ogg",
+			"killed": "h7/creature_gnoll_die.ogg",
+			"move": "h7/creature_gnoll_move.ogg",
+			"shoot": "h7/creature_gnoll_attack.ogg"
+		},
+		"shots": 8,
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_WALL_PENALTY",
+					"description": "{Siege Shooter}\nNo damage loss when shooting over walls"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h7StrongholdHarpy": {
+		"name": {
+			"singular": "Harpy",
+			"plural": "Harpies"
+		},
+		"description": "Harpies are chimeras, half human and half bird of prey, originally created as scouts, messengers and skirmishers for the wizards' armies. They followed the orcs to freedom, and the orcs regard them as allies and the favorite children of the Sky Father.\nHarpies derived from different species have very different personalities, including crows, eagles and vultures.",
+		"faction": "stronghold",
+		"level": 2,
+		"cost": {
+			"gold": 120
+		},
+		"speed": 8,
+		"hitPoints": 13,
+		"attack": 3,
+		"defense": 0,
+		"damage": {
+			"min": 2,
+			"max": 4
+		},
+		"doubleWide": false,
+		"fightValue": 149,
+		"aiValue": 167,
+		"growth": 8,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"flying": {
+				"type": "FLYING"
+			},
+			"returnAfterStrike": {
+				"type": "RETURN_AFTER_STRIKE",
+				"description": "{Strike and Return}\nReturns to its starting hex after attacking."
+			},
+			"h7BloodRaged": {
+				"type": "H7_BLOODRAGE_H7C",
+				"val": 1,
+				"description": "{Blood Rage}\nHero: +6 Attack; -2 per round, wait, defend"
+			},
+			"h7BloodRageLv": {
+				"type": "H7_RAGE_LV_H7C",
+				"val": 1,
+				"hidden": true,
+				"propagator": "HERO",
+				"stacking": "h7BloodRageLv",
+				"updater": {
+					"type": "TIMES_HERO_LEVEL",
+					"stepSize": 1
+				}
+			},
+			"h7BloodRageWatch": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7BloodRage",
+				"hidden": true,
+				"stacking": "h7BloodRageWatch"
+			}
+		},
+		"graphics": {
+			"animation": "h7/Harpy/battle.json",
+			"map": "h7/Harpy/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/Harpy/map/atkL.png",
+			"mapAttackFromRight": "h7/Harpy/map/atkR.png",
+			"iconLarge": "h7/Harpy/iconLarge.png",
+			"iconSmall": "h7/Harpy/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h7/creature_harpy_attack.ogg",
+			"defend": "h7/creature_harpy_defend.ogg",
+			"wince": "h7/creature_harpy_hit.ogg",
+			"killed": "h7/creature_harpy_die.ogg",
+			"move": "h7/griffin_flying1.ogg",
+			"endMoving": "h7/griffin_flying1.ogg"
+		},
+		"upgrades": [
+			"h7StrongholdFury"
+		],
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					3,
+					3,
+					3,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					3,
+					4,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					0,
+					1,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					3,
+					3,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_RETALIATION",
+					"description": "{Nimbleness}\nExtra retaliation each round"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			}
+		]
+	},
+	"h7StrongholdSandWyvern": {
+		"name": {
+			"singular": "Sand Wyvern",
+			"plural": "Sand Wyverns"
+		},
+		"description": "Wyverns are descendants of flying lizards mutated by dragon blood during the Elder Wars. Although smaller than true dragons, they are still quite impressive animals. They have huge bat-like wings, and their bodies are covered in reptilian scales. The wyverns of the Sahaar desert are touched by Earth magic and can regenerate.\nOther kinds of wyverns, such as steppe wyverns, are famous for hunting bison. Cave wyverns can be found in the depths of Ygg-Chall. Lightning wyverns are native to the islands of the Jade Sea.",
+		"faction": "stronghold",
+		"level": 5,
+		"cost": {
+			"gold": 375
+		},
+		"speed": 7,
+		"hitPoints": 36,
+		"attack": 6,
+		"defense": 5,
+		"damage": {
+			"min": 7,
+			"max": 12
+		},
+		"doubleWide": true,
+		"fightValue": 453,
+		"aiValue": 504,
+		"growth": 4,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"flying": {
+				"type": "FLYING"
+			},
+			"regeneration": {
+				"type": "HP_REGENERATION",
+				"val": 19,
+				"description": "{Regeneration}\nTop unit heals ${val} HP each round start."
+			},
+			"resEarth": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "earth",
+				"val": 50,
+				"description": "{Earth Resistance}\nTakes 50% less damage from Earth spells."
+			},
+			"h7BloodRaged": {
+				"type": "H7_BLOODRAGE_H7C",
+				"val": 1,
+				"description": "{Blood Rage}\nHero: +6 Attack; -2 per round, wait, defend"
+			},
+			"h7BloodRageLv": {
+				"type": "H7_RAGE_LV_H7C",
+				"val": 1,
+				"hidden": true,
+				"propagator": "HERO",
+				"stacking": "h7BloodRageLv",
+				"updater": {
+					"type": "TIMES_HERO_LEVEL",
+					"stepSize": 1
+				}
+			},
+			"h7BloodRageWatch": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7BloodRage",
+				"hidden": true,
+				"stacking": "h7BloodRageWatch"
+			}
+		},
+		"graphics": {
+			"animation": "h7/SandWyvern/battle.json",
+			"map": "h7/SandWyvern/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/SandWyvern/map/atkL.png",
+			"mapAttackFromRight": "h7/SandWyvern/map/atkR.png",
+			"iconLarge": "h7/SandWyvern/iconLarge.png",
+			"iconSmall": "h7/SandWyvern/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h7/creature_sand_wyvern_attack.ogg",
+			"defend": "h7/creature_sand_wyvern_defend.ogg",
+			"wince": "h7/creature_sand_wyvern_hit.ogg",
+			"killed": "h7/creature_sand_wyvern_die.ogg",
+			"move": "h7/creature_sand_wyvern_move.ogg"
+		},
+		"upgrades": [
+			"h7StrongholdVenomousWyvern"
+		],
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					3,
+					4,
+					5,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					3,
+					4,
+					4,
+					6,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					2,
+					3,
+					3,
+					4,
+					5,
+					6,
+					6,
+					7
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					7
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_RETALIATION",
+					"description": "{Nimbleness}\nExtra retaliation each round"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "MIND_IMMUNITY",
+					"description": "{Steadfast Mind}\nImmune to Mind spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h7StrongholdVenomousWyvern": {
+		"name": {
+			"singular": "Venomous Wyvern",
+			"plural": "Venomous Wyverns"
+		},
+		"description": "Besides the damage done by their teeth and claws, some kinds of wyverns are even more fearsome for their corrosive breath. Their home in the most desolate parts of the Sahaar, their foul temper, and their peculiar habit of killing every creature that enters their territory easily set them apart from ordinary wyverns.\nBrave orc warriors sometimes enter wyvern nests in search of newly hatched young, to tame and train them.",
+		"faction": "stronghold",
+		"level": 5,
+		"cost": {
+			"gold": 475
+		},
+		"speed": 11,
+		"hitPoints": 43,
+		"attack": 6,
+		"defense": 6,
+		"damage": {
+			"min": 8,
+			"max": 14
+		},
+		"doubleWide": true,
+		"fightValue": 676,
+		"aiValue": 752,
+		"growth": 4,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"flying": {
+				"type": "FLYING"
+			},
+			"regeneration": {
+				"type": "HP_REGENERATION",
+				"val": 19,
+				"description": "{Regeneration}\nTop unit heals ${val} HP each round start."
+			},
+			"resEarth": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "earth",
+				"val": 50,
+				"description": "{Earth Resistance}\nTakes 50% less damage from Earth spells."
+			},
+			"h7AcidSpit": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7AcidSpit",
+				"icon": "h7/abilities/h7AcidSpit",
+				"description": "{Acid Breath}\nActive hit: 50%, then 25% dmg over 2 rounds.",
+				"addInfo": {
+					"kind": "acid",
+					"school": "earth"
+				}
+			},
+			"h7BloodRaged": {
+				"type": "H7_BLOODRAGE_H7C",
+				"val": 1,
+				"description": "{Blood Rage}\nHero: +6 Attack; -2 per round, wait, defend"
+			},
+			"h7BloodRageLv": {
+				"type": "H7_RAGE_LV_H7C",
+				"val": 1,
+				"hidden": true,
+				"propagator": "HERO",
+				"stacking": "h7BloodRageLv",
+				"updater": {
+					"type": "TIMES_HERO_LEVEL",
+					"stepSize": 1
+				}
+			},
+			"h7BloodRageWatch": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7BloodRage",
+				"hidden": true,
+				"stacking": "h7BloodRageWatch"
+			}
+		},
+		"graphics": {
+			"animation": "h7/VenomousWyvern/battle.json",
+			"map": "h7/VenomousWyvern/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/VenomousWyvern/map/atkL.png",
+			"mapAttackFromRight": "h7/VenomousWyvern/map/atkR.png",
+			"iconLarge": "h7/VenomousWyvern/iconLarge.png",
+			"iconSmall": "h7/VenomousWyvern/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h7/creature_sand_wyvern_attack.ogg",
+			"defend": "h7/creature_sand_wyvern_defend.ogg",
+			"wince": "h7/creature_sand_wyvern_hit.ogg",
+			"killed": "h7/creature_sand_wyvern_die.ogg",
+			"move": "h7/creature_sand_wyvern_move.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					3,
+					4,
+					5,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					3,
+					4,
+					4,
+					6,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					2,
+					3,
+					3,
+					4,
+					5,
+					6,
+					6,
+					7
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					7
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_RETALIATION",
+					"description": "{Nimbleness}\nExtra retaliation each round"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "MIND_IMMUNITY",
+					"description": "{Steadfast Mind}\nImmune to Mind spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true
+				]
+			}
+		]
+	}
+}

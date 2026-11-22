@@ -1,0 +1,3749 @@
+{
+	"h7FortressArdentDragon": {
+		"name": {
+			"singular": "Ardent Dragon",
+			"plural": "Ardent Dragons"
+		},
+		"description": "In the deepest underground tunnels, rolling lakes of lava cast a scorching glow; this is the lair of the Ardent Dragons. Rarely seen on the surface, these fiery dragons are among the most beautiful creatures in all of Ashan. Their bodies are made entirely of clear, glittering red crystal, revealing the blazing heart that beats within.",
+		"faction": "highlands-town:highlands",
+		"level": 7,
+		"cost": {
+			"gold": 3365,
+			"crystal": 2,
+			"mercury": 1
+		},
+		"speed": 15,
+		"hitPoints": 204,
+		"attack": 28,
+		"defense": 14,
+		"damage": {
+			"min": 35,
+			"max": 43
+		},
+		"doubleWide": true,
+		"fightValue": 5074,
+		"aiValue": 6610,
+		"growth": 1,
+		"advMapAmount": {
+			"min": 1,
+			"max": 3
+		},
+		"abilities": {
+			"flying": {
+				"type": "FLYING"
+			},
+			"breath": {
+				"type": "TWO_HEX_ATTACK_BREATH",
+				"description": "{Fire Breath}\nHits 2 hexes, fire stays 1 round: 20×stack dmg"
+			},
+			"immFire": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "fire",
+				"val": 50,
+				"description": "{Fire Immunity}\nImmune to Fire curses; half Fire damage."
+			},
+			"dragonNature": {
+				"type": "DRAGON_NATURE"
+			},
+			"skeletonTarget": {
+				"type": "SKELETON_TRANSFORMER_TARGET",
+				"subtype": "boneDragon",
+				"hidden": true
+			},
+			"h7SchoolImmunity_fire": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7SchoolImmunity",
+				"val": 0,
+				"addInfo": {
+					"school": "fire"
+				},
+				"stacking": "h7SchoolImmunity_fire",
+				"hidden": true,
+				"description": "~"
+			},
+			"h7FireBreath": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7FireBreath",
+				"val": 20,
+				"addInfo": {
+					"turns": 2
+				},
+				"hidden": true,
+				"description": "~"
+			},
+			"h7TrailOfFire": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7TrailOfFire",
+				"val": 13,
+				"addInfo": {
+					"turns": 2
+				},
+				"icon": "h7/abilities/h7TrailOfFire",
+				"description": "{Trail of Fire}\nPath burns 1 round: foes passing take 13×stack"
+			},
+			"h7SanctumTwin": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7SanctumTwin",
+				"hidden": true,
+				"description": "~",
+				"addInfo": {
+					"twin": "h7FortressEinherjar",
+					"army": "h7FortressKoboldPathfinder,h7FortressShieldguard,h7FortressBlackbear,h7FortressValkyrie,h7FortressMagmaElemental,h7FortressRunePatriarch"
+				}
+			}
+		},
+		"graphics": {
+			"animation": "h7/ArdentDragon/battle.json",
+			"map": "h7/ArdentDragon/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/ArdentDragon/map/atkL.png",
+			"mapAttackFromRight": "h7/ArdentDragon/map/atkR.png",
+			"iconLarge": "h7/ArdentDragon/iconLarge.png",
+			"iconSmall": "h7/ArdentDragon/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h7/creature_red_dragon_attack.ogg",
+			"defend": "h7/creature_red_dragon_defend.ogg",
+			"wince": "h7/creature_red_dragon_hit.ogg",
+			"killed": "h7/creature_red_dragon_die.ogg",
+			"move": "h7/creature_red_dragon_move_01.ogg",
+			"startMoving": "h7/creature_red_dragon_fly_start.ogg",
+			"endMoving": "h7/creature_red_dragon_fly_end.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_RETALIATION",
+					"description": "{Nimbleness}\nExtra retaliation each round"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "MIND_IMMUNITY",
+					"description": "{Steadfast Mind}\nImmune to Mind spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE",
+					"description": "{Magic Resistance}\nChance to resist enemy spells"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					10,
+					20,
+					30,
+					40,
+					50
+				]
+			}
+		]
+	},
+	"h7FortressBear": {
+		"name": {
+			"singular": "War Bear",
+			"plural": "War Bears"
+		},
+		"description": "When the dwarves of the Winterwind clan travel beyond their underground realm, they often detour to hunt around nearby fortresses, sometimes capturing wild animals. This is how they came to tame these fierce bears to fight at their side.",
+		"faction": "highlands-town:highlands",
+		"level": 3,
+		"cost": {
+			"gold": 265
+		},
+		"speed": 4,
+		"hitPoints": 23,
+		"attack": 6,
+		"defense": 8,
+		"damage": {
+			"min": 3,
+			"max": 4
+		},
+		"doubleWide": true,
+		"fightValue": 282,
+		"aiValue": 335,
+		"growth": 5,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"h7Wild": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7Wild",
+				"icon": "h7/abilities/h7Wild",
+				"description": "{Wild}\nWhen meleed: attacks twice until its next turn"
+			}
+		},
+		"graphics": {
+			"animation": "h7/Bear/battle.json",
+			"map": "h7/Bear/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/Bear/map/atkL.png",
+			"mapAttackFromRight": "h7/Bear/map/atkR.png",
+			"iconLarge": "h7/Bear/iconLarge.png",
+			"iconSmall": "h7/Bear/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h7/creature_battle_bear_attack.ogg",
+			"defend": "h7/creature_battle_bear_defend.ogg",
+			"wince": "h7/creature_battle_bear_hit.ogg",
+			"killed": "h7/creature_battle_bear_die.ogg",
+			"move": "h7/creature_battle_bear_move_01.ogg"
+		},
+		"upgrades": [
+			"h7FortressBlackbear"
+		],
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "MIND_IMMUNITY",
+					"description": "{Steadfast Mind}\nImmune to Mind spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h7FortressBlackbear": {
+		"name": {
+			"singular": "Black Bear",
+			"plural": "Black Bears"
+		},
+		"description": "Bigger and stronger than ordinary bears, Black Bears often wear heavy armor and undergo strict training. These fierce bears are loyal comrades of the Winterwind dwarves when they enter battle led by their bear tamers.",
+		"faction": "highlands-town:highlands",
+		"level": 3,
+		"cost": {
+			"gold": 295
+		},
+		"speed": 5,
+		"hitPoints": 28,
+		"attack": 8,
+		"defense": 10,
+		"damage": {
+			"min": 3,
+			"max": 4
+		},
+		"doubleWide": true,
+		"fightValue": 367,
+		"aiValue": 435,
+		"growth": 5,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"h7Wild": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7Wild",
+				"icon": "h7/abilities/h7Wild",
+				"description": "{Wild}\nWhen meleed: attacks twice until its next turn"
+			},
+			"h7Rage": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7Rage",
+				"addInfo": {
+					"damage": 3,
+					"speed": 2
+				},
+				"icon": "h7/abilities/h7Rage",
+				"description": "{Rage}\nShot at: +3 dmg, +2 Speed, Mind immune 1 turn"
+			}
+		},
+		"graphics": {
+			"animation": "h7/Blackbear/battle.json",
+			"map": "h7/Blackbear/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/Blackbear/map/atkL.png",
+			"mapAttackFromRight": "h7/Blackbear/map/atkR.png",
+			"iconLarge": "h7/Blackbear/iconLarge.png",
+			"iconSmall": "h7/Blackbear/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h7/creature_battle_bear_attack.ogg",
+			"defend": "h7/creature_battle_bear_defend.ogg",
+			"wince": "h7/creature_battle_bear_hit.ogg",
+			"killed": "h7/creature_battle_bear_die.ogg",
+			"move": "h7/creature_battle_bear_move_01.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "MIND_IMMUNITY",
+					"description": "{Steadfast Mind}\nImmune to Mind spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h7FortressDefender": {
+		"name": {
+			"singular": "Warder",
+			"plural": "Warders"
+		},
+		"description": "Warders of the Coldiron clan meet enemy assaults with rock-like resolve. Bearing huge shields that symbolize the walls of the fortress, these warriors are an obstacle no foe can ignore.",
+		"faction": "highlands-town:highlands",
+		"level": 2,
+		"cost": {
+			"gold": 110
+		},
+		"speed": 4,
+		"hitPoints": 20,
+		"attack": 6,
+		"defense": 16,
+		"damage": {
+			"min": 1,
+			"max": 2
+		},
+		"doubleWide": false,
+		"fightValue": 130,
+		"aiValue": 145,
+		"growth": 9,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {},
+		"graphics": {
+			"animation": "h7/Defender/battle.json",
+			"map": "h7/Defender/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/Defender/map/atkL.png",
+			"mapAttackFromRight": "h7/Defender/map/atkR.png",
+			"iconLarge": "h7/Defender/iconLarge.png",
+			"iconSmall": "h7/Defender/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h7/creature_defender_attack.ogg",
+			"defend": "h7/creature_defender_attack.ogg",
+			"wince": "h7/creature_defender_hit.ogg",
+			"killed": "h7/creature_defender_die.ogg",
+			"move": "h7/creature_defender_move_01.ogg"
+		},
+		"upgrades": [
+			"h7FortressShieldguard"
+		],
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					3,
+					3,
+					3,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					3,
+					4,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					0,
+					1,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					3,
+					3,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "CHARGE_IMMUNITY",
+					"description": "{Steady Ranks}\nImmune to charge damage bonuses"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h7FortressDis": {
+		"name": {
+			"singular": "Dis",
+			"plural": "Disir"
+		},
+		"description": "With bodies like ash and majestic wings of fire, the Disir are symbols of Arkath. They are born on battlefields where many dwarves have fallen. Blessed by Arkath, the souls of the fallen dwarves gather, and their soul sparks give life to these mighty warrior spirits.",
+		"faction": "highlands-town:highlands",
+		"level": 4,
+		"cost": {
+			"gold": 305
+		},
+		"speed": 9,
+		"hitPoints": 28,
+		"attack": 7,
+		"defense": 7,
+		"damage": {
+			"min": 7,
+			"max": 9
+		},
+		"doubleWide": false,
+		"fightValue": 421,
+		"aiValue": 483,
+		"growth": 4,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"flying": {
+				"type": "FLYING"
+			},
+			"h7Soulfire": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7Soulfire",
+				"val": 2,
+				"icon": "h7/abilities/h7Soulfire",
+				"description": "{Soulfire}\nAdjacent allies +1 Morale, +2 Speed, 1 turn."
+			},
+			"h7AuraZone": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7AuraZone",
+				"val": 0,
+				"stacking": "h7AuraZone",
+				"propagator": "BATTLE_WIDE",
+				"hidden": true,
+				"description": "~"
+			}
+		},
+		"graphics": {
+			"animation": "h7/Dis/battle.json",
+			"map": "h7/Dis/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/Dis/map/atkL.png",
+			"mapAttackFromRight": "h7/Dis/map/atkR.png",
+			"iconLarge": "h7/Dis/iconLarge.png",
+			"iconSmall": "h7/Dis/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h7/creature_dis_attack.ogg",
+			"defend": "h7/creature_dis_defend.ogg",
+			"wince": "h7/creature_dis_hit.ogg",
+			"killed": "h7/creature_dis_die.ogg",
+			"startMoving": "h7/creature_dis_fly_start.ogg",
+			"endMoving": "h7/creature_dis_fly_end.ogg"
+		},
+		"upgrades": [
+			"h7FortressValkyrie"
+		],
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					5,
+					6,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_RETALIATION",
+					"description": "{Nimbleness}\nExtra retaliation each round"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "MIND_IMMUNITY",
+					"description": "{Steadfast Mind}\nImmune to Mind spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h7FortressEinherjar": {
+		"name": {
+			"singular": "Einherjar",
+			"plural": "Einherjar"
+		},
+		"description": "The Einherjar are Arkath's chosen champions, picked on the battlefield by the Valkyries and forged in the searing breath of dragons into the ultimate embodiment of war. Becoming an Einherjar is the lifelong dream of a dwarven warrior. But the glory is brief: in the end, the Einherjar are consumed by the very flames that give them their unmatched power.",
+		"faction": "highlands-town:highlands",
+		"level": 7,
+		"cost": {
+			"gold": 3365,
+			"gems": 2,
+			"sulfur": 1
+		},
+		"speed": 10,
+		"hitPoints": 243,
+		"attack": 17,
+		"defense": 27,
+		"damage": {
+			"min": 38,
+			"max": 45
+		},
+		"doubleWide": true,
+		"fightValue": 5190,
+		"aiValue": 6762,
+		"growth": 1,
+		"advMapAmount": {
+			"min": 1,
+			"max": 3
+		},
+		"abilities": {
+			"shooter": {
+				"type": "SHOOTER"
+			},
+			"vulnWater": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "water",
+				"val": -25,
+				"description": "{Water Vulnerability}\nTakes 25% more Water damage."
+			},
+			"h7MagmaBlood": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7MagmaBlood",
+				"val": 0,
+				"icon": "h7/abilities/h7MagmaBlood",
+				"description": "{Magma Blood}\nImmune to Fire curses; Fire spells kill max 1"
+			},
+			"h7HammerOfArkath": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7HammerOfArkath",
+				"val": 50,
+				"icon": "h7/abilities/h7HammerOfArkath",
+				"description": "{Hammer of Arkath}\nActive melee: all around target take 50% Fire"
+			},
+			"hammerAttack": {
+				"type": "PRIMARY_SKILL",
+				"subtype": "attack",
+				"val": 7,
+				"hidden": true,
+				"limiters": [
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "H7_HAMMER_ARMED_H7C"
+					}
+				]
+			},
+			"hammerRange": {
+				"type": "NO_DISTANCE_PENALTY",
+				"hidden": true,
+				"limiters": [
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "H7_HAMMER_ARMED_H7C"
+					}
+				]
+			},
+			"hammerFx": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7AbStrike",
+				"val": 0,
+				"hidden": true,
+				"stacking": "h7AbStrikeHammer",
+				"addInfo": {
+					"mode": "fx",
+					"mark": "H7_HAMMER_ARMED_H7C",
+					"ranged": true,
+					"animation": "h7/fx/h7abHammerHit"
+				}
+			},
+			"h7HammerRefund": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7HammerRefund",
+				"icon": "h7/abilities/h7ThrowingHammer",
+				"description": "{Throwing Hammer}\nOne shot only, +7 Attack, no range penalty\nRefunded if it fails to kill an enemy."
+			},
+			"h7SanctumTwin": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7SanctumTwin",
+				"hidden": true,
+				"description": "~",
+				"addInfo": {
+					"twin": "h7FortressArdentDragon",
+					"army": "h7FortressKoboldPathfinder,h7FortressShieldguard,h7FortressBlackbear,h7FortressValkyrie,h7FortressMagmaElemental,h7FortressRunePatriarch"
+				}
+			}
+		},
+		"graphics": {
+			"animation": "h7/Einherjar/battle.json",
+			"map": "h7/Einherjar/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/Einherjar/map/atkL.png",
+			"mapAttackFromRight": "h7/Einherjar/map/atkR.png",
+			"iconLarge": "h7/Einherjar/iconLarge.png",
+			"iconSmall": "h7/Einherjar/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"frameAngles": [
+					90,
+					60,
+					45,
+					30,
+					0,
+					-30,
+					-45,
+					-60,
+					-90
+				],
+				"offset": {
+					"upperX": -22,
+					"upperY": -52,
+					"middleX": -10,
+					"middleY": -75,
+					"lowerX": 49,
+					"lowerY": -68
+				},
+				"attackClimaxFrame": 7,
+				"projectile": "h7/projectiles/A_Projectile_Fortress_ThrowingHammer_s75.json"
+			}
+		},
+		"sound": {
+			"attack": "h7/creature_fire_giant_attack.ogg",
+			"shoot": "h7/creature_fire_giant_ability.ogg",
+			"defend": "h7/creature_fire_giant_defend.ogg",
+			"wince": "h7/creature_fire_giant_hit.ogg",
+			"killed": "h7/creature_fire_giant_die.ogg",
+			"move": "h7/creature_fire_giant_move_01.ogg"
+		},
+		"shots": 1,
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_WALL_PENALTY",
+					"description": "{Siege Shooter}\nNo damage loss when shooting over walls"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "MIND_IMMUNITY",
+					"description": "{Steadfast Mind}\nImmune to Mind spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE",
+					"description": "{Magic Resistance}\nChance to resist enemy spells"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					10,
+					20,
+					30,
+					40,
+					50
+				]
+			}
+		]
+	},
+	"h7FortressFireGiant": {
+		"name": {
+			"singular": "Fire Giant",
+			"plural": "Fire Giants"
+		},
+		"description": "To the dwarves, every volcanic eruption is a major event, a chance to offer a gift to their dragon god Arkath, and many warriors willingly leap into the magma. The few who survive this brutal ritual fuse with the elements of fire and rock. They become Fire Giants, basalt giants with lava flowing through their bodies.",
+		"faction": "highlands-town:highlands",
+		"level": 7,
+		"cost": {
+			"gold": 2590,
+			"gems": 1
+		},
+		"speed": 9,
+		"hitPoints": 243,
+		"attack": 14,
+		"defense": 27,
+		"damage": {
+			"min": 33,
+			"max": 40
+		},
+		"doubleWide": true,
+		"fightValue": 3588,
+		"aiValue": 4674,
+		"growth": 1,
+		"advMapAmount": {
+			"min": 1,
+			"max": 3
+		},
+		"abilities": {
+			"h7WarfareGuard": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7WarfareGuard",
+				"hidden": true,
+				"description": "~",
+				"addInfo": {
+					"faction": "bastille",
+					"army": "h7FortressKoboldScout,h7FortressDefender,h7FortressBear,h7FortressDis,h7FortressLavaElemental,h7FortressRunePriest"
+				}
+			},
+			"vulnWater": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "water",
+				"val": -25,
+				"description": "{Water Vulnerability}\nTakes 25% more Water damage."
+			},
+			"h7MagmaBlood": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7MagmaBlood",
+				"val": 0,
+				"icon": "h7/abilities/h7MagmaBlood",
+				"description": "{Magma Blood}\nImmune to Fire curses; Fire spells kill max 1"
+			}
+		},
+		"graphics": {
+			"animation": "h7/FireGiant/battle.json",
+			"map": "h7/FireGiant/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/FireGiant/map/atkL.png",
+			"mapAttackFromRight": "h7/FireGiant/map/atkR.png",
+			"iconLarge": "h7/FireGiant/iconLarge.png",
+			"iconSmall": "h7/FireGiant/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h7/creature_fire_giant_attack.ogg",
+			"defend": "h7/creature_fire_giant_defend.ogg",
+			"wince": "h7/creature_fire_giant_hit.ogg",
+			"killed": "h7/creature_fire_giant_die.ogg",
+			"move": "h7/creature_fire_giant_move_01.ogg"
+		},
+		"upgrades": [
+			"h7FortressEinherjar"
+		],
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "MIND_IMMUNITY",
+					"description": "{Steadfast Mind}\nImmune to Mind spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE",
+					"description": "{Magic Resistance}\nChance to resist enemy spells"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					10,
+					20,
+					30,
+					40,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "BLOCKS_RETALIATION",
+					"description": "{No Retaliation}\nEnemy cannot retaliate when attacked"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true
+				]
+			}
+		]
+	},
+	"h7FortressKoboldPathfinder": {
+		"name": {
+			"singular": "Kobold Pathfinder",
+			"plural": "Kobold Pathfinders"
+		},
+		"description": "With their animal nature, Kobolds have a strong affinity with the wilds. They have a keen sense of smell, and their fur protects them from the harsh weather common in the mountains. The dwarves of Thardugard soon recognized the Kobolds' gifts and put them to good use as trackers and pathfinders.",
+		"faction": "highlands-town:highlands",
+		"level": 1,
+		"cost": {
+			"gold": 55
+		},
+		"speed": 7,
+		"hitPoints": 5,
+		"attack": 4,
+		"defense": 3,
+		"damage": {
+			"min": 2,
+			"max": 2
+		},
+		"doubleWide": false,
+		"fightValue": 75,
+		"aiValue": 76,
+		"growth": 16,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"shooter": {
+				"type": "SHOOTER"
+			},
+			"h7Nimble": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7Nimble",
+				"val": 13,
+				"icon": "h7/abilities/h7Nimble",
+				"description": "{Nimble}\n+13 Defense vs 2-hex foes; they can't flank it"
+			},
+			"h7NimbleMark": {
+				"type": "H7_NO_FLANK_H7C",
+				"hidden": true,
+				"val": 2,
+				"stacking": "h7Nimble"
+			}
+		},
+		"graphics": {
+			"animation": "h7/KoboldPathfinder/battle.json",
+			"map": "h7/KoboldPathfinder/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/KoboldPathfinder/map/atkL.png",
+			"mapAttackFromRight": "h7/KoboldPathfinder/map/atkR.png",
+			"iconLarge": "h7/KoboldPathfinder/iconLarge.png",
+			"iconSmall": "h7/KoboldPathfinder/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"frameAngles": [
+					90,
+					60,
+					45,
+					30,
+					0,
+					-30,
+					-45,
+					-60,
+					-90
+				],
+				"offset": {
+					"upperX": 34,
+					"upperY": -78,
+					"middleX": 27,
+					"middleY": -67,
+					"lowerX": -8,
+					"lowerY": -63
+				},
+				"attackClimaxFrame": 6,
+				"projectile": "h7/projectiles/H7CrossbowmanProjectile.json"
+			}
+		},
+		"sound": {
+			"attack": "h7/creature_kobold_scout_attack.ogg",
+			"shoot": "h7/creature_kobold_scout_attack_ranged.ogg",
+			"defend": "h7/creature_kobold_scout_defend.ogg",
+			"wince": "h7/creature_kobold_scout_hit.ogg",
+			"killed": "h7/creature_kobold_scout_die.ogg",
+			"move": "h7/creature_kobold_scout_move_01.ogg"
+		},
+		"shots": 8,
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_WALL_PENALTY",
+					"description": "{Siege Shooter}\nNo damage loss when shooting over walls"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h7FortressKoboldScout": {
+		"name": {
+			"singular": "Kobold Scout",
+			"plural": "Kobold Scouts"
+		},
+		"description": "As a beastman race native to the Aegin Peninsula, Kobolds do not like discussing how they were created. Judging by their size and customs, people guess that Kobolds are a fusion of dwarves and large rodents. The way the dwarves of Thardugard welcomed them into their clans without a second thought seems to support this theory.",
+		"faction": "highlands-town:highlands",
+		"level": 1,
+		"cost": {
+			"gold": 45
+		},
+		"speed": 6,
+		"hitPoints": 4,
+		"attack": 1,
+		"defense": 3,
+		"damage": {
+			"min": 2,
+			"max": 2
+		},
+		"doubleWide": false,
+		"fightValue": 63,
+		"aiValue": 63,
+		"growth": 16,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"shooter": {
+				"type": "SHOOTER"
+			}
+		},
+		"graphics": {
+			"animation": "h7/KoboldScout/battle.json",
+			"map": "h7/KoboldScout/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/KoboldScout/map/atkL.png",
+			"mapAttackFromRight": "h7/KoboldScout/map/atkR.png",
+			"iconLarge": "h7/KoboldScout/iconLarge.png",
+			"iconSmall": "h7/KoboldScout/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"frameAngles": [
+					90,
+					60,
+					45,
+					30,
+					0,
+					-30,
+					-45,
+					-60,
+					-90
+				],
+				"offset": {
+					"upperX": 36,
+					"upperY": -78,
+					"middleX": 28,
+					"middleY": -66,
+					"lowerX": -8,
+					"lowerY": -62
+				},
+				"attackClimaxFrame": 6,
+				"projectile": "h7/projectiles/H7CrossbowmanProjectile.json"
+			}
+		},
+		"sound": {
+			"attack": "h7/creature_kobold_scout_attack.ogg",
+			"shoot": "h7/creature_kobold_scout_attack_ranged.ogg",
+			"defend": "h7/creature_kobold_scout_defend.ogg",
+			"wince": "h7/creature_kobold_scout_hit.ogg",
+			"killed": "h7/creature_kobold_scout_die.ogg",
+			"move": "h7/creature_kobold_scout_move_01.ogg"
+		},
+		"shots": 8,
+		"upgrades": [
+			"h7FortressKoboldPathfinder"
+		],
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_WALL_PENALTY",
+					"description": "{Siege Shooter}\nNo damage loss when shooting over walls"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h7FortressLavaElemental": {
+		"name": {
+			"singular": "Lava Elemental",
+			"plural": "Lava Elementals"
+		},
+		"description": "Made of molten rock and lava from Grimheim's great volcano, Lava Elementals take many forms. They are often born spontaneously in flowing lava, but Rune Clerics can make these magical creatures serve the dwarven kingdom.",
+		"faction": "highlands-town:highlands",
+		"level": 5,
+		"cost": {
+			"gold": 420
+		},
+		"speed": 5,
+		"hitPoints": 50,
+		"attack": 11,
+		"defense": 16,
+		"damage": {
+			"min": 11,
+			"max": 13
+		},
+		"doubleWide": true,
+		"fightValue": 595,
+		"aiValue": 662,
+		"growth": 3,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"immFire": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "fire",
+				"val": 50,
+				"description": "{Fire Immunity}\nImmune to Fire curses; half Fire damage."
+			},
+			"vulnWater": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "water",
+				"val": -25,
+				"description": "{Water Vulnerability}\nTakes 25% more Water damage."
+			},
+			"h7SchoolImmunity_fire": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7SchoolImmunity",
+				"val": 0,
+				"addInfo": {
+					"school": "fire"
+				},
+				"stacking": "h7SchoolImmunity_fire",
+				"hidden": true,
+				"description": "~"
+			}
+		},
+		"graphics": {
+			"animation": "h7/LavaElemental/battle.json",
+			"map": "h7/LavaElemental/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/LavaElemental/map/atkL.png",
+			"mapAttackFromRight": "h7/LavaElemental/map/atkR.png",
+			"iconLarge": "h7/LavaElemental/iconLarge.png",
+			"iconSmall": "h7/LavaElemental/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h7/creature_lava_elemental_attack.ogg",
+			"defend": "h7/creature_lava_elemental_defend.ogg",
+			"wince": "h7/creature_lava_elemental_hit.ogg",
+			"killed": "h7/creature_lava_elemental_die.ogg",
+			"move": "h7/creature_lava_elemental_move_01.ogg"
+		},
+		"upgrades": [
+			"h7FortressMagmaElemental"
+		],
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					3,
+					4,
+					5,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					3,
+					4,
+					4,
+					6,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					2,
+					3,
+					3,
+					4,
+					5,
+					6,
+					6,
+					7
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					7
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "MIND_IMMUNITY",
+					"description": "{Steadfast Mind}\nImmune to Mind spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "BLOCKS_RETALIATION",
+					"description": "{No Retaliation}\nEnemy cannot retaliate when attacked"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h7FortressMagmaElemental": {
+		"name": {
+			"singular": "Magma Elemental",
+			"plural": "Magma Elementals"
+		},
+		"description": "Magma Elementals are the ultimate form of Lava Elementals, born in the most spectacular and destructive eruptions. These spirits are an unstoppable force of nature, tireless, burning everything in their path.",
+		"faction": "highlands-town:highlands",
+		"level": 5,
+		"cost": {
+			"gold": 560
+		},
+		"speed": 7,
+		"hitPoints": 63,
+		"attack": 13,
+		"defense": 19,
+		"damage": {
+			"min": 11,
+			"max": 13
+		},
+		"doubleWide": true,
+		"fightValue": 944,
+		"aiValue": 1051,
+		"growth": 3,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"immFire": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "fire",
+				"val": 50,
+				"description": "{Fire Immunity}\nImmune to Fire curses; half Fire damage."
+			},
+			"vulnWater": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "water",
+				"val": -25,
+				"description": "{Water Vulnerability}\nTakes 25% more Water damage."
+			},
+			"h7SchoolImmunity_fire": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7SchoolImmunity",
+				"val": 0,
+				"addInfo": {
+					"school": "fire"
+				},
+				"stacking": "h7SchoolImmunity_fire",
+				"hidden": true,
+				"description": "~"
+			},
+			"cast_h7AbMagmaPond": {
+				"type": "SPELLCASTER",
+				"subtype": "h7AbMagmaPond",
+				"val": 0,
+				"icon": "h7/abilities/h7MagmaPond",
+				"description": "{Magma Pond}\nRing around it is magma 1 round: 12×stack Fire"
+			},
+			"casts_h7AbMagmaPond": {
+				"type": "CASTS",
+				"val": 1
+			}
+		},
+		"graphics": {
+			"animation": "h7/MagmaElemental/battle.json",
+			"map": "h7/MagmaElemental/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/MagmaElemental/map/atkL.png",
+			"mapAttackFromRight": "h7/MagmaElemental/map/atkR.png",
+			"iconLarge": "h7/MagmaElemental/iconLarge.png",
+			"iconSmall": "h7/MagmaElemental/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h7/creature_lava_elemental_attack.ogg",
+			"defend": "h7/creature_lava_elemental_defend.ogg",
+			"wince": "h7/creature_lava_elemental_hit.ogg",
+			"killed": "h7/creature_lava_elemental_die.ogg",
+			"move": "h7/creature_lava_elemental_move_01.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					3,
+					4,
+					5,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					3,
+					4,
+					4,
+					6,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					2,
+					3,
+					3,
+					4,
+					5,
+					6,
+					6,
+					7
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					7
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "MIND_IMMUNITY",
+					"description": "{Steadfast Mind}\nImmune to Mind spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "BLOCKS_RETALIATION",
+					"description": "{No Retaliation}\nEnemy cannot retaliate when attacked"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h7FortressRedDragon": {
+		"name": {
+			"singular": "Scarlet Dragon",
+			"plural": "Scarlet Dragons"
+		},
+		"description": "Scarlet Dragons are incarnations of Arkath, the Dragon of Fire and god of the dwarves. These majestic fire-breathing beasts are the guardians of Grimheim, able to turn the dwarves' enemies into a wisp of smoke.",
+		"faction": "highlands-town:highlands",
+		"level": 7,
+		"cost": {
+			"gold": 2590,
+			"crystal": 1
+		},
+		"speed": 11,
+		"hitPoints": 182,
+		"attack": 24,
+		"defense": 14,
+		"damage": {
+			"min": 30,
+			"max": 35
+		},
+		"doubleWide": true,
+		"fightValue": 3775,
+		"aiValue": 4918,
+		"growth": 1,
+		"advMapAmount": {
+			"min": 1,
+			"max": 3
+		},
+		"abilities": {
+			"flying": {
+				"type": "FLYING"
+			},
+			"breath": {
+				"type": "TWO_HEX_ATTACK_BREATH",
+				"description": "{Fire Breath}\nHits 2 hexes, fire stays 1 round: 20×stack dmg"
+			},
+			"immFire": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "fire",
+				"val": 50,
+				"description": "{Fire Immunity}\nImmune to Fire curses; half Fire damage."
+			},
+			"dragonNature": {
+				"type": "DRAGON_NATURE"
+			},
+			"skeletonTarget": {
+				"type": "SKELETON_TRANSFORMER_TARGET",
+				"subtype": "boneDragon",
+				"hidden": true
+			},
+			"h7SchoolImmunity_fire": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7SchoolImmunity",
+				"val": 0,
+				"addInfo": {
+					"school": "fire"
+				},
+				"stacking": "h7SchoolImmunity_fire",
+				"hidden": true,
+				"description": "~"
+			},
+			"h7FireBreath": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7FireBreath",
+				"val": 20,
+				"addInfo": {
+					"turns": 2
+				},
+				"hidden": true,
+				"description": "~"
+			}
+		},
+		"graphics": {
+			"animation": "h7/RedDragon/battle.json",
+			"map": "h7/RedDragon/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/RedDragon/map/atkL.png",
+			"mapAttackFromRight": "h7/RedDragon/map/atkR.png",
+			"iconLarge": "h7/RedDragon/iconLarge.png",
+			"iconSmall": "h7/RedDragon/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h7/creature_red_dragon_attack.ogg",
+			"defend": "h7/creature_red_dragon_defend.ogg",
+			"wince": "h7/creature_red_dragon_hit.ogg",
+			"killed": "h7/creature_red_dragon_die.ogg",
+			"move": "h7/creature_red_dragon_move_01.ogg",
+			"startMoving": "h7/creature_red_dragon_fly_start.ogg",
+			"endMoving": "h7/creature_red_dragon_fly_end.ogg"
+		},
+		"upgrades": [
+			"h7FortressArdentDragon"
+		],
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_RETALIATION",
+					"description": "{Nimbleness}\nExtra retaliation each round"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "MIND_IMMUNITY",
+					"description": "{Steadfast Mind}\nImmune to Mind spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE",
+					"description": "{Magic Resistance}\nChance to resist enemy spells"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					10,
+					20,
+					30,
+					40,
+					50
+				]
+			}
+		]
+	},
+	"h7FortressRunePatriarch": {
+		"name": {
+			"singular": "Rune Hierarch",
+			"plural": "Rune Hierarchs"
+		},
+		"description": "Only the most skilled Rune Clerics are chosen to undergo a sacred ritual in the most secret halls of the Deepfire clan and become Rune Hierarchs. They are the closest thing to an impartial power in dwarven society, and are often sent to settle clan disputes that might grow into civil war.",
+		"faction": "highlands-town:highlands",
+		"level": 6,
+		"cost": {
+			"gold": 1170
+		},
+		"speed": 7,
+		"hitPoints": 83,
+		"attack": 14,
+		"defense": 13,
+		"damage": {
+			"min": 14,
+			"max": 18
+		},
+		"doubleWide": false,
+		"fightValue": 1893,
+		"aiValue": 2235,
+		"growth": 2,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"shooter": {
+				"type": "SHOOTER"
+			},
+			"h7RuneOfBalance": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7RuneOfBalance",
+				"val": 1,
+				"icon": "h7/abilities/h7RuneOfBalance",
+				"description": "{Rune of Balance}\nSet at start: nearby allies split attack dmg."
+			},
+			"cast_h7AbRuneOfBalance": {
+				"type": "SPELLCASTER",
+				"subtype": "h7AbRuneOfBalance",
+				"val": 0,
+				"hidden": true
+			},
+			"cast_h7AbRuneCleanse": {
+				"type": "SPELLCASTER",
+				"subtype": "h7AbRuneCleanse",
+				"val": 0,
+				"hidden": true
+			},
+			"casts_h7AbRuneOfBalance": {
+				"type": "CASTS",
+				"val": 1
+			},
+			"noDefault_h7AbRuneOfBalance": {
+				"type": "NO_SPELLCAST_BY_DEFAULT",
+				"hidden": true
+			},
+			"cast_h7AbRuneTeleport": {
+				"type": "SPELLCASTER",
+				"subtype": "h7AbRuneTeleport",
+				"val": 0,
+				"icon": "h7/abilities/h7RuneTeleport",
+				"description": "{Rune Teleport}\nJumps to own Rune of Balance; aura moves to it"
+			}
+		},
+		"graphics": {
+			"animation": "h7/RunePatriarch/battle.json",
+			"map": "h7/RunePatriarch/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/RunePatriarch/map/atkL.png",
+			"mapAttackFromRight": "h7/RunePatriarch/map/atkR.png",
+			"iconLarge": "h7/RunePatriarch/iconLarge.png",
+			"iconSmall": "h7/RunePatriarch/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"frameAngles": [
+					90,
+					60,
+					45,
+					30,
+					0,
+					-30,
+					-45,
+					-60,
+					-90
+				],
+				"offset": {
+					"upperX": 21,
+					"upperY": -78,
+					"middleX": 37,
+					"middleY": -68,
+					"lowerX": 18,
+					"lowerY": -56
+				},
+				"attackClimaxFrame": 7,
+				"projectile": "h7/projectiles/_none.json"
+			}
+		},
+		"sound": {
+			"attack": "h7/creature_rune_priest_attack.ogg",
+			"shoot": "h7/creature_rune_priest_attack_ranged.ogg",
+			"defend": "h7/creature_rune_priest_defend.ogg",
+			"wince": "h7/creature_rune_priest_hit.ogg",
+			"killed": "h7/creature_rune_priest_die.ogg",
+			"move": "h7/creature_rune_priest_move_01.ogg"
+		},
+		"shots": 20,
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					2,
+					3,
+					4,
+					5,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_WALL_PENALTY",
+					"description": "{Siege Shooter}\nNo damage loss when shooting over walls"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_DISTANCE_PENALTY",
+					"description": "{Sharpshooter}\nNo penalty for long-range shots"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h7FortressRunePriest": {
+		"name": {
+			"singular": "Rune Cleric",
+			"plural": "Rune Clerics"
+		},
+		"description": "Rune Clerics are a unique caste in dwarven society. Only children born with golden eyes, the mark of Arkath, are chosen and raised to become these battle priests. Rune Clerics carve intricate runic marks into their own skin, turning their bodies into channels to the elemental powers of the Spirit World.",
+		"faction": "highlands-town:highlands",
+		"level": 6,
+		"cost": {
+			"gold": 900
+		},
+		"speed": 7,
+		"hitPoints": 80,
+		"attack": 14,
+		"defense": 11,
+		"damage": {
+			"min": 13,
+			"max": 15
+		},
+		"doubleWide": false,
+		"fightValue": 1266,
+		"aiValue": 1495,
+		"growth": 2,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"shooter": {
+				"type": "SHOOTER"
+			},
+			"h7RuneOfBalance": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7RuneOfBalance",
+				"val": 1,
+				"icon": "h7/abilities/h7RuneOfBalance",
+				"description": "{Rune of Balance}\nSet at start: nearby allies split attack dmg."
+			},
+			"cast_h7AbRuneOfBalance": {
+				"type": "SPELLCASTER",
+				"subtype": "h7AbRuneOfBalance",
+				"val": 0,
+				"hidden": true
+			},
+			"cast_h7AbRuneCleanse": {
+				"type": "SPELLCASTER",
+				"subtype": "h7AbRuneCleanse",
+				"val": 0,
+				"hidden": true
+			},
+			"casts_h7AbRuneOfBalance": {
+				"type": "CASTS",
+				"val": 1
+			},
+			"noDefault_h7AbRuneOfBalance": {
+				"type": "NO_SPELLCAST_BY_DEFAULT",
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h7/RunePriest/battle.json",
+			"map": "h7/RunePriest/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/RunePriest/map/atkL.png",
+			"mapAttackFromRight": "h7/RunePriest/map/atkR.png",
+			"iconLarge": "h7/RunePriest/iconLarge.png",
+			"iconSmall": "h7/RunePriest/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"frameAngles": [
+					90,
+					60,
+					45,
+					30,
+					0,
+					-30,
+					-45,
+					-60,
+					-90
+				],
+				"offset": {
+					"upperX": 21,
+					"upperY": -78,
+					"middleX": 37,
+					"middleY": -68,
+					"lowerX": 18,
+					"lowerY": -56
+				},
+				"attackClimaxFrame": 7,
+				"projectile": "h7/projectiles/_none.json"
+			}
+		},
+		"sound": {
+			"attack": "h7/creature_rune_priest_attack.ogg",
+			"shoot": "h7/creature_rune_priest_attack_ranged.ogg",
+			"defend": "h7/creature_rune_priest_defend.ogg",
+			"wince": "h7/creature_rune_priest_hit.ogg",
+			"killed": "h7/creature_rune_priest_die.ogg",
+			"move": "h7/creature_rune_priest_move_01.ogg"
+		},
+		"shots": 20,
+		"upgrades": [
+			"h7FortressRunePatriarch"
+		],
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					2,
+					3,
+					4,
+					5,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_WALL_PENALTY",
+					"description": "{Siege Shooter}\nNo damage loss when shooting over walls"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_DISTANCE_PENALTY",
+					"description": "{Sharpshooter}\nNo penalty for long-range shots"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h7FortressShieldguard": {
+		"name": {
+			"singular": "Shield Keeper",
+			"plural": "Shield Keepers"
+		},
+		"description": "Shield Keepers are battle-hardened veterans whose duty is to protect the other dwarven troops. With their heavy shields, Shield Keepers can form an unbreakable shield wall that reduces all damage dealt by the enemy. When they do, they always bring utterly deadly power.",
+		"faction": "highlands-town:highlands",
+		"level": 2,
+		"cost": {
+			"gold": 145
+		},
+		"speed": 4,
+		"hitPoints": 25,
+		"attack": 9,
+		"defense": 18,
+		"damage": {
+			"min": 1,
+			"max": 2
+		},
+		"doubleWide": false,
+		"fightValue": 165,
+		"aiValue": 184,
+		"growth": 9,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"h7DwarvenShieldwall": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7DwarvenShieldwall",
+				"val": 9,
+				"icon": "h7/abilities/h7DwarvenShieldwall",
+				"description": "{Dwarven Shieldwall}\nFront/side hits: +9 Defense, can't stun it"
+			},
+			"h7ShieldwallMark": {
+				"type": "H7_NO_INCAPACITATE_H7C",
+				"hidden": true,
+				"val": 1
+			}
+		},
+		"graphics": {
+			"animation": "h7/Shieldguard/battle.json",
+			"map": "h7/Shieldguard/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/Shieldguard/map/atkL.png",
+			"mapAttackFromRight": "h7/Shieldguard/map/atkR.png",
+			"iconLarge": "h7/Shieldguard/iconLarge.png",
+			"iconSmall": "h7/Shieldguard/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h7/creature_defender_attack.ogg",
+			"defend": "h7/creature_defender_attack.ogg",
+			"wince": "h7/creature_defender_hit.ogg",
+			"killed": "h7/creature_defender_die.ogg",
+			"move": "h7/creature_defender_move_01.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					3,
+					3,
+					3,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					3,
+					4,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					0,
+					1,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					3,
+					3,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "CHARGE_IMMUNITY",
+					"description": "{Steady Ranks}\nImmune to charge damage bonuses"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h7FortressValkyrie": {
+		"name": {
+			"singular": "Valkyrie",
+			"plural": "Valkyries"
+		},
+		"description": "Valkyries are the mightiest of the Disir and the heralds of Arkath himself. They are the patron spirits of the dwarven clans and lend support on the battlefield. When Valkyries appear in battle, dwarven warriors fight all the harder, because the souls of fallen heroes are sometimes reborn as mighty Einherjar.",
+		"faction": "highlands-town:highlands",
+		"level": 4,
+		"cost": {
+			"gold": 400
+		},
+		"speed": 12,
+		"hitPoints": 34,
+		"attack": 9,
+		"defense": 10,
+		"damage": {
+			"min": 7,
+			"max": 9
+		},
+		"doubleWide": false,
+		"fightValue": 580,
+		"aiValue": 664,
+		"growth": 4,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"flying": {
+				"type": "FLYING"
+			},
+			"fireShield": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "fireShield",
+				"val": 25,
+				"stacking": "fireShield",
+				"description": "{Fire Shield}\nMelee attackers/retaliators take 25% as Fire"
+			},
+			"h7Soulfire": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7Soulfire",
+				"val": 2,
+				"icon": "h7/abilities/h7Soulfire",
+				"description": "{Soulfire}\nAdjacent allies +1 Morale, +2 Speed, 1 turn."
+			},
+			"h7AuraZone": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7AuraZone",
+				"val": 0,
+				"stacking": "h7AuraZone",
+				"propagator": "BATTLE_WIDE",
+				"hidden": true,
+				"description": "~"
+			}
+		},
+		"graphics": {
+			"animation": "h7/Valkyrie/battle.json",
+			"map": "h7/Valkyrie/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/Valkyrie/map/atkL.png",
+			"mapAttackFromRight": "h7/Valkyrie/map/atkR.png",
+			"iconLarge": "h7/Valkyrie/iconLarge.png",
+			"iconSmall": "h7/Valkyrie/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h7/creature_dis_attack.ogg",
+			"defend": "h7/creature_dis_defend.ogg",
+			"wince": "h7/creature_dis_hit.ogg",
+			"killed": "h7/creature_dis_die.ogg",
+			"startMoving": "h7/creature_dis_fly_start.ogg",
+			"endMoving": "h7/creature_dis_fly_end.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					5,
+					6,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_RETALIATION",
+					"description": "{Nimbleness}\nExtra retaliation each round"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "MIND_IMMUNITY",
+					"description": "{Steadfast Mind}\nImmune to Mind spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true
+				]
+			}
+		]
+	}
+}

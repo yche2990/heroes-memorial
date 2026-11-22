@@ -1,0 +1,3609 @@
+{
+	"h7DungeonAssassin": {
+		"name": {
+			"singular": "Assassin",
+			"plural": "Assassins"
+		},
+		"description": "Dark Elf Assassins are like Malassa's shadows. Moving in darkness, they have mastered the art of the stab in the back. Assassins usually dress in black, and their favorite weapons are a pair of sharp serrated daggers.\nYoung dark elves must master many skills to survive in Ygg-Chall, including magic, alchemy, swordsmanship and, of course, assassination.",
+		"faction": "dungeon",
+		"level": 2,
+		"cost": {
+			"gold": 120
+		},
+		"speed": 6,
+		"hitPoints": 11,
+		"attack": 9,
+		"defense": 2,
+		"damage": {
+			"min": 2,
+			"max": 4
+		},
+		"doubleWide": false,
+		"fightValue": 138,
+		"aiValue": 155,
+		"growth": 8,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"h7Backstab": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7Backstab",
+				"icon": "h7/abilities/h7Backstab",
+				"description": "{Backstab}\nMelee +50% dmg vs foes hit by allies this turn",
+				"val": 50
+			}
+		},
+		"graphics": {
+			"animation": "h7/Assassin/battle.json",
+			"map": "h7/Assassin/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/Assassin/map/atkL.png",
+			"mapAttackFromRight": "h7/Assassin/map/atkR.png",
+			"iconLarge": "h7/Assassin/iconLarge.png",
+			"iconSmall": "h7/Assassin/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h7/creature_assassin_attack.ogg",
+			"defend": "h7/creature_assassin_defend.ogg",
+			"wince": "h7/creature_assassin_hit.ogg",
+			"killed": "h7/creature_assassin_die.ogg",
+			"move": "h7/creature_assassin_move.ogg"
+		},
+		"upgrades": [
+			"h7DungeonShade"
+		],
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					3,
+					3,
+					3,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					3,
+					4,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					0,
+					1,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					3,
+					3,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "CHARGE_IMMUNITY",
+					"description": "{Steady Ranks}\nImmune to charge damage bonuses"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h7DungeonBlackDragon": {
+		"name": {
+			"singular": "Black Dragon",
+			"plural": "Black Dragons"
+		},
+		"description": "The final form of the Shade Dragon is the legendary Black Dragon. On its wings, the Eyes of Malassa are replaced by intricate patterns of fading light, like galaxies being swallowed by endless dark space.\nSo, who wins: a Black Dragon or a Titan?",
+		"faction": "dungeon",
+		"level": 7,
+		"cost": {
+			"gold": 3365,
+			"sulfur": 2,
+			"mercury": 1
+		},
+		"speed": 18,
+		"hitPoints": 204,
+		"attack": 17,
+		"defense": 16,
+		"damage": {
+			"min": 40,
+			"max": 48
+		},
+		"doubleWide": true,
+		"fightValue": 5137,
+		"aiValue": 6693,
+		"growth": 1,
+		"advMapAmount": {
+			"min": 1,
+			"max": 3
+		},
+		"abilities": {
+			"flying": {
+				"type": "FLYING"
+			},
+			"magicResist": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "any",
+				"val": 50,
+				"description": "{Magic Immunity}\nImmune to curses; takes half spell damage."
+			},
+			"breath": {
+				"type": "TWO_HEX_ATTACK_BREATH",
+				"description": "{Withering Breath}\nBreath hits two hexes."
+			},
+			"dragonNature": {
+				"type": "DRAGON_NATURE"
+			},
+			"skeletonTarget": {
+				"type": "SKELETON_TRANSFORMER_TARGET",
+				"subtype": "boneDragon",
+				"hidden": true
+			},
+			"h7MagicImmunity": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7MagicImmunity",
+				"val": 0,
+				"addInfo": {
+					"school": "any"
+				},
+				"hidden": true,
+				"description": "~"
+			},
+			"h7AcidDot": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7AcidDot",
+				"icon": "h7/abilities/h7WitheringBreath",
+				"description": "{Withering Breath}\nAttacked foes take 50%, 25% dmg next 2 rounds",
+				"addInfo": {
+					"kind": "wither",
+					"school": "dark"
+				}
+			},
+			"h7SanctumTwin": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7SanctumTwin",
+				"hidden": true,
+				"description": "~",
+				"addInfo": {
+					"twin": "h7DungeonDarkHydra",
+					"army": "h7DungeonTracker,h7DungeonShade,h7DungeonChthonian,h7DungeonMedusaSorceress,h7DungeonSoulless,h7DungeonMinotaurGuard"
+				}
+			}
+		},
+		"graphics": {
+			"animation": "h7/BlackDragon/battle.json",
+			"map": "h7/BlackDragon/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/BlackDragon/map/atkL.png",
+			"mapAttackFromRight": "h7/BlackDragon/map/atkR.png",
+			"iconLarge": "h7/BlackDragon/iconLarge.png",
+			"iconSmall": "h7/BlackDragon/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h7/creature_shadow_dragon_attack.ogg",
+			"defend": "h7/creature_shadow_dragon_defend.ogg",
+			"wince": "h7/creature_shadow_dragon_hit.ogg",
+			"killed": "h7/creature_shadow_dragon_die.ogg",
+			"move": "h7/creature_shadow_dragon_move.ogg",
+			"startMoving": "h7/creature_shadow_dragon_fly_start.ogg",
+			"endMoving": "h7/creature_shadow_dragon_fly_end.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_RETALIATION",
+					"description": "{Nimbleness}\nExtra retaliation each round"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "MIND_IMMUNITY",
+					"description": "{Steadfast Mind}\nImmune to Mind spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE",
+					"description": "{Magic Resistance}\nChance to resist enemy spells"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					10,
+					20,
+					30,
+					40,
+					50
+				]
+			}
+		]
+	},
+	"h7DungeonCaveHydra": {
+		"name": {
+			"singular": "Cave Hydra",
+			"plural": "Cave Hydras"
+		},
+		"description": "Hydras are among the most powerful magical creatures in Ashan. Affected by the primal magic released in the Mythic Age, these giant serpents mutated and grew several heads, letting them attack many enemies at once. The dark elves have learned to tame the Cave Hydras that live in the Bottomless Deep.\nA Hydra's bite is terrifying, and depending on the kind of dragon blood involved in the Hydra's birth, it has different effects on its poor victims.",
+		"faction": "dungeon",
+		"level": 7,
+		"cost": {
+			"gold": 2590,
+			"crystal": 1
+		},
+		"speed": 13,
+		"hitPoints": 227,
+		"attack": 21,
+		"defense": 16,
+		"damage": {
+			"min": 32,
+			"max": 43
+		},
+		"doubleWide": true,
+		"fightValue": 3600,
+		"aiValue": 4690,
+		"growth": 1,
+		"advMapAmount": {
+			"min": 1,
+			"max": 3
+		},
+		"abilities": {
+			"h7WarfareGuard": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7WarfareGuard",
+				"hidden": true,
+				"description": "~",
+				"addInfo": {
+					"faction": "dungeon",
+					"army": "h7DungeonStalker,h7DungeonAssassin,h7DungeonTroglodyte,h7DungeonMedusa,h7DungeonStrider,h7DungeonMinotaur"
+				}
+			},
+			"sixHeaded": {
+				"type": "ATTACKS_ALL_ADJACENT",
+				"description": "{Six-Headed Attack}\nHits target and all adjacent foes in wide arc"
+			},
+			"skeletonTarget": {
+				"type": "SKELETON_TRANSFORMER_TARGET",
+				"subtype": "boneDragon",
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h7/CaveHydra/battle.json",
+			"map": "h7/CaveHydra/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/CaveHydra/map/atkL.png",
+			"mapAttackFromRight": "h7/CaveHydra/map/atkR.png",
+			"iconLarge": "h7/CaveHydra/iconLarge.png",
+			"iconSmall": "h7/CaveHydra/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h7/creature_cave_hydra_attack.ogg",
+			"defend": "h7/creature_cave_hydra_defend.ogg",
+			"wince": "h7/creature_cave_hydra_hit.ogg",
+			"killed": "h7/creature_cave_hydra_die.ogg",
+			"move": "h7/creature_cave_hydra_move.ogg"
+		},
+		"upgrades": [
+			"h7DungeonDarkHydra"
+		],
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "MIND_IMMUNITY",
+					"description": "{Steadfast Mind}\nImmune to Mind spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE",
+					"description": "{Magic Resistance}\nChance to resist enemy spells"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					10,
+					20,
+					30,
+					40,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "BLOCKS_RETALIATION",
+					"description": "{No Retaliation}\nEnemy cannot retaliate when attacked"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true
+				]
+			}
+		]
+	},
+	"h7DungeonChthonian": {
+		"name": {
+			"singular": "Chthonian",
+			"plural": "Chthonians"
+		},
+		"description": "After decades of digging tunnels deep under Ashan, some Troglodytes take on traits of the rock and minerals they dig through. This change makes them immune to all forms of physical damage, earning them the name Chthonians.\nRumor has it that Troglodytes slowly harden and finally become pillars of native rock, becoming part of the tunnels and caves like their kin.",
+		"faction": "dungeon",
+		"level": 3,
+		"cost": {
+			"gold": 270
+		},
+		"speed": 7,
+		"hitPoints": 31,
+		"attack": 12,
+		"defense": 8,
+		"damage": {
+			"min": 4,
+			"max": 5
+		},
+		"doubleWide": false,
+		"fightValue": 327,
+		"aiValue": 388,
+		"growth": 6,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"flying": {
+				"type": "FLYING"
+			},
+			"blindImmunity": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "blind",
+				"description": "{Eyeless}\nBorn blind; unaffected by Blind effects."
+			},
+			"immEarth": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "earth",
+				"val": 50,
+				"description": "{Earth Immunity}\nImmune to Earth curses; half Earth damage."
+			},
+			"h7SchoolImmunity_earth": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7SchoolImmunity",
+				"val": 0,
+				"addInfo": {
+					"school": "earth"
+				},
+				"stacking": "h7SchoolImmunity_earth",
+				"hidden": true,
+				"description": "~"
+			}
+		},
+		"graphics": {
+			"animation": "h7/Chthonian/battle.json",
+			"map": "h7/Chthonian/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/Chthonian/map/atkL.png",
+			"mapAttackFromRight": "h7/Chthonian/map/atkR.png",
+			"iconLarge": "h7/Chthonian/iconLarge.png",
+			"iconSmall": "h7/Chthonian/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h7/creature_troglodyte_attack.ogg",
+			"defend": "h7/creature_troglodyte_defend.ogg",
+			"wince": "h7/creature_troglodyte_hit.ogg",
+			"killed": "h7/creature_troglodyte_die.ogg",
+			"move": "h7/creature_troglodyte_move.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_RETALIATION",
+					"description": "{Nimbleness}\nExtra retaliation each round"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			}
+		]
+	},
+	"h7DungeonDarkHydra": {
+		"name": {
+			"singular": "Dark Hydra",
+			"plural": "Dark Hydras"
+		},
+		"description": "There are as many kinds of Hydras as there are dragon gods. Some are purely serpentine, some have reptilian legs, and the number of heads varies by kind. Attuned to the forces of darkness, Dark Hydras can regenerate by draining their victims' life force.\nDark Hydras are the most terrifying creatures you can meet in the depths. Just thinking of their vicious cruelty gives me goosebumps.",
+		"faction": "dungeon",
+		"level": 7,
+		"cost": {
+			"gold": 3365,
+			"crystal": 2,
+			"gems": 1
+		},
+		"speed": 13,
+		"hitPoints": 241,
+		"attack": 24,
+		"defense": 16,
+		"damage": {
+			"min": 35,
+			"max": 45
+		},
+		"doubleWide": true,
+		"fightValue": 5076,
+		"aiValue": 6613,
+		"growth": 1,
+		"advMapAmount": {
+			"min": 1,
+			"max": 3
+		},
+		"abilities": {
+			"lifeDrain": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "lifeDrain",
+				"val": 50,
+				"description": "{Life Drain}\nHalf of damage dealt heals and revives it."
+			},
+			"sixHeaded": {
+				"type": "ATTACKS_ALL_ADJACENT",
+				"description": "{Six-Headed Attack}\nHits target and all adjacent foes in wide arc"
+			},
+			"skeletonTarget": {
+				"type": "SKELETON_TRANSFORMER_TARGET",
+				"subtype": "boneDragon",
+				"hidden": true
+			},
+			"h7SanctumTwin": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7SanctumTwin",
+				"hidden": true,
+				"description": "~",
+				"addInfo": {
+					"twin": "h7DungeonBlackDragon",
+					"army": "h7DungeonTracker,h7DungeonShade,h7DungeonChthonian,h7DungeonMedusaSorceress,h7DungeonSoulless,h7DungeonMinotaurGuard"
+				}
+			}
+		},
+		"graphics": {
+			"animation": "h7/DarkHydra/battle.json",
+			"map": "h7/DarkHydra/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/DarkHydra/map/atkL.png",
+			"mapAttackFromRight": "h7/DarkHydra/map/atkR.png",
+			"iconLarge": "h7/DarkHydra/iconLarge.png",
+			"iconSmall": "h7/DarkHydra/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h7/creature_cave_hydra_attack.ogg",
+			"defend": "h7/creature_cave_hydra_defend.ogg",
+			"wince": "h7/creature_cave_hydra_hit.ogg",
+			"killed": "h7/creature_cave_hydra_die.ogg",
+			"move": "h7/creature_cave_hydra_move.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "MIND_IMMUNITY",
+					"description": "{Steadfast Mind}\nImmune to Mind spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE",
+					"description": "{Magic Resistance}\nChance to resist enemy spells"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					10,
+					20,
+					30,
+					40,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "BLOCKS_RETALIATION",
+					"description": "{No Retaliation}\nEnemy cannot retaliate when attacked"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true
+				]
+			}
+		]
+	},
+	"h7DungeonMedusa": {
+		"name": {
+			"singular": "Medusa",
+			"plural": "Medusas"
+		},
+		"description": "The dragon gods have many faces, and not all of them are kind. Naga priestesses steeped in the madness of the deep sea were exiled by the Lotus Empire and came to be called Medusas. Most Medusas worship the Shipbreaker, the destructive aspect of the Dragon of Water, but the Medusas of Ygg-Chall are masters of Dark Magic.\nThe Shipbreaker and Malassa are not entirely at odds. After all, are the depths of the ocean not a realm of darkness?",
+		"faction": "dungeon",
+		"level": 4,
+		"cost": {
+			"gold": 305
+		},
+		"speed": 7,
+		"hitPoints": 32,
+		"attack": 6,
+		"defense": 3,
+		"damage": {
+			"min": 5,
+			"max": 8
+		},
+		"doubleWide": false,
+		"fightValue": 440,
+		"aiValue": 504,
+		"growth": 4,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"shooter": {
+				"type": "SHOOTER"
+			},
+			"h7Mesmerize": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7Mesmerize",
+				"icon": "h7/abilities/h7Mesmerize",
+				"description": "{Mesmerize}\nLucky hit: target stunned 1 turn; damage frees",
+				"addInfo": {
+					"fragile": true,
+					"mind": true,
+					"school": "dark",
+					"anim": "h7/fx/h7Mesmerize"
+				}
+			}
+		},
+		"graphics": {
+			"animation": "h7/Medusa/battle.json",
+			"map": "h7/Medusa/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/Medusa/map/atkL.png",
+			"mapAttackFromRight": "h7/Medusa/map/atkR.png",
+			"iconLarge": "h7/Medusa/iconLarge.png",
+			"iconSmall": "h7/Medusa/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"frameAngles": [
+					90,
+					60,
+					45,
+					30,
+					0,
+					-30,
+					-45,
+					-60,
+					-90
+				],
+				"offset": {
+					"upperX": 42,
+					"upperY": -76,
+					"middleX": 65,
+					"middleY": -57,
+					"lowerX": 27,
+					"lowerY": -38
+				},
+				"attackClimaxFrame": 5,
+				"projectile": "h7/projectiles/A_Projectile_Dark_Bullet_s85.json"
+			}
+		},
+		"sound": {
+			"attack": "h7/medusa_attacklaunchmelee.ogg",
+			"shoot": "h7/medusa_ability.ogg",
+			"defend": "h7/medusa_defend.ogg",
+			"wince": "h7/medusa_hit.ogg",
+			"killed": "h7/medusa_die.ogg",
+			"move": "h7/medusa_move_ground1.ogg"
+		},
+		"shots": 15,
+		"upgrades": [
+			"h7DungeonMedusaSorceress"
+		],
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					5,
+					6,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_WALL_PENALTY",
+					"description": "{Siege Shooter}\nNo damage loss when shooting over walls"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_DISTANCE_PENALTY",
+					"description": "{Sharpshooter}\nNo penalty for long-range shots"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h7DungeonMedusaSorceress": {
+		"name": {
+			"singular": "Medusa Sorceress",
+			"plural": "Medusa Sorceresses"
+		},
+		"description": "On the expedition to bring the Faceless library back from Sheogh as the heart of their new kingdom, the dark elves met a band of Naga renegades led by the cursed Daimyo Oshiro. These Naga had been driven underground after a failed rebellion against the Eternal Empress. Once conquered by the dark elves, Oshiro's people became part of the dark elf empire.\nThe Medusa Sorceresses proved their worth last year in the War Under the Mountain.",
+		"faction": "dungeon",
+		"level": 4,
+		"cost": {
+			"gold": 400
+		},
+		"speed": 8,
+		"hitPoints": 37,
+		"attack": 9,
+		"defense": 4,
+		"damage": {
+			"min": 6,
+			"max": 9
+		},
+		"doubleWide": false,
+		"fightValue": 568,
+		"aiValue": 650,
+		"growth": 4,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"shooter": {
+				"type": "SHOOTER"
+			},
+			"h7Mesmerize": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7Mesmerize",
+				"icon": "h7/abilities/h7Mesmerize",
+				"description": "{Mesmerize}\nLucky hit: target stunned 1 turn; damage frees",
+				"addInfo": {
+					"fragile": true,
+					"mind": true,
+					"school": "dark",
+					"anim": "h7/fx/h7Mesmerize"
+				}
+			},
+			"h7MobileShooter": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7MobileShooter",
+				"val": 100,
+				"icon": "h7/abilities/h7MobileShooter",
+				"description": "{Mobile Shooter}\nIf it only moves, it then shoots nearest foe."
+			}
+		},
+		"graphics": {
+			"animation": "h7/MedusaSorceress/battle.json",
+			"map": "h7/MedusaSorceress/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/MedusaSorceress/map/atkL.png",
+			"mapAttackFromRight": "h7/MedusaSorceress/map/atkR.png",
+			"iconLarge": "h7/MedusaSorceress/iconLarge.png",
+			"iconSmall": "h7/MedusaSorceress/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"frameAngles": [
+					90,
+					60,
+					45,
+					30,
+					0,
+					-30,
+					-45,
+					-60,
+					-90
+				],
+				"offset": {
+					"upperX": 44,
+					"upperY": -79,
+					"middleX": 68,
+					"middleY": -60,
+					"lowerX": 29,
+					"lowerY": -40
+				},
+				"attackClimaxFrame": 5,
+				"projectile": "h7/projectiles/A_Projectile_Dark_Bullet_s85.json"
+			}
+		},
+		"sound": {
+			"attack": "h7/medusa_attacklaunchmelee.ogg",
+			"shoot": "h7/medusa_ability.ogg",
+			"defend": "h7/medusa_defend.ogg",
+			"wince": "h7/medusa_hit.ogg",
+			"killed": "h7/medusa_die.ogg",
+			"move": "h7/medusa_move_ground1.ogg"
+		},
+		"shots": 15,
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					5,
+					6,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_WALL_PENALTY",
+					"description": "{Siege Shooter}\nNo damage loss when shooting over walls"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_DISTANCE_PENALTY",
+					"description": "{Sharpshooter}\nNo penalty for long-range shots"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h7DungeonMinotaur": {
+		"name": {
+			"singular": "Taurian",
+			"plural": "Taurians"
+		},
+		"description": "The Scarlet Mages of Al-Rubit gave the dark elves a thousand loyal Taurians as a diplomatic gift, a move that surprised and angered their neighbors in the Silver League. Before long, the Taurians swore loyalty to the dark elves and to Malassa.\nMost dark elves admire the Taurians' strength and reliability and see them as important allies. But a few clans, notably the Soulscar clan, see Taurians as little more than slaves.",
+		"faction": "dungeon",
+		"level": 6,
+		"cost": {
+			"gold": 900
+		},
+		"speed": 5,
+		"hitPoints": 101,
+		"attack": 21,
+		"defense": 11,
+		"damage": {
+			"min": 18,
+			"max": 27
+		},
+		"doubleWide": true,
+		"fightValue": 1270,
+		"aiValue": 1500,
+		"growth": 2,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"firstStrike": {
+				"type": "FIRST_STRIKE",
+				"description": "{First Strike}\nRetaliates before the enemy attacks."
+			}
+		},
+		"graphics": {
+			"animation": "h7/Minotaur/battle.json",
+			"map": "h7/Minotaur/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/Minotaur/map/atkL.png",
+			"mapAttackFromRight": "h7/Minotaur/map/atkR.png",
+			"iconLarge": "h7/Minotaur/iconLarge.png",
+			"iconSmall": "h7/Minotaur/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h7/creature_minotaur_attack.ogg",
+			"defend": "h7/creature_minotaur_defend.ogg",
+			"wince": "h7/creature_minotaur_hit.ogg",
+			"killed": "h7/creature_minotaur_die.ogg",
+			"move": "h7/creature_minotaur_move.ogg"
+		},
+		"upgrades": [
+			"h7DungeonMinotaurGuard"
+		],
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					2,
+					3,
+					4,
+					5,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "MIND_IMMUNITY",
+					"description": "{Steadfast Mind}\nImmune to Mind spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "BLOCKS_RETALIATION",
+					"description": "{No Retaliation}\nEnemy cannot retaliate when attacked"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h7DungeonMinotaurGuard": {
+		"name": {
+			"singular": "Taurian Guard",
+			"plural": "Taurian Guards"
+		},
+		"description": "Taurians were first used as bodyguards by their mage masters, so doing the same job for the dark elves is no problem for them. In a society where assassination is a way of life, hiring a squad of Taurian Guards is a very wise move.\nTaurians often fight in arenas to prove their strength and catch the eye of future employers.",
+		"faction": "dungeon",
+		"level": 6,
+		"cost": {
+			"gold": 1170
+		},
+		"speed": 7,
+		"hitPoints": 116,
+		"attack": 21,
+		"defense": 15,
+		"damage": {
+			"min": 18,
+			"max": 27
+		},
+		"doubleWide": true,
+		"fightValue": 1816,
+		"aiValue": 2144,
+		"growth": 2,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"noRetaliation": {
+				"type": "BLOCKS_RETALIATION",
+				"description": "{No Enemy Retaliation}\nTarget cannot retaliate."
+			},
+			"firstStrike": {
+				"type": "FIRST_STRIKE",
+				"description": "{First Strike}\nRetaliates before the enemy attacks."
+			}
+		},
+		"graphics": {
+			"animation": "h7/MinotaurGuard/battle.json",
+			"map": "h7/MinotaurGuard/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/MinotaurGuard/map/atkL.png",
+			"mapAttackFromRight": "h7/MinotaurGuard/map/atkR.png",
+			"iconLarge": "h7/MinotaurGuard/iconLarge.png",
+			"iconSmall": "h7/MinotaurGuard/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h7/creature_minotaur_attack.ogg",
+			"defend": "h7/creature_minotaur_defend.ogg",
+			"wince": "h7/creature_minotaur_hit.ogg",
+			"killed": "h7/creature_minotaur_die.ogg",
+			"move": "h7/creature_minotaur_move.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					2,
+					3,
+					4,
+					5,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "MIND_IMMUNITY",
+					"description": "{Steadfast Mind}\nImmune to Mind spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h7DungeonShade": {
+		"name": {
+			"singular": "Shade",
+			"plural": "Shades"
+		},
+		"description": "Shades are Assassins who have mastered the black art of poison. Their daggers are usually coated with a mysterious soul poison that slowly eats away the victim's life.\nAlchemy is a passion of the dark elves, especially the making of new poisons.",
+		"faction": "dungeon",
+		"level": 2,
+		"cost": {
+			"gold": 160
+		},
+		"speed": 7,
+		"hitPoints": 12,
+		"attack": 9,
+		"defense": 2,
+		"damage": {
+			"min": 2,
+			"max": 4
+		},
+		"doubleWide": false,
+		"fightValue": 193,
+		"aiValue": 216,
+		"growth": 8,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"h7PoisonedBlades": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7PoisonedBlades",
+				"icon": "h7/abilities/h7PoisonedBlades",
+				"description": "{Poisoned Blades}\nRising Dark dmg for 3 rounds, from 2×stack",
+				"addInfo": {
+					"kind": "blades",
+					"perCreature": 2,
+					"turns": 3
+				}
+			},
+			"h7Backstab": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7Backstab",
+				"icon": "h7/abilities/h7Backstab",
+				"description": "{Backstab}\nMelee +50% dmg vs foes hit by allies this turn",
+				"val": 50
+			}
+		},
+		"graphics": {
+			"animation": "h7/Shade/battle.json",
+			"map": "h7/Shade/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/Shade/map/atkL.png",
+			"mapAttackFromRight": "h7/Shade/map/atkR.png",
+			"iconLarge": "h7/Shade/iconLarge.png",
+			"iconSmall": "h7/Shade/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h7/creature_assassin_attack.ogg",
+			"defend": "h7/creature_assassin_defend.ogg",
+			"wince": "h7/creature_assassin_hit.ogg",
+			"killed": "h7/creature_assassin_die.ogg",
+			"move": "h7/creature_assassin_move.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					3,
+					3,
+					3,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					3,
+					4,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					0,
+					1,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					3,
+					3,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "CHARGE_IMMUNITY",
+					"description": "{Steady Ranks}\nImmune to charge damage bonuses"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h7DungeonShadowDragon": {
+		"name": {
+			"singular": "Shade Dragon",
+			"plural": "Shade Dragons"
+		},
+		"description": "Shade Dragons are incarnations of Malassa, the Dragon of Darkness. They take the form of onyx dragons, with purple orbs set in their wings: the Eyes of Malassa, which see every shadow, whether real shadows or what they symbolize. Shadow Stalkers are said to be born from these glowing orbs.\nShade Dragons are worshipped by dark elf society. They tolerate their worshippers and sometimes ally with them. But their help always comes at a price...",
+		"faction": "dungeon",
+		"level": 7,
+		"cost": {
+			"gold": 2590,
+			"sulfur": 1
+		},
+		"speed": 15,
+		"hitPoints": 182,
+		"attack": 17,
+		"defense": 14,
+		"damage": {
+			"min": 35,
+			"max": 40
+		},
+		"doubleWide": true,
+		"fightValue": 3596,
+		"aiValue": 4685,
+		"growth": 1,
+		"advMapAmount": {
+			"min": 1,
+			"max": 3
+		},
+		"abilities": {
+			"flying": {
+				"type": "FLYING"
+			},
+			"immDarkness": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "02darkSchool",
+				"val": 50,
+				"description": "{Darkness Immunity}\nImmune to Dark curses; half Dark damage."
+			},
+			"breath": {
+				"type": "TWO_HEX_ATTACK_BREATH",
+				"description": "{Withering Breath}\nBreath hits two hexes."
+			},
+			"dragonNature": {
+				"type": "DRAGON_NATURE"
+			},
+			"skeletonTarget": {
+				"type": "SKELETON_TRANSFORMER_TARGET",
+				"subtype": "boneDragon",
+				"hidden": true
+			},
+			"h7SchoolImmunity_dark": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7SchoolImmunity",
+				"val": 0,
+				"addInfo": {
+					"school": "dark"
+				},
+				"stacking": "h7SchoolImmunity_dark",
+				"hidden": true,
+				"description": "~"
+			},
+			"h7AcidDot": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7AcidDot",
+				"icon": "h7/abilities/h7WitheringBreath",
+				"description": "{Withering Breath}\nAttacked foes take 50%, 25% dmg next 2 rounds",
+				"addInfo": {
+					"kind": "wither",
+					"school": "dark"
+				}
+			}
+		},
+		"graphics": {
+			"animation": "h7/ShadowDragon/battle.json",
+			"map": "h7/ShadowDragon/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/ShadowDragon/map/atkL.png",
+			"mapAttackFromRight": "h7/ShadowDragon/map/atkR.png",
+			"iconLarge": "h7/ShadowDragon/iconLarge.png",
+			"iconSmall": "h7/ShadowDragon/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h7/creature_shadow_dragon_attack.ogg",
+			"defend": "h7/creature_shadow_dragon_defend.ogg",
+			"wince": "h7/creature_shadow_dragon_hit.ogg",
+			"killed": "h7/creature_shadow_dragon_die.ogg",
+			"move": "h7/creature_shadow_dragon_move.ogg",
+			"startMoving": "h7/creature_shadow_dragon_fly_start.ogg",
+			"endMoving": "h7/creature_shadow_dragon_fly_end.ogg"
+		},
+		"upgrades": [
+			"h7DungeonBlackDragon"
+		],
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_RETALIATION",
+					"description": "{Nimbleness}\nExtra retaliation each round"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "MIND_IMMUNITY",
+					"description": "{Steadfast Mind}\nImmune to Mind spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE",
+					"description": "{Magic Resistance}\nChance to resist enemy spells"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					10,
+					20,
+					30,
+					40,
+					50
+				]
+			}
+		]
+	},
+	"h7DungeonSoulless": {
+		"name": {
+			"singular": "Soulless",
+			"plural": "Soulless"
+		},
+		"description": "The Soulless carry the soul essence of a Faceless puppeteer, who controls them from the shadows. Though they can fight on their own, their main role is to disrupt and block the enemy's magic.\nThe Soulless often fight Elrath's angels, which is why they are so effective against the forces of Light.",
+		"faction": "dungeon",
+		"level": 5,
+		"cost": {
+			"gold": 665
+		},
+		"speed": 7,
+		"hitPoints": 58,
+		"attack": 18,
+		"defense": 13,
+		"damage": {
+			"min": 14,
+			"max": 19
+		},
+		"doubleWide": true,
+		"fightValue": 1011,
+		"aiValue": 1126,
+		"growth": 3,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"nonLiving": {
+				"type": "NON_LIVING",
+				"description": "{Construct}\nImmune: poison, blind, Mind, Morale; no heals"
+			},
+			"mindImmunity": {
+				"type": "MIND_IMMUNITY"
+			},
+			"poisonImmunity": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "poison",
+				"hidden": true
+			},
+			"heartDark": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "02darkSchool",
+				"val": -25,
+				"stacking": "h7HeartDark",
+				"propagator": "BATTLE_WIDE",
+				"propagationUpdater": "BONUS_OWNER_UPDATER",
+				"limiters": [
+					"allOf",
+					{
+						"type": "UNIT_ADJACENT",
+						"creature": "h7DungeonSoulless"
+					},
+					"OPPOSITE_SIDE"
+				],
+				"description": "{Heart of Darkness}\nAllies near it take less Light, foes more Dark"
+			},
+			"immDarkness": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "02darkSchool",
+				"val": 50,
+				"description": "{Darkness Immunity}\nImmune to Dark curses; half Dark damage."
+			},
+			"h7SchoolImmunity_dark": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7SchoolImmunity",
+				"val": 0,
+				"addInfo": {
+					"school": "dark"
+				},
+				"stacking": "h7SchoolImmunity_dark",
+				"hidden": true,
+				"description": "~"
+			},
+			"h7HeartOfDarkness": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7HeartOfDarkness",
+				"val": 50,
+				"hidden": true,
+				"description": "~"
+			},
+			"h7AuraZone": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7AuraZone",
+				"val": 0,
+				"stacking": "h7AuraZone",
+				"propagator": "BATTLE_WIDE",
+				"hidden": true,
+				"description": "~"
+			}
+		},
+		"graphics": {
+			"animation": "h7/Soulless/battle.json",
+			"map": "h7/Soulless/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/Soulless/map/atkL.png",
+			"mapAttackFromRight": "h7/Soulless/map/atkR.png",
+			"iconLarge": "h7/Soulless/iconLarge.png",
+			"iconSmall": "h7/Soulless/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h7/creature_strider_attack.ogg",
+			"defend": "h7/creature_strider_defend.ogg",
+			"wince": "h7/creature_strider_hit.ogg",
+			"killed": "h7/creature_strider_die.ogg",
+			"move": "h7/creature_strider_move.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					3,
+					4,
+					5,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					3,
+					4,
+					4,
+					6,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					2,
+					3,
+					3,
+					4,
+					5,
+					6,
+					6,
+					7
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					7
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "BLOCKS_RETALIATION",
+					"description": "{No Retaliation}\nEnemy cannot retaliate when attacked"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h7DungeonStalker": {
+		"name": {
+			"singular": "Pursuer",
+			"plural": "Pursuers"
+		},
+		"description": "Pursuers are typical dark elves: their words are as smooth as silk soaked in poisoned perfume. Fearless and deeply feared, Pursuers inspire dread not through long speeches but through swift action. In the decades before the War Under the Mountain, Pursuers fought with ring blades. Today, they prefer crossbows.\nDark elves always fight dirty, and the Pursuers are the perfect example.",
+		"faction": "dungeon",
+		"level": 1,
+		"cost": {
+			"gold": 55
+		},
+		"speed": 5,
+		"hitPoints": 5,
+		"attack": 5,
+		"defense": 0,
+		"damage": {
+			"min": 1,
+			"max": 2
+		},
+		"doubleWide": false,
+		"fightValue": 67,
+		"aiValue": 68,
+		"growth": 13,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"shooter": {
+				"type": "SHOOTER"
+			}
+		},
+		"graphics": {
+			"animation": "h7/Stalker/battle.json",
+			"map": "h7/Stalker/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/Stalker/map/atkL.png",
+			"mapAttackFromRight": "h7/Stalker/map/atkR.png",
+			"iconLarge": "h7/Stalker/iconLarge.png",
+			"iconSmall": "h7/Stalker/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"frameAngles": [
+					90,
+					60,
+					45,
+					30,
+					0,
+					-30,
+					-45,
+					-60,
+					-90
+				],
+				"offset": {
+					"upperX": 26,
+					"upperY": -72,
+					"middleX": 34,
+					"middleY": -62,
+					"lowerX": 9,
+					"lowerY": -53
+				},
+				"attackClimaxFrame": 5,
+				"projectile": "h7/projectiles/A_Projectile_Dungeon_Stalker_AttackRanged.json"
+			}
+		},
+		"sound": {
+			"attack": "h7/creature_tracker_attack.ogg",
+			"shoot": "h7/creature_tracker_attack_ranged.ogg",
+			"defend": "h7/creature_tracker_defend.ogg",
+			"wince": "h7/creature_tracker_hit.ogg",
+			"killed": "h7/creature_tracker_die.ogg",
+			"move": "h7/creature_tracker_move.ogg"
+		},
+		"shots": 8,
+		"upgrades": [
+			"h7DungeonTracker"
+		],
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_WALL_PENALTY",
+					"description": "{Siege Shooter}\nNo damage loss when shooting over walls"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h7DungeonStrider": {
+		"name": {
+			"singular": "Strider",
+			"plural": "Striders"
+		},
+		"description": "Though excellent sorcerers, the Faceless could not match the physical strength and combat skill of their main enemies, the angels. To tip the odds in their favor, since tricks and deceit do not always work, the Faceless created the Striders. These living war machines of shadowsteel are not much different from the mages' constructs, the Golems and Gargoyles.\nRumor has it that Striders are actually born from the blood of the Faceless, as if they were not creepy enough already.",
+		"faction": "dungeon",
+		"level": 5,
+		"cost": {
+			"gold": 510
+		},
+		"speed": 6,
+		"hitPoints": 48,
+		"attack": 15,
+		"defense": 13,
+		"damage": {
+			"min": 14,
+			"max": 19
+		},
+		"doubleWide": true,
+		"fightValue": 676,
+		"aiValue": 752,
+		"growth": 3,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"nonLiving": {
+				"type": "NON_LIVING",
+				"description": "{Construct}\nImmune: poison, blind, Mind, Morale; no heals"
+			},
+			"mindImmunity": {
+				"type": "MIND_IMMUNITY"
+			},
+			"poisonImmunity": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "poison",
+				"hidden": true
+			},
+			"immDarkness": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "02darkSchool",
+				"val": 50,
+				"description": "{Darkness Immunity}\nImmune to Dark curses; half Dark damage."
+			},
+			"h7SchoolImmunity_dark": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7SchoolImmunity",
+				"val": 0,
+				"addInfo": {
+					"school": "dark"
+				},
+				"stacking": "h7SchoolImmunity_dark",
+				"hidden": true,
+				"description": "~"
+			}
+		},
+		"graphics": {
+			"animation": "h7/Strider/battle.json",
+			"map": "h7/Strider/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/Strider/map/atkL.png",
+			"mapAttackFromRight": "h7/Strider/map/atkR.png",
+			"iconLarge": "h7/Strider/iconLarge.png",
+			"iconSmall": "h7/Strider/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h7/creature_strider_attack.ogg",
+			"defend": "h7/creature_strider_defend.ogg",
+			"wince": "h7/creature_strider_hit.ogg",
+			"killed": "h7/creature_strider_die.ogg",
+			"move": "h7/creature_strider_move.ogg"
+		},
+		"upgrades": [
+			"h7DungeonSoulless"
+		],
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					3,
+					4,
+					5,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					3,
+					4,
+					4,
+					6,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					2,
+					3,
+					3,
+					4,
+					5,
+					6,
+					6,
+					7
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					7
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "BLOCKS_RETALIATION",
+					"description": "{No Retaliation}\nEnemy cannot retaliate when attacked"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h7DungeonTracker": {
+		"name": {
+			"singular": "Tracker",
+			"plural": "Trackers"
+		},
+		"description": "Dark elves value Assassins, but they respect even more the killers who have mastered stealth and can strike down victims unawares. The finest example of this art is the Tracker. Trackers can evade traps, blades and even enemy spells, and slip past any bodyguard to deliver death to their target.\nTrackers use a special crossbow whose stock is cut from Treant roots and whose trigger and inner parts are cast from shadowsteel. It has long range and great accuracy, and inflicts more pain than any other bow or crossbow.",
+		"faction": "dungeon",
+		"level": 1,
+		"cost": {
+			"gold": 70
+		},
+		"speed": 6,
+		"hitPoints": 6,
+		"attack": 5,
+		"defense": 1,
+		"damage": {
+			"min": 1,
+			"max": 2
+		},
+		"doubleWide": false,
+		"fightValue": 96,
+		"aiValue": 97,
+		"growth": 13,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"shooter": {
+				"type": "SHOOTER"
+			},
+			"armourPiercing": {
+				"type": "ENEMY_DEFENCE_REDUCTION",
+				"val": 100,
+				"description": "{Armor Piercing}\nIts ranged attack ignores target's Defense."
+			}
+		},
+		"graphics": {
+			"animation": "h7/Tracker/battle.json",
+			"map": "h7/Tracker/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/Tracker/map/atkL.png",
+			"mapAttackFromRight": "h7/Tracker/map/atkR.png",
+			"iconLarge": "h7/Tracker/iconLarge.png",
+			"iconSmall": "h7/Tracker/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"frameAngles": [
+					90,
+					60,
+					45,
+					30,
+					0,
+					-30,
+					-45,
+					-60,
+					-90
+				],
+				"offset": {
+					"upperX": 26,
+					"upperY": -72,
+					"middleX": 34,
+					"middleY": -62,
+					"lowerX": 9,
+					"lowerY": -53
+				},
+				"attackClimaxFrame": 5,
+				"projectile": "h7/projectiles/A_Projectile_Dungeon_Tracker_AttackRanged.json"
+			}
+		},
+		"sound": {
+			"attack": "h7/creature_tracker_attack.ogg",
+			"shoot": "h7/creature_tracker_attack_ranged.ogg",
+			"defend": "h7/creature_tracker_defend.ogg",
+			"wince": "h7/creature_tracker_hit.ogg",
+			"killed": "h7/creature_tracker_die.ogg",
+			"move": "h7/creature_tracker_move.ogg"
+		},
+		"shots": 8,
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_WALL_PENALTY",
+					"description": "{Siege Shooter}\nNo damage loss when shooting over walls"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h7DungeonTroglodyte": {
+		"name": {
+			"singular": "Troglodyte",
+			"plural": "Troglodytes"
+		},
+		"description": "Troglodytes are lesser earth spirits bound to the material world thousands of years ago. Since then they have lived in the deepest reaches of Ashan's underworld. They are tireless diggers, carving new caves and tunnels as if following some unknown plan.\nThe dark elves long ago saw how useful these creatures were for expanding their underground empire, and used magic to bend them to their will.",
+		"faction": "dungeon",
+		"level": 3,
+		"cost": {
+			"gold": 205
+		},
+		"speed": 6,
+		"hitPoints": 22,
+		"attack": 6,
+		"defense": 8,
+		"damage": {
+			"min": 3,
+			"max": 5
+		},
+		"doubleWide": false,
+		"fightValue": 239,
+		"aiValue": 283,
+		"growth": 6,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"flying": {
+				"type": "FLYING"
+			},
+			"blindImmunity": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "blind",
+				"description": "{Eyeless}\nBorn blind; unaffected by Blind effects."
+			},
+			"immEarth": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "earth",
+				"val": 50,
+				"description": "{Earth Immunity}\nImmune to Earth curses; half Earth damage."
+			},
+			"h7SchoolImmunity_earth": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7SchoolImmunity",
+				"val": 0,
+				"addInfo": {
+					"school": "earth"
+				},
+				"stacking": "h7SchoolImmunity_earth",
+				"hidden": true,
+				"description": "~"
+			}
+		},
+		"graphics": {
+			"animation": "h7/Troglodyte/battle.json",
+			"map": "h7/Troglodyte/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/Troglodyte/map/atkL.png",
+			"mapAttackFromRight": "h7/Troglodyte/map/atkR.png",
+			"iconLarge": "h7/Troglodyte/iconLarge.png",
+			"iconSmall": "h7/Troglodyte/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h7/creature_troglodyte_attack.ogg",
+			"defend": "h7/creature_troglodyte_defend.ogg",
+			"wince": "h7/creature_troglodyte_hit.ogg",
+			"killed": "h7/creature_troglodyte_die.ogg",
+			"move": "h7/creature_troglodyte_move.ogg"
+		},
+		"upgrades": [
+			"h7DungeonChthonian"
+		],
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_RETALIATION",
+					"description": "{Nimbleness}\nExtra retaliation each round"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			}
+		]
+	}
+}

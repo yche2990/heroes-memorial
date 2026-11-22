@@ -1,0 +1,119 @@
+{
+	"h7RuneArtifactFortune": {
+		"type": [
+			"HERO"
+		],
+		"class": "SPECIAL",
+		"slot": "MISC",
+		"value": 500,
+		"text": {
+			"name": "Fortune Stone",
+			"description": "{Fortune Stone (Basic)}\r\n\r\nIn battle, lets you use {Rune of Fortune (H7)}: summons a Fortune Stone.\r\nLearning {Runes} improves the effect.\r\nHas 3 uses; needs no spellbook and costs no Spell Points.\r\nWhen the uses run out, the Rune Stone disappears.",
+			"event": "A stone slab carved with blue runes lies by the road. When your fingertips touch it, you feel your luck improving. You obtain a Fortune Stone."
+		},
+		"graphics": {
+			"image": "h7/artifacts/h7RuneArtifactFortune.png",
+			"scenarioBonus": "h7/artifacts/h7RuneArtifactFortuneBonus.png",
+			"map": "highlands/artifacts/runeMap3.def"
+		},
+		"bonuses": {
+			"spellGain": {
+				"addInfo": true,
+				"type": "SPELL",
+				"subtype": "h7RuneOfFortune",
+				"limiters": [
+					{
+						"type": "HAS_CHARGES_LIMITER",
+						"parameters": [
+							1
+						]
+					}
+				],
+				"hidden": true
+			}
+		},
+		"charged": {
+			"usageType": "SPELLCAST",
+			"removeOnDepletion": true,
+			"startingCharges": 3
+		}
+	},
+	"h7RuneArtifactDestruction": {
+		"type": [
+			"HERO"
+		],
+		"class": "SPECIAL",
+		"slot": "MISC",
+		"value": 500,
+		"text": {
+			"name": "Destruction Stone",
+			"description": "{Destruction Stone (Basic)}\r\n\r\nIn battle, lets you use {Rune of Destruction (H7)}: summons a Destruction Stone.\r\nLearning {Runes} improves the effect.\r\nHas 3 uses; needs no spellbook and costs no Spell Points.\r\nWhen the uses run out, the Rune Stone disappears.",
+			"event": "Red runes glow and fade like embers on a scorched stone slab. You wrap it up carefully and obtain a Destruction Stone."
+		},
+		"graphics": {
+			"image": "h7/artifacts/h7RuneArtifactDestruction.png",
+			"scenarioBonus": "h7/artifacts/h7RuneArtifactDestructionBonus.png",
+			"map": "highlands/artifacts/runeMap3.def"
+		},
+		"bonuses": {
+			"spellGain": {
+				"addInfo": true,
+				"type": "SPELL",
+				"subtype": "h7RuneOfDestruction",
+				"limiters": [
+					{
+						"type": "HAS_CHARGES_LIMITER",
+						"parameters": [
+							1
+						]
+					}
+				],
+				"hidden": true
+			}
+		},
+		"charged": {
+			"usageType": "SPELLCAST",
+			"removeOnDepletion": true,
+			"startingCharges": 3
+		}
+	},
+	"h7RuneArtifactResilience": {
+		"type": [
+			"HERO"
+		],
+		"class": "SPECIAL",
+		"slot": "MISC",
+		"value": 500,
+		"text": {
+			"name": "Resilience Stone",
+			"description": "{Resilience Stone (Basic)}\r\n\r\nIn battle, lets you use {Rune of Resilience (H7)}: summons a Resilience Stone.\r\nLearning {Runes} improves the effect.\r\nHas 3 uses; needs no spellbook and costs no Spell Points.\r\nWhen the uses run out, the Rune Stone disappears.",
+			"event": "Beneath the threshold of an old dwarven outpost lies a stone slab carved with white runes, unworn by centuries of wind and snow. You obtain a Resilience Stone."
+		},
+		"graphics": {
+			"image": "h7/artifacts/h7RuneArtifactResilience.png",
+			"scenarioBonus": "h7/artifacts/h7RuneArtifactResilienceBonus.png",
+			"map": "highlands/artifacts/runeMap3.def"
+		},
+		"bonuses": {
+			"spellGain": {
+				"addInfo": true,
+				"type": "SPELL",
+				"subtype": "h7RuneOfResilience",
+				"limiters": [
+					{
+						"type": "HAS_CHARGES_LIMITER",
+						"parameters": [
+							1
+						]
+					}
+				],
+				"hidden": true
+			}
+		},
+		"charged": {
+			"usageType": "SPELLCAST",
+			"removeOnDepletion": true,
+			"startingCharges": 3
+		}
+	}
+}

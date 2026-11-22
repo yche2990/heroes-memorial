@@ -1,0 +1,3488 @@
+{
+	"h7AuraZone": {
+		"implements": "combatEvent",
+		"script": "combat/h7AuraZone",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {},
+			"additionalProperties": false
+		},
+		"description": ""
+	},
+	"h7AuraOfCleansing": {
+		"implements": "combatEvent",
+		"script": "combat/h7AuraOfCleansing",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {},
+			"additionalProperties": false
+		},
+		"description": "{Aura of Cleansing}\nSelf and adjacent allies +${val} Defense; dispels one negative spell per round"
+	},
+	"h7AuraOfPurity": {
+		"implements": "combatEvent",
+		"script": "combat/h7AllyAura",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {},
+			"additionalProperties": false
+		},
+		"description": "{Aura of Purity}\nSelf and adjacent allies can't be targeted by negative spells"
+	},
+	"h7HeartOfDarkness": {
+		"implements": "combatEvent",
+		"script": "combat/h7AllyAura",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {},
+			"additionalProperties": false
+		},
+		"description": "{Heart of Darkness}\nSelf and adjacent allies take -${val}% Light spell damage"
+	},
+	"h7SHIELDING": {
+		"implements": "combatEvent",
+		"script": "combat/h7AllyAura",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {},
+			"additionalProperties": false
+		},
+		"description": "{Shielding}\nAdjacent allies take -${val}% damage; the Legionnaire takes as much"
+	},
+	"h7Soulfire": {
+		"implements": "combatEvent",
+		"script": "combat/h7AllyAura",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {},
+			"additionalProperties": false
+		},
+		"description": "{Soulfire}\nAdjacent allies +1 Morale, +${val} Speed until the end of their next turn"
+	},
+	"h7InspiringPresence": {
+		"implements": "combatEvent",
+		"script": "combat/h7AllyAura",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {},
+			"additionalProperties": false
+		},
+		"description": "{Inspiring Presence}\nSelf and adjacent allies +${val} Morale, +${val} Luck"
+	},
+	"h7AuraOfFire": {
+		"implements": "combatEvent",
+		"script": "combat/h7AllyAura",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {},
+			"additionalProperties": false
+		},
+		"description": "{Aura of Fire}\nSelf and adjacent allies are immune to negative Earth spells"
+	},
+	"h7TreantSynergy": {
+		"implements": "combatEvent",
+		"script": "combat/h7TreantSynergy",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"heal": {
+					"type": "number"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": "{Treant Symbiosis}\nSelf and adjacent allies +${val} Defense; heals adjacent Treants after acting"
+	},
+	"h7GiftOfLife": {
+		"implements": "combatEvent",
+		"script": "combat/h7GiftOfLife",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {},
+			"additionalProperties": false
+		},
+		"description": "{Gift of Life}\nAfter acting, heals adjacent First Aid Tent ${val}×Dryad count HP"
+	},
+	"h7SchoolImmunity": {
+		"implements": "combatEvent",
+		"script": "combat/h7Immunity",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"school": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": ""
+	},
+	"h7MagicImmunity": {
+		"implements": "combatEvent",
+		"script": "combat/h7Immunity",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"school": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": ""
+	},
+	"h7PrimeImmunity": {
+		"implements": "combatEvent",
+		"script": "combat/h7PrimeImmunity",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {},
+			"additionalProperties": false
+		},
+		"description": "{Prime Immunity}\nImmune to negative Prime spells; takes 50% less Prime damage"
+	},
+	"h7MagmaBlood": {
+		"implements": "combatEvent",
+		"script": "combat/h7MagmaBlood",
+		"patches": [],
+		"priority": 50,
+		"schema": {
+			"type": "object",
+			"properties": {},
+			"additionalProperties": false
+		},
+		"description": "{Magma Blood}\nImmune to negative Fire spells; one Fire spell kills at most one"
+	},
+	"h7Unfettered": {
+		"implements": "combatEvent",
+		"script": "combat/h7Unfettered",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {},
+			"additionalProperties": false
+		},
+		"description": ""
+	},
+	"h7Nimble": {
+		"implements": "combatEvent",
+		"script": "combat/h7Nimble",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {},
+			"additionalProperties": false
+		},
+		"description": "{Nimble}\n+${val} Defense when attacked or retaliated on by big creatures"
+	},
+	"h7DwarvenShieldwall": {
+		"implements": "combatEvent",
+		"script": "combat/h7DwarvenShieldwall",
+		"patches": [],
+		"priority": 90,
+		"schema": {
+			"type": "object",
+			"properties": {},
+			"additionalProperties": false
+		},
+		"description": "{Dwarven Shieldwall}\n+${val} Defense vs non-rear attacks; can't be disabled by them"
+	},
+	"h7Defensive": {
+		"implements": "combatEvent",
+		"script": "combat/h7Defensive",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {},
+			"additionalProperties": false
+		},
+		"description": "{Defensive Stance}\nWhen defending: unlimited retaliation, no flank or rear attacks, until next turn"
+	},
+	"h7StatusTick": {
+		"implements": "combatEvent",
+		"script": "combat/h7StatusTick",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {},
+			"additionalProperties": false
+		},
+		"description": ""
+	},
+	"h7CritStun": {
+		"implements": "combatEvent",
+		"script": "combat/h7CritStun",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"all": {
+					"type": "boolean"
+				},
+				"fragile": {
+					"type": "boolean"
+				},
+				"mind": {
+					"type": "boolean"
+				},
+				"school": {
+					"type": "string",
+					"enum": [
+						"earth",
+						"fire",
+						"water",
+						"air",
+						"dark",
+						"light"
+					]
+				},
+				"spell": {
+					"type": "string"
+				},
+				"anim": {
+					"type": "string"
+				},
+				"sound": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": "{Breath of Light}\nCrit: foes hit lose their next turn."
+	},
+	"h7Bash": {
+		"implements": "combatEvent",
+		"script": "combat/h7CritStun",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"all": {
+					"type": "boolean"
+				},
+				"fragile": {
+					"type": "boolean"
+				},
+				"mind": {
+					"type": "boolean"
+				},
+				"school": {
+					"type": "string",
+					"enum": [
+						"earth",
+						"fire",
+						"water",
+						"air",
+						"dark",
+						"light"
+					]
+				},
+				"spell": {
+					"type": "string"
+				},
+				"anim": {
+					"type": "string"
+				},
+				"sound": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": "{Bash}\nCrit: target can't retaliate and loses its next turn."
+	},
+	"h7SweepingBash": {
+		"implements": "combatEvent",
+		"script": "combat/h7CritStun",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"all": {
+					"type": "boolean"
+				},
+				"fragile": {
+					"type": "boolean"
+				},
+				"mind": {
+					"type": "boolean"
+				},
+				"school": {
+					"type": "string",
+					"enum": [
+						"earth",
+						"fire",
+						"water",
+						"air",
+						"dark",
+						"light"
+					]
+				},
+				"spell": {
+					"type": "string"
+				},
+				"anim": {
+					"type": "string"
+				},
+				"sound": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": "{Sweeping Bash}\nCrit: foes hit lose their next turn."
+	},
+	"h7BlindingLight": {
+		"implements": "combatEvent",
+		"script": "combat/h7CritStun",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"all": {
+					"type": "boolean"
+				},
+				"fragile": {
+					"type": "boolean"
+				},
+				"mind": {
+					"type": "boolean"
+				},
+				"school": {
+					"type": "string",
+					"enum": [
+						"earth",
+						"fire",
+						"water",
+						"air",
+						"dark",
+						"light"
+					]
+				},
+				"spell": {
+					"type": "string"
+				},
+				"anim": {
+					"type": "string"
+				},
+				"sound": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": "{Blinding Light}\nCrit: target loses its next turn."
+	},
+	"h7Mesmerize": {
+		"implements": "combatEvent",
+		"script": "combat/h7CritStun",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"all": {
+					"type": "boolean"
+				},
+				"fragile": {
+					"type": "boolean"
+				},
+				"mind": {
+					"type": "boolean"
+				},
+				"school": {
+					"type": "string",
+					"enum": [
+						"earth",
+						"fire",
+						"water",
+						"air",
+						"dark",
+						"light"
+					]
+				},
+				"spell": {
+					"type": "string"
+				},
+				"anim": {
+					"type": "string"
+				},
+				"sound": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": "{Mesmerize}\nCrit: target loses its next turn; damage frees it."
+	},
+	"h7Petrification": {
+		"implements": "combatEvent",
+		"script": "combat/h7CritStun",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"all": {
+					"type": "boolean"
+				},
+				"fragile": {
+					"type": "boolean"
+				},
+				"mind": {
+					"type": "boolean"
+				},
+				"school": {
+					"type": "string",
+					"enum": [
+						"earth",
+						"fire",
+						"water",
+						"air",
+						"dark",
+						"light"
+					]
+				},
+				"spell": {
+					"type": "string"
+				},
+				"anim": {
+					"type": "string"
+				},
+				"sound": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": "{Petrification}\nCrit: target loses its next turn; damage frees it."
+	},
+	"h7AcidDot": {
+		"implements": "combatEvent",
+		"script": "combat/h7AcidDot",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"kind": {
+					"type": "string",
+					"enum": [
+						"acid",
+						"wither"
+					]
+				},
+				"school": {
+					"type": "string"
+				},
+				"pct": {
+					"type": "number"
+				},
+				"turns": {
+					"type": "number"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": "{Acid Breath}\nFoes hit take 50% of this damage next round, 25% the round after."
+	},
+	"h7AcidSpit": {
+		"implements": "combatEvent",
+		"script": "combat/h7AcidDot",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"kind": {
+					"type": "string",
+					"enum": [
+						"acid",
+						"wither"
+					]
+				},
+				"school": {
+					"type": "string"
+				},
+				"pct": {
+					"type": "number"
+				},
+				"turns": {
+					"type": "number"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": "{Acid Breath}\nFoes hit take 50% of this damage next round, 25% the round after."
+	},
+	"h7WitheringVenom": {
+		"implements": "combatEvent",
+		"script": "combat/h7WitheringVenom",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"kind": {
+					"type": "string",
+					"enum": [
+						"venom",
+						"blades"
+					]
+				},
+				"perCreature": {
+					"type": "number"
+				},
+				"turns": {
+					"type": "number"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": "{Withering Venom}\nFoes hit take growing Dark damage at the start of each round."
+	},
+	"h7PoisonedBlades": {
+		"implements": "combatEvent",
+		"script": "combat/h7WitheringVenom",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"kind": {
+					"type": "string",
+					"enum": [
+						"venom",
+						"blades"
+					]
+				},
+				"perCreature": {
+					"type": "number"
+				},
+				"turns": {
+					"type": "number"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": "{Poisoned Blades}\nFoes hit take growing Dark damage at the start of each round."
+	},
+	"h7Rooting": {
+		"implements": "combatEvent",
+		"script": "combat/h7Rooting",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"speed": {
+					"type": "number"
+				},
+				"turns": {
+					"type": "number"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": "{Rooting}\nFoes hit are slowed; on a crit they can't move at all."
+	},
+	"h7CorrodingVenom": {
+		"implements": "combatEvent",
+		"script": "combat/h7CorrodingVenom",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {},
+			"additionalProperties": false
+		},
+		"description": "{Corroding Venom}\nActive attack: target -${val} Defense until the end of its next turn."
+	},
+	"h7HexOfDisruption": {
+		"implements": "combatEvent",
+		"script": "combat/h7HexOfDisruption",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"turns": {
+					"type": "number"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": "{Hex of Disruption}\nShots give the target and adjacent foes -${val} Defense."
+	},
+	"h7MagicTouch": {
+		"implements": "combatEvent",
+		"script": "combat/h7MagicTouch",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {},
+			"additionalProperties": false
+		},
+		"description": "{Magic Touch}\nAttacks put a random negative spell on the target."
+	},
+	"h7ChaosShield": {
+		"implements": "combatEvent",
+		"script": "combat/h7ChaosShield",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {},
+			"additionalProperties": false
+		},
+		"description": "{Chaos Shield}\nFoes that attack or retaliate on it in melee get a random negative spell."
+	},
+	"h7Stranglehold": {
+		"implements": "combatEvent",
+		"script": "combat/h7Stranglehold",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {},
+			"additionalProperties": false
+		},
+		"description": "{Stranglehold}\nGrabs single-hex foes when attacking or retaliating."
+	},
+	"h7EntanglingRoots": {
+		"implements": "combatEvent",
+		"script": "combat/h7EntanglingRoots",
+		"patches": [],
+		"priority": 100,
+		"schema": {
+			"type": "object",
+			"properties": {},
+			"additionalProperties": false
+		},
+		"description": "{Entangling Roots}\nFoes hit can't move until the Ancient Treant moves or dies."
+	},
+	"h7FatalStrike": {
+		"implements": "combatEvent",
+		"script": "combat/h7FatalStrike",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {},
+			"additionalProperties": false
+		},
+		"description": "{Deadly Strike}\nAny damage dealt kills at least one enemy."
+	},
+	"h7Backstab": {
+		"implements": "combatEvent",
+		"script": "combat/h7Backstab",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {},
+			"additionalProperties": false
+		},
+		"description": "{Backstab}\nMelee vs a foe already hit by allies this round: +${val}% damage."
+	},
+	"h7AuraOfPestilence": {
+		"implements": "combatEvent",
+		"script": "combat/h7AuraOfPestilence",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"perCreature": {
+					"type": "number"
+				},
+				"attack": {
+					"type": "number"
+				},
+				"speed": {
+					"type": "number"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": "{Aura of Pestilence}\nAt round start, damages and weakens adjacent foes."
+	},
+	"h7BloodRage": {
+		"implements": "combatEvent",
+		"script": "combat/h7BloodRage",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {},
+			"additionalProperties": false
+		},
+		"description": ""
+	},
+	"h7OpportunityRetaliation": {
+		"implements": "combatEvent",
+		"script": "combat/h7OpportunityRetaliation",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {},
+			"additionalProperties": false
+		},
+		"description": "{Opportunity Retaliation}\nRetaliates on a foe meleeing an adjacent ally if adjacent, 1/round"
+	},
+	"h7PiercingShot": {
+		"implements": "combatEvent",
+		"script": "combat/h7PiercingShot",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"fire": {
+					"type": "boolean"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": "{Piercing Shot}\nShots pierce the whole line, hitting all units on it (allies too)."
+	},
+	"h7PiercingShotApprentice": {
+		"implements": "combatEvent",
+		"script": "combat/h7PiercingShotApprentice",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {},
+			"additionalProperties": false
+		},
+		"description": "{Piercing Shot}\nShots pierce the whole line, dealing Fire damage to all on it (allies too)."
+	},
+	"h7DoubleShot": {
+		"implements": "combatEvent",
+		"script": "combat/h7DoubleShot",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {},
+			"additionalProperties": false
+		},
+		"description": "{Double Shot}\nKills 1+: shoots again; target may retaliate first."
+	},
+	"h7OpportunityAttack": {
+		"implements": "combatEvent",
+		"script": "combat/h7OpportunityAttack",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {},
+			"additionalProperties": false
+		},
+		"description": "{Opportunity Attack}\nIf not blocked, shoots foes hit in melee (${val}%, 1/round)."
+	},
+	"h7Wild": {
+		"implements": "combatEvent",
+		"script": "combat/h7Wild",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {},
+			"additionalProperties": false
+		},
+		"description": "{Wild}\nAfter being meleed, until next turn: strikes twice, crits root"
+	},
+	"h7Rage": {
+		"implements": "combatEvent",
+		"script": "combat/h7Rage",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"damage": {
+					"type": "number"
+				},
+				"speed": {
+					"type": "number"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": "{Rage}\nAfter being shot, until its next turn ends: +${damage} damage, +${speed} Speed, Mind immunity"
+	},
+	"h7HammerOfArkath": {
+		"implements": "combatEvent",
+		"script": "combat/h7HammerOfArkath",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {},
+			"additionalProperties": false
+		},
+		"description": "{Hammer of Arkath}\nActive melee: units next to target take ${val}% as Fire (both sides)"
+	},
+	"h7Maneuver": {
+		"implements": "combatEvent",
+		"script": "combat/h7Maneuver",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {},
+			"additionalProperties": false
+		},
+		"description": "{Evasive Maneuver}\nIn melee: steps back first, then shoots back (${val}%), 1/round"
+	},
+	"h7MobileShooter": {
+		"implements": "combatEvent",
+		"script": "combat/h7MobileShooter",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {},
+			"additionalProperties": false
+		},
+		"description": "{Mobile Shooter}\nMove without attacking: shoots nearest foe after (not if blocked)"
+	},
+	"h7LongRange": {
+		"implements": "combatEvent",
+		"script": "combat/h7LongRange",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {},
+			"additionalProperties": false
+		},
+		"description": "{Long Reach}\nSingle-hex targets cannot retaliate."
+	},
+	"h7MagicAbsorption": {
+		"implements": "combatEvent",
+		"script": "combat/h7MagicAbsorption",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {},
+			"additionalProperties": false
+		},
+		"description": "{Magic Absorption}\nSpell damage taken is added to its next attack as Prime damage"
+	},
+	"h7SoulFlayingBreath": {
+		"implements": "combatEvent",
+		"script": "combat/h7SoulFlayingBreath",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"range": {
+					"type": "number"
+				},
+				"step": {
+					"type": "number"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": "{Soul Flaying Breath}\nBreath hits foes on hexes 3-${range} of the line, -${step}% per hex (Dark)."
+	},
+	"h7ArcaneWings": {
+		"implements": "combatEvent",
+		"script": "combat/h7ArcaneWings",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {},
+			"additionalProperties": false
+		},
+		"description": "{Arcane Wings}\nAt round end, each adjacent foe gets a random negative spell."
+	},
+	"h7FireBreath": {
+		"implements": "combatEvent",
+		"script": "combat/h7FireBreath",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"turns": {
+					"type": "number"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": "{Fire Breath}\nHit hexes burn until next round's end: ${val}×count Fire dmg to foes"
+	},
+	"h7TrailOfFire": {
+		"implements": "combatEvent",
+		"script": "combat/h7TrailOfFire",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"turns": {
+					"type": "number"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": "{Trail of Fire}\nPath burns until next round's end: ${val}×count Fire dmg to foes in it"
+	},
+	"h7ManaDrain": {
+		"implements": "combatEvent",
+		"script": "combat/h7ManaDrain",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {},
+			"additionalProperties": false
+		},
+		"description": ""
+	},
+	"h7SoulReaver": {
+		"implements": "combatEvent",
+		"script": "combat/h7SoulReaver",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {},
+			"additionalProperties": false
+		},
+		"description": ""
+	},
+	"h7RuneOfBalance": {
+		"implements": "combatEvent",
+		"script": "combat/h7RuneOfBalance",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {},
+			"additionalProperties": false
+		},
+		"description": ""
+	},
+	"h7RuneZone": {
+		"implements": "combatEvent",
+		"script": "combat/h7RuneZone",
+		"patches": [],
+		"priority": -10,
+		"schema": {
+			"type": "object",
+			"properties": {},
+			"additionalProperties": false
+		},
+		"description": ""
+	},
+	"h7ZoneTick": {
+		"implements": "combatEvent",
+		"script": "combat/h7ZoneTick",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"mode": {
+					"type": "string"
+				},
+				"spell": {
+					"type": "string"
+				},
+				"anchor": {
+					"type": "number"
+				},
+				"power": {
+					"type": "number"
+				},
+				"per": {
+					"type": "number"
+				},
+				"side": {
+					"type": "number"
+				},
+				"caster": {
+					"type": "number"
+				},
+				"speed": {
+					"type": "number"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": ""
+	},
+	"h7LivingShelter": {
+		"implements": "combatEvent",
+		"script": "combat/h7LivingShelter",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"def": {
+					"type": "number"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": ""
+	},
+	"h7LivingShelterZone": {
+		"implements": "combatEvent",
+		"script": "combat/h7LivingShelterZone",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {},
+			"additionalProperties": false
+		},
+		"description": ""
+	},
+	"h7AbRunePlace": {
+		"implements": "spellEffect",
+		"script": "spells/h7AbRunePlace",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"mode": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"h7AbZoneD": {
+		"implements": "spellEffect",
+		"script": "spells/h7AbZoneD",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"mode": {
+					"type": "string"
+				},
+				"per": {
+					"type": "number"
+				},
+				"turns": {
+					"type": "number"
+				},
+				"speed": {
+					"type": "number"
+				},
+				"trigger": {
+					"type": "string"
+				},
+				"tick": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"h7ZoneBurn": {
+		"implements": "spellEffect",
+		"script": "spells/h7ZoneBurn",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"mark": {
+					"type": "string"
+				},
+				"enemiesOnly": {
+					"type": "boolean"
+				},
+				"logIndex": {
+					"type": "number"
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"h7AbUse": {
+		"implements": "spellEffect",
+		"script": "spells/h7AbUse",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"key": {
+					"type": "string"
+				},
+				"uses": {
+					"type": "number"
+				},
+				"recharge": {
+					"type": "boolean"
+				},
+				"notInMelee": {
+					"type": "boolean"
+				},
+				"noRoot": {
+					"type": "boolean"
+				},
+				"shape": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"h7AbArm": {
+		"implements": "spellEffect",
+		"script": "spells/h7AbArm",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"mark": {
+					"type": "string"
+				},
+				"icon": {
+					"type": "string"
+				},
+				"animation": {
+					"type": "string"
+				},
+				"sound": {
+					"type": "string"
+				},
+				"log": {
+					"type": "number"
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"h7AbShape": {
+		"implements": "spellEffect",
+		"script": "spells/h7AbShape",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"mode": {
+					"type": "string"
+				},
+				"radius": {
+					"type": "number"
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"h7AbRestore": {
+		"implements": "spellEffect",
+		"script": "spells/h7AbRestore",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"mode": {
+					"type": "string"
+				},
+				"per": {
+					"type": "number"
+				},
+				"animation": {
+					"type": "string"
+				},
+				"sound": {
+					"type": "string"
+				},
+				"log": {
+					"type": "number"
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"h7AbCharge": {
+		"implements": "spellEffect",
+		"script": "spells/h7AbCharge",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"mode": {
+					"type": "string"
+				},
+				"range": {
+					"type": "number"
+				},
+				"bonuses": {
+					"type": "array",
+					"items": {
+						"type": "object"
+					}
+				},
+				"animation": {
+					"type": "string"
+				},
+				"endSound": {
+					"type": "string"
+				},
+				"log": {
+					"type": "number"
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"h47Dive": {
+		"implements": "spellEffect",
+		"script": "spells/h47Dive",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"mark": {
+					"type": "string"
+				},
+				"landScript": {
+					"type": "string"
+				},
+				"factor": {
+					"type": "number"
+				},
+				"markAppear": {
+					"type": "string"
+				},
+				"markAnimation": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"h7DivingAttackLand": {
+		"implements": "combatEvent",
+		"script": "combat/h7DivingAttackLand",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"mark": {
+					"type": "string"
+				},
+				"spell": {
+					"type": "string"
+				},
+				"factor": {
+					"type": "number"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": "{Swoop Attack}\nThe Griffin is airborne and swoops down at the start of next round."
+	},
+	"h7AbStrike": {
+		"implements": "combatEvent",
+		"script": "combat/h7AbStrike",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"mode": {
+					"type": "string"
+				},
+				"mark": {
+					"type": "string"
+				},
+				"ranged": {
+					"type": "boolean"
+				},
+				"animation": {
+					"type": "string"
+				},
+				"sound": {
+					"type": "string"
+				},
+				"radius": {
+					"type": "number"
+				},
+				"turns": {
+					"type": "number"
+				},
+				"pct": {
+					"type": "number"
+				},
+				"show": {
+					"type": "string"
+				},
+				"icon": {
+					"type": "string"
+				},
+				"log": {
+					"type": "number"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": ""
+	},
+	"h7Dive": {
+		"implements": "spellEffect",
+		"script": "spells/h7Dive",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"mark": {
+					"type": "string"
+				},
+				"landScript": {
+					"type": "string"
+				},
+				"factor": {
+					"type": "number"
+				},
+				"markAppear": {
+					"type": "string"
+				},
+				"markAnimation": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"h7HammerRefund": {
+		"implements": "combatEvent",
+		"script": "combat/h7HammerRefund",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {},
+			"additionalProperties": false
+		},
+		"description": "{Throwing Hammer}\nOnly 1 shot; refunded if the hammer kills nothing."
+	},
+	"h7NecroRaise": {
+		"implements": "combatEvent",
+		"script": "combat/h7NecroRaise",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {},
+			"additionalProperties": false
+		},
+		"description": ""
+	},
+	"h7RuneAura": {
+		"implements": "combatEvent",
+		"script": "combat/h7RuneAura",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {},
+			"additionalProperties": false
+		},
+		"description": "{Rune Aura}\nAn H7 Memorial rune stone is on the battlefield: keeps its aura."
+	},
+	"h7RuneShield": {
+		"implements": "combatEvent",
+		"script": "combat/h7RuneShield",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"icon": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": "{Fortune Rune Shield}\nCan absorb ${val} more attack and spell damage; gone when used up."
+	},
+	"h7RuneStoneEffect": {
+		"implements": "spellEffect",
+		"script": "spells/h7RuneStone",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"mode": {
+					"type": "string"
+				},
+				"creature": {
+					"type": "string"
+				},
+				"watchScript": {
+					"type": "string"
+				},
+				"icon": {
+					"type": "string"
+				},
+				"shieldBase": {
+					"type": "number"
+				},
+				"shieldPerLevel": {
+					"type": "number"
+				},
+				"damageBase": {
+					"type": "number"
+				},
+				"damagePerLevel": {
+					"type": "number"
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"h7AirBurst": {
+		"implements": "spellEffect",
+		"script": "spells/h7AirBurst",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"ignoreImmunity": {
+					"type": "boolean"
+				},
+				"chainLength": {
+					"type": "number"
+				},
+				"eventScript": {
+					"type": "string"
+				},
+				"hitSpell": {
+					"type": "string"
+				},
+				"turns": {
+					"type": "number"
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"h7AirGust": {
+		"implements": "spellEffect",
+		"script": "spells/h7AirGust",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"ignoreImmunity": {
+					"type": "boolean"
+				},
+				"chainLength": {
+					"type": "number"
+				},
+				"straight": {
+					"type": "array",
+					"items": {
+						"type": "number"
+					}
+				},
+				"diagonal": {
+					"type": "array",
+					"items": {
+						"type": "number"
+					}
+				},
+				"animRight": {
+					"type": "string"
+				},
+				"animLeft": {
+					"type": "string"
+				},
+				"sound": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"h7AirSplash": {
+		"implements": "spellEffect",
+		"script": "spells/h7AirSplash",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"ignoreImmunity": {
+					"type": "boolean"
+				},
+				"chainLength": {
+					"type": "number"
+				},
+				"base": {
+					"type": "array",
+					"items": {
+						"type": "number"
+					}
+				},
+				"perPower": {
+					"type": "array",
+					"items": {
+						"type": "number"
+					}
+				},
+				"anim": {
+					"type": "string"
+				},
+				"sound": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"h7AirCyclone": {
+		"implements": "spellEffect",
+		"script": "spells/h7AirCyclone",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"ignoreImmunity": {
+					"type": "boolean"
+				},
+				"chainLength": {
+					"type": "number"
+				},
+				"base": {
+					"type": "array",
+					"items": {
+						"type": "number"
+					}
+				},
+				"perPower": {
+					"type": "array",
+					"items": {
+						"type": "number"
+					}
+				},
+				"radius": {
+					"type": "number"
+				},
+				"smallDoubleFromLevel": {
+					"type": "number"
+				},
+				"chainFactor": {
+					"type": "number"
+				},
+				"requireAny": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"exclude": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"frags": {
+					"type": "boolean"
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"h7AirTime": {
+		"implements": "spellEffect",
+		"script": "spells/h7AirTime",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"ignoreImmunity": {
+					"type": "boolean"
+				},
+				"chainLength": {
+					"type": "number"
+				},
+				"values": {
+					"type": "array",
+					"items": {
+						"type": "number"
+					}
+				},
+				"turns": {
+					"type": "number"
+				},
+				"animFast": {
+					"type": "string"
+				},
+				"animSlow": {
+					"type": "string"
+				},
+				"soundFast": {
+					"type": "string"
+				},
+				"soundSlow": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"h7AirStorm": {
+		"implements": "spellEffect",
+		"script": "spells/h7AirStorm",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"ignoreImmunity": {
+					"type": "boolean"
+				},
+				"chainLength": {
+					"type": "number"
+				},
+				"radius": {
+					"type": "number"
+				},
+				"turns": {
+					"type": "number"
+				},
+				"base": {
+					"type": "array",
+					"items": {
+						"type": "number"
+					}
+				},
+				"perPower": {
+					"type": "array",
+					"items": {
+						"type": "number"
+					}
+				},
+				"animation": {
+					"type": "string"
+				},
+				"sound": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"h7AirBurstTick": {
+		"implements": "combatEvent",
+		"script": "combat/h7AirBurstTick",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"casterSide": {
+					"type": "number"
+				},
+				"expert": {
+					"type": "boolean"
+				},
+				"hitSpell": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": "{Lightning Burst (H7)}\nOn this unit's turn, shocks adjacent units with Air damage."
+	},
+	"h7AirReflexes": {
+		"implements": "combatEvent",
+		"script": "combat/h7AirReflexes",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {},
+			"additionalProperties": false
+		},
+		"description": "{Lightning Reflexes (H7)}\nStrikes an extra time in melee; extra hit Attack ${val}."
+	},
+	"core:damageCalculator": {
+		"patches": {
+			"appendItems": [
+				"damage/h7AirStorm",
+				"damage/h7FogShroudPatch"
+			]
+		}
+	},
+	"h7EarthAttach": {
+		"implements": "spellEffect",
+		"script": "spells/h7EarthAttach",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"ignoreImmunity": {
+					"type": "boolean"
+				},
+				"chainLength": {
+					"type": "number"
+				},
+				"eventScript": {
+					"type": "string"
+				},
+				"base": {
+					"type": "array",
+					"items": {
+						"type": "number"
+					}
+				},
+				"perPower": {
+					"type": "array",
+					"items": {
+						"type": "number"
+					}
+				},
+				"adjust": {
+					"type": "boolean"
+				},
+				"turns": {
+					"type": "array",
+					"items": {
+						"type": "number"
+					}
+				},
+				"requireAny": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"exclude": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"icon": {
+					"type": "string"
+				},
+				"stacking": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"h7Earthquake": {
+		"implements": "spellEffect",
+		"script": "spells/h7Earthquake",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"ignoreImmunity": {
+					"type": "boolean"
+				},
+				"chainLength": {
+					"type": "number"
+				},
+				"requireAny": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"exclude": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"base": {
+					"type": "array",
+					"items": {
+						"type": "number"
+					}
+				},
+				"perPower": {
+					"type": "array",
+					"items": {
+						"type": "number"
+					}
+				},
+				"frags": {
+					"type": "boolean"
+				},
+				"chainFactor": {
+					"type": "number"
+				},
+				"killByPercentage": {
+					"type": "boolean"
+				},
+				"killByCount": {
+					"type": "boolean"
+				},
+				"enemyFactor": {
+					"type": "array",
+					"items": {
+						"type": "number"
+					}
+				},
+				"wallDamage": {
+					"type": "number"
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"h7StoneSpikes": {
+		"implements": "spellEffect",
+		"script": "spells/h7StoneSpikes",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"ignoreImmunity": {
+					"type": "boolean"
+				},
+				"chainLength": {
+					"type": "number"
+				},
+				"requireAny": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"exclude": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"base": {
+					"type": "array",
+					"items": {
+						"type": "number"
+					}
+				},
+				"perPower": {
+					"type": "array",
+					"items": {
+						"type": "number"
+					}
+				},
+				"frags": {
+					"type": "boolean"
+				},
+				"chainFactor": {
+					"type": "number"
+				},
+				"killByPercentage": {
+					"type": "boolean"
+				},
+				"killByCount": {
+					"type": "boolean"
+				},
+				"centerFactor": {
+					"type": "array",
+					"items": {
+						"type": "number"
+					}
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"h7PoisonCloud": {
+		"implements": "spellEffect",
+		"script": "spells/h7PoisonCloud",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"base": {
+					"type": "array",
+					"items": {
+						"type": "number"
+					}
+				},
+				"perPower": {
+					"type": "array",
+					"items": {
+						"type": "number"
+					}
+				},
+				"turns": {
+					"type": "number"
+				},
+				"zoneScript": {
+					"type": "string"
+				},
+				"zoneAnimation": {
+					"type": "string"
+				},
+				"hitAnimation": {
+					"type": "string"
+				},
+				"hitSound": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"h7WaspSwarm": {
+		"implements": "spellEffect",
+		"script": "spells/h7WaspSwarm",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"ignoreImmunity": {
+					"type": "boolean"
+				},
+				"chainLength": {
+					"type": "number"
+				},
+				"base": {
+					"type": "array",
+					"items": {
+						"type": "number"
+					}
+				},
+				"perPower": {
+					"type": "array",
+					"items": {
+						"type": "number"
+					}
+				},
+				"targets": {
+					"type": "array",
+					"items": {
+						"type": "number"
+					}
+				},
+				"icon": {
+					"type": "string"
+				},
+				"eventScript": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"h7Implosion": {
+		"implements": "spellEffect",
+		"script": "spells/h7Implosion",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"ignoreImmunity": {
+					"type": "boolean"
+				},
+				"chainLength": {
+					"type": "number"
+				},
+				"chainFactor": {
+					"type": "number"
+				},
+				"killByPercentage": {
+					"type": "boolean"
+				},
+				"killByCount": {
+					"type": "boolean"
+				},
+				"pctBase": {
+					"type": "array",
+					"items": {
+						"type": "number"
+					}
+				},
+				"pctPer": {
+					"type": "array",
+					"items": {
+						"type": "number"
+					}
+				},
+				"cap": {
+					"type": "array",
+					"items": {
+						"type": "number"
+					}
+				},
+				"pullRange": {
+					"type": "number"
+				},
+				"echo": {
+					"type": "boolean"
+				},
+				"echoScript": {
+					"type": "string"
+				},
+				"echoBase": {
+					"type": "number"
+				},
+				"echoPer": {
+					"type": "number"
+				},
+				"echoCap": {
+					"type": "number"
+				},
+				"icon": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"h7TimeStasis": {
+		"implements": "spellEffect",
+		"script": "spells/h7TimeStasis",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"ignoreImmunity": {
+					"type": "boolean"
+				},
+				"chainLength": {
+					"type": "number"
+				},
+				"endScript": {
+					"type": "string"
+				},
+				"animation": {
+					"type": "string"
+				},
+				"sound": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"h7RegenTick": {
+		"implements": "combatEvent",
+		"script": "combat/h7RegenTick",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"side": {
+					"type": "number"
+				},
+				"spell": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": "{Regeneration}\nRestores ${val} HP at the start of each round; can revive the dead."
+	},
+	"h7PoisonSprayTick": {
+		"implements": "combatEvent",
+		"script": "combat/h7PoisonSprayTick",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"side": {
+					"type": "number"
+				},
+				"spell": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": "{Poison Spray}\nTakes ${val} Earth damage at the start of each round."
+	},
+	"h7EntangleTick": {
+		"implements": "combatEvent",
+		"script": "combat/h7EntangleTick",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"side": {
+					"type": "number"
+				},
+				"spell": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": "{Entangle}\nTakes ${val} Earth damage after each move."
+	},
+	"h7PoisonCloudZone": {
+		"implements": "combatEvent",
+		"script": "combat/h7PoisonCloudZone",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"group": { "type": "number" },
+				"bonus": { "type": "number" },
+				"center": {
+					"type": "number"
+				},
+				"side": {
+					"type": "number"
+				},
+				"spell": {
+					"type": "string"
+				},
+				"turns": {
+					"type": "number"
+				},
+				"animation": {
+					"type": "string"
+				},
+				"hitAnimation": {
+					"type": "string"
+				},
+				"hitSound": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": ""
+	},
+	"h7WaspSwarmJump": {
+		"implements": "combatEvent",
+		"script": "combat/h7WaspSwarmJump",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"level": { "type": "number" },
+				"dmg": {
+					"type": "number"
+				},
+				"spell": {
+					"type": "string"
+				},
+				"icon": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": "{Wasp Swarm}\nLuck -2 until turn end, then jumps to another unit of that side (${val} left)"
+	},
+	"h7ImplosionEcho": {
+		"implements": "combatEvent",
+		"script": "combat/h7ImplosionEcho",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"bonus": { "type": "number" },
+				"side": {
+					"type": "number"
+				},
+				"spell": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": "{Implosion Echo}\nAt next round start, takes ${val}% of its total HP then as damage."
+	},
+	"h7TimeStasisEnd": {
+		"implements": "combatEvent",
+		"script": "combat/h7TimeStasisEnd",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"animation": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": ""
+	},
+	"h7BurnTick": {
+		"implements": "combatEvent",
+		"script": "combat/h7BurnTick",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"spell": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": "{Burn}\nTakes ${val} Fire damage after its first action each round."
+	},
+	"h7ElementalGrow": {
+		"implements": "combatEvent",
+		"script": "combat/h7ElementalGrow",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {},
+			"additionalProperties": false
+		},
+		"description": "{Summon Elemental (H7)}\nCount +${val} at the start of each round."
+	},
+	"h7FireSentry": {
+		"implements": "combatEvent",
+		"script": "combat/h7FireSentry",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {},
+			"additionalProperties": false
+		},
+		"description": "{Fire Sentry (H7)}\nRound end: shoots 2 nearest foes; counters each round's first shooter"
+	},
+	"h7Frenzy": {
+		"implements": "spellEffect",
+		"script": "spells/h7Frenzy",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"slope": {
+					"type": "array",
+					"items": {
+						"type": "number"
+					}
+				},
+				"bonus": {
+					"type": "number"
+				},
+				"expertLevel": {
+					"type": "number"
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"h7SoulConflagration": {
+		"implements": "spellEffect",
+		"script": "spells/h7SoulConflagration",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"ignoreImmunity": {
+					"type": "boolean"
+				},
+				"chainLength": {
+					"type": "number"
+				},
+				"requireAny": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"exclude": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"base": {
+					"type": "array",
+					"items": {
+						"type": "number"
+					}
+				},
+				"perPower": {
+					"type": "array",
+					"items": {
+						"type": "number"
+					}
+				},
+				"frags": {
+					"type": "boolean"
+				},
+				"chainFactor": {
+					"type": "number"
+				},
+				"killByPercentage": {
+					"type": "boolean"
+				},
+				"killByCount": {
+					"type": "boolean"
+				},
+				"perAlly": {
+					"type": "array",
+					"items": {
+						"type": "number"
+					}
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"h7SummonElemental": {
+		"implements": "spellEffect",
+		"script": "spells/h7SummonElemental",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"ignoreImmunity": {
+					"type": "boolean"
+				},
+				"chainLength": {
+					"type": "number"
+				},
+				"ids": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"base": {
+					"type": "array",
+					"items": {
+						"type": "number"
+					}
+				},
+				"perPower": {
+					"type": "array",
+					"items": {
+						"type": "number"
+					}
+				},
+				"byHealth": {
+					"type": "boolean"
+				},
+				"byTerrain": {
+					"type": "boolean"
+				},
+				"fx": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"permanent": {
+					"type": "boolean"
+				},
+				"exclusive": {
+					"type": "boolean"
+				},
+				"grow": {
+					"type": "number"
+				},
+				"growScript": {
+					"type": "string"
+				},
+				"growIcon": {
+					"type": "string"
+				},
+				"growLevel": {
+					"type": "number"
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"h7FireSentrySummon": {
+		"implements": "spellEffect",
+		"script": "spells/h7FireSentry",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"creature": {
+					"type": "string"
+				},
+				"hp": {
+					"type": "array",
+					"items": {
+						"type": "number"
+					}
+				},
+				"base": {
+					"type": "array",
+					"items": {
+						"type": "number"
+					}
+				},
+				"perPower": {
+					"type": "array",
+					"items": {
+						"type": "number"
+					}
+				},
+				"shots": {
+					"type": "number"
+				},
+				"watchScript": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"h7FireWallPlace": {
+		"implements": "spellEffect",
+		"script": "spells/h7FireWallPlace",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"hidden": {
+					"type": "boolean"
+				},
+				"passable": {
+					"type": "boolean"
+				},
+				"trap": {
+					"type": "boolean"
+				},
+				"removeOnTrigger": {
+					"type": "boolean"
+				},
+				"hideNative": {
+					"type": "boolean"
+				},
+				"patchCount": {
+					"type": "number"
+				},
+				"turnsRemaining": {
+					"type": "number"
+				},
+				"triggerAbility": {
+					"type": "string"
+				},
+				"attacker": {
+					"type": "object",
+					"additionalProperties": false,
+					"description": "Per-side appearance and placement of the obstacle",
+					"properties": {
+						"animation": {
+							"type": "string",
+							"description": "Looping animation shown while the obstacle is on the battlefield"
+						},
+						"appearAnimation": {
+							"type": "string",
+							"description": "Animation played when the obstacle appears"
+						},
+						"appearSound": {
+							"type": "string",
+							"description": "Sound played when the obstacle appears"
+						},
+						"removalAnimation": {
+							"type": "string",
+							"description": "Animation played when the obstacle is removed. Falls back to appearAnimation if empty"
+						},
+						"offsetY": {
+							"type": "number",
+							"description": "Vertical offset of the obstacle sprite, in pixels"
+						},
+						"shape": {
+							"type": "array",
+							"description": "Hexes occupied by the obstacle, as direction paths from the anchor hex",
+							"items": {
+								"type": "array",
+								"items": {
+									"type": "string"
+								}
+							}
+						},
+						"range": {
+							"type": "array",
+							"description": "Hexes the obstacle may be placed on, as direction paths from the target hex",
+							"items": {
+								"type": "array",
+								"items": {
+									"type": "string"
+								}
+							}
+						}
+					}
+				},
+				"defender": {
+					"type": "object",
+					"additionalProperties": false,
+					"description": "Per-side appearance and placement of the obstacle",
+					"properties": {
+						"animation": {
+							"type": "string",
+							"description": "Looping animation shown while the obstacle is on the battlefield"
+						},
+						"appearAnimation": {
+							"type": "string",
+							"description": "Animation played when the obstacle appears"
+						},
+						"appearSound": {
+							"type": "string",
+							"description": "Sound played when the obstacle appears"
+						},
+						"removalAnimation": {
+							"type": "string",
+							"description": "Animation played when the obstacle is removed. Falls back to appearAnimation if empty"
+						},
+						"offsetY": {
+							"type": "number",
+							"description": "Vertical offset of the obstacle sprite, in pixels"
+						},
+						"shape": {
+							"type": "array",
+							"description": "Hexes occupied by the obstacle, as direction paths from the anchor hex",
+							"items": {
+								"type": "array",
+								"items": {
+									"type": "string"
+								}
+							}
+						},
+						"range": {
+							"type": "array",
+							"description": "Hexes the obstacle may be placed on, as direction paths from the target hex",
+							"items": {
+								"type": "array",
+								"items": {
+									"type": "string"
+								}
+							}
+						}
+					}
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"h7HealHarm": {
+		"implements": "spellEffect",
+		"script": "spells/h7HealHarm",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"ignoreImmunity": {
+					"type": "boolean"
+				},
+				"heal": {
+					"type": "array",
+					"items": {
+						"type": "number"
+					}
+				},
+				"healPer": {
+					"type": "array",
+					"items": {
+						"type": "number"
+					}
+				},
+				"dmg": {
+					"type": "array",
+					"items": {
+						"type": "number"
+					}
+				},
+				"dmgPer": {
+					"type": "array",
+					"items": {
+						"type": "number"
+					}
+				},
+				"exclude": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"h7SunBurst": {
+		"implements": "spellEffect",
+		"script": "spells/h7SunBurst",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"ignoreImmunity": {
+					"type": "boolean"
+				},
+				"base": {
+					"type": "array",
+					"items": {
+						"type": "number"
+					}
+				},
+				"perPower": {
+					"type": "array",
+					"items": {
+						"type": "number"
+					}
+				},
+				"debuffPer": {
+					"type": "array",
+					"items": {
+						"type": "number"
+					}
+				},
+				"debuffTurns": {
+					"type": "number"
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"h7DispelRandom": {
+		"implements": "spellEffect",
+		"script": "spells/h7DispelRandom",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"ignoreImmunity": {
+					"type": "boolean"
+				},
+				"count": {
+					"type": "array",
+					"items": {
+						"type": "number"
+					}
+				},
+				"dispelPositive": {
+					"type": "boolean"
+				},
+				"dispelNegative": {
+					"type": "boolean"
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"h7ResurrectAura": {
+		"implements": "spellEffect",
+		"script": "spells/h7ResurrectAura",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"ignoreImmunity": {
+					"type": "boolean"
+				},
+				"amount": {
+					"type": "array",
+					"items": {
+						"type": "number"
+					}
+				},
+				"turns": {
+					"type": "number"
+				},
+				"exclude": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"icon": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"h7MartyrCast": {
+		"implements": "spellEffect",
+		"script": "spells/h7MartyrCast",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"ignoreImmunity": {
+					"type": "boolean"
+				},
+				"share": {
+					"type": "array",
+					"items": {
+						"type": "number"
+					}
+				},
+				"morale": {
+					"type": "number"
+				},
+				"turns": {
+					"type": "number"
+				},
+				"icon": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"h7ShadowCloakCast": {
+		"implements": "spellEffect",
+		"script": "spells/h7ShadowCloakCast",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"ignoreImmunity": {
+					"type": "boolean"
+				},
+				"charges": {
+					"type": "array",
+					"items": {
+						"type": "number"
+					}
+				},
+				"turns": {
+					"type": "number"
+				},
+				"mark": {
+					"type": "string"
+				},
+				"flag": {
+					"type": "string"
+				},
+				"icon": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"h7ShadowImage": {
+		"implements": "spellEffect",
+		"script": "spells/h7ShadowImage",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"ignoreImmunity": {
+					"type": "boolean"
+				},
+				"pct": {
+					"type": "array",
+					"items": {
+						"type": "number"
+					}
+				},
+				"guard": {
+					"type": "array",
+					"items": {
+						"type": "boolean"
+					}
+				},
+				"guardTurns": {
+					"type": "number"
+				},
+				"icon": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"h7HauntingCast": {
+		"implements": "spellEffect",
+		"script": "spells/h7HauntingCast",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"ignoreImmunity": {
+					"type": "boolean"
+				},
+				"count": {
+					"type": "array",
+					"items": {
+						"type": "number"
+					}
+				},
+				"base": {
+					"type": "array",
+					"items": {
+						"type": "number"
+					}
+				},
+				"perPower": {
+					"type": "array",
+					"items": {
+						"type": "number"
+					}
+				},
+				"turns": {
+					"type": "number"
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"h7CelestialArmor": {
+		"implements": "combatEvent",
+		"script": "combat/h7CelestialArmor",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"attachLevel": { "type": "number" },
+				"icon": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": "{Celestial Armor (H7)}\nCan absorb ${val} more attack and spell damage; ends when used up or expired."
+	},
+	"h7Retribution": {
+		"implements": "combatEvent",
+		"script": "combat/h7Retribution",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {},
+			"additionalProperties": false
+		},
+		"description": "{Retribution (H7)}\nWhen attacked and damaged, the attacker takes ${val} Light damage."
+	},
+	"h7AgonyTick": {
+		"implements": "combatEvent",
+		"script": "combat/h7AgonyTick",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {},
+			"additionalProperties": false
+		},
+		"description": "{Agony (H7)}\nTakes ${val} Dark damage after each action."
+	},
+	"h7ElrathTouch": {
+		"implements": "combatEvent",
+		"script": "combat/h7ElrathTouch",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {},
+			"additionalProperties": false
+		},
+		"description": "{Elrath's Touch (Resurrection (H7))}\nRestores ${val} HP at the start of each round; can resurrect."
+	},
+	"h7PurgeCurse": {
+		"implements": "combatEvent",
+		"script": "combat/h7PurgeCurse",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {},
+			"additionalProperties": false
+		},
+		"description": "{Curse (Expunge (H7))}\nCan't gain buffs; any buff cast on it is removed at once."
+	},
+	"h7FaceOfFear": {
+		"implements": "combatEvent",
+		"script": "combat/h7FaceOfFear",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"mode": {
+					"type": "string"
+				},
+				"range": {
+					"type": "number"
+				},
+				"mark": {
+					"type": "string"
+				},
+				"noRetaliation": {
+					"type": "boolean"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": "{Face of Fear (H7)}\nAttacks frighten foes (Morale -${val}, 3 rounds); melee knocks back ${range} hexes"
+	},
+	"h7Martyr": {
+		"implements": "combatEvent",
+		"script": "combat/h7Martyr",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {},
+			"additionalProperties": false
+		},
+		"description": "{Martyr (H7)}\n${val}% of the damage it takes is borne by the Martyr; Morale +1."
+	},
+	"h7MartyrEnd": {
+		"implements": "combatEvent",
+		"script": "combat/h7MartyrEnd",
+		"patches": [],
+		"priority": 100,
+		"schema": {
+			"type": "object",
+			"properties": {},
+			"additionalProperties": false
+		},
+		"description": ""
+	},
+	"h7ShadowCloakSpell": {
+		"implements": "combatEvent",
+		"script": "combat/h7ShadowCloakSpell",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"mark": {
+					"type": "string"
+				},
+				"flag": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": "{Shadow Cloak (H7)}\nAttacks miss completely until charges run out or it expires (not spells)"
+	},
+	"h7ImageGuard": {
+		"implements": "combatEvent",
+		"script": "combat/h7ImageGuard",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {},
+			"additionalProperties": false
+		},
+		"description": "{Shadow Cloak (Image)}\nDoes not vanish on the first attack (spell damage still hits)."
+	},
+	"h7HauntingPlague": {
+		"implements": "combatEvent",
+		"script": "combat/h7HauntingPlague",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"group": { "type": "number" },
+				"count": {
+					"type": "number"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": ""
+	},
+	"h47ShadowCloak": {
+		"implements": "combatEvent",
+		"script": "combat/h47ShadowCloak",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"mark": {
+					"type": "string"
+				},
+				"flag": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": ""
+	},
+	"h47Shove": {
+		"implements": "combatEvent",
+		"script": "combat/h47Shove",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"mode": {
+					"type": "string"
+				},
+				"range": {
+					"type": "number"
+				},
+				"mark": {
+					"type": "string"
+				},
+				"fx": {
+					"type": "string"
+				},
+				"sound": {
+					"type": "string"
+				},
+				"immune" : { "type" : "array", "items" : { "type" : "string" } }
+			},
+			"additionalProperties": false
+		},
+		"description": ""
+	},
+	"h7FieldFx": {
+		"implements": "spellEffect",
+		"script": "spells/h7FieldFx",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"ignoreImmunity": {
+					"type": "boolean"
+				},
+				"chainLength": {
+					"type": "number"
+				},
+				"anim": {
+					"type": "string"
+				},
+				"sound": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"h7Tsunami": {
+		"implements": "spellEffect",
+		"script": "spells/h7Tsunami",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"ignoreImmunity": {
+					"type": "boolean"
+				},
+				"chainLength": {
+					"type": "number"
+				},
+				"base": {
+					"type": "array",
+					"items": {
+						"type": "number"
+					}
+				},
+				"perPower": {
+					"type": "array",
+					"items": {
+						"type": "number"
+					}
+				},
+				"rows": {
+					"type": "number"
+				},
+				"push": {
+					"type": "number"
+				},
+				"animLeft": {
+					"type": "string"
+				},
+				"animRight": {
+					"type": "string"
+				},
+				"sound": {
+					"type": "string"
+				},
+				"chainFactor": {
+					"type": "number"
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"h7Teleport": {
+		"implements": "spellEffect",
+		"script": "spells/h7Teleport",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"ignoreImmunity": {
+					"type": "boolean"
+				},
+				"chainLength": {
+					"type": "number"
+				},
+				"maxDistance": {
+					"type": "array",
+					"items": {
+						"type": "number"
+					}
+				},
+				"speedBonus": {
+					"type": "array",
+					"items": {
+						"type": "number"
+					}
+				},
+				"speedTurns": {
+					"type": "number"
+				},
+				"isWallPassable": {
+					"type": "boolean"
+				},
+				"isMoatPassable": {
+					"type": "boolean"
+				},
+				"triggerObstacles": {
+					"type": "boolean"
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"h7DispelAll": {
+		"implements": "spellEffect",
+		"script": "spells/h7DispelAll",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"ignoreImmunity": {
+					"type": "boolean"
+				},
+				"chainLength": {
+					"type": "number"
+				},
+				"dispelPositive": {
+					"type": "boolean"
+				},
+				"dispelNegative": {
+					"type": "boolean"
+				},
+				"dispelNeutral": {
+					"type": "boolean"
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"h7FreezingOrb": {
+		"implements": "spellEffect",
+		"script": "spells/h7FreezingOrb",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"ignoreImmunity": {
+					"type": "boolean"
+				},
+				"chainLength": {
+					"type": "number"
+				},
+				"creature": {
+					"type": "string"
+				},
+				"tickScript": {
+					"type": "string"
+				},
+				"hp": {
+					"type": "array",
+					"items": {
+						"type": "number"
+					}
+				},
+				"base": {
+					"type": "array",
+					"items": {
+						"type": "number"
+					}
+				},
+				"perPower": {
+					"type": "array",
+					"items": {
+						"type": "number"
+					}
+				},
+				"rounds": {
+					"type": "number"
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"h7FreezingOrbTick": {
+		"implements": "combatEvent",
+		"script": "combat/h7FreezingOrbTick",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {},
+			"additionalProperties": false
+		},
+		"description": "{Freezing Orb}\nRound end: moves next to foes; adjacent foes take ${val} Water dmg, slowed"
+	},
+	"h7IceStrikeProc": {
+		"implements": "combatEvent",
+		"script": "combat/h7IceStrikeProc",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"chill": {
+					"type": "boolean"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": "{Ice Strike (H7)}\nOn attack and retaliation, foes hit take ${val} extra Water damage."
+	},
+	"h7FogShroudBreak": {
+		"implements": "combatEvent",
+		"script": "combat/h7FogShroudBreak",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {},
+			"additionalProperties": false
+		},
+		"description": "{Fog Shroud (H7)}\nThe fog dissipates when taking melee damage."
+	},
+	"h7VictoriousStreak": {
+		"implements": "combatEvent",
+		"script": "combat/h7VictoriousStreak",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {},
+			"additionalProperties": false
+		},
+		"description": "{Victorious Streak}\n+${val}% damage on extra turns from high Morale."
+	},
+	"h7EternalServitude": {
+		"implements": "combatEvent",
+		"script": "combat/h7EternalServitude",
+		"patches": [],
+		"priority": 50,
+		"schema": {
+			"type": "object",
+			"properties": {},
+			"additionalProperties": false
+		},
+		"description": "{Eternal Servitude}\nAfter an active attack, revives ${val}% of its dead (not on retaliation)."
+	},
+	"h7Coordination": {
+		"implements": "combatEvent",
+		"script": "combat/h7Coordination",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {},
+			"additionalProperties": false
+		},
+		"description": "{Coordination}\nFirst unretaliated melee each round: attacks the target again at once"
+	},
+	"h7FatherSkyFury": {
+		"implements": "combatEvent",
+		"script": "combat/h7FatherSkyFury",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {},
+			"additionalProperties": false
+		},
+		"description": ""
+	},
+	"h7NatureLuck": {
+		"implements": "combatEvent",
+		"script": "combat/h7NatureLuck",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {},
+			"additionalProperties": false
+		},
+		"description": "{Nature's Luck}\nAlways lucky vs foes already hit 2+ times by its side."
+	},
+	"h7RuneScattering": {
+		"implements": "combatEvent",
+		"script": "combat/h7RuneScattering",
+		"patches": [],
+		"priority": 60,
+		"schema": {
+			"type": "object",
+			"properties": {},
+			"additionalProperties": false
+		},
+		"description": "{Rune of Scattering}\n${val}% of melee damage to foes in aura is shared by other foes in it"
+	},
+	"h7SanctumTwin": {
+		"implements": "combatEvent",
+		"script": "combat/h7SanctumTwin",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"twin": {
+					"type": "string"
+				},
+				"army": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": ""
+	}
+}

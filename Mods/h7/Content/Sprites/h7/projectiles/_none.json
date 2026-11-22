@@ -1,0 +1,19 @@
+{
+ "basepath": "h7/projectiles/_none/",
+ "sequences": [
+  {
+   "group": 0,
+   "frames": [
+    "p.png",
+    "p.png",
+    "p.png",
+    "p.png",
+    "p.png",
+    "p.png",
+    "p.png",
+    "p.png",
+    "p.png"
+   ]
+  }
+ ]
+}

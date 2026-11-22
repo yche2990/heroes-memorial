@@ -1,0 +1,3698 @@
+{
+	"h7NecropolisArchLich": {
+		"name": {
+			"singular": "Arch Lich",
+			"plural": "Arch Liches"
+		},
+		"description": "When a Lich outlives the years its body can bear, it is granted the title of Arch Lich. The process may seem too arbitrary, but it is not, for Liches can feel when their end is coming. In compensation, Arch Liches gain even greater power, and some can even drain the life force of the living.\nHard to believe, but there are things that crave power as much as Liches and Arch Liches do. Sandro, the so-called \"super Lich\", comes to mind at once. But he abandoned his faith in the Spider Goddess to pursue another kind of power. I fear there is nothing in all of Heresh more dangerous than Sandro is now. But would I call him \"evil\" for that? Only the Church of Elrath has such notions of good and evil...",
+		"faction": "necropolis",
+		"level": 5,
+		"cost": {
+			"gold": 560
+		},
+		"speed": 4,
+		"hitPoints": 39,
+		"attack": 11,
+		"defense": 13,
+		"damage": {
+			"min": 11,
+			"max": 14
+		},
+		"doubleWide": false,
+		"fightValue": 779,
+		"aiValue": 867,
+		"growth": 3,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"shooter": {
+				"type": "SHOOTER"
+			},
+			"undead": {
+				"type": "UNDEAD",
+				"description": "{Undead}\nNo Morale; poison/Mind/fear immune; +25% Light"
+			},
+			"lightVulnerability": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "01lightSchool",
+				"val": -25,
+				"hidden": true
+			},
+			"h7HexOfDisruption": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7HexOfDisruption",
+				"icon": "h7/abilities/h7HexOfDisruption",
+				"description": "{Hex of Disruption}\nShot: target & neighbors -16 Defense, 2 rounds",
+				"addInfo": {
+					"turns": 2
+				},
+				"val": 16
+			},
+			"h7NecroRaise": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7NecroRaise",
+				"hidden": true
+			},
+			"h7NecroRaiseInfo": {
+				"type": "H7_NECRO_RAISE_H7C"
+			}
+		},
+		"graphics": {
+			"animation": "h7/ArchLich/battle.json",
+			"map": "h7/ArchLich/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/ArchLich/map/atkL.png",
+			"mapAttackFromRight": "h7/ArchLich/map/atkR.png",
+			"iconLarge": "h7/ArchLich/iconLarge.png",
+			"iconSmall": "h7/ArchLich/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"frameAngles": [
+					90,
+					60,
+					45,
+					30,
+					0,
+					-30,
+					-45,
+					-60,
+					-90
+				],
+				"offset": {
+					"upperX": 22,
+					"upperY": -62,
+					"middleX": 25,
+					"middleY": -55,
+					"lowerX": 7,
+					"lowerY": -49
+				},
+				"attackClimaxFrame": 9,
+				"projectile": "h7/projectiles/A_Projectile_Dark_Bullet_s85.json"
+			}
+		},
+		"sound": {
+			"attack": "h7/creature_lich_attack.ogg",
+			"shoot": "h7/creature_lich_attack_ranged.ogg",
+			"defend": "h7/creature_lich_defend.ogg",
+			"wince": "h7/creature_lich_hit.ogg",
+			"killed": "h7/creature_lich_die.ogg",
+			"move": "h7/creature_lich_move.ogg"
+		},
+		"shots": 18,
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					3,
+					4,
+					5,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					3,
+					4,
+					4,
+					6,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					2,
+					3,
+					3,
+					4,
+					5,
+					6,
+					6,
+					7
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					7
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_WALL_PENALTY",
+					"description": "{Siege Shooter}\nNo damage loss when shooting over walls"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_DISTANCE_PENALTY",
+					"description": "{Sharpshooter}\nNo penalty for long-range shots"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h7NecropolisBanshee": {
+		"name": {
+			"singular": "Mourning Soul",
+			"plural": "Mourning Souls"
+		},
+		"description": "Despair, grief and regret are what give birth to Mourning Souls. They usually appear in great numbers after a great battle, disaster or plague. The despair of their mournful wails can crush the heart of the staunchest warrior. Yet those who have met them always say that what is truly unsettling is their eyes, watching you wherever you go.\nMourning Soul tears, obtained through long and difficult rituals, are often used by necromancers as a deadly poison. A single drop of a Mourning Soul's despair in a cup of wine can kill a monarch more easily than any blade.",
+		"faction": "necropolis",
+		"level": 2,
+		"cost": {
+			"gold": 175
+		},
+		"speed": 9,
+		"hitPoints": 17,
+		"attack": 9,
+		"defense": 9,
+		"damage": {
+			"min": 2,
+			"max": 5
+		},
+		"doubleWide": false,
+		"fightValue": 224,
+		"aiValue": 251,
+		"growth": 8,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"flying": {
+				"type": "FLYING"
+			},
+			"undead": {
+				"type": "UNDEAD",
+				"description": "{Undead}\nNo Morale; poison/Mind/fear immune; +25% Light"
+			},
+			"lightVulnerability": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "01lightSchool",
+				"val": -25,
+				"hidden": true
+			},
+			"h7Vigilance": {
+				"type": "H7_NO_FLANK_H7C",
+				"val": 1,
+				"description": "{Vigilance}\nCan't be flanked or backstabbed by any effect"
+			},
+			"h7VigilanceMark": {
+				"type": "H7_VIGILANCE_H7C",
+				"hidden": true,
+				"val": 1
+			},
+			"h7NecroRaise": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7NecroRaise",
+				"hidden": true
+			},
+			"h7NecroRaiseInfo": {
+				"type": "H7_NECRO_RAISE_H7C"
+			}
+		},
+		"graphics": {
+			"animation": "h7/Banshee/battle.json",
+			"map": "h7/Banshee/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/Banshee/map/atkL.png",
+			"mapAttackFromRight": "h7/Banshee/map/atkR.png",
+			"iconLarge": "h7/Banshee/iconLarge.png",
+			"iconSmall": "h7/Banshee/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h7/creature_ghost_attack.ogg",
+			"defend": "h7/creature_ghost_defend.ogg",
+			"wince": "h7/creature_ghost_hit.ogg",
+			"killed": "h7/creature_ghost_die.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					3,
+					3,
+					3,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					3,
+					4,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					0,
+					1,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					3,
+					3,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_RETALIATION",
+					"description": "{Nimbleness}\nExtra retaliation each round"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			}
+		]
+	},
+	"h7NecropolisBoneDragon": {
+		"name": {
+			"singular": "Bone Dragon",
+			"plural": "Bone Dragons"
+		},
+		"description": "Bone Dragons are the most basic physical form of dead dragons, little more than animated fossils with a primitive mind. Lacking a soul, Bone Dragons act like mindless beasts, driven by the most basic survival instincts, spreading destruction across the face of Ashan. If not bound and controlled by death magic, they wander aimlessly.\nI have seen broken Bone Dragons devour other corpses to repair their bodies. Usually, the awakened beast finds plenty of corpses to sate itself on the very battlefield where it fell.",
+		"faction": "necropolis",
+		"level": 7,
+		"cost": {
+			"gold": 2590,
+			"mercury": 1
+		},
+		"speed": 11,
+		"hitPoints": 182,
+		"attack": 17,
+		"defense": 29,
+		"damage": {
+			"min": 35,
+			"max": 43
+		},
+		"doubleWide": true,
+		"fightValue": 3645,
+		"aiValue": 4748,
+		"growth": 1,
+		"advMapAmount": {
+			"min": 1,
+			"max": 3
+		},
+		"abilities": {
+			"h7WarfareGuard": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7WarfareGuard",
+				"hidden": true,
+				"description": "~",
+				"addInfo": {
+					"faction": "necropolis",
+					"army": "h7NecropolisSkeleton,h7NecropolisGhost,h7NecropolisEbonSpider,h7NecropolisLamasu,h7NecropolisLich,h7NecropolisVampire"
+				}
+			},
+			"flying": {
+				"type": "FLYING"
+			},
+			"undead": {
+				"type": "UNDEAD",
+				"description": "{Undead}\nNo Morale; poison/Mind/fear immune; +25% Light"
+			},
+			"lightVulnerability": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "01lightSchool",
+				"val": -25,
+				"hidden": true
+			},
+			"dragonNature": {
+				"type": "DRAGON_NATURE"
+			},
+			"h7SoulReaver": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7SoulReaver",
+				"val": 1,
+				"icon": "h7/abilities/h7SoulReaver",
+				"description": "{Soul Reaver}\nPer kill: enemy hero -1 SP; own spells -1 cost"
+			},
+			"h7NecroRaise": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7NecroRaise",
+				"hidden": true
+			},
+			"h7NecroRaiseInfo": {
+				"type": "H7_NECRO_RAISE_H7C"
+			}
+		},
+		"graphics": {
+			"animation": "h7/BoneDragon/battle.json",
+			"map": "h7/BoneDragon/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/BoneDragon/map/atkL.png",
+			"mapAttackFromRight": "h7/BoneDragon/map/atkR.png",
+			"iconLarge": "h7/BoneDragon/iconLarge.png",
+			"iconSmall": "h7/BoneDragon/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h7/creature_ghost_dragon_attack.ogg",
+			"defend": "h7/creature_ghost_dragon_defend.ogg",
+			"killed": "h7/creature_ghost_dragon_die.ogg",
+			"move": "h7/creature_ghost_dragon_move.ogg",
+			"startMoving": "h7/creature_ghost_dragon_fly_start.ogg",
+			"endMoving": "h7/creature_ghost_dragon_fly_end.ogg"
+		},
+		"upgrades": [
+			"h7NecropolisSpectralDragon"
+		],
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_RETALIATION",
+					"description": "{Nimbleness}\nExtra retaliation each round"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE",
+					"description": "{Magic Resistance}\nChance to resist enemy spells"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					10,
+					20,
+					30,
+					40,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "BLOCKS_RETALIATION",
+					"description": "{No Retaliation}\nEnemy cannot retaliate when attacked"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true
+				]
+			}
+		]
+	},
+	"h7NecropolisDeathSpider": {
+		"name": {
+			"singular": "Death Spider",
+			"plural": "Death Spiders"
+		},
+		"description": "In lands where necromancy is strong, spiders grow to incredible sizes and become linked to Dark Magic. Their venom is extremely dangerous: not only toxic and corrosive, it also acts directly on the target's mind.\nSome scholars in Nar-Heresh have studied Death Spiders for decades. They believe these creatures are blessed by the Spider Goddess and are slowly turning into full Namtaru. But they always say we will need to wait a few more centuries to prove this theory.",
+		"faction": "necropolis",
+		"level": 3,
+		"cost": {
+			"gold": 240
+		},
+		"speed": 9,
+		"hitPoints": 24,
+		"attack": 8,
+		"defense": 8,
+		"damage": {
+			"min": 3,
+			"max": 5
+		},
+		"doubleWide": true,
+		"fightValue": 322,
+		"aiValue": 382,
+		"growth": 7,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"undead": {
+				"type": "UNDEAD",
+				"description": "{Undead}\nNo Morale; poison/Mind/fear immune; +25% Light"
+			},
+			"lightVulnerability": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "01lightSchool",
+				"val": -25,
+				"hidden": true
+			},
+			"h7WitheringVenom": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7WitheringVenom",
+				"icon": "h7/abilities/h7WitheringVenom",
+				"description": "{Withering Venom}\nRising Dark dmg for 3 rounds, from 4×stack",
+				"addInfo": {
+					"kind": "venom",
+					"perCreature": 4,
+					"turns": 3
+				}
+			},
+			"h7NecroRaise": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7NecroRaise",
+				"hidden": true
+			},
+			"h7NecroRaiseInfo": {
+				"type": "H7_NECRO_RAISE_H7C"
+			}
+		},
+		"graphics": {
+			"animation": "h7/DeathSpider/battle.json",
+			"map": "h7/DeathSpider/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/DeathSpider/map/atkL.png",
+			"mapAttackFromRight": "h7/DeathSpider/map/atkR.png",
+			"iconLarge": "h7/DeathSpider/iconLarge.png",
+			"iconSmall": "h7/DeathSpider/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h7/creature_ebon_spider_attack.ogg",
+			"defend": "h7/creature_ebon_spider_defend.ogg",
+			"wince": "h7/creature_ebon_spider_hit.ogg",
+			"killed": "h7/creature_ebon_spider_die.ogg",
+			"move": "h7/creature_ebon_spider_move_01.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "CHARGE_IMMUNITY",
+					"description": "{Steady Ranks}\nImmune to charge damage bonuses"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h7NecropolisEbonSpider": {
+		"name": {
+			"singular": "Ebon Spider",
+			"plural": "Ebon Spiders"
+		},
+		"description": "Spiders are sacred to necromancers, which is why they are often found in lands controlled by necromancers. Tiny or giant, these spiders can all bring a horrible death to their prey.\nThe Ebon Spider is the emblem of the Eternal Order, but I have never liked the thing. I deeply respect Asha and her Spider Mother aspect, but I must admit that arthropods always give me goosebumps.",
+		"faction": "necropolis",
+		"level": 3,
+		"cost": {
+			"gold": 185
+		},
+		"speed": 7,
+		"hitPoints": 24,
+		"attack": 8,
+		"defense": 8,
+		"damage": {
+			"min": 3,
+			"max": 5
+		},
+		"doubleWide": true,
+		"fightValue": 208,
+		"aiValue": 246,
+		"growth": 7,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"undead": {
+				"type": "UNDEAD",
+				"description": "{Undead}\nNo Morale; poison/Mind/fear immune; +25% Light"
+			},
+			"lightVulnerability": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "01lightSchool",
+				"val": -25,
+				"hidden": true
+			},
+			"h7NecroRaise": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7NecroRaise",
+				"hidden": true
+			},
+			"h7NecroRaiseInfo": {
+				"type": "H7_NECRO_RAISE_H7C"
+			}
+		},
+		"graphics": {
+			"animation": "h7/EbonSpider/battle.json",
+			"map": "h7/EbonSpider/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/EbonSpider/map/atkL.png",
+			"mapAttackFromRight": "h7/EbonSpider/map/atkR.png",
+			"iconLarge": "h7/EbonSpider/iconLarge.png",
+			"iconSmall": "h7/EbonSpider/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h7/creature_ebon_spider_attack.ogg",
+			"defend": "h7/creature_ebon_spider_defend.ogg",
+			"wince": "h7/creature_ebon_spider_hit.ogg",
+			"killed": "h7/creature_ebon_spider_die.ogg",
+			"move": "h7/creature_ebon_spider_move_01.ogg"
+		},
+		"upgrades": [
+			"h7NecropolisDeathSpider"
+		],
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "CHARGE_IMMUNITY",
+					"description": "{Steady Ranks}\nImmune to charge damage bonuses"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h7NecropolisGhost": {
+		"name": {
+			"singular": "Phantom",
+			"plural": "Phantoms"
+		},
+		"description": "After death, the dragon gods' children are called forth and travel to the Moon as spirits, where they await rebirth under the guidance of Asha's hand. But trauma and suffering can give birth to Phantoms, spirits bound to the material world by powerful negative emotions. Through a special ritual, necromancers can turn these Phantoms into loyal servants under their absolute control.\nNecromancers hire soul hunters to round up lost souls all across Ashan. The soul hunters cannot control the Phantoms themselves; their job is to contain and lock them up with warding runes, soul cages and sometimes even magic chains.",
+		"faction": "necropolis",
+		"level": 2,
+		"cost": {
+			"gold": 135
+		},
+		"speed": 6,
+		"hitPoints": 17,
+		"attack": 9,
+		"defense": 5,
+		"damage": {
+			"min": 2,
+			"max": 4
+		},
+		"doubleWide": false,
+		"fightValue": 167,
+		"aiValue": 187,
+		"growth": 8,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"flying": {
+				"type": "FLYING"
+			},
+			"undead": {
+				"type": "UNDEAD",
+				"description": "{Undead}\nNo Morale; poison/Mind/fear immune; +25% Light"
+			},
+			"lightVulnerability": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "01lightSchool",
+				"val": -25,
+				"hidden": true
+			},
+			"h7NecroRaise": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7NecroRaise",
+				"hidden": true
+			},
+			"h7NecroRaiseInfo": {
+				"type": "H7_NECRO_RAISE_H7C"
+			}
+		},
+		"graphics": {
+			"animation": "h7/Ghost/battle.json",
+			"map": "h7/Ghost/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/Ghost/map/atkL.png",
+			"mapAttackFromRight": "h7/Ghost/map/atkR.png",
+			"iconLarge": "h7/Ghost/iconLarge.png",
+			"iconSmall": "h7/Ghost/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h7/creature_ghost_attack.ogg",
+			"defend": "h7/creature_ghost_defend.ogg",
+			"wince": "h7/creature_ghost_hit.ogg",
+			"killed": "h7/creature_ghost_die.ogg"
+		},
+		"upgrades": [
+			"h7NecropolisBanshee"
+		],
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					3,
+					3,
+					3,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					3,
+					4,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					0,
+					1,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					3,
+					3,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_RETALIATION",
+					"description": "{Nimbleness}\nExtra retaliation each round"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			}
+		]
+	},
+	"h7NecropolisGrimReaper": {
+		"name": {
+			"singular": "Grim Reaper",
+			"plural": "Grim Reapers"
+		},
+		"description": "Harbingers of death and embodiments of doom, Grim Reapers enter the battlefield swinging great scythes imbued with the power of the Spider Goddess. It is said that wherever a Grim Reaper goes, death follows close behind.\nSometimes, when night falls, the jittery students of the Academy tell stories about Grim Reapers: how there is nothing under their hoods, how they become pure embodiments of death and darkness, soul binders. The apprentices usually just laugh it off. Yet afterward they all sleep with a candle lit, just in case...",
+		"faction": "necropolis",
+		"level": 7,
+		"cost": {
+			"gold": 3365,
+			"gems": 1,
+			"sulfur": 2
+		},
+		"speed": 16,
+		"hitPoints": 159,
+		"attack": 35,
+		"defense": 14,
+		"damage": {
+			"min": 50,
+			"max": 56
+		},
+		"doubleWide": true,
+		"fightValue": 5072,
+		"aiValue": 6607,
+		"growth": 1,
+		"advMapAmount": {
+			"min": 1,
+			"max": 3
+		},
+		"abilities": {
+			"undead": {
+				"type": "UNDEAD",
+				"description": "{Undead}\nNo Morale; poison/Mind/fear immune; +25% Light"
+			},
+			"lightVulnerability": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "01lightSchool",
+				"val": -25,
+				"hidden": true
+			},
+			"nightmare": {
+				"type": "MORALE",
+				"val": -2,
+				"stacking": "h7Nightmare",
+				"propagator": "BATTLE_WIDE",
+				"propagationUpdater": "BONUS_OWNER_UPDATER",
+				"limiters": [
+					"allOf",
+					{
+						"type": "UNIT_ADJACENT",
+						"creature": "h7NecropolisGrimReaper"
+					},
+					"OPPOSITE_SIDE"
+				],
+				"description": "{Nightmare}\nNearby enemy stacks lose 30 Morale."
+			},
+			"h7FatalStrike": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7FatalStrike",
+				"icon": "h7/abilities/h7FatalStrike",
+				"description": "{Deadly Strike}\nAny damage dealt kills at least one enemy."
+			},
+			"h7NecroRaise": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7NecroRaise",
+				"hidden": true
+			},
+			"h7NecroRaiseInfo": {
+				"type": "H7_NECRO_RAISE_H7C"
+			},
+			"h7SanctumTwin": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7SanctumTwin",
+				"hidden": true,
+				"description": "~",
+				"addInfo": {
+					"twin": "h7NecropolisSpectralDragon",
+					"army": "h7NecropolisSkeletonHoplite,h7NecropolisBanshee,h7NecropolisDeathSpider,h7NecropolisPlagueLamasu,h7NecropolisArchLich,h7NecropolisVampireLord"
+				}
+			}
+		},
+		"graphics": {
+			"animation": "h7/GrimReaper/battle.json",
+			"map": "h7/GrimReaper/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/GrimReaper/map/atkL.png",
+			"mapAttackFromRight": "h7/GrimReaper/map/atkR.png",
+			"iconLarge": "h7/GrimReaper/iconLarge.png",
+			"iconSmall": "h7/GrimReaper/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h7/creature_grim_rider_attack.ogg",
+			"defend": "h7/creature_grim_rider_defend.ogg",
+			"wince": "h7/creature_grim_rider_hit.ogg",
+			"killed": "h7/creature_grim_rider_die.ogg",
+			"move": "h7/creature_grim_rider_move.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE",
+					"description": "{Magic Resistance}\nChance to resist enemy spells"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					10,
+					20,
+					30,
+					40,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "BLOCKS_RETALIATION",
+					"description": "{No Retaliation}\nEnemy cannot retaliate when attacked"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true
+				]
+			}
+		]
+	},
+	"h7NecropolisGrimRider": {
+		"name": {
+			"singular": "Grim Rider",
+			"plural": "Grim Riders"
+		},
+		"description": "Long ago, Belketh's lieutenants rode across the lands of Ashan, bringing terror to the enemies of the Eternal Order. One of these champions was Varn the Soul Reaver, and the Grim Riders were his personal guard. Those foolish enough to face these vampire lords meet a horrible curse.\nThe bravest orc warriors wet themselves before the Grim Riders.",
+		"faction": "necropolis",
+		"level": 7,
+		"cost": {
+			"gold": 2590,
+			"sulfur": 1
+		},
+		"speed": 16,
+		"hitPoints": 136,
+		"attack": 31,
+		"defense": 14,
+		"damage": {
+			"min": 43,
+			"max": 48
+		},
+		"doubleWide": true,
+		"fightValue": 3688,
+		"aiValue": 4805,
+		"growth": 1,
+		"advMapAmount": {
+			"min": 1,
+			"max": 3
+		},
+		"abilities": {
+			"undead": {
+				"type": "UNDEAD",
+				"description": "{Undead}\nNo Morale; poison/Mind/fear immune; +25% Light"
+			},
+			"lightVulnerability": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "01lightSchool",
+				"val": -25,
+				"hidden": true
+			},
+			"nightmare": {
+				"type": "MORALE",
+				"val": -2,
+				"stacking": "h7Nightmare",
+				"propagator": "BATTLE_WIDE",
+				"propagationUpdater": "BONUS_OWNER_UPDATER",
+				"limiters": [
+					"allOf",
+					{
+						"type": "UNIT_ADJACENT",
+						"creature": "h7NecropolisGrimRider"
+					},
+					"OPPOSITE_SIDE"
+				],
+				"description": "{Nightmare}\nNearby enemy stacks lose 30 Morale."
+			},
+			"h7NecroRaise": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7NecroRaise",
+				"hidden": true
+			},
+			"h7NecroRaiseInfo": {
+				"type": "H7_NECRO_RAISE_H7C"
+			}
+		},
+		"graphics": {
+			"animation": "h7/GrimRider/battle.json",
+			"map": "h7/GrimRider/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/GrimRider/map/atkL.png",
+			"mapAttackFromRight": "h7/GrimRider/map/atkR.png",
+			"iconLarge": "h7/GrimRider/iconLarge.png",
+			"iconSmall": "h7/GrimRider/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h7/creature_grim_rider_attack.ogg",
+			"defend": "h7/creature_grim_rider_defend.ogg",
+			"wince": "h7/creature_grim_rider_hit.ogg",
+			"killed": "h7/creature_grim_rider_die.ogg",
+			"move": "h7/creature_grim_rider_move.ogg"
+		},
+		"upgrades": [
+			"h7NecropolisGrimReaper"
+		],
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE",
+					"description": "{Magic Resistance}\nChance to resist enemy spells"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					10,
+					20,
+					30,
+					40,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "BLOCKS_RETALIATION",
+					"description": "{No Retaliation}\nEnemy cannot retaliate when attacked"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true
+				]
+			}
+		]
+	},
+	"h7NecropolisLamasu": {
+		"name": {
+			"singular": "Lamasu",
+			"plural": "Lamasus"
+		},
+		"description": "Lamasus are a failed product of the mages' attempts to create powerful beastmen through unnatural experiments mixing humans (usually slaves and criminals) with magical creatures (in this case, Manticores). The result was very unstable and short-lived, until a humble embalmer saw its true potential.\nMy good friend Yashar, known as \"the Humble Embalmer\", is also the one who discovered how to raise mummified Lamasus. In the war of the Second Eclipse, they did much to drive back the demons.",
+		"faction": "necropolis",
+		"level": 4,
+		"cost": {
+			"gold": 305
+		},
+		"speed": 5,
+		"hitPoints": 45,
+		"attack": 12,
+		"defense": 12,
+		"damage": {
+			"min": 8,
+			"max": 9
+		},
+		"doubleWide": true,
+		"fightValue": 396,
+		"aiValue": 454,
+		"growth": 4,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"flying": {
+				"type": "FLYING"
+			},
+			"undead": {
+				"type": "UNDEAD",
+				"description": "{Undead}\nNo Morale; poison/Mind/fear immune; +25% Light"
+			},
+			"lightVulnerability": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "01lightSchool",
+				"val": -25,
+				"hidden": true
+			},
+			"h7NecroRaise": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7NecroRaise",
+				"hidden": true
+			},
+			"h7NecroRaiseInfo": {
+				"type": "H7_NECRO_RAISE_H7C"
+			}
+		},
+		"graphics": {
+			"animation": "h7/Lamasu/battle.json",
+			"map": "h7/Lamasu/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/Lamasu/map/atkL.png",
+			"mapAttackFromRight": "h7/Lamasu/map/atkR.png",
+			"iconLarge": "h7/Lamasu/iconLarge.png",
+			"iconSmall": "h7/Lamasu/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h7/lamasu_attacklaunchmelee.ogg",
+			"defend": "h7/lamasu_defend.ogg",
+			"wince": "h7/lamasu_hit.ogg",
+			"killed": "h7/lamasu_die.ogg",
+			"move": "h7/lamasumove.ogg",
+			"startMoving": "h7/lamasu_flystart1.ogg",
+			"endMoving": "h7/lamasu_flyend1.ogg"
+		},
+		"upgrades": [
+			"h7NecropolisPlagueLamasu"
+		],
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					5,
+					6,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_RETALIATION",
+					"description": "{Nimbleness}\nExtra retaliation each round"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "BLOCKS_RETALIATION",
+					"description": "{No Retaliation}\nEnemy cannot retaliate when attacked"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h7NecropolisLich": {
+		"name": {
+			"singular": "Lich",
+			"plural": "Liches"
+		},
+		"description": "High-ranking necromancers are given an elixir of immortality laced with the venom of the Goddess's sacred spider. This change turns them into Asakku, or Liches: their bodies slowly wither, and they are no longer troubled by bodily emotions. They still age, until they come to look like mummies. The elixir also slowly turns their eyes bright green.\nThe Inquisition will tell you that Liches are evil sorcerers who twist Asha's laws for their own gain. Yet I myself am a Lich. Asha's creations are so wondrous and mysterious that I longed for more time to understand them and to become a better healer, and so I took the path of undeath.",
+		"faction": "necropolis",
+		"level": 5,
+		"cost": {
+			"gold": 420
+		},
+		"speed": 3,
+		"hitPoints": 35,
+		"attack": 11,
+		"defense": 11,
+		"damage": {
+			"min": 10,
+			"max": 13
+		},
+		"doubleWide": false,
+		"fightValue": 553,
+		"aiValue": 615,
+		"growth": 3,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"shooter": {
+				"type": "SHOOTER"
+			},
+			"undead": {
+				"type": "UNDEAD",
+				"description": "{Undead}\nNo Morale; poison/Mind/fear immune; +25% Light"
+			},
+			"lightVulnerability": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "01lightSchool",
+				"val": -25,
+				"hidden": true
+			},
+			"h7NecroRaise": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7NecroRaise",
+				"hidden": true
+			},
+			"h7NecroRaiseInfo": {
+				"type": "H7_NECRO_RAISE_H7C"
+			}
+		},
+		"graphics": {
+			"animation": "h7/Lich/battle.json",
+			"map": "h7/Lich/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/Lich/map/atkL.png",
+			"mapAttackFromRight": "h7/Lich/map/atkR.png",
+			"iconLarge": "h7/Lich/iconLarge.png",
+			"iconSmall": "h7/Lich/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"frameAngles": [
+					90,
+					60,
+					45,
+					30,
+					0,
+					-30,
+					-45,
+					-60,
+					-90
+				],
+				"offset": {
+					"upperX": 21,
+					"upperY": -60,
+					"middleX": 24,
+					"middleY": -52,
+					"lowerX": 7,
+					"lowerY": -46
+				},
+				"attackClimaxFrame": 9,
+				"projectile": "h7/projectiles/A_Projectile_Dark_Bullet_s85.json"
+			}
+		},
+		"sound": {
+			"attack": "h7/creature_lich_attack.ogg",
+			"shoot": "h7/creature_lich_attack_ranged.ogg",
+			"defend": "h7/creature_lich_defend.ogg",
+			"wince": "h7/creature_lich_hit.ogg",
+			"killed": "h7/creature_lich_die.ogg",
+			"move": "h7/creature_lich_move.ogg"
+		},
+		"shots": 18,
+		"upgrades": [
+			"h7NecropolisArchLich"
+		],
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					3,
+					4,
+					5,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					3,
+					4,
+					4,
+					6,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					2,
+					3,
+					3,
+					4,
+					5,
+					6,
+					6,
+					7
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					7
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_WALL_PENALTY",
+					"description": "{Siege Shooter}\nNo damage loss when shooting over walls"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_DISTANCE_PENALTY",
+					"description": "{Sharpshooter}\nNo penalty for long-range shots"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h7NecropolisPlagueLamasu": {
+		"name": {
+			"singular": "Plague Lamasu",
+			"plural": "Plague Lamasus"
+		},
+		"description": "Necromancers infuse the undead bodies of Plague Lamasus with plague, turning them into sources of infection. Combined with their physical strength and mobility, they make perfect front-line troops and are among the most terrifying creatures in the undead army.\nAs a healer, I cannot accept the use of Plague Lamasus. They are one of the reasons I finally left Heresh.",
+		"faction": "necropolis",
+		"level": 4,
+		"cost": {
+			"gold": 400
+		},
+		"speed": 6,
+		"hitPoints": 50,
+		"attack": 12,
+		"defense": 12,
+		"damage": {
+			"min": 8,
+			"max": 9
+		},
+		"doubleWide": true,
+		"fightValue": 611,
+		"aiValue": 700,
+		"growth": 4,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"flying": {
+				"type": "FLYING"
+			},
+			"undead": {
+				"type": "UNDEAD",
+				"description": "{Undead}\nNo Morale; poison/Mind/fear immune; +25% Light"
+			},
+			"lightVulnerability": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "01lightSchool",
+				"val": -25,
+				"hidden": true
+			},
+			"h7AuraOfPestilence": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7AuraOfPestilence",
+				"icon": "h7/abilities/h7AuraOfPestilence",
+				"description": "{Aura of Pestilence}\nNear foes: 9×stack Earth, -7 Attack, -1 Speed",
+				"addInfo": {
+					"perCreature": 9,
+					"attack": 7,
+					"speed": 1
+				}
+			},
+			"h7NecroRaise": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7NecroRaise",
+				"hidden": true
+			},
+			"h7NecroRaiseInfo": {
+				"type": "H7_NECRO_RAISE_H7C"
+			}
+		},
+		"graphics": {
+			"animation": "h7/PlagueLamasu/battle.json",
+			"map": "h7/PlagueLamasu/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/PlagueLamasu/map/atkL.png",
+			"mapAttackFromRight": "h7/PlagueLamasu/map/atkR.png",
+			"iconLarge": "h7/PlagueLamasu/iconLarge.png",
+			"iconSmall": "h7/PlagueLamasu/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h7/lamasu_attacklaunchmelee.ogg",
+			"defend": "h7/lamasu_defend.ogg",
+			"wince": "h7/lamasu_hit.ogg",
+			"killed": "h7/lamasu_die.ogg",
+			"move": "h7/lamasumove.ogg",
+			"startMoving": "h7/lamasu_flystart1.ogg",
+			"endMoving": "h7/lamasu_flyend1.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					5,
+					6,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_RETALIATION",
+					"description": "{Nimbleness}\nExtra retaliation each round"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "BLOCKS_RETALIATION",
+					"description": "{No Retaliation}\nEnemy cannot retaliate when attacked"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h7NecropolisSkeleton": {
+		"name": {
+			"singular": "Bone Soldier",
+			"plural": "Bone Soldiers"
+		},
+		"description": "Bone Soldiers are nothing more than rotting corpses animated by a necromancer's will. Blindly loyal, never hungry or thirsty, never afraid or doubtful, Bone Soldiers make excellent servants, wielding sword and shield to bring death to the living.\nNecromancers usually use Bone Soldiers as laborers or cannon fodder, so don't expect those rickety bones to take much damage.",
+		"faction": "necropolis",
+		"level": 1,
+		"cost": {
+			"gold": 40
+		},
+		"speed": 4,
+		"hitPoints": 6,
+		"attack": 1,
+		"defense": 0,
+		"damage": {
+			"min": 2,
+			"max": 2
+		},
+		"doubleWide": false,
+		"fightValue": 51,
+		"aiValue": 51,
+		"growth": 17,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"undead": {
+				"type": "UNDEAD",
+				"description": "{Undead}\nNo Morale; poison/Mind/fear immune; +25% Light"
+			},
+			"lightVulnerability": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "01lightSchool",
+				"val": -25,
+				"hidden": true
+			},
+			"h7NecroRaise": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7NecroRaise",
+				"hidden": true
+			},
+			"h7NecroRaiseInfo": {
+				"type": "H7_NECRO_RAISE_H7C"
+			}
+		},
+		"graphics": {
+			"animation": "h7/Skeleton/battle.json",
+			"map": "h7/Skeleton/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/Skeleton/map/atkL.png",
+			"mapAttackFromRight": "h7/Skeleton/map/atkR.png",
+			"iconLarge": "h7/Skeleton/iconLarge.png",
+			"iconSmall": "h7/Skeleton/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h7/creature_skeleton_attack.ogg",
+			"defend": "h7/skeleton_defend.ogg",
+			"wince": "h7/skeleton_hit.ogg",
+			"killed": "h7/skeleton_die.ogg",
+			"move": "h7/skeletonupg_move_earth1.ogg"
+		},
+		"upgrades": [
+			"h7NecropolisSkeletonHoplite"
+		],
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "CHARGE_IMMUNITY",
+					"description": "{Steady Ranks}\nImmune to charge damage bonuses"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h7NecropolisSkeletonHoplite": {
+		"name": {
+			"singular": "Skeleton Hoplite",
+			"plural": "Skeleton Hoplites"
+		},
+		"description": "Some Bone Soldiers are specially chosen by necromancers and given enchanted armor and weapons, making them more than mere cannon fodder. With these sturdy shields and dangerous weapons, these elite servants can tip the balance of a battle.\nSkeleton Hoplites do not fear death; after all, they have been dead for ages!",
+		"faction": "necropolis",
+		"level": 1,
+		"cost": {
+			"gold": 50
+		},
+		"speed": 4,
+		"hitPoints": 6,
+		"attack": 3,
+		"defense": 5,
+		"damage": {
+			"min": 2,
+			"max": 4
+		},
+		"doubleWide": false,
+		"fightValue": 71,
+		"aiValue": 71,
+		"growth": 17,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"undead": {
+				"type": "UNDEAD",
+				"description": "{Undead}\nNo Morale; poison/Mind/fear immune; +25% Light"
+			},
+			"lightVulnerability": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "01lightSchool",
+				"val": -25,
+				"hidden": true
+			},
+			"h7NecroRaise": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7NecroRaise",
+				"hidden": true
+			},
+			"h7NecroRaiseInfo": {
+				"type": "H7_NECRO_RAISE_H7C"
+			}
+		},
+		"graphics": {
+			"animation": "h7/SkeletonHoplite/battle.json",
+			"map": "h7/SkeletonHoplite/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/SkeletonHoplite/map/atkL.png",
+			"mapAttackFromRight": "h7/SkeletonHoplite/map/atkR.png",
+			"iconLarge": "h7/SkeletonHoplite/iconLarge.png",
+			"iconSmall": "h7/SkeletonHoplite/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h7/creature_skeleton_attack.ogg",
+			"defend": "h7/skeleton_defend.ogg",
+			"wince": "h7/skeleton_hit.ogg",
+			"killed": "h7/skeleton_die.ogg",
+			"move": "h7/skeletonupg_move_earth1.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "CHARGE_IMMUNITY",
+					"description": "{Steady Ranks}\nImmune to charge damage bonuses"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h7NecropolisSpectralDragon": {
+		"name": {
+			"singular": "Phantom Dragon",
+			"plural": "Phantom Dragons"
+		},
+		"description": "When dragons feel their death approaching, they fly to the Moon and return to Asha's resting place, where they sleep forever. Yet there is a very rare chance that their spirits become trapped in the material world. When such a Phantom Dragon appears on the surface of Ashan, necromancers perform special rituals to find and capture it, binding it under their control.\nThe Angel of Death, Archon Belketh, was the first to bind Phantom Dragons with the \"Ring of Submission\".",
+		"faction": "necropolis",
+		"level": 7,
+		"cost": {
+			"gold": 3365,
+			"crystal": 1,
+			"mercury": 2
+		},
+		"speed": 11,
+		"hitPoints": 204,
+		"attack": 17,
+		"defense": 32,
+		"damage": {
+			"min": 40,
+			"max": 50
+		},
+		"doubleWide": true,
+		"fightValue": 5149,
+		"aiValue": 6708,
+		"growth": 1,
+		"advMapAmount": {
+			"min": 1,
+			"max": 3
+		},
+		"abilities": {
+			"flying": {
+				"type": "FLYING"
+			},
+			"breath": {
+				"type": "TWO_HEX_ATTACK_BREATH",
+				"description": "{Soul Flaying Breath}\nBreath also hits 3rd-5th hex: 60%/40%/20% dmg"
+			},
+			"undead": {
+				"type": "UNDEAD",
+				"description": "{Undead}\nNo Morale; poison/Mind/fear immune; +25% Light"
+			},
+			"lightVulnerability": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "01lightSchool",
+				"val": -25,
+				"hidden": true
+			},
+			"dragonNature": {
+				"type": "DRAGON_NATURE"
+			},
+			"h7SoulFlayingBreath": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7SoulFlayingBreath",
+				"addInfo": {
+					"range": 5,
+					"step": 20
+				},
+				"hidden": true,
+				"description": "~"
+			},
+			"h7SoulReaver": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7SoulReaver",
+				"val": 1,
+				"icon": "h7/abilities/h7SoulReaver",
+				"description": "{Soul Reaver}\nPer kill: enemy hero -1 SP; own spells -1 cost"
+			},
+			"h7NecroRaise": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7NecroRaise",
+				"hidden": true
+			},
+			"h7NecroRaiseInfo": {
+				"type": "H7_NECRO_RAISE_H7C"
+			},
+			"h7SanctumTwin": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7SanctumTwin",
+				"hidden": true,
+				"description": "~",
+				"addInfo": {
+					"twin": "h7NecropolisGrimReaper",
+					"army": "h7NecropolisSkeletonHoplite,h7NecropolisBanshee,h7NecropolisDeathSpider,h7NecropolisPlagueLamasu,h7NecropolisArchLich,h7NecropolisVampireLord"
+				}
+			}
+		},
+		"graphics": {
+			"animation": "h7/SpectralDragon/battle.json",
+			"map": "h7/SpectralDragon/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/SpectralDragon/map/atkL.png",
+			"mapAttackFromRight": "h7/SpectralDragon/map/atkR.png",
+			"iconLarge": "h7/SpectralDragon/iconLarge.png",
+			"iconSmall": "h7/SpectralDragon/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h7/creature_ghost_dragon_attack.ogg",
+			"defend": "h7/creature_ghost_dragon_defend.ogg",
+			"killed": "h7/creature_ghost_dragon_die.ogg",
+			"move": "h7/creature_ghost_dragon_move.ogg",
+			"startMoving": "h7/creature_ghost_dragon_fly_start.ogg",
+			"endMoving": "h7/creature_ghost_dragon_fly_end.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_RETALIATION",
+					"description": "{Nimbleness}\nExtra retaliation each round"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE",
+					"description": "{Magic Resistance}\nChance to resist enemy spells"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					10,
+					20,
+					30,
+					40,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "BLOCKS_RETALIATION",
+					"description": "{No Retaliation}\nEnemy cannot retaliate when attacked"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true
+				]
+			}
+		]
+	},
+	"h7NecropolisVampire": {
+		"name": {
+			"singular": "Vampire",
+			"plural": "Vampires"
+		},
+		"description": "As a Lich grows stronger, it may receive the Spider Goddess's own embrace and be reborn as an Akhkharu, or Vampire. Vampires do not eat, drink or sleep. But they must regularly drink human blood to dilute the venom, keeping it from eating away their bodies from within.\nTo become a Vampire, one must drink Namtaru venom, but there is another way. The \"Rite of the Deep Night\", known only to the highest and most powerful necromancers (in the old world, the rite that turned necromancers into Liches), can force a soul back into a recently dead body. But the soul must be willing to return; otherwise, the reborn Akhkharu may become a bloodthirsty monster.",
+		"faction": "necropolis",
+		"level": 6,
+		"cost": {
+			"gold": 900
+		},
+		"speed": 9,
+		"hitPoints": 69,
+		"attack": 14,
+		"defense": 16,
+		"damage": {
+			"min": 14,
+			"max": 21
+		},
+		"doubleWide": false,
+		"fightValue": 1400,
+		"aiValue": 1653,
+		"growth": 2,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"flying": {
+				"type": "FLYING"
+			},
+			"lifeDrain": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "lifeDrain",
+				"val": 50,
+				"description": "{Life Drain}\nHalf of damage dealt heals and revives it."
+			},
+			"undead": {
+				"type": "UNDEAD",
+				"description": "{Undead}\nNo Morale; poison/Mind/fear immune; +25% Light"
+			},
+			"lightVulnerability": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "01lightSchool",
+				"val": -25,
+				"hidden": true
+			},
+			"h7NecroRaise": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7NecroRaise",
+				"hidden": true
+			},
+			"h7NecroRaiseInfo": {
+				"type": "H7_NECRO_RAISE_H7C"
+			}
+		},
+		"graphics": {
+			"animation": "h7/Vampire/battle.json",
+			"map": "h7/Vampire/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/Vampire/map/atkL.png",
+			"mapAttackFromRight": "h7/Vampire/map/atkR.png",
+			"iconLarge": "h7/Vampire/iconLarge.png",
+			"iconSmall": "h7/Vampire/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h7/creature_vampire_attack.ogg",
+			"defend": "h7/creature_vampire_defend.ogg",
+			"wince": "h7/creature_vampire_hit.ogg",
+			"killed": "h7/creature_vampire_die.ogg",
+			"move": "h7/creature_vampire_move.ogg"
+		},
+		"upgrades": [
+			"h7NecropolisVampireLord"
+		],
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					2,
+					3,
+					4,
+					5,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_RETALIATION",
+					"description": "{Nimbleness}\nExtra retaliation each round"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "BLOCKS_RETALIATION",
+					"description": "{No Retaliation}\nEnemy cannot retaliate when attacked"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h7NecropolisVampireLord": {
+		"name": {
+			"singular": "Vampire Knight",
+			"plural": "Vampire Knights"
+		},
+		"description": "With centuries of battle experience, Vampire Knights are the mightiest warriors in Heresh. They command the power of time and space, moving across the battlefield like a blurry mist. No enemy can hope to outmaneuver them.\nElrath's most devout paladins would never willingly call these undead warriors \"knights\". That's because they have never met Sir Jervis. Every bone in his body exudes gallant chivalry, and he is utterly undead. Last I heard, he was off somewhere far away doing something heroic.",
+		"faction": "necropolis",
+		"level": 6,
+		"cost": {
+			"gold": 1170
+		},
+		"speed": 9,
+		"hitPoints": 80,
+		"attack": 15,
+		"defense": 17,
+		"damage": {
+			"min": 17,
+			"max": 23
+		},
+		"doubleWide": false,
+		"fightValue": 1940,
+		"aiValue": 2291,
+		"growth": 2,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"flying": {
+				"type": "FLYING"
+			},
+			"lifeDrain": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "lifeDrain",
+				"val": 50,
+				"description": "{Life Drain}\nHalf of damage dealt heals and revives it."
+			},
+			"undead": {
+				"type": "UNDEAD",
+				"description": "{Undead}\nNo Morale; poison/Mind/fear immune; +25% Light"
+			},
+			"lightVulnerability": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "01lightSchool",
+				"val": -25,
+				"hidden": true
+			},
+			"h7Vigilance": {
+				"type": "H7_NO_FLANK_H7C",
+				"val": 1,
+				"description": "{Vigilance}\nCan't be flanked or backstabbed by any effect"
+			},
+			"h7VigilanceMark": {
+				"type": "H7_VIGILANCE_H7C",
+				"hidden": true,
+				"val": 1
+			},
+			"h7NecroRaise": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7NecroRaise",
+				"hidden": true
+			},
+			"h7NecroRaiseInfo": {
+				"type": "H7_NECRO_RAISE_H7C"
+			}
+		},
+		"graphics": {
+			"animation": "h7/VampireLord/battle.json",
+			"map": "h7/VampireLord/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/VampireLord/map/atkL.png",
+			"mapAttackFromRight": "h7/VampireLord/map/atkR.png",
+			"iconLarge": "h7/VampireLord/iconLarge.png",
+			"iconSmall": "h7/VampireLord/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h7/creature_vampire_attack.ogg",
+			"defend": "h7/creature_vampire_defend.ogg",
+			"wince": "h7/creature_vampire_hit.ogg",
+			"killed": "h7/creature_vampire_die.ogg",
+			"move": "h7/creature_vampire_move.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					2,
+					3,
+					4,
+					5,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_RETALIATION",
+					"description": "{Nimbleness}\nExtra retaliation each round"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "BLOCKS_RETALIATION",
+					"description": "{No Retaliation}\nEnemy cannot retaliate when attacked"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true
+				]
+			}
+		]
+	}
+}

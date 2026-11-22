@@ -1,0 +1,6205 @@
+{
+	"h7NeutralAirElemental": {
+		"name": {
+			"singular": "Air Elemental",
+			"plural": "Air Elementals"
+		},
+		"description": "Strong winds blowing along the dragon veins through deep valleys, cliffs, mountains and plains gather and carry dust charged with powerful elemental energy. It has been observed that this dust settles and coalesces, giving rise to Air Elementals. Other spontaneous births are linked with the storms, hurricanes and tornadoes that rage across Ashan. And a rare kind of Air Elemental is born from the last breath of a high priest of Ylath, the Dragon of Air; such elementals are uncommonly powerful and revered as leaders by their kind.",
+		"faction": "neutral",
+		"level": 6,
+		"cost": {
+			"gold": 2040,
+			"crystal": 1
+		},
+		"speed": 13,
+		"hitPoints": 101,
+		"attack": 18,
+		"defense": 17,
+		"damage": {
+			"min": 18,
+			"max": 28
+		},
+		"doubleWide": true,
+		"fightValue": 2158,
+		"aiValue": 2548,
+		"growth": 2,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"flying": {
+				"type": "FLYING"
+			},
+			"immAir": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "air",
+				"val": 50,
+				"description": "{Air Immunity}\nImmune to Air curses; half Air damage."
+			},
+			"returnAfterStrike": {
+				"type": "RETURN_AFTER_STRIKE",
+				"description": "{Strike and Return}\nReturns to its starting hex after attacking."
+			},
+			"vulnEarth": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "earth",
+				"val": -25,
+				"description": "{Earth Vulnerability}\nTakes 25% more Earth damage."
+			},
+			"h7SchoolImmunity_air": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7SchoolImmunity",
+				"val": 0,
+				"addInfo": {
+					"school": "air"
+				},
+				"stacking": "h7SchoolImmunity_air",
+				"hidden": true,
+				"description": "~"
+			}
+		},
+		"graphics": {
+			"animation": "h7/AirElemental/battle.json",
+			"map": "h7/AirElemental/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/AirElemental/map/atkL.png",
+			"mapAttackFromRight": "h7/AirElemental/map/atkR.png",
+			"iconLarge": "h7/AirElemental/iconLarge.png",
+			"iconSmall": "h7/AirElemental/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h7/airelemental_attacklaunchmelee.ogg",
+			"defend": "h7/airelemental_defend.ogg",
+			"wince": "h7/airelemental_hit.ogg",
+			"killed": "h7/airelemental_die.ogg",
+			"move": "h7/airelemental_move.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					2,
+					3,
+					4,
+					5,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_RETALIATION",
+					"description": "{Nimbleness}\nExtra retaliation each round"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "MIND_IMMUNITY",
+					"description": "{Steadfast Mind}\nImmune to Mind spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h7NeutralArcaneArcher": {
+		"name": {
+			"singular": "Arcane Shooter",
+			"plural": "Arcane Shooters"
+		},
+		"description": "There are many ways to use magic. Arcane Shooters, as their name suggests, have mastered the art of combining their arrows with magical power. As a result, they can perform feats other archers can only dream of. Most of them use their talents for assassination work and are often hired by the Black Fang.",
+		"faction": "neutral",
+		"level": 4,
+		"cost": {
+			"gold": 240
+		},
+		"speed": 6,
+		"hitPoints": 25,
+		"attack": 12,
+		"defense": 6,
+		"damage": {
+			"min": 4,
+			"max": 10
+		},
+		"doubleWide": false,
+		"fightValue": 365,
+		"aiValue": 418,
+		"growth": 4,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"shooter": {
+				"type": "SHOOTER"
+			},
+			"forceArrows": {
+				"type": "ENEMY_DEFENCE_REDUCTION",
+				"val": 25,
+				"description": "{Force Arrows}\nRanged attacks ignore 25% of target's Defense."
+			},
+			"cast_h7AbImplodingArrow": {
+				"type": "SPELLCASTER",
+				"subtype": "h7AbImplodingArrow",
+				"val": 0,
+				"icon": "h7/abilities/h7ImplodingArrow",
+				"description": "{Imploding Arrow}\nOnce: shot drags units in 3 hexes 1 closer"
+			},
+			"casts_h7AbImplodingArrow": {
+				"type": "CASTS",
+				"val": 1
+			},
+			"noDefault_h7AbImplodingArrow": {
+				"type": "NO_SPELLCAST_BY_DEFAULT",
+				"hidden": true
+			},
+			"implode": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7AbStrike",
+				"val": 0,
+				"hidden": true,
+				"stacking": "h7AbStrikeImplode",
+				"addInfo": {
+					"mode": "implode",
+					"mark": "H7_IMPLODE_ARMED_H7C",
+					"ranged": true,
+					"radius": 3,
+					"animation": "h7/fx/h7abImplosion",
+					"sound": "h7/h7ab_implosion",
+					"log": 12
+				}
+			}
+		},
+		"graphics": {
+			"animation": "h7/ArcaneArcher/battle.json",
+			"map": "h7/ArcaneArcher/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/ArcaneArcher/map/atkL.png",
+			"mapAttackFromRight": "h7/ArcaneArcher/map/atkR.png",
+			"iconLarge": "h7/ArcaneArcher/iconLarge.png",
+			"iconSmall": "h7/ArcaneArcher/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"frameAngles": [
+					90,
+					60,
+					45,
+					30,
+					0,
+					-30,
+					-45,
+					-60,
+					-90
+				],
+				"offset": {
+					"upperX": 19,
+					"upperY": -58,
+					"middleX": 20,
+					"middleY": -51,
+					"lowerX": 0,
+					"lowerY": -46
+				},
+				"attackClimaxFrame": 8,
+				"projectile": "h7/projectiles/A_Projectile_Prime_Bullet_s85.json"
+			}
+		},
+		"sound": {
+			"attack": "h7/creature_arcane_archer_attack.ogg",
+			"shoot": "h7/creature_arcane_archer_attack_ranged.ogg",
+			"defend": "h7/creature_arcane_archer_defend.ogg",
+			"wince": "h7/creature_arcane_archer_hit.ogg",
+			"killed": "h7/creature_arcane_archer_die.ogg",
+			"move": "h7/creature_arcane_archer_move_01.ogg"
+		},
+		"shots": 15,
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					5,
+					6,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_WALL_PENALTY",
+					"description": "{Siege Shooter}\nNo damage loss when shooting over walls"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_DISTANCE_PENALTY",
+					"description": "{Sharpshooter}\nNo penalty for long-range shots"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h7NeutralBlackGuard": {
+		"name": {
+			"singular": "Blackguard",
+			"plural": "Blackguards"
+		},
+		"description": "The founders of the Blackguard were once members of the famous mercenary company, the Storm Guard. Because their greed outweighed their respect for the oaths of the Wind Blade, these mercenaries were eventually exiled by the Storm Guard and formed a company of their own. The Blackguard will take any job, as long as the price is right.",
+		"faction": "neutral",
+		"level": 3,
+		"cost": {
+			"gold": 170
+		},
+		"speed": 5,
+		"hitPoints": 31,
+		"attack": 8,
+		"defense": 18,
+		"damage": {
+			"min": 3,
+			"max": 7
+		},
+		"doubleWide": false,
+		"fightValue": 296,
+		"aiValue": 351,
+		"growth": 7,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"h7Defensive": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7Defensive",
+				"val": 0,
+				"icon": "h7/abilities/h7Defensive",
+				"description": "{Defensive Stance}\nDefend: unlimited retaliation, no flank/rear"
+			}
+		},
+		"graphics": {
+			"animation": "h7/BlackGuard/battle.json",
+			"map": "h7/BlackGuard/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/BlackGuard/map/atkL.png",
+			"mapAttackFromRight": "h7/BlackGuard/map/atkR.png",
+			"iconLarge": "h7/BlackGuard/iconLarge.png",
+			"iconSmall": "h7/BlackGuard/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h7/creature_black_guard_attack.ogg",
+			"defend": "h7/creature_black_guard_defend.ogg",
+			"wince": "h7/creature_black_guard_hit.ogg",
+			"killed": "h7/creature_black_guard_die.ogg",
+			"move": "h7/creature_black_guard_move_01.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "MIND_IMMUNITY",
+					"description": "{Steadfast Mind}\nImmune to Mind spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h7NeutralDarknessElemental": {
+		"name": {
+			"singular": "Darkness Elemental",
+			"plural": "Darkness Elementals"
+		},
+		"description": "Most Darkness Elementals arise in the depths of Ashan: caves, tunnels, and every shadowed place strongly touched by Malassa, the Dragon Goddess of Darkness. Caverns, rock crevices and deep pits can all spawn Darkness Elementals. As vague and mysterious nature spirits, their exact form is hard to make out. They look like moving shadows, or a mass that makes light grow strangely dim.",
+		"faction": "neutral",
+		"level": 6,
+		"cost": {
+			"gold": 1635,
+			"sulfur": 1,
+			"mercury": 1
+		},
+		"speed": 9,
+		"hitPoints": 116,
+		"attack": 21,
+		"defense": 15,
+		"damage": {
+			"min": 18,
+			"max": 28
+		},
+		"doubleWide": true,
+		"fightValue": 2076,
+		"aiValue": 2451,
+		"growth": 2,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"flying": {
+				"type": "FLYING"
+			},
+			"immDarkness": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "02darkSchool",
+				"val": 50,
+				"description": "{Darkness Immunity}\nImmune to Dark curses; half Dark damage."
+			},
+			"noRetaliation": {
+				"type": "BLOCKS_RETALIATION",
+				"description": "{No Enemy Retaliation}\nTarget cannot retaliate."
+			},
+			"vulnLight": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "01lightSchool",
+				"val": -25,
+				"description": "{Light Vulnerability}\nTakes 25% more Light damage."
+			},
+			"h7SchoolImmunity_dark": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7SchoolImmunity",
+				"val": 0,
+				"addInfo": {
+					"school": "dark"
+				},
+				"stacking": "h7SchoolImmunity_dark",
+				"hidden": true,
+				"description": "~"
+			}
+		},
+		"graphics": {
+			"animation": "h7/DarknessElemental/battle.json",
+			"map": "h7/DarknessElemental/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/DarknessElemental/map/atkL.png",
+			"mapAttackFromRight": "h7/DarknessElemental/map/atkR.png",
+			"iconLarge": "h7/DarknessElemental/iconLarge.png",
+			"iconSmall": "h7/DarknessElemental/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h7/creature_dark_elemental_attacklaunchmelee.ogg",
+			"defend": "h7/creature_dark_elemental_defend.ogg",
+			"wince": "h7/creature_dark_elemental_hit.ogg",
+			"killed": "h7/creature_dark_elemental_die.ogg",
+			"move": "h7/creature_dark_elemental_moveend.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					2,
+					3,
+					4,
+					5,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_RETALIATION",
+					"description": "{Nimbleness}\nExtra retaliation each round"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "MIND_IMMUNITY",
+					"description": "{Steadfast Mind}\nImmune to Mind spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h7NeutralEarthElemental": {
+		"name": {
+			"singular": "Earth Elemental",
+			"plural": "Earth Elementals"
+		},
+		"description": "Commonly called \"Stonebreakers\" by the people of Ashan, Earth Elementals usually arise in ore deposits near dragon veins; the strongest of them always appear with earthquakes and landslides. Though these nature spirits are at least partly made of stone, the kinds of stone differ, so Earth Elementals often look quite different from one another.",
+		"faction": "neutral",
+		"level": 6,
+		"cost": {
+			"gold": 2040,
+			"sulfur": 1
+		},
+		"speed": 5,
+		"hitPoints": 167,
+		"attack": 16,
+		"defense": 19,
+		"damage": {
+			"min": 23,
+			"max": 32
+		},
+		"doubleWide": true,
+		"fightValue": 2082,
+		"aiValue": 2458,
+		"growth": 2,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"immEarth": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "earth",
+				"val": 50,
+				"description": "{Earth Immunity}\nImmune to Earth curses; half Earth damage."
+			},
+			"vulnFire": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "fire",
+				"val": -25,
+				"description": "{Fire Vulnerability}\nTakes 25% more Fire damage."
+			},
+			"h7SchoolImmunity_earth": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7SchoolImmunity",
+				"val": 0,
+				"addInfo": {
+					"school": "earth"
+				},
+				"stacking": "h7SchoolImmunity_earth",
+				"hidden": true,
+				"description": "~"
+			},
+			"h7Bash": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7Bash",
+				"icon": "h7/abilities/h7Bash",
+				"description": "{Bash}\nLucky hit: no retaliation; stuns 1 turn"
+			}
+		},
+		"graphics": {
+			"animation": "h7/EarthElemental/battle.json",
+			"map": "h7/EarthElemental/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/EarthElemental/map/atkL.png",
+			"mapAttackFromRight": "h7/EarthElemental/map/atkR.png",
+			"iconLarge": "h7/EarthElemental/iconLarge.png",
+			"iconSmall": "h7/EarthElemental/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h7/earthelemental_attacklaunchmelee.ogg",
+			"defend": "h7/earthelemental_defend.ogg",
+			"wince": "h7/earthelemental_hit.ogg",
+			"killed": "h7/earthelemental_die.ogg",
+			"move": "h7/earthelemental_move1.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					2,
+					3,
+					4,
+					5,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "MIND_IMMUNITY",
+					"description": "{Steadfast Mind}\nImmune to Mind spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "BLOCKS_RETALIATION",
+					"description": "{No Retaliation}\nEnemy cannot retaliate when attacked"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h7NeutralEfreet": {
+		"name": {
+			"singular": "Ifrit",
+			"plural": "Ifrits"
+		},
+		"description": "Ifrits are the chaotic counterpart of the Djinn, though no one knows whether these magical creatures share the same origin. At least some Ifrits are believed to have once been foolish, ambitious mages who tried to bind a Djinn's essence inside their own bodies. Unable to control their new power, they were consumed by it and reborn as chaos spirits.",
+		"faction": "neutral",
+		"level": 6,
+		"cost": {
+			"gold": 2040,
+			"crystal": 1
+		},
+		"speed": 9,
+		"hitPoints": 120,
+		"attack": 20,
+		"defense": 11,
+		"damage": {
+			"min": 15,
+			"max": 24
+		},
+		"doubleWide": false,
+		"fightValue": 2048,
+		"aiValue": 2419,
+		"growth": 2,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"flying": {
+				"type": "FLYING"
+			},
+			"immFire": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "fire",
+				"val": 50,
+				"description": "{Fire Immunity}\nImmune to Fire curses; half Fire damage."
+			},
+			"h7SchoolImmunity_fire": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7SchoolImmunity",
+				"val": 0,
+				"addInfo": {
+					"school": "fire"
+				},
+				"stacking": "h7SchoolImmunity_fire",
+				"hidden": true,
+				"description": "~"
+			},
+			"h7ChaosShield": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7ChaosShield",
+				"icon": "h7/abilities/h7ChaosShield",
+				"description": "{Chaos Shield}\nMelee attackers/retaliators get a random curse"
+			}
+		},
+		"graphics": {
+			"animation": "h7/Efreet/battle.json",
+			"map": "h7/Efreet/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/Efreet/map/atkL.png",
+			"mapAttackFromRight": "h7/Efreet/map/atkR.png",
+			"iconLarge": "h7/Efreet/iconLarge.png",
+			"iconSmall": "h7/Efreet/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"defend": "h7/creature_solmyr_defend.ogg",
+			"wince": "h7/creature_solmyr_hit.ogg",
+			"killed": "h7/creature_solmyr_die.ogg",
+			"attack": "h7/creature_solmyr_attack_critical.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					2,
+					3,
+					4,
+					5,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_RETALIATION",
+					"description": "{Nimbleness}\nExtra retaliation each round"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "MIND_IMMUNITY",
+					"description": "{Steadfast Mind}\nImmune to Mind spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h7NeutralFireElemental": {
+		"name": {
+			"singular": "Fire Elemental",
+			"plural": "Fire Elementals"
+		},
+		"description": "When the wrath of Arkath, the Dragon of Fire, grows strong enough to pierce the barrier between the Plane of Fire and Ashan, fiery Fire Elementals spring from the elemental tides this wrath creates. Most arise in spontaneous forest fires, while others come from great lava flows or volcanic eruptions.",
+		"faction": "neutral",
+		"level": 6,
+		"cost": {
+			"gold": 2040,
+			"mercury": 1
+		},
+		"speed": 8,
+		"hitPoints": 72,
+		"attack": 21,
+		"defense": 15,
+		"damage": {
+			"min": 14,
+			"max": 23
+		},
+		"doubleWide": true,
+		"fightValue": 2126,
+		"aiValue": 2510,
+		"growth": 2,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"shooter": {
+				"type": "SHOOTER"
+			},
+			"flying": {
+				"type": "FLYING"
+			},
+			"immFire": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "fire",
+				"val": 50,
+				"description": "{Fire Immunity}\nImmune to Fire curses; half Fire damage."
+			},
+			"vulnWater": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "water",
+				"val": -25,
+				"description": "{Water Vulnerability}\nTakes 25% more Water damage."
+			},
+			"h7SchoolImmunity_fire": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7SchoolImmunity",
+				"val": 0,
+				"addInfo": {
+					"school": "fire"
+				},
+				"stacking": "h7SchoolImmunity_fire",
+				"hidden": true,
+				"description": "~"
+			},
+			"fireNova": {
+				"type": "SPELL_LIKE_ATTACK",
+				"subtype": "h7AbFireNovaArea",
+				"val": 0,
+				"icon": "h7/abilities/h7FireNova",
+				"description": "{Nova}\nShots hit all units in 3×3 area (allies too)."
+			}
+		},
+		"graphics": {
+			"animation": "h7/FireElemental/battle.json",
+			"map": "h7/FireElemental/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/FireElemental/map/atkL.png",
+			"mapAttackFromRight": "h7/FireElemental/map/atkR.png",
+			"iconLarge": "h7/FireElemental/iconLarge.png",
+			"iconSmall": "h7/FireElemental/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"frameAngles": [
+					90,
+					60,
+					45,
+					30,
+					0,
+					-30,
+					-45,
+					-60,
+					-90
+				],
+				"offset": {
+					"upperX": 36,
+					"upperY": -80,
+					"middleX": 61,
+					"middleY": -65,
+					"lowerX": 33,
+					"lowerY": -46
+				},
+				"attackClimaxFrame": 6,
+				"projectile": "h7/projectiles/H7FireElementalProjectile_s68.json"
+			}
+		},
+		"sound": {
+			"attack": "h7/fireelemental_attacklaunchmelee.ogg",
+			"shoot": "h7/fireelemental_attacklaunchranged.ogg",
+			"defend": "h7/fireelemental_defend.ogg",
+			"wince": "h7/fireelemental_hit.ogg",
+			"killed": "h7/fireelemental_die.ogg",
+			"move": "h7/fireelemental_move.ogg"
+		},
+		"shots": 20,
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					2,
+					3,
+					4,
+					5,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_WALL_PENALTY",
+					"description": "{Siege Shooter}\nNo damage loss when shooting over walls"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_DISTANCE_PENALTY",
+					"description": "{Sharpshooter}\nNo penalty for long-range shots"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h7NeutralFirebird": {
+		"name": {
+			"singular": "Firebird",
+			"plural": "Firebirds"
+		},
+		"description": "Firebirds are great fire spirits that resemble the Prime phoenix in many ways, which often leads people to confuse the two. These splendid creatures embody the unstoppable, inextinguishable flame that consumes all.",
+		"faction": "neutral",
+		"level": 7,
+		"cost": {
+			"gold": 2105,
+			"crystal": 3
+		},
+		"speed": 21,
+		"hitPoints": 182,
+		"attack": 21,
+		"defense": 21,
+		"damage": {
+			"min": 35,
+			"max": 40
+		},
+		"doubleWide": true,
+		"fightValue": 4357,
+		"aiValue": 5676,
+		"growth": 1,
+		"advMapAmount": {
+			"min": 1,
+			"max": 3
+		},
+		"abilities": {
+			"flying": {
+				"type": "FLYING"
+			},
+			"immFire": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "fire",
+				"val": 50,
+				"description": "{Fire Immunity}\nImmune to Fire curses; half Fire damage."
+			},
+			"h7SchoolImmunity_fire": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7SchoolImmunity",
+				"val": 0,
+				"addInfo": {
+					"school": "fire"
+				},
+				"stacking": "h7SchoolImmunity_fire",
+				"hidden": true,
+				"description": "~"
+			},
+			"h7AuraOfFire": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7AuraOfFire",
+				"val": 1,
+				"icon": "h7/abilities/h7AuraOfFire",
+				"description": "{Aura of Fire}\nIt, adjacent allies purge, ignore Earth curses"
+			},
+			"h7AuraZone": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7AuraZone",
+				"val": 0,
+				"stacking": "h7AuraZone",
+				"propagator": "BATTLE_WIDE",
+				"hidden": true,
+				"description": "~"
+			},
+			"h7RebirthFirebird": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "rebirth",
+				"val": 29,
+				"icon": "h7/abilities/h7RebirthFirebird",
+				"description": "{Rebirth}\nOnce: when wiped out, 29% of start revives.",
+				"addInfo": {
+					"guaranteed": true
+				}
+			}
+		},
+		"graphics": {
+			"animation": "h7/Firebird/battle.json",
+			"map": "h7/Firebird/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/Firebird/map/atkL.png",
+			"mapAttackFromRight": "h7/Firebird/map/atkR.png",
+			"iconLarge": "h7/Firebird/iconLarge.png",
+			"iconSmall": "h7/Firebird/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h7/creature_firebird_attack.ogg",
+			"defend": "h7/creature_firebird_defend.ogg",
+			"wince": "h7/creature_firebird_hit.ogg",
+			"killed": "h7/creature_firebird_die.ogg",
+			"move": "h7/creature_firebird_move_01.ogg",
+			"startMoving": "h7/creature_firebird_fly_start.ogg",
+			"endMoving": "h7/creature_firebird_fly_end.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_RETALIATION",
+					"description": "{Nimbleness}\nExtra retaliation each round"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "MIND_IMMUNITY",
+					"description": "{Steadfast Mind}\nImmune to Mind spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE",
+					"description": "{Magic Resistance}\nChance to resist enemy spells"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					10,
+					20,
+					30,
+					40,
+					50
+				]
+			}
+		]
+	},
+	"h7NeutralGoldDragon": {
+		"name": {
+			"singular": "Gold Dragon",
+			"plural": "Gold Dragons"
+		},
+		"description": "Gold Dragons are incarnations of Elrath, the Dragon of Light. These majestic, mighty feathered serpents rarely interact with the other inhabitants of Ashan, even Elrath's own worshippers. Some scholars believe this is because Light itself must be an ideal, a concept that cannot be touched. Even so, history records a few knights who won the aid of a friendly Gold Dragon and achieved noble quests together.",
+		"faction": "neutral",
+		"level": 7,
+		"cost": {
+			"gold": 2830,
+			"crystal": 3,
+			"mercury": 1
+		},
+		"speed": 20,
+		"hitPoints": 204,
+		"attack": 17,
+		"defense": 18,
+		"damage": {
+			"min": 32,
+			"max": 39
+		},
+		"doubleWide": true,
+		"fightValue": 5201,
+		"aiValue": 6776,
+		"growth": 1,
+		"advMapAmount": {
+			"min": 1,
+			"max": 3
+		},
+		"abilities": {
+			"flying": {
+				"type": "FLYING"
+			},
+			"breath": {
+				"type": "TWO_HEX_ATTACK_BREATH",
+				"description": "{Breath of Light}\nBreath hits two hexes."
+			},
+			"immLight": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "01lightSchool",
+				"val": 50,
+				"description": "{Light Immunity}\nImmune to Light curses; half Light damage."
+			},
+			"vulnDarkness": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "02darkSchool",
+				"val": -25,
+				"description": "{Darkness Vulnerability}\nTakes 25% more Dark damage."
+			},
+			"dragonNature": {
+				"type": "DRAGON_NATURE"
+			},
+			"skeletonTarget": {
+				"type": "SKELETON_TRANSFORMER_TARGET",
+				"subtype": "boneDragon",
+				"hidden": true
+			},
+			"h7AuraOfPurity": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7AuraOfPurity",
+				"val": 1,
+				"icon": "h7/abilities/h7AuraOfPurity",
+				"description": "{Aura of Purity}\nIt and adjacent allies can't be cursed."
+			},
+			"h7AuraZone": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7AuraZone",
+				"val": 0,
+				"stacking": "h7AuraZone",
+				"propagator": "BATTLE_WIDE",
+				"hidden": true,
+				"description": "~"
+			},
+			"h7SchoolImmunity_light": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7SchoolImmunity",
+				"val": 0,
+				"addInfo": {
+					"school": "light"
+				},
+				"stacking": "h7SchoolImmunity_light",
+				"hidden": true,
+				"description": "~"
+			},
+			"h7CritStun": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7CritStun",
+				"icon": "h7/abilities/h7CritStun",
+				"description": "{Breath of Light}\nLucky hit: foes hit by breath stunned 1 turn",
+				"addInfo": {
+					"all": true,
+					"school": "light"
+				}
+			}
+		},
+		"graphics": {
+			"animation": "h7/GoldDragon/battle.json",
+			"map": "h7/GoldDragon/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/GoldDragon/map/atkL.png",
+			"mapAttackFromRight": "h7/GoldDragon/map/atkR.png",
+			"iconLarge": "h7/GoldDragon/iconLarge.png",
+			"iconSmall": "h7/GoldDragon/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h7/creature_gold_dragon_attack.ogg",
+			"defend": "h7/creature_gold_dragon_defend.ogg",
+			"wince": "h7/creature_gold_dragon_hit.ogg",
+			"killed": "h7/creature_gold_dragon_die.ogg",
+			"move": "h7/creature_gold_dragon_move.ogg",
+			"startMoving": "h7/creature_gold_dragon_fly_start.ogg",
+			"endMoving": "h7/creature_gold_dragon_fly_end.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_RETALIATION",
+					"description": "{Nimbleness}\nExtra retaliation each round"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "MIND_IMMUNITY",
+					"description": "{Steadfast Mind}\nImmune to Mind spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE",
+					"description": "{Magic Resistance}\nChance to resist enemy spells"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					10,
+					20,
+					30,
+					40,
+					50
+				]
+			}
+		]
+	},
+	"h7NeutralGriffin": {
+		"name": {
+			"singular": "Griffin",
+			"plural": "Griffins"
+		},
+		"description": "Griffins were born in the Mythic Age, a miraculous natural fusion of lion and eagle. That was the time of the wars of the Dragon Gods, when the surface of Ashan was soaked in dragon blood and animals that drank from rivers carrying it were forever touched by its magic. It is said that this wondrous species came to be when an eagle, out of a moment's pity, saved a lion while under the influence of dragon blood.",
+		"faction": "neutral",
+		"level": 3,
+		"cost": {
+			"gold": 150
+		},
+		"speed": 13,
+		"hitPoints": 19,
+		"attack": 4,
+		"defense": 4,
+		"damage": {
+			"min": 2,
+			"max": 5
+		},
+		"doubleWide": true,
+		"fightValue": 215,
+		"aiValue": 255,
+		"growth": 7,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"flying": {
+				"type": "FLYING"
+			},
+			"unlimitedRetaliations": {
+				"type": "UNLIMITED_RETALIATIONS",
+				"description": "{Unlimited Retaliations}\nRetaliates whenever it can."
+			}
+		},
+		"graphics": {
+			"animation": "h7/Griffin/battle.json",
+			"map": "h7/Griffin/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/Griffin/map/atkL.png",
+			"mapAttackFromRight": "h7/Griffin/map/atkR.png",
+			"iconLarge": "h7/Griffin/iconLarge.png",
+			"iconSmall": "h7/Griffin/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h7/griffin_attacklaunchmelee.ogg",
+			"defend": "h7/griffin_defend.ogg",
+			"wince": "h7/griffin_hit.ogg",
+			"killed": "h7/griffin_die.ogg",
+			"move": "h7/griffin_moveearth1.ogg",
+			"startMoving": "h7/griffin_flyout.ogg",
+			"endMoving": "h7/griffin_flyend.ogg"
+		},
+		"upgrades": [
+			"h7NeutralImperialGriffin"
+		],
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "MIND_IMMUNITY",
+					"description": "{Steadfast Mind}\nImmune to Mind spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h7NeutralImperialGriffin": {
+		"name": {
+			"singular": "Imperial Griffin",
+			"plural": "Imperial Griffins"
+		},
+		"description": "It is said that in the Age of Healing, the harmonious bond between humans and griffins so moved the elven smiths that they shared the secret of starsilver with humans. This metal is light and very hard, and when properly worked it makes excellent armor for flying beasts. The mysterious elven symbols found on Imperial Griffin armor record that long-forgotten friendship.",
+		"faction": "neutral",
+		"level": 3,
+		"cost": {
+			"gold": 195
+		},
+		"speed": 13,
+		"hitPoints": 21,
+		"attack": 6,
+		"defense": 6,
+		"damage": {
+			"min": 3,
+			"max": 5
+		},
+		"doubleWide": true,
+		"fightValue": 308,
+		"aiValue": 365,
+		"growth": 7,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"flying": {
+				"type": "FLYING"
+			},
+			"unlimitedRetaliations": {
+				"type": "UNLIMITED_RETALIATIONS",
+				"description": "{Unlimited Retaliations}\nRetaliates whenever it can."
+			},
+			"cast_h7AbDivingAttack": {
+				"type": "SPELLCASTER",
+				"subtype": "h7AbDivingAttack",
+				"val": 0,
+				"icon": "h7/abilities/h7DivingAttack",
+				"description": "{Swoop Attack}\nFlies, dives on 2×2: +20 Attack, unanswered"
+			},
+			"casts_h7AbDivingAttack": {
+				"type": "CASTS",
+				"val": 1
+			},
+			"noDefault_h7AbDivingAttack": {
+				"type": "NO_SPELLCAST_BY_DEFAULT",
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h7/ImperialGriffin/battle.json",
+			"map": "h7/ImperialGriffin/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/ImperialGriffin/map/atkL.png",
+			"mapAttackFromRight": "h7/ImperialGriffin/map/atkR.png",
+			"iconLarge": "h7/ImperialGriffin/iconLarge.png",
+			"iconSmall": "h7/ImperialGriffin/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h7/griffin_attacklaunchmelee.ogg",
+			"defend": "h7/griffin_defend.ogg",
+			"wince": "h7/griffin_hit.ogg",
+			"killed": "h7/griffin_die.ogg",
+			"move": "h7/griffin_moveearth1.ogg",
+			"startMoving": "h7/griffin_flyout.ogg",
+			"endMoving": "h7/griffin_flyend.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "MIND_IMMUNITY",
+					"description": "{Steadfast Mind}\nImmune to Mind spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h7NeutralJuggernaut": {
+		"name": {
+			"singular": "Rampager",
+			"plural": "Rampagers"
+		},
+		"description": "Rampagers are servants of the Demon Lord of Destruction. They are easy to recognize by their huge horns and basalt-covered fists and feet. They charge madly (sometimes even blindly) into enemy ranks, impaling foes on their horns, crushing them with their huge arms or trampling them to pulp.",
+		"faction": "neutral",
+		"level": 5,
+		"cost": {
+			"gold": 345
+		},
+		"speed": 7,
+		"hitPoints": 32,
+		"attack": 13,
+		"defense": 9,
+		"damage": {
+			"min": 10,
+			"max": 14
+		},
+		"doubleWide": true,
+		"fightValue": 627,
+		"aiValue": 698,
+		"growth": 3,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"demonic": {
+				"type": "tears-of-ashan:DEMONIC",
+				"description": "{Demonic Blood}\nTakes less Fire damage, +25% Light damage."
+			},
+			"fireResistance": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "fire",
+				"val": 25
+			},
+			"lightVulnerability": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "01lightSchool",
+				"val": -25,
+				"hidden": true
+			},
+			"charge": {
+				"type": "JOUSTING",
+				"val": 10,
+				"description": "{Charge}\n+2 Attack per hex traveled before attacking.",
+				"stacking": "h7NeutralJuggernautExpJousting"
+			},
+			"unfettered": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "slow",
+				"description": "{Unfettered}\nImmune to all slowing effects."
+			},
+			"h7Unfettered": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7Unfettered",
+				"val": 0,
+				"hidden": true,
+				"description": "~"
+			}
+		},
+		"graphics": {
+			"animation": "h7/Juggernaut/battle.json",
+			"map": "h7/Juggernaut/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/Juggernaut/map/atkL.png",
+			"mapAttackFromRight": "h7/Juggernaut/map/atkR.png",
+			"iconLarge": "h7/Juggernaut/iconLarge.png",
+			"iconSmall": "h7/Juggernaut/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h7/juggernaut_attacklaunchmelee.ogg",
+			"defend": "h7/juggernaut_defend.ogg",
+			"wince": "h7/juggernaut_hit.ogg",
+			"killed": "h7/juggernaut_die.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					3,
+					4,
+					5,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					3,
+					4,
+					4,
+					6,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					2,
+					3,
+					3,
+					4,
+					5,
+					6,
+					6,
+					7
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					7
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "JOUSTING",
+					"stacking": "h7NeutralJuggernautExpJousting"
+				},
+				"values": [
+					10,
+					10,
+					12,
+					12,
+					14,
+					14,
+					16,
+					16,
+					18,
+					20
+				]
+			},
+			{
+				"bonus": {
+					"type": "MIND_IMMUNITY",
+					"description": "{Steadfast Mind}\nImmune to Mind spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h7NeutralKappa": {
+		"name": {
+			"singular": "Kappa",
+			"plural": "Kappas"
+		},
+		"description": "Though mocked as the offspring of toads and turtles, Kappas are actually water spirits of rivers and lakes; their appearance comes from their covenant with the Naga theocracy.",
+		"faction": "neutral",
+		"level": 1,
+		"cost": {
+			"gold": 35
+		},
+		"speed": 4,
+		"hitPoints": 8,
+		"attack": 3,
+		"defense": 5,
+		"damage": {
+			"min": 2,
+			"max": 2
+		},
+		"doubleWide": false,
+		"fightValue": 66,
+		"aiValue": 67,
+		"growth": 15,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"resWater": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "water",
+				"val": 50,
+				"description": "{Water Resistance}\nTakes half damage from Water."
+			},
+			"vulnAir": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "air",
+				"val": -25,
+				"description": "{Air Vulnerability}\nTakes 25% more Air damage."
+			}
+		},
+		"graphics": {
+			"animation": "h7/Kappa/battle.json",
+			"map": "h7/Kappa/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/Kappa/map/atkL.png",
+			"mapAttackFromRight": "h7/Kappa/map/atkR.png",
+			"iconLarge": "h7/Kappa/iconLarge.png",
+			"iconSmall": "h7/Kappa/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h7/kappa_attacklaunchmelee.ogg",
+			"defend": "h7/kappa_defend.ogg",
+			"wince": "h7/kappa_hit.ogg",
+			"killed": "h7/kappa_die.ogg",
+			"move": "h7/kappa_walk_earth1.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "CHARGE_IMMUNITY",
+					"description": "{Steady Ranks}\nImmune to charge damage bonuses"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h7NeutralKraken": {
+		"name": {
+			"singular": "Kraken",
+			"plural": "Krakens"
+		},
+		"description": "In the war of creation, the blood of the dragon gods was spilled across Ashan, including the blood of Urgash, the Dragon of Chaos. It can mutate living things, creating twisted, insane abominations. The terrible sea monsters born in Ashan's deepest oceans are one such nightmare.",
+		"faction": "neutral",
+		"level": 7,
+		"cost": {
+			"gold": 2105
+		},
+		"speed": 10,
+		"hitPoints": 295,
+		"attack": 21,
+		"defense": 21,
+		"damage": {
+			"min": 35,
+			"max": 45
+		},
+		"doubleWide": true,
+		"fightValue": 3779,
+		"aiValue": 4923,
+		"growth": 1,
+		"advMapAmount": {
+			"min": 1,
+			"max": 3
+		},
+		"abilities": {
+			"h7Stranglehold": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7Stranglehold",
+				"icon": "h7/abilities/h7Stranglehold",
+				"description": "{Stranglehold}\nGrips 1-hex foe till Kraken acts, moves, dies"
+			},
+			"cast_h7AbInkSpray": {
+				"type": "SPELLCASTER",
+				"subtype": "h7AbInkSpray",
+				"val": 0,
+				"icon": "h7/abilities/h7InkSpray",
+				"description": "{Ink Spray}\nNext melee hits target+sides; inked -50% melee"
+			},
+			"casts_h7AbInkSpray": {
+				"type": "CASTS",
+				"val": 1
+			},
+			"inkSweep": {
+				"type": "THREE_HEADED_ATTACK",
+				"hidden": true,
+				"limiters": [
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "H7_INK_ARMED_H7C"
+					}
+				]
+			},
+			"inkDamage": {
+				"type": "PERCENTAGE_DAMAGE_BOOST",
+				"subtype": "damageTypeMelee",
+				"val": -70,
+				"hidden": true,
+				"limiters": [
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "H7_INK_ARMED_H7C"
+					}
+				]
+			},
+			"inkEvent": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7AbStrike",
+				"val": 0,
+				"hidden": true,
+				"stacking": "h7AbStrikeInk",
+				"addInfo": {
+					"mode": "ink",
+					"mark": "H7_INK_ARMED_H7C",
+					"pct": 50,
+					"turns": 2,
+					"show": "H7_INKED_H7C",
+					"icon": "h7/abilities/h7InkSpray",
+					"log": 14
+				}
+			}
+		},
+		"graphics": {
+			"animation": "h7/Kraken/battle.json",
+			"map": "h7/Kraken/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/Kraken/map/atkL.png",
+			"mapAttackFromRight": "h7/Kraken/map/atkR.png",
+			"iconLarge": "h7/Kraken/iconLarge.png",
+			"iconSmall": "h7/Kraken/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h7/creature_kraken_attack.ogg",
+			"defend": "h7/creature_kraken_defend.ogg",
+			"wince": "h7/creature_kraken_hit.ogg",
+			"killed": "h7/creature_kraken_die.ogg",
+			"move": "h7/creature_kraken_move_01.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "MIND_IMMUNITY",
+					"description": "{Steadfast Mind}\nImmune to Mind spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE",
+					"description": "{Magic Resistance}\nChance to resist enemy spells"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					10,
+					20,
+					30,
+					40,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "BLOCKS_RETALIATION",
+					"description": "{No Retaliation}\nEnemy cannot retaliate when attacked"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true
+				]
+			}
+		]
+	},
+	"h7NeutralLightElemental": {
+		"name": {
+			"singular": "Light Elemental",
+			"plural": "Light Elementals"
+		},
+		"description": "Light Elementals usually appear at dawn, when the faint reddish light is refracted by clouds and dew and woven into a visible form. These lovely sprites seem friendly and a little frivolous, and often help lost travelers. Light Elementals care nothing for loyalty; they judge the purity of each person they meet by their own standards.",
+		"faction": "neutral",
+		"level": 6,
+		"cost": {
+			"gold": 1635,
+			"gems": 1,
+			"mercury": 1
+		},
+		"speed": 9,
+		"hitPoints": 109,
+		"attack": 16,
+		"defense": 19,
+		"damage": {
+			"min": 18,
+			"max": 28
+		},
+		"doubleWide": true,
+		"fightValue": 2068,
+		"aiValue": 2442,
+		"growth": 2,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"flying": {
+				"type": "FLYING"
+			},
+			"immLight": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "01lightSchool",
+				"val": 50,
+				"description": "{Light Immunity}\nImmune to Light curses; half Light damage."
+			},
+			"vulnDarkness": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "02darkSchool",
+				"val": -25,
+				"description": "{Darkness Vulnerability}\nTakes 25% more Dark damage."
+			},
+			"h7SchoolImmunity_light": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7SchoolImmunity",
+				"val": 0,
+				"addInfo": {
+					"school": "light"
+				},
+				"stacking": "h7SchoolImmunity_light",
+				"hidden": true,
+				"description": "~"
+			},
+			"h7BlindingLight": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7BlindingLight",
+				"icon": "h7/abilities/h7BlindingLight",
+				"description": "{Blinding Light}\nLucky hit: target stunned 1 turn.",
+				"addInfo": {
+					"school": "light",
+					"spell": "blind"
+				}
+			}
+		},
+		"graphics": {
+			"animation": "h7/LightElemental/battle.json",
+			"map": "h7/LightElemental/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/LightElemental/map/atkL.png",
+			"mapAttackFromRight": "h7/LightElemental/map/atkR.png",
+			"iconLarge": "h7/LightElemental/iconLarge.png",
+			"iconSmall": "h7/LightElemental/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h7/creature_light_elemental_attacklaunchmelee.ogg",
+			"defend": "h7/creature_light_elemental_defend.ogg",
+			"wince": "h7/creature_light_elemental_hit.ogg",
+			"killed": "h7/creature_light_elemental_die.ogg",
+			"move": "h7/creature_light_elemental_move.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					2,
+					3,
+					4,
+					5,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_RETALIATION",
+					"description": "{Nimbleness}\nExtra retaliation each round"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "MIND_IMMUNITY",
+					"description": "{Steadfast Mind}\nImmune to Mind spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h7NeutralLilim": {
+		"name": {
+			"singular": "Seductress",
+			"plural": "Seductresses"
+		},
+		"description": "Some of Asha's children (humans, elves, dwarves and so on) pledge themselves to Urgash and the demon lords of Sheogh. After death, the men are reborn as incubi and the women as Succubi. Because of their origins, they usually serve as spies, infiltrators and diplomats, so they are skilled at illusion, charm and shapeshifting. The Seductress sees battle as a passionate prelude to death. She is often seen kissing dying enemies, the light slowly fading from their eyes while a trace of infatuation lingers.",
+		"faction": "neutral",
+		"level": 6,
+		"cost": {
+			"gold": 1045
+		},
+		"speed": 8,
+		"hitPoints": 72,
+		"attack": 18,
+		"defense": 11,
+		"damage": {
+			"min": 11,
+			"max": 14
+		},
+		"doubleWide": false,
+		"fightValue": 1845,
+		"aiValue": 2178,
+		"growth": 2,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"shooter": {
+				"type": "SHOOTER"
+			},
+			"demonic": {
+				"type": "tears-of-ashan:DEMONIC",
+				"description": "{Demonic Blood}\nTakes less Fire damage, +25% Light damage."
+			},
+			"fireResistance": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "fire",
+				"val": 25
+			},
+			"lightVulnerability": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "01lightSchool",
+				"val": -25,
+				"hidden": true
+			},
+			"fireNova": {
+				"type": "SPELL_LIKE_ATTACK",
+				"subtype": "h7AbFireNovaArea",
+				"val": 0,
+				"icon": "h7/abilities/h7FireNova",
+				"description": "{Nova}\nShots hit all units in 3×3 area (allies too)."
+			}
+		},
+		"graphics": {
+			"animation": "h7/Lilim/battle.json",
+			"map": "h7/Lilim/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/Lilim/map/atkL.png",
+			"mapAttackFromRight": "h7/Lilim/map/atkR.png",
+			"iconLarge": "h7/Lilim/iconLarge.png",
+			"iconSmall": "h7/Lilim/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"frameAngles": [
+					90,
+					60,
+					45,
+					30,
+					0,
+					-30,
+					-45,
+					-60,
+					-90
+				],
+				"offset": {
+					"upperX": 27,
+					"upperY": -53,
+					"middleX": 34,
+					"middleY": -43,
+					"lowerX": 9,
+					"lowerY": -34
+				},
+				"attackClimaxFrame": 7,
+				"projectile": "h7/projectiles/H7CabirProjectile_s85.json"
+			}
+		},
+		"sound": {
+			"attack": "h7/succubus_attacklaunchmelee.ogg",
+			"shoot": "h7/succubus_attacklaunchranged.ogg",
+			"defend": "h7/succubus_defend.ogg",
+			"wince": "h7/succubus_hit.ogg",
+			"killed": "h7/succubus_die.ogg",
+			"move": "h7/succubus_flyloop1.ogg",
+			"startMoving": "h7/succubus_flystart.ogg",
+			"endMoving": "h7/succubus_flyend.ogg"
+		},
+		"shots": 20,
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					2,
+					3,
+					4,
+					5,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_WALL_PENALTY",
+					"description": "{Siege Shooter}\nNo damage loss when shooting over walls"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_DISTANCE_PENALTY",
+					"description": "{Sharpshooter}\nNo penalty for long-range shots"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h7NeutralLizardman": {
+		"name": {
+			"singular": "Lizardman",
+			"plural": "Lizardmen"
+		},
+		"description": "Lizardmen are beastmen created by mages of the School of Life-Shaping. Although records show that Lizardmen were created by the eccentric mage Agg, the Lizardmen found in the swamps and rivers of the Aegin Peninsula are a recently born breed.",
+		"faction": "neutral",
+		"level": 2,
+		"cost": {
+			"gold": 150
+		},
+		"speed": 5,
+		"hitPoints": 11,
+		"attack": 6,
+		"defense": 2,
+		"damage": {
+			"min": 2,
+			"max": 4
+		},
+		"doubleWide": false,
+		"fightValue": 178,
+		"aiValue": 199,
+		"growth": 8,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"shooter": {
+				"type": "SHOOTER"
+			},
+			"cast_h7AbScatterShot": {
+				"type": "SPELLCASTER",
+				"subtype": "h7AbScatterShot",
+				"val": 0,
+				"icon": "h7/abilities/h7ScatterShot",
+				"description": "{Scatter Shot}\nNext shot hits all units in 3×3, half damage."
+			},
+			"casts_h7AbScatterShot": {
+				"type": "CASTS",
+				"val": 1
+			},
+			"noDefault_h7AbScatterShot": {
+				"type": "NO_SPELLCAST_BY_DEFAULT",
+				"hidden": true
+			},
+			"scatterShot": {
+				"type": "SPELL_LIKE_ATTACK",
+				"subtype": "h7AbScatterShotArea",
+				"val": 0,
+				"hidden": true,
+				"limiters": [
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "H7_SCATTER_ARMED_H7C"
+					}
+				]
+			},
+			"scatterDamage": {
+				"type": "PERCENTAGE_DAMAGE_BOOST",
+				"subtype": "damageTypeRanged",
+				"val": -50,
+				"hidden": true,
+				"limiters": [
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "H7_SCATTER_ARMED_H7C"
+					}
+				]
+			}
+		},
+		"graphics": {
+			"animation": "h7/Lizardman/battle.json",
+			"map": "h7/Lizardman/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/Lizardman/map/atkL.png",
+			"mapAttackFromRight": "h7/Lizardman/map/atkR.png",
+			"iconLarge": "h7/Lizardman/iconLarge.png",
+			"iconSmall": "h7/Lizardman/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"frameAngles": [
+					90,
+					60,
+					45,
+					30,
+					0,
+					-30,
+					-45,
+					-60,
+					-90
+				],
+				"offset": {
+					"upperX": 22,
+					"upperY": -53,
+					"middleX": 30,
+					"middleY": -44,
+					"lowerX": 10,
+					"lowerY": -36
+				},
+				"attackClimaxFrame": 7,
+				"projectile": "h7/projectiles/H7ArrowProjectile.json"
+			}
+		},
+		"sound": {
+			"attack": "h7/creature_lizardman_attack.ogg",
+			"shoot": "h7/creature_lizardman_attack_ranged.ogg",
+			"defend": "h7/creature_lizardman_defend.ogg",
+			"wince": "h7/creature_lizardman_hit.ogg",
+			"killed": "h7/creature_lizardman_die.ogg",
+			"move": "h7/creature_lizardman_move_01.ogg"
+		},
+		"shots": 19,
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					3,
+					3,
+					3,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					3,
+					4,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					0,
+					1,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					3,
+					3,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_WALL_PENALTY",
+					"description": "{Siege Shooter}\nNo damage loss when shooting over walls"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h7NeutralManticore": {
+		"name": {
+			"singular": "Manticore",
+			"plural": "Manticores"
+		},
+		"description": "Manticores are magical beasts born in the Mythic Age, when dragon veins covered the surface of Ashan. Creatures that drank from rivers carrying the dragon-blood crystals were forever changed by their powerful magic. Manticores seem to mix the features of many animals: lion, bat and scorpion. They are famous for their venomous tail stings.",
+		"faction": "neutral",
+		"level": 5,
+		"cost": {
+			"gold": 360
+		},
+		"speed": 5,
+		"hitPoints": 59,
+		"attack": 11,
+		"defense": 17,
+		"damage": {
+			"min": 10,
+			"max": 13
+		},
+		"doubleWide": true,
+		"fightValue": 923,
+		"aiValue": 1027,
+		"growth": 3,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"h7CorrodingVenom": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7CorrodingVenom",
+				"icon": "h7/abilities/h7CorrodingVenom",
+				"description": "{Corroding Venom}\nTarget of its attack -24 Defense for 1 turn.",
+				"val": 24
+			},
+			"cast_h7AbCripplingSting": {
+				"type": "SPELLCASTER",
+				"subtype": "h7AbCripplingSting",
+				"val": 0,
+				"icon": "h7/abilities/h7CripplingSting",
+				"description": "{Maiming Sting}\nOnce: next melee half dmg, no retaliation"
+			},
+			"casts_h7AbCripplingSting": {
+				"type": "CASTS",
+				"val": 1
+			},
+			"stingDamage": {
+				"type": "PERCENTAGE_DAMAGE_BOOST",
+				"subtype": "damageTypeMelee",
+				"val": -50,
+				"hidden": true,
+				"limiters": [
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "H7_STING_ARMED_H7C"
+					}
+				]
+			},
+			"stingNoRetaliation": {
+				"type": "BLOCKS_RETALIATION",
+				"hidden": true,
+				"limiters": [
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "H7_STING_ARMED_H7C"
+					}
+				]
+			},
+			"stingEvent": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7AbStrike",
+				"val": 0,
+				"hidden": true,
+				"stacking": "h7AbStrikeSting",
+				"addInfo": {
+					"mode": "sting",
+					"mark": "H7_STING_ARMED_H7C",
+					"turns": 2,
+					"show": "H7_CRIPPLED_H7C",
+					"icon": "h7/abilities/h7CripplingSting",
+					"animation": "h7/fx/h7abSting",
+					"sound": "h7/h7ab_sting",
+					"log": 13
+				}
+			}
+		},
+		"graphics": {
+			"animation": "h7/Manticore/battle.json",
+			"map": "h7/Manticore/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/Manticore/map/atkL.png",
+			"mapAttackFromRight": "h7/Manticore/map/atkR.png",
+			"iconLarge": "h7/Manticore/iconLarge.png",
+			"iconSmall": "h7/Manticore/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h7/creature_manticore_attack.ogg",
+			"defend": "h7/creature_manticore_defend.ogg",
+			"wince": "h7/creature_manticore_hit.ogg",
+			"killed": "h7/creature_manticore_die.ogg",
+			"move": "h7/creature_manticore_move_01.ogg",
+			"startMoving": "h7/creature_manticore_fly_start.ogg",
+			"endMoving": "h7/creature_manticore_fly_end.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					3,
+					4,
+					5,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					3,
+					4,
+					4,
+					6,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					2,
+					3,
+					3,
+					4,
+					5,
+					6,
+					6,
+					7
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					7
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "MIND_IMMUNITY",
+					"description": "{Steadfast Mind}\nImmune to Mind spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "BLOCKS_RETALIATION",
+					"description": "{No Retaliation}\nEnemy cannot retaliate when attacked"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h7NeutralMermaid": {
+		"name": {
+			"singular": "Mermaid",
+			"plural": "Mermaids"
+		},
+		"description": "Half human and half dolphin, Mermaids were first created to guard, patrol and sail the mages' coasts. Unfortunately, the mages' land lies in the desert, and few Mermaids ever saw water, so most ended up as pets their masters showed off to amazed guests. So although Mermaids were not active in the beastmen uprising, they were glad to slip away quietly in its aftermath. Since then they have lived in the sea, more or less free, with few natural enemies and little attention.",
+		"faction": "neutral",
+		"level": 4,
+		"cost": {
+			"gold": 325
+		},
+		"speed": 7,
+		"hitPoints": 39,
+		"attack": 7,
+		"defense": 11,
+		"damage": {
+			"min": 4,
+			"max": 8
+		},
+		"doubleWide": true,
+		"fightValue": 398,
+		"aiValue": 456,
+		"growth": 4,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"shooter": {
+				"type": "SHOOTER"
+			},
+			"immWater": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "water",
+				"val": 50,
+				"description": "{Water Immunity}\nImmune to Water curses; half Water damage."
+			},
+			"vulnAir": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "air",
+				"val": -25,
+				"description": "{Air Vulnerability}\nTakes 25% more Air damage."
+			},
+			"h7SchoolImmunity_water": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7SchoolImmunity",
+				"val": 0,
+				"addInfo": {
+					"school": "water"
+				},
+				"stacking": "h7SchoolImmunity_water",
+				"hidden": true,
+				"description": "~"
+			},
+			"splash": {
+				"type": "SPELL_LIKE_ATTACK",
+				"subtype": "h7AbSplashArea",
+				"val": 0,
+				"icon": "h7/abilities/h7Splash",
+				"description": "{Splash}\nShots hit all units in 3×3 area (allies too)."
+			}
+		},
+		"graphics": {
+			"animation": "h7/Mermaid/battle.json",
+			"map": "h7/Mermaid/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/Mermaid/map/atkL.png",
+			"mapAttackFromRight": "h7/Mermaid/map/atkR.png",
+			"iconLarge": "h7/Mermaid/iconLarge.png",
+			"iconSmall": "h7/Mermaid/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"frameAngles": [
+					90,
+					60,
+					45,
+					30,
+					0,
+					-30,
+					-45,
+					-60,
+					-90
+				],
+				"offset": {
+					"upperX": 40,
+					"upperY": -89,
+					"middleX": 51,
+					"middleY": -73,
+					"lowerX": 14,
+					"lowerY": -59
+				},
+				"attackClimaxFrame": 6,
+				"projectile": "h7/projectiles/A_Projectile_Water_Bullet_s85.json"
+			}
+		},
+		"sound": {
+			"attack": "h7/mermaid_attacklaunchmelee.ogg",
+			"shoot": "h7/mermaid_attacklaunchranged.ogg",
+			"defend": "h7/mermaid_defend.ogg",
+			"wince": "h7/mermaid_hit.ogg",
+			"killed": "h7/mermaid_die.ogg",
+			"move": "h7/mermaid_move1.ogg"
+		},
+		"shots": 15,
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					5,
+					6,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_WALL_PENALTY",
+					"description": "{Siege Shooter}\nNo damage loss when shooting over walls"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_DISTANCE_PENALTY",
+					"description": "{Sharpshooter}\nNo penalty for long-range shots"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h7NeutralSeaElfPirate": {
+		"name": {
+			"singular": "Sea Elf Pirate",
+			"plural": "Sea Elf Pirates"
+		},
+		"description": "Sea elves are also called Shardans, meaning \"children of the sea\" in the elven tongue. They once belonged to the Shantiri Empire, but now are more like wanderers of the seas, roaming the oceans of Ashan. They worship Sylanna's bounty and Shalassa's hospitality. Every sea elf belongs to a particular clan, also called a ship-folk, and they are fiercely loyal to their ship-folk. Different ship-folks may be explorers, merchants or pirates.",
+		"faction": "neutral",
+		"level": 3,
+		"cost": {
+			"gold": 200
+		},
+		"speed": 9,
+		"hitPoints": 20,
+		"attack": 8,
+		"defense": 2,
+		"damage": {
+			"min": 3,
+			"max": 4
+		},
+		"doubleWide": false,
+		"fightValue": 291,
+		"aiValue": 345,
+		"growth": 7,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"cleave": {
+				"type": "ADDITIONAL_ATTACK",
+				"val": 1,
+				"description": "{Cleave}\nStrikes twice; target retaliates after 1st"
+			},
+			"h7SeaWarfare": {
+				"type": "H7_SEA_WARFARE_H7C",
+				"val": 0,
+				"description": "{Sea Warfare}\nAt sea: +6 Attack/Defense, +2 Speed, +3 HP/dmg"
+			},
+			"h7SeaSpeed": {
+				"type": "STACKS_SPEED",
+				"hidden": true,
+				"val": 2,
+				"limiters": [
+					{
+						"type": "TERRAIN_LIMITER",
+						"terrain": "water"
+					}
+				],
+				"stacking": "h7SeaWarfare"
+			},
+			"h7SeaHealth": {
+				"type": "STACK_HEALTH",
+				"hidden": true,
+				"val": 3,
+				"limiters": [
+					{
+						"type": "TERRAIN_LIMITER",
+						"terrain": "water"
+					}
+				],
+				"stacking": "h7SeaWarfare"
+			},
+			"h7SeaAttack": {
+				"type": "PRIMARY_SKILL",
+				"hidden": true,
+				"subtype": "attack",
+				"val": 6,
+				"limiters": [
+					{
+						"type": "TERRAIN_LIMITER",
+						"terrain": "water"
+					}
+				],
+				"stacking": "h7SeaWarfare"
+			},
+			"h7SeaDefence": {
+				"type": "PRIMARY_SKILL",
+				"hidden": true,
+				"subtype": "defence",
+				"val": 6,
+				"limiters": [
+					{
+						"type": "TERRAIN_LIMITER",
+						"terrain": "water"
+					}
+				],
+				"stacking": "h7SeaWarfare"
+			},
+			"h7SeaDamage": {
+				"type": "CREATURE_DAMAGE",
+				"hidden": true,
+				"subtype": "creatureDamageBoth",
+				"val": 3,
+				"limiters": [
+					{
+						"type": "TERRAIN_LIMITER",
+						"terrain": "water"
+					}
+				],
+				"stacking": "h7SeaWarfare"
+			}
+		},
+		"graphics": {
+			"animation": "h7/SeaElfPirate/battle.json",
+			"map": "h7/SeaElfPirate/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/SeaElfPirate/map/atkL.png",
+			"mapAttackFromRight": "h7/SeaElfPirate/map/atkR.png",
+			"iconLarge": "h7/SeaElfPirate/iconLarge.png",
+			"iconSmall": "h7/SeaElfPirate/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h7/creature_sea_elf_pirate_attack.ogg",
+			"defend": "h7/creature_sea_elf_pirate_defend.ogg",
+			"wince": "h7/creature_sea_elf_pirate_hit.ogg",
+			"killed": "h7/creature_sea_elf_pirate_die.ogg",
+			"move": "h7/creature_sea_elf_pirate_move.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "MIND_IMMUNITY",
+					"description": "{Steadfast Mind}\nImmune to Mind spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h7NeutralShadowPanther": {
+		"name": {
+			"singular": "Shadow Panther",
+			"plural": "Shadow Panthers"
+		},
+		"description": "Among the orcs of the Pao Islands there has long been a tale of a legendary creature, the Shadow Panther, larger and fiercer than even the mighty known Pao leopards. Shadow Panthers do exist, but they are no ordinary cats. Touched by the forces of darkness, they have become the most terrifying predators on the islands.",
+		"faction": "neutral",
+		"level": 3,
+		"cost": {
+			"gold": 150
+		},
+		"speed": 13,
+		"hitPoints": 19,
+		"attack": 8,
+		"defense": 2,
+		"damage": {
+			"min": 3,
+			"max": 5
+		},
+		"doubleWide": true,
+		"fightValue": 223,
+		"aiValue": 265,
+		"growth": 7,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"mindImmunity": {
+				"type": "MIND_IMMUNITY",
+				"description": "{Indomitable}\nImmune to Mind, fear, sleep; Morale can't drop"
+			},
+			"resDarkness": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "02darkSchool",
+				"val": 50,
+				"description": "{Darkness Resistance}\nTakes half damage from Dark."
+			},
+			"h7IndomitableMorale": {
+				"type": "MORALE",
+				"hidden": true,
+				"val": 0,
+				"valueType": "AT_LEAST",
+				"stacking": "h7Indomitable"
+			},
+			"h7IndomitableMark": {
+				"type": "H7_INDOMITABLE_H7C",
+				"hidden": true,
+				"val": 1
+			}
+		},
+		"graphics": {
+			"animation": "h7/ShadowPanther/battle.json",
+			"map": "h7/ShadowPanther/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/ShadowPanther/map/atkL.png",
+			"mapAttackFromRight": "h7/ShadowPanther/map/atkR.png",
+			"iconLarge": "h7/ShadowPanther/iconLarge.png",
+			"iconSmall": "h7/ShadowPanther/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h7/creature_shadow_panther_attack.ogg",
+			"defend": "h7/creature_shadow_panther_defend.ogg",
+			"wince": "h7/creature_shadow_panther_hit.ogg",
+			"killed": "h7/creature_shadow_panther_die.ogg",
+			"move": "h7/creature_shadow_panther_move_01.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "CHARGE_IMMUNITY",
+					"description": "{Steady Ranks}\nImmune to charge damage bonuses"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h7NeutralShantiriGolem": {
+		"name": {
+			"singular": "Shantiri Golem",
+			"plural": "Shantiri Golems"
+		},
+		"description": "A Golem's strength and lifespan depend on several factors: the craftsmanship of the carving, the quality of the material and the skill of the enchantment. Since these ancient Golems date back to when the lost Shantiri civilization still walked those distant lands and now-forgotten ruins, their power and workmanship must be extraordinary.",
+		"faction": "neutral",
+		"level": 5,
+		"cost": {
+			"gold": 225
+		},
+		"speed": 4,
+		"hitPoints": 38,
+		"attack": 6,
+		"defense": 8,
+		"damage": {
+			"min": 6,
+			"max": 10
+		},
+		"doubleWide": false,
+		"fightValue": 622,
+		"aiValue": 692,
+		"growth": 3,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"nonLiving": {
+				"type": "NON_LIVING",
+				"description": "{Construct}\nImmune: poison, blind, Mind, Morale; no heals"
+			},
+			"mindImmunity": {
+				"type": "MIND_IMMUNITY"
+			},
+			"poisonImmunity": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "poison",
+				"hidden": true
+			},
+			"unfettered": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "slow",
+				"description": "{Unfettered}\nImmune to all slowing effects."
+			},
+			"h7Unfettered": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7Unfettered",
+				"val": 0,
+				"hidden": true,
+				"description": "~"
+			},
+			"h7Bash": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7Bash",
+				"icon": "h7/abilities/h7Bash",
+				"description": "{Bash}\nLucky hit: no retaliation; stuns 1 turn"
+			}
+		},
+		"graphics": {
+			"animation": "h7/ShantiriGolem/battle.json",
+			"map": "h7/ShantiriGolem/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/ShantiriGolem/map/atkL.png",
+			"mapAttackFromRight": "h7/ShantiriGolem/map/atkR.png",
+			"iconLarge": "h7/ShantiriGolem/iconLarge.png",
+			"iconSmall": "h7/ShantiriGolem/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h7/earthelemental_attacklaunchmelee.ogg",
+			"defend": "h7/earthelemental_defend.ogg",
+			"wince": "h7/earthelemental_hit.ogg",
+			"killed": "h7/earthelemental_die.ogg",
+			"move": "h7/earthelemental_move1.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					3,
+					4,
+					5,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					3,
+					4,
+					4,
+					6,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					2,
+					3,
+					3,
+					4,
+					5,
+					6,
+					6,
+					7
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					7
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "BLOCKS_RETALIATION",
+					"description": "{No Retaliation}\nEnemy cannot retaliate when attacked"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h7NeutralShantiriTitan": {
+		"name": {
+			"singular": "Shantiri Titan",
+			"plural": "Shantiri Titans"
+		},
+		"description": "The first Titans were built by the Shantiri during the Elder Wars. Most of these vast, intricate, magic-powered constructs fell in the great wars of that age. Only a few precious individuals escaped destruction, and wizards, especially those of the School of Fabrication, are eager to find them. Of course, in some very rare cases a Shantiri Titan is truly “alive”, and does not always like to be disturbed",
+		"faction": "neutral",
+		"level": 7,
+		"cost": {
+			"gold": 2830,
+			"crystal": 1,
+			"gems": 3
+		},
+		"speed": 11,
+		"hitPoints": 232,
+		"attack": 17,
+		"defense": 18,
+		"damage": {
+			"min": 38,
+			"max": 45
+		},
+		"doubleWide": true,
+		"fightValue": 6284,
+		"aiValue": 8187,
+		"growth": 1,
+		"advMapAmount": {
+			"min": 1,
+			"max": 3
+		},
+		"abilities": {
+			"shooter": {
+				"type": "SHOOTER"
+			},
+			"nonLiving": {
+				"type": "NON_LIVING",
+				"description": "{Construct}\nImmune: poison, blind, Mind, Morale; no heals"
+			},
+			"mindImmunity": {
+				"type": "MIND_IMMUNITY"
+			},
+			"poisonImmunity": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "poison",
+				"hidden": true
+			},
+			"regeneration": {
+				"type": "HP_REGENERATION",
+				"val": 136,
+				"description": "{Regeneration}\nTop unit heals ${val} HP each round start."
+			},
+			"h7Rooting": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7Rooting",
+				"icon": "h7/abilities/h7Rooting",
+				"description": "{Rooting}\nHit foes -3 Speed; lucky hit: stunned 1 turn",
+				"addInfo": {
+					"speed": 3,
+					"turns": 2
+				}
+			},
+			"h7MagicAbsorption": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7MagicAbsorption",
+				"icon": "h7/abilities/h7MagicAbsorption",
+				"description": "{Magic Absorption}\nNext attack adds spell damage taken (capped)"
+			}
+		},
+		"graphics": {
+			"animation": "h7/ShantiriTitan/battle.json",
+			"map": "h7/ShantiriTitan/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/ShantiriTitan/map/atkL.png",
+			"mapAttackFromRight": "h7/ShantiriTitan/map/atkR.png",
+			"iconLarge": "h7/ShantiriTitan/iconLarge.png",
+			"iconSmall": "h7/ShantiriTitan/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"frameAngles": [
+					90,
+					60,
+					45,
+					30,
+					0,
+					-30,
+					-45,
+					-60,
+					-90
+				],
+				"offset": {
+					"upperX": 29,
+					"upperY": -82,
+					"middleX": 18,
+					"middleY": -74,
+					"lowerX": 78,
+					"lowerY": -75
+				},
+				"attackClimaxFrame": 8,
+				"projectile": "h7/projectiles/A_Projectile_Earth_Bullet_s75.json"
+			}
+		},
+		"sound": {
+			"attack": "h7/creature_colossus_attack_01.ogg",
+			"shoot": "h7/creature_colossus_attack_ranged_01.ogg",
+			"defend": "h7/creature_colossus_defend_01.ogg",
+			"wince": "h7/creature_colossus_hit_01.ogg",
+			"killed": "h7/creature_colossus_die_01.ogg",
+			"move": "h7/creature_colossus_move_01.ogg"
+		},
+		"shots": 24,
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_WALL_PENALTY",
+					"description": "{Siege Shooter}\nNo damage loss when shooting over walls"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_DISTANCE_PENALTY",
+					"description": "{Sharpshooter}\nNo penalty for long-range shots"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "SHOTS",
+					"description": "{Ammunition}\nMore shots"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			}
+		]
+	},
+	"h7NeutralWaterElemental": {
+		"name": {
+			"singular": "Water Elemental",
+			"plural": "Water Elementals"
+		},
+		"description": "Water Elementals can be born wherever the power of Shalassa, Dragon of Water, reaches: oceans, rivers, lakes or glaciers. Water magic flowing through the ley lines can also give rise to Water Elementals. Their appearance varies widely with the region and the local water. Their bodies may be made of clear water, sea foam, mist and fog, snowflakes or sheets of ice. When born in deltas and swamps, they may even be made of mud and sewage.",
+		"faction": "neutral",
+		"level": 6,
+		"cost": {
+			"gold": 2040,
+			"gems": 1
+		},
+		"speed": 7,
+		"hitPoints": 109,
+		"attack": 18,
+		"defense": 17,
+		"damage": {
+			"min": 18,
+			"max": 28
+		},
+		"doubleWide": true,
+		"fightValue": 2118,
+		"aiValue": 2500,
+		"growth": 2,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"shooter": {
+				"type": "SHOOTER"
+			},
+			"immWater": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "water",
+				"val": 50,
+				"description": "{Water Immunity}\nImmune to Water curses; half Water damage."
+			},
+			"unlimitedRetaliations": {
+				"type": "UNLIMITED_RETALIATIONS",
+				"description": "{Unlimited Retaliations}\nRetaliates whenever it can."
+			},
+			"vulnAir": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "air",
+				"val": -25,
+				"description": "{Air Vulnerability}\nTakes 25% more Air damage."
+			},
+			"h7SchoolImmunity_water": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h7SchoolImmunity",
+				"val": 0,
+				"addInfo": {
+					"school": "water"
+				},
+				"stacking": "h7SchoolImmunity_water",
+				"hidden": true,
+				"description": "~"
+			}
+		},
+		"graphics": {
+			"animation": "h7/WaterElemental/battle.json",
+			"map": "h7/WaterElemental/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h7/WaterElemental/map/atkL.png",
+			"mapAttackFromRight": "h7/WaterElemental/map/atkR.png",
+			"iconLarge": "h7/WaterElemental/iconLarge.png",
+			"iconSmall": "h7/WaterElemental/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"frameAngles": [
+					90,
+					60,
+					45,
+					30,
+					0,
+					-30,
+					-45,
+					-60,
+					-90
+				],
+				"offset": {
+					"upperX": 20,
+					"upperY": -56,
+					"middleX": 21,
+					"middleY": -49,
+					"lowerX": 2,
+					"lowerY": -44
+				},
+				"attackClimaxFrame": 6,
+				"projectile": "h7/projectiles/A_Projectile_Water_Bullet_s85.json"
+			}
+		},
+		"sound": {
+			"attack": "h7/creature_water_elemental_attack.ogg",
+			"shoot": "h7/creature_water_elemental_attack_ranged.ogg",
+			"defend": "h7/creature_water_elemental_defend.ogg",
+			"wince": "h7/creature_water_elemental_hit.ogg",
+			"killed": "h7/creature_water_elemental_die.ogg",
+			"move": "h7/creature_water_elemental_move.ogg"
+		},
+		"shots": 20,
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					2,
+					3,
+					4,
+					5,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_WALL_PENALTY",
+					"description": "{Siege Shooter}\nNo damage loss when shooting over walls"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_DISTANCE_PENALTY",
+					"description": "{Sharpshooter}\nNo penalty for long-range shots"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h7RuneStoneFortune": {
+		"name": {
+			"singular": "Fortune Stone",
+			"plural": "Fortune Stones"
+		},
+		"description": "A rune stone summoned by Rune of Fortune (H7). Rune stones cannot move, attack, be attacked or be affected by spells, do not count as combat troops, and vanish after the battle.",
+		"faction": "neutral",
+		"level": 1,
+		"special": true,
+		"cost": {
+			"gold": 0
+		},
+		"speed": 0,
+		"hitPoints": 1,
+		"attack": 0,
+		"defense": 0,
+		"damage": {
+			"min": 1,
+			"max": 1
+		},
+		"doubleWide": false,
+		"fightValue": 1,
+		"aiValue": 1,
+		"growth": 1,
+		"advMapAmount": {
+			"min": 1,
+			"max": 1
+		},
+		"abilities": {
+			"runeInfo": {
+				"type": "H7_RUNE_INFO_H7C",
+				"val": 0,
+				"icon": "h7/abilities/h7RuneStoneFortune",
+				"description": "{Fortune Stone}\nAura: +Luck allies, -Luck foes. Burst: shields"
+			},
+			"invincible": {
+				"type": "INVINCIBLE",
+				"hidden": true
+			},
+			"machine": {
+				"type": "SIEGE_WEAPON",
+				"hidden": true
+			},
+			"nonLiving": {
+				"type": "NON_LIVING",
+				"hidden": true
+			},
+			"mindImmune": {
+				"type": "MIND_IMMUNITY",
+				"hidden": true
+			},
+			"noLuck": {
+				"type": "NO_LUCK",
+				"hidden": true
+			},
+			"noMorale": {
+				"type": "NO_MORALE",
+				"hidden": true
+			},
+			"noCorpse": {
+				"type": "DISINTEGRATE",
+				"hidden": true
+			},
+			"cast_a": {
+				"type": "SPELLCASTER",
+				"subtype": "h7AbRuneFortune",
+				"val": 0,
+				"hidden": true
+			},
+			"cast_b": {
+				"type": "SPELLCASTER",
+				"subtype": "h7AbRuneRadiance",
+				"val": 0,
+				"hidden": true
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 2,
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h7/runeStone/Fortune/battle.json",
+			"map": "h7/runeStone/Fortune/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"iconLarge": "h7/runeStone/Fortune/iconLarge.png",
+			"iconSmall": "h7/runeStone/Fortune/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {}
+	},
+	"h7RuneStoneDestruction": {
+		"name": {
+			"singular": "Destruction Stone",
+			"plural": "Destruction Stones"
+		},
+		"description": "A rune stone summoned by Rune of Destruction (H7). Rune stones cannot move, attack, be attacked or be affected by spells, do not count as combat troops, and vanish after the battle.",
+		"faction": "neutral",
+		"level": 1,
+		"special": true,
+		"cost": {
+			"gold": 0
+		},
+		"speed": 0,
+		"hitPoints": 1,
+		"attack": 0,
+		"defense": 0,
+		"damage": {
+			"min": 1,
+			"max": 1
+		},
+		"doubleWide": false,
+		"fightValue": 1,
+		"aiValue": 1,
+		"growth": 1,
+		"advMapAmount": {
+			"min": 1,
+			"max": 1
+		},
+		"abilities": {
+			"runeInfo": {
+				"type": "H7_RUNE_INFO_H7C",
+				"val": 0,
+				"icon": "h7/abilities/h7RuneStoneDestruction",
+				"description": "{Destruction Stone}\nAura: allies +Attack. Burst: magic dmg to foes"
+			},
+			"invincible": {
+				"type": "INVINCIBLE",
+				"hidden": true
+			},
+			"machine": {
+				"type": "SIEGE_WEAPON",
+				"hidden": true
+			},
+			"nonLiving": {
+				"type": "NON_LIVING",
+				"hidden": true
+			},
+			"mindImmune": {
+				"type": "MIND_IMMUNITY",
+				"hidden": true
+			},
+			"noLuck": {
+				"type": "NO_LUCK",
+				"hidden": true
+			},
+			"noMorale": {
+				"type": "NO_MORALE",
+				"hidden": true
+			},
+			"noCorpse": {
+				"type": "DISINTEGRATE",
+				"hidden": true
+			},
+			"cast_a": {
+				"type": "SPELLCASTER",
+				"subtype": "h7AbRuneDestruction",
+				"val": 0,
+				"hidden": true
+			},
+			"cast_b": {
+				"type": "SPELLCASTER",
+				"subtype": "h7AbRuneRadiance",
+				"val": 0,
+				"hidden": true
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 2,
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h7/runeStone/Destruction/battle.json",
+			"map": "h7/runeStone/Destruction/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"iconLarge": "h7/runeStone/Destruction/iconLarge.png",
+			"iconSmall": "h7/runeStone/Destruction/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {}
+	},
+	"h7RuneStoneResilience": {
+		"name": {
+			"singular": "Resilience Stone",
+			"plural": "Resilience Stones"
+		},
+		"description": "A rune stone summoned by Rune of Resilience (H7). Rune stones cannot move, attack, be attacked or be affected by spells, do not count as combat troops, and vanish after the battle.",
+		"faction": "neutral",
+		"level": 1,
+		"special": true,
+		"cost": {
+			"gold": 0
+		},
+		"speed": 0,
+		"hitPoints": 1,
+		"attack": 0,
+		"defense": 0,
+		"damage": {
+			"min": 1,
+			"max": 1
+		},
+		"doubleWide": false,
+		"fightValue": 1,
+		"aiValue": 1,
+		"growth": 1,
+		"advMapAmount": {
+			"min": 1,
+			"max": 1
+		},
+		"abilities": {
+			"runeInfo": {
+				"type": "H7_RUNE_INFO_H7C",
+				"val": 0,
+				"icon": "h7/abilities/h7RuneStoneResilience",
+				"description": "{Resilience Stone}\nAura: allies +Defense. Burst: push units 1 hex"
+			},
+			"invincible": {
+				"type": "INVINCIBLE",
+				"hidden": true
+			},
+			"machine": {
+				"type": "SIEGE_WEAPON",
+				"hidden": true
+			},
+			"nonLiving": {
+				"type": "NON_LIVING",
+				"hidden": true
+			},
+			"mindImmune": {
+				"type": "MIND_IMMUNITY",
+				"hidden": true
+			},
+			"noLuck": {
+				"type": "NO_LUCK",
+				"hidden": true
+			},
+			"noMorale": {
+				"type": "NO_MORALE",
+				"hidden": true
+			},
+			"noCorpse": {
+				"type": "DISINTEGRATE",
+				"hidden": true
+			},
+			"cast_a": {
+				"type": "SPELLCASTER",
+				"subtype": "h7AbRuneResilience",
+				"val": 0,
+				"hidden": true
+			},
+			"cast_b": {
+				"type": "SPELLCASTER",
+				"subtype": "h7AbRuneRadiance",
+				"val": 0,
+				"hidden": true
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 2,
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h7/runeStone/Resilience/battle.json",
+			"map": "h7/runeStone/Resilience/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"iconLarge": "h7/runeStone/Resilience/iconLarge.png",
+			"iconSmall": "h7/runeStone/Resilience/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {}
+	},
+	"h7FireSentry": {
+		"name": {
+			"singular": "Fire Sentry",
+			"plural": "Fire Sentries"
+		},
+		"description": "A sentry summoned by Fire Sentry (H7). It cannot act or retaliate, and its count equals its remaining Hit Points; it lasts until the end of the 2nd round after it appears. At the end of each round it shoots fire at the two nearest enemy stacks, and after an enemy's first ranged attack each round, it shoots back at that shooter.",
+		"faction": "neutral",
+		"level": 1,
+		"special": true,
+		"cost": {
+			"gold": 0
+		},
+		"speed": 0,
+		"hitPoints": 1,
+		"attack": 0,
+		"defense": 10,
+		"damage": {
+			"min": 1,
+			"max": 1
+		},
+		"doubleWide": false,
+		"fightValue": 1,
+		"aiValue": 1,
+		"growth": 1,
+		"advMapAmount": {
+			"min": 1,
+			"max": 1
+		},
+		"abilities": {
+			"notActive": {
+				"type": "NOT_ACTIVE"
+			},
+			"noRetaliation": {
+				"type": "NO_RETALIATION"
+			},
+			"nonLiving": {
+				"type": "NON_LIVING"
+			},
+			"mindImmune": {
+				"type": "MIND_IMMUNITY"
+			},
+			"noMorale": {
+				"type": "NO_MORALE",
+				"hidden": true
+			},
+			"noLuck": {
+				"type": "NO_LUCK",
+				"hidden": true
+			},
+			"immuneToFire": {
+				"type": "SPELL_SCHOOL_IMMUNITY",
+				"subtype": "fire"
+			},
+			"noCorpse": {
+				"type": "DISINTEGRATE",
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h7/fireSentry/battle.json",
+			"map": "h7/fireSentry/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"iconLarge": "h7/fireSentry/iconLarge.png",
+			"iconSmall": "h7/fireSentry/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"wince": "h7/sf_burning_tick.ogg",
+			"killed": "h7/sf_fire_wall_tick.ogg"
+		}
+	},
+	"h7FreezingOrbUnit": {
+		"special": true,
+		"excludeFromRandomization": true,
+		"name": {
+			"singular": "Freezing Orb",
+			"plural": "Freezing Orbs"
+		},
+		"description": "An orb summoned by Freezing Orb (H7): it cannot act, and at the end of each round it moves next to an enemy and releases a frost aura.",
+		"faction": "neutral",
+		"level": 1,
+		"cost": {
+			"gold": 0
+		},
+		"speed": 0,
+		"hitPoints": 1600,
+		"attack": 0,
+		"defense": 10,
+		"damage": {
+			"min": 1,
+			"max": 1
+		},
+		"doubleWide": false,
+		"fightValue": 1,
+		"aiValue": 1,
+		"growth": 0,
+		"advMapAmount": {
+			"min": 1,
+			"max": 1
+		},
+		"abilities": {
+			"notActive": {
+				"type": "NOT_ACTIVE",
+				"hidden": true
+			},
+			"noRetaliation": {
+				"type": "NO_RETALIATION"
+			},
+			"warMachine": {
+				"type": "SIEGE_WEAPON",
+				"hidden": true
+			},
+			"mindImmunity": {
+				"type": "MIND_IMMUNITY"
+			},
+			"noMorale": {
+				"type": "NO_MORALE",
+				"hidden": true
+			},
+			"noLuck": {
+				"type": "NO_LUCK",
+				"hidden": true
+			},
+			"waterImmunity": {
+				"type": "SPELL_SCHOOL_IMMUNITY",
+				"subtype": "water"
+			},
+			"noCorpse": {
+				"type": "DISINTEGRATE",
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h7/h7FreezingOrbUnit/battle.json",
+			"iconLarge": "h7/h7FreezingOrbUnit/iconLarge.png",
+			"iconSmall": "h7/h7FreezingOrbUnit/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"killed": "h7/spell_freezing_orb_move_01.ogg",
+			"wince": "h7/spell_ice_strike_impact.ogg"
+		}
+	}
+}

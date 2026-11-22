@@ -1,0 +1,126 @@
+{
+ "basepath": "h7/fireSentry/battle/",
+ "sequences": [
+  {
+   "group": 0,
+   "frames": [
+    "stand_00.png",
+    "stand_01.png",
+    "stand_02.png",
+    "stand_03.png",
+    "stand_04.png",
+    "stand_05.png",
+    "stand_06.png",
+    "stand_07.png",
+    "stand_08.png",
+    "stand_09.png",
+    "stand_10.png",
+    "stand_11.png",
+    "stand_12.png",
+    "stand_13.png",
+    "stand_14.png",
+    "stand_15.png",
+    "stand_16.png",
+    "stand_17.png",
+    "stand_18.png",
+    "stand_19.png",
+    "stand_20.png",
+    "stand_21.png",
+    "stand_22.png",
+    "stand_23.png",
+    "stand_24.png"
+   ]
+  },
+  {
+   "group": 1,
+   "frames": [
+    "stand_00.png",
+    "stand_01.png",
+    "stand_02.png",
+    "stand_03.png",
+    "stand_04.png",
+    "stand_05.png",
+    "stand_06.png",
+    "stand_07.png",
+    "stand_08.png",
+    "stand_09.png",
+    "stand_10.png",
+    "stand_11.png",
+    "stand_12.png",
+    "stand_13.png",
+    "stand_14.png",
+    "stand_15.png",
+    "stand_16.png",
+    "stand_17.png",
+    "stand_18.png",
+    "stand_19.png",
+    "stand_20.png",
+    "stand_21.png",
+    "stand_22.png",
+    "stand_23.png",
+    "stand_24.png"
+   ]
+  },
+  {
+   "group": 2,
+   "frames": [
+    "stand_00.png",
+    "stand_01.png",
+    "stand_02.png",
+    "stand_03.png",
+    "stand_04.png",
+    "stand_05.png",
+    "stand_06.png",
+    "stand_07.png",
+    "stand_08.png",
+    "stand_09.png",
+    "stand_10.png",
+    "stand_11.png",
+    "stand_12.png",
+    "stand_13.png",
+    "stand_14.png",
+    "stand_15.png",
+    "stand_16.png",
+    "stand_17.png",
+    "stand_18.png",
+    "stand_19.png",
+    "stand_20.png",
+    "stand_21.png",
+    "stand_22.png",
+    "stand_23.png",
+    "stand_24.png"
+   ]
+  },
+  {
+   "group": 3,
+   "frames": [
+    "hit_00.png",
+    "hit_01.png",
+    "hit_02.png",
+    "hit_03.png"
+   ]
+  },
+  {
+   "group": 4,
+   "frames": [
+    "hit_00.png",
+    "hit_01.png",
+    "hit_02.png",
+    "hit_03.png"
+   ]
+  },
+  {
+   "group": 5,
+   "frames": [
+    "death_00.png",
+    "death_01.png",
+    "death_02.png",
+    "death_03.png",
+    "death_04.png",
+    "death_05.png",
+    "death_06.png",
+    "death_07.png"
+   ]
+  }
+ ]
+}

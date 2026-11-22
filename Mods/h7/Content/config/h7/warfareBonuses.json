@@ -1,0 +1,28 @@
+{
+	"H7_WARFARE_MARK_H7C": {
+		"hidden": true,
+		"creatureNature": false
+	},
+	"H7_WARFARE_LV_H7C": {
+		"creatureNature": false,
+		"graphics": {
+			"icon": "h7/abilities/h7wfLevel"
+		},
+		"description": "{Warfare Level}\nLevel ${val} (Artillery/Engineering/First Aid)"
+	},
+	"H7_LOG_W_H7C": {
+		"hidden": true,
+		"creatureNature": false,
+		"valueDescriptions": {
+			"1": "%s swapped in an H7 Warfare Unit.",
+			"2": "No room next to %s for the H7 Warfare Unit; the standard war machine is kept.",
+			"3": "%s is tormented by Horrid Visions and takes %d Dark damage.",
+			"4": "Renewal heals %s for %d HP.",
+			"5": "Cloak of Death backfires on %s, dealing %d Dark damage.",
+			"6": "Cloak of Death explodes; %s takes %d Dark damage.",
+			"7": "Dark Touch: %s takes %d Dark damage.",
+			"8": "Rune Healing heals %s for %d HP.",
+			"9": "%s hits a marked enemy and quickly reloads for another shot."
+		}
+	}
+}
