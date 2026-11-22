@@ -1,0 +1,4912 @@
+{
+	"h5MagicArrow": {
+		"type": "combat",
+		// Magic Arrow
+		"name": "Magic Arrow (H5)",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": true,
+			"water": false
+		},
+		"level": 1,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"flags": {
+			"special": true,
+			"damage": true,
+			"negative": true
+		},
+		"graphics": {
+			"iconBook": "h5/spells/h5MagicArrow/Book",
+			"iconScroll": "h5/spells/h5MagicArrow/Scroll",
+			"iconScenarioBonus": "h5/spells/h5MagicArrow/Scenario",
+			"iconEffect": "h5/spells/h5MagicArrow/Effect"
+		},
+		"animation": {
+			"hit": [
+				"h5/fx/Spells_MagicArrowHit"
+			],
+			"projectile": [
+				{
+					"minimumAngle": 0.0,
+					"defName": "h5/fx/Spells_MagicArrowCharge__proj0"
+				},
+				{
+					"minimumAngle": 0.6,
+					"defName": "h5/fx/Spells_MagicArrowCharge__proj1"
+				},
+				{
+					"minimumAngle": 0.9,
+					"defName": "h5/fx/Spells_MagicArrowCharge__proj2"
+				},
+				{
+					"minimumAngle": 1.2,
+					"defName": "h5/fx/Spells_MagicArrowCharge__proj3"
+				},
+				{
+					"minimumAngle": 1.5,
+					"defName": "h5/fx/Spells_MagicArrowCharge__proj4"
+				},
+				{
+					"minimumAngle": 1.9,
+					"defName": "h5/fx/Spells_MagicArrowCharge__proj5"
+				},
+				{
+					"minimumAngle": 2.4,
+					"defName": "h5/fx/Spells_MagicArrowCharge__proj6"
+				}
+			]
+		},
+		"sounds": {
+			"cast": "MAGICBLT"
+		},
+		"targetType": "CREATURE",
+		"levels": {
+			"base": {
+				"range": "0",
+				"targetModifier": {
+					"smart": true
+				},
+				"battleEffects": {
+					"directDamage": {
+						"type": "h5Damage",
+						"base": [
+							48.0,
+							56.0,
+							64.0,
+							72.0
+						],
+						"perPower": [
+							8.0,
+							8.0,
+							8.0,
+							8.0
+						]
+					}
+				}
+			},
+			"none": {
+				"cost": 4,
+				"power": 1000,
+				"description": "{Magic Arrow (H5)}\n\nFires several magic missiles, dealing non-physical damage to the selected enemy creature.\n\nSpell damage: 48 + 8 x Spell Power"
+			},
+			"basic": {
+				"cost": 4,
+				"power": 1000,
+				"description": "{Basic Magic Arrow (H5)}\n\nFires several magic missiles, dealing non-physical damage to the selected enemy creature.\n\nSpell damage: 56 + 8 x Spell Power"
+			},
+			"advanced": {
+				"cost": 4,
+				"power": 1000,
+				"description": "{Advanced Magic Arrow (H5)}\n\nFires several magic missiles, dealing non-physical damage to the selected enemy creature.\n\nSpell damage: 64 + 8 x Spell Power"
+			},
+			"expert": {
+				"cost": 4,
+				"power": 1000,
+				"description": "{Expert Magic Arrow (H5)}\n\nFires several magic missiles, dealing non-physical damage to the selected enemy creature.\n\nSpell damage: 72 + 8 x Spell Power"
+			}
+		}
+	},
+	"h5MagicFist": {
+		"type": "combat",
+		// MagicFist
+		"name": "Fist of Wrath (H5)",
+		"school": {
+			"air": true,
+			"earth": true,
+			"fire": true,
+			"water": true
+		},
+		"level": 1,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"flags": {
+			"special": true,
+			"damage": true,
+			"negative": true,
+			"nonMagical": true
+		},
+		"graphics": {
+			"iconBook": "h5/spells/h5MagicFist/Book",
+			"iconScroll": "h5/spells/h5MagicFist/Scroll",
+			"iconScenarioBonus": "h5/spells/h5MagicFist/Scenario",
+			"iconEffect": "h5/spells/h5MagicFist/Effect"
+		},
+		"animation": {
+			"affect": [
+				"h5/fx/Spells_MagicFist"
+			]
+		},
+		"sounds": {
+			"cast": "LIGHTBLT"
+		},
+		"targetType": "CREATURE",
+		"levels": {
+			"base": {
+				"range": "0",
+				"targetModifier": {
+					"smart": true
+				},
+				"battleEffects": {
+					"directDamage": {
+						"type": "h5Damage",
+						"base": [
+							20.0,
+							30.0,
+							40.0,
+							50.0
+						],
+						"perPower": [
+							4.0,
+							6.0,
+							8.0,
+							10.0
+						],
+						"ignoreImmunity": true
+					}
+				}
+			},
+			"none": {
+				"cost": 5,
+				"power": 1000,
+				"description": "{Fist of Wrath (H5)}\n\nSummons a magic fist that deals non-elemental physical damage to the selected enemy creature. This spell breaks through other magic immunities and protections.\n\nSpell damage: 20 + 4 x Spell Power"
+			},
+			"basic": {
+				"cost": 5,
+				"power": 1000,
+				"description": "{Basic Fist of Wrath (H5)}\n\nSummons a magic fist that deals non-elemental physical damage to the selected enemy creature. This spell breaks through other magic immunities and protections.\n\nSpell damage: 30 + 6 x Spell Power"
+			},
+			"advanced": {
+				"cost": 5,
+				"power": 1000,
+				"description": "{Advanced Fist of Wrath (H5)}\n\nSummons a magic fist that deals non-elemental physical damage to the selected enemy creature. This spell breaks through other magic immunities and protections.\n\nSpell damage: 40 + 8 x Spell Power"
+			},
+			"expert": {
+				"cost": 5,
+				"power": 1000,
+				"description": "{Expert Fist of Wrath (H5)}\n\nSummons a magic fist that deals non-elemental physical damage to the selected enemy creature. This spell breaks through other magic immunities and protections.\n\nSpell damage: 50 + 10 x Spell Power"
+			}
+		}
+	},
+	"h5LightningBolt": {
+		"type": "combat",
+		// Lightning Bolt
+		"name": "Lightning Bolt (H5)",
+		"school": {
+			"air": true,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 2,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"flags": {
+			"special": true,
+			"damage": true,
+			"negative": true
+		},
+		"graphics": {
+			"iconBook": "h5/spells/h5LightningBolt/Book",
+			"iconScroll": "h5/spells/h5LightningBolt/Scroll",
+			"iconScenarioBonus": "h5/spells/h5LightningBolt/Scenario",
+			"iconEffect": "h5/spells/h5LightningBolt/Effect"
+		},
+		"animation": {
+			"affect": [
+				{
+					"effectName": "h5light_Spells_LightningBolt"
+				},
+				"h5/fx/Spells_LightningBolt"
+			]
+		},
+		"sounds": {
+			"cast": "LIGHTBLT"
+		},
+		"targetType": "CREATURE",
+		"levels": {
+			"base": {
+				"range": "0",
+				"targetModifier": {
+					"smart": true
+				},
+				"battleEffects": {
+					"directDamage": {
+						"type": "h5Damage",
+						"base": [
+							11.0,
+							14.0,
+							17.0,
+							20.0
+						],
+						"perPower": [
+							11.0,
+							14.0,
+							17.0,
+							20.0
+						]
+					}
+				}
+			},
+			"none": {
+				"cost": 5,
+				"power": 1000,
+				"description": "{Lightning Bolt (H5)}\n\nDeals lightning damage to the selected enemy.\n\nSpell damage: 11 + 11 x Spell Power"
+			},
+			"basic": {
+				"cost": 5,
+				"power": 1000,
+				"description": "{Basic Lightning Bolt (H5)}\n\nDeals lightning damage to the selected enemy.\n\nSpell damage: 14 + 14 x Spell Power"
+			},
+			"advanced": {
+				"cost": 5,
+				"power": 1000,
+				"description": "{Advanced Lightning Bolt (H5)}\n\nDeals lightning damage to the selected enemy.\n\nSpell damage: 17 + 17 x Spell Power"
+			},
+			"expert": {
+				"cost": 5,
+				"power": 1000,
+				"description": "{Expert Lightning Bolt (H5)}\n\nDeals lightning damage to the selected enemy.\n\nSpell damage: 20 + 20 x Spell Power"
+			}
+		}
+	},
+	"h5IceBolt": {
+		"type": "combat",
+		// Ice Bolt
+		"name": "Ice Bolt (H5)",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": true
+		},
+		"level": 2,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"flags": {
+			"special": true,
+			"damage": true,
+			"negative": true
+		},
+		"graphics": {
+			"iconBook": "h5/spells/h5IceBolt/Book",
+			"iconScroll": "h5/spells/h5IceBolt/Scroll",
+			"iconScenarioBonus": "h5/spells/h5IceBolt/Scenario",
+			"iconEffect": "h5/spells/h5IceBolt/Effect"
+		},
+		"animation": {
+			"affect": [
+				{
+					"effectName": "h5light_Spells_IceBolt"
+				},
+				"h5/fx/Spells_IceBolt"
+			]
+		},
+		"sounds": {
+			"cast": "ICERAY"
+		},
+		"targetType": "CREATURE",
+		"levels": {
+			"base": {
+				"range": "0",
+				"targetModifier": {
+					"smart": true
+				},
+				"battleEffects": {
+					"directDamage": {
+						"type": "h5Damage",
+						"base": [
+							60.0,
+							72.0,
+							84.0,
+							96.0
+						],
+						"perPower": [
+							12.0,
+							12.0,
+							12.0,
+							12.0
+						]
+					}
+				}
+			},
+			"none": {
+				"cost": 6,
+				"power": 1000,
+				"description": "{Ice Bolt (H5)}\n\nDeals cold damage to the selected enemy.\n\nSpell damage: 60 + 12 x Spell Power"
+			},
+			"basic": {
+				"cost": 6,
+				"power": 1000,
+				"description": "{Basic Ice Bolt (H5)}\n\nDeals cold damage to the selected enemy.\n\nSpell damage: 72 + 12 x Spell Power"
+			},
+			"advanced": {
+				"cost": 6,
+				"power": 1000,
+				"description": "{Advanced Ice Bolt (H5)}\n\nDeals cold damage to the selected enemy.\n\nSpell damage: 84 + 12 x Spell Power"
+			},
+			"expert": {
+				"cost": 6,
+				"power": 1000,
+				"description": "{Expert Ice Bolt (H5)}\n\nDeals cold damage to the selected enemy.\n\nSpell damage: 96 + 12 x Spell Power"
+			}
+		}
+	},
+	"h5Fireball": {
+		"type": "combat",
+		// Fireball
+		"name": "Fireball (H5)",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": true,
+			"water": false
+		},
+		"level": 3,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"flags": {
+			"special": true,
+			"damage": true,
+			"negative": true
+		},
+		"graphics": {
+			"iconBook": "h5/spells/h5Fireball/Book",
+			"iconScroll": "h5/spells/h5Fireball/Scroll",
+			"iconScenarioBonus": "h5/spells/h5Fireball/Scenario",
+			"iconEffect": "h5/spells/h5Fireball/Effect"
+		},
+		"animation": {
+			"hit": [
+				"h5/fx/Spells_FireBallHit"
+			],
+			"projectile": [
+				{
+					"minimumAngle": 0.0,
+					"defName": "h5/fx/Spells_Fireball__proj0"
+				},
+				{
+					"minimumAngle": 0.6,
+					"defName": "h5/fx/Spells_Fireball__proj1"
+				},
+				{
+					"minimumAngle": 0.9,
+					"defName": "h5/fx/Spells_Fireball__proj2"
+				},
+				{
+					"minimumAngle": 1.2,
+					"defName": "h5/fx/Spells_Fireball__proj3"
+				},
+				{
+					"minimumAngle": 1.5,
+					"defName": "h5/fx/Spells_Fireball__proj4"
+				},
+				{
+					"minimumAngle": 1.9,
+					"defName": "h5/fx/Spells_Fireball__proj5"
+				},
+				{
+					"minimumAngle": 2.4,
+					"defName": "h5/fx/Spells_Fireball__proj6"
+				}
+			]
+		},
+		"sounds": {
+			"cast": "SPONTCOMB"
+		},
+		"targetType": "LOCATION",
+		"levels": {
+			"base": {
+				"range": "0,1",
+				"targetModifier": {
+					"smart": false
+				},
+				"battleEffects": {
+					"directDamage": {
+						"type": "h5Damage",
+						"base": [
+							11.0,
+							14.0,
+							17.0,
+							20.0
+						],
+						"perPower": [
+							11.0,
+							14.0,
+							17.0,
+							20.0
+						]
+					}
+				}
+			},
+			"none": {
+				"cost": 10,
+				"power": 1000,
+				"description": "{Fireball (H5)}\n\nDeals Fire damage to all units in the target area.\n\nSpell damage: 11 + 11 x Spell Power"
+			},
+			"basic": {
+				"cost": 10,
+				"power": 1000,
+				"description": "{Basic Fireball (H5)}\n\nDeals Fire damage to all units in the target area.\n\nSpell damage: 14 + 14 x Spell Power"
+			},
+			"advanced": {
+				"cost": 10,
+				"power": 1000,
+				"description": "{Advanced Fireball (H5)}\n\nDeals Fire damage to all units in the target area.\n\nSpell damage: 17 + 17 x Spell Power"
+			},
+			"expert": {
+				"cost": 10,
+				"power": 1000,
+				"description": "{Expert Fireball (H5)}\n\nDeals Fire damage to all units in the target area.\n\nSpell damage: 20 + 20 x Spell Power"
+			}
+		}
+	},
+	"h5FrostRing": {
+		"type": "combat",
+		// Frost Ring
+		"name": "Circle of Winter (H5)",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": true
+		},
+		"level": 3,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"flags": {
+			"special": true,
+			"damage": true,
+			"negative": true
+		},
+		"graphics": {
+			"iconBook": "h5/spells/h5FrostRing/Book",
+			"iconScroll": "h5/spells/h5FrostRing/Scroll",
+			"iconScenarioBonus": "h5/spells/h5FrostRing/Scenario",
+			"iconEffect": "h5/spells/h5FrostRing/Effect"
+		},
+		"animation": {
+			"hit": [
+				"h5/fx/Spells_FrostRing"
+			]
+		},
+		"sounds": {
+			"cast": "FROSTING"
+		},
+		"targetType": "LOCATION",
+		"levels": {
+			"base": {
+				"range": "1",
+				"targetModifier": {
+					"smart": false
+				},
+				"battleEffects": {
+					"directDamage": {
+						"type": "h5Damage",
+						"base": [
+							60.0,
+							72.0,
+							84.0,
+							96.0
+						],
+						"perPower": [
+							12.0,
+							12.0,
+							12.0,
+							12.0
+						]
+					}
+				}
+			},
+			"none": {
+				"cost": 9,
+				"power": 1000,
+				"description": "{Circle of Winter (H5)}\n\nDeals cold damage to all units surrounding the target point.\n\nSpell damage: 60 + 12 x Spell Power"
+			},
+			"basic": {
+				"cost": 9,
+				"power": 1000,
+				"description": "{Basic Circle of Winter (H5)}\n\nDeals cold damage to all units surrounding the target point.\n\nSpell damage: 72 + 12 x Spell Power"
+			},
+			"advanced": {
+				"cost": 9,
+				"power": 1000,
+				"description": "{Advanced Circle of Winter (H5)}\n\nDeals cold damage to all units surrounding the target point.\n\nSpell damage: 84 + 12 x Spell Power"
+			},
+			"expert": {
+				"cost": 9,
+				"power": 1000,
+				"description": "{Expert Circle of Winter (H5)}\n\nDeals cold damage to all units surrounding the target point.\n\nSpell damage: 96 + 12 x Spell Power"
+			}
+		}
+	},
+	"h5ChainLightning": {
+		"type": "combat",
+		// Chain Lightning Hit
+		"name": "Chain Lightning (H5)",
+		"school": {
+			"air": true,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 4,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"flags": {
+			"special": true,
+			"damage": true,
+			"negative": true
+		},
+		"graphics": {
+			"iconBook": "h5/spells/h5ChainLightning/Book",
+			"iconScroll": "h5/spells/h5ChainLightning/Scroll",
+			"iconScenarioBonus": "h5/spells/h5ChainLightning/Scenario",
+			"iconEffect": "h5/spells/h5ChainLightning/Effect"
+		},
+		"animation": {
+			"affect": [
+				{
+					"effectName": "h5light_Spells_ChainLightningHit"
+				},
+				"h5/fx/Spells_ChainLightningHit"
+			],
+			"ray": {
+				"jaggedness": 0.2,
+				"hopDelay": 50,
+				"width": 16,
+				"colors": [
+					{
+						"start": [
+							100,
+							140,
+							255,
+							96
+						],
+						"end": [
+							100,
+							140,
+							255,
+							48
+						]
+					},
+					{
+						"start": [
+							255,
+							255,
+							255,
+							255
+						],
+						"end": [
+							255,
+							255,
+							255,
+							224
+						]
+					}
+				]
+			}
+		},
+		"sounds": {
+			"cast": "CHAINLTE"
+		},
+		"targetType": "CREATURE",
+		"levels": {
+			"base": {
+				"range": "0",
+				"targetModifier": {
+					"smart": false
+				},
+				"battleEffects": {
+					"directDamage": {
+						"type": "h5Damage",
+						"base": [
+							10.0,
+							15.0,
+							20.0,
+							25.0
+						],
+						"perPower": [
+							10.0,
+							15.0,
+							20.0,
+							25.0
+						],
+						"chainLength": 4,
+						"chainFactor": 0.5
+					}
+				}
+			},
+			"none": {
+				"cost": 16,
+				"power": 1000,
+				"description": "{Chain Lightning (H5)}\n\nDeals heavy lightning damage to the target creature and several nearby creatures (up to 4 units). Starting from the first creature, each next creature in the chain takes half the damage of the previous one (this spell may harm friendly creatures).\n\nSpell damage: 10 + 10 x Spell Power"
+			},
+			"basic": {
+				"cost": 16,
+				"power": 1000,
+				"description": "{Basic Chain Lightning (H5)}\n\nDeals heavy lightning damage to the target creature and several nearby creatures (up to 4 units). Starting from the first creature, each next creature in the chain takes half the damage of the previous one (this spell may harm friendly creatures).\n\nSpell damage: 15 + 15 x Spell Power"
+			},
+			"advanced": {
+				"cost": 16,
+				"power": 1000,
+				"description": "{Advanced Chain Lightning (H5)}\n\nDeals heavy lightning damage to the target creature and several nearby creatures (up to 4 units). Starting from the first creature, each next creature in the chain takes half the damage of the previous one (this spell may harm friendly creatures).\n\nSpell damage: 20 + 20 x Spell Power"
+			},
+			"expert": {
+				"cost": 16,
+				"power": 1000,
+				"description": "{Expert Chain Lightning (H5)}\n\nDeals heavy lightning damage to the target creature and several nearby creatures (up to 4 units). Starting from the first creature, each next creature in the chain takes half the damage of the previous one (this spell may harm friendly creatures).\n\nSpell damage: 25 + 25 x Spell Power"
+			}
+		}
+	},
+	"h5MeteorShower": {
+		"type": "combat",
+		// Meteor Shower
+		"name": "Meteor Shower (H5)",
+		"school": {
+			"air": false,
+			"earth": true,
+			"fire": false,
+			"water": false
+		},
+		"level": 4,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"flags": {
+			"special": true,
+			"damage": true,
+			"negative": true
+		},
+		"graphics": {
+			"iconBook": "h5/spells/h5MeteorShower/Book",
+			"iconScroll": "h5/spells/h5MeteorShower/Scroll",
+			"iconScenarioBonus": "h5/spells/h5MeteorShower/Scenario",
+			"iconEffect": "h5/spells/h5MeteorShower/Effect"
+		},
+		"animation": {
+			"hit": [
+				"h5/fx/Spells_MeteorShower"
+			]
+		},
+		"sounds": {
+			"cast": "METEOR"
+		},
+		"targetType": "LOCATION",
+		"levels": {
+			"base": {
+				"range": "0,1",
+				"targetModifier": {
+					"smart": false
+				},
+				"battleEffects": {
+					"directDamage": {
+						"type": "h5Damage",
+						"base": [
+							9.0,
+							12.0,
+							15.0,
+							20.0
+						],
+						"perPower": [
+							9.0,
+							12.0,
+							15.0,
+							20.0
+						]
+					}
+				}
+			},
+			"none": {
+				"cost": 19,
+				"power": 1000,
+				"description": "{Meteor Shower (H5)}\n\nDeals heavy Earth damage to all creatures in the target area.\n\nSpell damage: 9 + 9 x Spell Power"
+			},
+			"basic": {
+				"cost": 19,
+				"power": 1000,
+				"description": "{Basic Meteor Shower (H5)}\n\nDeals heavy Earth damage to all creatures in the target area.\n\nSpell damage: 12 + 12 x Spell Power"
+			},
+			"advanced": {
+				"cost": 19,
+				"power": 1000,
+				"description": "{Advanced Meteor Shower (H5)}\n\nDeals heavy Earth damage to all creatures in the target area.\n\nSpell damage: 15 + 15 x Spell Power"
+			},
+			"expert": {
+				"cost": 19,
+				"power": 1000,
+				"description": "{Expert Meteor Shower (H5)}\n\nDeals heavy Earth damage to all creatures in the target area.\n\nSpell damage: 20 + 20 x Spell Power"
+			}
+		}
+	},
+	"h5Implosion": {
+		"type": "combat",
+		// Implosion
+		"name": "Implosion (H5)",
+		"school": {
+			"air": false,
+			"earth": true,
+			"fire": false,
+			"water": false
+		},
+		"level": 5,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"flags": {
+			"special": true,
+			"damage": true,
+			"negative": true
+		},
+		"graphics": {
+			"iconBook": "h5/spells/h5Implosion/Book",
+			"iconScroll": "h5/spells/h5Implosion/Scroll",
+			"iconScenarioBonus": "h5/spells/h5Implosion/Scenario",
+			"iconEffect": "h5/spells/h5Implosion/Effect"
+		},
+		"animation": {
+			"affect": [
+				{
+					"effectName": "h5light_Spells_Implosion"
+				},
+				"h5/fx/Spells_Implosion"
+			]
+		},
+		"sounds": {
+			"cast": "DECAY"
+		},
+		"targetType": "CREATURE",
+		"levels": {
+			"base": {
+				"range": "0",
+				"targetModifier": {
+					"smart": true
+				},
+				"battleEffects": {
+					"directDamage": {
+						"type": "h5Damage",
+						"base": [
+							12.0,
+							17.0,
+							20.0,
+							40.0
+						],
+						"perPower": [
+							12.0,
+							17.0,
+							20.0,
+							40.0
+						]
+					}
+				}
+			},
+			"none": {
+				"cost": 18,
+				"power": 1000,
+				"description": "{Implosion (H5)}\n\nDeals Earth damage to a single enemy target.\n\nSpell damage: 12 + 12 x Spell Power"
+			},
+			"basic": {
+				"cost": 18,
+				"power": 1000,
+				"description": "{Basic Implosion (H5)}\n\nDeals Earth damage to a single enemy target.\n\nSpell damage: 17 + 17 x Spell Power"
+			},
+			"advanced": {
+				"cost": 18,
+				"power": 1000,
+				"description": "{Advanced Implosion (H5)}\n\nDeals Earth damage to a single enemy target.\n\nSpell damage: 20 + 20 x Spell Power"
+			},
+			"expert": {
+				"cost": 18,
+				"power": 1000,
+				"description": "{Expert Implosion (H5)}\n\nDeals Earth damage to a single enemy target.\n\nSpell damage: 40 + 40 x Spell Power"
+			}
+		}
+	},
+	"h5Armageddon": {
+		"type": "combat",
+		// Armageddon
+		"name": "Armageddon (H5)",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": true,
+			"water": false
+		},
+		"level": 5,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"flags": {
+			"special": true,
+			"damage": true,
+			"negative": true
+		},
+		"graphics": {
+			"iconBook": "h5/spells/h5Armageddon/Book",
+			"iconScroll": "h5/spells/h5Armageddon/Scroll",
+			"iconScenarioBonus": "h5/spells/h5Armageddon/Scenario",
+			"iconEffect": "h5/spells/h5Armageddon/Effect"
+		},
+		"animation": {
+			"hit": [
+				"h5/fx/Spells_Armageddon__field"
+			],
+			"affect": [
+				{
+					"effectName": "h5light_Spells_Armageddon"
+				},
+				"h5/fx/Spells_HolyWord_hit"
+			]
+		},
+		"sounds": {
+			"cast": "ARMGEDN"
+		},
+		"targetType": "CREATURE",
+		"levels": {
+			"base": {
+				"range": "X",
+				"targetModifier": {
+					"smart": false
+				},
+				"battleEffects": {
+					"directDamage": {
+						"type": "h5Damage",
+						"base": [
+							9.0,
+							12.0,
+							15.0,
+							30.0
+						],
+						"perPower": [
+							9.0,
+							12.0,
+							15.0,
+							30.0
+						]
+					}
+				}
+			},
+			"none": {
+				"cost": 20,
+				"power": 1000,
+				"description": "{Armageddon (H5)}\n\nDeals heavy damage to all creatures and war machines on the battlefield.\n\nSpell damage: 9 + 9 x Spell Power"
+			},
+			"basic": {
+				"cost": 20,
+				"power": 1000,
+				"description": "{Basic Armageddon (H5)}\n\nDeals heavy damage to all creatures and war machines on the battlefield.\n\nSpell damage: 12 + 12 x Spell Power"
+			},
+			"advanced": {
+				"cost": 20,
+				"power": 1000,
+				"description": "{Advanced Armageddon (H5)}\n\nDeals heavy damage to all creatures and war machines on the battlefield.\n\nSpell damage: 15 + 15 x Spell Power"
+			},
+			"expert": {
+				"cost": 20,
+				"power": 1000,
+				"description": "{Expert Armageddon (H5)}\n\nDeals heavy damage to all creatures and war machines on the battlefield.\n\nSpell damage: 30 + 30 x Spell Power"
+			}
+		}
+	},
+	"h5Curse": {
+		"type": "combat",
+		// Curse
+		"name": "Weakness (H5)",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false,
+			"02darkSchool": true
+		},
+		"level": 1,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"flags": {
+			"special": true,
+			"negative": true
+		},
+		"graphics": {
+			"iconBook": "h5/spells/h5Curse/Book",
+			"iconScroll": "h5/spells/h5Curse/Scroll",
+			"iconScenarioBonus": "h5/spells/h5Curse/Scenario",
+			"iconEffect": "h5/spells/h5Curse/Effect"
+		},
+		"animation": {
+			"affect": [
+				"h5/fx/Spells_Curse"
+			]
+		},
+		"sounds": {
+			"cast": "CURSE"
+		},
+		"targetType": "CREATURE",
+		"counters": {
+			"h5Bless": true,
+			"bless": true
+		},
+		"levels": {
+			"base": {
+				"range": "0",
+				"targetModifier": {
+					"smart": true
+				},
+				"battleEffects": {
+					"timed": {
+						"type": "h5Timed",
+						"bonus": {
+							"h5Curse": {
+								"type": "H5_CURSE_H5C",
+								"duration": "N_TURNS",
+								"val": 0
+							}
+						},
+						"durBase": [
+							0.0,
+							0.0,
+							0.0,
+							0.0
+						],
+						"durPer": [
+							1.0,
+							1.0,
+							1.0,
+							1.0
+						],
+						"values": {
+							"h5Curse": {
+								"base": [
+									50,
+									65,
+									80,
+									100
+								],
+								"per": [
+									0,
+									0,
+									0,
+									0
+								],
+								"scale": 1
+							}
+						}
+					}
+				}
+			},
+			"none": {
+				"cost": 4,
+				"power": 1000,
+				"description": "{Weakness (H5)}\n\nReduces the damage of the selected enemy unit. Duration depends on Spell Power.\n\nEach attack of the stack deals damage between min and “max - 50% x (max - min)”, lasts 1 x Spell Power rounds (rounded, at least 1)"
+			},
+			"basic": {
+				"cost": 4,
+				"power": 1000,
+				"description": "{Basic Weakness (H5)}\n\nReduces the damage of the selected enemy unit. Duration depends on Spell Power.\n\nEach attack of the stack deals damage between min and “max - 65% x (max - min)”, lasts 1 x Spell Power rounds (rounded, at least 1)"
+			},
+			"advanced": {
+				"cost": 4,
+				"power": 1000,
+				"description": "{Advanced Weakness (H5)}\n\nReduces the damage of the selected enemy unit. Duration depends on Spell Power.\n\nEach attack of the stack deals damage between min and “max - 80% x (max - min)”, lasts 1 x Spell Power rounds (rounded, at least 1)"
+			},
+			"expert": {
+				"cost": 8,
+				"power": 1000,
+				"range": "X",
+				"targetModifier": {
+					"smart": true
+				},
+				"description": "{Expert Weakness (H5)}\n\nReduces the damage of the selected enemy unit. Duration depends on Spell Power.\n\nEach attack of the stack deals damage between min and “max - 100% x (max - min)”, lasts 1 x Spell Power rounds (rounded, at least 1)\nExpert: affects all enemy stacks."
+			}
+		}
+	},
+	"h5Slow": {
+		"type": "combat",
+		// Slow
+		"name": "Slow (H5)",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false,
+			"02darkSchool": true
+		},
+		"level": 1,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"flags": {
+			"special": true,
+			"negative": true
+		},
+		"graphics": {
+			"iconBook": "h5/spells/h5Slow/Book",
+			"iconScroll": "h5/spells/h5Slow/Scroll",
+			"iconScenarioBonus": "h5/spells/h5Slow/Scenario",
+			"iconEffect": "h5/spells/h5Slow/Effect"
+		},
+		"animation": {
+			"affect": [
+				"h5/fx/Spells_Slow"
+			]
+		},
+		"sounds": {
+			"cast": "MUCKMIRE"
+		},
+		"targetType": "CREATURE",
+		"counters": {
+			"h5Haste": true,
+			"haste": true
+		},
+		"levels": {
+			"base": {
+				"range": "0",
+				"targetModifier": {
+					"smart": true
+				},
+				"battleEffects": {
+					"timed": {
+						"type": "h5Timed",
+						"bonus": {
+							"h5Slow": {
+								"type": "STACKS_SPEED",
+								"duration": "N_TURNS",
+								"valueType": "PERCENT_TO_ALL",
+								"val": 0
+							}
+						},
+						"durBase": [
+							0.0,
+							0.0,
+							0.0,
+							0.0
+						],
+						"durPer": [
+							1.0,
+							1.0,
+							1.0,
+							1.0
+						],
+						"values": {
+							"h5Slow": {
+								"base": [
+									0.25,
+									0.3,
+									0.35,
+									0.4
+								],
+								"per": [
+									0.0,
+									0.0,
+									0.0,
+									0.0
+								],
+								"scale": -100
+							}
+						}
+					}
+				}
+			},
+			"none": {
+				"cost": 4,
+				"power": 1000,
+				"description": "{Slow (H5)}\n\nReduces the number of actions the selected enemy takes in battle.\n\nSpeed -25%, lasts 1 x Spell Power rounds (rounded, at least 1)"
+			},
+			"basic": {
+				"cost": 4,
+				"power": 1000,
+				"description": "{Basic Slow (H5)}\n\nReduces the number of actions the selected enemy takes in battle.\n\nSpeed -30%, lasts 1 x Spell Power rounds (rounded, at least 1)"
+			},
+			"advanced": {
+				"cost": 4,
+				"power": 1000,
+				"description": "{Advanced Slow (H5)}\n\nReduces the number of actions the selected enemy takes in battle.\n\nSpeed -35%, lasts 1 x Spell Power rounds (rounded, at least 1)"
+			},
+			"expert": {
+				"cost": 8,
+				"power": 1000,
+				"range": "X",
+				"targetModifier": {
+					"smart": true
+				},
+				"description": "{Expert Slow (H5)}\n\nReduces the number of actions the selected enemy takes in battle.\n\nSpeed -40%, lasts 1 x Spell Power rounds (rounded, at least 1)\nExpert: affects all enemy stacks."
+			}
+		}
+	},
+	"h5DisruptingRay": {
+		"type": "combat",
+		// Disrupting Ray
+		"name": "Disrupting Ray (H5)",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false,
+			"02darkSchool": true
+		},
+		"level": 2,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"flags": {
+			"special": true,
+			"negative": true,
+			"persistent": true
+		},
+		"graphics": {
+			"iconBook": "h5/spells/h5DisruptingRay/Book",
+			"iconScroll": "h5/spells/h5DisruptingRay/Scroll",
+			"iconScenarioBonus": "h5/spells/h5DisruptingRay/Scenario",
+			"iconEffect": "h5/spells/h5DisruptingRay/Effect"
+		},
+		"animation": {
+			"affect": [
+				{
+					"effectName": "h5light_Spells_DisruptingRay"
+				},
+				"h5/fx/Spells_DisruptingRay"
+			]
+		},
+		"sounds": {
+			"cast": "DISRUPTR"
+		},
+		"targetType": "CREATURE",
+		"levels": {
+			"base": {
+				"range": "0",
+				"targetModifier": {
+					"smart": true
+				},
+				"battleEffects": {
+					"timed": {
+						"type": "h5Timed",
+						"bonus": {
+							"primarySkill": {
+								"type": "PRIMARY_SKILL",
+								"duration": "PERMANENT",
+								"subtype": "defence",
+								"val": 0
+							}
+						},
+						"cumulative": true,
+						"values": {
+							"primarySkill": {
+								"base": [
+									3.0,
+									4.0,
+									5.0,
+									6.0
+								],
+								"per": [
+									0.0,
+									0.0,
+									0.0,
+									0.0
+								],
+								"scale": -1
+							}
+						}
+					}
+				}
+			},
+			"none": {
+				"cost": 5,
+				"power": 1000,
+				"description": "{Disrupting Ray (H5)}\n\nDestroys the enemy's armor, lowering the target's Defense. Can be used repeatedly on the same target, but cannot reduce its Defense below 0.\n\nDefense -3 (stacks, cannot be dispelled), lasts Spell Power rounds"
+			},
+			"basic": {
+				"cost": 5,
+				"power": 1000,
+				"description": "{Basic Disrupting Ray (H5)}\n\nDestroys the enemy's armor, lowering the target's Defense. Can be used repeatedly on the same target, but cannot reduce its Defense below 0.\n\nDefense -4 (stacks, cannot be dispelled), lasts Spell Power rounds"
+			},
+			"advanced": {
+				"cost": 5,
+				"power": 1000,
+				"description": "{Advanced Disrupting Ray (H5)}\n\nDestroys the enemy's armor, lowering the target's Defense. Can be used repeatedly on the same target, but cannot reduce its Defense below 0.\n\nDefense -5 (stacks, cannot be dispelled), lasts Spell Power rounds"
+			},
+			"expert": {
+				"cost": 10,
+				"power": 1000,
+				"range": "X",
+				"targetModifier": {
+					"smart": true
+				},
+				"description": "{Expert Disrupting Ray (H5)}\n\nDestroys the enemy's armor, lowering the target's Defense. Can be used repeatedly on the same target, but cannot reduce its Defense below 0.\n\nDefense -6 (stacks, cannot be dispelled), lasts Spell Power rounds\nExpert: affects all enemy stacks."
+			}
+		}
+	},
+	"h5Plague": {
+		"type": "combat",
+		// Plague
+		"name": "Decay (H5)",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false,
+			"02darkSchool": true
+		},
+		"level": 2,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"flags": {
+			"special": true,
+			"negative": true
+		},
+		"graphics": {
+			"iconBook": "h5/spells/h5Plague/Book",
+			"iconScroll": "h5/spells/h5Plague/Scroll",
+			"iconScenarioBonus": "h5/spells/h5Plague/Scenario",
+			"iconEffect": "h5/spells/h5Plague/Effect"
+		},
+		"animation": {
+			"affect": [
+				"h5/fx/Spells_Plague"
+			]
+		},
+		"sounds": {
+			"cast": "WEAKNESS"
+		},
+		"targetType": "CREATURE",
+		"levels": {
+			"base": {
+				"range": "0",
+				"targetModifier": {
+					"smart": true
+				},
+				"battleEffects": {
+					"attach": {
+						"type": "h5Attach",
+						"eventScript": "h5PlagueTick",
+						"base": [
+							32.0,
+							32.0,
+							32.0,
+							32.0
+						],
+						"perPower": [
+							8.0,
+							8.0,
+							8.0,
+							8.0
+						],
+						"durBase": [
+							2,
+							3,
+							4,
+							5
+						],
+						"durPer": [
+							0,
+							0,
+							0,
+							0
+						],
+						"exclude": [
+							"UNDEAD",
+							"NON_LIVING",
+							"MECHANICAL",
+							"SIEGE_WEAPON"
+						],
+						"icon": "h5/spells/h5Plague/Effect"
+					}
+				}
+			},
+			"none": {
+				"cost": 6,
+				"power": 1000,
+				"description": "{Decay (H5)}\n\nInfects the enemy creature with plague, so it takes Earth damage every time it acts (no effect on undead, elemental and mechanical units).\n\nThe target takes 32 + 8 x Spell Power Earth damage after each action, lasts 2 rounds; no effect on undead, elemental and mechanical creatures"
+			},
+			"basic": {
+				"cost": 6,
+				"power": 1000,
+				"description": "{Basic Decay (H5)}\n\nInfects the enemy creature with plague, so it takes Earth damage every time it acts (no effect on undead, elemental and mechanical units).\n\nThe target takes 32 + 8 x Spell Power Earth damage after each action, lasts 3 rounds; no effect on undead, elemental and mechanical creatures"
+			},
+			"advanced": {
+				"cost": 6,
+				"power": 1000,
+				"description": "{Advanced Decay (H5)}\n\nInfects the enemy creature with plague, so it takes Earth damage every time it acts (no effect on undead, elemental and mechanical units).\n\nThe target takes 32 + 8 x Spell Power Earth damage after each action, lasts 4 rounds; no effect on undead, elemental and mechanical creatures"
+			},
+			"expert": {
+				"cost": 12,
+				"power": 1000,
+				"range": "X",
+				"targetModifier": {
+					"smart": true
+				},
+				"description": "{Expert Decay (H5)}\n\nInfects the enemy creature with plague, so it takes Earth damage every time it acts (no effect on undead, elemental and mechanical units).\n\nThe target takes 32 + 8 x Spell Power Earth damage after each action, lasts 5 rounds; no effect on undead, elemental and mechanical creatures\nExpert: affects all enemy stacks."
+			}
+		},
+		"targetCondition": {
+			"noneOf": {
+				"bonus.UNDEAD": "normal",
+				"bonus.NON_LIVING": "normal",
+				"bonus.MECHANICAL": "normal",
+				"bonus.SIEGE_WEAPON": "absolute"
+			}
+		}
+	},
+	"h5Weakness": {
+		"type": "combat",
+		// Weakness
+		"name": "Suffering (H5)",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false,
+			"02darkSchool": true
+		},
+		"level": 3,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"flags": {
+			"special": true,
+			"negative": true
+		},
+		"graphics": {
+			"iconBook": "h5/spells/h5Weakness/Book",
+			"iconScroll": "h5/spells/h5Weakness/Scroll",
+			"iconScenarioBonus": "h5/spells/h5Weakness/Scenario",
+			"iconEffect": "h5/spells/h5Weakness/Effect"
+		},
+		"animation": {
+			"affect": [
+				"h5/fx/Spells_Weakness"
+			]
+		},
+		"sounds": {
+			"cast": "WEAKNESS"
+		},
+		"targetType": "CREATURE",
+		"levels": {
+			"base": {
+				"range": "0",
+				"targetModifier": {
+					"smart": true
+				},
+				"battleEffects": {
+					"timed": {
+						"type": "h5Timed",
+						"bonus": {
+							"primarySkill": {
+								"type": "PRIMARY_SKILL",
+								"duration": "N_TURNS",
+								"subtype": "attack",
+								"val": 0
+							}
+						},
+						"durBase": [
+							0.0,
+							0.0,
+							0.0,
+							0.0
+						],
+						"durPer": [
+							1.0,
+							1.0,
+							1.0,
+							1.0
+						],
+						"values": {
+							"primarySkill": {
+								"base": [
+									3.0,
+									6.0,
+									9.0,
+									12.0
+								],
+								"per": [
+									0.0,
+									0.0,
+									0.0,
+									0.0
+								],
+								"scale": -1
+							}
+						}
+					}
+				}
+			},
+			"none": {
+				"cost": 5,
+				"power": 1000,
+				"description": "{Suffering (H5)}\n\nReduces the Attack of the selected enemy unit.\n\nAttack -3, lasts 1 x Spell Power rounds (rounded, at least 1)"
+			},
+			"basic": {
+				"cost": 5,
+				"power": 1000,
+				"description": "{Basic Suffering (H5)}\n\nReduces the Attack of the selected enemy unit.\n\nAttack -6, lasts 1 x Spell Power rounds (rounded, at least 1)"
+			},
+			"advanced": {
+				"cost": 5,
+				"power": 1000,
+				"description": "{Advanced Suffering (H5)}\n\nReduces the Attack of the selected enemy unit.\n\nAttack -9, lasts 1 x Spell Power rounds (rounded, at least 1)"
+			},
+			"expert": {
+				"cost": 14,
+				"power": 1000,
+				"range": "X",
+				"targetModifier": {
+					"smart": true
+				},
+				"description": "{Expert Suffering (H5)}\n\nReduces the Attack of the selected enemy unit.\n\nAttack -12, lasts 1 x Spell Power rounds (rounded, at least 1)\nExpert: affects all enemy stacks."
+			}
+		}
+	},
+	"h5Forgetfulness": {
+		"type": "combat",
+		// Forgetfulness
+		"name": "Confusion (H5)",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false,
+			"02darkSchool": true
+		},
+		"level": 3,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"flags": {
+			"special": true,
+			"negative": true
+		},
+		"graphics": {
+			"iconBook": "h5/spells/h5Forgetfulness/Book",
+			"iconScroll": "h5/spells/h5Forgetfulness/Scroll",
+			"iconScenarioBonus": "h5/spells/h5Forgetfulness/Scenario",
+			"iconEffect": "h5/spells/h5Forgetfulness/Effect"
+		},
+		"animation": {
+			"affect": [
+				"h5/fx/Spells_Forgetfulness"
+			]
+		},
+		"sounds": {
+			"cast": "FORGET"
+		},
+		"targetType": "CREATURE",
+		"levels": {
+			"base": {
+				"range": "0",
+				"targetModifier": {
+					"smart": true
+				},
+				"battleEffects": {
+					"timed": {
+						"type": "h5Timed",
+						"bonus": {
+							"h5Forget": {
+								"type": "H5_FORGET_H5C",
+								"duration": "N_TURNS",
+								"val": 0
+							},
+							"rangedCut": {
+								"type": "PERCENTAGE_DAMAGE_BOOST",
+								"duration": "N_TURNS",
+								"subtype": "damageTypeRanged",
+								"val": 0
+							},
+							"forgetRet": {
+								"type": "COMBAT_EVENT_TRIGGER",
+								"duration": "N_TURNS",
+								"subtype": "h5ForgetRetaliation",
+								"val": 0,
+								"hidden": true
+							}
+						},
+						"durBase": [
+							0.0,
+							0.0,
+							0.0,
+							0.0
+						],
+						"durPer": [
+							1.0,
+							1.0,
+							1.0,
+							1.0
+						],
+						"exclude": [
+							"UNDEAD",
+							"NON_LIVING",
+							"MECHANICAL",
+							"SIEGE_WEAPON",
+							"MIND_IMMUNITY"
+						],
+						"values": {
+							"h5Forget": {
+								"base": [
+									0.5,
+									0.7,
+									0.9,
+									1.0
+								],
+								"per": [
+									0.0,
+									0.0,
+									0.0,
+									0.0
+								],
+								"scale": 100
+							},
+							"rangedCut": {
+								"base": [
+									0.5,
+									0.7,
+									0.9,
+									1.0
+								],
+								"per": [
+									0.0,
+									0.0,
+									0.0,
+									0.0
+								],
+								"scale": -100
+							}
+						}
+					}
+				}
+			},
+			"none": {
+				"cost": 9,
+				"power": 1000,
+				"description": "{Confusion (H5)}\n\nMakes the selected enemy forget its duties on the battlefield. Some of the affected creatures forget to shoot or retaliate (no effect on undead, elemental and mechanical units).\n\n50% of the creatures forget to shoot and retaliate (shooting and retaliation damage reduced proportionally), lasts 1 x Spell Power rounds (rounded, at least 1)"
+			},
+			"basic": {
+				"cost": 9,
+				"power": 1000,
+				"description": "{Basic Confusion (H5)}\n\nMakes the selected enemy forget its duties on the battlefield. Some of the affected creatures forget to shoot or retaliate (no effect on undead, elemental and mechanical units).\n\n70% of the creatures forget to shoot and retaliate (shooting and retaliation damage reduced proportionally), lasts 1 x Spell Power rounds (rounded, at least 1)"
+			},
+			"advanced": {
+				"cost": 9,
+				"power": 1000,
+				"description": "{Advanced Confusion (H5)}\n\nMakes the selected enemy forget its duties on the battlefield. Some of the affected creatures forget to shoot or retaliate (no effect on undead, elemental and mechanical units).\n\n90% of the creatures forget to shoot and retaliate (shooting and retaliation damage reduced proportionally), lasts 1 x Spell Power rounds (rounded, at least 1)"
+			},
+			"expert": {
+				"cost": 18,
+				"power": 1000,
+				"range": "X",
+				"targetModifier": {
+					"smart": true
+				},
+				"description": "{Expert Confusion (H5)}\n\nMakes the selected enemy forget its duties on the battlefield. Some of the affected creatures forget to shoot or retaliate (no effect on undead, elemental and mechanical units).\n\n100% of the creatures forget to shoot and retaliate (shooting and retaliation damage reduced proportionally), lasts 1 x Spell Power rounds (rounded, at least 1)\nExpert: affects all enemy stacks."
+			}
+		},
+		"targetCondition": {
+			"noneOf": {
+				"bonus.UNDEAD": "normal",
+				"bonus.NON_LIVING": "normal",
+				"bonus.MECHANICAL": "normal",
+				"bonus.SIEGE_WEAPON": "absolute",
+				"bonus.MIND_IMMUNITY": "normal"
+			}
+		}
+	},
+	"h5Berserk": {
+		"type": "combat",
+		// Berserk
+		"name": "Berserk (H5)",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false,
+			"02darkSchool": true
+		},
+		"level": 4,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"flags": {
+			"special": true,
+			"negative": true
+		},
+		"graphics": {
+			"iconBook": "h5/spells/h5Berserk/Book",
+			"iconScroll": "h5/spells/h5Berserk/Scroll",
+			"iconScenarioBonus": "h5/spells/h5Berserk/Scenario",
+			"iconEffect": "h5/spells/h5Berserk/Effect"
+		},
+		"animation": {
+			"affect": [
+				{
+					"effectName": "h5light_Spells_Berserk"
+				},
+				"h5/fx/Spells_Berserk"
+			]
+		},
+		"sounds": {
+			"cast": "BERSERK"
+		},
+		"targetType": "CREATURE",
+		"counters": {
+			"h5Hypnotize": true,
+			"hypnotize": true
+		},
+		"levels": {
+			"base": {
+				"range": "0",
+				"targetModifier": {
+					"smart": true
+				},
+				"battleEffects": {
+					"timed": {
+						"type": "h5Timed",
+						"bonus": {
+							"berserk": {
+								"type": "ATTACKS_NEAREST_CREATURE",
+								"duration": "N_TURNS",
+								"val": 0
+							},
+							"meleeUp": {
+								"type": "PERCENTAGE_DAMAGE_BOOST",
+								"duration": "N_TURNS",
+								"subtype": "damageTypeMelee",
+								"val": 0
+							},
+							"rangedUp": {
+								"type": "PERCENTAGE_DAMAGE_BOOST",
+								"duration": "N_TURNS",
+								"subtype": "damageTypeRanged",
+								"val": 0
+							},
+							"noRet": {
+								"type": "NO_RETALIATION",
+								"duration": "N_TURNS",
+								"val": 0
+							}
+						},
+						"durBase": [
+							1.0,
+							1.0,
+							1.0,
+							2.0
+						],
+						"durPer": [
+							0.0,
+							0.0,
+							0.0,
+							0.0
+						],
+						"exclude": [
+							"UNDEAD",
+							"NON_LIVING",
+							"MECHANICAL",
+							"SIEGE_WEAPON",
+							"MIND_IMMUNITY"
+						],
+						"values": {
+							"meleeUp": {
+								"base": [
+									0.0,
+									0.0,
+									0.0,
+									0.0
+								],
+								"per": [
+									0.01,
+									0.02,
+									0.03,
+									0.03
+								],
+								"scale": 100
+							},
+							"rangedUp": {
+								"base": [
+									0.0,
+									0.0,
+									0.0,
+									0.0
+								],
+								"per": [
+									0.01,
+									0.02,
+									0.03,
+									0.03
+								],
+								"scale": 100
+							}
+						}
+					}
+				}
+			},
+			"none": {
+				"cost": 15,
+				"power": 1000,
+				"description": "{Berserk (H5)}\n\nDrives the target creature mad with rage. The cursed creature treats all other creatures and war machines as enemies and furiously attacks the nearest unit.\n\nBerserk: attacks the nearest stack, does not retaliate; damage +1% x Spell Power, lasts 1 round"
+			},
+			"basic": {
+				"cost": 15,
+				"power": 1000,
+				"description": "{Basic Berserk (H5)}\n\nDrives the target creature mad with rage. The cursed creature treats all other creatures and war machines as enemies and furiously attacks the nearest unit.\n\nBerserk: attacks the nearest stack, does not retaliate; damage +2% x Spell Power, lasts 1 round"
+			},
+			"advanced": {
+				"cost": 15,
+				"power": 1000,
+				"description": "{Advanced Berserk (H5)}\n\nDrives the target creature mad with rage. The cursed creature treats all other creatures and war machines as enemies and furiously attacks the nearest unit.\n\nBerserk: attacks the nearest stack, does not retaliate; damage +3% x Spell Power, lasts 1 round"
+			},
+			"expert": {
+				"cost": 15,
+				"power": 1000,
+				"description": "{Expert Berserk (H5)}\n\nDrives the target creature mad with rage. The cursed creature treats all other creatures and war machines as enemies and furiously attacks the nearest unit.\n\nBerserk: attacks the nearest stack, does not retaliate; damage +3% x Spell Power, lasts 2 rounds"
+			}
+		},
+		"targetCondition": {
+			"noneOf": {
+				"bonus.UNDEAD": "normal",
+				"bonus.NON_LIVING": "normal",
+				"bonus.MECHANICAL": "normal",
+				"bonus.SIEGE_WEAPON": "absolute",
+				"bonus.MIND_IMMUNITY": "normal"
+			}
+		}
+	},
+	"h5Blind": {
+		"type": "combat",
+		// Blind
+		"name": "Blind (H5)",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false,
+			"02darkSchool": true
+		},
+		"level": 4,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"flags": {
+			"special": true,
+			"negative": true
+		},
+		"graphics": {
+			"iconBook": "h5/spells/h5Blind/Book",
+			"iconScroll": "h5/spells/h5Blind/Scroll",
+			"iconScenarioBonus": "h5/spells/h5Blind/Scenario",
+			"iconEffect": "h5/spells/h5Blind/Effect"
+		},
+		"animation": {
+			"affect": [
+				{
+					"effectName": "h5light_Spells_Blind"
+				},
+				"h5/fx/Spells_Blind"
+			]
+		},
+		"sounds": {
+			"cast": "BLIND"
+		},
+		"targetType": "CREATURE",
+		"levels": {
+			"base": {
+				"range": "0",
+				"targetModifier": {
+					"smart": true
+				},
+				"battleEffects": {
+					"timed": {
+						"type": "h5Timed",
+						"bonus": {
+							"notActive": {
+								"type": "NOT_ACTIVE",
+								"duration": [
+									"UNTIL_BEING_ATTACKED",
+									"N_TURNS"
+								],
+								"subtype": "blind",
+								"val": 0
+							}
+						},
+						"durBase": [
+							0.0,
+							0.0,
+							0.0,
+							0.0
+						],
+						"durPer": [
+							0.15,
+							0.2,
+							0.25,
+							0.25
+						],
+						"exclude": [
+							"UNDEAD",
+							"NON_LIVING",
+							"MECHANICAL",
+							"SIEGE_WEAPON",
+							"MIND_IMMUNITY"
+						]
+					}
+				}
+			},
+			"none": {
+				"cost": 10,
+				"power": 1000,
+				"description": "{Blind (H5)}\n\nBlinds the selected enemy creature, leaving it unable to move, attack or use any ability. The spell is broken if the creature is attacked. Duration depends on Spell Power. (No effect on undead, elemental and mechanical creatures.)\n\nBlind: cannot act, recovers when attacked, lasts 0.15 x Spell Power rounds (rounded, at least 1)"
+			},
+			"basic": {
+				"cost": 10,
+				"power": 1000,
+				"description": "{Basic Blind (H5)}\n\nBlinds the selected enemy creature, leaving it unable to move, attack or use any ability. The spell is broken if the creature is attacked. Duration depends on Spell Power. (No effect on undead, elemental and mechanical creatures.)\n\nBlind: cannot act, recovers when attacked, lasts 0.2 x Spell Power rounds (rounded, at least 1)"
+			},
+			"advanced": {
+				"cost": 10,
+				"power": 1000,
+				"description": "{Advanced Blind (H5)}\n\nBlinds the selected enemy creature, leaving it unable to move, attack or use any ability. The spell is broken if the creature is attacked. Duration depends on Spell Power. (No effect on undead, elemental and mechanical creatures.)\n\nBlind: cannot act, recovers when attacked, lasts 0.25 x Spell Power rounds (rounded, at least 1)"
+			},
+			"expert": {
+				"cost": 10,
+				"power": 1000,
+				"battleEffects": {
+					"timed": {
+						"bonus": {
+							"notActive": {
+								"type": "NOT_ACTIVE",
+								"duration": [
+									"UNTIL_BEING_ATTACKED",
+									"N_TURNS"
+								],
+								"subtype": "blind",
+								"val": 0
+							},
+							"noRet": {
+								"type": "NO_RETALIATION",
+								"duration": [
+									"UNTIL_AFTER_ATTACK_SEQUENCE",
+									"UNTIL_TAKING_INDIRECT_DAMAGE",
+									"N_TURNS"
+								],
+								"val": 0
+							}
+						}
+					}
+				},
+				"description": "{Expert Blind (H5)}\n\nBlinds the selected enemy creature, leaving it unable to move, attack or use any ability. The spell is broken if the creature is attacked. Duration depends on Spell Power. (No effect on undead, elemental and mechanical creatures.)\n\nBlind: cannot act, recovers when attacked, lasts 0.25 x Spell Power rounds (rounded, at least 1); blinded creatures cannot retaliate when attacked"
+			}
+		},
+		"targetCondition": {
+			"noneOf": {
+				"bonus.UNDEAD": "normal",
+				"bonus.NON_LIVING": "normal",
+				"bonus.MECHANICAL": "normal",
+				"bonus.SIEGE_WEAPON": "absolute",
+				"bonus.MIND_IMMUNITY": "normal"
+			}
+		}
+	},
+	"h5Hypnotize": {
+		"type": "combat",
+		// Hypnotize
+		"name": "Puppet Master (H5)",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false,
+			"02darkSchool": true
+		},
+		"level": 5,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"flags": {
+			"special": true,
+			"negative": true
+		},
+		"graphics": {
+			"iconBook": "h5/spells/h5Hypnotize/Book",
+			"iconScroll": "h5/spells/h5Hypnotize/Scroll",
+			"iconScenarioBonus": "h5/spells/h5Hypnotize/Scenario",
+			"iconEffect": "h5/spells/h5Hypnotize/Effect"
+		},
+		"animation": {
+			"affect": [
+				{
+					"effectName": "h5light_Spells_hypnotize"
+				},
+				"h5/fx/Spells_hypnotize"
+			]
+		},
+		"sounds": {
+			"cast": "HYPNOTIZ"
+		},
+		"targetType": "CREATURE",
+		"counters": {
+			"h5Berserk": true,
+			"berserk": true
+		},
+		"levels": {
+			"base": {
+				"range": "0",
+				"targetModifier": {
+					"smart": true
+				},
+				"battleEffects": {
+					"timed": {
+						"type": "h5Timed",
+						"bonus": {
+							"hypnotized": {
+								"type": "HYPNOTIZED",
+								"duration": [
+									"N_TURNS",
+									"UNTIL_OWN_ATTACK"
+								],
+								"val": 3
+							},
+							"noRet": {
+								"type": "NO_RETALIATION",
+								"duration": [
+									"N_TURNS",
+									"UNTIL_OWN_ATTACK"
+								],
+								"val": 0
+							}
+						},
+						"durBase": [
+							0.0,
+							0.0,
+							0.0,
+							0.0
+						],
+						"durPer": [
+							0.15,
+							0.2,
+							0.25,
+							0.25
+						],
+						"exclude": [
+							"UNDEAD",
+							"NON_LIVING",
+							"MECHANICAL",
+							"SIEGE_WEAPON",
+							"MIND_IMMUNITY"
+						],
+						"expertOnlyAboveTier": 6
+					}
+				}
+			},
+			"none": {
+				"cost": 18,
+				"power": 1000,
+				"description": "{Puppet Master (H5)}\n\nGives the hero temporary control of an enemy unit. Under this spell the unit cannot retaliate. The spell ends automatically if the unit is used to attack. (The caster needs Expert Dark Magic to control creatures of level 7 or higher. No effect on undead, elemental and mechanical units.)\n\nControlled by the caster, cannot retaliate; control ends after the controlled stack attacks once; level 7 creatures can only be controlled at Expert level, lasts 0.15 x Spell Power rounds (rounded, at least 1)"
+			},
+			"basic": {
+				"cost": 18,
+				"power": 1000,
+				"description": "{Basic Puppet Master (H5)}\n\nGives the hero temporary control of an enemy unit. Under this spell the unit cannot retaliate. The spell ends automatically if the unit is used to attack. (The caster needs Expert Dark Magic to control creatures of level 7 or higher. No effect on undead, elemental and mechanical units.)\n\nControlled by the caster, cannot retaliate; control ends after the controlled stack attacks once; level 7 creatures can only be controlled at Expert level, lasts 0.2 x Spell Power rounds (rounded, at least 1)"
+			},
+			"advanced": {
+				"cost": 18,
+				"power": 1000,
+				"description": "{Advanced Puppet Master (H5)}\n\nGives the hero temporary control of an enemy unit. Under this spell the unit cannot retaliate. The spell ends automatically if the unit is used to attack. (The caster needs Expert Dark Magic to control creatures of level 7 or higher. No effect on undead, elemental and mechanical units.)\n\nControlled by the caster, cannot retaliate; control ends after the controlled stack attacks once; level 7 creatures can only be controlled at Expert level, lasts 0.25 x Spell Power rounds (rounded, at least 1)"
+			},
+			"expert": {
+				"cost": 18,
+				"power": 1000,
+				"description": "{Expert Puppet Master (H5)}\n\nGives the hero temporary control of an enemy unit. Under this spell the unit cannot retaliate. The spell ends automatically if the unit is used to attack. (The caster needs Expert Dark Magic to control creatures of level 7 or higher. No effect on undead, elemental and mechanical units.)\n\nControlled by the caster, cannot retaliate; control ends after the controlled stack attacks once; level 7 creatures can only be controlled at Expert level, lasts 0.25 x Spell Power rounds (rounded, at least 1)"
+			}
+		},
+		"targetCondition": {
+			"noneOf": {
+				"bonus.UNDEAD": "normal",
+				"bonus.NON_LIVING": "normal",
+				"bonus.MECHANICAL": "normal",
+				"bonus.SIEGE_WEAPON": "absolute",
+				"bonus.MIND_IMMUNITY": "normal"
+			}
+		}
+	},
+	"h5UnholyWord": {
+		"type": "combat",
+		// Unholy Word
+		"name": "Unholy Word (H5)",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false,
+			"02darkSchool": true
+		},
+		"level": 5,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"flags": {
+			"special": true,
+			"damage": true,
+			"negative": true
+		},
+		"graphics": {
+			"iconBook": "h5/spells/h5UnholyWord/Book",
+			"iconScroll": "h5/spells/h5UnholyWord/Scroll",
+			"iconScenarioBonus": "h5/spells/h5UnholyWord/Scenario",
+			"iconEffect": "h5/spells/h5UnholyWord/Effect"
+		},
+		"animation": {
+			"hit": [
+				"h5/fx/Spells_UnholyWord__field"
+			],
+			"affect": [
+				{
+					"effectName": "h5light_Spells_UnholyWord"
+				},
+				"h5/fx/Spells_UnholyWord_hit"
+			]
+		},
+		"sounds": {
+			"cast": "DEATHRIP"
+		},
+		"targetType": "CREATURE",
+		"levels": {
+			"base": {
+				"range": "X",
+				"targetModifier": {
+					"smart": false
+				},
+				"battleEffects": {
+					"directDamage": {
+						"type": "h5Damage",
+						"base": [
+							8.0,
+							12.0,
+							30.0,
+							144.0
+						],
+						"perPower": [
+							2.0,
+							3.0,
+							6.0,
+							12.0
+						],
+						"exclude": [
+							"UNDEAD",
+							"tears-of-ashan:DEMONIC"
+						]
+					}
+				}
+			},
+			"none": {
+				"cost": 15,
+				"power": 1000,
+				"description": "{Unholy Word (H5)}\n\nDeals unholy damage to all creatures on the battlefield except undead and infernal ones.\n\nSpell damage: 8 + 2 x Spell Power"
+			},
+			"basic": {
+				"cost": 15,
+				"power": 1000,
+				"description": "{Basic Unholy Word (H5)}\n\nDeals unholy damage to all creatures on the battlefield except undead and infernal ones.\n\nSpell damage: 12 + 3 x Spell Power"
+			},
+			"advanced": {
+				"cost": 15,
+				"power": 1000,
+				"description": "{Advanced Unholy Word (H5)}\n\nDeals unholy damage to all creatures on the battlefield except undead and infernal ones.\n\nSpell damage: 30 + 6 x Spell Power"
+			},
+			"expert": {
+				"cost": 15,
+				"power": 1000,
+				"description": "{Expert Unholy Word (H5)}\n\nDeals unholy damage to all creatures on the battlefield except undead and infernal ones.\n\nSpell damage: 144 + 12 x Spell Power"
+			}
+		}
+	},
+	"h5Bless": {
+		"type": "combat",
+		// Bless
+		"name": "Divine Strength (H5)",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false,
+			"01lightSchool": true
+		},
+		"level": 1,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"flags": {
+			"special": true,
+			"positive": true
+		},
+		"graphics": {
+			"iconBook": "h5/spells/h5Bless/Book",
+			"iconScroll": "h5/spells/h5Bless/Scroll",
+			"iconScenarioBonus": "h5/spells/h5Bless/Scenario",
+			"iconEffect": "h5/spells/h5Bless/Effect"
+		},
+		"animation": {
+			"affect": [
+				{
+					"effectName": "h5light_Spells_Bless"
+				},
+				"h5/fx/Spells_Bless"
+			]
+		},
+		"sounds": {
+			"cast": "BLESS"
+		},
+		"targetType": "CREATURE",
+		"counters": {
+			"h5Curse": true,
+			"curse": true
+		},
+		"levels": {
+			"base": {
+				"range": "0",
+				"targetModifier": {
+					"smart": true
+				},
+				"battleEffects": {
+					"timed": {
+						"type": "h5Timed",
+						"bonus": {
+							"h5Bless": {
+								"type": "H5_BLESS_H5C",
+								"duration": "N_TURNS",
+								"val": 0
+							}
+						},
+						"durBase": [
+							0.0,
+							0.0,
+							0.0,
+							0.0
+						],
+						"durPer": [
+							1.0,
+							1.0,
+							1.0,
+							1.0
+						],
+						"values": {
+							"h5Bless": {
+								"base": [
+									50,
+									65,
+									80,
+									100
+								],
+								"per": [
+									0,
+									0,
+									0,
+									0
+								],
+								"scale": 1
+							}
+						}
+					}
+				}
+			},
+			"none": {
+				"cost": 4,
+				"power": 1000,
+				"description": "{Divine Strength (H5)}\n\nIncreases the damage of the selected unit (friendly units only). Duration depends on Spell Power.\n\nEach attack of the stack deals damage between “min + 50% x (max - min)” and max, lasts 1 x Spell Power rounds (rounded, at least 1)"
+			},
+			"basic": {
+				"cost": 4,
+				"power": 1000,
+				"description": "{Basic Divine Strength (H5)}\n\nIncreases the damage of the selected unit (friendly units only). Duration depends on Spell Power.\n\nEach attack of the stack deals damage between “min + 65% x (max - min)” and max, lasts 1 x Spell Power rounds (rounded, at least 1)"
+			},
+			"advanced": {
+				"cost": 4,
+				"power": 1000,
+				"description": "{Advanced Divine Strength (H5)}\n\nIncreases the damage of the selected unit (friendly units only). Duration depends on Spell Power.\n\nEach attack of the stack deals damage between “min + 80% x (max - min)” and max, lasts 1 x Spell Power rounds (rounded, at least 1)"
+			},
+			"expert": {
+				"cost": 8,
+				"power": 1000,
+				"range": "X",
+				"targetModifier": {
+					"smart": true
+				},
+				"description": "{Expert Divine Strength (H5)}\n\nIncreases the damage of the selected unit (friendly units only). Duration depends on Spell Power.\n\nEach attack of the stack deals damage between “min + 100% x (max - min)” and max, lasts 1 x Spell Power rounds (rounded, at least 1)\nExpert: affects all friendly stacks."
+			}
+		}
+	},
+	"h5Haste": {
+		"type": "combat",
+		// Haste
+		"name": "Haste (H5)",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false,
+			"01lightSchool": true
+		},
+		"level": 1,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"flags": {
+			"special": true,
+			"positive": true
+		},
+		"graphics": {
+			"iconBook": "h5/spells/h5Haste/Book",
+			"iconScroll": "h5/spells/h5Haste/Scroll",
+			"iconScenarioBonus": "h5/spells/h5Haste/Scenario",
+			"iconEffect": "h5/spells/h5Haste/Effect"
+		},
+		"animation": {
+			"affect": [
+				"h5/fx/Spells_Haste"
+			]
+		},
+		"sounds": {
+			"cast": "TAILWIND"
+		},
+		"targetType": "CREATURE",
+		"counters": {
+			"h5Slow": true,
+			"slow": true
+		},
+		"levels": {
+			"base": {
+				"range": "0",
+				"targetModifier": {
+					"smart": true
+				},
+				"battleEffects": {
+					"timed": {
+						"type": "h5Timed",
+						"bonus": {
+							"h5Haste": {
+								"type": "STACKS_SPEED",
+								"duration": "N_TURNS",
+								"valueType": "PERCENT_TO_ALL",
+								"val": 0
+							}
+						},
+						"durBase": [
+							0.0,
+							0.0,
+							0.0,
+							0.0
+						],
+						"durPer": [
+							1.0,
+							1.0,
+							1.0,
+							1.0
+						],
+						"values": {
+							"h5Haste": {
+								"base": [
+									0.1,
+									0.2,
+									0.3,
+									0.4
+								],
+								"per": [
+									0.0,
+									0.0,
+									0.0,
+									0.0
+								],
+								"scale": 100
+							}
+						}
+					}
+				}
+			},
+			"none": {
+				"cost": 4,
+				"power": 1000,
+				"description": "{Haste (H5)}\n\nMakes the selected unit more active in battle.\n\nSpeed +10%, lasts 1 x Spell Power rounds (rounded, at least 1)"
+			},
+			"basic": {
+				"cost": 4,
+				"power": 1000,
+				"description": "{Basic Haste (H5)}\n\nMakes the selected unit more active in battle.\n\nSpeed +20%, lasts 1 x Spell Power rounds (rounded, at least 1)"
+			},
+			"advanced": {
+				"cost": 4,
+				"power": 1000,
+				"description": "{Advanced Haste (H5)}\n\nMakes the selected unit more active in battle.\n\nSpeed +30%, lasts 1 x Spell Power rounds (rounded, at least 1)"
+			},
+			"expert": {
+				"cost": 8,
+				"power": 1000,
+				"range": "X",
+				"targetModifier": {
+					"smart": true
+				},
+				"description": "{Expert Haste (H5)}\n\nMakes the selected unit more active in battle.\n\nSpeed +40%, lasts 1 x Spell Power rounds (rounded, at least 1)\nExpert: affects all friendly stacks."
+			}
+		}
+	},
+	"h5Stoneskin": {
+		"type": "combat",
+		// StoneSkin
+		"name": "Endurance (H5)",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false,
+			"01lightSchool": true
+		},
+		"level": 2,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"flags": {
+			"special": true,
+			"positive": true
+		},
+		"graphics": {
+			"iconBook": "h5/spells/h5Stoneskin/Book",
+			"iconScroll": "h5/spells/h5Stoneskin/Scroll",
+			"iconScenarioBonus": "h5/spells/h5Stoneskin/Scenario",
+			"iconEffect": "h5/spells/h5Stoneskin/Effect"
+		},
+		"animation": {
+			"affect": [
+				"h5/fx/Spells_StoneSkin"
+			]
+		},
+		"sounds": {
+			"cast": "TUFFSKIN"
+		},
+		"targetType": "CREATURE",
+		"levels": {
+			"base": {
+				"range": "0",
+				"targetModifier": {
+					"smart": true
+				},
+				"battleEffects": {
+					"timed": {
+						"type": "h5Timed",
+						"bonus": {
+							"primarySkill": {
+								"type": "PRIMARY_SKILL",
+								"duration": "N_TURNS",
+								"subtype": "defence",
+								"val": 0
+							}
+						},
+						"durBase": [
+							0.0,
+							0.0,
+							0.0,
+							0.0
+						],
+						"durPer": [
+							1.0,
+							1.0,
+							1.0,
+							1.0
+						],
+						"values": {
+							"primarySkill": {
+								"base": [
+									3.0,
+									6.0,
+									9.0,
+									12.0
+								],
+								"per": [
+									0.0,
+									0.0,
+									0.0,
+									0.0
+								],
+								"scale": 1
+							}
+						}
+					}
+				}
+			},
+			"none": {
+				"cost": 6,
+				"power": 1000,
+				"description": "{Endurance (H5)}\n\nIncreases the Defense of the selected friendly unit. Duration depends on Spell Power.\n\nDefense +3, lasts 1 x Spell Power rounds (rounded, at least 1)"
+			},
+			"basic": {
+				"cost": 6,
+				"power": 1000,
+				"description": "{Basic Endurance (H5)}\n\nIncreases the Defense of the selected friendly unit. Duration depends on Spell Power.\n\nDefense +6, lasts 1 x Spell Power rounds (rounded, at least 1)"
+			},
+			"advanced": {
+				"cost": 6,
+				"power": 1000,
+				"description": "{Advanced Endurance (H5)}\n\nIncreases the Defense of the selected friendly unit. Duration depends on Spell Power.\n\nDefense +9, lasts 1 x Spell Power rounds (rounded, at least 1)"
+			},
+			"expert": {
+				"cost": 12,
+				"power": 1000,
+				"range": "X",
+				"targetModifier": {
+					"smart": true
+				},
+				"description": "{Expert Endurance (H5)}\n\nIncreases the Defense of the selected friendly unit. Duration depends on Spell Power.\n\nDefense +12, lasts 1 x Spell Power rounds (rounded, at least 1)\nExpert: affects all friendly stacks."
+			}
+		}
+	},
+	"h5Dispel": {
+		"type": "combat",
+		// Dispel
+		"name": "Cleansing (H5)",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false,
+			"01lightSchool": true
+		},
+		"level": 2,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"flags": {
+			"special": true,
+			"positive": true
+		},
+		"graphics": {
+			"iconBook": "h5/spells/h5Dispel/Book",
+			"iconScroll": "h5/spells/h5Dispel/Scroll",
+			"iconScenarioBonus": "h5/spells/h5Dispel/Scenario",
+			"iconEffect": "h5/spells/h5Dispel/Effect"
+		},
+		"animation": {
+			"affect": [
+				{
+					"effectName": "h5light_Spells_Dispel"
+				},
+				"h5/fx/Spells_Dispel"
+			]
+		},
+		"sounds": {
+			"cast": "DISPELL"
+		},
+		"targetType": "CREATURE",
+		"levels": {
+			"base": {
+				"range": "0",
+				"targetModifier": {
+					"smart": false
+				},
+				"battleEffects": {
+					"dispel": {
+						"type": "h5Dispel",
+						"ignoreImmunity": true,
+						"dispelPositive": true,
+						"dispelNegative": true,
+						"chance": [
+							40,
+							60,
+							80,
+							100
+						]
+					}
+				}
+			},
+			"none": {
+				"cost": 10,
+				"power": 1000,
+				"description": "{Cleansing (H5)}\n\nRemoves beneficial spells from enemy creatures and negative spells from friendly units. The caster's magic level greatly affects the result; low-level casters have little chance of dispelling the spells of high-level mages.\n\nDispels beneficial spells from enemy stacks and negative spells from friendly stacks; 40% success chance per spell"
+			},
+			"basic": {
+				"cost": 10,
+				"power": 1000,
+				"description": "{Basic Cleansing (H5)}\n\nRemoves beneficial spells from enemy creatures and negative spells from friendly units. The caster's magic level greatly affects the result; low-level casters have little chance of dispelling the spells of high-level mages.\n\nDispels beneficial spells from enemy stacks and negative spells from friendly stacks; 60% success chance per spell"
+			},
+			"advanced": {
+				"cost": 10,
+				"power": 1000,
+				"description": "{Advanced Cleansing (H5)}\n\nRemoves beneficial spells from enemy creatures and negative spells from friendly units. The caster's magic level greatly affects the result; low-level casters have little chance of dispelling the spells of high-level mages.\n\nDispels beneficial spells from enemy stacks and negative spells from friendly stacks; 80% success chance per spell"
+			},
+			"expert": {
+				"cost": 10,
+				"power": 1000,
+				"range": "X",
+				"targetModifier": {
+					"smart": false
+				},
+				"description": "{Expert Cleansing (H5)}\n\nRemoves beneficial spells from enemy creatures and negative spells from friendly units. The caster's magic level greatly affects the result; low-level casters have little chance of dispelling the spells of high-level mages.\n\nDispels beneficial spells from enemy stacks and negative spells from friendly stacks; 100% success chance per spell\nExpert: affects all stacks on the battlefield."
+			}
+		}
+	},
+	"h5Bloodlust": {
+		"type": "combat",
+		// Bloodlust
+		"name": "Righteous Might (H5)",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false,
+			"01lightSchool": true
+		},
+		"level": 3,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"flags": {
+			"special": true,
+			"positive": true
+		},
+		"graphics": {
+			"iconBook": "h5/spells/h5Bloodlust/Book",
+			"iconScroll": "h5/spells/h5Bloodlust/Scroll",
+			"iconScenarioBonus": "h5/spells/h5Bloodlust/Scenario",
+			"iconEffect": "h5/spells/h5Bloodlust/Effect"
+		},
+		"animation": {
+			"affect": [
+				"h5/fx/Spells_Bloodlust"
+			]
+		},
+		"sounds": {
+			"cast": "BLOODLUS"
+		},
+		"targetType": "CREATURE",
+		"levels": {
+			"base": {
+				"range": "0",
+				"targetModifier": {
+					"smart": true
+				},
+				"battleEffects": {
+					"timed": {
+						"type": "h5Timed",
+						"bonus": {
+							"primarySkill": {
+								"type": "PRIMARY_SKILL",
+								"duration": "N_TURNS",
+								"subtype": "attack",
+								"val": 0
+							}
+						},
+						"durBase": [
+							0.0,
+							0.0,
+							0.0,
+							0.0
+						],
+						"durPer": [
+							1.0,
+							1.0,
+							1.0,
+							1.0
+						],
+						"values": {
+							"primarySkill": {
+								"base": [
+									3.0,
+									6.0,
+									9.0,
+									12.0
+								],
+								"per": [
+									0.0,
+									0.0,
+									0.0,
+									0.0
+								],
+								"scale": 1
+							}
+						}
+					}
+				}
+			},
+			"none": {
+				"cost": 6,
+				"power": 1000,
+				"description": "{Righteous Might (H5)}\n\nThe affected creature becomes furious and bloodthirsty, greatly increasing its Attack.\n\nAttack +3, lasts 1 x Spell Power rounds (rounded, at least 1)"
+			},
+			"basic": {
+				"cost": 6,
+				"power": 1000,
+				"description": "{Basic Righteous Might (H5)}\n\nThe affected creature becomes furious and bloodthirsty, greatly increasing its Attack.\n\nAttack +6, lasts 1 x Spell Power rounds (rounded, at least 1)"
+			},
+			"advanced": {
+				"cost": 6,
+				"power": 1000,
+				"description": "{Advanced Righteous Might (H5)}\n\nThe affected creature becomes furious and bloodthirsty, greatly increasing its Attack.\n\nAttack +9, lasts 1 x Spell Power rounds (rounded, at least 1)"
+			},
+			"expert": {
+				"cost": 12,
+				"power": 1000,
+				"range": "X",
+				"targetModifier": {
+					"smart": true
+				},
+				"description": "{Expert Righteous Might (H5)}\n\nThe affected creature becomes furious and bloodthirsty, greatly increasing its Attack.\n\nAttack +12, lasts 1 x Spell Power rounds (rounded, at least 1)\nExpert: affects all friendly stacks."
+			}
+		}
+	},
+	"h5DeflectArrows": {
+		"type": "combat",
+		// Deflect Arrows
+		"name": "Deflect Missile (H5)",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false,
+			"01lightSchool": true
+		},
+		"level": 3,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"flags": {
+			"special": true,
+			"positive": true
+		},
+		"graphics": {
+			"iconBook": "h5/spells/h5DeflectArrows/Book",
+			"iconScroll": "h5/spells/h5DeflectArrows/Scroll",
+			"iconScenarioBonus": "h5/spells/h5DeflectArrows/Scenario",
+			"iconEffect": "h5/spells/h5DeflectArrows/Effect"
+		},
+		"animation": {
+			"affect": [
+				{
+					"effectName": "h5light_Spells_DeflectArrows"
+				},
+				"h5/fx/Spells_DeflectArrows",
+				"h5/fx/Spells_DeflectArrows_shield"
+			]
+		},
+		"sounds": {
+			"cast": "AIRSHELD"
+		},
+		"targetType": "CREATURE",
+		"levels": {
+			"base": {
+				"range": "0",
+				"targetModifier": {
+					"smart": true
+				},
+				"battleEffects": {
+					"timed": {
+						"type": "h5Timed",
+						"bonus": {
+							"rangedCut": {
+								"type": "GENERAL_DAMAGE_REDUCTION",
+								"duration": "N_TURNS",
+								"subtype": "damageTypeRanged",
+								"val": 0
+							}
+						},
+						"durBase": [
+							0.0,
+							0.0,
+							0.0,
+							0.0
+						],
+						"durPer": [
+							1.0,
+							1.0,
+							1.0,
+							1.0
+						],
+						"values": {
+							"rangedCut": {
+								"base": [
+									0.25,
+									0.4,
+									0.55,
+									0.7
+								],
+								"per": [
+									0.0,
+									0.0,
+									0.0,
+									0.0
+								],
+								"scale": 100
+							}
+						}
+					}
+				}
+			},
+			"none": {
+				"cost": 6,
+				"power": 1000,
+				"description": "{Deflect Missile (H5)}\n\nReduces the ranged damage taken by the selected friendly unit.\n\nRanged damage taken -25%, lasts 1 x Spell Power rounds (rounded, at least 1)"
+			},
+			"basic": {
+				"cost": 6,
+				"power": 1000,
+				"description": "{Basic Deflect Missile (H5)}\n\nReduces the ranged damage taken by the selected friendly unit.\n\nRanged damage taken -40%, lasts 1 x Spell Power rounds (rounded, at least 1)"
+			},
+			"advanced": {
+				"cost": 6,
+				"power": 1000,
+				"description": "{Advanced Deflect Missile (H5)}\n\nReduces the ranged damage taken by the selected friendly unit.\n\nRanged damage taken -55%, lasts 1 x Spell Power rounds (rounded, at least 1)"
+			},
+			"expert": {
+				"cost": 12,
+				"power": 1000,
+				"range": "X",
+				"targetModifier": {
+					"smart": true
+				},
+				"description": "{Expert Deflect Missile (H5)}\n\nReduces the ranged damage taken by the selected friendly unit.\n\nRanged damage taken -70%, lasts 1 x Spell Power rounds (rounded, at least 1)\nExpert: affects all friendly stacks."
+			}
+		}
+	},
+	"h5AntiMagic": {
+		"type": "combat",
+		// AntiMagic
+		"name": "Anti-Magic (H5)",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false,
+			"01lightSchool": true
+		},
+		"level": 4,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"flags": {
+			"special": true,
+			"positive": true
+		},
+		"graphics": {
+			"iconBook": "h5/spells/h5AntiMagic/Book",
+			"iconScroll": "h5/spells/h5AntiMagic/Scroll",
+			"iconScenarioBonus": "h5/spells/h5AntiMagic/Scenario",
+			"iconEffect": "h5/spells/h5AntiMagic/Effect"
+		},
+		"animation": {
+			"affect": [
+				{
+					"effectName": "h5light_Spells_Anti_magic"
+				},
+				"h5/fx/Spells_Anti_magic"
+			]
+		},
+		"sounds": {
+			"cast": "ANTIMAGK"
+		},
+		"targetType": "CREATURE",
+		"levels": {
+			"base": {
+				"range": "0",
+				"targetModifier": {
+					"smart": true
+				},
+				"battleEffects": {
+					"immunity": {
+						"type": "h5Timed",
+						"bonus": {
+							"levelSpellImmunity": {
+								"type": "LEVEL_SPELL_IMMUNITY",
+								"duration": "N_TURNS",
+								"valueType": "AT_LEAST",
+								"val": 0
+							}
+						},
+						"values": {
+							"levelSpellImmunity": {
+								"base": [
+									2.0,
+									3.0,
+									4.0,
+									5.0
+								],
+								"per": [
+									0,
+									0,
+									0,
+									0
+								],
+								"scale": 1
+							}
+						},
+						"durBase": [
+							0.0,
+							0.0,
+							0.0,
+							0.0
+						],
+						"durPer": [
+							1.0,
+							1.0,
+							1.0,
+							1.0
+						]
+					},
+					"dispel": {
+						"type": "dispel",
+						"optional": true,
+						"dispelNegative": true,
+						"dispelNeutral": true,
+						"dispelPositive": true
+					}
+				}
+			},
+			"none": {
+				"cost": 7,
+				"power": 1000,
+				"description": "{Anti-Magic (H5)}\n\nRemoves both beneficial and harmful spells from the target and makes it immune to magic for a while. Friendly units only.\n\nRemoves all spells from the target and grants immunity to level 1-2 spells, lasts 1 x Spell Power rounds (rounded, at least 1)"
+			},
+			"basic": {
+				"cost": 7,
+				"power": 1000,
+				"description": "{Basic Anti-Magic (H5)}\n\nRemoves both beneficial and harmful spells from the target and makes it immune to magic for a while. Friendly units only.\n\nRemoves all spells from the target and grants immunity to level 1-3 spells, lasts 1 x Spell Power rounds (rounded, at least 1)"
+			},
+			"advanced": {
+				"cost": 7,
+				"power": 1000,
+				"description": "{Advanced Anti-Magic (H5)}\n\nRemoves both beneficial and harmful spells from the target and makes it immune to magic for a while. Friendly units only.\n\nRemoves all spells from the target and grants immunity to level 1-4 spells, lasts 1 x Spell Power rounds (rounded, at least 1)"
+			},
+			"expert": {
+				"cost": 7,
+				"power": 1000,
+				"description": "{Expert Anti-Magic (H5)}\n\nRemoves both beneficial and harmful spells from the target and makes it immune to magic for a while. Friendly units only.\n\nRemoves all spells from the target and grants immunity to level 1-5 spells, lasts 1 x Spell Power rounds (rounded, at least 1)"
+			}
+		}
+	},
+	"h5Teleport": {
+		"type": "combat",
+		// Teleport
+		"name": "Teleportation (H5)",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false,
+			"01lightSchool": true
+		},
+		"level": 4,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"flags": {
+			"special": true,
+			"positive": true
+		},
+		"graphics": {
+			"iconBook": "h5/spells/h5Teleport/Book",
+			"iconScroll": "h5/spells/h5Teleport/Scroll",
+			"iconScenarioBonus": "h5/spells/h5Teleport/Scenario",
+			"iconEffect": "h5/spells/h5Teleport/Effect"
+		},
+		"sounds": {
+			"cast": "TELPTOUT"
+		},
+		"targetType": "CREATURE",
+		"targetCondition": {
+			"noneOf": {
+				"bonus.SIEGE_WEAPON": "absolute"
+			}
+		},
+		"levels": {
+			"base": {
+				"range": "0",
+				"targetModifier": {
+					"smart": true
+				},
+				"battleEffects": {
+					"teleport": {
+						"type": "core:teleport"
+					}
+				}
+			},
+			"none": {
+				"cost": 8,
+				"power": 1000,
+				"description": "{Teleportation (H5)}\n\nTeleports a friendly creature to another location on the battlefield (creatures can only be teleported inside enemy walls with Expert Light Magic).\n\nTeleports a friendly stack to any empty hex on the battlefield"
+			},
+			"basic": {
+				"cost": 8,
+				"power": 1000,
+				"description": "{Basic Teleportation (H5)}\n\nTeleports a friendly creature to another location on the battlefield (creatures can only be teleported inside enemy walls with Expert Light Magic).\n\nTeleports a friendly stack to any empty hex on the battlefield"
+			},
+			"advanced": {
+				"cost": 8,
+				"power": 1000,
+				"description": "{Advanced Teleportation (H5)}\n\nTeleports a friendly creature to another location on the battlefield (creatures can only be teleported inside enemy walls with Expert Light Magic).\n\nTeleports a friendly stack to any empty hex on the battlefield"
+			},
+			"expert": {
+				"cost": 8,
+				"power": 1000,
+				"battleEffects": {
+					"teleport": {
+						"isWallPassable": true,
+						"isMoatPassable": true
+					}
+				},
+				"description": "{Expert Teleportation (H5)}\n\nTeleports a friendly creature to another location on the battlefield (creatures can only be teleported inside enemy walls with Expert Light Magic).\n\nTeleports a friendly stack to any empty hex on the battlefield; can cross walls and the moat"
+			}
+		},
+		"animation": {
+			"hit": [
+				"h5/fx/Spells_Teleport_End"
+			],
+			"affect": [
+				{
+					"effectName": "h5light_Spells_Teleport_Start"
+				},
+				"h5/fx/Spells_Teleport_Start"
+			]
+		}
+	},
+	"h5CelestialShield": {
+		"type": "combat",
+		// Celestial Shield
+		"name": "Celestial Shield (H5)",
+		"school": {
+			"air": true,
+			"earth": true,
+			"fire": true,
+			"water": true
+		},
+		"level": 5,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"flags": {
+			"special": true,
+			"positive": true
+		},
+		"graphics": {
+			"iconBook": "h5/spells/h5CelestialShield/Book",
+			"iconScroll": "h5/spells/h5CelestialShield/Scroll",
+			"iconScenarioBonus": "h5/spells/h5CelestialShield/Scenario",
+			"iconEffect": "h5/spells/h5CelestialShield/Effect"
+		},
+		"animation": {
+			"affect": [
+				{
+					"effectName": "h5light_Spells_CelestialShield"
+				},
+				"h5/fx/Spells_CelestialShield"
+			]
+		},
+		"sounds": {
+			"cast": "SHIELD"
+		},
+		"targetType": "CREATURE",
+		"levels": {
+			"base": {
+				"range": "0",
+				"targetModifier": {
+					"smart": true
+				},
+				"battleEffects": {
+					"attach": {
+						"type": "h5Attach",
+						"eventScript": "h5ShieldTick",
+						"base": [
+							250.0,
+							500.0,
+							600.0,
+							600.0
+						],
+						"perPower": [
+							50.0,
+							50.0,
+							60.0,
+							60.0
+						],
+						"durBase": [
+							99,
+							99,
+							99,
+							99
+						],
+						"icon": "h5/spells/h5CelestialShield/Effect"
+					}
+				}
+			},
+			"none": {
+				"cost": 20,
+				"power": 1000,
+				"battleEffects": {
+					"attach": {
+						"eventParameters": {
+							"reduce": 25
+						}
+					}
+				},
+				"description": "{Celestial Shield (H5)}\n\nSurrounds the selected unit with a magical force field that absorbs part of the damage it takes.\n\nAttack damage taken -25%; absorbs up to 250 + 50 x Spell Power damage in total, then disappears"
+			},
+			"basic": {
+				"cost": 20,
+				"power": 1000,
+				"battleEffects": {
+					"attach": {
+						"eventParameters": {
+							"reduce": 25
+						}
+					}
+				},
+				"description": "{Basic Celestial Shield (H5)}\n\nSurrounds the selected unit with a magical force field that absorbs part of the damage it takes.\n\nAttack damage taken -25%; absorbs up to 500 + 50 x Spell Power damage in total, then disappears"
+			},
+			"advanced": {
+				"cost": 20,
+				"power": 1000,
+				"battleEffects": {
+					"attach": {
+						"eventParameters": {
+							"reduce": 25
+						}
+					}
+				},
+				"description": "{Advanced Celestial Shield (H5)}\n\nSurrounds the selected unit with a magical force field that absorbs part of the damage it takes.\n\nAttack damage taken -25%; absorbs up to 600 + 60 x Spell Power damage in total, then disappears"
+			},
+			"expert": {
+				"cost": 20,
+				"power": 1000,
+				"battleEffects": {
+					"attach": {
+						"eventParameters": {
+							"reduce": 50
+						}
+					}
+				},
+				"description": "{Expert Celestial Shield (H5)}\n\nSurrounds the selected unit with a magical force field that absorbs part of the damage it takes.\n\nAttack damage taken -50%; absorbs up to 600 + 60 x Spell Power damage in total, then disappears"
+			}
+		}
+	},
+	"h5HolyWord": {
+		"type": "combat",
+		// Holy Word
+		"name": "Word of Light (H5)",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false,
+			"01lightSchool": true
+		},
+		"level": 5,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"flags": {
+			"special": true,
+			"damage": true,
+			"negative": true
+		},
+		"graphics": {
+			"iconBook": "h5/spells/h5HolyWord/Book",
+			"iconScroll": "h5/spells/h5HolyWord/Scroll",
+			"iconScenarioBonus": "h5/spells/h5HolyWord/Scenario",
+			"iconEffect": "h5/spells/h5HolyWord/Effect"
+		},
+		"animation": {
+			"hit": [
+				"h5/fx/Spells_HolyWord__field"
+			],
+			"affect": [
+				{
+					"effectName": "h5light_Spells_HolyWord"
+				},
+				"h5/fx/Spells_HolyWord_hit"
+			]
+		},
+		"sounds": {
+			"cast": "SACBRETH"
+		},
+		"targetType": "CREATURE",
+		"levels": {
+			"base": {
+				"range": "X",
+				"targetModifier": {
+					"smart": false
+				},
+				"battleEffects": {
+					"directDamage": {
+						"type": "h5Damage",
+						"base": [
+							8.0,
+							12.0,
+							30.0,
+							144.0
+						],
+						"perPower": [
+							2.0,
+							3.0,
+							6.0,
+							12.0
+						],
+						"requireAny": [
+							"UNDEAD",
+							"tears-of-ashan:DEMONIC",
+							"H5_DEMON_RAGED_H5C"
+						]
+					}
+				}
+			},
+			"none": {
+				"cost": 15,
+				"power": 1000,
+				"description": "{Word of Light (H5)}\n\nDeals holy damage to all undead and infernal creatures on the battlefield. Note: orc units are also affected because of their demon blood.\n\nSpell damage: 8 + 2 x Spell Power"
+			},
+			"basic": {
+				"cost": 15,
+				"power": 1000,
+				"description": "{Basic Word of Light (H5)}\n\nDeals holy damage to all undead and infernal creatures on the battlefield. Note: orc units are also affected because of their demon blood.\n\nSpell damage: 12 + 3 x Spell Power"
+			},
+			"advanced": {
+				"cost": 15,
+				"power": 1000,
+				"description": "{Advanced Word of Light (H5)}\n\nDeals holy damage to all undead and infernal creatures on the battlefield. Note: orc units are also affected because of their demon blood.\n\nSpell damage: 30 + 6 x Spell Power"
+			},
+			"expert": {
+				"cost": 15,
+				"power": 1000,
+				"description": "{Expert Word of Light (H5)}\n\nDeals holy damage to all undead and infernal creatures on the battlefield. Note: orc units are also affected because of their demon blood.\n\nSpell damage: 144 + 12 x Spell Power"
+			}
+		}
+	},
+	"h5LandMine": {
+		"type": "combat",
+		// Land Mine
+		"name": "Fire Trap (H5)",
+		"school": {
+			"air": true,
+			"earth": true,
+			"fire": true,
+			"water": true
+		},
+		"level": 1,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"flags": {
+			"special": true,
+			"damage": true,
+			"indifferent": true
+		},
+		"graphics": {
+			"iconBook": "h5/spells/h5LandMine/Book",
+			"iconScroll": "h5/spells/h5LandMine/Scroll",
+			"iconScenarioBonus": "h5/spells/h5LandMine/Scenario",
+			"iconEffect": "h5/spells/h5LandMine/Effect"
+		},
+		"sounds": {
+			"cast": ""
+		},
+		"targetType": "NO_TARGET",
+		"levels": {
+			"base": {
+				"range": "X",
+				"targetModifier": {
+					"smart": true
+				},
+				"battleEffects": {
+					"obstacle": {
+						"type": "obstacle",
+						"hidden": true,
+						"passable": true,
+						"trap": false,
+						"triggerAbility": "h5LandMineTrigger",
+						"removeOnTrigger": true,
+						"patchCount": 4,
+						"turnsRemaining": -1,
+						"attacker": {
+							"animation": "h5/fx/Spells_LandMine__obstacle300",
+							"appearAnimation": "h5/fx/Spells_LandMine__obstacle0",
+							"appearSound": "LANDMINE"
+						},
+						"defender": {
+							"animation": "h5/fx/Spells_LandMine__obstacle300",
+							"appearAnimation": "h5/fx/Spells_LandMine__obstacle0",
+							"appearSound": "LANDMINE"
+						}
+					}
+				}
+			},
+			"none": {
+				"cost": 8,
+				"power": 1000,
+				"battleEffects": {
+					"obstacle": {
+						"patchCount": 2
+					}
+				},
+				"description": "{Fire Trap (H5)}\n\nRandomly places several magical fire mines in the selected area of the battlefield. The enemy cannot see the mines.\n\nPlaces 2 fire mines invisible to the enemy, each dealing 50 + 10 x Spell Power Fire damage"
+			},
+			"basic": {
+				"cost": 8,
+				"power": 1000,
+				"battleEffects": {
+					"obstacle": {
+						"patchCount": 4
+					}
+				},
+				"description": "{Basic Fire Trap (H5)}\n\nRandomly places several magical fire mines in the selected area of the battlefield. The enemy cannot see the mines.\n\nPlaces 4 fire mines invisible to the enemy, each dealing 50 + 10 x Spell Power Fire damage"
+			},
+			"advanced": {
+				"cost": 8,
+				"power": 1000,
+				"battleEffects": {
+					"obstacle": {
+						"patchCount": 6
+					}
+				},
+				"description": "{Advanced Fire Trap (H5)}\n\nRandomly places several magical fire mines in the selected area of the battlefield. The enemy cannot see the mines.\n\nPlaces 6 fire mines invisible to the enemy, each dealing 50 + 10 x Spell Power Fire damage"
+			},
+			"expert": {
+				"cost": 8,
+				"power": 1000,
+				"battleEffects": {
+					"obstacle": {
+						"patchCount": 8
+					}
+				},
+				"description": "{Expert Fire Trap (H5)}\n\nRandomly places several magical fire mines in the selected area of the battlefield. The enemy cannot see the mines.\n\nPlaces 8 fire mines invisible to the enemy, each dealing 50 + 10 x Spell Power Fire damage"
+			}
+		}
+	},
+	"h5WaspSwarm": {
+		"type": "combat",
+		// Wasp Swarm
+		"name": "Wasp Swarm (H5)",
+		"school": {
+			"air": true,
+			"earth": true,
+			"fire": true,
+			"water": true
+		},
+		"level": 2,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"flags": {
+			"special": true,
+			"damage": true,
+			"negative": true
+		},
+		"graphics": {
+			"iconBook": "h5/spells/h5WaspSwarm/Book",
+			"iconScroll": "h5/spells/h5WaspSwarm/Scroll",
+			"iconScenarioBonus": "h5/spells/h5WaspSwarm/Scenario",
+			"iconEffect": "h5/spells/h5WaspSwarm/Effect"
+		},
+		"animation": {
+			"affect": [
+				"h5/fx/Spells_WaspSwarm"
+			]
+		},
+		"sounds": {
+			"cast": "MAGICBLT"
+		},
+		"targetType": "CREATURE",
+		"levels": {
+			"base": {
+				"range": "0",
+				"targetModifier": {
+					"smart": true
+				},
+				"battleEffects": {
+					"directDamage": {
+						"type": "h5Damage",
+						"base": [
+							10.0,
+							20.0,
+							30.0,
+							40.0
+						],
+						"perPower": [
+							2.0,
+							4.0,
+							6.0,
+							8.0
+						],
+						"exclude": [
+							"UNDEAD",
+							"NON_LIVING",
+							"MECHANICAL",
+							"SIEGE_WEAPON"
+						]
+					},
+					"atb": {
+						"type": "h5Timed",
+						"optional": true,
+						"durBase": [
+							1,
+							1,
+							1,
+							1
+						],
+						"exclude": [
+							"UNDEAD",
+							"NON_LIVING",
+							"MECHANICAL",
+							"SIEGE_WEAPON"
+						],
+						"bonus": {
+							"slowed": {
+								"type": "STACKS_SPEED",
+								"duration": "N_TURNS",
+								"valueType": "PERCENT_TO_ALL",
+								"val": 0
+							}
+						},
+						"values": {
+							"slowed": {
+								"base": [
+									-0.0,
+									-20.0,
+									-40.0,
+									-60.0
+								],
+								"per": [
+									0,
+									0,
+									0,
+									0
+								]
+							}
+						}
+					}
+				}
+			},
+			"none": {
+				"cost": 5,
+				"power": 1000,
+				"description": "{Wasp Swarm (H5)}\n\nSummons a swarm of insects to damage the selected enemy creature (no effect on undead, elemental and mechanical units).\n\nSpell damage: 10 + 2 x Spell Power; target Speed -0% for 1 round"
+			},
+			"basic": {
+				"cost": 5,
+				"power": 1000,
+				"description": "{Basic Wasp Swarm (H5)}\n\nSummons a swarm of insects to damage the selected enemy creature (no effect on undead, elemental and mechanical units).\n\nSpell damage: 20 + 4 x Spell Power; target Speed -20% for 1 round"
+			},
+			"advanced": {
+				"cost": 5,
+				"power": 1000,
+				"description": "{Advanced Wasp Swarm (H5)}\n\nSummons a swarm of insects to damage the selected enemy creature (no effect on undead, elemental and mechanical units).\n\nSpell damage: 30 + 6 x Spell Power; target Speed -40% for 1 round"
+			},
+			"expert": {
+				"cost": 5,
+				"power": 1000,
+				"description": "{Expert Wasp Swarm (H5)}\n\nSummons a swarm of insects to damage the selected enemy creature (no effect on undead, elemental and mechanical units).\n\nSpell damage: 40 + 8 x Spell Power; target Speed -60% for 1 round"
+			}
+		}
+	},
+	"h5Phantom": {
+		"type": "combat",
+		// Phantom
+		"name": "Phantom Forces (H5)",
+		"school": {
+			"air": true,
+			"earth": true,
+			"fire": true,
+			"water": true
+		},
+		"level": 3,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"flags": {
+			"special": true,
+			"positive": true
+		},
+		"graphics": {
+			"iconBook": "h5/spells/h5Phantom/Book",
+			"iconScroll": "h5/spells/h5Phantom/Scroll",
+			"iconScenarioBonus": "h5/spells/h5Phantom/Scenario",
+			"iconEffect": "h5/spells/h5Phantom/Effect"
+		},
+		"sounds": {
+			"cast": "CLONE"
+		},
+		"targetType": "CREATURE",
+		"targetCondition": {
+			"noneOf": {
+				"bonus.SIEGE_WEAPON": "absolute"
+			}
+		},
+		"levels": {
+			"base": {
+				"range": "0",
+				"targetModifier": {
+					"smart": true
+				},
+				"battleEffects": {
+					"clone": {
+						"type": "h5PhantomClone",
+						"maxTier": 4
+					}
+				}
+			},
+			"none": {
+				"cost": 18,
+				"power": 1000,
+				"battleEffects": {
+					"clone": {
+						"maxTier": 4
+					}
+				},
+				"description": "{Phantom Forces (H5)}\n\nCopies the selected friendly unit (one stack only). The copy cannot use any spells or abilities and vanishes as soon as it takes damage (incorporeal creatures give the copy a 50% chance to avoid damage).\n\nCopies one friendly stack of level 4 or lower; the phantom vanishes when it takes any damage"
+			},
+			"basic": {
+				"cost": 18,
+				"power": 1000,
+				"battleEffects": {
+					"clone": {
+						"maxTier": 5
+					}
+				},
+				"description": "{Basic Phantom Forces (H5)}\n\nCopies the selected friendly unit (one stack only). The copy cannot use any spells or abilities and vanishes as soon as it takes damage (incorporeal creatures give the copy a 50% chance to avoid damage).\n\nCopies one friendly stack of level 5 or lower; the phantom vanishes when it takes any damage"
+			},
+			"advanced": {
+				"cost": 18,
+				"power": 1000,
+				"battleEffects": {
+					"clone": {
+						"maxTier": 6
+					}
+				},
+				"description": "{Advanced Phantom Forces (H5)}\n\nCopies the selected friendly unit (one stack only). The copy cannot use any spells or abilities and vanishes as soon as it takes damage (incorporeal creatures give the copy a 50% chance to avoid damage).\n\nCopies one friendly stack of level 6 or lower; the phantom vanishes when it takes any damage"
+			},
+			"expert": {
+				"cost": 18,
+				"power": 1000,
+				"battleEffects": {
+					"clone": {
+						"maxTier": 7
+					}
+				},
+				"description": "{Expert Phantom Forces (H5)}\n\nCopies the selected friendly unit (one stack only). The copy cannot use any spells or abilities and vanishes as soon as it takes damage (incorporeal creatures give the copy a 50% chance to avoid damage).\n\nCopies one friendly stack of level 7 or lower; the phantom vanishes when it takes any damage"
+			}
+		},
+		"animation": {
+			"affect": [
+				"h5/fx/Spells_Phantom_In"
+			]
+		}
+	},
+	"h5Earthquake": {
+		"type": "combat",
+		// Earthquake
+		"name": "Earthquake (H5)",
+		"school": {
+			"air": true,
+			"earth": true,
+			"fire": true,
+			"water": true
+		},
+		"level": 3,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"flags": {
+			"special": true,
+			"indifferent": true
+		},
+		"graphics": {
+			"iconBook": "h5/spells/h5Earthquake/Book",
+			"iconScroll": "h5/spells/h5Earthquake/Scroll",
+			"iconScenarioBonus": "h5/spells/h5Earthquake/Scenario",
+			"iconEffect": "h5/spells/h5Earthquake/Effect"
+		},
+		"sounds": {
+			"cast": "ERTHQUAK"
+		},
+		"targetType": "NO_TARGET",
+		"levels": {
+			"base": {
+				"range": "X",
+				"targetModifier": {
+					"smart": true
+				},
+				"battleEffects": {
+					"catapult": {
+						"type": "catapult",
+						"targetsToAttack": 2,
+						"chanceToCrit": 0,
+						"chanceToNormalHit": 100
+					}
+				}
+			},
+			"none": {
+				"cost": 7,
+				"power": 1000,
+				"battleEffects": {
+					"catapult": {
+						"targetsToAttack": 2
+					}
+				},
+				"description": "{Earthquake (H5)}\n\nDamages the walls during a siege.\n\nRandomly destroys 2 wall sections or arrow towers during a siege"
+			},
+			"basic": {
+				"cost": 7,
+				"power": 1000,
+				"battleEffects": {
+					"catapult": {
+						"targetsToAttack": 2
+					}
+				},
+				"description": "{Basic Earthquake (H5)}\n\nDamages the walls during a siege.\n\nRandomly destroys 2 wall sections or arrow towers during a siege"
+			},
+			"advanced": {
+				"cost": 7,
+				"power": 1000,
+				"battleEffects": {
+					"catapult": {
+						"targetsToAttack": 3
+					}
+				},
+				"description": "{Advanced Earthquake (H5)}\n\nDamages the walls during a siege.\n\nRandomly destroys 3 wall sections or arrow towers during a siege"
+			},
+			"expert": {
+				"cost": 7,
+				"power": 1000,
+				"battleEffects": {
+					"catapult": {
+						"targetsToAttack": 4
+					}
+				},
+				"description": "{Expert Earthquake (H5)}\n\nDamages the walls during a siege.\n\nRandomly destroys 4 wall sections or arrow towers during a siege"
+			}
+		},
+		"animation": {
+			"hit": [
+				"h5/fx/Spells_Earthquake"
+			]
+		}
+	},
+	"h5AnimateDead": {
+		"type": "combat",
+		// Animate Dead
+		"name": "Animate Dead (H5)",
+		"school": {
+			"air": true,
+			"earth": true,
+			"fire": true,
+			"water": true
+		},
+		"level": 2,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"flags": {
+			"special": true,
+			"positive": true,
+			"rising": true
+		},
+		"graphics": {
+			"iconBook": "h5/spells/h5AnimateDead/Book",
+			"iconScroll": "h5/spells/h5AnimateDead/Scroll",
+			"iconScenarioBonus": "h5/spells/h5AnimateDead/Scenario",
+			"iconEffect": "h5/spells/h5AnimateDead/Effect"
+		},
+		"animation": {
+			"affect": [
+				{
+					"effectName": "h5light_Spells_AnimateDead"
+				},
+				"h5/fx/Spells_AnimateDead"
+			]
+		},
+		"sounds": {
+			"cast": "ANIMDEAD"
+		},
+		"targetType": "CREATURE",
+		"levels": {
+			"base": {
+				"range": "0",
+				"targetModifier": {
+					"smart": true
+				},
+				"battleEffects": {
+					"heal": {
+						"type": "h5Heal",
+						"base": [
+							120.0,
+							160.0,
+							200.0,
+							240.0
+						],
+						"perPower": [
+							15.0,
+							20.0,
+							25.0,
+							30.0
+						],
+						"healLevel": "resurrect",
+						"healPower": "permanent",
+						"hpReduce": 20,
+						"exclude": [
+							"NON_LIVING",
+							"MECHANICAL",
+							"SIEGE_WEAPON"
+						],
+						"undeadPermanent": true
+					}
+				}
+			},
+			"none": {
+				"cost": 9,
+				"power": 1000,
+				"description": "{Animate Dead (H5)}\n\nRevives several selected friendly stacks. Undead creatures are truly “reborn”, while all other creatures are revived only for the duration of this battle. Each use of this spell reduces the target creatures' Hit Points by 20%.\n\nHeals 120 + 15 x Spell Power and can revive creatures; each cast lowers the target's maximum Hit Points to 80% of the current value (for this battle, keeping at least 20% of the original); Undead are revived permanently, other creatures only until the battle ends"
+			},
+			"basic": {
+				"cost": 9,
+				"power": 1000,
+				"description": "{Basic Animate Dead (H5)}\n\nRevives several selected friendly stacks. Undead creatures are truly “reborn”, while all other creatures are revived only for the duration of this battle. Each use of this spell reduces the target creatures' Hit Points by 20%.\n\nHeals 160 + 20 x Spell Power and can revive creatures; each cast lowers the target's maximum Hit Points to 80% of the current value (for this battle, keeping at least 20% of the original); Undead are revived permanently, other creatures only until the battle ends"
+			},
+			"advanced": {
+				"cost": 9,
+				"power": 1000,
+				"description": "{Advanced Animate Dead (H5)}\n\nRevives several selected friendly stacks. Undead creatures are truly “reborn”, while all other creatures are revived only for the duration of this battle. Each use of this spell reduces the target creatures' Hit Points by 20%.\n\nHeals 200 + 25 x Spell Power and can revive creatures; each cast lowers the target's maximum Hit Points to 80% of the current value (for this battle, keeping at least 20% of the original); Undead are revived permanently, other creatures only until the battle ends"
+			},
+			"expert": {
+				"cost": 9,
+				"power": 1000,
+				"description": "{Expert Animate Dead (H5)}\n\nRevives several selected friendly stacks. Undead creatures are truly “reborn”, while all other creatures are revived only for the duration of this battle. Each use of this spell reduces the target creatures' Hit Points by 20%.\n\nHeals 240 + 30 x Spell Power and can revive creatures; each cast lowers the target's maximum Hit Points to 80% of the current value (for this battle, keeping at least 20% of the original); Undead are revived permanently, other creatures only until the battle ends"
+			}
+		},
+		"targetCondition": {
+			"noneOf": {
+				"bonus.NON_LIVING": "normal",
+				"bonus.MECHANICAL": "normal",
+				"bonus.SIEGE_WEAPON": "absolute"
+			}
+		}
+	},
+	"h5SummonElementals": {
+		"type": "combat",
+		// Summon Elementals
+		"name": "Summon Elementals (H5)",
+		"school": {
+			"air": true,
+			"earth": true,
+			"fire": true,
+			"water": true
+		},
+		"level": 4,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"flags": {
+			"special": true,
+			"positive": true
+		},
+		"graphics": {
+			"iconBook": "h5/spells/h5SummonElementals/Book",
+			"iconScroll": "h5/spells/h5SummonElementals/Scroll",
+			"iconScenarioBonus": "h5/spells/h5SummonElementals/Scenario",
+			"iconEffect": "h5/spells/h5SummonElementals/Effect"
+		},
+		"sounds": {
+			"cast": "SUMNELM"
+		},
+		"targetType": "NO_TARGET",
+		"levels": {
+			"base": {
+				"range": "X",
+				"targetModifier": {
+					"smart": true
+				},
+				"battleEffects": {
+					"summon": {
+						"type": "h5Summon",
+						"ids": [
+							"h5NeutralsFireElemental",
+							"h5NeutralsWaterElemental",
+							"h5NeutralsEarthElemental",
+							"h5NeutralsAirElemental"
+						],
+						"base": [
+							0,
+							0,
+							0,
+							0
+						],
+						"perPower": [
+							0.5,
+							0.75,
+							1.0,
+							2.0
+						],
+						"exclusive": true,
+						"byTerrain": true,
+						"fx": [
+							"h5/fx/Spells_SummonElementals_Fire",
+							"h5/fx/Spells_SummonElementals_Water",
+							"h5/fx/Spells_SummonElementals_Earth",
+							"h5/fx/Spells_SummonElementals_Wind"
+						]
+					}
+				}
+			},
+			"none": {
+				"cost": 17,
+				"power": 1000,
+				"description": "{Summon Elementals (H5)}\n\nSummons Fire, Earth, Water or Air elementals (depending on the battlefield terrain) to fight for the hero.\n\nSummons 0.5 x Spell Power elementals; the type depends on the battlefield: Lava and Fiery Fields give Fire Elementals; water, Snow, Swamp and Lucid Pools give Water Elementals; Dirt, Rough, Subterranean and Rocklands give Land Elementals; Grass, Sand and Magic Clouds give Wind Elementals; mod terrains go by their nature (ice, shoals and beaches give Water, forests and meadows give Wind, highlands, wastelands and canyons give Land), unrecognized ones are random"
+			},
+			"basic": {
+				"cost": 17,
+				"power": 1000,
+				"description": "{Basic Summon Elementals (H5)}\n\nSummons Fire, Earth, Water or Air elementals (depending on the battlefield terrain) to fight for the hero.\n\nSummons 0.75 x Spell Power elementals; the type depends on the battlefield: Lava and Fiery Fields give Fire Elementals; water, Snow, Swamp and Lucid Pools give Water Elementals; Dirt, Rough, Subterranean and Rocklands give Land Elementals; Grass, Sand and Magic Clouds give Wind Elementals; mod terrains go by their nature (ice, shoals and beaches give Water, forests and meadows give Wind, highlands, wastelands and canyons give Land), unrecognized ones are random"
+			},
+			"advanced": {
+				"cost": 17,
+				"power": 1000,
+				"description": "{Advanced Summon Elementals (H5)}\n\nSummons Fire, Earth, Water or Air elementals (depending on the battlefield terrain) to fight for the hero.\n\nSummons 1 x Spell Power elementals; the type depends on the battlefield: Lava and Fiery Fields give Fire Elementals; water, Snow, Swamp and Lucid Pools give Water Elementals; Dirt, Rough, Subterranean and Rocklands give Land Elementals; Grass, Sand and Magic Clouds give Wind Elementals; mod terrains go by their nature (ice, shoals and beaches give Water, forests and meadows give Wind, highlands, wastelands and canyons give Land), unrecognized ones are random"
+			},
+			"expert": {
+				"cost": 17,
+				"power": 1000,
+				"description": "{Expert Summon Elementals (H5)}\n\nSummons Fire, Earth, Water or Air elementals (depending on the battlefield terrain) to fight for the hero.\n\nSummons 2 x Spell Power elementals; the type depends on the battlefield: Lava and Fiery Fields give Fire Elementals; water, Snow, Swamp and Lucid Pools give Water Elementals; Dirt, Rough, Subterranean and Rocklands give Land Elementals; Grass, Sand and Magic Clouds give Wind Elementals; mod terrains go by their nature (ice, shoals and beaches give Water, forests and meadows give Wind, highlands, wastelands and canyons give Land), unrecognized ones are random"
+			}
+		},
+		"animation": {}
+	},
+	"h5Resurrect": {
+		"type": "combat",
+		// Resurrect
+		"name": "Resurrection (H5)",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false,
+			"01lightSchool": true
+		},
+		"level": 5,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"flags": {
+			"special": true,
+			"positive": true,
+			"rising": true
+		},
+		"graphics": {
+			"iconBook": "h5/spells/h5Resurrect/Book",
+			"iconScroll": "h5/spells/h5Resurrect/Scroll",
+			"iconScenarioBonus": "h5/spells/h5Resurrect/Scenario",
+			"iconEffect": "h5/spells/h5Resurrect/Effect"
+		},
+		"animation": {
+			"affect": [
+				{
+					"effectName": "h5light_Spells_Resurrect"
+				},
+				"h5/fx/Spells_Resurrect"
+			]
+		},
+		"sounds": {
+			"cast": "RESURECT"
+		},
+		"targetType": "CREATURE",
+		"levels": {
+			"base": {
+				"range": "0",
+				"targetModifier": {
+					"smart": true
+				},
+				"battleEffects": {
+					"heal": {
+						"type": "h5Heal",
+						"base": [
+							20.0,
+							40.0,
+							60.0,
+							240.0
+						],
+						"perPower": [
+							5.0,
+							10.0,
+							15.0,
+							30.0
+						],
+						"healLevel": "resurrect",
+						"healPower": "permanent",
+						"hpReduce": 10,
+						"exclude": [
+							"UNDEAD",
+							"NON_LIVING",
+							"MECHANICAL",
+							"SIEGE_WEAPON"
+						]
+					}
+				}
+			},
+			"none": {
+				"cost": 15,
+				"power": 1000,
+				"description": "{Resurrection (H5)}\n\nResurrects the selected friendly creature.\n\nHeals 20 + 5 x Spell Power and can revive creatures; each cast lowers the target's maximum Hit Points to 90% of the current value (for this battle, keeping at least 20% of the original)"
+			},
+			"basic": {
+				"cost": 15,
+				"power": 1000,
+				"description": "{Basic Resurrection (H5)}\n\nResurrects the selected friendly creature.\n\nHeals 40 + 10 x Spell Power and can revive creatures; each cast lowers the target's maximum Hit Points to 90% of the current value (for this battle, keeping at least 20% of the original)"
+			},
+			"advanced": {
+				"cost": 15,
+				"power": 1000,
+				"description": "{Advanced Resurrection (H5)}\n\nResurrects the selected friendly creature.\n\nHeals 60 + 15 x Spell Power and can revive creatures; each cast lowers the target's maximum Hit Points to 90% of the current value (for this battle, keeping at least 20% of the original)"
+			},
+			"expert": {
+				"cost": 15,
+				"power": 1000,
+				"description": "{Expert Resurrection (H5)}\n\nResurrects the selected friendly creature.\n\nHeals 240 + 30 x Spell Power and can revive creatures; each cast lowers the target's maximum Hit Points to 90% of the current value (for this battle, keeping at least 20% of the original)"
+			}
+		},
+		"targetCondition": {
+			"noneOf": {
+				"bonus.UNDEAD": "normal",
+				"bonus.NON_LIVING": "normal",
+				"bonus.MECHANICAL": "normal",
+				"bonus.SIEGE_WEAPON": "absolute"
+			}
+		}
+	},
+	"h5ConjurePhoenix": {
+		"type": "combat",
+		// ConjurePhoenix
+		"name": "Conjure Phoenix (H5)",
+		"school": {
+			"air": true,
+			"earth": true,
+			"fire": true,
+			"water": true
+		},
+		"level": 5,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"flags": {
+			"special": true,
+			"positive": true
+		},
+		"graphics": {
+			"iconBook": "h5/spells/h5ConjurePhoenix/Book",
+			"iconScroll": "h5/spells/h5ConjurePhoenix/Scroll",
+			"iconScenarioBonus": "h5/spells/h5ConjurePhoenix/Scenario",
+			"iconEffect": "h5/spells/h5ConjurePhoenix/Effect"
+		},
+		"sounds": {
+			"cast": "SUMNELM"
+		},
+		"targetType": "NO_TARGET",
+		"levels": {
+			"base": {
+				"range": "X",
+				"targetModifier": {
+					"smart": true
+				},
+				"battleEffects": {
+					"summon": {
+						"type": "h5Summon",
+						"ids": [
+							"h5NeutralsPhoenix"
+						],
+						"byHealth": true,
+						"base": [
+							75,
+							100,
+							150,
+							300
+						],
+						"perPower": [
+							8,
+							10,
+							15,
+							30
+						],
+						"exclusive": true
+					}
+				}
+			},
+			"none": {
+				"cost": 35,
+				"power": 1000,
+				"description": "{Conjure Phoenix (H5)}\n\nSummons a Phoenix to fight for your hero in battle. Only one Phoenix can be on the battlefield at any time.\n\nSummons a stack of Phoenixes with 75 + 8 x Spell Power total Hit Points (number of Phoenixes based on their Hit Points)"
+			},
+			"basic": {
+				"cost": 35,
+				"power": 1000,
+				"description": "{Basic Conjure Phoenix (H5)}\n\nSummons a Phoenix to fight for your hero in battle. Only one Phoenix can be on the battlefield at any time.\n\nSummons a stack of Phoenixes with 100 + 10 x Spell Power total Hit Points (number of Phoenixes based on their Hit Points)"
+			},
+			"advanced": {
+				"cost": 35,
+				"power": 1000,
+				"description": "{Advanced Conjure Phoenix (H5)}\n\nSummons a Phoenix to fight for your hero in battle. Only one Phoenix can be on the battlefield at any time.\n\nSummons a stack of Phoenixes with 150 + 15 x Spell Power total Hit Points (number of Phoenixes based on their Hit Points)"
+			},
+			"expert": {
+				"cost": 35,
+				"power": 1000,
+				"description": "{Expert Conjure Phoenix (H5)}\n\nSummons a Phoenix to fight for your hero in battle. Only one Phoenix can be on the battlefield at any time.\n\nSummons a stack of Phoenixes with 300 + 30 x Spell Power total Hit Points (number of Phoenixes based on their Hit Points)"
+			}
+		},
+		"animation": {
+			"affect": [
+				{
+					"effectName": "h5light_Spells_Resurrect"
+				},
+				"h5/fx/Spells_Resurrect"
+			]
+		}
+	},
+	"h5Firewall": {
+		"type": "combat",
+		// Firewall
+		"name": "Fire Wall (H5)",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": true,
+			"water": false
+		},
+		"level": 3,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"flags": {
+			"special": true,
+			"damage": true,
+			"negative": true
+		},
+		"graphics": {
+			"iconBook": "h5/spells/h5Firewall/Book",
+			"iconScroll": "h5/spells/h5Firewall/Scroll",
+			"iconScenarioBonus": "h5/spells/h5Firewall/Scenario",
+			"iconEffect": "h5/spells/h5Firewall/Effect"
+		},
+		"sounds": {
+			"cast": "FIREWALL"
+		},
+		"targetType": "LOCATION",
+		"levels": {
+			"base": {
+				"range": "0",
+				"targetModifier": {
+					"clearAffected": true
+				},
+				"battleEffects": {}
+			},
+			"none": {
+				"cost": 16,
+				"power": 1000,
+				"description": "{Fire Wall (H5)}\n\nCreates a wall of fire in the selected area of the battlefield. For the next few rounds it deals Fire damage to creatures entering the area.\n\nThe wall lasts 3 rounds; stacks entering or standing in it take 9 + 9 x Spell Power Fire damage; the wall is 2 hexes long",
+				"battleEffects": {
+					"obstacle0": {
+						"type": "obstacle",
+						"hidden": false,
+						"passable": true,
+						"trap": false,
+						"triggerAbility": "h5FireWallTrigger",
+						"turnsRemaining": 3,
+						"attacker": {
+							"shape": [
+								[
+									""
+								]
+							],
+							"range": [
+								[
+									""
+								]
+							],
+							"animation": "h5/fx/Spells_FireWall_seg20_loop",
+							"appearAnimation": "h5/fx/Spells_FireWall_seg20_appear",
+							"removalAnimation": "h5/fx/Spells_FireWall_seg20_removal"
+						},
+						"defender": {
+							"shape": [
+								[
+									""
+								]
+							],
+							"range": [
+								[
+									""
+								]
+							],
+							"animation": "h5/fx/Spells_FireWall_seg20_loop",
+							"appearAnimation": "h5/fx/Spells_FireWall_seg20_appear",
+							"removalAnimation": "h5/fx/Spells_FireWall_seg20_removal"
+						}
+					},
+					"obstacle1": {
+						"type": "obstacle",
+						"hidden": false,
+						"passable": true,
+						"trap": false,
+						"triggerAbility": "h5FireWallTrigger",
+						"turnsRemaining": 3,
+						"attacker": {
+							"shape": [
+								[
+									""
+								]
+							],
+							"range": [
+								[
+									"TR"
+								]
+							],
+							"animation": "h5/fx/Spells_FireWall_seg21_loop",
+							"appearAnimation": "h5/fx/Spells_FireWall_seg21_appear",
+							"removalAnimation": "h5/fx/Spells_FireWall_seg21_removal"
+						},
+						"defender": {
+							"shape": [
+								[
+									""
+								]
+							],
+							"range": [
+								[
+									"TL"
+								]
+							],
+							"animation": "h5/fx/Spells_FireWall_seg21_loop",
+							"appearAnimation": "h5/fx/Spells_FireWall_seg21_appear",
+							"removalAnimation": "h5/fx/Spells_FireWall_seg21_removal"
+						}
+					}
+				}
+			},
+			"basic": {
+				"cost": 16,
+				"power": 1000,
+				"description": "{Basic Fire Wall (H5)}\n\nCreates a wall of fire in the selected area of the battlefield. For the next few rounds it deals Fire damage to creatures entering the area.\n\nThe wall lasts 3 rounds; stacks entering or standing in it take 11 + 11 x Spell Power Fire damage; the wall is 2 hexes long",
+				"battleEffects": {
+					"obstacle0": {
+						"type": "obstacle",
+						"hidden": false,
+						"passable": true,
+						"trap": false,
+						"triggerAbility": "h5FireWallTrigger",
+						"turnsRemaining": 3,
+						"attacker": {
+							"shape": [
+								[
+									""
+								]
+							],
+							"range": [
+								[
+									""
+								]
+							],
+							"animation": "h5/fx/Spells_FireWall_seg20_loop",
+							"appearAnimation": "h5/fx/Spells_FireWall_seg20_appear",
+							"removalAnimation": "h5/fx/Spells_FireWall_seg20_removal"
+						},
+						"defender": {
+							"shape": [
+								[
+									""
+								]
+							],
+							"range": [
+								[
+									""
+								]
+							],
+							"animation": "h5/fx/Spells_FireWall_seg20_loop",
+							"appearAnimation": "h5/fx/Spells_FireWall_seg20_appear",
+							"removalAnimation": "h5/fx/Spells_FireWall_seg20_removal"
+						}
+					},
+					"obstacle1": {
+						"type": "obstacle",
+						"hidden": false,
+						"passable": true,
+						"trap": false,
+						"triggerAbility": "h5FireWallTrigger",
+						"turnsRemaining": 3,
+						"attacker": {
+							"shape": [
+								[
+									""
+								]
+							],
+							"range": [
+								[
+									"TR"
+								]
+							],
+							"animation": "h5/fx/Spells_FireWall_seg21_loop",
+							"appearAnimation": "h5/fx/Spells_FireWall_seg21_appear",
+							"removalAnimation": "h5/fx/Spells_FireWall_seg21_removal"
+						},
+						"defender": {
+							"shape": [
+								[
+									""
+								]
+							],
+							"range": [
+								[
+									"TL"
+								]
+							],
+							"animation": "h5/fx/Spells_FireWall_seg21_loop",
+							"appearAnimation": "h5/fx/Spells_FireWall_seg21_appear",
+							"removalAnimation": "h5/fx/Spells_FireWall_seg21_removal"
+						}
+					}
+				}
+			},
+			"advanced": {
+				"cost": 16,
+				"power": 1000,
+				"battleEffects": {
+					"obstacle0": {
+						"type": "obstacle",
+						"hidden": false,
+						"passable": true,
+						"trap": false,
+						"triggerAbility": "h5FireWallTrigger",
+						"turnsRemaining": 3,
+						"attacker": {
+							"shape": [
+								[
+									""
+								]
+							],
+							"range": [
+								[
+									""
+								]
+							],
+							"animation": "h5/fx/Spells_FireWall_seg30_loop",
+							"appearAnimation": "h5/fx/Spells_FireWall_seg30_appear",
+							"removalAnimation": "h5/fx/Spells_FireWall_seg30_removal"
+						},
+						"defender": {
+							"shape": [
+								[
+									""
+								]
+							],
+							"range": [
+								[
+									""
+								]
+							],
+							"animation": "h5/fx/Spells_FireWall_seg30_loop",
+							"appearAnimation": "h5/fx/Spells_FireWall_seg30_appear",
+							"removalAnimation": "h5/fx/Spells_FireWall_seg30_removal"
+						}
+					},
+					"obstacle1": {
+						"type": "obstacle",
+						"hidden": false,
+						"passable": true,
+						"trap": false,
+						"triggerAbility": "h5FireWallTrigger",
+						"turnsRemaining": 3,
+						"attacker": {
+							"shape": [
+								[
+									""
+								]
+							],
+							"range": [
+								[
+									"TR"
+								]
+							],
+							"animation": "h5/fx/Spells_FireWall_seg31_loop",
+							"appearAnimation": "h5/fx/Spells_FireWall_seg31_appear",
+							"removalAnimation": "h5/fx/Spells_FireWall_seg31_removal"
+						},
+						"defender": {
+							"shape": [
+								[
+									""
+								]
+							],
+							"range": [
+								[
+									"TL"
+								]
+							],
+							"animation": "h5/fx/Spells_FireWall_seg31_loop",
+							"appearAnimation": "h5/fx/Spells_FireWall_seg31_appear",
+							"removalAnimation": "h5/fx/Spells_FireWall_seg31_removal"
+						}
+					},
+					"obstacle2": {
+						"type": "obstacle",
+						"hidden": false,
+						"passable": true,
+						"trap": false,
+						"triggerAbility": "h5FireWallTrigger",
+						"turnsRemaining": 3,
+						"attacker": {
+							"shape": [
+								[
+									""
+								]
+							],
+							"range": [
+								[
+									"TR",
+									"TL"
+								]
+							],
+							"animation": "h5/fx/Spells_FireWall_seg32_loop",
+							"appearAnimation": "h5/fx/Spells_FireWall_seg32_appear",
+							"removalAnimation": "h5/fx/Spells_FireWall_seg32_removal"
+						},
+						"defender": {
+							"shape": [
+								[
+									""
+								]
+							],
+							"range": [
+								[
+									"TL",
+									"TR"
+								]
+							],
+							"animation": "h5/fx/Spells_FireWall_seg32_loop",
+							"appearAnimation": "h5/fx/Spells_FireWall_seg32_appear",
+							"removalAnimation": "h5/fx/Spells_FireWall_seg32_removal"
+						}
+					}
+				},
+				"description": "{Advanced Fire Wall (H5)}\n\nCreates a wall of fire in the selected area of the battlefield. For the next few rounds it deals Fire damage to creatures entering the area.\n\nThe wall lasts 3 rounds; stacks entering or standing in it take 13 + 13 x Spell Power Fire damage; the wall is 3 hexes long"
+			},
+			"expert": {
+				"cost": 16,
+				"power": 1000,
+				"battleEffects": {
+					"obstacle0": {
+						"type": "obstacle",
+						"hidden": false,
+						"passable": true,
+						"trap": false,
+						"triggerAbility": "h5FireWallTrigger",
+						"turnsRemaining": 3,
+						"attacker": {
+							"shape": [
+								[
+									""
+								]
+							],
+							"range": [
+								[
+									""
+								]
+							],
+							"animation": "h5/fx/Spells_FireWall_seg30_loop",
+							"appearAnimation": "h5/fx/Spells_FireWall_seg30_appear",
+							"removalAnimation": "h5/fx/Spells_FireWall_seg30_removal"
+						},
+						"defender": {
+							"shape": [
+								[
+									""
+								]
+							],
+							"range": [
+								[
+									""
+								]
+							],
+							"animation": "h5/fx/Spells_FireWall_seg30_loop",
+							"appearAnimation": "h5/fx/Spells_FireWall_seg30_appear",
+							"removalAnimation": "h5/fx/Spells_FireWall_seg30_removal"
+						}
+					},
+					"obstacle1": {
+						"type": "obstacle",
+						"hidden": false,
+						"passable": true,
+						"trap": false,
+						"triggerAbility": "h5FireWallTrigger",
+						"turnsRemaining": 3,
+						"attacker": {
+							"shape": [
+								[
+									""
+								]
+							],
+							"range": [
+								[
+									"TR"
+								]
+							],
+							"animation": "h5/fx/Spells_FireWall_seg31_loop",
+							"appearAnimation": "h5/fx/Spells_FireWall_seg31_appear",
+							"removalAnimation": "h5/fx/Spells_FireWall_seg31_removal"
+						},
+						"defender": {
+							"shape": [
+								[
+									""
+								]
+							],
+							"range": [
+								[
+									"TL"
+								]
+							],
+							"animation": "h5/fx/Spells_FireWall_seg31_loop",
+							"appearAnimation": "h5/fx/Spells_FireWall_seg31_appear",
+							"removalAnimation": "h5/fx/Spells_FireWall_seg31_removal"
+						}
+					},
+					"obstacle2": {
+						"type": "obstacle",
+						"hidden": false,
+						"passable": true,
+						"trap": false,
+						"triggerAbility": "h5FireWallTrigger",
+						"turnsRemaining": 3,
+						"attacker": {
+							"shape": [
+								[
+									""
+								]
+							],
+							"range": [
+								[
+									"TR",
+									"TL"
+								]
+							],
+							"animation": "h5/fx/Spells_FireWall_seg32_loop",
+							"appearAnimation": "h5/fx/Spells_FireWall_seg32_appear",
+							"removalAnimation": "h5/fx/Spells_FireWall_seg32_removal"
+						},
+						"defender": {
+							"shape": [
+								[
+									""
+								]
+							],
+							"range": [
+								[
+									"TL",
+									"TR"
+								]
+							],
+							"animation": "h5/fx/Spells_FireWall_seg32_loop",
+							"appearAnimation": "h5/fx/Spells_FireWall_seg32_appear",
+							"removalAnimation": "h5/fx/Spells_FireWall_seg32_removal"
+						}
+					}
+				},
+				"description": "{Expert Fire Wall (H5)}\n\nCreates a wall of fire in the selected area of the battlefield. For the next few rounds it deals Fire damage to creatures entering the area.\n\nThe wall lasts 3 rounds; stacks entering or standing in it take 15 + 15 x Spell Power Fire damage; the wall is 3 hexes long"
+			}
+		},
+		"animation": {
+			"hit": [
+				"h5/fx/Spells_FireWall_Effect"
+			]
+		}
+	},
+	"h5StoneSpikes": {
+		"type": "combat",
+		// StoneSpikes
+		"name": "Stone Spikes (H5)",
+		"school": {
+			"air": false,
+			"earth": true,
+			"fire": false,
+			"water": false
+		},
+		"level": 1,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"flags": {
+			"special": true,
+			"damage": true,
+			"negative": true
+		},
+		"graphics": {
+			"iconBook": "h5/spells/h5StoneSpikes/Book",
+			"iconScroll": "h5/spells/h5StoneSpikes/Scroll",
+			"iconScenarioBonus": "h5/spells/h5StoneSpikes/Scenario",
+			"iconEffect": "h5/spells/h5StoneSpikes/Effect"
+		},
+		"animation": {
+			"hit": [
+				"h5/fx/Spells_StoneSpikes_Effect"
+			]
+		},
+		"sounds": {
+			"cast": "METEOR"
+		},
+		"targetType": "LOCATION",
+		"levels": {
+			"base": {
+				"range": "0,1",
+				"targetModifier": {
+					"smart": false
+				},
+				"battleEffects": {
+					"directDamage": {
+						"type": "h5Damage",
+						"base": [
+							24.0,
+							32.0,
+							40.0,
+							48.0
+						],
+						"perPower": [
+							8.0,
+							8.0,
+							8.0,
+							8.0
+						]
+					}
+				}
+			},
+			"none": {
+				"cost": 5,
+				"power": 1000,
+				"description": "{Stone Spikes (H5)}\n\nDeals Earth damage to all creatures in the target area (cross-shaped).\n\nSpell damage: 24 + 8 x Spell Power"
+			},
+			"basic": {
+				"cost": 5,
+				"power": 1000,
+				"description": "{Basic Stone Spikes (H5)}\n\nDeals Earth damage to all creatures in the target area (cross-shaped).\n\nSpell damage: 32 + 8 x Spell Power"
+			},
+			"advanced": {
+				"cost": 5,
+				"power": 1000,
+				"description": "{Advanced Stone Spikes (H5)}\n\nDeals Earth damage to all creatures in the target area (cross-shaped).\n\nSpell damage: 40 + 8 x Spell Power"
+			},
+			"expert": {
+				"cost": 5,
+				"power": 1000,
+				"description": "{Expert Stone Spikes (H5)}\n\nDeals Earth damage to all creatures in the target area (cross-shaped).\n\nSpell damage: 48 + 8 x Spell Power"
+			}
+		}
+	},
+	"h5Vampirism": {
+		"type": "combat",
+		// Vampirism
+		"name": "Vampirism (H5)",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false,
+			"02darkSchool": true
+		},
+		"level": 5,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"flags": {
+			"special": true,
+			"positive": true
+		},
+		"graphics": {
+			"iconBook": "h5/spells/h5Vampirism/Book",
+			"iconScroll": "h5/spells/h5Vampirism/Scroll",
+			"iconScenarioBonus": "h5/spells/h5Vampirism/Scenario",
+			"iconEffect": "h5/spells/h5Vampirism/Effect"
+		},
+		"animation": {
+			"affect": [
+				"h5/fx/Spells_Vampitizm_Vampirizm_Effect"
+			]
+		},
+		"sounds": {
+			"cast": "SACRIF1"
+		},
+		"targetType": "CREATURE",
+		"levels": {
+			"base": {
+				"range": "0",
+				"targetModifier": {
+					"smart": true
+				},
+				"battleEffects": {
+					"attach": {
+						"type": "h5Attach",
+						"eventScript": "lifeDrain",
+						"base": [
+							10.0,
+							20.0,
+							30.0,
+							50.0
+						],
+						"perPower": [
+							2.0,
+							2.0,
+							2.0,
+							2.0
+						],
+						"durBase": [
+							0.0,
+							0.0,
+							0.0,
+							0.0
+						],
+						"durPer": [
+							1.0,
+							1.0,
+							1.0,
+							1.0
+						],
+						"exclude": [
+							"NON_LIVING",
+							"MECHANICAL",
+							"SIEGE_WEAPON"
+						],
+						"icon": "h5/spells/h5Vampirism/Effect"
+					}
+				}
+			},
+			"none": {
+				"cost": 10,
+				"power": 1000,
+				"description": "{Vampirism (H5)}\n\nCan be cast on friendly non-elemental, non-mechanical troops, giving the target the Life Drain ability: in melee it drains Hit Points from living enemies to heal and resurrect itself. Lasts a number of rounds equal to the hero's Spell Power.\n\nGains Life Drain: drains 10 + 2 x Spell Power% of the damage dealt to restore Hit Points and resurrect, lasts 1 x Spell Power rounds (rounded, at least 1)"
+			},
+			"basic": {
+				"cost": 10,
+				"power": 1000,
+				"description": "{Basic Vampirism (H5)}\n\nCan be cast on friendly non-elemental, non-mechanical troops, giving the target the Life Drain ability: in melee it drains Hit Points from living enemies to heal and resurrect itself. Lasts a number of rounds equal to the hero's Spell Power.\n\nGains Life Drain: drains 20 + 2 x Spell Power% of the damage dealt to restore Hit Points and resurrect, lasts 1 x Spell Power rounds (rounded, at least 1)"
+			},
+			"advanced": {
+				"cost": 10,
+				"power": 1000,
+				"description": "{Advanced Vampirism (H5)}\n\nCan be cast on friendly non-elemental, non-mechanical troops, giving the target the Life Drain ability: in melee it drains Hit Points from living enemies to heal and resurrect itself. Lasts a number of rounds equal to the hero's Spell Power.\n\nGains Life Drain: drains 30 + 2 x Spell Power% of the damage dealt to restore Hit Points and resurrect, lasts 1 x Spell Power rounds (rounded, at least 1)"
+			},
+			"expert": {
+				"cost": 10,
+				"power": 1000,
+				"description": "{Expert Vampirism (H5)}\n\nCan be cast on friendly non-elemental, non-mechanical troops, giving the target the Life Drain ability: in melee it drains Hit Points from living enemies to heal and resurrect itself. Lasts a number of rounds equal to the hero's Spell Power.\n\nGains Life Drain: drains 50 + 2 x Spell Power% of the damage dealt to restore Hit Points and resurrect, lasts 1 x Spell Power rounds (rounded, at least 1)"
+			}
+		},
+		"targetCondition": {
+			"noneOf": {
+				"bonus.NON_LIVING": "normal",
+				"bonus.MECHANICAL": "normal",
+				"bonus.SIEGE_WEAPON": "absolute"
+			}
+		}
+	},
+	"h5DeepFreeze": {
+		"type": "combat",
+		// DeepFreeze
+		"name": "Deep Freeze (H5)",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": true
+		},
+		"level": 5,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"flags": {
+			"special": true,
+			"damage": true,
+			"negative": true
+		},
+		"graphics": {
+			"iconBook": "h5/spells/h5DeepFreeze/Book",
+			"iconScroll": "h5/spells/h5DeepFreeze/Scroll",
+			"iconScenarioBonus": "h5/spells/h5DeepFreeze/Scenario",
+			"iconEffect": "h5/spells/h5DeepFreeze/Effect"
+		},
+		"animation": {
+			"affect": [
+				"h5/fx/Spells_DeepFreeze_DeepFreeze_Effect"
+			]
+		},
+		"sounds": {
+			"cast": "ICERAY"
+		},
+		"targetType": "CREATURE",
+		"levels": {
+			"base": {
+				"range": "0",
+				"targetModifier": {
+					"smart": true
+				},
+				"battleEffects": {
+					"directDamage": {
+						"type": "h5Damage",
+						"base": [
+							10.0,
+							14.0,
+							15.0,
+							30.0
+						],
+						"perPower": [
+							10.0,
+							14.0,
+							15.0,
+							30.0
+						]
+					},
+					"freeze": {
+						"type": "h5Timed",
+						"optional": true,
+						"durBase": [
+							1,
+							1,
+							1,
+							1
+						],
+						"bonus": {
+							"frozen": {
+								"type": "GENERAL_DAMAGE_REDUCTION",
+								"duration": "N_TURNS",
+								"subtype": "damageTypeAll",
+								"val": 0
+							}
+						},
+						"values": {
+							"frozen": {
+								"base": [
+									-1,
+									-3,
+									-3,
+									-3
+								],
+								"per": [
+									-1,
+									-3,
+									-3,
+									-3
+								]
+							}
+						}
+					}
+				}
+			},
+			"none": {
+				"cost": 11,
+				"power": 1000,
+				"description": "{Deep Freeze (H5)}\n\nFreezes the target, dealing instant cold damage and increasing the non-magical damage it takes for a while.\n\nSpell damage: 10 + 10 x Spell Power; for the next 1 round, physical damage taken is increased by 1 + 1 x Spell Power %"
+			},
+			"basic": {
+				"cost": 11,
+				"power": 1000,
+				"description": "{Basic Deep Freeze (H5)}\n\nFreezes the target, dealing instant cold damage and increasing the non-magical damage it takes for a while.\n\nSpell damage: 14 + 14 x Spell Power; for the next 1 round, physical damage taken is increased by 3 + 3 x Spell Power %"
+			},
+			"advanced": {
+				"cost": 11,
+				"power": 1000,
+				"description": "{Advanced Deep Freeze (H5)}\n\nFreezes the target, dealing instant cold damage and increasing the non-magical damage it takes for a while.\n\nSpell damage: 15 + 15 x Spell Power; for the next 1 round, physical damage taken is increased by 3 + 3 x Spell Power %"
+			},
+			"expert": {
+				"cost": 11,
+				"power": 1000,
+				"description": "{Expert Deep Freeze (H5)}\n\nFreezes the target, dealing instant cold damage and increasing the non-magical damage it takes for a while.\n\nSpell damage: 30 + 30 x Spell Power; for the next 1 round, physical damage taken is increased by 3 + 3 x Spell Power %"
+			}
+		}
+	},
+	"h5Regeneration": {
+		"type": "combat",
+		// Regeneration
+		"name": "Regeneration (H5)",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false,
+			"01lightSchool": true
+		},
+		"level": 2,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"flags": {
+			"special": true,
+			"positive": true
+		},
+		"graphics": {
+			"iconBook": "h5/spells/h5Regeneration/Book",
+			"iconScroll": "h5/spells/h5Regeneration/Scroll",
+			"iconScenarioBonus": "h5/spells/h5Regeneration/Scenario",
+			"iconEffect": "h5/spells/h5Regeneration/Effect"
+		},
+		"animation": {
+			"affect": [
+				"h5/fx/Spells_Regeneration_Effect"
+			]
+		},
+		"sounds": {
+			"cast": "CURE"
+		},
+		"targetType": "CREATURE",
+		"levels": {
+			"base": {
+				"range": "0",
+				"targetModifier": {
+					"smart": true
+				},
+				"battleEffects": {
+					"attach": {
+						"type": "h5Attach",
+						"eventScript": "h5RegenTick",
+						"base": [
+							75.0,
+							75.0,
+							75.0,
+							75.0
+						],
+						"perPower": [
+							5.0,
+							5.0,
+							5.0,
+							5.0
+						],
+						"durBase": [
+							1.0,
+							2.0,
+							3.0,
+							4.0
+						],
+						"durPer": [
+							0.0,
+							0.0,
+							0.0,
+							0.0
+						],
+						"exclude": [
+							"UNDEAD",
+							"NON_LIVING",
+							"MECHANICAL",
+							"SIEGE_WEAPON"
+						],
+						"icon": "h5/spells/h5Regeneration/Effect"
+					}
+				}
+			},
+			"none": {
+				"cost": 8,
+				"power": 1000,
+				"description": "{Regeneration (H5)}\n\nCan be cast on friendly creatures that are not undead, mechanical or elemental; restores some Hit Points every round. Can resurrect creatures; has no mass version.\n\nRestores 75 + 5 x Spell Power Hit Points at the start of each round and can resurrect creatures (only until the battle ends), lasts 1 round"
+			},
+			"basic": {
+				"cost": 8,
+				"power": 1000,
+				"description": "{Basic Regeneration (H5)}\n\nCan be cast on friendly creatures that are not undead, mechanical or elemental; restores some Hit Points every round. Can resurrect creatures; has no mass version.\n\nRestores 75 + 5 x Spell Power Hit Points at the start of each round and can resurrect creatures (only until the battle ends), lasts 2 rounds"
+			},
+			"advanced": {
+				"cost": 8,
+				"power": 1000,
+				"description": "{Advanced Regeneration (H5)}\n\nCan be cast on friendly creatures that are not undead, mechanical or elemental; restores some Hit Points every round. Can resurrect creatures; has no mass version.\n\nRestores 75 + 5 x Spell Power Hit Points at the start of each round and can resurrect creatures (only until the battle ends), lasts 3 rounds"
+			},
+			"expert": {
+				"cost": 8,
+				"power": 1000,
+				"description": "{Expert Regeneration (H5)}\n\nCan be cast on friendly creatures that are not undead, mechanical or elemental; restores some Hit Points every round. Can resurrect creatures; has no mass version.\n\nRestores 75 + 5 x Spell Power Hit Points at the start of each round and can resurrect creatures (only until the battle ends), lasts 4 rounds"
+			}
+		},
+		"targetCondition": {
+			"noneOf": {
+				"bonus.UNDEAD": "normal",
+				"bonus.NON_LIVING": "normal",
+				"bonus.MECHANICAL": "normal",
+				"bonus.SIEGE_WEAPON": "absolute"
+			}
+		}
+	},
+	"h5DivineVengeance": {
+		"type": "combat",
+		// DivineVengeance
+		"name": "Divine Vengeance (H5)",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false,
+			"01lightSchool": true
+		},
+		"level": 4,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"flags": {
+			"special": true,
+			"damage": true,
+			"negative": true
+		},
+		"graphics": {
+			"iconBook": "h5/spells/h5DivineVengeance/Book",
+			"iconScroll": "h5/spells/h5DivineVengeance/Scroll",
+			"iconScenarioBonus": "h5/spells/h5DivineVengeance/Scenario",
+			"iconEffect": "h5/spells/h5DivineVengeance/Effect"
+		},
+		"animation": {
+			"affect": [
+				{
+					"effectName": "h5light_Spells_DivineVengeance_FX_DivineVengeance_Effect"
+				},
+				"h5/fx/Spells_DivineVengeance_FX_DivineVengeance_Effect"
+			]
+		},
+		"sounds": {
+			"cast": "LIGHTBLT"
+		},
+		"targetType": "CREATURE",
+		"levels": {
+			"base": {
+				"range": "0",
+				"targetModifier": {
+					"smart": true
+				},
+				"battleEffects": {
+					"directDamage": {
+						"type": "h5Damage",
+						"base": [
+							7.0,
+							14.0,
+							21.0,
+							28.0
+						],
+						"perPower": [
+							1.0,
+							2.0,
+							3.0,
+							4.0
+						],
+						"frags": true
+					}
+				}
+			},
+			"none": {
+				"cost": 14,
+				"power": 1000,
+				"description": "{Divine Vengeance (H5)}\n\nCan be cast on an enemy that has killed your troops; the damage depends on how many of your troops the target has killed.\n\nSpell damage: 7 + 1 x Spell Power, multiplied by the square root of the total level of creatures the target has killed this battle"
+			},
+			"basic": {
+				"cost": 14,
+				"power": 1000,
+				"description": "{Basic Divine Vengeance (H5)}\n\nCan be cast on an enemy that has killed your troops; the damage depends on how many of your troops the target has killed.\n\nSpell damage: 14 + 2 x Spell Power, multiplied by the square root of the total level of creatures the target has killed this battle"
+			},
+			"advanced": {
+				"cost": 14,
+				"power": 1000,
+				"description": "{Advanced Divine Vengeance (H5)}\n\nCan be cast on an enemy that has killed your troops; the damage depends on how many of your troops the target has killed.\n\nSpell damage: 21 + 3 x Spell Power, multiplied by the square root of the total level of creatures the target has killed this battle"
+			},
+			"expert": {
+				"cost": 14,
+				"power": 1000,
+				"description": "{Expert Divine Vengeance (H5)}\n\nCan be cast on an enemy that has killed your troops; the damage depends on how many of your troops the target has killed.\n\nSpell damage: 28 + 4 x Spell Power, multiplied by the square root of the total level of creatures the target has killed this battle"
+			}
+		}
+	}
+}

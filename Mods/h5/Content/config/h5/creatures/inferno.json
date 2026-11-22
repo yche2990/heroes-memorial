@@ -1,0 +1,5933 @@
+{
+	"h5Inferno3rdArchDemon": {
+		"name": {
+			"singular": "Arch Demon",
+			"plural": "Arch Demons"
+		},
+		"description": "Devils, Arch Devils and Arch Demons are the level 7 units of the Heroes V Inferno (merged into Inferno). All of them can teleport and have {Demonic} (-25% damage from Fire magic, +25% damage from Light magic). Arch Devils also have {Summon Pit Lord} (turns a demon corpse into Pit Lords, 1 time per battle, 2 times from experience level 7). Arch Demons also have {Teleport} (teleports one unit within range to its side).\n\nArch Demons are without doubt the leaders of the infernal hosts. These huge, savage monsters tower over the battlefield, and enemies fall to either side beneath their terrible weapons. Arch Demons can charge into the enemy ranks in an instant, and their immense strength lets them knock foes down with ease.\n\nSee also {Devil}, {Arch Devil}.",
+		"faction": "inferno",
+		"level": 7,
+		"cost": {
+			"gold": 3565,
+			"sulfur": 2
+		},
+		"speed": 12,
+		"hitPoints": 213,
+		"attack": 23,
+		"defense": 22,
+		"damage": {
+			"min": 32,
+			"max": 58
+		},
+		"doubleWide": true,
+		"fightValue": 4738,
+		"aiValue": 6172,
+		"growth": 1,
+		"advMapAmount": {
+			"min": 1,
+			"max": 3
+		},
+		"abilities": {
+			"flying": {
+				"type": "FLYING",
+				"subtype": "movementTeleporting"
+			},
+			"demonic": {
+				"type": "tears-of-ashan:DEMONIC",
+				"description": "{Demonic}\nFire spell damage -25%\nLight spell damage +25%"
+			},
+			"fireReduction": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "fire",
+				"val": 25,
+				"hidden": true
+			},
+			"lightVulnerability": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "01lightSchool",
+				"val": -25,
+				"hidden": true
+			},
+			"cast_h5AbSummonOther": {
+				"type": "SPELLCASTER",
+				"subtype": "h5AbSummonOther",
+				"val": 2,
+				"description": "{Teleport}\nTeleports a stack in\nrange next to itself"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 1,
+				"hidden": true
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 1,
+				"stacking": "h5Inferno3rdArchDemonExpCasts"
+			},
+			"h5GatingInfo": {
+				"type": "H5_GATING_H5C"
+			}
+		},
+		"graphics": {
+			"animation": "h5/Inferno_3rd_ArchDemon/battle.json",
+			"map": "h5/Inferno_3rd_ArchDemon/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Inferno_3rd_ArchDemon/map/atkL.png",
+			"mapAttackFromRight": "h5/Inferno_3rd_ArchDemon/map/atkR.png",
+			"iconLarge": "h5/Inferno_3rd_ArchDemon/iconLarge.png",
+			"iconSmall": "h5/Inferno_3rd_ArchDemon/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_Inferno_T7_attack00.ogg",
+			"wince": "h5/h5_Inferno_T7_hit.ogg",
+			"defend": "h5/h5_Inferno_T7_hit.ogg",
+			"killed": "h5/h5_Inferno_T7_death.ogg",
+			"move": "h5/h5_Inferno_T7_move.ogg",
+			"startMoving": "h5/h5_Inferno_T7_moveStart.ogg",
+			"endMoving": "h5/h5_Inferno_T7_moveEnd.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					10,
+					20,
+					30,
+					40,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "MIND_IMMUNITY",
+					"description": "{Steadfast Mind}\nImmune to Mind spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "NEGATIVE_EFFECTS_IMMUNITY",
+					"subtype": "fire",
+					"description": "{Fire Ward}\nImmune to harmful Fire spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_ATTACK"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "SPELL_IMMUNITY",
+					"subtype": "armageddon",
+					"description": "{Immune to Armageddon}\nUnaffected by Armageddon"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_RETALIATION"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1
+				]
+			}
+		]
+	},
+	"h5Inferno3rdFirebreatherHound": {
+		"name": {
+			"singular": "Firehound",
+			"plural": "Firehounds"
+		},
+		"description": "Hell Hounds, Cerberi and Firehounds are the level 3 units of the Heroes V Inferno (merged into Inferno). All of them have {Demonic} (-25% damage from Fire magic, +25% damage from Light magic). Cerberi also have {No Enemy Retaliation} and {Three-Headed Attack} (attacks the enemies in the 3 hexes in front at once). Firehounds also have {Three-Headed Attack} (attacks the enemies in the 3 hexes in front at once), {No Enemy Retaliation} and {Fire Breath} (the attack also hits the unit behind the target).\n\nFirehounds are not very strong, but they are extremely aggressive; their three heads constantly spew flames, striking fear into their enemies.\n\nSee also {Hell Hound}, {Cerberus}.",
+		"faction": "inferno",
+		"level": 3,
+		"cost": {
+			"gold": 255
+		},
+		"speed": 12,
+		"hitPoints": 16,
+		"attack": 6,
+		"defense": 4,
+		"damage": {
+			"min": 3,
+			"max": 4
+		},
+		"doubleWide": false,
+		"fightValue": 272,
+		"aiValue": 322,
+		"growth": 6,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"demonic": {
+				"type": "tears-of-ashan:DEMONIC",
+				"description": "{Demonic}\nFire spell damage -25%\nLight spell damage +25%"
+			},
+			"fireReduction": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "fire",
+				"val": 25,
+				"hidden": true
+			},
+			"lightVulnerability": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "01lightSchool",
+				"val": -25,
+				"hidden": true
+			},
+			"threeHeadedAttack": {
+				"type": "THREE_HEADED_ATTACK",
+				"description": "{Three-Headed Attack}\nHits enemies in the 3\nhexes in front at once"
+			},
+			"blockRetaliation": {
+				"type": "BLOCKS_RETALIATION",
+				"description": "{No Enemy Retaliation}\nNo enemy retaliation"
+			},
+			"h5FireBreath": {
+				"type": "MULTIHEX_UNIT_ATTACK",
+				"icon": "h5/abilities/h5FireBreath",
+				"addInfo": [
+					"FF"
+				],
+				"description": "{Fire Breath}\nAlso hits the stack\nbehind the target"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 8,
+				"hidden": true
+			},
+			"h5GatingInfo": {
+				"type": "H5_GATING_H5C"
+			}
+		},
+		"graphics": {
+			"animation": "h5/Inferno_3rd_FirebreatherHound/battle.json",
+			"map": "h5/Inferno_3rd_FirebreatherHound/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Inferno_3rd_FirebreatherHound/map/atkL.png",
+			"mapAttackFromRight": "h5/Inferno_3rd_FirebreatherHound/map/atkR.png",
+			"iconLarge": "h5/Inferno_3rd_FirebreatherHound/iconLarge.png",
+			"iconSmall": "h5/Inferno_3rd_FirebreatherHound/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_Inferno_T3_attack00.ogg",
+			"wince": "h5/h5_Inferno_T3_hit.ogg",
+			"defend": "h5/h5_Inferno_T3_hit.ogg",
+			"killed": "h5/h5_Inferno_T3_death.ogg",
+			"move": "h5/h5_Inferno_T3_move.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "NEGATIVE_EFFECTS_IMMUNITY",
+					"subtype": "fire",
+					"description": "{Fire Ward}\nImmune to harmful Fire spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_RETALIATION"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "ENEMY_DEFENCE_REDUCTION"
+				},
+				"values": [
+					3,
+					6,
+					9,
+					12,
+					15,
+					18,
+					21,
+					24,
+					27,
+					30
+				]
+			}
+		]
+	},
+	"h5Inferno3rdHellmare": {
+		"name": {
+			"singular": "Hellmare",
+			"plural": "Hellmares"
+		},
+		"description": "Hell Steeds, Nightmares and Hellmares are the level 5 units of the Heroes V Inferno (merged into Inferno). All of them have {Demonic} (-25% damage from Fire magic, +25% damage from Light magic) and {Fear Attack} (attacks have a chance to make the target flee and reset its ATB to 0). Nightmares also have {Aura of Fear} (-3 Morale for enemies within 3 hexes). Hellmares also have {Searing Aura} (adjacent enemies take 9 × the number of Hellmares in Fire damage before they act).\n\nHellfire, not blood, courses through the veins of the Hellmare. Heat surges from every part of its body, and anyone who dares come near is simply burned to a crisp.\n\nSee also {Hell Steed}, {Nightmare}.",
+		"faction": "inferno",
+		"level": 5,
+		"cost": {
+			"gold": 610
+		},
+		"speed": 11,
+		"hitPoints": 49,
+		"attack": 15,
+		"defense": 15,
+		"damage": {
+			"min": 9,
+			"max": 16
+		},
+		"doubleWide": true,
+		"fightValue": 893,
+		"aiValue": 994,
+		"growth": 3,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"demonic": {
+				"type": "tears-of-ashan:DEMONIC",
+				"description": "{Demonic}\nFire spell damage -25%\nLight spell damage +25%"
+			},
+			"fireReduction": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "fire",
+				"val": 25,
+				"hidden": true
+			},
+			"lightVulnerability": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "01lightSchool",
+				"val": -25,
+				"hidden": true
+			},
+			"h5AreaZone": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5AreaZone",
+				"val": 0,
+				"stacking": "h5AreaZone",
+				"propagator": "BATTLE_WIDE",
+				"hidden": true,
+				"description": "~"
+			},
+			"h5SearingAura": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5SearingAura",
+				"val": 9,
+				"icon": "h5/abilities/h5SearingAura",
+				"description": "{Searing Aura}\nFoes adjacent: 9 x count\nFire dmg before they act"
+			},
+			"h5Fear": {
+				"icon": "h5/abilities/fearAttack",
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5ProcEffect",
+				"addInfo": {
+					"effect": "fear",
+					"pf": 0.8,
+					"melee": true,
+					"ranged": true
+				},
+				"description": "{Fear Attack}\nAttacks may make target\nflee, ATB reset"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 3,
+				"hidden": true
+			},
+			"h5GatingInfo": {
+				"type": "H5_GATING_H5C"
+			}
+		},
+		"graphics": {
+			"animation": "h5/Inferno_3rd_Hellmare/battle.json",
+			"map": "h5/Inferno_3rd_Hellmare/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Inferno_3rd_Hellmare/map/atkL.png",
+			"mapAttackFromRight": "h5/Inferno_3rd_Hellmare/map/atkR.png",
+			"iconLarge": "h5/Inferno_3rd_Hellmare/iconLarge.png",
+			"iconSmall": "h5/Inferno_3rd_Hellmare/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_Inferno_T5_attack00.ogg",
+			"wince": "h5/h5_Inferno_T5_hit.ogg",
+			"defend": "h5/h5_Inferno_T5_hit.ogg",
+			"killed": "h5/h5_Inferno_T5_death.ogg",
+			"move": "h5/h5_Inferno_T5_move.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					3,
+					4,
+					5,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					3,
+					4,
+					4,
+					6,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					2,
+					3,
+					3,
+					4,
+					5,
+					6,
+					6,
+					7
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					7
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_RETALIATION"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "SPELL_AFTER_ATTACK",
+					"subtype": "misfortune",
+					"addInfo": [
+						2,
+						2
+					]
+				},
+				"values": [
+					4,
+					8,
+					12,
+					16,
+					20,
+					24,
+					28,
+					32,
+					36,
+					40
+				]
+			},
+			{
+				"bonus": {
+					"type": "NEGATIVE_EFFECTS_IMMUNITY",
+					"subtype": "fire",
+					"description": "{Fire Ward}\nImmune to harmful Fire spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h5Inferno3rdHornedLeaper": {
+		"name": {
+			"singular": "Horned Grunt",
+			"plural": "Horned Grunts"
+		},
+		"description": "Horned Demons, Horned Overseers and Horned Grunts are the level 2 units of the Heroes V Inferno (merged into Inferno). All of them have {Demonic} (-25% damage from Fire magic, +25% damage from Light magic) and {Enrage} (Attack increases when an allied stack is destroyed). Horned Overseers also have {Explosion} (all adjacent units take Fire damage while it remains unharmed, 1 time per battle). Horned Grunts also have {Leap} (leaps 3–8 hexes to attack, +10% damage per hex, but takes 3 times the retaliation damage).\n\nHorned Grunts hide on an island in the infernal sea of lava. They use their remarkable leaping power to pass through the scorching steam of the lava, looking for all the world as if they were taking a steam sauna. No creature can leap faster or farther than a Horned Grunt, a skill that has proven itself in real combat.\n\nSee also {Horned Demon}, {Horned Overseer}.",
+		"faction": "inferno",
+		"level": 2,
+		"cost": {
+			"gold": 115
+		},
+		"speed": 5,
+		"hitPoints": 15,
+		"attack": 5,
+		"defense": 3,
+		"damage": {
+			"min": 1,
+			"max": 4
+		},
+		"doubleWide": false,
+		"fightValue": 128,
+		"aiValue": 143,
+		"growth": 10,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"demonic": {
+				"type": "tears-of-ashan:DEMONIC",
+				"description": "{Demonic}\nFire spell damage -25%\nLight spell damage +25%"
+			},
+			"fireReduction": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "fire",
+				"val": 25,
+				"hidden": true
+			},
+			"lightVulnerability": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "01lightSchool",
+				"val": -25,
+				"hidden": true
+			},
+			"h5Enraged": {
+				"icon": "h5/abilities/enraged",
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5Enraged",
+				"description": "{Enrage}\nAttack rises whenever\nan allied stack dies"
+			},
+			"cast_h5AbLeap": {
+				"type": "SPELLCASTER",
+				"subtype": "h5AbLeap",
+				"val": 2,
+				"description": "{Leap}\nLeaps 3-8 hexes to attack\n+10%/hex, 3x retaliation"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 15,
+				"hidden": true
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 1
+			},
+			"h5GatingInfo": {
+				"type": "H5_GATING_H5C"
+			}
+		},
+		"graphics": {
+			"animation": "h5/Inferno_3rd_HornedLeaper/battle.json",
+			"map": "h5/Inferno_3rd_HornedLeaper/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Inferno_3rd_HornedLeaper/map/atkL.png",
+			"mapAttackFromRight": "h5/Inferno_3rd_HornedLeaper/map/atkR.png",
+			"iconLarge": "h5/Inferno_3rd_HornedLeaper/iconLarge.png",
+			"iconSmall": "h5/Inferno_3rd_HornedLeaper/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_Inferno_T2_attack00.ogg",
+			"wince": "h5/h5_Inferno_T2_hit.ogg",
+			"defend": "h5/h5_Inferno_T2_hit.ogg",
+			"killed": "h5/h5_Inferno_T2_death.ogg",
+			"move": "h5/h5_Inferno_T2_move.ogg",
+			"startMoving": "h5/h5_Inferno_T2_specability2.ogg",
+			"endMoving": "h5/h5_Inferno_T2_specability03_end.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					3,
+					3,
+					3,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					3,
+					4,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					0,
+					1,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					3,
+					3,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "DOUBLE_DAMAGE_CHANCE"
+				},
+				"values": [
+					0,
+					0,
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					40,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_ATTACK"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1
+				]
+			}
+		]
+	},
+	"h5Inferno3rdPitSpawn": {
+		"name": {
+			"singular": "Pit Spawn",
+			"plural": "Pit Spawn"
+		},
+		"description": "Pit Fiends, Pit Lords and Pit Spawn are the level 6 units of the Heroes V Inferno (merged into Inferno). All of them have {Demonic} (-25% damage from Fire magic, +25% damage from Light magic). Pit Fiends can cast {Fireball Volley} and {Armor Break} (2 times per battle, 10 mana). Pit Lords can also cast {Fireball Volley}, {Meteor Shower} and {Armor Break} (4 times per battle, 20 mana), and have {Soul Stealer} (each attack or retaliation kills at least 1 enemy). Pit Spawn also have {Blade of Slaughter} (after an attack or retaliation, deals extra damage to the target equal to 2 × the number of creatures in the target stack) and {50% Magic Proof} (-50% magic damage).\n\nThe swords of the Pit Spawn are forged from extraordinarily resilient metal, which makes their attacks as quick and sharp as a viper's strike. In battle, Pit Spawn always try to kill more enemies with every swing.\n\nSee also {Pit Fiend}, {Pit Lord}.",
+		"faction": "inferno",
+		"level": 6,
+		"cost": {
+			"gold": 1120
+		},
+		"speed": 7,
+		"hitPoints": 107,
+		"attack": 20,
+		"defense": 15,
+		"damage": {
+			"min": 12,
+			"max": 29
+		},
+		"doubleWide": true,
+		"fightValue": 1637,
+		"aiValue": 1933,
+		"growth": 2,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"demonic": {
+				"type": "tears-of-ashan:DEMONIC",
+				"description": "{Demonic}\nFire spell damage -25%\nLight spell damage +25%"
+			},
+			"fireReduction": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "fire",
+				"val": 25,
+				"hidden": true
+			},
+			"lightVulnerability": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "01lightSchool",
+				"val": -25,
+				"hidden": true
+			},
+			"h5AxeOfSlaughter": {
+				"icon": "h5/abilities/axeOfSlaughter",
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5AxeOfSlaughter",
+				"val": 2,
+				"description": "{Blade of Slaughter}\nAfter attack or retaliation, deals\n2 x target stack size extra damage"
+			},
+			"h5MagicProof": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "any",
+				"val": 50,
+				"description": "{50% Magic Proof}\nSpell damage -50%"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 2,
+				"hidden": true
+			},
+			"h5GatingInfo": {
+				"type": "H5_GATING_H5C"
+			}
+		},
+		"graphics": {
+			"animation": "h5/Inferno_3rd_PitSpawn/battle.json",
+			"map": "h5/Inferno_3rd_PitSpawn/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Inferno_3rd_PitSpawn/map/atkL.png",
+			"mapAttackFromRight": "h5/Inferno_3rd_PitSpawn/map/atkR.png",
+			"iconLarge": "h5/Inferno_3rd_PitSpawn/iconLarge.png",
+			"iconSmall": "h5/Inferno_3rd_PitSpawn/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_Inferno_T6_attack00.ogg",
+			"wince": "h5/h5_Inferno_T6_hit.ogg",
+			"defend": "h5/h5_Inferno_T6_hit.ogg",
+			"killed": "h5/h5_Inferno_T6_death.ogg",
+			"move": "h5/h5_Inferno_T6_move.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					2,
+					3,
+					4,
+					5,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_ATTACK"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "MIND_IMMUNITY",
+					"description": "{Steadfast Mind}\nImmune to Mind spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "ENEMY_DEFENCE_REDUCTION"
+				},
+				"values": [
+					3,
+					6,
+					9,
+					12,
+					15,
+					18,
+					21,
+					24,
+					27,
+					30
+				]
+			}
+		]
+	},
+	"h5Inferno3rdQuasit": {
+		"name": {
+			"singular": "Vermin",
+			"plural": "Vermin"
+		},
+		"description": "Devil Spawn, Imps and Vermin are the level 1 units of the Heroes V Inferno (merged into Inferno). All of them have {Demonic} (-25% damage from Fire magic, +25% damage from Light magic). Devil Spawn have {Spell Sabotage} (reduces the enemy hero's mana at the start of combat). Imps also have {Mana Stealer} (at the start of combat, steals mana from the enemy hero and gives it to the allied hero). Vermin also have {Siphon Mana} (drains enemy mana and gives it to allied spellcasting units, 1 time per battle).\n\nThese wretched little thieves steal whenever they get the chance. Their favorite loot is mana, which they hide in dark vials, ready at any moment to present to their masters in the hope of a rich reward.\n\nSee also {Devil Spawn}, {Imp}.",
+		"faction": "inferno",
+		"level": 1,
+		"cost": {
+			"gold": 65
+		},
+		"speed": 7,
+		"hitPoints": 5,
+		"attack": 6,
+		"defense": 4,
+		"damage": {
+			"min": 1,
+			"max": 4
+		},
+		"doubleWide": false,
+		"fightValue": 86,
+		"aiValue": 87,
+		"growth": 14,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"demonic": {
+				"type": "tears-of-ashan:DEMONIC",
+				"description": "{Demonic}\nFire spell damage -25%\nLight spell damage +25%"
+			},
+			"fireReduction": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "fire",
+				"val": 25,
+				"hidden": true
+			},
+			"lightVulnerability": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "01lightSchool",
+				"val": -25,
+				"hidden": true
+			},
+			"cast_h5AbSyphonMana": {
+				"type": "SPELLCASTER",
+				"subtype": "h5AbSyphonMana",
+				"val": 2,
+				"description": "{Siphon Mana}\nDrains enemy mana to own\ncasters, 1/battle"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 16,
+				"hidden": true
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 1
+			},
+			"h5GatingInfo": {
+				"type": "H5_GATING_H5C"
+			}
+		},
+		"graphics": {
+			"animation": "h5/Inferno_3rd_Quasit/battle.json",
+			"map": "h5/Inferno_3rd_Quasit/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Inferno_3rd_Quasit/map/atkL.png",
+			"mapAttackFromRight": "h5/Inferno_3rd_Quasit/map/atkR.png",
+			"iconLarge": "h5/Inferno_3rd_Quasit/iconLarge.png",
+			"iconSmall": "h5/Inferno_3rd_Quasit/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_Inferno_T1_attack00.ogg",
+			"wince": "h5/h5_Inferno_T1_hit.ogg",
+			"defend": "h5/h5_Inferno_T1_hit.ogg",
+			"killed": "h5/h5_Inferno_T1_death.ogg",
+			"move": "h5/h5_Inferno_T1_move.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE"
+				},
+				"values": [
+					2,
+					4,
+					6,
+					8,
+					10,
+					12,
+					14,
+					16,
+					18,
+					20
+				]
+			},
+			{
+				"bonus": {
+					"type": "NEGATIVE_EFFECTS_IMMUNITY",
+					"subtype": "fire",
+					"description": "{Fire Ward}\nImmune to harmful Fire spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_ATTACK"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1
+				]
+			}
+		]
+	},
+	"h5Inferno3rdSuccubusSeducer": {
+		"name": {
+			"singular": "Succubus Seducer",
+			"plural": "Succubus Seducers"
+		},
+		"description": "Succubi, Succubus Mistresses and Succubus Seducers are the level 4 units of the Heroes V Inferno (merged into Inferno). All of them can shoot and have {Demonic} (-25% damage from Fire magic, +25% damage from Light magic) and {Ranged Retaliation} (retaliates with a ranged attack when attacked at range). Succubus Mistresses also have {Chain Shot} (after the shot, it jumps to the nearest 3 enemies, with damage halved at each jump). Succubus Seducers also have {Immune to Puppet Master} and {Seduce} (takes control of an enemy stack for a number of rounds based on the Hit Points ratio, 1 time per battle).\n\nBesides their fearsome looks, Succubus Seducers also have voices as sweet as honey. After hearing just a few words from one, anyone will hopelessly devote their strength to her.\n\nSee also {Succubus}, {Succubus Mistress}.",
+		"faction": "inferno",
+		"level": 4,
+		"cost": {
+			"gold": 370
+		},
+		"speed": 5,
+		"hitPoints": 33,
+		"attack": 8,
+		"defense": 7,
+		"damage": {
+			"min": 5,
+			"max": 11
+		},
+		"doubleWide": false,
+		"fightValue": 511,
+		"aiValue": 586,
+		"growth": 4,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"shooter": {
+				"type": "SHOOTER"
+			},
+			"demonic": {
+				"type": "tears-of-ashan:DEMONIC",
+				"description": "{Demonic}\nFire spell damage -25%\nLight spell damage +25%"
+			},
+			"fireReduction": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "fire",
+				"val": 25,
+				"hidden": true
+			},
+			"lightVulnerability": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "01lightSchool",
+				"val": -25,
+				"hidden": true
+			},
+			"rangedRetaliation": {
+				"type": "RANGED_RETALIATION",
+				"description": "{Ranged Retaliation}\nRetaliates with a shot\nwhen shot at"
+			},
+			"immune_hypnotize": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "hypnotize",
+				"description": "{Immune to Puppet Master}\nImmune to Puppet Master"
+			},
+			"immune_h5Hypnotize": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "h5Hypnotize",
+				"hidden": true
+			},
+			"cast_h5AbSeduce": {
+				"type": "SPELLCASTER",
+				"subtype": "h5AbSeduce",
+				"val": 2,
+				"description": "{Seduce}\nControls an enemy stack;\nrounds = HP ratio, 1/battle"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 5,
+				"hidden": true
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 1
+			},
+			"noSpellcastByDefault": {
+				"type": "NO_SPELLCAST_BY_DEFAULT",
+				"hidden": true
+			},
+			"h5GatingInfo": {
+				"type": "H5_GATING_H5C"
+			}
+		},
+		"graphics": {
+			"animation": "h5/Inferno_3rd_SuccubusSeducer/battle.json",
+			"map": "h5/Inferno_3rd_SuccubusSeducer/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Inferno_3rd_SuccubusSeducer/map/atkL.png",
+			"mapAttackFromRight": "h5/Inferno_3rd_SuccubusSeducer/map/atkR.png",
+			"iconLarge": "h5/Inferno_3rd_SuccubusSeducer/iconLarge.png",
+			"iconSmall": "h5/Inferno_3rd_SuccubusSeducer/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"frameAngles": [
+					90,
+					60,
+					45,
+					30,
+					0,
+					-30,
+					-45,
+					-60,
+					-90
+				],
+				"offset": {
+					"upperX": 16,
+					"upperY": -52,
+					"middleX": 14,
+					"middleY": -46,
+					"lowerX": -2,
+					"lowerY": -43
+				},
+				"attackClimaxFrame": 6,
+				"ray": [
+					{
+						"start": [
+							127,
+							84,
+							27,
+							160
+						],
+						"end": [
+							84,
+							56,
+							18,
+							60
+						]
+					},
+					{
+						"start": [
+							254,
+							169,
+							54,
+							255
+						],
+						"end": [
+							254,
+							169,
+							54,
+							120
+						]
+					},
+					{
+						"start": [
+							255,
+							249,
+							134,
+							255
+						],
+						"end": [
+							254,
+							169,
+							54,
+							200
+						]
+					},
+					{
+						"start": [
+							254,
+							169,
+							54,
+							255
+						],
+						"end": [
+							254,
+							169,
+							54,
+							120
+						]
+					},
+					{
+						"start": [
+							127,
+							84,
+							27,
+							160
+						],
+						"end": [
+							84,
+							56,
+							18,
+							60
+						]
+					}
+				]
+			}
+		},
+		"sound": {
+			"attack": "h5/h5_Inferno_T4_attack00.ogg",
+			"wince": "h5/h5_Inferno_T4_hit.ogg",
+			"defend": "h5/h5_Inferno_T4_hit.ogg",
+			"killed": "h5/h5_Inferno_T4_death.ogg",
+			"move": "h5/h5_Inferno_T4_move.ogg",
+			"shoot": "h5/h5_Inferno_T4_rangeattack.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					5,
+					6,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_WALL_PENALTY",
+					"description": "{Siege Shooter}\nNo damage loss when shooting over walls"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "SPELL_AFTER_ATTACK",
+					"subtype": "hypnotize",
+					"addInfo": [
+						2,
+						1
+					]
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE"
+				},
+				"values": [
+					3,
+					6,
+					9,
+					12,
+					15,
+					18,
+					21,
+					24,
+					27,
+					30
+				]
+			},
+			{
+				"bonus": {
+					"type": "MIND_IMMUNITY",
+					"description": "{Steadfast Mind}\nImmune to Mind spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			}
+		],
+		"shots": 17
+	},
+	"h5InfernoArchDevil": {
+		"name": {
+			"singular": "Arch Devil",
+			"plural": "Arch Devils"
+		},
+		"description": "Devils, Arch Devils and Arch Demons are the level 7 units of the Heroes V Inferno (merged into Inferno). All of them can teleport and have {Demonic} (-25% damage from Fire magic, +25% damage from Light magic). Arch Devils also have {Summon Pit Lord} (turns a demon corpse into Pit Lords, 1 time per battle, 2 times from experience level 7). Arch Demons also have {Teleport} (teleports one unit within range to its side).\n\nArch Devils come from the burning Inferno and are the leaders of the underworld's demonic armies. They can teleport instantly to different points on the battlefield, so no opponent can escape their savage onslaught. Arch Devils can summon Pit Lords as reinforcements.\n\nSee also {Devil}, {Arch Demon}.",
+		"faction": "inferno",
+		"level": 7,
+		"cost": {
+			"gold": 3565,
+			"sulfur": 2
+		},
+		"speed": 12,
+		"hitPoints": 201,
+		"attack": 23,
+		"defense": 21,
+		"damage": {
+			"min": 32,
+			"max": 58
+		},
+		"doubleWide": true,
+		"fightValue": 4730,
+		"aiValue": 6162,
+		"growth": 1,
+		"advMapAmount": {
+			"min": 1,
+			"max": 3
+		},
+		"abilities": {
+			"flying": {
+				"type": "FLYING",
+				"subtype": "movementTeleporting"
+			},
+			"demonic": {
+				"type": "tears-of-ashan:DEMONIC",
+				"description": "{Demonic}\nFire spell damage -25%\nLight spell damage +25%"
+			},
+			"fireReduction": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "fire",
+				"val": 25,
+				"hidden": true
+			},
+			"lightVulnerability": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "01lightSchool",
+				"val": -25,
+				"hidden": true
+			},
+			"cast_h5AbSummonBalor": {
+				"type": "SPELLCASTER",
+				"subtype": "h5AbSummonBalor",
+				"val": 2,
+				"description": "{Summon Pit Lord}\nDemon corpse becomes Pit\nLords, 1/battle, 2 from R7"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 1,
+				"hidden": true
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 1,
+				"stacking": "h5InfernoArchDevilExpCasts"
+			},
+			"h5GatingInfo": {
+				"type": "H5_GATING_H5C"
+			}
+		},
+		"graphics": {
+			"animation": "h5/Inferno_ArchDevil/battle.json",
+			"map": "h5/Inferno_ArchDevil/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Inferno_ArchDevil/map/atkL.png",
+			"mapAttackFromRight": "h5/Inferno_ArchDevil/map/atkR.png",
+			"iconLarge": "h5/Inferno_ArchDevil/iconLarge.png",
+			"iconSmall": "h5/Inferno_ArchDevil/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_Attack00.ogg",
+			"wince": "h5/h5_Hit.ogg",
+			"defend": "h5/h5_Hit.ogg",
+			"killed": "h5/h5_Death.ogg",
+			"move": "h5/h5_DevilMove.ogg",
+			"startMoving": "h5/h5_Teleport_Start.ogg",
+			"endMoving": "h5/h5_Teleport_End.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					10,
+					20,
+					30,
+					40,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "MIND_IMMUNITY",
+					"description": "{Steadfast Mind}\nImmune to Mind spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "NEGATIVE_EFFECTS_IMMUNITY",
+					"subtype": "fire",
+					"description": "{Fire Ward}\nImmune to harmful Fire spells"
+				},
+				"values": [
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "CASTS",
+					"stacking": "h5InfernoArchDevilExpCasts"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "SPELL_AFTER_ATTACK",
+					"subtype": "berserk",
+					"addInfo": [
+						2,
+						2
+					]
+				},
+				"values": [
+					2,
+					4,
+					6,
+					8,
+					10,
+					12,
+					14,
+					16,
+					18,
+					20
+				]
+			},
+			{
+				"bonus": {
+					"type": "NEGATIVE_EFFECTS_IMMUNITY",
+					"subtype": "earth",
+					"description": "{Earth Ward}\nImmune to harmful Earth spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h5InfernoBalor": {
+		"name": {
+			"singular": "Pit Lord",
+			"plural": "Pit Lords"
+		},
+		"description": "Pit Fiends, Pit Lords and Pit Spawn are the level 6 units of the Heroes V Inferno (merged into Inferno). All of them have {Demonic} (-25% damage from Fire magic, +25% damage from Light magic). Pit Fiends can cast {Fireball Volley} and {Armor Break} (2 times per battle, 10 mana). Pit Lords can also cast {Fireball Volley}, {Meteor Shower} and {Armor Break} (4 times per battle, 20 mana), and have {Soul Stealer} (each attack or retaliation kills at least 1 enemy). Pit Spawn also have {Blade of Slaughter} (after an attack or retaliation, deals extra damage to the target equal to 2 × the number of creatures in the target stack) and {50% Magic Proof} (-50% magic damage).\n\nThese mighty demons come from the darkest chasms of the underworld. They excel at melee and at using attack spells. Each Pit Lord wields a soul-stealing sword whose dark energy can instantly kill any unlucky opponent it strikes.\n\nSee also {Pit Fiend}, {Pit Spawn}.",
+		"faction": "inferno",
+		"level": 6,
+		"cost": {
+			"gold": 1120
+		},
+		"speed": 5,
+		"hitPoints": 92,
+		"attack": 16,
+		"defense": 13,
+		"damage": {
+			"min": 12,
+			"max": 29
+		},
+		"doubleWide": true,
+		"fightValue": 1578,
+		"aiValue": 1864,
+		"growth": 2,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"demonic": {
+				"type": "tears-of-ashan:DEMONIC",
+				"description": "{Demonic}\nFire spell damage -25%\nLight spell damage +25%"
+			},
+			"fireReduction": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "fire",
+				"val": 25,
+				"hidden": true
+			},
+			"lightVulnerability": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "01lightSchool",
+				"val": -25,
+				"hidden": true
+			},
+			"h5VorpalSword": {
+				"icon": "h5/abilities/vorpalSword",
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5VorpalSword",
+				"val": 1,
+				"description": "{Soul Stealer}\nEach attack or retaliation\nkills at least 1 enemy"
+			},
+			"cast_h5AbFireball": {
+				"type": "SPELLCASTER",
+				"subtype": "h5AbFireball",
+				"val": 1
+			},
+			"cast_h5AbMeteorShower": {
+				"type": "SPELLCASTER",
+				"subtype": "h5AbMeteorShower",
+				"val": 1
+			},
+			"cast_h5AbDisruptingRay": {
+				"type": "SPELLCASTER",
+				"subtype": "h5AbDisruptingRay",
+				"val": 2
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 2,
+				"hidden": true
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 4
+			},
+			"h5Mana": {
+				"type": "H5_MANA_H5C",
+				"val": 20,
+				"stacking": "h5InfernoBalorExpH5ManaH5c"
+			},
+			"h5ManaMin": {
+				"type": "H5_MANA_MIN_H5C",
+				"val": 5,
+				"hidden": true
+			},
+			"h5ManaPool": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5ManaPool",
+				"hidden": true,
+				"description": "~"
+			},
+			"h5GatingInfo": {
+				"type": "H5_GATING_H5C"
+			}
+		},
+		"graphics": {
+			"animation": "h5/Inferno_Balor/battle.json",
+			"map": "h5/Inferno_Balor/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Inferno_Balor/map/atkL.png",
+			"mapAttackFromRight": "h5/Inferno_Balor/map/atkR.png",
+			"iconLarge": "h5/Inferno_Balor/iconLarge.png",
+			"iconSmall": "h5/Inferno_Balor/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_attack00.ogg",
+			"wince": "h5/h5_hit.ogg",
+			"defend": "h5/h5_hit.ogg",
+			"killed": "h5/h5_death.ogg",
+			"move": "h5/h5_PitFiendMove.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					2,
+					3,
+					4,
+					5,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_ATTACK"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "MIND_IMMUNITY",
+					"description": "{Steadfast Mind}\nImmune to Mind spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "H5_MANA_H5C",
+					"stacking": "h5InfernoBalorExpH5ManaH5c"
+				},
+				"values": [
+					20,
+					20,
+					20,
+					20,
+					20,
+					25,
+					25,
+					25,
+					25,
+					25
+				]
+			}
+		]
+	},
+	"h5InfernoCerberius": {
+		"name": {
+			"singular": "Cerberus",
+			"plural": "Cerberi"
+		},
+		"description": "Hell Hounds, Cerberi and Firehounds are the level 3 units of the Heroes V Inferno (merged into Inferno). All of them have {Demonic} (-25% damage from Fire magic, +25% damage from Light magic). Cerberi also have {No Enemy Retaliation} and {Three-Headed Attack} (attacks the enemies in the 3 hexes in front at once). Firehounds also have {Three-Headed Attack} (attacks the enemies in the 3 hexes in front at once), {No Enemy Retaliation} and {Fire Breath} (the attack also hits the unit behind the target).\n\nTheir manic nature lets Cerberi move swiftly on the battlefield and launch furious, violent attacks on the enemy, but this excess of frenzy often makes them neglect their defense. Their attacks are hard to withstand, and their three heads let them damage several enemies at once.\n\nSee also {Hell Hound}, {Firehound}.",
+		"faction": "inferno",
+		"level": 3,
+		"cost": {
+			"gold": 255
+		},
+		"speed": 12,
+		"hitPoints": 16,
+		"attack": 6,
+		"defense": 3,
+		"damage": {
+			"min": 3,
+			"max": 5
+		},
+		"doubleWide": false,
+		"fightValue": 298,
+		"aiValue": 353,
+		"growth": 6,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"blockRetaliation": {
+				"type": "BLOCKS_RETALIATION",
+				"description": "{No Enemy Retaliation}\nNo enemy retaliation"
+			},
+			"demonic": {
+				"type": "tears-of-ashan:DEMONIC",
+				"description": "{Demonic}\nFire spell damage -25%\nLight spell damage +25%"
+			},
+			"fireReduction": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "fire",
+				"val": 25,
+				"hidden": true
+			},
+			"lightVulnerability": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "01lightSchool",
+				"val": -25,
+				"hidden": true
+			},
+			"threeHeadedAttack": {
+				"type": "THREE_HEADED_ATTACK",
+				"description": "{Three-Headed Attack}\nHits enemies in the 3\nhexes in front at once"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 8,
+				"hidden": true
+			},
+			"h5GatingInfo": {
+				"type": "H5_GATING_H5C"
+			}
+		},
+		"graphics": {
+			"animation": "h5/Inferno_Cerberius/battle.json",
+			"map": "h5/Inferno_Cerberius/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Inferno_Cerberius/map/atkL.png",
+			"mapAttackFromRight": "h5/Inferno_Cerberius/map/atkR.png",
+			"iconLarge": "h5/Inferno_Cerberius/iconLarge.png",
+			"iconSmall": "h5/Inferno_Cerberius/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_CerberusAttack01.ogg",
+			"wince": "h5/h5_Cerberus_hit.ogg",
+			"defend": "h5/h5_Cerberus_hit.ogg",
+			"killed": "h5/h5_Cerberus_death.ogg",
+			"move": "h5/h5_Cerberus_move.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_RETALIATION"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "SPELL_AFTER_ATTACK",
+					"subtype": "disease",
+					"addInfo": [
+						2,
+						2
+					]
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "NEGATIVE_EFFECTS_IMMUNITY",
+					"subtype": "fire",
+					"description": "{Fire Ward}\nImmune to harmful Fire spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h5InfernoDemon": {
+		"name": {
+			"singular": "Horned Demon",
+			"plural": "Horned Demons"
+		},
+		"description": "Horned Demons, Horned Overseers and Horned Grunts are the level 2 units of the Heroes V Inferno (merged into Inferno). All of them have {Demonic} (-25% damage from Fire magic, +25% damage from Light magic) and {Enrage} (Attack increases when an allied stack is destroyed). Horned Overseers also have {Explosion} (all adjacent units take Fire damage while it remains unharmed, 1 time per battle). Horned Grunts also have {Leap} (leaps 3–8 hexes to attack, +10% damage per hex, but takes 3 times the retaliation damage).\n\nHorned Demons are slow-witted but strong low-ranking creatures of the infernal hosts. Their tough, hard-to-pierce hide lets them withstand a great many enemy attacks.\n\nSee also {Horned Overseer}, {Horned Grunt}.",
+		"faction": "inferno",
+		"level": 2,
+		"cost": {
+			"gold": 75
+		},
+		"speed": 5,
+		"hitPoints": 15,
+		"attack": 2,
+		"defense": 5,
+		"damage": {
+			"min": 1,
+			"max": 2
+		},
+		"doubleWide": false,
+		"fightValue": 87,
+		"aiValue": 97,
+		"growth": 10,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"demonic": {
+				"type": "tears-of-ashan:DEMONIC",
+				"description": "{Demonic}\nFire spell damage -25%\nLight spell damage +25%"
+			},
+			"fireReduction": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "fire",
+				"val": 25,
+				"hidden": true
+			},
+			"lightVulnerability": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "01lightSchool",
+				"val": -25,
+				"hidden": true
+			},
+			"h5Enraged": {
+				"icon": "h5/abilities/enraged",
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5Enraged",
+				"description": "{Enrage}\nAttack rises whenever\nan allied stack dies"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 15,
+				"hidden": true
+			},
+			"h5GatingInfo": {
+				"type": "H5_GATING_H5C"
+			}
+		},
+		"graphics": {
+			"animation": "h5/Inferno_Demon/battle.json",
+			"map": "h5/Inferno_Demon/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Inferno_Demon/map/atkL.png",
+			"mapAttackFromRight": "h5/Inferno_Demon/map/atkR.png",
+			"iconLarge": "h5/Inferno_Demon/iconLarge.png",
+			"iconSmall": "h5/Inferno_Demon/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_DemonAttack.ogg",
+			"wince": "h5/h5_DemonHit.ogg",
+			"defend": "h5/h5_DemonHit.ogg",
+			"killed": "h5/h5_DemonDeath.ogg",
+			"move": "h5/h5_DemonMove.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					3,
+					3,
+					3,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					3,
+					4,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					0,
+					1,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					3,
+					3,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "DOUBLE_DAMAGE_CHANCE"
+				},
+				"values": [
+					0,
+					0,
+					4,
+					8,
+					12,
+					16,
+					20,
+					24,
+					30,
+					40
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_RETALIATION"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			}
+		],
+		"upgrades": [
+			"h5InfernoHornedDemon",
+			"h5Inferno3rdHornedLeaper"
+		]
+	},
+	"h5InfernoDevil": {
+		"name": {
+			"singular": "Devil",
+			"plural": "Devils"
+		},
+		"description": "Devils, Arch Devils and Arch Demons are the level 7 units of the Heroes V Inferno (merged into Inferno). All of them can teleport and have {Demonic} (-25% damage from Fire magic, +25% damage from Light magic). Arch Devils also have {Summon Pit Lord} (turns a demon corpse into Pit Lords, 1 time per battle, 2 times from experience level 7). Arch Demons also have {Teleport} (teleports one unit within range to its side).\n\nDevils of the burning Inferno are summoned and ordered to fight for the heroes of Sheogh. They can teleport instantly to different points on the battlefield, and no opponent can escape their savage onslaught.\n\nSee also {Arch Devil}, {Arch Demon}.",
+		"faction": "inferno",
+		"level": 7,
+		"cost": {
+			"gold": 2590,
+			"sulfur": 1
+		},
+		"speed": 12,
+		"hitPoints": 168,
+		"attack": 19,
+		"defense": 18,
+		"damage": {
+			"min": 32,
+			"max": 58
+		},
+		"doubleWide": true,
+		"fightValue": 3936,
+		"aiValue": 5127,
+		"growth": 1,
+		"advMapAmount": {
+			"min": 1,
+			"max": 3
+		},
+		"abilities": {
+			"flying": {
+				"type": "FLYING",
+				"subtype": "movementTeleporting"
+			},
+			"demonic": {
+				"type": "tears-of-ashan:DEMONIC",
+				"description": "{Demonic}\nFire spell damage -25%\nLight spell damage +25%"
+			},
+			"fireReduction": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "fire",
+				"val": 25,
+				"hidden": true
+			},
+			"lightVulnerability": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "01lightSchool",
+				"val": -25,
+				"hidden": true
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 1,
+				"hidden": true
+			},
+			"h5GatingInfo": {
+				"type": "H5_GATING_H5C"
+			}
+		},
+		"graphics": {
+			"animation": "h5/Inferno_Devil/battle.json",
+			"map": "h5/Inferno_Devil/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Inferno_Devil/map/atkL.png",
+			"mapAttackFromRight": "h5/Inferno_Devil/map/atkR.png",
+			"iconLarge": "h5/Inferno_Devil/iconLarge.png",
+			"iconSmall": "h5/Inferno_Devil/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_DevilAttack.ogg",
+			"wince": "h5/h5_DevilHit.ogg",
+			"defend": "h5/h5_DevilHit.ogg",
+			"killed": "h5/h5_DevilDeath.ogg",
+			"move": "h5/h5_DevilMove.ogg",
+			"startMoving": "h5/h5_DevilTeleportStart.ogg",
+			"endMoving": "h5/h5_DevilTeleportEnd.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					10,
+					20,
+					30,
+					40,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "MIND_IMMUNITY",
+					"description": "{Steadfast Mind}\nImmune to Mind spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "NEGATIVE_EFFECTS_IMMUNITY",
+					"subtype": "fire",
+					"description": "{Fire Ward}\nImmune to harmful Fire spells"
+				},
+				"values": [
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "NEGATIVE_EFFECTS_IMMUNITY",
+					"subtype": "earth",
+					"description": "{Earth Ward}\nImmune to harmful Earth spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "SPELL_BEFORE_ATTACK",
+					"subtype": "misfortune",
+					"addInfo": [
+						2,
+						0
+					]
+				},
+				"values": [
+					3,
+					6,
+					9,
+					12,
+					15,
+					18,
+					21,
+					24,
+					27,
+					30
+				]
+			},
+			{
+				"bonus": {
+					"type": "SPELL_IMMUNITY",
+					"subtype": "armageddon",
+					"description": "{Immune to Armageddon}\nUnaffected by Armageddon"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			}
+		],
+		"upgrades": [
+			"h5InfernoArchDevil",
+			"h5Inferno3rdArchDemon"
+		]
+	},
+	"h5InfernoFamiliar": {
+		"name": {
+			"singular": "Devil Spawn",
+			"plural": "Devil Spawn"
+		},
+		"description": "Devil Spawn, Imps and Vermin are the level 1 units of the Heroes V Inferno (merged into Inferno). All of them have {Demonic} (-25% damage from Fire magic, +25% damage from Light magic). Devil Spawn have {Spell Sabotage} (reduces the enemy hero's mana at the start of combat). Imps also have {Mana Stealer} (at the start of combat, steals mana from the enemy hero and gives it to the allied hero). Vermin also have {Siphon Mana} (drains enemy mana and gives it to allied spellcasting units, 1 time per battle).\n\nThese cunning little creatures are very fragile in melee; their real strength lies in their great numbers. They have a mana-draining skill that can disrupt the magical energy of the enemy hero.\n\nSee also {Imp}, {Vermin}.",
+		"faction": "inferno",
+		"level": 1,
+		"cost": {
+			"gold": 35
+		},
+		"speed": 7,
+		"hitPoints": 3,
+		"attack": 4,
+		"defense": 1,
+		"damage": {
+			"min": 1,
+			"max": 2
+		},
+		"doubleWide": false,
+		"fightValue": 51,
+		"aiValue": 51,
+		"growth": 14,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"demonic": {
+				"type": "tears-of-ashan:DEMONIC",
+				"description": "{Demonic}\nFire spell damage -25%\nLight spell damage +25%"
+			},
+			"fireReduction": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "fire",
+				"val": 25,
+				"hidden": true
+			},
+			"lightVulnerability": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "01lightSchool",
+				"val": -25,
+				"hidden": true
+			},
+			"h5ManaDestroyer": {
+				"icon": "h5/abilities/manaDestroy",
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5ManaBurn",
+				"addInfo": {
+					"mode": "destroy",
+					"perGrowth": 4
+				},
+				"description": "{Spell Sabotage}\nReduces the enemy hero's\nmana at battle start"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 16,
+				"hidden": true
+			},
+			"h5GatingInfo": {
+				"type": "H5_GATING_H5C"
+			}
+		},
+		"graphics": {
+			"animation": "h5/Inferno_Familiar/battle.json",
+			"map": "h5/Inferno_Familiar/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Inferno_Familiar/map/atkL.png",
+			"mapAttackFromRight": "h5/Inferno_Familiar/map/atkR.png",
+			"iconLarge": "h5/Inferno_Familiar/iconLarge.png",
+			"iconSmall": "h5/Inferno_Familiar/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_Familiar_attack00.ogg",
+			"wince": "h5/h5_Familiar_hit.ogg",
+			"defend": "h5/h5_Familiar_hit.ogg",
+			"killed": "h5/h5_Familiar_death.ogg",
+			"move": "h5/h5_Familiar_move.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "FLYING",
+					"description": "{Wings}\nCan fly"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE"
+				},
+				"values": [
+					2,
+					4,
+					6,
+					8,
+					10,
+					12,
+					14,
+					16,
+					18,
+					20
+				]
+			},
+			{
+				"bonus": {
+					"type": "NEGATIVE_EFFECTS_IMMUNITY",
+					"subtype": "fire",
+					"description": "{Fire Ward}\nImmune to harmful Fire spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true
+				]
+			}
+		],
+		"upgrades": [
+			"h5InfernoImp",
+			"h5Inferno3rdQuasit"
+		]
+	},
+	"h5InfernoFrightfulNightmare": {
+		"name": {
+			"singular": "Nightmare",
+			"plural": "Nightmares"
+		},
+		"description": "Hell Steeds, Nightmares and Hellmares are the level 5 units of the Heroes V Inferno (merged into Inferno). All of them have {Demonic} (-25% damage from Fire magic, +25% damage from Light magic) and {Fear Attack} (attacks have a chance to make the target flee and reset its ATB to 0). Nightmares also have {Aura of Fear} (-3 Morale for enemies within 3 hexes). Hellmares also have {Searing Aura} (adjacent enemies take 9 × the number of Hellmares in Fire damage before they act).\n\nNightmares come from the most twisted dreams of the people of Ashan. These creatures are wreathed in terror; when one attacks, even the bravest warriors grow weak with fright and can hardly raise a sword against it. The aura of terror around a Nightmare chills its opponents to the bone, and any enemy that comes near suffers a sharp drop in Morale.\n\nSee also {Hell Steed}, {Hellmare}.",
+		"faction": "inferno",
+		"level": 5,
+		"cost": {
+			"gold": 610
+		},
+		"speed": 11,
+		"hitPoints": 49,
+		"attack": 15,
+		"defense": 16,
+		"damage": {
+			"min": 8,
+			"max": 15
+		},
+		"doubleWide": true,
+		"fightValue": 881,
+		"aiValue": 980,
+		"growth": 3,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"demonic": {
+				"type": "tears-of-ashan:DEMONIC",
+				"description": "{Demonic}\nFire spell damage -25%\nLight spell damage +25%"
+			},
+			"fireReduction": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "fire",
+				"val": 25,
+				"hidden": true
+			},
+			"lightVulnerability": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "01lightSchool",
+				"val": -25,
+				"hidden": true
+			},
+			"h5Fear": {
+				"icon": "h5/abilities/fearAttack",
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5ProcEffect",
+				"addInfo": {
+					"effect": "fear",
+					"pf": 0.8,
+					"melee": true,
+					"ranged": true
+				},
+				"description": "{Fear Attack}\nAttacks may make target\nflee, ATB reset"
+			},
+			"h5AreaZone": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5AreaZone",
+				"val": 0,
+				"stacking": "h5AreaZone",
+				"propagator": "BATTLE_WIDE",
+				"hidden": true,
+				"description": "~"
+			},
+			"h5FrightAura": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5FrightAura",
+				"addInfo": {
+					"range": 3,
+					"morale": 3
+				},
+				"icon": "h5/abilities/h5FrightAura",
+				"description": "{Aura of Fear}\nEnemies within 3 hexes have -3 Morale"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 3,
+				"hidden": true
+			},
+			"h5GatingInfo": {
+				"type": "H5_GATING_H5C"
+			}
+		},
+		"graphics": {
+			"animation": "h5/Inferno_FrightfulNightmare/battle.json",
+			"map": "h5/Inferno_FrightfulNightmare/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Inferno_FrightfulNightmare/map/atkL.png",
+			"mapAttackFromRight": "h5/Inferno_FrightfulNightmare/map/atkR.png",
+			"iconLarge": "h5/Inferno_FrightfulNightmare/iconLarge.png",
+			"iconSmall": "h5/Inferno_FrightfulNightmare/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_NightmareBurn_attack00.ogg",
+			"wince": "h5/h5_NightmareBurn_hit.ogg",
+			"defend": "h5/h5_NightmareBurn_hit.ogg",
+			"killed": "h5/h5_NightmareBurn_death.ogg",
+			"move": "h5/h5_NightmareBurn_move.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					3,
+					4,
+					5,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					3,
+					4,
+					4,
+					6,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					2,
+					3,
+					3,
+					4,
+					5,
+					6,
+					6,
+					7
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					7
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_RETALIATION"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "SPELL_AFTER_ATTACK",
+					"subtype": "misfortune",
+					"addInfo": [
+						2,
+						2
+					]
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "MIND_IMMUNITY",
+					"description": "{Steadfast Mind}\nImmune to Mind spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h5InfernoHellHound": {
+		"name": {
+			"singular": "Hell Hound",
+			"plural": "Hell Hounds"
+		},
+		"description": "Hell Hounds, Cerberi and Firehounds are the level 3 units of the Heroes V Inferno (merged into Inferno). All of them have {Demonic} (-25% damage from Fire magic, +25% damage from Light magic). Cerberi also have {No Enemy Retaliation} and {Three-Headed Attack} (attacks the enemies in the 3 hexes in front at once). Firehounds also have {Three-Headed Attack} (attacks the enemies in the 3 hexes in front at once), {No Enemy Retaliation} and {Fire Breath} (the attack also hits the unit behind the target).\n\nTheir manic nature lets Hell Hounds move swiftly on the battlefield and launch furious, violent attacks on the enemy. But this excess of frenzy is also their weakness: to throw all their strength into the attack, Hell Hounds rarely look to their own safety, which leaves large gaps in their defense.\n\nSee also {Cerberus}, {Firehound}.",
+		"faction": "inferno",
+		"level": 3,
+		"cost": {
+			"gold": 175
+		},
+		"speed": 9,
+		"hitPoints": 16,
+		"attack": 6,
+		"defense": 4,
+		"damage": {
+			"min": 3,
+			"max": 4
+		},
+		"doubleWide": false,
+		"fightValue": 208,
+		"aiValue": 247,
+		"growth": 6,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"demonic": {
+				"type": "tears-of-ashan:DEMONIC",
+				"description": "{Demonic}\nFire spell damage -25%\nLight spell damage +25%"
+			},
+			"fireReduction": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "fire",
+				"val": 25,
+				"hidden": true
+			},
+			"lightVulnerability": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "01lightSchool",
+				"val": -25,
+				"hidden": true
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 8,
+				"hidden": true
+			},
+			"h5GatingInfo": {
+				"type": "H5_GATING_H5C"
+			}
+		},
+		"graphics": {
+			"animation": "h5/Inferno_HellHound/battle.json",
+			"map": "h5/Inferno_HellHound/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Inferno_HellHound/map/atkL.png",
+			"mapAttackFromRight": "h5/Inferno_HellHound/map/atkR.png",
+			"iconLarge": "h5/Inferno_HellHound/iconLarge.png",
+			"iconSmall": "h5/Inferno_HellHound/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_HellhoundAttack.ogg",
+			"wince": "h5/h5_HellhoundHit.ogg",
+			"defend": "h5/h5_HellhoundHit.ogg",
+			"killed": "h5/h5_HellhoundDeath.ogg",
+			"move": "h5/h5_HellhoundMove.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_ATTACK"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "DOUBLE_DAMAGE_CHANCE"
+				},
+				"values": [
+					2,
+					4,
+					6,
+					8,
+					10,
+					12,
+					14,
+					16,
+					18,
+					20
+				]
+			},
+			{
+				"bonus": {
+					"type": "NEGATIVE_EFFECTS_IMMUNITY",
+					"subtype": "fire",
+					"description": "{Fire Ward}\nImmune to harmful Fire spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true
+				]
+			}
+		],
+		"upgrades": [
+			"h5InfernoCerberius",
+			"h5Inferno3rdFirebreatherHound"
+		]
+	},
+	"h5InfernoHornedDemon": {
+		"name": {
+			"singular": "Horned Overseer",
+			"plural": "Horned Overseers"
+		},
+		"description": "Horned Demons, Horned Overseers and Horned Grunts are the level 2 units of the Heroes V Inferno (merged into Inferno). All of them have {Demonic} (-25% damage from Fire magic, +25% damage from Light magic) and {Enrage} (Attack increases when an allied stack is destroyed). Horned Overseers also have {Explosion} (all adjacent units take Fire damage while it remains unharmed, 1 time per battle). Horned Grunts also have {Leap} (leaps 3–8 hexes to attack, +10% damage per hex, but takes 3 times the retaliation damage).\n\nHorned Overseers are slow-witted but strong creatures that can withstand a great many attacks. The primeval chaotic energy inside them lets them explode, seriously harming every creature around them.\n\nSee also {Horned Demon}, {Horned Grunt}.",
+		"faction": "inferno",
+		"level": 2,
+		"cost": {
+			"gold": 115
+		},
+		"speed": 6,
+		"hitPoints": 15,
+		"attack": 5,
+		"defense": 7,
+		"damage": {
+			"min": 1,
+			"max": 4
+		},
+		"doubleWide": false,
+		"fightValue": 129,
+		"aiValue": 144,
+		"growth": 10,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"demonic": {
+				"type": "tears-of-ashan:DEMONIC",
+				"description": "{Demonic}\nFire spell damage -25%\nLight spell damage +25%"
+			},
+			"fireReduction": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "fire",
+				"val": 25,
+				"hidden": true
+			},
+			"lightVulnerability": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "01lightSchool",
+				"val": -25,
+				"hidden": true
+			},
+			"h5Enraged": {
+				"icon": "h5/abilities/enraged",
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5Enraged",
+				"description": "{Enrage}\nAttack rises whenever\nan allied stack dies"
+			},
+			"cast_h5AbExplosion": {
+				"type": "SPELLCASTER",
+				"subtype": "h5AbExplosion",
+				"val": 2,
+				"description": "{Explosion}\nAdjacent stacks take Fire\ndmg, self unhurt; 1/battle"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 15,
+				"hidden": true
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 1
+			},
+			"h5GatingInfo": {
+				"type": "H5_GATING_H5C"
+			}
+		},
+		"graphics": {
+			"animation": "h5/Inferno_HornedDemon/battle.json",
+			"map": "h5/Inferno_HornedDemon/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Inferno_HornedDemon/map/atkL.png",
+			"mapAttackFromRight": "h5/Inferno_HornedDemon/map/atkR.png",
+			"iconLarge": "h5/Inferno_HornedDemon/iconLarge.png",
+			"iconSmall": "h5/Inferno_HornedDemon/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_attack.ogg",
+			"wince": "h5/h5_hit.ogg",
+			"defend": "h5/h5_hit.ogg",
+			"killed": "h5/h5_death.ogg",
+			"move": "h5/h5_move.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					3,
+					3,
+					3,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					3,
+					4,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					0,
+					1,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					3,
+					3,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "DOUBLE_DAMAGE_CHANCE"
+				},
+				"values": [
+					0,
+					0,
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					40,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "NEGATIVE_EFFECTS_IMMUNITY",
+					"subtype": "fire",
+					"description": "{Fire Ward}\nImmune to harmful Fire spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h5InfernoImp": {
+		"name": {
+			"singular": "Imp",
+			"plural": "Imps"
+		},
+		"description": "Devil Spawn, Imps and Vermin are the level 1 units of the Heroes V Inferno (merged into Inferno). All of them have {Demonic} (-25% damage from Fire magic, +25% damage from Light magic). Devil Spawn have {Spell Sabotage} (reduces the enemy hero's mana at the start of combat). Imps also have {Mana Stealer} (at the start of combat, steals mana from the enemy hero and gives it to the allied hero). Vermin also have {Siphon Mana} (drains enemy mana and gives it to allied spellcasting units, 1 time per battle).\n\nImps are cunning little creatures that are very fragile in melee; their real strength lies in their great numbers. Imps have a mana-draining skill that lets them steal the magical energy of the enemy hero.\n\nSee also {Devil Spawn}, {Vermin}.",
+		"faction": "inferno",
+		"level": 1,
+		"cost": {
+			"gold": 65
+		},
+		"speed": 7,
+		"hitPoints": 5,
+		"attack": 6,
+		"defense": 3,
+		"damage": {
+			"min": 2,
+			"max": 3
+		},
+		"doubleWide": false,
+		"fightValue": 84,
+		"aiValue": 85,
+		"growth": 14,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"demonic": {
+				"type": "tears-of-ashan:DEMONIC",
+				"description": "{Demonic}\nFire spell damage -25%\nLight spell damage +25%"
+			},
+			"fireReduction": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "fire",
+				"val": 25,
+				"hidden": true
+			},
+			"lightVulnerability": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "01lightSchool",
+				"val": -25,
+				"hidden": true
+			},
+			"h5ManaStealer": {
+				"icon": "h5/abilities/manaSteal",
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5ManaBurn",
+				"addInfo": {
+					"mode": "steal",
+					"perGrowth": 4
+				},
+				"description": "{Mana Stealer}\nAt battle start, steals\nenemy hero mana for yours"
+			},
+			"h5ManaStealHero": {
+				"type": "COMBAT_MANA_BONUS",
+				"val": 4,
+				"propagator": "HERO",
+				"updater": {
+					"type": "TIMES_ARMY_SIZE",
+					"stepSize": 16,
+					"filteredCreature": "h5InfernoImp"
+				},
+				"stacking": "h5ManaSteal_h5InfernoImp",
+				"hidden": true
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 16,
+				"hidden": true
+			},
+			"h5GatingInfo": {
+				"type": "H5_GATING_H5C"
+			}
+		},
+		"graphics": {
+			"animation": "h5/Inferno_Imp/battle.json",
+			"map": "h5/Inferno_Imp/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Inferno_Imp/map/atkL.png",
+			"mapAttackFromRight": "h5/Inferno_Imp/map/atkR.png",
+			"iconLarge": "h5/Inferno_Imp/iconLarge.png",
+			"iconSmall": "h5/Inferno_Imp/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_Imp_attack00.ogg",
+			"wince": "h5/h5_Imp_hit.ogg",
+			"defend": "h5/h5_Imp_hit.ogg",
+			"killed": "h5/h5_Imp_death.ogg",
+			"move": "h5/h5_Imp_move.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "CHANGES_SPELL_COST_FOR_ENEMY"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "FLYING",
+					"description": "{Wings}\nCan fly"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "NEGATIVE_EFFECTS_IMMUNITY",
+					"subtype": "fire",
+					"description": "{Fire Ward}\nImmune to harmful Fire spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h5InfernoInfernalSuccubus": {
+		"name": {
+			"singular": "Succubus Mistress",
+			"plural": "Succubus Mistresses"
+		},
+		"description": "Succubi, Succubus Mistresses and Succubus Seducers are the level 4 units of the Heroes V Inferno (merged into Inferno). All of them have a ranged attack, plus {Demonic} (-25% damage from Fire magic, +25% damage from Light magic) and {Ranged Retaliation} (retaliates with a ranged attack when shot). Succubus Mistresses also have {Chain Shot} (after shooting, the shot jumps to the 3 nearest enemies, with damage halved at each jump). Succubus Seducers also have {Immune to Puppet Master} and {Seduce} (takes control of an enemy stack for a number of rounds equal to the Hit Point ratio, once per battle).\n\nSuccubus Mistresses can summon fireballs and hurl them at their enemies. Once this cursed flame strikes a foe, its fury does not stop: it spreads to the creatures around it, and in an instant the sky is ablaze.\n\nSee also {Succubus}, {Succubus Seducer}.",
+		"faction": "inferno",
+		"level": 4,
+		"cost": {
+			"gold": 370
+		},
+		"speed": 5,
+		"hitPoints": 31,
+		"attack": 8,
+		"defense": 7,
+		"damage": {
+			"min": 5,
+			"max": 11
+		},
+		"doubleWide": false,
+		"fightValue": 522,
+		"aiValue": 598,
+		"growth": 4,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"shooter": {
+				"type": "SHOOTER"
+			},
+			"demonic": {
+				"type": "tears-of-ashan:DEMONIC",
+				"description": "{Demonic}\nFire spell damage -25%\nLight spell damage +25%"
+			},
+			"fireReduction": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "fire",
+				"val": 25,
+				"hidden": true
+			},
+			"lightVulnerability": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "01lightSchool",
+				"val": -25,
+				"hidden": true
+			},
+			"rangedRetaliation": {
+				"type": "RANGED_RETALIATION",
+				"description": "{Ranged Retaliation}\nRetaliates with a shot\nwhen shot at"
+			},
+			"h5ChainShot": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5ChainShot",
+				"addInfo": {
+					"targets": 3,
+					"factor": 50
+				},
+				"icon": "h5/abilities/h5ChainShot",
+				"description": "{Chain Shot}\nShot jumps to 3 nearest\nfoes, half dmg each jump"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 5,
+				"hidden": true
+			},
+			"h5GatingInfo": {
+				"type": "H5_GATING_H5C"
+			}
+		},
+		"graphics": {
+			"animation": "h5/Inferno_InfernalSuccubus/battle.json",
+			"map": "h5/Inferno_InfernalSuccubus/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Inferno_InfernalSuccubus/map/atkL.png",
+			"mapAttackFromRight": "h5/Inferno_InfernalSuccubus/map/atkR.png",
+			"iconLarge": "h5/Inferno_InfernalSuccubus/iconLarge.png",
+			"iconSmall": "h5/Inferno_InfernalSuccubus/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"frameAngles": [
+					90,
+					60,
+					45,
+					30,
+					0,
+					-30,
+					-45,
+					-60,
+					-90
+				],
+				"offset": {
+					"upperX": 16,
+					"upperY": -52,
+					"middleX": 14,
+					"middleY": -46,
+					"lowerX": -2,
+					"lowerY": -43
+				},
+				"attackClimaxFrame": 6,
+				"ray": [
+					{
+						"start": [
+							127,
+							84,
+							27,
+							160
+						],
+						"end": [
+							84,
+							56,
+							18,
+							60
+						]
+					},
+					{
+						"start": [
+							254,
+							169,
+							54,
+							255
+						],
+						"end": [
+							254,
+							169,
+							54,
+							120
+						]
+					},
+					{
+						"start": [
+							255,
+							249,
+							134,
+							255
+						],
+						"end": [
+							254,
+							169,
+							54,
+							200
+						]
+					},
+					{
+						"start": [
+							254,
+							169,
+							54,
+							255
+						],
+						"end": [
+							254,
+							169,
+							54,
+							120
+						]
+					},
+					{
+						"start": [
+							127,
+							84,
+							27,
+							160
+						],
+						"end": [
+							84,
+							56,
+							18,
+							60
+						]
+					}
+				]
+			}
+		},
+		"sound": {
+			"attack": "h5/h5_InfernalSuccubus_attack00.ogg",
+			"wince": "h5/h5_InfernalSuccubus_hit.ogg",
+			"defend": "h5/h5_InfernalSuccubus_hit.ogg",
+			"killed": "h5/h5_InfernalSuccubus_death.ogg",
+			"move": "h5/h5_InfernalSuccubus_move.ogg",
+			"shoot": "h5/h5_InfernalSuccubus_rangeattack.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					5,
+					6,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_WALL_PENALTY",
+					"description": "{Siege Shooter}\nNo damage loss when shooting over walls"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_DISTANCE_PENALTY",
+					"description": "{Sharpshooter}\nNo penalty for long-range shots"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "ENEMY_DEFENCE_REDUCTION"
+				},
+				"values": [
+					3,
+					6,
+					9,
+					12,
+					15,
+					18,
+					21,
+					24,
+					27,
+					30
+				]
+			},
+			{
+				"bonus": {
+					"type": "DOUBLE_DAMAGE_CHANCE"
+				},
+				"values": [
+					2,
+					4,
+					6,
+					8,
+					10,
+					12,
+					14,
+					16,
+					18,
+					20
+				]
+			}
+		],
+		"shots": 17
+	},
+	"h5InfernoNightmare": {
+		"name": {
+			"singular": "Hell Steed",
+			"plural": "Hell Steeds"
+		},
+		"description": "Hell Steeds, Nightmares and Hellmares are the level 5 units of the Heroes V Inferno (merged into Inferno). All of them have {Demonic} (-25% damage from Fire magic, +25% damage from Light magic) and {Fear Attack} (attacks have a chance to make the target flee and reset its ATB to zero). Nightmares also have {Aura of Fear} (-3 Morale to enemies within 3 hexes). Hellmares also have {Searing Aura} (adjacent enemies take 9 × the number of Hellmares in Fire damage before they act).\n\nHell Steeds are cruel beasts summoned from the depths of Sheogh. Terror surrounds these creatures, and when they attack, even the bravest warriors grow so weak with fear that they can barely raise a sword against them.\n\nSee also {Nightmare}, {Hellmare}.",
+		"faction": "inferno",
+		"level": 5,
+		"cost": {
+			"gold": 430
+		},
+		"speed": 10,
+		"hitPoints": 37,
+		"attack": 11,
+		"defense": 11,
+		"damage": {
+			"min": 8,
+			"max": 15
+		},
+		"doubleWide": true,
+		"fightValue": 666,
+		"aiValue": 741,
+		"growth": 3,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"demonic": {
+				"type": "tears-of-ashan:DEMONIC",
+				"description": "{Demonic}\nFire spell damage -25%\nLight spell damage +25%"
+			},
+			"fireReduction": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "fire",
+				"val": 25,
+				"hidden": true
+			},
+			"lightVulnerability": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "01lightSchool",
+				"val": -25,
+				"hidden": true
+			},
+			"h5Fear": {
+				"icon": "h5/abilities/fearAttack",
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5ProcEffect",
+				"addInfo": {
+					"effect": "fear",
+					"pf": 0.8,
+					"melee": true,
+					"ranged": true
+				},
+				"description": "{Fear Attack}\nAttacks may make target\nflee, ATB reset"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 3,
+				"hidden": true
+			},
+			"h5GatingInfo": {
+				"type": "H5_GATING_H5C"
+			}
+		},
+		"graphics": {
+			"animation": "h5/Inferno_Nightmare/battle.json",
+			"map": "h5/Inferno_Nightmare/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Inferno_Nightmare/map/atkL.png",
+			"mapAttackFromRight": "h5/Inferno_Nightmare/map/atkR.png",
+			"iconLarge": "h5/Inferno_Nightmare/iconLarge.png",
+			"iconSmall": "h5/Inferno_Nightmare/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_NightmareAttack.ogg",
+			"wince": "h5/h5_NightmareHit.ogg",
+			"defend": "h5/h5_NightmareHit.ogg",
+			"killed": "h5/h5_NightmareDeath.ogg",
+			"move": "h5/h5_NightmareMove.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					3,
+					4,
+					5,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					3,
+					4,
+					4,
+					6,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					2,
+					3,
+					3,
+					4,
+					5,
+					6,
+					6,
+					7
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					7
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_RETALIATION"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "SPELL_AFTER_ATTACK",
+					"subtype": "misfortune",
+					"addInfo": [
+						2,
+						2
+					]
+				},
+				"values": [
+					3,
+					6,
+					9,
+					12,
+					15,
+					18,
+					21,
+					24,
+					27,
+					30
+				]
+			},
+			{
+				"bonus": {
+					"type": "MIND_IMMUNITY",
+					"description": "{Steadfast Mind}\nImmune to Mind spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true
+				]
+			}
+		],
+		"upgrades": [
+			"h5InfernoFrightfulNightmare",
+			"h5Inferno3rdHellmare"
+		]
+	},
+	"h5InfernoPitFiend": {
+		"name": {
+			"singular": "Pit Fiend",
+			"plural": "Pit Fiends"
+		},
+		"description": "Pit Fiends, Pit Lords and Pit Spawn are the level 6 units of the Heroes V Inferno (merged into Inferno). All of them have {Demonic} (-25% damage from Fire magic, +25% damage from Light magic). Pit Fiends can cast {Fireball Volley} and {Armor Break} (2 times per battle, 10 mana). Pit Lords can also cast {Fireball Volley}, {Meteor Shower} and {Armor Break} (4 times per battle, 20 mana) and have {Soul Stealer} (each attack or retaliation kills at least 1 enemy creature). Pit Spawn also have {Blade of Slaughter} (after an attack or retaliation, deals extra damage to the target equal to 2 × the number of creatures in the target stack) and {50% Magic Proof} (-50% magic damage).\n\nThese mighty devils come from the darkest chasms of the underworld and carry out their masters' will to the letter. Pit Fiends excel at melee and at attack magic.\n\nSee also {Pit Lord}, {Pit Spawn}.",
+		"faction": "inferno",
+		"level": 6,
+		"cost": {
+			"gold": 940
+		},
+		"speed": 5,
+		"hitPoints": 84,
+		"attack": 15,
+		"defense": 13,
+		"damage": {
+			"min": 12,
+			"max": 24
+		},
+		"doubleWide": true,
+		"fightValue": 1406,
+		"aiValue": 1660,
+		"growth": 2,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"demonic": {
+				"type": "tears-of-ashan:DEMONIC",
+				"description": "{Demonic}\nFire spell damage -25%\nLight spell damage +25%"
+			},
+			"fireReduction": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "fire",
+				"val": 25,
+				"hidden": true
+			},
+			"lightVulnerability": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "01lightSchool",
+				"val": -25,
+				"hidden": true
+			},
+			"cast_h5AbFireball": {
+				"type": "SPELLCASTER",
+				"subtype": "h5AbFireball",
+				"val": 1
+			},
+			"cast_h5AbDisruptingRay": {
+				"type": "SPELLCASTER",
+				"subtype": "h5AbDisruptingRay",
+				"val": 2
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 2,
+				"hidden": true
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 2
+			},
+			"h5Mana": {
+				"type": "H5_MANA_H5C",
+				"val": 10,
+				"stacking": "h5InfernoPitFiendExpH5ManaH5c"
+			},
+			"h5ManaMin": {
+				"type": "H5_MANA_MIN_H5C",
+				"val": 5,
+				"hidden": true
+			},
+			"h5ManaPool": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5ManaPool",
+				"hidden": true,
+				"description": "~"
+			},
+			"h5GatingInfo": {
+				"type": "H5_GATING_H5C"
+			}
+		},
+		"graphics": {
+			"animation": "h5/Inferno_PitFiend/battle.json",
+			"map": "h5/Inferno_PitFiend/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Inferno_PitFiend/map/atkL.png",
+			"mapAttackFromRight": "h5/Inferno_PitFiend/map/atkR.png",
+			"iconLarge": "h5/Inferno_PitFiend/iconLarge.png",
+			"iconSmall": "h5/Inferno_PitFiend/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_attack00.ogg",
+			"wince": "h5/h5_hit.ogg",
+			"defend": "h5/h5_hit.ogg",
+			"killed": "h5/h5_death.ogg",
+			"move": "h5/h5_PitFiendMove.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					2,
+					3,
+					4,
+					5,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_ATTACK"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "MIND_IMMUNITY",
+					"description": "{Steadfast Mind}\nImmune to Mind spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "H5_MANA_H5C",
+					"stacking": "h5InfernoPitFiendExpH5ManaH5c"
+				},
+				"values": [
+					10,
+					10,
+					10,
+					10,
+					10,
+					15,
+					15,
+					15,
+					15,
+					15
+				]
+			}
+		],
+		"upgrades": [
+			"h5InfernoBalor",
+			"h5Inferno3rdPitSpawn"
+		]
+	},
+	"h5InfernoSuccubus": {
+		"name": {
+			"singular": "Succubus",
+			"plural": "Succubi"
+		},
+		"description": "Succubi, Succubus Mistresses and Succubus Seducers are the level 4 units of the Heroes V Inferno (merged into Inferno). All of them have a ranged attack, plus {Demonic} (-25% damage from Fire magic, +25% damage from Light magic) and {Ranged Retaliation} (retaliates with a ranged attack when shot). Succubus Mistresses also have {Chain Shot} (after shooting, the shot jumps to the 3 nearest enemies, with damage halved at each jump). Succubus Seducers also have {Immune to Puppet Master} and {Seduce} (takes control of an enemy stack for a number of rounds equal to the Hit Point ratio, once per battle).\n\nSuccubi can conjure fireballs and hurl them at their enemies. Any shooter that attacks a Succubus must be ready to face a dense barrage of fire in return.\n\nSee also {Succubus Mistress}, {Succubus Seducer}.",
+		"faction": "inferno",
+		"level": 4,
+		"cost": {
+			"gold": 255
+		},
+		"speed": 5,
+		"hitPoints": 21,
+		"attack": 8,
+		"defense": 7,
+		"damage": {
+			"min": 5,
+			"max": 11
+		},
+		"doubleWide": false,
+		"fightValue": 384,
+		"aiValue": 440,
+		"growth": 4,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"shooter": {
+				"type": "SHOOTER"
+			},
+			"demonic": {
+				"type": "tears-of-ashan:DEMONIC",
+				"description": "{Demonic}\nFire spell damage -25%\nLight spell damage +25%"
+			},
+			"fireReduction": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "fire",
+				"val": 25,
+				"hidden": true
+			},
+			"lightVulnerability": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "01lightSchool",
+				"val": -25,
+				"hidden": true
+			},
+			"rangedRetaliation": {
+				"type": "RANGED_RETALIATION",
+				"description": "{Ranged Retaliation}\nRetaliates with a shot\nwhen shot at"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 5,
+				"hidden": true
+			},
+			"h5GatingInfo": {
+				"type": "H5_GATING_H5C"
+			}
+		},
+		"graphics": {
+			"animation": "h5/Inferno_Succubus/battle.json",
+			"map": "h5/Inferno_Succubus/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Inferno_Succubus/map/atkL.png",
+			"mapAttackFromRight": "h5/Inferno_Succubus/map/atkR.png",
+			"iconLarge": "h5/Inferno_Succubus/iconLarge.png",
+			"iconSmall": "h5/Inferno_Succubus/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"frameAngles": [
+					90,
+					60,
+					45,
+					30,
+					0,
+					-30,
+					-45,
+					-60,
+					-90
+				],
+				"offset": {
+					"upperX": 16,
+					"upperY": -52,
+					"middleX": 15,
+					"middleY": -47,
+					"lowerX": -2,
+					"lowerY": -43
+				},
+				"attackClimaxFrame": 6,
+				"ray": [
+					{
+						"start": [
+							127,
+							84,
+							27,
+							160
+						],
+						"end": [
+							84,
+							56,
+							18,
+							60
+						]
+					},
+					{
+						"start": [
+							254,
+							169,
+							54,
+							255
+						],
+						"end": [
+							254,
+							169,
+							54,
+							120
+						]
+					},
+					{
+						"start": [
+							255,
+							249,
+							134,
+							255
+						],
+						"end": [
+							254,
+							169,
+							54,
+							200
+						]
+					},
+					{
+						"start": [
+							254,
+							169,
+							54,
+							255
+						],
+						"end": [
+							254,
+							169,
+							54,
+							120
+						]
+					},
+					{
+						"start": [
+							127,
+							84,
+							27,
+							160
+						],
+						"end": [
+							84,
+							56,
+							18,
+							60
+						]
+					}
+				]
+			}
+		},
+		"sound": {
+			"attack": "h5/h5_Succubus_attack.ogg",
+			"wince": "h5/h5_Succubus_hit.ogg",
+			"defend": "h5/h5_Succubus_hit.ogg",
+			"killed": "h5/h5_Succubus_death.ogg",
+			"move": "h5/h5_Succubus_move.ogg",
+			"shoot": "h5/h5_Succubus_rangeattack.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					5,
+					6,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_WALL_PENALTY",
+					"description": "{Siege Shooter}\nNo damage loss when shooting over walls"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "SHOTS"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "ENEMY_DEFENCE_REDUCTION"
+				},
+				"values": [
+					3,
+					6,
+					9,
+					12,
+					15,
+					18,
+					21,
+					24,
+					27,
+					30
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE"
+				},
+				"values": [
+					2,
+					4,
+					6,
+					8,
+					10,
+					12,
+					14,
+					16,
+					18,
+					20
+				]
+			}
+		],
+		"shots": 17,
+		"upgrades": [
+			"h5InfernoInfernalSuccubus",
+			"h5Inferno3rdSuccubusSeducer"
+		]
+	}
+}

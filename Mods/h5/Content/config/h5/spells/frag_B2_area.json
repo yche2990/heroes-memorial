@@ -1,0 +1,54 @@
+{
+	"h5LiquidFlameTrigger": {
+		"targetType": "CREATURE",
+		"type": "ability",
+		"name": "Liquid Flame",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": true,
+			"water": false
+		},
+		"level": 0,
+		"power": 1,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"flags": {
+			"special": true,
+			"damage": true,
+			"indifferent": true,
+			"nonMagical": true
+		},
+		"graphics": {
+			"iconImmune": "h5/abilities/h5LiquidFlame"
+		},
+		"sounds": {
+			"cast": "FIREBLST"
+		},
+		"animation": {
+			"hit": [
+				"h5/fx/Characters_hits_fire_hit"
+			]
+		},
+		"levels": {
+			"base": {
+				"power": 0,
+				"range": "0",
+				"description": "A fire left by a Lava Dragon: stacks that walk into it take Fire damage.",
+				"cost": 0,
+				"battleEffects": {
+					"directDamage": {
+						"type": "damage"
+					}
+				},
+				"targetModifier": {
+					"smart": false
+				}
+			},
+			"none": {},
+			"basic": {},
+			"advanced": {},
+			"expert": {}
+		}
+	}
+}

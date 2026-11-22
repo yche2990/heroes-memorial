@@ -1,0 +1,2805 @@
+{
+	"h5AbAmmoSteal": {
+		"type": "ability",
+		// Ammo Steal
+		"name": "Ammo Steal",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"targetType": "CREATURE",
+		"flags": {
+			"special": true,
+			"negative": true
+		},
+		"sounds": {
+			"cast": "DISPELL"
+		},
+		"graphics": {
+			"iconBook": "h5/spells/h5AbAmmoSteal/Book",
+			"iconScroll": "h5/spells/h5AbAmmoSteal/Scroll",
+			"iconScenarioBonus": "h5/spells/h5AbAmmoSteal/Scenario",
+			"iconEffect": "h5/spells/h5AbAmmoSteal/Effect"
+		},
+		"levels": {
+			"base": {
+				"cost": 0,
+				"power": 0,
+				"range": "0",
+				"targetModifier": {
+					"smart": true
+				},
+				"battleEffects": {
+					"steal": {
+						"type": "h5AbAmmoSteal",
+						"perCreatures": 10,
+						"bonus": 1,
+						"mark": "H5_AB_AMMOSTEAL_H5C"
+					}
+				}
+			},
+			"none": {
+				"description": "{Ammo Steal}\n\nCast on one enemy shooter within movement range (ignoring obstacles); steals Poltergeists / 10 (rounded up) + 1 shots. Unlimited uses."
+			},
+			"basic": {
+				"description": "{Ammo Steal}\n\nCast on one enemy shooter within movement range (ignoring obstacles); steals Poltergeists / 10 (rounded up) + 1 shots. Unlimited uses."
+			},
+			"advanced": {
+				"description": "{Ammo Steal}\n\nCast on one enemy shooter within movement range (ignoring obstacles); steals Poltergeists / 10 (rounded up) + 1 shots. Unlimited uses."
+			},
+			"expert": {
+				"description": "{Ammo Steal}\n\nCast on one enemy shooter within movement range (ignoring obstacles); steals Poltergeists / 10 (rounded up) + 1 shots. Unlimited uses."
+			}
+		},
+		"animation": {
+			"affect": [
+				"h5/fx/Characters_hits_poison_hit"
+			]
+		}
+	},
+	"h5AbSummonBalor": {
+		"type": "ability",
+		// Summon Balor
+		"name": "Summon Pit Lord",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"targetType": "CREATURE",
+		"flags": {
+			"special": true,
+			"positive": true,
+			"rising": true
+		},
+		"sounds": {
+			"cast": "RESURECT"
+		},
+		"graphics": {
+			"iconBook": "h5/spells/h5AbSummonBalor/Book",
+			"iconScroll": "h5/spells/h5AbSummonBalor/Scroll",
+			"iconScenarioBonus": "h5/spells/h5AbSummonBalor/Scenario",
+			"iconEffect": "h5/spells/h5AbSummonBalor/Effect"
+		},
+		"levels": {
+			"base": {
+				"cost": 0,
+				"power": 0,
+				"range": "0",
+				"targetModifier": {
+					"smart": true
+				},
+				"battleEffects": {
+					"demonSummon": {
+						"type": "h5AbSummonBalor",
+						"id": "h5InfernoBalor",
+						"perCaster": 2,
+						"permanent": false,
+						"requireAny": [
+							"tears-of-ashan:DEMONIC"
+						]
+					}
+				}
+			},
+			"none": {
+				"description": "{Summon Pit Lord}\n\nCast on a friendly Demon corpse, replacing it with Pit Lords (summoned, gone after battle): count = min(Arch Devils x 2, corpse total Hit Points / Pit Lord Hit Points). Once per battle (twice from stack experience Rank 7)."
+			},
+			"basic": {
+				"description": "{Summon Pit Lord}\n\nCast on a friendly Demon corpse, replacing it with Pit Lords (summoned, gone after battle): count = min(Arch Devils x 2, corpse total Hit Points / Pit Lord Hit Points). Once per battle (twice from stack experience Rank 7)."
+			},
+			"advanced": {
+				"description": "{Summon Pit Lord}\n\nCast on a friendly Demon corpse, replacing it with Pit Lords (summoned, gone after battle): count = min(Arch Devils x 2, corpse total Hit Points / Pit Lord Hit Points). Once per battle (twice from stack experience Rank 7)."
+			},
+			"expert": {
+				"description": "{Summon Pit Lord}\n\nCast on a friendly Demon corpse, replacing it with Pit Lords (summoned, gone after battle): count = min(Arch Devils x 2, corpse total Hit Points / Pit Lord Hit Points). Once per battle (twice from stack experience Rank 7)."
+			}
+		},
+		"animation": {
+			"affect": [
+				"h5/fx/Characters_SummonBalor"
+			]
+		}
+	},
+	"h5AbBattleDive": {
+		"type": "ability",
+		// Battle Dive
+		"name": "Battle Dive",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"targetType": "LOCATION",
+		"flags": {
+			"special": true,
+			"indifferent": true
+		},
+		"sounds": {
+			"cast": ""
+		},
+		"graphics": {
+			"iconBook": "h5/spells/h5AbBattleDive/Book",
+			"iconScroll": "h5/spells/h5AbBattleDive/Scroll",
+			"iconScenarioBonus": "h5/spells/h5AbBattleDive/Scenario",
+			"iconEffect": "h5/spells/h5AbBattleDive/Effect"
+		},
+		"levels": {
+			"base": {
+				"cost": 0,
+				"power": 0,
+				"range": "0",
+				"targetModifier": {
+					"smart": false
+				},
+				"battleEffects": {
+					"dive": {
+						"type": "h47Dive",
+						"mark": "H5_DIVE_H5C",
+						"landScript": "heroes-memorial.h5:h47DiveLand",
+						"factor": 2,
+						"markAppear": "h47/fx/fx_diveMarkAppear",
+						"markAnimation": "h47/fx/fx_diveMark"
+					},
+					"count": {
+						"type": "h5AbRefund",
+						"key": "h5AbBattleDive"
+					}
+				}
+			},
+			"none": {
+				"description": "{Battle Dive}\n\nChooses a hex on the battlefield and takes to the air, leaving the field (cannot be attacked while away). At the start of the next round, it dives onto that hex, dealing 2x normal attack damage to the stack there (friend or foe, no retaliation), then lands on that hex or the nearest empty hex, using up its action for that round. Unlimited uses."
+			},
+			"basic": {
+				"description": "{Battle Dive}\n\nChooses a hex on the battlefield and takes to the air, leaving the field (cannot be attacked while away). At the start of the next round, it dives onto that hex, dealing 2x normal attack damage to the stack there (friend or foe, no retaliation), then lands on that hex or the nearest empty hex, using up its action for that round. Unlimited uses."
+			},
+			"advanced": {
+				"description": "{Battle Dive}\n\nChooses a hex on the battlefield and takes to the air, leaving the field (cannot be attacked while away). At the start of the next round, it dives onto that hex, dealing 2x normal attack damage to the stack there (friend or foe, no retaliation), then lands on that hex or the nearest empty hex, using up its action for that round. Unlimited uses."
+			},
+			"expert": {
+				"description": "{Battle Dive}\n\nChooses a hex on the battlefield and takes to the air, leaving the field (cannot be attacked while away). At the start of the next round, it dives onto that hex, dealing 2x normal attack damage to the stack there (friend or foe, no retaliation), then lands on that hex or the nearest empty hex, using up its action for that round. Unlimited uses."
+			}
+		},
+		"animation": {}
+	},
+	"h5AbBerserkerRage": {
+		"type": "ability",
+		// Berserker Rage
+		"name": "Berserker Rage",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"targetType": "NO_TARGET",
+		"flags": {
+			"special": true,
+			"positive": true
+		},
+		"sounds": {
+			"cast": ""
+		},
+		"graphics": {
+			"iconBook": "h5/spells/h5AbBerserkerRage/Book",
+			"iconScroll": "h5/spells/h5AbBerserkerRage/Scroll",
+			"iconScenarioBonus": "h5/spells/h5AbBerserkerRage/Scenario",
+			"iconEffect": "h5/spells/h5AbBerserkerRage/Effect"
+		},
+		"levels": {
+			"base": {
+				"cost": 0,
+				"power": 0,
+				"range": "0",
+				"targetModifier": {
+					"smart": true
+				},
+				"battleEffects": {
+					"self": {
+						"type": "h5AbBerserkerRage",
+						"show": "H5_BERSERKER_SHOW_H5C",
+						"mark": "H5_AB_BERSERK_H5C"
+					}
+				}
+			},
+			"none": {
+				"description": "{Berserker Rage}\n\nDefense drops to 0 and all the lost Defense is added to Attack; it then automatically attacks the nearest stack (allies if no enemies are nearby), and targets cannot retaliate. Lasts until the battle ends; casting it again ends the rage (since it attacks automatically while raging, this is hard in practice). Unlimited uses."
+			},
+			"basic": {
+				"description": "{Berserker Rage}\n\nDefense drops to 0 and all the lost Defense is added to Attack; it then automatically attacks the nearest stack (allies if no enemies are nearby), and targets cannot retaliate. Lasts until the battle ends; casting it again ends the rage (since it attacks automatically while raging, this is hard in practice). Unlimited uses."
+			},
+			"advanced": {
+				"description": "{Berserker Rage}\n\nDefense drops to 0 and all the lost Defense is added to Attack; it then automatically attacks the nearest stack (allies if no enemies are nearby), and targets cannot retaliate. Lasts until the battle ends; casting it again ends the rage (since it attacks automatically while raging, this is hard in practice). Unlimited uses."
+			},
+			"expert": {
+				"description": "{Berserker Rage}\n\nDefense drops to 0 and all the lost Defense is added to Attack; it then automatically attacks the nearest stack (allies if no enemies are nearby), and targets cannot retaliate. Lasts until the battle ends; casting it again ends the rage (since it attacks automatically while raging, this is hard in practice). Unlimited uses."
+			}
+		},
+		"animation": {}
+	},
+	"h5AbCallLightning": {
+		"type": "ability",
+		// Call Lightning
+		"name": "Call Lightning",
+		"school": {
+			"air": true,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"targetType": "CREATURE",
+		"flags": {
+			"special": true,
+			"negative": true,
+			"damage": true
+		},
+		"sounds": {
+			"cast": ""
+		},
+		"graphics": {
+			"iconBook": "h5/spells/h5AbCallLightning/Book",
+			"iconScroll": "h5/spells/h5AbCallLightning/Scroll",
+			"iconScenarioBonus": "h5/spells/h5AbCallLightning/Scenario",
+			"iconEffect": "h5/spells/h5AbCallLightning/Effect"
+		},
+		"levels": {
+			"base": {
+				"cost": 0,
+				"power": 0,
+				"range": "0",
+				"targetModifier": {
+					"smart": true
+				},
+				"battleEffects": {
+					"strike": {
+						"type": "h5AbStrike",
+						"mode": "perCreature",
+						"per": 27,
+						"spellDamage": true,
+						"key": "h5AbCallLightning",
+						"log": "H5_AB_LIGHTNING_H5C",
+						"hitSound": "LIGHTBLT"
+					}
+				}
+			},
+			"none": {
+				"description": "{Call Lightning}\n\nCalls down lightning on one enemy stack, dealing 27 x Titans Air damage (30 in H5, converted to equivalent damage) (reduced by Air spell resistance), with no retaliation. Unlimited uses."
+			},
+			"basic": {
+				"description": "{Call Lightning}\n\nCalls down lightning on one enemy stack, dealing 27 x Titans Air damage (30 in H5, converted to equivalent damage) (reduced by Air spell resistance), with no retaliation. Unlimited uses."
+			},
+			"advanced": {
+				"description": "{Call Lightning}\n\nCalls down lightning on one enemy stack, dealing 27 x Titans Air damage (30 in H5, converted to equivalent damage) (reduced by Air spell resistance), with no retaliation. Unlimited uses."
+			},
+			"expert": {
+				"description": "{Call Lightning}\n\nCalls down lightning on one enemy stack, dealing 27 x Titans Air damage (30 in H5, converted to equivalent damage) (reduced by Air spell resistance), with no retaliation. Unlimited uses."
+			}
+		},
+		"targetCondition": {
+			"noneOf": {
+				"bonus.SIEGE_WEAPON": "absolute"
+			}
+		},
+		"animation": {
+			"affect": [
+				"h5/fx/Characters_Creatures_Academy_Titan_specability_hit_Effect"
+			]
+		}
+	},
+	"h5AbCallStorm": {
+		"type": "ability",
+		// Call Storm
+		"name": "Stormcaller",
+		"school": {
+			"air": true,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"targetType": "LOCATION",
+		"flags": {
+			"special": true,
+			"indifferent": true
+		},
+		"sounds": {
+			"cast": "LIGHTBLT"
+		},
+		"graphics": {
+			"iconBook": "h5/spells/h5AbCallStorm/Book",
+			"iconScroll": "h5/spells/h5AbCallStorm/Scroll",
+			"iconScenarioBonus": "h5/spells/h5AbCallStorm/Scenario",
+			"iconEffect": "h5/spells/h5AbCallStorm/Effect"
+		},
+		"levels": {
+			"base": {
+				"cost": 0,
+				"power": 0,
+				"range": "0,1",
+				"targetModifier": {
+					"smart": false
+				},
+				"battleEffects": {
+					"zone": {
+						"type": "h5AbZone",
+						"mode": "storm",
+						"per": 9,
+						"turns": 3,
+						"maxPenalty": 90,
+						"tickScript": "heroes-memorial.h5:h5AbStormTick",
+						"animation": "h5/fx/fx_stormLoop",
+						"appear": "h5/fx/fx_stormAppear",
+						"removal": "h5/fx/fx_stormEnd",
+						"mark": "H5_AB_STORM_H5C"
+					}
+				}
+			},
+			"none": {
+				"description": "{Stormcaller}\n\nCalls a storm cloud over a hex and the ring around it for 3 rounds: at the start of each round, stacks in the cloud take 9 x Storm Lords Air damage (10 in H5, converted to equivalent damage), and shooters in the cloud deal -Storm Lords % shooting damage (max 90%). Only the newest cloud is kept at a time. Unlimited uses."
+			},
+			"basic": {
+				"description": "{Stormcaller}\n\nCalls a storm cloud over a hex and the ring around it for 3 rounds: at the start of each round, stacks in the cloud take 9 x Storm Lords Air damage (10 in H5, converted to equivalent damage), and shooters in the cloud deal -Storm Lords % shooting damage (max 90%). Only the newest cloud is kept at a time. Unlimited uses."
+			},
+			"advanced": {
+				"description": "{Stormcaller}\n\nCalls a storm cloud over a hex and the ring around it for 3 rounds: at the start of each round, stacks in the cloud take 9 x Storm Lords Air damage (10 in H5, converted to equivalent damage), and shooters in the cloud deal -Storm Lords % shooting damage (max 90%). Only the newest cloud is kept at a time. Unlimited uses."
+			},
+			"expert": {
+				"description": "{Stormcaller}\n\nCalls a storm cloud over a hex and the ring around it for 3 rounds: at the start of each round, stacks in the cloud take 9 x Storm Lords Air damage (10 in H5, converted to equivalent damage), and shooters in the cloud deal -Storm Lords % shooting damage (max 90%). Only the newest cloud is kept at a time. Unlimited uses."
+			}
+		},
+		"animation": {
+			"hit": [
+				"h5/fx/Spells_Storm_idle_start_Effect"
+			]
+		}
+	},
+	"h5AbDash": {
+		"type": "ability",
+		// Dash
+		"name": "Dash",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"targetType": "NO_TARGET",
+		"flags": {
+			"special": true,
+			"positive": true
+		},
+		"sounds": {
+			"cast": ""
+		},
+		"graphics": {
+			"iconBook": "h5/spells/h5AbDash/Book",
+			"iconScroll": "h5/spells/h5AbDash/Scroll",
+			"iconScenarioBonus": "h5/spells/h5AbDash/Scenario",
+			"iconEffect": "h5/spells/h5AbDash/Effect"
+		},
+		"levels": {
+			"base": {
+				"cost": 0,
+				"power": 0,
+				"range": "0",
+				"targetModifier": {
+					"smart": true
+				},
+				"battleEffects": {
+					"self": {
+						"type": "h5AbSelfBuff",
+						"kind": "dash",
+						"pct": 100,
+						"turns": 3,
+						"sound": "TAILWIND",
+						"show": "H5_DASH_SHOW_H5C",
+						"mark": "H5_AB_DASH_H5C"
+					}
+				}
+			},
+			"none": {
+				"description": "{Dash}\n\nGives up this action to gather strength; Speed +100% for the next 3 rounds (in H5: Initiative x2). Unlimited uses."
+			},
+			"basic": {
+				"description": "{Dash}\n\nGives up this action to gather strength; Speed +100% for the next 3 rounds (in H5: Initiative x2). Unlimited uses."
+			},
+			"advanced": {
+				"description": "{Dash}\n\nGives up this action to gather strength; Speed +100% for the next 3 rounds (in H5: Initiative x2). Unlimited uses."
+			},
+			"expert": {
+				"description": "{Dash}\n\nGives up this action to gather strength; Speed +100% for the next 3 rounds (in H5: Initiative x2). Unlimited uses."
+			}
+		},
+		"animation": {}
+	},
+	"h5AbDeathWail": {
+		"type": "ability",
+		// Death Wail
+		"name": "Death Wail",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"targetType": "NO_TARGET",
+		"flags": {
+			"special": true,
+			"negative": true,
+			"damage": true
+		},
+		"sounds": {
+			"cast": ""
+		},
+		"graphics": {
+			"iconBook": "h5/spells/h5AbDeathWail/Book",
+			"iconScroll": "h5/spells/h5AbDeathWail/Scroll",
+			"iconScenarioBonus": "h5/spells/h5AbDeathWail/Scenario",
+			"iconEffect": "h5/spells/h5AbDeathWail/Effect"
+		},
+		"levels": {
+			"base": {
+				"cost": 0,
+				"power": 0,
+				"range": "0",
+				"targetModifier": {
+					"smart": true
+				},
+				"battleEffects": {
+					"burst": {
+						"type": "h5AbBurst",
+						"mode": "deathWail",
+						"range": 3,
+						"const": 10,
+						"coef": 1.87,
+						"arg": 2,
+						"hitSound": "DEATHRIP",
+						"mark": "H5_AB_DEATHWAIL_H5C"
+					}
+				}
+			},
+			"none": {
+				"description": "{Death Wail}\n\nLiving enemies within 3 hexes take 1.87 x (10 - target Morale) x Banshees damage (factor 2 in H5, converted to equivalent damage); at 1/2/3 hexes they take full, 1/2 and 1/4 respectively. Undead, elementals and mechanical creatures are unaffected. Unlimited uses."
+			},
+			"basic": {
+				"description": "{Death Wail}\n\nLiving enemies within 3 hexes take 1.87 x (10 - target Morale) x Banshees damage (factor 2 in H5, converted to equivalent damage); at 1/2/3 hexes they take full, 1/2 and 1/4 respectively. Undead, elementals and mechanical creatures are unaffected. Unlimited uses."
+			},
+			"advanced": {
+				"description": "{Death Wail}\n\nLiving enemies within 3 hexes take 1.87 x (10 - target Morale) x Banshees damage (factor 2 in H5, converted to equivalent damage); at 1/2/3 hexes they take full, 1/2 and 1/4 respectively. Undead, elementals and mechanical creatures are unaffected. Unlimited uses."
+			},
+			"expert": {
+				"description": "{Death Wail}\n\nLiving enemies within 3 hexes take 1.87 x (10 - target Morale) x Banshees damage (factor 2 in H5, converted to equivalent damage); at 1/2/3 hexes they take full, 1/2 and 1/4 respectively. Undead, elementals and mechanical creatures are unaffected. Unlimited uses."
+			}
+		},
+		"animation": {
+			"affect": [
+				"h5/fx/Characters_Creatures_Necropolis_Lich_DeathCloud_Effect"
+			]
+		}
+	},
+	"h5AbDefileMagic": {
+		"type": "ability",
+		// Defile Magic
+		"name": "Defile Magic",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"targetType": "CREATURE",
+		"flags": {
+			"special": true,
+			"negative": true
+		},
+		"sounds": {
+			"cast": ""
+		},
+		"graphics": {
+			"iconBook": "h5/spells/h5AbDefileMagic/Book",
+			"iconScroll": "h5/spells/h5AbDefileMagic/Scroll",
+			"iconScenarioBonus": "h5/spells/h5AbDefileMagic/Scenario",
+			"iconEffect": "h5/spells/h5AbDefileMagic/Effect"
+		},
+		"levels": {
+			"base": {
+				"cost": 0,
+				"power": 0,
+				"range": "0",
+				"targetModifier": {
+					"smart": true
+				},
+				"battleEffects": {
+					"target": {
+						"type": "h5AbTarget",
+						"mode": "defile",
+						"turns": 2,
+						"sound": "CURSE",
+						"mark": "H5_AB_DEFILE_H5C"
+					}
+				}
+			},
+			"none": {
+				"description": "{Defile Magic}\n\nCast on one enemy stack that can cast spells: its casts -1, and its Spell Power is halved for 2 rounds. In H5 it could also target the enemy hero (doubling mana cost, halving power or making spells fail); this version cannot. Unlimited uses."
+			},
+			"basic": {
+				"description": "{Defile Magic}\n\nCast on one enemy stack that can cast spells: its casts -1, and its Spell Power is halved for 2 rounds. In H5 it could also target the enemy hero (doubling mana cost, halving power or making spells fail); this version cannot. Unlimited uses."
+			},
+			"advanced": {
+				"description": "{Defile Magic}\n\nCast on one enemy stack that can cast spells: its casts -1, and its Spell Power is halved for 2 rounds. In H5 it could also target the enemy hero (doubling mana cost, halving power or making spells fail); this version cannot. Unlimited uses."
+			},
+			"expert": {
+				"description": "{Defile Magic}\n\nCast on one enemy stack that can cast spells: its casts -1, and its Spell Power is halved for 2 rounds. In H5 it could also target the enemy hero (doubling mana cost, halving power or making spells fail); this version cannot. Unlimited uses."
+			}
+		},
+		"animation": {
+			"affect": [
+				"h5/fx/Spells_Goblin_Defiler_FX_Goblin_Defiler_Effect"
+			]
+		}
+	},
+	"h5AbExplosion": {
+		"type": "ability",
+		// Explosion
+		"name": "Explosion",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": true,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"targetType": "NO_TARGET",
+		"flags": {
+			"special": true,
+			"indifferent": true,
+			"damage": true
+		},
+		"sounds": {
+			"cast": ""
+		},
+		"graphics": {
+			"iconBook": "h5/spells/h5AbExplosion/Book",
+			"iconScroll": "h5/spells/h5AbExplosion/Scroll",
+			"iconScenarioBonus": "h5/spells/h5AbExplosion/Scenario",
+			"iconEffect": "h5/spells/h5AbExplosion/Effect"
+		},
+		"levels": {
+			"base": {
+				"cost": 0,
+				"power": 0,
+				"range": "0",
+				"targetModifier": {
+					"smart": true
+				},
+				"battleEffects": {
+					"burst": {
+						"type": "h5AbBurst",
+						"mode": "explosion",
+						"base": [
+							5,
+							7,
+							9,
+							11
+						],
+						"per": [
+							5,
+							7,
+							9,
+							11
+						],
+						"uses": 1,
+						"hitSound": "SPONTCOMB",
+						"mark": "H5_AB_EXPLOSION_H5C"
+					}
+				}
+			},
+			"none": {
+				"description": "{Explosion}\n\nTriggers an explosion: all adjacent stacks (friend or foe) take base + factor x the stack's Spell Power Fire damage (None/Basic/Advanced/Expert: 5/7/9/11 + 5/7/9/11 x Spell Power); it is unharmed itself. Once per battle."
+			},
+			"basic": {
+				"description": "{Explosion}\n\nTriggers an explosion: all adjacent stacks (friend or foe) take base + factor x the stack's Spell Power Fire damage (None/Basic/Advanced/Expert: 5/7/9/11 + 5/7/9/11 x Spell Power); it is unharmed itself. Once per battle."
+			},
+			"advanced": {
+				"description": "{Explosion}\n\nTriggers an explosion: all adjacent stacks (friend or foe) take base + factor x the stack's Spell Power Fire damage (None/Basic/Advanced/Expert: 5/7/9/11 + 5/7/9/11 x Spell Power); it is unharmed itself. Once per battle."
+			},
+			"expert": {
+				"description": "{Explosion}\n\nTriggers an explosion: all adjacent stacks (friend or foe) take base + factor x the stack's Spell Power Fire damage (None/Basic/Advanced/Expert: 5/7/9/11 + 5/7/9/11 x Spell Power); it is unharmed itself. Once per battle."
+			}
+		},
+		"animation": {
+			"affect": [
+				{
+					"effectName": "h5light_Spells_FireBallHit"
+				},
+				"h5/fx/Spells_FireBallHit"
+			]
+		}
+	},
+	"h5AbFlamestrike": {
+		"type": "ability",
+		// Flamestrike
+		"name": "Flamestrike",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"targetType": "NO_TARGET",
+		"flags": {
+			"special": true,
+			"positive": true
+		},
+		"sounds": {
+			"cast": ""
+		},
+		"graphics": {
+			"iconBook": "h5/spells/h5AbFlamestrike/Book",
+			"iconScroll": "h5/spells/h5AbFlamestrike/Scroll",
+			"iconScenarioBonus": "h5/spells/h5AbFlamestrike/Scenario",
+			"iconEffect": "h5/spells/h5AbFlamestrike/Effect"
+		},
+		"levels": {
+			"base": {
+				"cost": 0,
+				"power": 0,
+				"range": "0",
+				"targetModifier": {
+					"smart": true
+				},
+				"battleEffects": {
+					"self": {
+						"type": "h5AbSelfBuff",
+						"kind": "flamestrike",
+						"pct": 20,
+						"spell": "h5AbMarkOfFire",
+						"uses": 1,
+						"sound": "FIREBLST",
+						"show": "H5_FLAMESTRIKE_SHOW_H5C",
+						"mark": "H5_AB_FLAMESTRIKE_H5C"
+					}
+				}
+			},
+			"none": {
+				"description": "{Flamestrike}\n\nThe next attack this round deals 1.2x damage and puts Mark of Fire on the target (Fire spell damage doubled for 2 rounds). Once per battle (twice from stack experience Rank 6)."
+			},
+			"basic": {
+				"description": "{Flamestrike}\n\nThe next attack this round deals 1.2x damage and puts Mark of Fire on the target (Fire spell damage doubled for 2 rounds). Once per battle (twice from stack experience Rank 6)."
+			},
+			"advanced": {
+				"description": "{Flamestrike}\n\nThe next attack this round deals 1.2x damage and puts Mark of Fire on the target (Fire spell damage doubled for 2 rounds). Once per battle (twice from stack experience Rank 6)."
+			},
+			"expert": {
+				"description": "{Flamestrike}\n\nThe next attack this round deals 1.2x damage and puts Mark of Fire on the target (Fire spell damage doubled for 2 rounds). Once per battle (twice from stack experience Rank 6)."
+			}
+		},
+		"animation": {
+			"affect": [
+				"h5/fx/Arenas_InfernoSiege_BigTowerShot_hit"
+			]
+		}
+	},
+	"h5AbGoblinThrow": {
+		"type": "ability",
+		// Goblin Throw
+		"name": "Goblin Throw",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"targetType": "CREATURE",
+		"flags": {
+			"special": true,
+			"negative": true
+		},
+		"sounds": {
+			"cast": ""
+		},
+		"graphics": {
+			"iconBook": "h5/spells/h5AbGoblinThrow/Book",
+			"iconScroll": "h5/spells/h5AbGoblinThrow/Scroll",
+			"iconScenarioBonus": "h5/spells/h5AbGoblinThrow/Scenario",
+			"iconEffect": "h5/spells/h5AbGoblinThrow/Effect"
+		},
+		"levels": {
+			"base": {
+				"cost": 0,
+				"power": 0,
+				"range": "0",
+				"targetModifier": {
+					"smart": true
+				},
+				"battleEffects": {
+					"strike": {
+						"type": "h5AbStrike",
+						"mode": "attack",
+						"pct": 100,
+						"goblin": true,
+						"key": "h5AbGoblinThrow",
+						"log": "H5_AB_GOBLINTHROW_H5C",
+						"hitSound": ""
+					}
+				}
+			},
+			"none": {
+				"description": "{Goblin Throw}\n\nHurls an adjacent friendly Goblin like a cannonball at an enemy stack (1 Goblin dies), dealing normal attack damage; damage is halved if the target is more than half the battlefield away (as for shooters). Can be used at close range too. Unlimited uses."
+			},
+			"basic": {
+				"description": "{Goblin Throw}\n\nHurls an adjacent friendly Goblin like a cannonball at an enemy stack (1 Goblin dies), dealing normal attack damage; damage is halved if the target is more than half the battlefield away (as for shooters). Can be used at close range too. Unlimited uses."
+			},
+			"advanced": {
+				"description": "{Goblin Throw}\n\nHurls an adjacent friendly Goblin like a cannonball at an enemy stack (1 Goblin dies), dealing normal attack damage; damage is halved if the target is more than half the battlefield away (as for shooters). Can be used at close range too. Unlimited uses."
+			},
+			"expert": {
+				"description": "{Goblin Throw}\n\nHurls an adjacent friendly Goblin like a cannonball at an enemy stack (1 Goblin dies), dealing normal attack damage; damage is halved if the target is more than half the battlefield away (as for shooters). Can be used at close range too. Unlimited uses."
+			}
+		},
+		"targetCondition": {
+			"noneOf": {
+				"bonus.SIEGE_WEAPON": "absolute"
+			}
+		},
+		"animation": {
+			"hit": [
+				"h5/fx/Characters_Creatures_Orcs_T7c_BloodedCyclopes_Goblin_Hit_Effect"
+			],
+			"projectile": [
+				{
+					"minimumAngle": 0.0,
+					"defName": "h5/fx/proj_Orcs_3rd_CyclopBloodeyed_0"
+				},
+				{
+					"minimumAngle": 0.6,
+					"defName": "h5/fx/proj_Orcs_3rd_CyclopBloodeyed_1"
+				},
+				{
+					"minimumAngle": 0.9,
+					"defName": "h5/fx/proj_Orcs_3rd_CyclopBloodeyed_2"
+				},
+				{
+					"minimumAngle": 1.2,
+					"defName": "h5/fx/proj_Orcs_3rd_CyclopBloodeyed_3"
+				},
+				{
+					"minimumAngle": 1.5,
+					"defName": "h5/fx/proj_Orcs_3rd_CyclopBloodeyed_4"
+				},
+				{
+					"minimumAngle": 1.9,
+					"defName": "h5/fx/proj_Orcs_3rd_CyclopBloodeyed_5"
+				},
+				{
+					"minimumAngle": 2.4,
+					"defName": "h5/fx/proj_Orcs_3rd_CyclopBloodeyed_6"
+				}
+			]
+		}
+	},
+	"h5AbHarmTouch": {
+		"type": "ability",
+		// Harm Touch
+		"name": "Harm Touch",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"targetType": "CREATURE",
+		"flags": {
+			"special": true,
+			"negative": true
+		},
+		"sounds": {
+			"cast": ""
+		},
+		"graphics": {
+			"iconBook": "h5/spells/h5AbHarmTouch/Book",
+			"iconScroll": "h5/spells/h5AbHarmTouch/Scroll",
+			"iconScenarioBonus": "h5/spells/h5AbHarmTouch/Scenario",
+			"iconEffect": "h5/spells/h5AbHarmTouch/Effect"
+		},
+		"levels": {
+			"base": {
+				"cost": 0,
+				"power": 0,
+				"range": "0",
+				"targetModifier": {
+					"smart": true
+				},
+				"battleEffects": {
+					"strike": {
+						"type": "h5AbStrike",
+						"mode": "killOne",
+						"key": "h5AbHarmTouch",
+						"log": "H5_AB_HARMTOUCH_H5C",
+						"hitSound": "DEATHSTR"
+					},
+					"dispel": {
+						"type": "h5Dispel",
+						"optional": true,
+						"ignoreImmunity": true,
+						"chance": [
+							100,
+							100,
+							100,
+							100
+						]
+					}
+				}
+			},
+			"none": {
+				"description": "{Harm Touch}\n\nTouches an enemy stack, killing at least 1 of its creatures and dispelling all its beneficial spells. Unlimited uses."
+			},
+			"basic": {
+				"description": "{Harm Touch}\n\nTouches an enemy stack, killing at least 1 of its creatures and dispelling all its beneficial spells. Unlimited uses."
+			},
+			"advanced": {
+				"description": "{Harm Touch}\n\nTouches an enemy stack, killing at least 1 of its creatures and dispelling all its beneficial spells. Unlimited uses."
+			},
+			"expert": {
+				"description": "{Harm Touch}\n\nTouches an enemy stack, killing at least 1 of its creatures and dispelling all its beneficial spells. Unlimited uses."
+			}
+		},
+		"targetCondition": {
+			"noneOf": {
+				"bonus.SIEGE_WEAPON": "absolute"
+			}
+		},
+		"animation": {
+			"affect": [
+				"h5/fx/Characters_Creatures_Necropolis_Wraith_specability_hit_Effect"
+			]
+		}
+	},
+	"h5AbHarpoonStrike": {
+		"type": "ability",
+		// Harpoon Strike
+		"name": "Harpoon Strike",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"targetType": "CREATURE",
+		"flags": {
+			"special": true,
+			"negative": true
+		},
+		"sounds": {
+			"cast": ""
+		},
+		"graphics": {
+			"iconBook": "h5/spells/h5AbHarpoonStrike/Book",
+			"iconScroll": "h5/spells/h5AbHarpoonStrike/Scroll",
+			"iconScenarioBonus": "h5/spells/h5AbHarpoonStrike/Scenario",
+			"iconEffect": "h5/spells/h5AbHarpoonStrike/Effect"
+		},
+		"levels": {
+			"base": {
+				"cost": 0,
+				"power": 0,
+				"range": "0",
+				"targetModifier": {
+					"smart": true
+				},
+				"battleEffects": {
+					"move": {
+						"type": "h5AbMove",
+						"mode": "harpoon",
+						"mark": "H5_AB_HARPOON_H5C"
+					}
+				}
+			},
+			"none": {
+				"description": "{Harpoon Strike}\n\nHarpoons an enemy stack (large creatures too), dealing normal shooting damage and pulling it one hex toward itself (stacks with Hold Ground cannot be pulled). Unlimited uses."
+			},
+			"basic": {
+				"description": "{Harpoon Strike}\n\nHarpoons an enemy stack (large creatures too), dealing normal shooting damage and pulling it one hex toward itself (stacks with Hold Ground cannot be pulled). Unlimited uses."
+			},
+			"advanced": {
+				"description": "{Harpoon Strike}\n\nHarpoons an enemy stack (large creatures too), dealing normal shooting damage and pulling it one hex toward itself (stacks with Hold Ground cannot be pulled). Unlimited uses."
+			},
+			"expert": {
+				"description": "{Harpoon Strike}\n\nHarpoons an enemy stack (large creatures too), dealing normal shooting damage and pulling it one hex toward itself (stacks with Hold Ground cannot be pulled). Unlimited uses."
+			}
+		},
+		"targetCondition": {
+			"noneOf": {
+				"bonus.SIEGE_WEAPON": "absolute"
+			}
+		},
+		"animation": {}
+	},
+	"h5AbHowl": {
+		"type": "ability",
+		// Howl
+		"name": "Howl",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"targetType": "NO_TARGET",
+		"flags": {
+			"special": true,
+			"positive": true
+		},
+		"sounds": {
+			"cast": ""
+		},
+		"graphics": {
+			"iconBook": "h5/spells/h5AbHowl/Book",
+			"iconScroll": "h5/spells/h5AbHowl/Scroll",
+			"iconScenarioBonus": "h5/spells/h5AbHowl/Scenario",
+			"iconEffect": "h5/spells/h5AbHowl/Effect"
+		},
+		"levels": {
+			"base": {
+				"cost": 0,
+				"power": 0,
+				"range": "0",
+				"targetModifier": {
+					"smart": true
+				},
+				"battleEffects": {
+					"summon": {
+						"type": "h5AbSummonSame",
+						"uses": 1,
+						"mark": "H5_AB_HOWL_H5C"
+					}
+				}
+			},
+			"none": {
+				"description": "{Howl}\n\nSummons a pack of Wolves of the same size to help (summoned, gone after battle); the new Wolves do not act this round. Once per battle; summoned Wolves cannot Howl."
+			},
+			"basic": {
+				"description": "{Howl}\n\nSummons a pack of Wolves of the same size to help (summoned, gone after battle); the new Wolves do not act this round. Once per battle; summoned Wolves cannot Howl."
+			},
+			"advanced": {
+				"description": "{Howl}\n\nSummons a pack of Wolves of the same size to help (summoned, gone after battle); the new Wolves do not act this round. Once per battle; summoned Wolves cannot Howl."
+			},
+			"expert": {
+				"description": "{Howl}\n\nSummons a pack of Wolves of the same size to help (summoned, gone after battle); the new Wolves do not act this round. Once per battle; summoned Wolves cannot Howl."
+			}
+		},
+		"animation": {
+			"affect": [
+				"h5/fx/Characters_Fear"
+			]
+		}
+	},
+	"h5AbIncinerate": {
+		"type": "ability",
+		// Incinerate
+		"name": "Incinerate",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": true,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"targetType": "CREATURE",
+		"flags": {
+			"special": true,
+			"negative": true
+		},
+		"sounds": {
+			"cast": ""
+		},
+		"graphics": {
+			"iconBook": "h5/spells/h5AbIncinerate/Book",
+			"iconScroll": "h5/spells/h5AbIncinerate/Scroll",
+			"iconScenarioBonus": "h5/spells/h5AbIncinerate/Scenario",
+			"iconEffect": "h5/spells/h5AbIncinerate/Effect"
+		},
+		"levels": {
+			"base": {
+				"cost": 0,
+				"power": 0,
+				"range": "0",
+				"targetModifier": {
+					"smart": true
+				},
+				"battleEffects": {
+					"strike": {
+						"type": "h5AbStrike",
+						"mode": "attack",
+						"pct": 150,
+						"adjacent": true,
+						"key": "h5AbIncinerate",
+						"log": "H5_AB_INCINERATE_H5C",
+						"hitSound": "FIREBLST"
+					}
+				}
+			},
+			"none": {
+				"description": "{Incinerate}\n\nAttacks an adjacent enemy stack for 1.5x normal attack damage; the target cannot retaliate. Unlimited uses."
+			},
+			"basic": {
+				"description": "{Incinerate}\n\nAttacks an adjacent enemy stack for 1.5x normal attack damage; the target cannot retaliate. Unlimited uses."
+			},
+			"advanced": {
+				"description": "{Incinerate}\n\nAttacks an adjacent enemy stack for 1.5x normal attack damage; the target cannot retaliate. Unlimited uses."
+			},
+			"expert": {
+				"description": "{Incinerate}\n\nAttacks an adjacent enemy stack for 1.5x normal attack damage; the target cannot retaliate. Unlimited uses."
+			}
+		},
+		"targetCondition": {
+			"noneOf": {
+				"bonus.SIEGE_WEAPON": "absolute"
+			}
+		},
+		"animation": {}
+	},
+	"h5AbInvisibility": {
+		"type": "ability",
+		// Invisibility
+		"name": "Invisibility",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"targetType": "NO_TARGET",
+		"flags": {
+			"special": true,
+			"positive": true
+		},
+		"sounds": {
+			"cast": ""
+		},
+		"graphics": {
+			"iconBook": "h5/spells/h5AbInvisibility/Book",
+			"iconScroll": "h5/spells/h5AbInvisibility/Scroll",
+			"iconScenarioBonus": "h5/spells/h5AbInvisibility/Scenario",
+			"iconEffect": "h5/spells/h5AbInvisibility/Effect"
+		},
+		"levels": {
+			"base": {
+				"cost": 0,
+				"power": 0,
+				"range": "0",
+				"targetModifier": {
+					"smart": true
+				},
+				"battleEffects": {
+					"self": {
+						"type": "h5AbSelfBuff",
+						"kind": "invisible",
+						"turns": 3,
+						"revealScript": "heroes-memorial.h5:h5AbReveal",
+						"revealMark": "H5_AB_REVEAL_H5C",
+						"sound": "",
+						"show": "H5_INVISIBLE_SHOW_H5C",
+						"mark": "H5_AB_INVISIBLE_H5C"
+					}
+				}
+			},
+			"none": {
+				"description": "{Invisibility}\n\nInvisible for 3 rounds: cannot be attacked or targeted by spells; while invisible, its attacks cannot be retaliated against, and it is revealed after attacking or when enemies are next to it. Unlimited uses. (In H5, area damage spells could hit invisible stacks; in this version they cannot.)"
+			},
+			"basic": {
+				"description": "{Invisibility}\n\nInvisible for 3 rounds: cannot be attacked or targeted by spells; while invisible, its attacks cannot be retaliated against, and it is revealed after attacking or when enemies are next to it. Unlimited uses. (In H5, area damage spells could hit invisible stacks; in this version they cannot.)"
+			},
+			"advanced": {
+				"description": "{Invisibility}\n\nInvisible for 3 rounds: cannot be attacked or targeted by spells; while invisible, its attacks cannot be retaliated against, and it is revealed after attacking or when enemies are next to it. Unlimited uses. (In H5, area damage spells could hit invisible stacks; in this version they cannot.)"
+			},
+			"expert": {
+				"description": "{Invisibility}\n\nInvisible for 3 rounds: cannot be attacked or targeted by spells; while invisible, its attacks cannot be retaliated against, and it is revealed after attacking or when enemies are next to it. Unlimited uses. (In H5, area damage spells could hit invisible stacks; in this version they cannot.)"
+			}
+		},
+		"animation": {
+			"affect": [
+				{
+					"effectName": "h5Invisibility"
+				}
+			]
+		}
+	},
+	"h5AbLayHands": {
+		"type": "ability",
+		// Lay Hands
+		"name": "Lay Hands",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"targetType": "CREATURE",
+		"flags": {
+			"special": true,
+			"positive": true
+		},
+		"sounds": {
+			"cast": ""
+		},
+		"graphics": {
+			"iconBook": "h5/spells/h5AbLayHands/Book",
+			"iconScroll": "h5/spells/h5AbLayHands/Scroll",
+			"iconScenarioBonus": "h5/spells/h5AbLayHands/Scenario",
+			"iconEffect": "h5/spells/h5AbLayHands/Effect"
+		},
+		"levels": {
+			"base": {
+				"cost": 0,
+				"power": 0,
+				"range": "0",
+				"targetModifier": {
+					"smart": true
+				},
+				"battleEffects": {
+					"restore": {
+						"type": "h5AbRestore",
+						"mode": "layHands",
+						"sound": "CURE",
+						"mark": "H5_AB_RESTORE_H5C"
+					},
+					"dispel": {
+						"type": "h5Dispel",
+						"optional": true,
+						"ignoreImmunity": true,
+						"chance": [
+							100,
+							100,
+							100,
+							100
+						]
+					}
+				}
+			},
+			"none": {
+				"description": "{Lay Hands}\n\nThe top wounded creature of one friendly stack is restored to full Hit Points (no revival), and all negative spells on it are dispelled. Unlimited uses."
+			},
+			"basic": {
+				"description": "{Lay Hands}\n\nThe top wounded creature of one friendly stack is restored to full Hit Points (no revival), and all negative spells on it are dispelled. Unlimited uses."
+			},
+			"advanced": {
+				"description": "{Lay Hands}\n\nThe top wounded creature of one friendly stack is restored to full Hit Points (no revival), and all negative spells on it are dispelled. Unlimited uses."
+			},
+			"expert": {
+				"description": "{Lay Hands}\n\nThe top wounded creature of one friendly stack is restored to full Hit Points (no revival), and all negative spells on it are dispelled. Unlimited uses."
+			}
+		},
+		"animation": {
+			"affect": [
+				{
+					"effectName": "h5light_Spells_Heal"
+				},
+				"h5/fx/Spells_Heal"
+			]
+		}
+	},
+	"h5AbLeap": {
+		"type": "ability",
+		// Leap
+		"name": "Leap",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"targetType": "CREATURE",
+		"canCastWithoutSkip": true,
+		"flags": {
+			"special": true,
+			"negative": true
+		},
+		"sounds": {
+			"cast": ""
+		},
+		"graphics": {
+			"iconBook": "h5/spells/h5AbLeap/Book",
+			"iconScroll": "h5/spells/h5AbLeap/Scroll",
+			"iconScenarioBonus": "h5/spells/h5AbLeap/Scenario",
+			"iconEffect": "h5/spells/h5AbLeap/Effect"
+		},
+		"levels": {
+			"base": {
+				"cost": 0,
+				"power": 0,
+				"range": "0",
+				"targetModifier": {
+					"smart": true
+				},
+				"battleEffects": {
+					"move": {
+						"type": "h5AbMove",
+						"mode": "leap",
+						"minDist": 3,
+						"maxDist": 8,
+						"perCell": 10,
+						"retaliate": 3,
+						"mark": "H5_AB_LEAP_H5C"
+					}
+				}
+			},
+			"none": {
+				"description": "{Leap}\n\nLeaps next to an enemy stack 3-8 hexes away and cannot move further this round after landing; the following attack on that stack deals +10% damage per hex leapt, and its retaliation deals 3x damage. Speed bonuses do not affect leap distance. Unlimited uses."
+			},
+			"basic": {
+				"description": "{Leap}\n\nLeaps next to an enemy stack 3-8 hexes away and cannot move further this round after landing; the following attack on that stack deals +10% damage per hex leapt, and its retaliation deals 3x damage. Speed bonuses do not affect leap distance. Unlimited uses."
+			},
+			"advanced": {
+				"description": "{Leap}\n\nLeaps next to an enemy stack 3-8 hexes away and cannot move further this round after landing; the following attack on that stack deals +10% damage per hex leapt, and its retaliation deals 3x damage. Speed bonuses do not affect leap distance. Unlimited uses."
+			},
+			"expert": {
+				"description": "{Leap}\n\nLeaps next to an enemy stack 3-8 hexes away and cannot move further this round after landing; the following attack on that stack deals +10% damage per hex leapt, and its retaliation deals 3x damage. Speed bonuses do not affect leap distance. Unlimited uses."
+			}
+		},
+		"targetCondition": {
+			"noneOf": {
+				"bonus.SIEGE_WEAPON": "absolute"
+			}
+		},
+		"animation": {}
+	},
+	"h5AbLuckGambler": {
+		"type": "ability",
+		// Luck Gambler
+		"name": "Luck Gambler",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"targetType": "CREATURE",
+		"flags": {
+			"special": true,
+			"indifferent": true
+		},
+		"sounds": {
+			"cast": ""
+		},
+		"graphics": {
+			"iconBook": "h5/spells/h5AbLuckGambler/Book",
+			"iconScroll": "h5/spells/h5AbLuckGambler/Scroll",
+			"iconScenarioBonus": "h5/spells/h5AbLuckGambler/Scenario",
+			"iconEffect": "h5/spells/h5AbLuckGambler/Effect"
+		},
+		"levels": {
+			"base": {
+				"cost": 0,
+				"power": 0,
+				"range": "0",
+				"targetModifier": {
+					"smart": false
+				},
+				"battleEffects": {
+					"target": {
+						"type": "h5AbTarget",
+						"mode": "gamble",
+						"uses": 3,
+						"mark": "H5_AB_GAMBLE_H5C"
+					}
+				}
+			},
+			"none": {
+				"description": "{Luck Gambler}\n\nFriendly Luck randomly +1-3, or enemy Luck randomly -1-3, for rounds equal to the stack's Spell Power. 3 times per battle."
+			},
+			"basic": {
+				"description": "{Luck Gambler}\n\nFriendly Luck randomly +1-3, or enemy Luck randomly -1-3, for rounds equal to the stack's Spell Power. 3 times per battle."
+			},
+			"advanced": {
+				"description": "{Luck Gambler}\n\nFriendly Luck randomly +1-3, or enemy Luck randomly -1-3, for rounds equal to the stack's Spell Power. 3 times per battle."
+			},
+			"expert": {
+				"description": "{Luck Gambler}\n\nFriendly Luck randomly +1-3, or enemy Luck randomly -1-3, for rounds equal to the stack's Spell Power. 3 times per battle."
+			}
+		},
+		"targetCondition": {
+			"noneOf": {
+				"bonus.SIEGE_WEAPON": "absolute"
+			}
+		},
+		"animation": {
+			"affect": [
+				"h5/fx/Spells_LuckGood"
+			]
+		}
+	},
+	"h5AbManaFeed": {
+		"type": "ability",
+		// Mana Feed
+		"name": "Mana Feed",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"targetType": "NO_TARGET",
+		"flags": {
+			"special": true,
+			"positive": true
+		},
+		"sounds": {
+			"cast": ""
+		},
+		"graphics": {
+			"iconBook": "h5/spells/h5AbManaFeed/Book",
+			"iconScroll": "h5/spells/h5AbManaFeed/Scroll",
+			"iconScenarioBonus": "h5/spells/h5AbManaFeed/Scenario",
+			"iconEffect": "h5/spells/h5AbManaFeed/Effect"
+		},
+		"levels": {
+			"base": {
+				"cost": 0,
+				"power": 0,
+				"range": "0",
+				"targetModifier": {
+					"smart": true
+				},
+				"battleEffects": {
+					"target": {
+						"type": "h5AbTarget",
+						"mode": "manaFeed",
+						"sound": "FORTUNE",
+						"mark": "H5_AB_MANAFEED_H5C"
+					}
+				}
+			},
+			"none": {
+				"description": "{Mana Feed}\n\nIn H5, gives all of its stored mana to the hero. This version approximates it: gives up its remaining casts, and for the rest of the battle each of the friendly hero's spells costs that many points less (at least 1); the Elder Druids can no longer cast spells."
+			},
+			"basic": {
+				"description": "{Mana Feed}\n\nIn H5, gives all of its stored mana to the hero. This version approximates it: gives up its remaining casts, and for the rest of the battle each of the friendly hero's spells costs that many points less (at least 1); the Elder Druids can no longer cast spells."
+			},
+			"advanced": {
+				"description": "{Mana Feed}\n\nIn H5, gives all of its stored mana to the hero. This version approximates it: gives up its remaining casts, and for the rest of the battle each of the friendly hero's spells costs that many points less (at least 1); the Elder Druids can no longer cast spells."
+			},
+			"expert": {
+				"description": "{Mana Feed}\n\nIn H5, gives all of its stored mana to the hero. This version approximates it: gives up its remaining casts, and for the rest of the battle each of the friendly hero's spells costs that many points less (at least 1); the Elder Druids can no longer cast spells."
+			}
+		},
+		"animation": {
+			"affect": [
+				"h5/fx/Characters_Creatures_Preserve_AlternativeUpgrade_T4_High_Druid_Poker_Fid_Effect"
+			]
+		}
+	},
+	"h5AbOrderOfTheChief": {
+		"type": "ability",
+		// Order of the Chief
+		"name": "Word of the Chief",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"targetType": "CREATURE",
+		"flags": {
+			"special": true,
+			"positive": true
+		},
+		"sounds": {
+			"cast": ""
+		},
+		"graphics": {
+			"iconBook": "h5/spells/h5AbOrderOfTheChief/Book",
+			"iconScroll": "h5/spells/h5AbOrderOfTheChief/Scroll",
+			"iconScenarioBonus": "h5/spells/h5AbOrderOfTheChief/Scenario",
+			"iconEffect": "h5/spells/h5AbOrderOfTheChief/Effect"
+		},
+		"levels": {
+			"base": {
+				"cost": 0,
+				"power": 0,
+				"range": "0",
+				"targetModifier": {
+					"smart": true
+				},
+				"battleEffects": {
+					"target": {
+						"type": "h5AbTarget",
+						"mode": "order",
+						"dmgPer": 1,
+						"atbPer": 1,
+						"atbMax": 60,
+						"sound": "TAILWIND",
+						"mark": "H5_AB_ORDER_H5C"
+					}
+				}
+			},
+			"none": {
+				"description": "{Word of the Chief}\n\nDeals Chieftains damage to one friendly stack, then raises its Speed by Chieftains % (max 60%) until its next action (in H5: Initiative +Chieftains x 1%, max 60%). Unlimited uses."
+			},
+			"basic": {
+				"description": "{Word of the Chief}\n\nDeals Chieftains damage to one friendly stack, then raises its Speed by Chieftains % (max 60%) until its next action (in H5: Initiative +Chieftains x 1%, max 60%). Unlimited uses."
+			},
+			"advanced": {
+				"description": "{Word of the Chief}\n\nDeals Chieftains damage to one friendly stack, then raises its Speed by Chieftains % (max 60%) until its next action (in H5: Initiative +Chieftains x 1%, max 60%). Unlimited uses."
+			},
+			"expert": {
+				"description": "{Word of the Chief}\n\nDeals Chieftains damage to one friendly stack, then raises its Speed by Chieftains % (max 60%) until its next action (in H5: Initiative +Chieftains x 1%, max 60%). Unlimited uses."
+			}
+		},
+		"targetCondition": {
+			"noneOf": {
+				"bonus.SIEGE_WEAPON": "absolute"
+			}
+		},
+		"animation": {}
+	},
+	"h5AbPackDive": {
+		"type": "ability",
+		// Pack Dive
+		"name": "Pack Dive",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"targetType": "LOCATION",
+		"flags": {
+			"special": true,
+			"negative": true
+		},
+		"sounds": {
+			"cast": ""
+		},
+		"graphics": {
+			"iconBook": "h5/spells/h5AbPackDive/Book",
+			"iconScroll": "h5/spells/h5AbPackDive/Scroll",
+			"iconScenarioBonus": "h5/spells/h5AbPackDive/Scenario",
+			"iconEffect": "h5/spells/h5AbPackDive/Effect"
+		},
+		"levels": {
+			"base": {
+				"cost": 0,
+				"power": 0,
+				"range": "0",
+				"targetModifier": {
+					"smart": false
+				},
+				"battleEffects": {
+					"dive": {
+						"type": "h5AbPackDive",
+						"landScript": "heroes-memorial.h5:h5AbPackDiveLand",
+						"pct": 75,
+						"mark": "H5_PACKDIVE_H5C"
+					}
+				}
+			},
+			"none": {
+				"description": "{Pack Dive}\n\nChooses a hex on the battlefield and takes off, leaving the field; at the start of the next round it dives down, attacking all enemies in that hex's row and the row below (the “two horizontal rows” of H5) for 75% of normal attack damage, with no retaliation; then it returns to its take-off position. Once per battle."
+			},
+			"basic": {
+				"description": "{Pack Dive}\n\nChooses a hex on the battlefield and takes off, leaving the field; at the start of the next round it dives down, attacking all enemies in that hex's row and the row below (the “two horizontal rows” of H5) for 75% of normal attack damage, with no retaliation; then it returns to its take-off position. Once per battle."
+			},
+			"advanced": {
+				"description": "{Pack Dive}\n\nChooses a hex on the battlefield and takes off, leaving the field; at the start of the next round it dives down, attacking all enemies in that hex's row and the row below (the “two horizontal rows” of H5) for 75% of normal attack damage, with no retaliation; then it returns to its take-off position. Once per battle."
+			},
+			"expert": {
+				"description": "{Pack Dive}\n\nChooses a hex on the battlefield and takes off, leaving the field; at the start of the next round it dives down, attacking all enemies in that hex's row and the row below (the “two horizontal rows” of H5) for 75% of normal attack damage, with no retaliation; then it returns to its take-off position. Once per battle."
+			}
+		},
+		"animation": {}
+	},
+	"h5AbPowerFeed": {
+		"type": "ability",
+		// Power Feed
+		"name": "Power Feed",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"targetType": "NO_TARGET",
+		"flags": {
+			"special": true,
+			"positive": true
+		},
+		"sounds": {
+			"cast": ""
+		},
+		"graphics": {
+			"iconBook": "h5/spells/h5AbPowerFeed/Book",
+			"iconScroll": "h5/spells/h5AbPowerFeed/Scroll",
+			"iconScenarioBonus": "h5/spells/h5AbPowerFeed/Scenario",
+			"iconEffect": "h5/spells/h5AbPowerFeed/Effect"
+		},
+		"levels": {
+			"base": {
+				"cost": 0,
+				"power": 0,
+				"range": "0",
+				"targetModifier": {
+					"smart": true
+				},
+				"battleEffects": {
+					"self": {
+						"type": "h5AbSelfBuff",
+						"kind": "powerFeed",
+						"sound": "FORTUNE",
+						"show": "H5_POWER_FEED_SHOW_H5C",
+						"mark": "H5_AB_POWERFEED_H5C"
+					}
+				}
+			},
+			"none": {
+				"description": "{Power Feed}\n\nRaises the friendly hero's Spell Power by this stack of Greater Druids' Spell Power, until the battle ends or the stack dies. Only one stack per side can be linked at a time. Unlimited uses."
+			},
+			"basic": {
+				"description": "{Power Feed}\n\nRaises the friendly hero's Spell Power by this stack of Greater Druids' Spell Power, until the battle ends or the stack dies. Only one stack per side can be linked at a time. Unlimited uses."
+			},
+			"advanced": {
+				"description": "{Power Feed}\n\nRaises the friendly hero's Spell Power by this stack of Greater Druids' Spell Power, until the battle ends or the stack dies. Only one stack per side can be linked at a time. Unlimited uses."
+			},
+			"expert": {
+				"description": "{Power Feed}\n\nRaises the friendly hero's Spell Power by this stack of Greater Druids' Spell Power, until the battle ends or the stack dies. Only one stack per side can be linked at a time. Unlimited uses."
+			}
+		},
+		"animation": {
+			"affect": [
+				"h5/fx/Characters_Creatures_Preserve_DruidElder_manafeed"
+			]
+		}
+	},
+	"h5AbRageOfTheForest": {
+		"type": "ability",
+		// Rage of the Forest
+		"name": "Rage of the Forest",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"targetType": "NO_TARGET",
+		"flags": {
+			"special": true,
+			"positive": true
+		},
+		"sounds": {
+			"cast": ""
+		},
+		"graphics": {
+			"iconBook": "h5/spells/h5AbRageOfTheForest/Book",
+			"iconScroll": "h5/spells/h5AbRageOfTheForest/Scroll",
+			"iconScenarioBonus": "h5/spells/h5AbRageOfTheForest/Scenario",
+			"iconEffect": "h5/spells/h5AbRageOfTheForest/Effect"
+		},
+		"levels": {
+			"base": {
+				"cost": 0,
+				"power": 0,
+				"range": "0",
+				"targetModifier": {
+					"smart": true
+				},
+				"battleEffects": {
+					"self": {
+						"type": "h5AbSelfBuff",
+						"kind": "forestRage",
+						"pct": 50,
+						"uses": 1,
+						"sound": "FRENZY",
+						"show": "H5_FOREST_RAGE_SHOW_H5C",
+						"mark": "H5_AB_FORESTRAGE_H5C"
+					}
+				}
+			},
+			"none": {
+				"description": "{Rage of the Forest}\n\nDefense is halved and the lost Defense is added to Attack; Speed +50% (in H5: Initiative +5); no longer entangles enemies with roots. Lasts until the battle ends. Once per battle."
+			},
+			"basic": {
+				"description": "{Rage of the Forest}\n\nDefense is halved and the lost Defense is added to Attack; Speed +50% (in H5: Initiative +5); no longer entangles enemies with roots. Lasts until the battle ends. Once per battle."
+			},
+			"advanced": {
+				"description": "{Rage of the Forest}\n\nDefense is halved and the lost Defense is added to Attack; Speed +50% (in H5: Initiative +5); no longer entangles enemies with roots. Lasts until the battle ends. Once per battle."
+			},
+			"expert": {
+				"description": "{Rage of the Forest}\n\nDefense is halved and the lost Defense is added to Attack; Speed +50% (in H5: Initiative +5); no longer entangles enemies with roots. Lasts until the battle ends. Once per battle."
+			}
+		},
+		"animation": {
+			"affect": [
+				"h5/fx/Characters_Creatures_Preserve_DruidElder_manafeed"
+			]
+		}
+	},
+	"h5AbRandomCastDark": {
+		"type": "ability",
+		// Random Caster
+		"name": "Random Hex",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"targetType": "CREATURE",
+		"flags": {
+			"special": true,
+			"negative": true
+		},
+		"sounds": {
+			"cast": ""
+		},
+		"graphics": {
+			"iconBook": "h5/spells/h5AbRandomCastDark/Book",
+			"iconScroll": "h5/spells/h5AbRandomCastDark/Scroll",
+			"iconScenarioBonus": "h5/spells/h5AbRandomCastDark/Scenario",
+			"iconEffect": "h5/spells/h5AbRandomCastDark/Effect"
+		},
+		"levels": {
+			"base": {
+				"cost": 0,
+				"power": 0,
+				"range": "0",
+				"targetModifier": {
+					"smart": true
+				},
+				"battleEffects": {
+					"target": {
+						"type": "h5AbTarget",
+						"mode": "random",
+						"dark": [
+							"h5Curse",
+							"h5Slow",
+							"h5DisruptingRay",
+							"h5Plague",
+							"h5Weakness",
+							"h5Forgetfulness",
+							"h5Dispel"
+						],
+						"light": [],
+						"level": 2,
+						"uses": 3,
+						"mark": "H5_AB_RANDOM_H5C"
+					}
+				}
+			},
+			"none": {
+				"description": "{Random Hex}\n\nCasts a random Advanced-level level 1-3 Dark Magic curse (Weakness, Slow, Armor Break, Decay, Suffering, Confusion) or Cleansing on one enemy stack, with Spell Power = the stack's Spell Power. 3 times per battle."
+			},
+			"basic": {
+				"description": "{Random Hex}\n\nCasts a random Advanced-level level 1-3 Dark Magic curse (Weakness, Slow, Armor Break, Decay, Suffering, Confusion) or Cleansing on one enemy stack, with Spell Power = the stack's Spell Power. 3 times per battle."
+			},
+			"advanced": {
+				"description": "{Random Hex}\n\nCasts a random Advanced-level level 1-3 Dark Magic curse (Weakness, Slow, Armor Break, Decay, Suffering, Confusion) or Cleansing on one enemy stack, with Spell Power = the stack's Spell Power. 3 times per battle."
+			},
+			"expert": {
+				"description": "{Random Hex}\n\nCasts a random Advanced-level level 1-3 Dark Magic curse (Weakness, Slow, Armor Break, Decay, Suffering, Confusion) or Cleansing on one enemy stack, with Spell Power = the stack's Spell Power. 3 times per battle."
+			}
+		},
+		"targetCondition": {
+			"noneOf": {
+				"bonus.SIEGE_WEAPON": "absolute"
+			}
+		},
+		"animation": {}
+	},
+	"h5AbRandomCastDarkLight": {
+		"type": "ability",
+		// Random Caster (Bless)
+		"name": "Random Blessing",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"targetType": "CREATURE",
+		"flags": {
+			"special": true,
+			"indifferent": true
+		},
+		"sounds": {
+			"cast": ""
+		},
+		"graphics": {
+			"iconBook": "h5/spells/h5AbRandomCastDarkLight/Book",
+			"iconScroll": "h5/spells/h5AbRandomCastDarkLight/Scroll",
+			"iconScenarioBonus": "h5/spells/h5AbRandomCastDarkLight/Scenario",
+			"iconEffect": "h5/spells/h5AbRandomCastDarkLight/Effect"
+		},
+		"levels": {
+			"base": {
+				"cost": 0,
+				"power": 0,
+				"range": "0",
+				"targetModifier": {
+					"smart": false
+				},
+				"battleEffects": {
+					"target": {
+						"type": "h5AbTarget",
+						"mode": "random",
+						"sultan": true,
+						"dark": [
+							"h5Curse",
+							"h5Slow",
+							"h5DisruptingRay",
+							"h5Plague",
+							"h5Weakness",
+							"h5Forgetfulness",
+							"h5Dispel"
+						],
+						"light": [
+							"h5Bless",
+							"h5Haste",
+							"h5Stoneskin",
+							"h5Bloodlust",
+							"h5DeflectArrows"
+						],
+						"level": 2,
+						"uses": 3,
+						"mark": "H5_AB_RANDOM_H5C"
+					}
+				}
+			},
+			"none": {
+				"description": "{Random Blessing}\n\nCasts a random Advanced-level level 1-3 Dark Magic curse or Cleansing on an enemy; casts a random Advanced-level level 1-3 Light Magic blessing (Divine Strength, Haste, Endurance, Righteous Might, Deflect Missile) on an ally. Spell Power = the stack's Spell Power. 3 times per battle."
+			},
+			"basic": {
+				"description": "{Random Blessing}\n\nCasts a random Advanced-level level 1-3 Dark Magic curse or Cleansing on an enemy; casts a random Advanced-level level 1-3 Light Magic blessing (Divine Strength, Haste, Endurance, Righteous Might, Deflect Missile) on an ally. Spell Power = the stack's Spell Power. 3 times per battle."
+			},
+			"advanced": {
+				"description": "{Random Blessing}\n\nCasts a random Advanced-level level 1-3 Dark Magic curse or Cleansing on an enemy; casts a random Advanced-level level 1-3 Light Magic blessing (Divine Strength, Haste, Endurance, Righteous Might, Deflect Missile) on an ally. Spell Power = the stack's Spell Power. 3 times per battle."
+			},
+			"expert": {
+				"description": "{Random Blessing}\n\nCasts a random Advanced-level level 1-3 Dark Magic curse or Cleansing on an enemy; casts a random Advanced-level level 1-3 Light Magic blessing (Divine Strength, Haste, Endurance, Righteous Might, Deflect Missile) on an ally. Spell Power = the stack's Spell Power. 3 times per battle."
+			}
+		},
+		"targetCondition": {
+			"noneOf": {
+				"bonus.SIEGE_WEAPON": "absolute"
+			}
+		},
+		"animation": {}
+	},
+	"h5AbRepair": {
+		"type": "ability",
+		// Repair
+		"name": "Mend",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"targetType": "CREATURE",
+		"flags": {
+			"special": true,
+			"positive": true,
+			"rising": true
+		},
+		"sounds": {
+			"cast": ""
+		},
+		"graphics": {
+			"iconBook": "h5/spells/h5AbRepair/Book",
+			"iconScroll": "h5/spells/h5AbRepair/Scroll",
+			"iconScenarioBonus": "h5/spells/h5AbRepair/Scenario",
+			"iconEffect": "h5/spells/h5AbRepair/Effect"
+		},
+		"levels": {
+			"base": {
+				"cost": 0,
+				"power": 0,
+				"range": "0",
+				"targetModifier": {
+					"smart": true
+				},
+				"battleEffects": {
+					"restore": {
+						"type": "h5AbRestore",
+						"mode": "repair",
+						"per": 4,
+						"sound": "CURE",
+						"mark": "H5_AB_RESTORE_H5C"
+					}
+				}
+			},
+			"none": {
+				"description": "{Mend}\n\nOne friendly mechanical creature (Golems, etc.) or war machine restores 4 x Gremlins Hit Points (5 in H5, converted to equivalent Hit Points), and can be revived (permanently). Unlimited uses."
+			},
+			"basic": {
+				"description": "{Mend}\n\nOne friendly mechanical creature (Golems, etc.) or war machine restores 4 x Gremlins Hit Points (5 in H5, converted to equivalent Hit Points), and can be revived (permanently). Unlimited uses."
+			},
+			"advanced": {
+				"description": "{Mend}\n\nOne friendly mechanical creature (Golems, etc.) or war machine restores 4 x Gremlins Hit Points (5 in H5, converted to equivalent Hit Points), and can be revived (permanently). Unlimited uses."
+			},
+			"expert": {
+				"description": "{Mend}\n\nOne friendly mechanical creature (Golems, etc.) or war machine restores 4 x Gremlins Hit Points (5 in H5, converted to equivalent Hit Points), and can be revived (permanently). Unlimited uses."
+			}
+		},
+		"animation": {
+			"affect": [
+				{
+					"effectName": "h5light_Spells_Dispel"
+				},
+				"h5/fx/Spells_Dispel"
+			]
+		}
+	},
+	"h5AbResurrectAllies": {
+		"type": "ability",
+		// Resurrect Allies
+		"name": "Resurrect Allies",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"targetType": "CREATURE",
+		"flags": {
+			"special": true,
+			"positive": true,
+			"rising": true
+		},
+		"sounds": {
+			"cast": ""
+		},
+		"graphics": {
+			"iconBook": "h5/spells/h5AbResurrectAllies/Book",
+			"iconScroll": "h5/spells/h5AbResurrectAllies/Scroll",
+			"iconScenarioBonus": "h5/spells/h5AbResurrectAllies/Scenario",
+			"iconEffect": "h5/spells/h5AbResurrectAllies/Effect"
+		},
+		"levels": {
+			"base": {
+				"cost": 0,
+				"power": 0,
+				"range": "0",
+				"targetModifier": {
+					"smart": true
+				},
+				"battleEffects": {
+					"restore": {
+						"type": "h5AbRestore",
+						"mode": "resurrect",
+						"per": 101,
+						"uses": 1,
+						"sound": "RESURECT",
+						"mark": "H5_AB_RESTORE_H5C"
+					}
+				}
+			},
+			"none": {
+				"description": "{Resurrect Allies}\n\nOne friendly stack (alive or dead, with its corpse not covered) restores 101 x Archangels Hit Points (100 in H5, converted to equivalent Hit Points) and can be revived (permanently); cannot revive Archangels. Once per battle (twice from stack experience Rank 7)."
+			},
+			"basic": {
+				"description": "{Resurrect Allies}\n\nOne friendly stack (alive or dead, with its corpse not covered) restores 101 x Archangels Hit Points (100 in H5, converted to equivalent Hit Points) and can be revived (permanently); cannot revive Archangels. Once per battle (twice from stack experience Rank 7)."
+			},
+			"advanced": {
+				"description": "{Resurrect Allies}\n\nOne friendly stack (alive or dead, with its corpse not covered) restores 101 x Archangels Hit Points (100 in H5, converted to equivalent Hit Points) and can be revived (permanently); cannot revive Archangels. Once per battle (twice from stack experience Rank 7)."
+			},
+			"expert": {
+				"description": "{Resurrect Allies}\n\nOne friendly stack (alive or dead, with its corpse not covered) restores 101 x Archangels Hit Points (100 in H5, converted to equivalent Hit Points) and can be revived (permanently); cannot revive Archangels. Once per battle (twice from stack experience Rank 7)."
+			}
+		},
+		"animation": {
+			"affect": [
+				"h5/fx/Characters_ResurrectAllies"
+			]
+		}
+	},
+	"h5AbSabotage": {
+		"type": "ability",
+		// Sabotage
+		"name": "Sabotage",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"targetType": "CREATURE",
+		"flags": {
+			"special": true,
+			"negative": true
+		},
+		"sounds": {
+			"cast": ""
+		},
+		"graphics": {
+			"iconBook": "h5/spells/h5AbSabotage/Book",
+			"iconScroll": "h5/spells/h5AbSabotage/Scroll",
+			"iconScenarioBonus": "h5/spells/h5AbSabotage/Scenario",
+			"iconEffect": "h5/spells/h5AbSabotage/Effect"
+		},
+		"levels": {
+			"base": {
+				"cost": 0,
+				"power": 0,
+				"range": "0",
+				"targetModifier": {
+					"smart": true
+				},
+				"battleEffects": {
+					"target": {
+						"type": "h5AbTarget",
+						"mode": "sabotage",
+						"coef": 10,
+						"sound": "BLIND",
+						"mark": "H5_AB_SABOTAGE_H5C"
+					}
+				}
+			},
+			"none": {
+				"description": "{Sabotage}\n\nDisables one enemy mechanical creature or war machine for one round (cannot act or retaliate). Requires the Gremlins' total Hit Points x 10 to exceed the target's total Hit Points. Unlimited uses."
+			},
+			"basic": {
+				"description": "{Sabotage}\n\nDisables one enemy mechanical creature or war machine for one round (cannot act or retaliate). Requires the Gremlins' total Hit Points x 10 to exceed the target's total Hit Points. Unlimited uses."
+			},
+			"advanced": {
+				"description": "{Sabotage}\n\nDisables one enemy mechanical creature or war machine for one round (cannot act or retaliate). Requires the Gremlins' total Hit Points x 10 to exceed the target's total Hit Points. Unlimited uses."
+			},
+			"expert": {
+				"description": "{Sabotage}\n\nDisables one enemy mechanical creature or war machine for one round (cannot act or retaliate). Requires the Gremlins' total Hit Points x 10 to exceed the target's total Hit Points. Unlimited uses."
+			}
+		},
+		"animation": {
+			"affect": [
+				"h5/fx/Spells_Sabotage_Effect"
+			]
+		}
+	},
+	"h5AbSacrificeGoblin": {
+		"type": "ability",
+		// Sacrifice Goblin
+		"name": "Sacrifice Goblin",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"targetType": "CREATURE",
+		"flags": {
+			"special": true,
+			"positive": true
+		},
+		"sounds": {
+			"cast": ""
+		},
+		"graphics": {
+			"iconBook": "h5/spells/h5AbSacrificeGoblin/Book",
+			"iconScroll": "h5/spells/h5AbSacrificeGoblin/Scroll",
+			"iconScenarioBonus": "h5/spells/h5AbSacrificeGoblin/Scenario",
+			"iconEffect": "h5/spells/h5AbSacrificeGoblin/Effect"
+		},
+		"levels": {
+			"base": {
+				"cost": 0,
+				"power": 0,
+				"range": "0",
+				"targetModifier": {
+					"smart": true
+				},
+				"battleEffects": {
+					"restore": {
+						"type": "h5AbRestore",
+						"mode": "sacrifice",
+						"max": 5,
+						"casts": 1,
+						"sound": "SACRIF1",
+						"show": "H5_SACRIFICE_SHOW_H5C",
+						"mark": "H5_AB_RESTORE_H5C"
+					}
+				}
+			},
+			"none": {
+				"description": "{Sacrifice Goblin}\n\nSacrifices an adjacent friendly Goblin; gains +1 Attack, Defense and Morale each (max +5) until the battle ends; casts +1 (in H5: restores 2 x Goblin Hit Points of mana, can exceed the maximum). Unlimited uses."
+			},
+			"basic": {
+				"description": "{Sacrifice Goblin}\n\nSacrifices an adjacent friendly Goblin; gains +1 Attack, Defense and Morale each (max +5) until the battle ends; casts +1 (in H5: restores 2 x Goblin Hit Points of mana, can exceed the maximum). Unlimited uses."
+			},
+			"advanced": {
+				"description": "{Sacrifice Goblin}\n\nSacrifices an adjacent friendly Goblin; gains +1 Attack, Defense and Morale each (max +5) until the battle ends; casts +1 (in H5: restores 2 x Goblin Hit Points of mana, can exceed the maximum). Unlimited uses."
+			},
+			"expert": {
+				"description": "{Sacrifice Goblin}\n\nSacrifices an adjacent friendly Goblin; gains +1 Attack, Defense and Morale each (max +5) until the battle ends; casts +1 (in H5: restores 2 x Goblin Hit Points of mana, can exceed the maximum). Unlimited uses."
+			}
+		},
+		"animation": {
+			"affect": [
+				"h5/fx/Characters_hits_closecombat_hit03"
+			]
+		}
+	},
+	"h5AbScatterShot": {
+		"type": "ability",
+		// Scatter Shot
+		"name": "Scatter Shot",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"targetType": "LOCATION",
+		"flags": {
+			"special": true,
+			"indifferent": true,
+			"damage": true
+		},
+		"sounds": {
+			"cast": ""
+		},
+		"graphics": {
+			"iconBook": "h5/spells/h5AbScatterShot/Book",
+			"iconScroll": "h5/spells/h5AbScatterShot/Scroll",
+			"iconScenarioBonus": "h5/spells/h5AbScatterShot/Scenario",
+			"iconEffect": "h5/spells/h5AbScatterShot/Effect"
+		},
+		"levels": {
+			"base": {
+				"cost": 0,
+				"power": 0,
+				"range": "0,1",
+				"targetModifier": {
+					"smart": false
+				},
+				"battleEffects": {
+					"zone": {
+						"type": "h5AbZone",
+						"mode": "scatter",
+						"pct": 50,
+						"mark": "H5_AB_SCATTER_H5C"
+					}
+				}
+			},
+			"none": {
+				"description": "{Scatter Shot}\n\nShoots at a hex: all stacks in that hex and the ring around it (the 3x3 of H5), friend or foe, take 50% of normal shooting damage, using 1 shot. Unlimited uses."
+			},
+			"basic": {
+				"description": "{Scatter Shot}\n\nShoots at a hex: all stacks in that hex and the ring around it (the 3x3 of H5), friend or foe, take 50% of normal shooting damage, using 1 shot. Unlimited uses."
+			},
+			"advanced": {
+				"description": "{Scatter Shot}\n\nShoots at a hex: all stacks in that hex and the ring around it (the 3x3 of H5), friend or foe, take 50% of normal shooting damage, using 1 shot. Unlimited uses."
+			},
+			"expert": {
+				"description": "{Scatter Shot}\n\nShoots at a hex: all stacks in that hex and the ring around it (the 3x3 of H5), friend or foe, take 50% of normal shooting damage, using 1 shot. Unlimited uses."
+			}
+		},
+		"animation": {
+			"projectile": [
+				{
+					"minimumAngle": 0.0,
+					"defName": "h5/fx/proj_Haven_Archer_0"
+				},
+				{
+					"minimumAngle": 0.6,
+					"defName": "h5/fx/proj_Haven_Archer_1"
+				},
+				{
+					"minimumAngle": 0.9,
+					"defName": "h5/fx/proj_Haven_Archer_2"
+				},
+				{
+					"minimumAngle": 1.2,
+					"defName": "h5/fx/proj_Haven_Archer_3"
+				},
+				{
+					"minimumAngle": 1.5,
+					"defName": "h5/fx/proj_Haven_Archer_4"
+				},
+				{
+					"minimumAngle": 1.9,
+					"defName": "h5/fx/proj_Haven_Archer_5"
+				},
+				{
+					"minimumAngle": 2.4,
+					"defName": "h5/fx/proj_Haven_Archer_6"
+				}
+			]
+		}
+	},
+	"h5AbScavenger": {
+		"type": "ability",
+		// Scavenger
+		"name": "Scavenger",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"targetType": "CREATURE",
+		"flags": {
+			"special": true,
+			"positive": true,
+			"rising": true
+		},
+		"sounds": {
+			"cast": ""
+		},
+		"graphics": {
+			"iconBook": "h5/spells/h5AbScavenger/Book",
+			"iconScroll": "h5/spells/h5AbScavenger/Scroll",
+			"iconScenarioBonus": "h5/spells/h5AbScavenger/Scenario",
+			"iconEffect": "h5/spells/h5AbScavenger/Effect"
+		},
+		"levels": {
+			"base": {
+				"cost": 0,
+				"power": 0,
+				"range": "0",
+				"targetModifier": {
+					"smart": true
+				},
+				"battleEffects": {
+					"restore": {
+						"type": "h5AbRestore",
+						"mode": "scavenger",
+						"pct": 20,
+						"sound": "ANIMDEAD",
+						"mark": "H5_AB_RESTORE_H5C"
+					}
+				}
+			},
+			"none": {
+				"description": "{Scavenger}\n\nEats one corpse within movement range (not a summoned creature or clone), restoring corpse total Hit Points x 20% Hit Points (can revive, permanently); the corpse disappears. Unlimited uses."
+			},
+			"basic": {
+				"description": "{Scavenger}\n\nEats one corpse within movement range (not a summoned creature or clone), restoring corpse total Hit Points x 20% Hit Points (can revive, permanently); the corpse disappears. Unlimited uses."
+			},
+			"advanced": {
+				"description": "{Scavenger}\n\nEats one corpse within movement range (not a summoned creature or clone), restoring corpse total Hit Points x 20% Hit Points (can revive, permanently); the corpse disappears. Unlimited uses."
+			},
+			"expert": {
+				"description": "{Scavenger}\n\nEats one corpse within movement range (not a summoned creature or clone), restoring corpse total Hit Points x 20% Hit Points (can revive, permanently); the corpse disappears. Unlimited uses."
+			}
+		},
+		"animation": {
+			"affect": [
+				"h5/fx/Characters_hits_poison_hit"
+			]
+		}
+	},
+	"h5AbSeduce": {
+		"type": "ability",
+		// Seduce
+		"name": "Seduce",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"targetType": "CREATURE",
+		"flags": {
+			"special": true,
+			"negative": true
+		},
+		"sounds": {
+			"cast": ""
+		},
+		"graphics": {
+			"iconBook": "h5/spells/h5AbSeduce/Book",
+			"iconScroll": "h5/spells/h5AbSeduce/Scroll",
+			"iconScenarioBonus": "h5/spells/h5AbSeduce/Scenario",
+			"iconEffect": "h5/spells/h5AbSeduce/Effect"
+		},
+		"levels": {
+			"base": {
+				"cost": 0,
+				"power": 0,
+				"range": "0",
+				"targetModifier": {
+					"smart": true
+				},
+				"battleEffects": {
+					"target": {
+						"type": "h5AbTarget",
+						"mode": "seduce",
+						"spell": "hypnotize",
+						"maxTurns": 10,
+						"uses": 1,
+						"sound": "HYPNOTIZ",
+						"mark": "H5_AB_SEDUCE_H5C"
+					}
+				}
+			},
+			"none": {
+				"description": "{Seduce}\n\nTakes control of an enemy stack that is not immune to Mind spells (same effect as Puppet Master) for rounds = Succubus Seducers' total Hit Points / target's total Hit Points (rounded down, must be at least 1, max 10). Once per battle."
+			},
+			"basic": {
+				"description": "{Seduce}\n\nTakes control of an enemy stack that is not immune to Mind spells (same effect as Puppet Master) for rounds = Succubus Seducers' total Hit Points / target's total Hit Points (rounded down, must be at least 1, max 10). Once per battle."
+			},
+			"advanced": {
+				"description": "{Seduce}\n\nTakes control of an enemy stack that is not immune to Mind spells (same effect as Puppet Master) for rounds = Succubus Seducers' total Hit Points / target's total Hit Points (rounded down, must be at least 1, max 10). Once per battle."
+			},
+			"expert": {
+				"description": "{Seduce}\n\nTakes control of an enemy stack that is not immune to Mind spells (same effect as Puppet Master) for rounds = Succubus Seducers' total Hit Points / target's total Hit Points (rounded down, must be at least 1, max 10). Once per battle."
+			}
+		},
+		"targetCondition": {
+			"noneOf": {
+				"bonus.SIEGE_WEAPON": "absolute",
+				"bonus.MIND_IMMUNITY": "normal"
+			}
+		},
+		"animation": {
+			"affect": [
+				"h5/fx/Spells_Succub_Seudcer_Succub_Seudcer_Effect"
+			]
+		}
+	},
+	"h5AbSetSnares": {
+		"type": "ability",
+		// Set Snares
+		"name": "Set Snares",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"targetType": "LOCATION",
+		"flags": {
+			"special": true,
+			"indifferent": true
+		},
+		"sounds": {
+			"cast": ""
+		},
+		"graphics": {
+			"iconBook": "h5/spells/h5AbSetSnares/Book",
+			"iconScroll": "h5/spells/h5AbSetSnares/Scroll",
+			"iconScenarioBonus": "h5/spells/h5AbSetSnares/Scenario",
+			"iconEffect": "h5/spells/h5AbSetSnares/Effect"
+		},
+		"levels": {
+			"base": {
+				"cost": 0,
+				"power": 0,
+				"range": "0",
+				"targetModifier": {
+					"smart": false
+				},
+				"battleEffects": {
+					"zone": {
+						"type": "h5AbZone",
+						"mode": "snare",
+						"mark": "H5_AB_SNARE_H5C"
+					}
+				}
+			},
+			"none": {
+				"description": "{Set Snares}\n\nPlaces a trap invisible to the enemy on a hex (only one at a time; placing another moves it), and enemies stepping on it stop. (In H5, it had a chance to stop them or shorten their movement, and on failure the trapper's ATB was reset; in this version they always stop.) Unlimited uses."
+			},
+			"basic": {
+				"description": "{Set Snares}\n\nPlaces a trap invisible to the enemy on a hex (only one at a time; placing another moves it), and enemies stepping on it stop. (In H5, it had a chance to stop them or shorten their movement, and on failure the trapper's ATB was reset; in this version they always stop.) Unlimited uses."
+			},
+			"advanced": {
+				"description": "{Set Snares}\n\nPlaces a trap invisible to the enemy on a hex (only one at a time; placing another moves it), and enemies stepping on it stop. (In H5, it had a chance to stop them or shorten their movement, and on failure the trapper's ATB was reset; in this version they always stop.) Unlimited uses."
+			},
+			"expert": {
+				"description": "{Set Snares}\n\nPlaces a trap invisible to the enemy on a hex (only one at a time; placing another moves it), and enemies stepping on it stop. (In H5, it had a chance to stop them or shorten their movement, and on failure the trapper's ATB was reset; in this version they always stop.) Unlimited uses."
+			}
+		},
+		"animation": {
+			"hit": [
+				"h5/fx/Spells_Goblin_trapper_goblin_trapper_Effect"
+			]
+		}
+	},
+	"h5AbStormbolt": {
+		"type": "ability",
+		// Stormbolt
+		"name": "Storm Bolt",
+		"school": {
+			"air": true,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"targetType": "CREATURE",
+		"flags": {
+			"special": true,
+			"negative": true,
+			"damage": true
+		},
+		"sounds": {
+			"cast": ""
+		},
+		"graphics": {
+			"iconBook": "h5/spells/h5AbStormbolt/Book",
+			"iconScroll": "h5/spells/h5AbStormbolt/Scroll",
+			"iconScenarioBonus": "h5/spells/h5AbStormbolt/Scenario",
+			"iconEffect": "h5/spells/h5AbStormbolt/Effect"
+		},
+		"levels": {
+			"base": {
+				"cost": 0,
+				"power": 0,
+				"range": "0",
+				"targetModifier": {
+					"smart": true
+				},
+				"battleEffects": {
+					"strike": {
+						"type": "h5AbStrike",
+						"mode": "attack",
+						"pct": 100,
+						"chain": true,
+						"spellDamage": true,
+						"uses": 1,
+						"key": "h5AbStormbolt",
+						"log": "H5_AB_STORMBOLT_H5C",
+						"hitSound": "LIGHTBLT"
+					}
+				}
+			},
+			"none": {
+				"description": "{Storm Bolt}\n\nCasts Stormstrike on one enemy stack: deals normal attack damage (Air, reduced by Air spell resistance), and the lightning chains on through adjacent enemies, hitting each stack only once. Once per battle (twice from stack experience Rank 6)."
+			},
+			"basic": {
+				"description": "{Storm Bolt}\n\nCasts Stormstrike on one enemy stack: deals normal attack damage (Air, reduced by Air spell resistance), and the lightning chains on through adjacent enemies, hitting each stack only once. Once per battle (twice from stack experience Rank 6)."
+			},
+			"advanced": {
+				"description": "{Storm Bolt}\n\nCasts Stormstrike on one enemy stack: deals normal attack damage (Air, reduced by Air spell resistance), and the lightning chains on through adjacent enemies, hitting each stack only once. Once per battle (twice from stack experience Rank 6)."
+			},
+			"expert": {
+				"description": "{Storm Bolt}\n\nCasts Stormstrike on one enemy stack: deals normal attack damage (Air, reduced by Air spell resistance), and the lightning chains on through adjacent enemies, hitting each stack only once. Once per battle (twice from stack experience Rank 6)."
+			}
+		},
+		"targetCondition": {
+			"noneOf": {
+				"bonus.SIEGE_WEAPON": "absolute"
+			}
+		},
+		"animation": {
+			"affect": [
+				{
+					"effectName": "h5light_Spells_ChainLightningHit"
+				},
+				"h5/fx/Spells_ChainLightningHit"
+			]
+		}
+	},
+	"h5AbSummonOther": {
+		"type": "ability",
+		// Summon Other
+		"name": "Teleport",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"targetType": "CREATURE",
+		"flags": {
+			"special": true,
+			"indifferent": true
+		},
+		"sounds": {
+			"cast": ""
+		},
+		"graphics": {
+			"iconBook": "h5/spells/h5AbSummonOther/Book",
+			"iconScroll": "h5/spells/h5AbSummonOther/Scroll",
+			"iconScenarioBonus": "h5/spells/h5AbSummonOther/Scenario",
+			"iconEffect": "h5/spells/h5AbSummonOther/Effect"
+		},
+		"levels": {
+			"base": {
+				"cost": 0,
+				"power": 0,
+				"range": "0",
+				"targetModifier": {
+					"smart": false
+				},
+				"battleEffects": {
+					"move": {
+						"type": "h5AbMove",
+						"mode": "summon",
+						"mark": "H5_AB_SUMMONOTHER_H5C"
+					}
+				}
+			},
+			"none": {
+				"description": "{Teleport}\n\nTeleports any one stack (friend or foe) within movement range (ignoring obstacles) next to itself. Unlimited uses."
+			},
+			"basic": {
+				"description": "{Teleport}\n\nTeleports any one stack (friend or foe) within movement range (ignoring obstacles) next to itself. Unlimited uses."
+			},
+			"advanced": {
+				"description": "{Teleport}\n\nTeleports any one stack (friend or foe) within movement range (ignoring obstacles) next to itself. Unlimited uses."
+			},
+			"expert": {
+				"description": "{Teleport}\n\nTeleports any one stack (friend or foe) within movement range (ignoring obstacles) next to itself. Unlimited uses."
+			}
+		},
+		"targetCondition": {
+			"noneOf": {
+				"bonus.SIEGE_WEAPON": "absolute"
+			}
+		},
+		"animation": {
+			"affect": [
+				"h5/fx/Characters_SummonBalor"
+			]
+		}
+	},
+	"h5AbSwallowGoblin": {
+		"type": "ability",
+		// Swallow Goblin
+		"name": "Devour Goblin",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"targetType": "CREATURE",
+		"flags": {
+			"special": true,
+			"positive": true
+		},
+		"sounds": {
+			"cast": ""
+		},
+		"graphics": {
+			"iconBook": "h5/spells/h5AbSwallowGoblin/Book",
+			"iconScroll": "h5/spells/h5AbSwallowGoblin/Scroll",
+			"iconScenarioBonus": "h5/spells/h5AbSwallowGoblin/Scenario",
+			"iconEffect": "h5/spells/h5AbSwallowGoblin/Effect"
+		},
+		"levels": {
+			"base": {
+				"cost": 0,
+				"power": 0,
+				"range": "0",
+				"targetModifier": {
+					"smart": true
+				},
+				"battleEffects": {
+					"restore": {
+						"type": "h5AbRestore",
+						"mode": "swallow",
+						"sound": "CURE",
+						"mark": "H5_AB_RESTORE_H5C"
+					}
+				}
+			},
+			"none": {
+				"description": "{Devour Goblin}\n\nEats one adjacent friendly Goblin; the top creature of this stack is restored to full Hit Points. Unlimited uses."
+			},
+			"basic": {
+				"description": "{Devour Goblin}\n\nEats one adjacent friendly Goblin; the top creature of this stack is restored to full Hit Points. Unlimited uses."
+			},
+			"advanced": {
+				"description": "{Devour Goblin}\n\nEats one adjacent friendly Goblin; the top creature of this stack is restored to full Hit Points. Unlimited uses."
+			},
+			"expert": {
+				"description": "{Devour Goblin}\n\nEats one adjacent friendly Goblin; the top creature of this stack is restored to full Hit Points. Unlimited uses."
+			}
+		},
+		"animation": {
+			"affect": [
+				"h5/fx/Characters_hits_poison_hit"
+			]
+		}
+	},
+	"h5AbSyphonMana": {
+		"type": "ability",
+		// Syphon Mana
+		"name": "Siphon Mana",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"targetType": "CREATURE",
+		"flags": {
+			"special": true,
+			"negative": true
+		},
+		"sounds": {
+			"cast": ""
+		},
+		"graphics": {
+			"iconBook": "h5/spells/h5AbSyphonMana/Book",
+			"iconScroll": "h5/spells/h5AbSyphonMana/Scroll",
+			"iconScenarioBonus": "h5/spells/h5AbSyphonMana/Scenario",
+			"iconEffect": "h5/spells/h5AbSyphonMana/Effect"
+		},
+		"levels": {
+			"base": {
+				"cost": 0,
+				"power": 0,
+				"range": "0",
+				"targetModifier": {
+					"smart": true
+				},
+				"battleEffects": {
+					"target": {
+						"type": "h5AbTarget",
+						"mode": "syphon",
+						"uses": 1,
+						"sound": "DISPELL",
+						"mark": "H5_AB_SYPHON_H5C"
+					}
+				}
+			},
+			"none": {
+				"description": "{Siphon Mana}\n\nIn H5 it steals Vermin / 8 (rounded up) mana from the enemy hero and splits it evenly among your spellcasting stacks. This version approximates it: each of your other spellcasting stacks gets +1 cast, and the target (an enemy spellcasting stack) gets -1 cast. Once per battle."
+			},
+			"basic": {
+				"description": "{Siphon Mana}\n\nIn H5 it steals Vermin / 8 (rounded up) mana from the enemy hero and splits it evenly among your spellcasting stacks. This version approximates it: each of your other spellcasting stacks gets +1 cast, and the target (an enemy spellcasting stack) gets -1 cast. Once per battle."
+			},
+			"advanced": {
+				"description": "{Siphon Mana}\n\nIn H5 it steals Vermin / 8 (rounded up) mana from the enemy hero and splits it evenly among your spellcasting stacks. This version approximates it: each of your other spellcasting stacks gets +1 cast, and the target (an enemy spellcasting stack) gets -1 cast. Once per battle."
+			},
+			"expert": {
+				"description": "{Siphon Mana}\n\nIn H5 it steals Vermin / 8 (rounded up) mana from the enemy hero and splits it evenly among your spellcasting stacks. This version approximates it: each of your other spellcasting stacks gets +1 cast, and the target (an enemy spellcasting stack) gets -1 cast. Once per battle."
+			}
+		},
+		"targetCondition": {
+			"noneOf": {
+				"bonus.SIEGE_WEAPON": "absolute"
+			}
+		},
+		"animation": {
+			"affect": [
+				"h5/fx/Characters_Creatures_Preserve_DruidElder_manafeed"
+			]
+		}
+	},
+	"h5AbTreeantUnion": {
+		"type": "ability",
+		// Treeant Union
+		"name": "Symbiosis",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"defaultGainChance": 0,
+		"gainChance": {},
+		"targetType": "CREATURE",
+		"flags": {
+			"special": true,
+			"positive": true,
+			"rising": true
+		},
+		"sounds": {
+			"cast": ""
+		},
+		"graphics": {
+			"iconBook": "h5/spells/h5AbTreeantUnion/Book",
+			"iconScroll": "h5/spells/h5AbTreeantUnion/Scroll",
+			"iconScenarioBonus": "h5/spells/h5AbTreeantUnion/Scenario",
+			"iconEffect": "h5/spells/h5AbTreeantUnion/Effect"
+		},
+		"levels": {
+			"base": {
+				"cost": 0,
+				"power": 0,
+				"range": "0",
+				"targetModifier": {
+					"smart": true
+				},
+				"battleEffects": {
+					"restore": {
+						"type": "h5AbRestore",
+						"mode": "union",
+						"per": 17,
+						"selfPer": 3,
+						"uses": 1,
+						"sound": "CURE",
+						"mark": "H5_AB_RESTORE_H5C"
+					}
+				}
+			},
+			"none": {
+				"description": "{Symbiosis}\n\nOne friendly Treant stack regains 17 x Dryads Hit Points (can resurrect, permanent), and the Dryads themselves regain 3 x Dryads Hit Points (20 and 4 in H5, converted to equivalent Hit Points). Any range. Once per battle."
+			},
+			"basic": {
+				"description": "{Symbiosis}\n\nOne friendly Treant stack regains 17 x Dryads Hit Points (can resurrect, permanent), and the Dryads themselves regain 3 x Dryads Hit Points (20 and 4 in H5, converted to equivalent Hit Points). Any range. Once per battle."
+			},
+			"advanced": {
+				"description": "{Symbiosis}\n\nOne friendly Treant stack regains 17 x Dryads Hit Points (can resurrect, permanent), and the Dryads themselves regain 3 x Dryads Hit Points (20 and 4 in H5, converted to equivalent Hit Points). Any range. Once per battle."
+			},
+			"expert": {
+				"description": "{Symbiosis}\n\nOne friendly Treant stack regains 17 x Dryads Hit Points (can resurrect, permanent), and the Dryads themselves regain 3 x Dryads Hit Points (20 and 4 in H5, converted to equivalent Hit Points). Any range. Once per battle."
+			}
+		},
+		"animation": {
+			"affect": [
+				"h5/fx/Spells_Regeneration_Effect"
+			]
+		}
+	}
+}

@@ -1,0 +1,119 @@
+{
+	"h5LandMineTrigger": {
+		"targetType": "CREATURE",
+		"type": "combat",
+		"name": "Fire Trap",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": true,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"gainChance": {},
+		"animation": {
+			"hit": [
+				"h5/fx/Spells_LandMineHit"
+			]
+		},
+		"sounds": {
+			"cast": "LANDKILL"
+		},
+		"levels": {
+			"base": {
+				"power": 1000,
+				"range": "0",
+				"description": "",
+				"cost": 0,
+				"battleEffects": {
+					"directDamage": {
+						"type": "h5Damage",
+						"base": [
+							50.0,
+							50.0,
+							50.0,
+							50.0
+						],
+						"perPower": [
+							10.0,
+							10.0,
+							10.0,
+							10.0
+						]
+					}
+				},
+				"targetModifier": {
+					"smart": false
+				}
+			},
+			"none": {},
+			"basic": {},
+			"advanced": {},
+			"expert": {}
+		},
+		"flags": {
+			"damage": true,
+			"negative": true,
+			"special": true
+		},
+		"targetCondition": {}
+	},
+	"h5FireWallTrigger": {
+		"targetType": "CREATURE",
+		"type": "combat",
+		"name": "Fire Barrier",
+		"school": {
+			"air": false,
+			"earth": false,
+			"fire": true,
+			"water": false
+		},
+		"level": 0,
+		"power": 0,
+		"gainChance": {},
+		"levels": {
+			"base": {
+				"power": 1000,
+				"range": "0",
+				"description": "",
+				"cost": 0,
+				"battleEffects": {
+					"directDamage": {
+						"type": "h5Damage",
+						"base": [
+							9.0,
+							11.0,
+							13.0,
+							15.0
+						],
+						"perPower": [
+							9.0,
+							11.0,
+							13.0,
+							15.0
+						]
+					}
+				},
+				"targetModifier": {
+					"smart": false
+				}
+			},
+			"none": {},
+			"basic": {},
+			"advanced": {},
+			"expert": {}
+		},
+		"flags": {
+			"damage": true,
+			"negative": true,
+			"special": true
+		},
+		"targetCondition": {},
+		"animation": {
+			"hit": [
+				"h5/fx/Characters_FireHit"
+			]
+		}
+	}
+}

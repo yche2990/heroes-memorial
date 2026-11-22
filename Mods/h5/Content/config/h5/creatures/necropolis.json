@@ -1,0 +1,5713 @@
+{
+	"h5Necropolis3rdBanshee": {
+		"name": {
+			"singular": "Banshee",
+			"plural": "Banshees"
+		},
+		"description": "Wights, Wraiths and Banshees are the level 6 units of the Heroes V Necropolis (merged into Necropolis). All of them have {Undead} (undead creature). Wraiths also have {Harm Touch} (kills at least 1 creature of the target and dispels its beneficial spells). Banshees also have {Death Wail} (damages living enemies within 3 hexes; the lower their Morale and the closer they are, the more it hurts).\n\nBanshees instill fear deep in the soul of every living thing; anyone who hears a Banshee's scream drops dead on the spot. On the battlefield, Banshees also claim more victims with the rusty scimitars in their hands.\n\nSee also {Wight}, {Wraith}.",
+		"faction": "necropolis",
+		"level": 6,
+		"cost": {
+			"gold": 1145
+		},
+		"speed": 9,
+		"hitPoints": 84,
+		"attack": 17,
+		"defense": 15,
+		"damage": {
+			"min": 21,
+			"max": 25
+		},
+		"doubleWide": true,
+		"fightValue": 1638,
+		"aiValue": 1934,
+		"growth": 2,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"undead": {
+				"type": "UNDEAD",
+				"description": "{Undead}\nUndead creature"
+			},
+			"cast_h5AbDeathWail": {
+				"type": "SPELLCASTER",
+				"subtype": "h5AbDeathWail",
+				"val": 2,
+				"description": "{Death Wail}\nHurts living foes in 3\nhexes; low Morale, near: more"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 2,
+				"hidden": true
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 1,
+				"stacking": "h5Necropolis3rdBansheeExpCasts"
+			},
+			"h5NecroRaise": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5NecroRaise",
+				"hidden": true
+			},
+			"h5NecroRaiseInfo": {
+				"type": "H5_NECRO_RAISE_H5C"
+			}
+		},
+		"graphics": {
+			"animation": "h5/Necropolis_3rd_Banshee/battle.json",
+			"map": "h5/Necropolis_3rd_Banshee/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Necropolis_3rd_Banshee/map/atkL.png",
+			"mapAttackFromRight": "h5/Necropolis_3rd_Banshee/map/atkR.png",
+			"iconLarge": "h5/Necropolis_3rd_Banshee/iconLarge.png",
+			"iconSmall": "h5/Necropolis_3rd_Banshee/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_Necropolis_T6_attack00.ogg",
+			"wince": "h5/h5_Necropolis_T6_hit.ogg",
+			"defend": "h5/h5_Necropolis_T6_hit.ogg",
+			"killed": "h5/h5_Necropolis_T6_death.ogg",
+			"move": "h5/h5_Necropolis_T6_move.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					2,
+					3,
+					4,
+					5,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE"
+				},
+				"values": [
+					3,
+					6,
+					9,
+					12,
+					15,
+					18,
+					21,
+					24,
+					27,
+					30
+				]
+			},
+			{
+				"bonus": {
+					"type": "SPELL_AFTER_ATTACK",
+					"subtype": "sorrow",
+					"addInfo": [
+						2,
+						2
+					]
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "DOUBLE_DAMAGE_CHANCE"
+				},
+				"values": [
+					2,
+					4,
+					6,
+					8,
+					10,
+					12,
+					14,
+					16,
+					18,
+					20
+				]
+			}
+		]
+	},
+	"h5Necropolis3rdDiseaseZombie": {
+		"name": {
+			"singular": "Rot Zombie",
+			"plural": "Rot Zombies"
+		},
+		"description": "Walking Dead, Zombies and Rot Zombies are the level 2 units of the Heroes V Necropolis (merged into Necropolis). All of them have {Undead} (undead creature) and {Enrage} (Attack rises when a friendly stack dies). Zombies also have {Weakening Strike} (attacks give the target -2 Attack and -2 Defense, cumulative). Rot Zombies also have {Festering Aura} (adjacent non-undead stacks get -3 Attack, -2 Defense and -1 Morale).\n\nFor the living, nothing is more revolting than becoming a Rot Zombie. These servants of the necromancers, stinking and covered in disease-ridden rotting flesh, need only appear on the battlefield for their enemies to feel that victory is hopeless and lose the courage to fight on.\n\nSee also {Walking Dead}, {Zombie}.",
+		"faction": "necropolis",
+		"level": 2,
+		"cost": {
+			"gold": 115
+		},
+		"speed": 3,
+		"hitPoints": 22,
+		"attack": 4,
+		"defense": 5,
+		"damage": {
+			"min": 1,
+			"max": 3
+		},
+		"doubleWide": false,
+		"fightValue": 125,
+		"aiValue": 140,
+		"growth": 10,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"undead": {
+				"type": "UNDEAD",
+				"description": "{Undead}\nUndead creature"
+			},
+			"h5WeakAuraAtt": {
+				"type": "PRIMARY_SKILL",
+				"val": -3,
+				"propagator": "BATTLE_WIDE",
+				"propagationUpdater": "BONUS_OWNER_UPDATER",
+				"limiters": [
+					"allOf",
+					{
+						"type": "UNIT_ADJACENT",
+						"creature": "h5Necropolis3rdDiseaseZombie"
+					},
+					[
+						"noneOf",
+						"IS_UNDEAD"
+					]
+				],
+				"stacking": "h5WeakeningAuraPRIMARY_SKILLprimarySkill.attack",
+				"subtype": "attack",
+				"description": "{Festering Aura}\nAdjacent living: -3 Attack\n-2 Defense, -1 Morale"
+			},
+			"h5WeakAuraDef": {
+				"type": "PRIMARY_SKILL",
+				"val": -2,
+				"propagator": "BATTLE_WIDE",
+				"propagationUpdater": "BONUS_OWNER_UPDATER",
+				"limiters": [
+					"allOf",
+					{
+						"type": "UNIT_ADJACENT",
+						"creature": "h5Necropolis3rdDiseaseZombie"
+					},
+					[
+						"noneOf",
+						"IS_UNDEAD"
+					]
+				],
+				"stacking": "h5WeakeningAuraPRIMARY_SKILLprimarySkill.defence",
+				"subtype": "defence"
+			},
+			"h5WeakAuraMorale": {
+				"type": "MORALE",
+				"val": -1,
+				"propagator": "BATTLE_WIDE",
+				"propagationUpdater": "BONUS_OWNER_UPDATER",
+				"limiters": [
+					"allOf",
+					{
+						"type": "UNIT_ADJACENT",
+						"creature": "h5Necropolis3rdDiseaseZombie"
+					},
+					[
+						"noneOf",
+						"IS_UNDEAD"
+					]
+				],
+				"stacking": "h5WeakeningAuraMORALE"
+			},
+			"h5Enraged": {
+				"icon": "h5/abilities/enraged",
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5Enraged",
+				"description": "{Enrage}\nAttack rises whenever\nan allied stack dies"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 15,
+				"hidden": true
+			},
+			"h5NecroRaise": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5NecroRaise",
+				"hidden": true
+			},
+			"h5NecroRaiseInfo": {
+				"type": "H5_NECRO_RAISE_H5C"
+			}
+		},
+		"graphics": {
+			"animation": "h5/Necropolis_3rd_DiseaseZombie/battle.json",
+			"map": "h5/Necropolis_3rd_DiseaseZombie/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Necropolis_3rd_DiseaseZombie/map/atkL.png",
+			"mapAttackFromRight": "h5/Necropolis_3rd_DiseaseZombie/map/atkR.png",
+			"iconLarge": "h5/Necropolis_3rd_DiseaseZombie/iconLarge.png",
+			"iconSmall": "h5/Necropolis_3rd_DiseaseZombie/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_Necropolis_T2_attack00.ogg",
+			"wince": "h5/h5_Necropolis_T2_hit.ogg",
+			"defend": "h5/h5_Necropolis_T2_hit.ogg",
+			"killed": "h5/h5_Necropolis_T2_death.ogg",
+			"move": "h5/h5_Necropolis_T2_move.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					3,
+					3,
+					3,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					3,
+					4,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					0,
+					1,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					3,
+					3,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "LEVEL_SPELL_IMMUNITY"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "SPELL_AFTER_ATTACK",
+					"subtype": "disease",
+					"addInfo": [
+						2,
+						2
+					]
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			}
+		]
+	},
+	"h5Necropolis3rdHorrorDragon": {
+		"name": {
+			"singular": "Horror Dragon",
+			"plural": "Horror Dragons"
+		},
+		"description": "Bone Dragons, Spectral Dragons and Horror Dragons are the level 7 units of the Heroes V Necropolis (merged into Necropolis). All of them fly, are Dragons and have {Undead} (undead creature). Spectral Dragons also have {Cursing Attack} (casts Weakness on the target when attacking) and {Death Stare} (-1 Morale to all enemies). Horror Dragons also have {Sorrow Strike} (casts Sorrow on the target when attacking).\n\nAncient tombs lie hidden in bottomless swamps, and Horror Dragons lurk beneath this cursed mire. The rising poisonous fumes cannot taint them, but few witnesses have ever returned alive to tell these tales.\n\nSee also {Bone Dragon}, {Spectral Dragon}.",
+		"faction": "necropolis",
+		"level": 7,
+		"cost": {
+			"gold": 1845,
+			"mercury": 2
+		},
+		"speed": 12,
+		"hitPoints": 152,
+		"attack": 22,
+		"defense": 19,
+		"damage": {
+			"min": 24,
+			"max": 32
+		},
+		"doubleWide": true,
+		"fightValue": 3130,
+		"aiValue": 4078,
+		"growth": 1,
+		"advMapAmount": {
+			"min": 1,
+			"max": 3
+		},
+		"abilities": {
+			"flying": {
+				"type": "FLYING"
+			},
+			"undead": {
+				"type": "UNDEAD",
+				"description": "{Undead}\nUndead creature"
+			},
+			"h5SorrowStrike": {
+				"type": "SPELL_AFTER_ATTACK",
+				"subtype": "h5AbSorrow",
+				"val": 100,
+				"addInfo": [
+					3,
+					0
+				],
+				"description": "{Sorrow Strike}\nCasts Sorrow on the\ntarget when attacking"
+			},
+			"dragonNature": {
+				"type": "DRAGON_NATURE"
+			},
+			"skeletonTarget": {
+				"type": "SKELETON_TRANSFORMER_TARGET",
+				"subtype": "boneDragon",
+				"hidden": true
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 1,
+				"hidden": true
+			},
+			"h5NecroRaise": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5NecroRaise",
+				"hidden": true
+			},
+			"h5NecroRaiseInfo": {
+				"type": "H5_NECRO_RAISE_H5C"
+			}
+		},
+		"graphics": {
+			"animation": "h5/Necropolis_3rd_HorrorDragon/battle.json",
+			"map": "h5/Necropolis_3rd_HorrorDragon/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Necropolis_3rd_HorrorDragon/map/atkL.png",
+			"mapAttackFromRight": "h5/Necropolis_3rd_HorrorDragon/map/atkR.png",
+			"iconLarge": "h5/Necropolis_3rd_HorrorDragon/iconLarge.png",
+			"iconSmall": "h5/Necropolis_3rd_HorrorDragon/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_Necropolis_T7_attack00.ogg",
+			"wince": "h5/h5_Necropolis_T7_hit.ogg",
+			"defend": "h5/h5_Necropolis_T7_hit.ogg",
+			"killed": "h5/h5_Necropolis_T7_death.ogg",
+			"move": "h5/h5_Necropolis_T7_move.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "NEGATIVE_EFFECTS_IMMUNITY",
+					"subtype": "fire",
+					"description": "{Fire Ward}\nImmune to harmful Fire spells"
+				},
+				"values": [
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "NEGATIVE_EFFECTS_IMMUNITY",
+					"subtype": "water",
+					"description": "{Water Ward}\nImmune to harmful Water spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "NEGATIVE_EFFECTS_IMMUNITY",
+					"subtype": "air",
+					"description": "{Air Ward}\nImmune to harmful Air spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "NEGATIVE_EFFECTS_IMMUNITY",
+					"subtype": "earth",
+					"description": "{Earth Ward}\nImmune to harmful Earth spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "BLOCKS_RETALIATION",
+					"description": "{No Retaliation}\nEnemy cannot retaliate when attacked"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_RETALIATION"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			}
+		]
+	},
+	"h5Necropolis3rdLichMaster": {
+		"name": {
+			"singular": "Lich Master",
+			"plural": "Lich Masters"
+		},
+		"description": "Liches, Archliches and Lich Masters are the level 5 units of the Heroes V Necropolis (merged into Necropolis). All of them have a ranged attack and {Undead} (undead creature). Liches have {Death Cloud} (when shooting, non-undead stacks around the target take 50% damage). Archliches can also cast {Weakness}, {Decay} and {Suffering} (4 times per battle, 16 mana) and have {Death Cloud} (when shooting, non-undead stacks around the target take 50% damage). Lich Masters can also cast {Suffering} and {Animate Dead} (3 times per battle, 19 mana).\n\nThe most experienced wizards are honored to become Lich Masters after death, leading the mighty legions of necromancers.\n\nSee also {Lich}, {Archlich}.",
+		"faction": "necropolis",
+		"level": 5,
+		"cost": {
+			"gold": 665
+		},
+		"speed": 6,
+		"hitPoints": 41,
+		"attack": 17,
+		"defense": 17,
+		"damage": {
+			"min": 16,
+			"max": 20
+		},
+		"doubleWide": true,
+		"fightValue": 959,
+		"aiValue": 1068,
+		"growth": 3,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"shooter": {
+				"type": "SHOOTER"
+			},
+			"undead": {
+				"type": "UNDEAD",
+				"description": "{Undead}\nUndead creature"
+			},
+			"cast_h5AbWeakness": {
+				"type": "SPELLCASTER",
+				"subtype": "h5AbWeakness",
+				"val": 2
+			},
+			"cast_h5AbAnimateDead": {
+				"type": "SPELLCASTER",
+				"subtype": "h5AbAnimateDead",
+				"val": 1
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 3,
+				"hidden": true
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 3
+			},
+			"h5Mana": {
+				"type": "H5_MANA_H5C",
+				"val": 19,
+				"stacking": "h5Necropolis3rdLichMasterExpH5ManaH5c"
+			},
+			"h5ManaMin": {
+				"type": "H5_MANA_MIN_H5C",
+				"val": 5,
+				"hidden": true
+			},
+			"h5ManaPool": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5ManaPool",
+				"hidden": true,
+				"description": "~"
+			},
+			"noSpellcastByDefault": {
+				"type": "NO_SPELLCAST_BY_DEFAULT",
+				"hidden": true
+			},
+			"h5NecroRaise": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5NecroRaise",
+				"hidden": true
+			},
+			"h5NecroRaiseInfo": {
+				"type": "H5_NECRO_RAISE_H5C"
+			}
+		},
+		"graphics": {
+			"animation": "h5/Necropolis_3rd_LichMaster/battle.json",
+			"map": "h5/Necropolis_3rd_LichMaster/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Necropolis_3rd_LichMaster/map/atkL.png",
+			"mapAttackFromRight": "h5/Necropolis_3rd_LichMaster/map/atkR.png",
+			"iconLarge": "h5/Necropolis_3rd_LichMaster/iconLarge.png",
+			"iconSmall": "h5/Necropolis_3rd_LichMaster/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"frameAngles": [
+					90,
+					60,
+					45,
+					30,
+					0,
+					-30,
+					-45,
+					-60,
+					-90
+				],
+				"offset": {
+					"upperX": 54,
+					"upperY": -102,
+					"middleX": 66,
+					"middleY": -89,
+					"lowerX": 36,
+					"lowerY": -77
+				},
+				"attackClimaxFrame": 6,
+				"ray": [
+					{
+						"start": [
+							114,
+							83,
+							95,
+							160
+						],
+						"end": [
+							76,
+							55,
+							63,
+							60
+						]
+					},
+					{
+						"start": [
+							229,
+							167,
+							190,
+							255
+						],
+						"end": [
+							229,
+							167,
+							190,
+							120
+						]
+					},
+					{
+						"start": [
+							255,
+							247,
+							255,
+							255
+						],
+						"end": [
+							229,
+							167,
+							190,
+							200
+						]
+					},
+					{
+						"start": [
+							229,
+							167,
+							190,
+							255
+						],
+						"end": [
+							229,
+							167,
+							190,
+							120
+						]
+					},
+					{
+						"start": [
+							114,
+							83,
+							95,
+							160
+						],
+						"end": [
+							76,
+							55,
+							63,
+							60
+						]
+					}
+				]
+			}
+		},
+		"sound": {
+			"attack": "h5/h5_Necropolis_T5_attack00.ogg",
+			"wince": "h5/h5_Necropolis_T5_hit.ogg",
+			"defend": "h5/h5_Necropolis_T5_hit.ogg",
+			"killed": "h5/h5_Necropolis_T5_death.ogg",
+			"move": "h5/h5_Necropolis_T5_move.ogg",
+			"shoot": "h5/h5_Necropolis_T5_rangeattack.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					3,
+					4,
+					5,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					3,
+					4,
+					4,
+					6,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					2,
+					3,
+					3,
+					4,
+					5,
+					6,
+					6,
+					7
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					7
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "LEVEL_SPELL_IMMUNITY"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					2,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "H5_MANA_H5C",
+					"stacking": "h5Necropolis3rdLichMasterExpH5ManaH5c"
+				},
+				"values": [
+					19,
+					19,
+					19,
+					19,
+					19,
+					24,
+					24,
+					24,
+					24,
+					24
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_WALL_PENALTY",
+					"description": "{Siege Shooter}\nNo damage loss when shooting over walls"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			}
+		],
+		"shots": 14
+	},
+	"h5Necropolis3rdNosferatu": {
+		"name": {
+			"singular": "Nosferatu",
+			"plural": "Nosferatu"
+		},
+		"description": "Vampires, Vampire Lords and Nosferatu are the level 4 units of the Heroes V Necropolis (merged into Necropolis). All of them have {Undead} (undead creature) and {Life Drain} (drains life equal to 50% of the damage dealt and can resurrect creatures in its own stack). Vampires have {No Enemy Retaliation}. Vampire Lords can also teleport and have {No Enemy Retaliation}. Nosferatu can also teleport and have {Sleeping Strike} (melee attacks have a chance to put the target to sleep for 2 rounds; hitting a sleeping target deals maximum damage).\n\nNever look a Nosferatu in the eye; sadly, not everyone remembers this basic rule. Any arrogant fool who tries to defy it is certain to fall into a sleep from which he never wakes, surrounded by vampires.\n\nSee also {Vampire}, {Vampire Lord}.",
+		"faction": "necropolis",
+		"level": 4,
+		"cost": {
+			"gold": 400
+		},
+		"speed": 8,
+		"hitPoints": 41,
+		"attack": 12,
+		"defense": 11,
+		"damage": {
+			"min": 4,
+			"max": 11
+		},
+		"doubleWide": false,
+		"fightValue": 569,
+		"aiValue": 652,
+		"growth": 4,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"flying": {
+				"type": "FLYING",
+				"subtype": "movementTeleporting"
+			},
+			"undead": {
+				"type": "UNDEAD",
+				"description": "{Undead}\nUndead creature"
+			},
+			"drainsLife": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "lifeDrain",
+				"val": 50,
+				"description": "{Life Drain}\nDrains 50% of damage as\nHP, can revive own stack"
+			},
+			"h5SleepingStrike": {
+				"icon": "h5/abilities/sleepingStrike",
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5ProcSpell",
+				"addInfo": {
+					"spell": "h5AbSleep",
+					"pf": 3.0,
+					"mastery": 0,
+					"melee": true,
+					"ranged": false
+				},
+				"description": "{Sleeping Strike}\nMelee may Sleep target 2\nrounds; sleepers take max"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 5,
+				"hidden": true
+			},
+			"h5NecroRaise": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5NecroRaise",
+				"hidden": true
+			},
+			"h5NecroRaiseInfo": {
+				"type": "H5_NECRO_RAISE_H5C"
+			}
+		},
+		"graphics": {
+			"animation": "h5/Necropolis_3rd_Nosferatu/battle.json",
+			"map": "h5/Necropolis_3rd_Nosferatu/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Necropolis_3rd_Nosferatu/map/atkL.png",
+			"mapAttackFromRight": "h5/Necropolis_3rd_Nosferatu/map/atkR.png",
+			"iconLarge": "h5/Necropolis_3rd_Nosferatu/iconLarge.png",
+			"iconSmall": "h5/Necropolis_3rd_Nosferatu/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_Necropolis_T4_attack00.ogg",
+			"wince": "h5/h5_Necropolis_T4_hit.ogg",
+			"defend": "h5/h5_Necropolis_T4_hit.ogg",
+			"killed": "h5/h5_Necropolis_T4_death.ogg",
+			"startMoving": "h5/h5_Necropolis_T4_moveS.ogg",
+			"endMoving": "h5/h5_Necropolis_T4_moveE.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					5,
+					6,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "ENEMY_DEFENCE_REDUCTION"
+				},
+				"values": [
+					4,
+					8,
+					12,
+					16,
+					20,
+					24,
+					28,
+					32,
+					36,
+					40
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_ATTACK"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "BLOCKS_RETALIATION",
+					"description": "{No Retaliation}\nEnemy cannot retaliate when attacked"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h5Necropolis3rdPoltergeist": {
+		"name": {
+			"singular": "Poltergeist",
+			"plural": "Poltergeists"
+		},
+		"description": "Ghosts, Spectres and Poltergeists are the level 3 units of the Heroes V Necropolis (merged into Necropolis). All of them fly and have {Undead} (undead creature) and {Incorporeal} (50% chance to take no damage when attacked). Spectres also have {Mana Drain} (attacking a spellcasting unit removes 1 of its casts and restores Hit Points equal to 25% of the damage). Poltergeists also have {Ammo Steal} (steals ammunition from enemy shooters: number of Poltergeists / 10 + 1 shots).\n\nPoltergeists dwell in an ancient castle on the shores of Heresh. Above all they hate archers, and they always try to steal every last arrow before the archers can shoot.\n\nSee also {Ghost}, {Spectre}.",
+		"faction": "necropolis",
+		"level": 3,
+		"cost": {
+			"gold": 225
+		},
+		"speed": 7,
+		"hitPoints": 22,
+		"attack": 9,
+		"defense": 7,
+		"damage": {
+			"min": 3,
+			"max": 5
+		},
+		"doubleWide": false,
+		"fightValue": 266,
+		"aiValue": 316,
+		"growth": 7,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"flying": {
+				"type": "FLYING"
+			},
+			"undead": {
+				"type": "UNDEAD",
+				"description": "{Undead}\nUndead creature"
+			},
+			"h47Incorporeal": {
+				"icon": "h5/abilities/incorporeal",
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h47Incorporeal",
+				"val": 50,
+				"addInfo": {
+					"mark": "H47_GHOST_H5C"
+				},
+				"description": "{Incorporeal}\n50% chance to take\nno damage when attacked"
+			},
+			"cast_h5AbAmmoSteal": {
+				"type": "SPELLCASTER",
+				"subtype": "h5AbAmmoSteal",
+				"val": 2,
+				"description": "{Ammo Steal}\nSteals enemy shots:\nPoltergeists / 10 + 1"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 9,
+				"hidden": true
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 1
+			},
+			"h5NecroRaise": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5NecroRaise",
+				"hidden": true
+			},
+			"h5NecroRaiseInfo": {
+				"type": "H5_NECRO_RAISE_H5C"
+			}
+		},
+		"graphics": {
+			"animation": "h5/Necropolis_3rd_Poltergeist/battle.json",
+			"map": "h5/Necropolis_3rd_Poltergeist/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Necropolis_3rd_Poltergeist/map/atkL.png",
+			"mapAttackFromRight": "h5/Necropolis_3rd_Poltergeist/map/atkR.png",
+			"iconLarge": "h5/Necropolis_3rd_Poltergeist/iconLarge.png",
+			"iconSmall": "h5/Necropolis_3rd_Poltergeist/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_Necropolis_T3_attack00.ogg",
+			"wince": "h5/h5_Necropolis_T3_hit.ogg",
+			"defend": "h5/h5_Necropolis_T3_hit.ogg",
+			"killed": "h5/h5_Necropolis_T3_death.ogg",
+			"move": "h5/h5_Necropolis_T3_move.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE"
+				},
+				"values": [
+					4,
+					8,
+					12,
+					16,
+					20,
+					24,
+					28,
+					32,
+					36,
+					40
+				]
+			},
+			{
+				"bonus": {
+					"type": "SPELL_AFTER_ATTACK",
+					"subtype": "forgetfulness",
+					"addInfo": [
+						2,
+						2
+					]
+				},
+				"values": [
+					4,
+					8,
+					12,
+					16,
+					20,
+					24,
+					28,
+					32,
+					36,
+					40
+				]
+			}
+		]
+	},
+	"h5Necropolis3rdSkeletonWarrior": {
+		"name": {
+			"singular": "Skeleton Warrior",
+			"plural": "Skeleton Warriors"
+		},
+		"description": "Skeletons, Skeleton Archers and Skeleton Warriors are the level 1 units of the Heroes V Necropolis (merged into Necropolis). All of them have {Undead} (undead creature). Skeleton Archers also have a ranged attack. Skeleton Warriors also have {Large Shield} (half damage from ranged attacks), {25% Magic Proof} (-25% magic damage), {Shield Bash} (melee attacks have a chance to stun the target, preventing retaliation and resetting its ATB to zero) and {Shield Allies} (adjacent allies take half damage from ranged attacks).\n\nThey are the elite of the skeleton light infantry, equipped with sturdy armor and fearsome hammers, and they can quickly turn the tide of battle. Skeleton Warriors do not fear death; one look at their faces leaves no doubt of that.\n\nSee also {Skeleton}, {Skeleton Archer}.",
+		"faction": "necropolis",
+		"level": 1,
+		"cost": {
+			"gold": 45
+		},
+		"speed": 5,
+		"hitPoints": 4,
+		"attack": 4,
+		"defense": 9,
+		"damage": {
+			"min": 1,
+			"max": 3
+		},
+		"doubleWide": false,
+		"fightValue": 57,
+		"aiValue": 58,
+		"growth": 17,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"undead": {
+				"type": "UNDEAD",
+				"description": "{Undead}\nUndead creature"
+			},
+			"h5LargeShield": {
+				"type": "GENERAL_DAMAGE_REDUCTION",
+				"subtype": "damageTypeRanged",
+				"val": 50,
+				"stacking": "h5LargeShield",
+				"description": "{Large Shield}\nRanged damage taken\nis halved"
+			},
+			"h5MagicProof": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "any",
+				"val": 25,
+				"description": "{25% Magic Proof}\nSpell damage -25%"
+			},
+			"h5Bash": {
+				"icon": "h5/abilities/bash",
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5ProcEffect",
+				"addInfo": {
+					"effect": "bash",
+					"pf": 1.5,
+					"melee": true,
+					"ranged": false
+				},
+				"description": "{Shield Bash}\nMelee may stun: no\nretaliation, ATB reset"
+			},
+			"h5AreaZone": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5AreaZone",
+				"val": 0,
+				"stacking": "h5AreaZone",
+				"propagator": "BATTLE_WIDE",
+				"hidden": true,
+				"description": "~"
+			},
+			"h5ShieldOther": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5AllyAura",
+				"val": 4,
+				"icon": "h5/abilities/auraShield",
+				"description": "{Shield Allies}\nAdjacent allies take\nhalf ranged damage"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 20,
+				"hidden": true
+			},
+			"h5NecroRaise": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5NecroRaise",
+				"hidden": true
+			},
+			"h5NecroRaiseInfo": {
+				"type": "H5_NECRO_RAISE_H5C"
+			}
+		},
+		"graphics": {
+			"animation": "h5/Necropolis_3rd_SkeletonWarrior/battle.json",
+			"map": "h5/Necropolis_3rd_SkeletonWarrior/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Necropolis_3rd_SkeletonWarrior/map/atkL.png",
+			"mapAttackFromRight": "h5/Necropolis_3rd_SkeletonWarrior/map/atkR.png",
+			"iconLarge": "h5/Necropolis_3rd_SkeletonWarrior/iconLarge.png",
+			"iconSmall": "h5/Necropolis_3rd_SkeletonWarrior/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_Necropolis_T1_attack00.ogg",
+			"wince": "h5/h5_Necropolis_T1_hit.ogg",
+			"defend": "h5/h5_Necropolis_T1_hit.ogg",
+			"move": "h5/h5_Necropolis_T1_move.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "DEFENSIVE_STANCE",
+					"valueType": "ADDITIVE_VALUE"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					3,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "SPELL_IMMUNITY",
+					"subtype": "dispelHelpful",
+					"description": "{Immune to Dispel}\nUnaffected by Dispel"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "GENERAL_DAMAGE_REDUCTION",
+					"subtype": "damageTypeMelee"
+				},
+				"values": [
+					2,
+					4,
+					6,
+					8,
+					10,
+					12,
+					14,
+					16,
+					18,
+					20
+				]
+			}
+		]
+	},
+	"h5NecropolisBoneDragon": {
+		"name": {
+			"singular": "Bone Dragon",
+			"plural": "Bone Dragons"
+		},
+		"description": "Bone Dragons, Spectral Dragons and Horror Dragons are the level 7 units of the Heroes V Necropolis (merged into Necropolis). All of them fly, are Dragons and have {Undead} (undead creature). Spectral Dragons also have {Cursing Attack} (casts Weakness on the target when attacking) and {Death Stare} (-1 Morale to all enemies). Horror Dragons also have {Sorrow Strike} (casts Sorrow on the target when attacking).\n\nSince no dragons are native to the lands of the Necropolis, the necromancers had to plunder ancient dragon graves and use the remains to build Bone Dragons to do their bidding.\n\nSee also {Spectral Dragon}, {Horror Dragon}.",
+		"faction": "necropolis",
+		"level": 7,
+		"cost": {
+			"gold": 1555,
+			"mercury": 1
+		},
+		"speed": 11,
+		"hitPoints": 152,
+		"attack": 19,
+		"defense": 20,
+		"damage": {
+			"min": 13,
+			"max": 27
+		},
+		"doubleWide": true,
+		"fightValue": 2566,
+		"aiValue": 3343,
+		"growth": 1,
+		"advMapAmount": {
+			"min": 1,
+			"max": 3
+		},
+		"abilities": {
+			"flying": {
+				"type": "FLYING"
+			},
+			"undead": {
+				"type": "UNDEAD",
+				"description": "{Undead}\nUndead creature"
+			},
+			"dragonNature": {
+				"type": "DRAGON_NATURE"
+			},
+			"skeletonTarget": {
+				"type": "SKELETON_TRANSFORMER_TARGET",
+				"subtype": "boneDragon",
+				"hidden": true
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 1,
+				"hidden": true
+			},
+			"h5NecroRaise": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5NecroRaise",
+				"hidden": true
+			},
+			"h5NecroRaiseInfo": {
+				"type": "H5_NECRO_RAISE_H5C"
+			}
+		},
+		"graphics": {
+			"animation": "h5/Necropolis_Bone_Dragon/battle.json",
+			"map": "h5/Necropolis_Bone_Dragon/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Necropolis_Bone_Dragon/map/atkL.png",
+			"mapAttackFromRight": "h5/Necropolis_Bone_Dragon/map/atkR.png",
+			"iconLarge": "h5/Necropolis_Bone_Dragon/iconLarge.png",
+			"iconSmall": "h5/Necropolis_Bone_Dragon/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_BoneDragon_attack.ogg",
+			"wince": "h5/h5_BoneDragon_hit.ogg",
+			"defend": "h5/h5_BoneDragon_hit.ogg",
+			"killed": "h5/h5_BoneDragon_deathstart.ogg",
+			"move": "h5/h5_BoneDragon_move.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "NEGATIVE_EFFECTS_IMMUNITY",
+					"subtype": "fire",
+					"description": "{Fire Ward}\nImmune to harmful Fire spells"
+				},
+				"values": [
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "NEGATIVE_EFFECTS_IMMUNITY",
+					"subtype": "water",
+					"description": "{Water Ward}\nImmune to harmful Water spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "NEGATIVE_EFFECTS_IMMUNITY",
+					"subtype": "air",
+					"description": "{Air Ward}\nImmune to harmful Air spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "NEGATIVE_EFFECTS_IMMUNITY",
+					"subtype": "earth",
+					"description": "{Earth Ward}\nImmune to harmful Earth spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_ATTACK"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "ENEMY_DEFENCE_REDUCTION"
+				},
+				"values": [
+					2,
+					4,
+					6,
+					8,
+					10,
+					12,
+					14,
+					16,
+					18,
+					20
+				]
+			}
+		],
+		"upgrades": [
+			"h5NecropolisShadowDragon",
+			"h5Necropolis3rdHorrorDragon"
+		]
+	},
+	"h5NecropolisDemilich": {
+		"name": {
+			"singular": "Archlich",
+			"plural": "Archliches"
+		},
+		"description": "Liches, Archliches and Lich Masters are the level 5 units of the Heroes V Necropolis (merged into Necropolis). All of them have a ranged attack and {Undead} (undead creature). Liches have {Death Cloud} (when shooting, non-undead stacks around the target take 50% damage). Archliches can also cast {Weakness}, {Decay} and {Suffering} (4 times per battle, 16 mana) and have {Death Cloud} (when shooting, non-undead stacks around the target take 50% damage). Lich Masters can also cast {Suffering} and {Animate Dead} (3 times per battle, 19 mana).\n\nArchliches are powerful necromancers with an eternal hatred of all living beings. They can summon a Death Cloud or spread curses and weakening magic to strike at all their enemies.\n\nSee also {Lich}, {Lich Master}.",
+		"faction": "necropolis",
+		"level": 5,
+		"cost": {
+			"gold": 665
+		},
+		"speed": 4,
+		"hitPoints": 41,
+		"attack": 16,
+		"defense": 17,
+		"damage": {
+			"min": 16,
+			"max": 19
+		},
+		"doubleWide": true,
+		"fightValue": 958,
+		"aiValue": 1066,
+		"growth": 3,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"shooter": {
+				"type": "SHOOTER"
+			},
+			"undead": {
+				"type": "UNDEAD",
+				"description": "{Undead}\nUndead creature"
+			},
+			"h5DeathCloud": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5DeathCloud",
+				"val": 50,
+				"icon": "h5/abilities/h5DeathCloud",
+				"description": "{Death Cloud}\nShots deal 50% to living\nstacks around the target"
+			},
+			"cast_h5AbCurse": {
+				"type": "SPELLCASTER",
+				"subtype": "h5AbCurse",
+				"val": 3
+			},
+			"cast_h5AbPlague": {
+				"type": "SPELLCASTER",
+				"subtype": "h5AbPlague",
+				"val": 2
+			},
+			"cast_h5AbWeakness": {
+				"type": "SPELLCASTER",
+				"subtype": "h5AbWeakness",
+				"val": 2
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 3,
+				"hidden": true
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 4
+			},
+			"h5Mana": {
+				"type": "H5_MANA_H5C",
+				"val": 16,
+				"stacking": "h5NecropolisDemilichExpH5ManaH5c"
+			},
+			"h5ManaMin": {
+				"type": "H5_MANA_MIN_H5C",
+				"val": 4,
+				"hidden": true
+			},
+			"h5ManaPool": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5ManaPool",
+				"hidden": true,
+				"description": "~"
+			},
+			"noSpellcastByDefault": {
+				"type": "NO_SPELLCAST_BY_DEFAULT",
+				"hidden": true
+			},
+			"h5NecroRaise": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5NecroRaise",
+				"hidden": true
+			},
+			"h5NecroRaiseInfo": {
+				"type": "H5_NECRO_RAISE_H5C"
+			}
+		},
+		"graphics": {
+			"animation": "h5/Necropolis_Demilich/battle.json",
+			"map": "h5/Necropolis_Demilich/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Necropolis_Demilich/map/atkL.png",
+			"mapAttackFromRight": "h5/Necropolis_Demilich/map/atkR.png",
+			"iconLarge": "h5/Necropolis_Demilich/iconLarge.png",
+			"iconSmall": "h5/Necropolis_Demilich/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"frameAngles": [
+					90,
+					60,
+					45,
+					30,
+					0,
+					-30,
+					-45,
+					-60,
+					-90
+				],
+				"offset": {
+					"upperX": 53,
+					"upperY": -98,
+					"middleX": 64,
+					"middleY": -85,
+					"lowerX": 35,
+					"lowerY": -73
+				},
+				"attackClimaxFrame": 6,
+				"ray": [
+					{
+						"start": [
+							58,
+							124,
+							60,
+							160
+						],
+						"end": [
+							39,
+							82,
+							40,
+							60
+						]
+					},
+					{
+						"start": [
+							117,
+							248,
+							121,
+							255
+						],
+						"end": [
+							117,
+							248,
+							121,
+							120
+						]
+					},
+					{
+						"start": [
+							197,
+							255,
+							201,
+							255
+						],
+						"end": [
+							117,
+							248,
+							121,
+							200
+						]
+					},
+					{
+						"start": [
+							117,
+							248,
+							121,
+							255
+						],
+						"end": [
+							117,
+							248,
+							121,
+							120
+						]
+					},
+					{
+						"start": [
+							58,
+							124,
+							60,
+							160
+						],
+						"end": [
+							39,
+							82,
+							40,
+							60
+						]
+					}
+				]
+			}
+		},
+		"sound": {
+			"attack": "h5/h5_DemiLich_attack.ogg",
+			"wince": "h5/h5_DemiLich_hit.ogg",
+			"defend": "h5/h5_DemiLich_hit.ogg",
+			"killed": "h5/h5_DemiLich_death.ogg",
+			"move": "h5/h5_DemiLich_move.ogg",
+			"shoot": "h5/h5_DemiLich_rangeattack.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					3,
+					4,
+					5,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					3,
+					4,
+					4,
+					6,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					2,
+					3,
+					3,
+					4,
+					5,
+					6,
+					6,
+					7
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					7
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "LEVEL_SPELL_IMMUNITY"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					2,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "H5_MANA_H5C",
+					"stacking": "h5NecropolisDemilichExpH5ManaH5c"
+				},
+				"values": [
+					16,
+					16,
+					16,
+					16,
+					16,
+					20,
+					20,
+					20,
+					20,
+					20
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_WALL_PENALTY",
+					"description": "{Siege Shooter}\nNo damage loss when shooting over walls"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			}
+		],
+		"shots": 17
+	},
+	"h5NecropolisGhosts": {
+		"name": {
+			"singular": "Spectre",
+			"plural": "Spectres"
+		},
+		"description": "Ghosts, Spectres and Poltergeists are the level 3 units of the Heroes V Necropolis (merged into Necropolis). All of them fly and have {Undead} (undead creature) and {Incorporeal} (50% chance to take no damage when attacked). Spectres also have {Mana Drain} (attacking a spellcasting unit removes 1 of its casts and restores Hit Points equal to 25% of the damage). Poltergeists also have {Ammo Steal} (steals ammunition from enemy shooters: number of Poltergeists / 10 + 1 shots).\n\nSpectres are restless spirits, forever bound to the wizards who enslaved them. Their bodies are insubstantial, which makes them harder to hit. When these chilling ghosts touch an enemy creature, they drain its mana to restore their own energy.\n\nSee also {Ghost}, {Poltergeist}.",
+		"faction": "necropolis",
+		"level": 3,
+		"cost": {
+			"gold": 225
+		},
+		"speed": 6,
+		"hitPoints": 21,
+		"attack": 8,
+		"defense": 6,
+		"damage": {
+			"min": 3,
+			"max": 5
+		},
+		"doubleWide": false,
+		"fightValue": 263,
+		"aiValue": 312,
+		"growth": 7,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"flying": {
+				"type": "FLYING"
+			},
+			"undead": {
+				"type": "UNDEAD",
+				"description": "{Undead}\nUndead creature"
+			},
+			"h47Incorporeal": {
+				"icon": "h5/abilities/incorporeal",
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h47Incorporeal",
+				"val": 50,
+				"addInfo": {
+					"mark": "H47_GHOST_H5C"
+				},
+				"description": "{Incorporeal}\n50% chance to take\nno damage when attacked"
+			},
+			"h5ManaDrain": {
+				"icon": "h5/abilities/manaDrain",
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5ManaDrain",
+				"val": 25,
+				"description": "{Mana Drain}\nHits on casters drain 1\ncast, heal 25% of damage"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 9,
+				"hidden": true
+			},
+			"h5NecroRaise": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5NecroRaise",
+				"hidden": true
+			},
+			"h5NecroRaiseInfo": {
+				"type": "H5_NECRO_RAISE_H5C"
+			}
+		},
+		"graphics": {
+			"animation": "h5/Necropolis_Ghosts/battle.json",
+			"map": "h5/Necropolis_Ghosts/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Necropolis_Ghosts/map/atkL.png",
+			"mapAttackFromRight": "h5/Necropolis_Ghosts/map/atkR.png",
+			"iconLarge": "h5/Necropolis_Ghosts/iconLarge.png",
+			"iconSmall": "h5/Necropolis_Ghosts/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE"
+				},
+				"values": [
+					4,
+					8,
+					12,
+					16,
+					20,
+					24,
+					28,
+					32,
+					36,
+					40
+				]
+			},
+			{
+				"bonus": {
+					"type": "SPELL_AFTER_ATTACK",
+					"subtype": "sorrow",
+					"addInfo": [
+						2,
+						2
+					]
+				},
+				"values": [
+					4,
+					8,
+					12,
+					16,
+					20,
+					24,
+					28,
+					32,
+					36,
+					40
+				]
+			}
+		]
+	},
+	"h5NecropolisLich": {
+		"name": {
+			"singular": "Lich",
+			"plural": "Liches"
+		},
+		"description": "Liches, Archliches and Lich Masters are the level 5 units of the Heroes V Necropolis (merged into Necropolis). All of them have a ranged attack and {Undead} (undead creature). Liches have {Death Cloud} (when shooting, non-undead stacks around the target take 50% damage). Archliches can also cast {Weakness}, {Decay} and {Suffering} (4 times per battle, 16 mana) and have {Death Cloud} (when shooting, non-undead stacks around the target take 50% damage). Lich Masters can also cast {Suffering} and {Animate Dead} (3 times per battle, 19 mana).\n\nLiches are powerful necromancers with an eternal hatred of all forms of life. They brought plague into the world and devised the deadly Death Cloud to deal with distant enemies.\n\nSee also {Archlich}, {Lich Master}.",
+		"faction": "necropolis",
+		"level": 5,
+		"cost": {
+			"gold": 485
+		},
+		"speed": 4,
+		"hitPoints": 37,
+		"attack": 12,
+		"defense": 13,
+		"damage": {
+			"min": 11,
+			"max": 16
+		},
+		"doubleWide": true,
+		"fightValue": 726,
+		"aiValue": 808,
+		"growth": 3,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"shooter": {
+				"type": "SHOOTER"
+			},
+			"undead": {
+				"type": "UNDEAD",
+				"description": "{Undead}\nUndead creature"
+			},
+			"h5DeathCloud": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5DeathCloud",
+				"val": 50,
+				"icon": "h5/abilities/h5DeathCloud",
+				"description": "{Death Cloud}\nShots deal 50% to living\nstacks around the target"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 3,
+				"hidden": true
+			},
+			"h5NecroRaise": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5NecroRaise",
+				"hidden": true
+			},
+			"h5NecroRaiseInfo": {
+				"type": "H5_NECRO_RAISE_H5C"
+			}
+		},
+		"graphics": {
+			"animation": "h5/Necropolis_Lich/battle.json",
+			"map": "h5/Necropolis_Lich/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Necropolis_Lich/map/atkL.png",
+			"mapAttackFromRight": "h5/Necropolis_Lich/map/atkR.png",
+			"iconLarge": "h5/Necropolis_Lich/iconLarge.png",
+			"iconSmall": "h5/Necropolis_Lich/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"frameAngles": [
+					90,
+					60,
+					45,
+					30,
+					0,
+					-30,
+					-45,
+					-60,
+					-90
+				],
+				"offset": {
+					"upperX": 50,
+					"upperY": -88,
+					"middleX": 60,
+					"middleY": -77,
+					"lowerX": 34,
+					"lowerY": -66
+				},
+				"attackClimaxFrame": 6,
+				"ray": [
+					{
+						"start": [
+							58,
+							124,
+							60,
+							160
+						],
+						"end": [
+							39,
+							82,
+							40,
+							60
+						]
+					},
+					{
+						"start": [
+							117,
+							248,
+							121,
+							255
+						],
+						"end": [
+							117,
+							248,
+							121,
+							120
+						]
+					},
+					{
+						"start": [
+							197,
+							255,
+							201,
+							255
+						],
+						"end": [
+							117,
+							248,
+							121,
+							200
+						]
+					},
+					{
+						"start": [
+							117,
+							248,
+							121,
+							255
+						],
+						"end": [
+							117,
+							248,
+							121,
+							120
+						]
+					},
+					{
+						"start": [
+							58,
+							124,
+							60,
+							160
+						],
+						"end": [
+							39,
+							82,
+							40,
+							60
+						]
+					}
+				]
+			}
+		},
+		"sound": {
+			"attack": "h5/h5_DemiLich_attack.ogg",
+			"wince": "h5/h5_Lich_hit.ogg",
+			"defend": "h5/h5_Lich_hit.ogg",
+			"killed": "h5/h5_Lich_death.ogg",
+			"move": "h5/h5_DemiLich_move.ogg",
+			"shoot": "h5/h5_Lich_rangeattack.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					3,
+					4,
+					5,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					3,
+					4,
+					4,
+					6,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					2,
+					3,
+					3,
+					4,
+					5,
+					6,
+					6,
+					7
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					7
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "LEVEL_SPELL_IMMUNITY"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					2,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_WALL_PENALTY",
+					"description": "{Siege Shooter}\nNo damage loss when shooting over walls"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			}
+		],
+		"shots": 14,
+		"upgrades": [
+			"h5NecropolisDemilich",
+			"h5Necropolis3rdLichMaster"
+		]
+	},
+	"h5NecropolisManes": {
+		"name": {
+			"singular": "Ghost",
+			"plural": "Ghosts"
+		},
+		"description": "Ghosts, Spectres and Poltergeists are the level 3 units of the Heroes V Necropolis (merged into Necropolis). All of them fly and have {Undead} (undead creature) and {Incorporeal} (50% chance to take no damage when attacked). Spectres also have {Mana Drain} (attacking a spellcasting unit removes 1 of its casts and restores Hit Points equal to 25% of the damage). Poltergeists also have {Ammo Steal} (steals ammunition from enemy shooters: number of Poltergeists / 10 + 1 shots).\n\nGhosts are restless spirits, forever bound to the wizards who enslaved them. Their bodies are insubstantial, which makes them somewhat difficult to hit.\n\nSee also {Spectre}, {Poltergeist}.",
+		"faction": "necropolis",
+		"level": 3,
+		"cost": {
+			"gold": 160
+		},
+		"speed": 6,
+		"hitPoints": 17,
+		"attack": 8,
+		"defense": 6,
+		"damage": {
+			"min": 2,
+			"max": 3
+		},
+		"doubleWide": false,
+		"fightValue": 187,
+		"aiValue": 221,
+		"growth": 7,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"flying": {
+				"type": "FLYING"
+			},
+			"undead": {
+				"type": "UNDEAD",
+				"description": "{Undead}\nUndead creature"
+			},
+			"h47Incorporeal": {
+				"icon": "h5/abilities/incorporeal",
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h47Incorporeal",
+				"val": 50,
+				"addInfo": {
+					"mark": "H47_GHOST_H5C"
+				},
+				"description": "{Incorporeal}\n50% chance to take\nno damage when attacked"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 9,
+				"hidden": true
+			},
+			"h5NecroRaise": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5NecroRaise",
+				"hidden": true
+			},
+			"h5NecroRaiseInfo": {
+				"type": "H5_NECRO_RAISE_H5C"
+			}
+		},
+		"graphics": {
+			"animation": "h5/Necropolis_Manes/battle.json",
+			"map": "h5/Necropolis_Manes/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Necropolis_Manes/map/atkL.png",
+			"mapAttackFromRight": "h5/Necropolis_Manes/map/atkR.png",
+			"iconLarge": "h5/Necropolis_Manes/iconLarge.png",
+			"iconSmall": "h5/Necropolis_Manes/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE"
+				},
+				"values": [
+					3,
+					6,
+					9,
+					12,
+					15,
+					18,
+					21,
+					24,
+					27,
+					30
+				]
+			},
+			{
+				"bonus": {
+					"type": "SPELL_AFTER_ATTACK",
+					"subtype": "misfortune",
+					"addInfo": [
+						2,
+						2
+					]
+				},
+				"values": [
+					3,
+					6,
+					9,
+					12,
+					15,
+					18,
+					21,
+					24,
+					27,
+					30
+				]
+			}
+		],
+		"upgrades": [
+			"h5NecropolisGhosts",
+			"h5Necropolis3rdPoltergeist"
+		]
+	},
+	"h5NecropolisShadowDragon": {
+		"name": {
+			"singular": "Spectral Dragon",
+			"plural": "Spectral Dragons"
+		},
+		"description": "Bone Dragons, Spectral Dragons and Horror Dragons are the level 7 units of the Heroes V Necropolis (merged into Necropolis). All of them fly, are Dragons and have {Undead} (undead creature). Spectral Dragons also have {Cursing Attack} (casts Weakness on the target when attacking) and {Death Stare} (-1 Morale to all enemies). Horror Dragons also have {Sorrow Strike} (casts Sorrow on the target when attacking).\n\nSpectral Dragons are not made from the bones of a single kind of dragon. Instead, the skeleton of this undead monster comes from many different dragon breeds: the bones are skillfully pieced together into a single frame, and undead life is infused into it through the sacrifice of higher creatures.\n\nSee also {Bone Dragon}, {Horror Dragon}.",
+		"faction": "necropolis",
+		"level": 7,
+		"cost": {
+			"gold": 1845,
+			"mercury": 2
+		},
+		"speed": 12,
+		"hitPoints": 162,
+		"attack": 21,
+		"defense": 20,
+		"damage": {
+			"min": 22,
+			"max": 31
+		},
+		"doubleWide": true,
+		"fightValue": 3157,
+		"aiValue": 4113,
+		"growth": 1,
+		"advMapAmount": {
+			"min": 1,
+			"max": 3
+		},
+		"abilities": {
+			"flying": {
+				"type": "FLYING"
+			},
+			"undead": {
+				"type": "UNDEAD",
+				"description": "{Undead}\nUndead creature"
+			},
+			"h5CursingAttack": {
+				"type": "SPELL_AFTER_ATTACK",
+				"subtype": "h5AbCurse",
+				"val": 100,
+				"addInfo": [
+					1,
+					2
+				],
+				"description": "{Cursing Attack}\nCasts Weakness on the\ntarget when attacking"
+			},
+			"h5HorrorOfDeath": {
+				"type": "MORALE",
+				"val": -1,
+				"propagator": "BATTLE_WIDE",
+				"propagationUpdater": "BONUS_OWNER_UPDATER",
+				"limiters": [
+					"OPPOSITE_SIDE"
+				],
+				"stacking": "h5HorrorOfDeath",
+				"description": "{Horror of Death}\nAll enemies -1 Morale"
+			},
+			"dragonNature": {
+				"type": "DRAGON_NATURE"
+			},
+			"skeletonTarget": {
+				"type": "SKELETON_TRANSFORMER_TARGET",
+				"subtype": "boneDragon",
+				"hidden": true
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 1,
+				"hidden": true
+			},
+			"h5NecroRaise": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5NecroRaise",
+				"hidden": true
+			},
+			"h5NecroRaiseInfo": {
+				"type": "H5_NECRO_RAISE_H5C"
+			}
+		},
+		"graphics": {
+			"animation": "h5/Necropolis_Shadow_Dragon/battle.json",
+			"map": "h5/Necropolis_Shadow_Dragon/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Necropolis_Shadow_Dragon/map/atkL.png",
+			"mapAttackFromRight": "h5/Necropolis_Shadow_Dragon/map/atkR.png",
+			"iconLarge": "h5/Necropolis_Shadow_Dragon/iconLarge.png",
+			"iconSmall": "h5/Necropolis_Shadow_Dragon/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_ShadowDragon_attack.ogg",
+			"wince": "h5/h5_ShadowDragon_hit.ogg",
+			"defend": "h5/h5_ShadowDragon_hit.ogg",
+			"killed": "h5/h5_ShadowDragon_death.ogg",
+			"move": "h5/h5_BoneDragon_move.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "NEGATIVE_EFFECTS_IMMUNITY",
+					"subtype": "fire",
+					"description": "{Fire Ward}\nImmune to harmful Fire spells"
+				},
+				"values": [
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "NEGATIVE_EFFECTS_IMMUNITY",
+					"subtype": "water",
+					"description": "{Water Ward}\nImmune to harmful Water spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "NEGATIVE_EFFECTS_IMMUNITY",
+					"subtype": "air",
+					"description": "{Air Ward}\nImmune to harmful Air spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "NEGATIVE_EFFECTS_IMMUNITY",
+					"subtype": "earth",
+					"description": "{Earth Ward}\nImmune to harmful Earth spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "SPELL_AFTER_ATTACK",
+					"subtype": "age",
+					"addInfo": [
+						2,
+						2
+					]
+				},
+				"values": [
+					0,
+					0,
+					0,
+					5,
+					5,
+					5,
+					10,
+					10,
+					15,
+					20
+				]
+			},
+			{
+				"bonus": {
+					"type": "BLOCKS_RETALIATION",
+					"description": "{No Retaliation}\nEnemy cannot retaliate when attacked"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h5NecropolisSkeleton": {
+		"name": {
+			"singular": "Skeleton",
+			"plural": "Skeletons"
+		},
+		"description": "Skeletons, Skeleton Archers and Skeleton Warriors are the level 1 units of the Heroes V Necropolis (merged into Necropolis). All of them have {Undead} (undead creature). Skeleton Archers also have a ranged attack. Skeleton Warriors also have {Large Shield} (half damage from ranged attacks), {25% Magic Proof} (-25% magic damage), {Shield Bash} (melee attacks have a chance to stun the target, preventing retaliation and resetting its ATB to zero) and {Shield Allies} (adjacent allies take half damage from ranged attacks).\n\nArmed with axes and shields, Skeletons raise their bony arms to strike their foes dead. High Initiative lets Skeletons strike first, but their fragile bodies cannot withstand a sustained enemy assault.\n\nSee also {Skeleton Archer}, {Skeleton Warrior}.",
+		"faction": "necropolis",
+		"level": 1,
+		"cost": {
+			"gold": 25
+		},
+		"speed": 5,
+		"hitPoints": 3,
+		"attack": 2,
+		"defense": 3,
+		"damage": {
+			"min": 1,
+			"max": 1
+		},
+		"doubleWide": false,
+		"fightValue": 36,
+		"aiValue": 37,
+		"growth": 17,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"undead": {
+				"type": "UNDEAD",
+				"description": "{Undead}\nUndead creature"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 20,
+				"hidden": true
+			},
+			"h5NecroRaise": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5NecroRaise",
+				"hidden": true
+			},
+			"h5NecroRaiseInfo": {
+				"type": "H5_NECRO_RAISE_H5C"
+			}
+		},
+		"graphics": {
+			"animation": "h5/Necropolis_Skeleton/battle.json",
+			"map": "h5/Necropolis_Skeleton/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Necropolis_Skeleton/map/atkL.png",
+			"mapAttackFromRight": "h5/Necropolis_Skeleton/map/atkR.png",
+			"iconLarge": "h5/Necropolis_Skeleton/iconLarge.png",
+			"iconSmall": "h5/Necropolis_Skeleton/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_SkelWar_attack.ogg",
+			"wince": "h5/h5_SkelWar_hit.ogg",
+			"defend": "h5/h5_SkelWar_hit.ogg",
+			"move": "h5/h5_SkelArcherMove.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "GENERAL_DAMAGE_REDUCTION",
+					"subtype": "damageTypeRanged"
+				},
+				"values": [
+					3,
+					6,
+					9,
+					12,
+					15,
+					18,
+					21,
+					24,
+					27,
+					30
+				]
+			},
+			{
+				"bonus": {
+					"type": "SPELL_IMMUNITY",
+					"subtype": "dispelHelpful",
+					"description": "{Immune to Dispel}\nUnaffected by Dispel"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			}
+		],
+		"upgrades": [
+			"h5NecropolisSkeletonArcher",
+			"h5Necropolis3rdSkeletonWarrior"
+		]
+	},
+	"h5NecropolisSkeletonArcher": {
+		"name": {
+			"singular": "Skeleton Archer",
+			"plural": "Skeleton Archers"
+		},
+		"description": "Skeletons, Skeleton Archers and Skeleton Warriors are the level 1 units of the Heroes V Necropolis (merged into Necropolis). All of them have {Undead} (undead creature). Skeleton Archers also have a ranged attack. Skeleton Warriors also have {Large Shield} (half damage from ranged attacks), {25% Magic Proof} (-25% magic damage), {Shield Bash} (melee attacks have a chance to stun the target, preventing retaliation and resetting its ATB to zero) and {Shield Allies} (adjacent allies take half damage from ranged attacks).\n\nArmed with bows, Skeleton Archers can attack enemies from afar. High Initiative lets Skeleton Archers strike first, but their fragile bodies shatter at a single blow, and their defense is weak.\n\nSee also {Skeleton}, {Skeleton Warrior}.",
+		"faction": "necropolis",
+		"level": 1,
+		"cost": {
+			"gold": 45
+		},
+		"speed": 5,
+		"hitPoints": 4,
+		"attack": 2,
+		"defense": 3,
+		"damage": {
+			"min": 1,
+			"max": 2
+		},
+		"doubleWide": false,
+		"fightValue": 57,
+		"aiValue": 57,
+		"growth": 17,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"shooter": {
+				"type": "SHOOTER"
+			},
+			"undead": {
+				"type": "UNDEAD",
+				"description": "{Undead}\nUndead creature"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 20,
+				"hidden": true
+			},
+			"h5NecroRaise": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5NecroRaise",
+				"hidden": true
+			},
+			"h5NecroRaiseInfo": {
+				"type": "H5_NECRO_RAISE_H5C"
+			}
+		},
+		"graphics": {
+			"animation": "h5/Necropolis_Skeleton_Archer/battle.json",
+			"map": "h5/Necropolis_Skeleton_Archer/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Necropolis_Skeleton_Archer/map/atkL.png",
+			"mapAttackFromRight": "h5/Necropolis_Skeleton_Archer/map/atkR.png",
+			"iconLarge": "h5/Necropolis_Skeleton_Archer/iconLarge.png",
+			"iconSmall": "h5/Necropolis_Skeleton_Archer/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"frameAngles": [
+					90,
+					60,
+					45,
+					30,
+					0,
+					-30,
+					-45,
+					-60,
+					-90
+				],
+				"offset": {
+					"upperX": -1,
+					"upperY": -49,
+					"middleX": -17,
+					"middleY": -51,
+					"lowerX": -19,
+					"lowerY": -59
+				},
+				"attackClimaxFrame": 6,
+				"projectile": "h5/Necropolis_Skeleton_Archer/projectile.json"
+			}
+		},
+		"sound": {
+			"attack": "h5/h5_SkelArcherCloseAttack.ogg",
+			"wince": "h5/h5_SkelArcherHit.ogg",
+			"defend": "h5/h5_SkelArcherHit.ogg",
+			"move": "h5/h5_SkelArcherMove.ogg",
+			"shoot": "h5/h5_SkelArcherAttack.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_WALL_PENALTY",
+					"description": "{Siege Shooter}\nNo damage loss when shooting over walls"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "SHOTS"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "ENEMY_DEFENCE_REDUCTION"
+				},
+				"values": [
+					2,
+					4,
+					6,
+					8,
+					10,
+					12,
+					14,
+					16,
+					18,
+					20
+				]
+			},
+			{
+				"bonus": {
+					"type": "SPELL_IMMUNITY",
+					"subtype": "dispelHelpful",
+					"description": "{Immune to Dispel}\nUnaffected by Dispel"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			}
+		],
+		"shots": 22
+	},
+	"h5NecropolisVampire": {
+		"name": {
+			"singular": "Vampire",
+			"plural": "Vampires"
+		},
+		"description": "Vampires, Vampire Lords and Nosferatu are the level 4 units of the Heroes V Necropolis (merged into Necropolis). All of them have {Undead} (undead creature) and {Life Drain} (drains life equal to 50% of the damage dealt and can resurrect creatures in its own stack). Vampires have {No Enemy Retaliation}. Vampire Lords can also teleport and have {No Enemy Retaliation}. Nosferatu can also teleport and have {Sleeping Strike} (melee attacks have a chance to put the target to sleep for 2 rounds; hitting a sleeping target deals maximum damage).\n\nWizards who sought to escape death chose to become Vampires; they gained eternal youth but were left as hollow, empty shells. All the damage Vampires deal to living creatures goes to sustaining their undying bodies. With centuries of combat experience, they strike so swiftly that no one can retaliate against their attacks.\n\nSee also {Vampire Lord}, {Nosferatu}.",
+		"faction": "necropolis",
+		"level": 4,
+		"cost": {
+			"gold": 265
+		},
+		"speed": 6,
+		"hitPoints": 31,
+		"attack": 8,
+		"defense": 7,
+		"damage": {
+			"min": 5,
+			"max": 7
+		},
+		"doubleWide": false,
+		"fightValue": 390,
+		"aiValue": 446,
+		"growth": 4,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"blockRetaliation": {
+				"type": "BLOCKS_RETALIATION",
+				"description": "{No Enemy Retaliation}\nNo enemy retaliation"
+			},
+			"undead": {
+				"type": "UNDEAD",
+				"description": "{Undead}\nUndead creature"
+			},
+			"drainsLife": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "lifeDrain",
+				"val": 50,
+				"description": "{Life Drain}\nDrains 50% of damage as\nHP, can revive own stack"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 5,
+				"hidden": true
+			},
+			"h5NecroRaise": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5NecroRaise",
+				"hidden": true
+			},
+			"h5NecroRaiseInfo": {
+				"type": "H5_NECRO_RAISE_H5C"
+			}
+		},
+		"graphics": {
+			"animation": "h5/Necropolis_Vampire/battle.json",
+			"map": "h5/Necropolis_Vampire/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Necropolis_Vampire/map/atkL.png",
+			"mapAttackFromRight": "h5/Necropolis_Vampire/map/atkR.png",
+			"iconLarge": "h5/Necropolis_Vampire/iconLarge.png",
+			"iconSmall": "h5/Necropolis_Vampire/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_Vampire_attack.ogg",
+			"wince": "h5/h5_Vampire_hit.ogg",
+			"defend": "h5/h5_Vampire_hit.ogg",
+			"killed": "h5/h5_Vampire_death.ogg",
+			"move": "h5/h5_Vampire_move.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					5,
+					6,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "ENEMY_DEFENCE_REDUCTION"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_ATTACK"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					1,
+					1
+				]
+			}
+		],
+		"upgrades": [
+			"h5NecropolisVampireLord",
+			"h5Necropolis3rdNosferatu"
+		]
+	},
+	"h5NecropolisVampireLord": {
+		"name": {
+			"singular": "Vampire Lord",
+			"plural": "Vampire Lords"
+		},
+		"description": "Vampires, Vampire Lords and Nosferatu are the level 4 units of the Heroes V Necropolis (merged into Necropolis). All of them have {Undead} (undead creature) and {Life Drain} (drains life equal to 50% of the damage dealt and can resurrect creatures in its own stack). Vampires have {No Enemy Retaliation}. Vampire Lords can also teleport and have {No Enemy Retaliation}. Nosferatu can also teleport and have {Sleeping Strike} (melee attacks have a chance to put the target to sleep for 2 rounds; hitting a sleeping target deals maximum damage).\n\nSome wizards became Vampire Lords in pursuit of powers beyond death, gaining bodies that stay forever young. All the damage Vampire Lords deal to living creatures goes to sustaining their undying bodies, and no one can retaliate against their attacks. Moreover, their ability to teleport makes it impossible to predict where they will strike from.\n\nSee also {Vampire}, {Nosferatu}.",
+		"faction": "necropolis",
+		"level": 4,
+		"cost": {
+			"gold": 400
+		},
+		"speed": 7,
+		"hitPoints": 36,
+		"attack": 12,
+		"defense": 11,
+		"damage": {
+			"min": 6,
+			"max": 10
+		},
+		"doubleWide": false,
+		"fightValue": 556,
+		"aiValue": 637,
+		"growth": 4,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"flying": {
+				"type": "FLYING",
+				"subtype": "movementTeleporting"
+			},
+			"blockRetaliation": {
+				"type": "BLOCKS_RETALIATION",
+				"description": "{No Enemy Retaliation}\nNo enemy retaliation"
+			},
+			"undead": {
+				"type": "UNDEAD",
+				"description": "{Undead}\nUndead creature"
+			},
+			"drainsLife": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "lifeDrain",
+				"val": 50,
+				"description": "{Life Drain}\nDrains 50% of damage as\nHP, can revive own stack"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 5,
+				"hidden": true
+			},
+			"h5NecroRaise": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5NecroRaise",
+				"hidden": true
+			},
+			"h5NecroRaiseInfo": {
+				"type": "H5_NECRO_RAISE_H5C"
+			}
+		},
+		"graphics": {
+			"animation": "h5/Necropolis_Vampire_Lord/battle.json",
+			"map": "h5/Necropolis_Vampire_Lord/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Necropolis_Vampire_Lord/map/atkL.png",
+			"mapAttackFromRight": "h5/Necropolis_Vampire_Lord/map/atkR.png",
+			"iconLarge": "h5/Necropolis_Vampire_Lord/iconLarge.png",
+			"iconSmall": "h5/Necropolis_Vampire_Lord/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_VampireLord_attack.ogg",
+			"wince": "h5/h5_VampireLord_hit.ogg",
+			"defend": "h5/h5_VampireLord_hit.ogg",
+			"killed": "h5/h5_VampireLord_death.ogg",
+			"startMoving": "h5/h5_VampireLord_movestart.ogg",
+			"endMoving": "h5/h5_VampireLord_moveend.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					5,
+					6,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "ENEMY_DEFENCE_REDUCTION"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_ATTACK"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "SPELL_AFTER_ATTACK",
+					"subtype": "hypnotize",
+					"addInfo": [
+						2,
+						2
+					]
+				},
+				"values": [
+					2,
+					4,
+					6,
+					8,
+					10,
+					12,
+					14,
+					16,
+					18,
+					20
+				]
+			}
+		]
+	},
+	"h5NecropolisWalkingDead": {
+		"name": {
+			"singular": "Walking Dead",
+			"plural": "Walking Dead"
+		},
+		"description": "Walking Dead, Zombies and Rot Zombies are the level 2 units of the Heroes V Necropolis (merged into Necropolis). All of them have {Undead} (undead creature) and {Enrage} (Attack rises when a friendly stack dies). Zombies also have {Weakening Strike} (attacks give the target -2 Attack and -2 Defense, cumulative). Rot Zombies also have {Festering Aura} (adjacent non-undead stacks get -3 Attack, -2 Defense and -1 Morale).\n\nThese rotting corpses have been turned by the wizards' spells into tools for destroying the enemy. Though the Walking Dead are slow and clumsy, they feel neither pain nor fear. To the enemy they are fearsome opponents; to their masters they are ideal “cannon fodder”.\n\nSee also {Zombie}, {Rot Zombie}.",
+		"faction": "necropolis",
+		"level": 2,
+		"cost": {
+			"gold": 75
+		},
+		"speed": 3,
+		"hitPoints": 20,
+		"attack": 2,
+		"defense": 3,
+		"damage": {
+			"min": 1,
+			"max": 2
+		},
+		"doubleWide": false,
+		"fightValue": 90,
+		"aiValue": 101,
+		"growth": 10,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"undead": {
+				"type": "UNDEAD",
+				"description": "{Undead}\nUndead creature"
+			},
+			"h5Enraged": {
+				"icon": "h5/abilities/enraged",
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5Enraged",
+				"description": "{Enrage}\nAttack rises whenever\nan allied stack dies"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 15,
+				"hidden": true
+			},
+			"h5NecroRaise": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5NecroRaise",
+				"hidden": true
+			},
+			"h5NecroRaiseInfo": {
+				"type": "H5_NECRO_RAISE_H5C"
+			}
+		},
+		"graphics": {
+			"animation": "h5/Necropolis_Walking_Dead/battle.json",
+			"map": "h5/Necropolis_Walking_Dead/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Necropolis_Walking_Dead/map/atkL.png",
+			"mapAttackFromRight": "h5/Necropolis_Walking_Dead/map/atkR.png",
+			"iconLarge": "h5/Necropolis_Walking_Dead/iconLarge.png",
+			"iconSmall": "h5/Necropolis_Walking_Dead/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_WalkingDead_attack.ogg",
+			"wince": "h5/h5_WalkingDead_hit.ogg",
+			"defend": "h5/h5_WalkingDead_hit.ogg",
+			"killed": "h5/h5_WalkingDead_death.ogg",
+			"move": "h5/h5_WalkingDead_move.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					3,
+					3,
+					3,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					3,
+					4,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					0,
+					1,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					3,
+					3,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "LEVEL_SPELL_IMMUNITY"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "SPELL_AFTER_ATTACK",
+					"subtype": "disease",
+					"addInfo": [
+						2,
+						2
+					]
+				},
+				"values": [
+					3,
+					6,
+					9,
+					12,
+					15,
+					18,
+					21,
+					24,
+					27,
+					30
+				]
+			}
+		],
+		"upgrades": [
+			"h5NecropolisZombie",
+			"h5Necropolis3rdDiseaseZombie"
+		]
+	},
+	"h5NecropolisWight": {
+		"name": {
+			"singular": "Wight",
+			"plural": "Wights"
+		},
+		"description": "Wights, Wraiths and Banshees are the level 6 units of the Heroes V Necropolis (merged into Necropolis). All of them have {Undead} (undead creature). Wraiths also have {Harm Touch} (kills at least 1 creature of the target and dispels its beneficial spells). Banshees also have {Death Wail} (damages living enemies within 3 hexes; the lower their Morale and the closer they are, the more it hurts).\n\nWights are tormented souls who thirst for revenge on every living creature.\n\nSee also {Wraith}, {Banshee}.",
+		"faction": "necropolis",
+		"level": 6,
+		"cost": {
+			"gold": 940
+		},
+		"speed": 9,
+		"hitPoints": 73,
+		"attack": 18,
+		"defense": 14,
+		"damage": {
+			"min": 20,
+			"max": 23
+		},
+		"doubleWide": true,
+		"fightValue": 1474,
+		"aiValue": 1741,
+		"growth": 2,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"undead": {
+				"type": "UNDEAD",
+				"description": "{Undead}\nUndead creature"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 2,
+				"hidden": true
+			},
+			"h5NecroRaise": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5NecroRaise",
+				"hidden": true
+			},
+			"h5NecroRaiseInfo": {
+				"type": "H5_NECRO_RAISE_H5C"
+			}
+		},
+		"graphics": {
+			"animation": "h5/Necropolis_Wight/battle.json",
+			"map": "h5/Necropolis_Wight/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Necropolis_Wight/map/atkL.png",
+			"mapAttackFromRight": "h5/Necropolis_Wight/map/atkR.png",
+			"iconLarge": "h5/Necropolis_Wight/iconLarge.png",
+			"iconSmall": "h5/Necropolis_Wight/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_Wight_attack.ogg",
+			"wince": "h5/h5_Wight_hit.ogg",
+			"defend": "h5/h5_Wight_hit.ogg",
+			"killed": "h5/h5_Wight_death.ogg",
+			"move": "h5/h5_Wight_move.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					2,
+					3,
+					4,
+					5,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "SPELL_AFTER_ATTACK",
+					"subtype": "weakness",
+					"addInfo": [
+						2,
+						2
+					]
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			}
+		],
+		"upgrades": [
+			"h5NecropolisWraith",
+			"h5Necropolis3rdBanshee"
+		]
+	},
+	"h5NecropolisWraith": {
+		"name": {
+			"singular": "Wraith",
+			"plural": "Wraiths"
+		},
+		"description": "Wights, Wraiths and Banshees are the level 6 units of the Heroes V Necropolis (merged into Necropolis). All of them have {Undead} (undead creature). Wraiths also have {Harm Touch} (kills at least 1 creature of the target and dispels its beneficial spells). Banshees also have {Death Wail} (damages living enemies within 3 hexes; the lower their Morale and the closer they are, the more it hurts).\n\nWraiths are the embodiment of death; no one can survive their icy touch. The soul of any enemy creature that dares to oppose these undead warriors is drained away.\n\nSee also {Wight}, {Banshee}.",
+		"faction": "necropolis",
+		"level": 6,
+		"cost": {
+			"gold": 1145
+		},
+		"speed": 9,
+		"hitPoints": 77,
+		"attack": 19,
+		"defense": 15,
+		"damage": {
+			"min": 23,
+			"max": 28
+		},
+		"doubleWide": true,
+		"fightValue": 1731,
+		"aiValue": 2044,
+		"growth": 2,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"undead": {
+				"type": "UNDEAD",
+				"description": "{Undead}\nUndead creature"
+			},
+			"cast_h5AbHarmTouch": {
+				"type": "SPELLCASTER",
+				"subtype": "h5AbHarmTouch",
+				"val": 2,
+				"description": "{Harm Touch}\nKills at least 1 target,\ndispels its buffs"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 2,
+				"hidden": true
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 1,
+				"stacking": "h5NecropolisWraithExpCasts"
+			},
+			"h5NecroRaise": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5NecroRaise",
+				"hidden": true
+			},
+			"h5NecroRaiseInfo": {
+				"type": "H5_NECRO_RAISE_H5C"
+			}
+		},
+		"graphics": {
+			"animation": "h5/Necropolis_Wraith/battle.json",
+			"map": "h5/Necropolis_Wraith/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Necropolis_Wraith/map/atkL.png",
+			"mapAttackFromRight": "h5/Necropolis_Wraith/map/atkR.png",
+			"iconLarge": "h5/Necropolis_Wraith/iconLarge.png",
+			"iconSmall": "h5/Necropolis_Wraith/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_Wraith_attack.ogg",
+			"wince": "h5/h5_Wraith_hit.ogg",
+			"defend": "h5/h5_Wraith_hit.ogg",
+			"killed": "h5/h5_Wraith_death.ogg",
+			"move": "h5/h5_Wraith_move.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					2,
+					3,
+					4,
+					5,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE"
+				},
+				"values": [
+					3,
+					6,
+					9,
+					12,
+					15,
+					18,
+					21,
+					24,
+					27,
+					30
+				]
+			},
+			{
+				"bonus": {
+					"type": "SPELL_AFTER_ATTACK",
+					"subtype": "weakness",
+					"addInfo": [
+						2,
+						2
+					]
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "DOUBLE_DAMAGE_CHANCE"
+				},
+				"values": [
+					2,
+					4,
+					6,
+					8,
+					10,
+					12,
+					14,
+					16,
+					18,
+					20
+				]
+			}
+		]
+	},
+	"h5NecropolisZombie": {
+		"name": {
+			"singular": "Zombie",
+			"plural": "Zombies"
+		},
+		"description": "Walking Dead, Zombies and Rot Zombies are the level 2 units of the Heroes V Necropolis (merged into Necropolis). All of them have {Undead} (undead creature) and {Enrage} (Attack rises when a friendly stack dies). Zombies also have {Weakening Strike} (attacks give the target -2 Attack and -2 Defense, cumulative). Rot Zombies also have {Festering Aura} (adjacent non-undead stacks get -3 Attack, -2 Defense and -1 Morale).\n\nThese rotting corpses have been turned by the wizards' spells into tools for destroying the enemy. Zombies feel no pain and can absorb a great deal of damage. In addition, their festering weapons can infect any living being with a wasting disease.\n\nSee also {Walking Dead}, {Rot Zombie}.",
+		"faction": "necropolis",
+		"level": 2,
+		"cost": {
+			"gold": 115
+		},
+		"speed": 3,
+		"hitPoints": 20,
+		"attack": 4,
+		"defense": 3,
+		"damage": {
+			"min": 2,
+			"max": 3
+		},
+		"doubleWide": false,
+		"fightValue": 129,
+		"aiValue": 144,
+		"growth": 10,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"undead": {
+				"type": "UNDEAD",
+				"description": "{Undead}\nUndead creature"
+			},
+			"h5Enraged": {
+				"icon": "h5/abilities/enraged",
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5Enraged",
+				"description": "{Enrage}\nAttack rises whenever\nan allied stack dies"
+			},
+			"h5WeakeningStrike": {
+				"icon": "h5/abilities/weakened",
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5WeakeningStrike",
+				"val": 2,
+				"description": "{Weakening Strike}\nTarget -2 Attack and\n-2 Defense, stacks"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 15,
+				"hidden": true
+			},
+			"h5NecroRaise": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5NecroRaise",
+				"hidden": true
+			},
+			"h5NecroRaiseInfo": {
+				"type": "H5_NECRO_RAISE_H5C"
+			}
+		},
+		"graphics": {
+			"animation": "h5/Necropolis_Zombie/battle.json",
+			"map": "h5/Necropolis_Zombie/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Necropolis_Zombie/map/atkL.png",
+			"mapAttackFromRight": "h5/Necropolis_Zombie/map/atkR.png",
+			"iconLarge": "h5/Necropolis_Zombie/iconLarge.png",
+			"iconSmall": "h5/Necropolis_Zombie/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_Zombie_attack.ogg",
+			"wince": "h5/h5_Zombie_hit.ogg",
+			"defend": "h5/h5_Zombie_hit.ogg",
+			"killed": "h5/h5_Zombie_death.ogg",
+			"move": "h5/h5_Zombie_move.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					3,
+					3,
+					3,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					3,
+					4,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					0,
+					1,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					3,
+					3,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "LEVEL_SPELL_IMMUNITY"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "SPELL_AFTER_ATTACK",
+					"subtype": "disease",
+					"addInfo": [
+						2,
+						2
+					]
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			}
+		]
+	}
+}

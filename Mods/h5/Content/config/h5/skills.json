@@ -1,0 +1,52 @@
+{
+	"tears-of-ashan:bloodRage": {
+		"basic": {
+			"effects": {
+				"h5RageSkill": {
+					"type": "H5_RAGE_SKILL_H5C",
+					"val": 1,
+					"valueType": "AT_LEAST",
+					"limiters": [
+						"CREATURES_ONLY",
+						{
+							"type": "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "H5_DEMON_RAGED_H5C"
+						}
+					]
+				}
+			}
+		},
+		"advanced": {
+			"effects": {
+				"h5RageSkill": {
+					"type": "H5_RAGE_SKILL_H5C",
+					"val": 2,
+					"valueType": "AT_LEAST",
+					"limiters": [
+						"CREATURES_ONLY",
+						{
+							"type": "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "H5_DEMON_RAGED_H5C"
+						}
+					]
+				}
+			}
+		},
+		"expert": {
+			"effects": {
+				"h5RageSkill": {
+					"type": "H5_RAGE_SKILL_H5C",
+					"val": 3,
+					"valueType": "AT_LEAST",
+					"limiters": [
+						"CREATURES_ONLY",
+						{
+							"type": "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "H5_DEMON_RAGED_H5C"
+						}
+					]
+				}
+			}
+		}
+	}
+}

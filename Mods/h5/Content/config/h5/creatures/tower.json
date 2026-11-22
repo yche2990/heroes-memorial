@@ -1,0 +1,5799 @@
+{
+	"h5Academy3rdCombatMage": {
+		"name": {
+			"singular": "Combat Mage",
+			"plural": "Combat Mages"
+		},
+		"description": "Mages, Archmages and Combat Mages are the level 4 units of the Heroes V Academy (merged into the Tower). They can all attack at range and cast {Fist of Wrath} and {Cleansing} (2 times per battle, 10 mana), and they have {No Range Penalty} (no ranged penalty) and {Magic Strike} (all troops on the line of fire take damage). Archmages also have {Energy Channel} (the friendly hero's spells cost 2 less mana). Combat Mages also have {Eldritch Aura} (adjacent allies are not hurt by the line damage of magic attacks).\n\nThe mysterious Combat Mages live in the beautiful Kalef Oasis. To them, a wizard's mission is to keep increasing the destructive power of his magic, so that it strikes the enemy precisely while its side effects are kept to a minimum.\n\nSee also {Mage}, {Archmage}.",
+		"faction": "tower",
+		"level": 4,
+		"cost": {
+			"gold": 360
+		},
+		"speed": 5,
+		"hitPoints": 30,
+		"attack": 15,
+		"defense": 11,
+		"damage": {
+			"min": 6,
+			"max": 6
+		},
+		"doubleWide": false,
+		"fightValue": 483,
+		"aiValue": 553,
+		"growth": 4,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"shooter": {
+				"type": "SHOOTER"
+			},
+			"h5EldritchAura": {
+				"type": "H5_ELDRITCH_AURA_H5C",
+				"val": 1,
+				"description": "{Eldritch Aura}\nAdjacent allies take no\nMagic Strike path damage"
+			},
+			"h5MagicAttack": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5MagicAttack",
+				"icon": "h5/abilities/h5MagicAttack",
+				"description": "{Magic Strike}\nDamages every stack\nalong the line of fire"
+			},
+			"noDistancePenalty": {
+				"type": "NO_DISTANCE_PENALTY",
+				"description": "{No Range Penalty}\nNo ranged damage penalty"
+			},
+			"cast_h5AbMagicFist": {
+				"type": "SPELLCASTER",
+				"subtype": "h5AbMagicFist",
+				"val": 1
+			},
+			"cast_h5AbDispel": {
+				"type": "SPELLCASTER",
+				"subtype": "h5AbDispel",
+				"val": 2
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 5,
+				"hidden": true
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 2
+			},
+			"h5Mana": {
+				"type": "H5_MANA_H5C",
+				"val": 10,
+				"stacking": "h5Academy3rdCombatMageExpH5ManaH5c"
+			},
+			"h5ManaMin": {
+				"type": "H5_MANA_MIN_H5C",
+				"val": 5,
+				"hidden": true
+			},
+			"h5ManaPool": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5ManaPool",
+				"hidden": true,
+				"description": "~"
+			},
+			"noSpellcastByDefault": {
+				"type": "NO_SPELLCAST_BY_DEFAULT",
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h5/Academy_3rd_CombatMage/battle.json",
+			"map": "h5/Academy_3rd_CombatMage/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Academy_3rd_CombatMage/map/atkL.png",
+			"mapAttackFromRight": "h5/Academy_3rd_CombatMage/map/atkR.png",
+			"iconLarge": "h5/Academy_3rd_CombatMage/iconLarge.png",
+			"iconSmall": "h5/Academy_3rd_CombatMage/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"frameAngles": [
+					90,
+					60,
+					45,
+					30,
+					0,
+					-30,
+					-45,
+					-60,
+					-90
+				],
+				"offset": {
+					"upperX": 38,
+					"upperY": -74,
+					"middleX": 44,
+					"middleY": -60,
+					"lowerX": 7,
+					"lowerY": -49
+				},
+				"attackClimaxFrame": 7,
+				"projectile": "h5/Academy_3rd_CombatMage/projectile.json"
+			}
+		},
+		"sound": {
+			"attack": "h5/h5_Academy_T4_attack00.ogg",
+			"wince": "h5/h5_Academy_T4_hit.ogg",
+			"defend": "h5/h5_Academy_T4_hit.ogg",
+			"killed": "h5/h5_Academy_T4_death.ogg",
+			"move": "h5/h5_Academy_T4_move.ogg",
+			"shoot": "h5/h5_Academy_T4_rangeattack.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					5,
+					6,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "H5_MANA_H5C",
+					"stacking": "h5Academy3rdCombatMageExpH5ManaH5c"
+				},
+				"values": [
+					10,
+					10,
+					10,
+					10,
+					15,
+					15,
+					15,
+					15,
+					20,
+					20
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_WALL_PENALTY",
+					"description": "{Siege Shooter}\nNo damage loss when shooting over walls"
+				},
+				"values": [
+					false,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "ENEMY_DEFENCE_REDUCTION"
+				},
+				"values": [
+					3,
+					6,
+					9,
+					12,
+					15,
+					18,
+					21,
+					24,
+					27,
+					30
+				]
+			}
+		],
+		"shots": 17
+	},
+	"h5Academy3rdDjinnVizier": {
+		"name": {
+			"singular": "Djinn Vizier",
+			"plural": "Djinn Viziers"
+		},
+		"description": "Djinn, Djinn Sultans and Djinn Viziers are the level 5 units of the Heroes V Academy (merged into the Tower). They all fly. Djinn have {25% Magic Proof} (-25% magic damage) and {Random Hex} (casts a random dark curse on an enemy, 3 times per battle). Djinn Sultans also have {50% Magic Proof} (-50% magic damage) and {Random Blessing} (randomly casts curses on enemies or blessings on allies, 3 times per battle). Djinn Viziers also have {75% Magic Proof} (-75% magic damage), {Lightning Immunity} (immune to Air magic) and {Luck Gambler} (allies +1–3 Luck or enemies -1–3, 3 times per battle).\n\nDjinn Viziers have the power to foresee the future. The side that has djinn can stay lucky throughout the battle, while its enemies are plagued by misfortune. Djinn Viziers can decide how to bestow luck: they can bring good fortune to their own troops, or make the enemy taste bad luck.\n\nSee also {Djinn}, {Djinn Sultan}.",
+		"faction": "tower",
+		"level": 5,
+		"cost": {
+			"gold": 490
+		},
+		"speed": 7,
+		"hitPoints": 37,
+		"attack": 11,
+		"defense": 11,
+		"damage": {
+			"min": 13,
+			"max": 18
+		},
+		"doubleWide": true,
+		"fightValue": 682,
+		"aiValue": 759,
+		"growth": 3,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"flying": {
+				"type": "FLYING"
+			},
+			"h5MagicProof": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "any",
+				"val": 75,
+				"description": "{75% Magic Proof}\nSpell damage -75%"
+			},
+			"immuneToair": {
+				"type": "SPELL_SCHOOL_IMMUNITY",
+				"subtype": "air",
+				"description": "{Lightning Immunity}\nImmune to Air spells"
+			},
+			"cast_h5AbLuckGambler": {
+				"type": "SPELLCASTER",
+				"subtype": "h5AbLuckGambler",
+				"val": 2,
+				"description": "{Luck Gambler}\nAlly Luck +1-3 or foe\n-1-3, 3 times per battle"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 3,
+				"hidden": true
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 1,
+				"stacking": "h5Academy3rdDjinnVizierExpCasts"
+			}
+		},
+		"graphics": {
+			"animation": "h5/Academy_3rd_DjinnVizier/battle.json",
+			"map": "h5/Academy_3rd_DjinnVizier/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Academy_3rd_DjinnVizier/map/atkL.png",
+			"mapAttackFromRight": "h5/Academy_3rd_DjinnVizier/map/atkR.png",
+			"iconLarge": "h5/Academy_3rd_DjinnVizier/iconLarge.png",
+			"iconSmall": "h5/Academy_3rd_DjinnVizier/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_Academy_T5_attack00.ogg",
+			"wince": "h5/h5_Academy_T5_hit.ogg",
+			"defend": "h5/h5_Academy_T5_hit.ogg",
+			"killed": "h5/h5_Academy_T5_death.ogg",
+			"move": "h5/h5_Academy_T5_move.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					3,
+					4,
+					5,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					3,
+					4,
+					4,
+					6,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					2,
+					3,
+					3,
+					4,
+					5,
+					6,
+					6,
+					7
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					7
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "CASTS",
+					"stacking": "h5Academy3rdDjinnVizierExpCasts"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "SPELL_IMMUNITY",
+					"subtype": "hypnotize",
+					"description": "{Immune to Sleep}\nUnaffected by Sleep"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "MIND_IMMUNITY",
+					"description": "{Steadfast Mind}\nImmune to Mind spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h5Academy3rdGremlinSaboteur": {
+		"name": {
+			"singular": "Gremlin Saboteur",
+			"plural": "Gremlin Saboteurs"
+		},
+		"description": "Gremlins, Master Gremlins and Gremlin Saboteurs are the level 1 units of the Heroes V Academy (merged into the Tower). They can all attack at range. Master Gremlins also have {Mend} (repairs mechanical units or war machines, restoring 5 × number of gremlins Hit Points). Gremlin Saboteurs also have {Sabotage} (disables an enemy mechanical unit for 1 round; requires total Hit Points × 10 > the target's).\n\nThe Gremlin Saboteur's task is to wreck whatever it can, which makes it an extremely important unit on the battlefield. Golems, catapults or town fortifications: once it has its eye on them, their fate is sealed.\n\nSee also {Gremlin}, {Master Gremlin}.",
+		"faction": "tower",
+		"level": 1,
+		"cost": {
+			"gold": 50
+		},
+		"speed": 5,
+		"hitPoints": 5,
+		"attack": 10,
+		"defense": 4,
+		"damage": {
+			"min": 1,
+			"max": 2
+		},
+		"doubleWide": false,
+		"fightValue": 71,
+		"aiValue": 72,
+		"growth": 17,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"shooter": {
+				"type": "SHOOTER"
+			},
+			"cast_h5AbSabotage": {
+				"type": "SPELLCASTER",
+				"subtype": "h5AbSabotage",
+				"val": 2,
+				"description": "{Sabotage}\nDisables enemy machine 1\nround; needs HP x10 > foe"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 20,
+				"hidden": true
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 1,
+				"stacking": "h5Academy3rdGremlinSaboteurExpCasts"
+			},
+			"noSpellcastByDefault": {
+				"type": "NO_SPELLCAST_BY_DEFAULT",
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h5/Academy_3rd_GremlinSaboteur/battle.json",
+			"map": "h5/Academy_3rd_GremlinSaboteur/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Academy_3rd_GremlinSaboteur/map/atkL.png",
+			"mapAttackFromRight": "h5/Academy_3rd_GremlinSaboteur/map/atkR.png",
+			"iconLarge": "h5/Academy_3rd_GremlinSaboteur/iconLarge.png",
+			"iconSmall": "h5/Academy_3rd_GremlinSaboteur/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"frameAngles": [
+					90,
+					60,
+					45,
+					30,
+					0,
+					-30,
+					-45,
+					-60,
+					-90
+				],
+				"offset": {
+					"upperX": 17,
+					"upperY": -56,
+					"middleX": 14,
+					"middleY": -50,
+					"lowerX": -4,
+					"lowerY": -47
+				},
+				"attackClimaxFrame": 7,
+				"projectile": "h5/Academy_3rd_GremlinSaboteur/projectile.json"
+			}
+		},
+		"sound": {
+			"attack": "h5/h5_T1_Gremlin_Saboteur_attack00.ogg",
+			"wince": "h5/h5_T1_Gremlin_Saboteur_hit.ogg",
+			"defend": "h5/h5_T1_Gremlin_Saboteur_hit.ogg",
+			"killed": "h5/h5_T1_Gremlin_Saboteur_death.ogg",
+			"move": "h5/h5_T1_Gremlin_Saboteur_move.ogg",
+			"shoot": "h5/h5_T1_Gremlin_Saboteur_rangeattack.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_WALL_PENALTY",
+					"description": "{Siege Shooter}\nNo damage loss when shooting over walls"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "SPELL_BEFORE_ATTACK",
+					"subtype": "landMine",
+					"addInfo": [
+						2,
+						0
+					]
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_RETALIATION"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			}
+		],
+		"shots": 20
+	},
+	"h5Academy3rdMarbleGargoyle": {
+		"name": {
+			"singular": "Marble Gargoyle",
+			"plural": "Marble Gargoyles"
+		},
+		"description": "Stone Gargoyles, Obsidian Gargoyles and Marble Gargoyles are the level 2 units of the Heroes V Academy (merged into the Tower). They all fly and have {Elemental} (non-living, immune to Mind magic) and {Enrage} (Attack rises when a friendly stack is destroyed). Stone Gargoyles have {Lightning Immunity} (immune to Air magic). Obsidian Gargoyles also have {Lightning Immunity} (immune to Air magic), {Immune to Fire} (immune to Fire magic) and {Immune to Water} (immune to Water magic). Marble Gargoyles also have {Fire Vulnerability Aura} (it and adjacent stacks take +50% Fire magic damage), {Ice Vulnerability Aura} (it and adjacent stacks take +50% Water magic damage) and {Air Vulnerability Aura} (it and adjacent stacks take +50% Air magic damage).\n\nLong, long ago, ancient books described in detail the Marble Gargoyles made of golden marble. Refined by the Magic Brotherhood, this rare stone can draw on the elemental forces of nature. Everything around a Marble Gargoyle becomes especially vulnerable to fire, ice and lightning, friend and foe alike, and a mage who knows how to work with it can turn fire, ice and lightning into devastating weapons.\n\nSee also {Stone Gargoyle}, {Obsidian Gargoyle}.",
+		"faction": "tower",
+		"level": 2,
+		"cost": {
+			"gold": 130
+		},
+		"speed": 7,
+		"hitPoints": 23,
+		"attack": 4,
+		"defense": 10,
+		"damage": {
+			"min": 1,
+			"max": 2
+		},
+		"doubleWide": false,
+		"fightValue": 155,
+		"aiValue": 173,
+		"growth": 9,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"flying": {
+				"type": "FLYING"
+			},
+			"h5FireVulnAura": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "fire",
+				"val": -50,
+				"propagator": "BATTLE_WIDE",
+				"propagationUpdater": "BONUS_OWNER_UPDATER",
+				"limiters": [
+					{
+						"type": "UNIT_ADJACENT",
+						"creature": "h5Academy3rdMarbleGargoyle"
+					}
+				],
+				"stacking": "h5FireVulnAura",
+				"description": "{Fire Vulnerability Aura}\nSelf and adjacent stacks\ntake +50% Fire spell dmg"
+			},
+			"h5FireVulnAuraSelf": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "fire",
+				"val": -50,
+				"stacking": "h5FireVulnAura"
+			},
+			"h5IceVulnAura": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "water",
+				"val": -50,
+				"propagator": "BATTLE_WIDE",
+				"propagationUpdater": "BONUS_OWNER_UPDATER",
+				"limiters": [
+					{
+						"type": "UNIT_ADJACENT",
+						"creature": "h5Academy3rdMarbleGargoyle"
+					}
+				],
+				"stacking": "h5IceVulnAura",
+				"description": "{Ice Vulnerability Aura}\nSelf and adjacent stacks\ntake +50% Water spell dmg"
+			},
+			"h5IceVulnAuraSelf": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "water",
+				"val": -50,
+				"stacking": "h5IceVulnAura"
+			},
+			"h5AirVulnAura": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "air",
+				"val": -50,
+				"propagator": "BATTLE_WIDE",
+				"propagationUpdater": "BONUS_OWNER_UPDATER",
+				"limiters": [
+					{
+						"type": "UNIT_ADJACENT",
+						"creature": "h5Academy3rdMarbleGargoyle"
+					}
+				],
+				"stacking": "h5AirVulnAura",
+				"description": "{Air Vulnerability Aura}\nSelf and adjacent stacks\ntake +50% Air spell dmg"
+			},
+			"h5AirVulnAuraSelf": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "air",
+				"val": -50,
+				"stacking": "h5AirVulnAura"
+			},
+			"h5Enraged": {
+				"icon": "h5/abilities/enraged",
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5Enraged",
+				"description": "{Enrage}\nAttack rises whenever\nan allied stack dies"
+			},
+			"h5Elemental": {
+				"type": "H5_ELEMENTAL_H5C",
+				"val": 1,
+				"description": "{Elemental}\nNon-living\nImmune to Mind spells"
+			},
+			"nonLiving": {
+				"type": "NON_LIVING"
+			},
+			"mindImmunity": {
+				"type": "MIND_IMMUNITY"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 14,
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h5/Academy_3rd_MarbleGargoyle/battle.json",
+			"map": "h5/Academy_3rd_MarbleGargoyle/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Academy_3rd_MarbleGargoyle/map/atkL.png",
+			"mapAttackFromRight": "h5/Academy_3rd_MarbleGargoyle/map/atkR.png",
+			"iconLarge": "h5/Academy_3rd_MarbleGargoyle/iconLarge.png",
+			"iconSmall": "h5/Academy_3rd_MarbleGargoyle/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_Academy_T2_attack00.ogg",
+			"wince": "h5/h5_Academy_T2_hit.ogg",
+			"defend": "h5/h5_Academy_T2_hit.ogg",
+			"killed": "h5/h5_Academy_T2_death.ogg",
+			"move": "h5/h5_Academy_T2_move.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					3,
+					3,
+					3,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					3,
+					4,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					0,
+					1,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					3,
+					3,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "NEGATIVE_EFFECTS_IMMUNITY",
+					"subtype": "earth",
+					"description": "{Earth Ward}\nImmune to harmful Earth spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_RETALIATION"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE"
+				},
+				"values": [
+					3,
+					6,
+					9,
+					12,
+					15,
+					18,
+					21,
+					24,
+					27,
+					30
+				]
+			}
+		]
+	},
+	"h5Academy3rdObsidianGolem": {
+		"name": {
+			"singular": "Magnetic Golem",
+			"plural": "Magnetic Golems"
+		},
+		"description": "Iron Golems, Steel Golems and Magnetic Golems are the level 3 units of the Heroes V Academy (merged into the Tower). They all have {Mechanical} (mechanical creature, immune to Mind magic). Iron Golems have {Immune to Slow} (immune to Slow) and {50% Magic Proof} (-50% magic damage). Steel Golems also have {Unlimited Retaliation}, {Immune to Slow} (immune to Slow) and {75% Magic Proof} (-75% magic damage). Magnetic Golems also have {Enchanted Obsidian} (immune to non-damaging magic; damaging magic restores 50% of its damage as Hit Points) and {Magic Magnetism} (allies caught in area spells take less damage, and half of the reduction goes to healing).\n\nMagnetic Golems never fear mages. Apart from spells that deal damage directly, no magic has any effect on them, and when damaging spells hit them, half is converted into energy that repairs them. They can also draw area spells falling on nearby allies onto themselves, sharing the damage on their allies' behalf.\n\nSee also {Iron Golem}, {Steel Golem}.",
+		"faction": "tower",
+		"level": 3,
+		"cost": {
+			"gold": 240
+		},
+		"speed": 5,
+		"hitPoints": 22,
+		"attack": 9,
+		"defense": 6,
+		"damage": {
+			"min": 4,
+			"max": 6
+		},
+		"doubleWide": false,
+		"fightValue": 286,
+		"aiValue": 339,
+		"growth": 7,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"mechanical": {
+				"type": "MECHANICAL",
+				"description": "{Mechanical}\nMechanical creature\nImmune to Mind spells"
+			},
+			"mindImmunity": {
+				"type": "MIND_IMMUNITY"
+			},
+			"h5EnchantedObsidian": {
+				"icon": "h5/abilities/enchantedObsidian",
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5EnchantedObsidian",
+				"val": 50,
+				"description": "{Enchanted Obsidian}\nImmune to non-damage spells\nDamage spells heal 50%"
+			},
+			"h5MagicMagnetism": {
+				"icon": "h5/abilities/magicMagnetism",
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5MagicMagnetism",
+				"val": 5,
+				"description": "{Magic Magnetism}\nAllies in area spells take\nless; half of it heals"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 9,
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h5/Academy_3rd_ObsidianGolem/battle.json",
+			"map": "h5/Academy_3rd_ObsidianGolem/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Academy_3rd_ObsidianGolem/map/atkL.png",
+			"mapAttackFromRight": "h5/Academy_3rd_ObsidianGolem/map/atkR.png",
+			"iconLarge": "h5/Academy_3rd_ObsidianGolem/iconLarge.png",
+			"iconSmall": "h5/Academy_3rd_ObsidianGolem/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_Academy_T3_attack00.ogg",
+			"wince": "h5/h5_Academy_T3_hit.ogg",
+			"defend": "h5/h5_Academy_T3_hit.ogg",
+			"move": "h5/h5_Academy_T3_move.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "SPELL_DAMAGE_REDUCTION",
+					"subtype": "any"
+				},
+				"values": [
+					3,
+					6,
+					9,
+					12,
+					15,
+					18,
+					21,
+					24,
+					27,
+					30
+				]
+			},
+			{
+				"bonus": {
+					"type": "BLOCKS_RETALIATION",
+					"description": "{No Retaliation}\nEnemy cannot retaliate when attacked"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h5Academy3rdRakshasaKshatri": {
+		"name": {
+			"singular": "Rakshasa Kshatra",
+			"plural": "Rakshasa Kshatras"
+		},
+		"description": "Rakshasa Ranis, Rakshasa Rajas and Rakshasa Kshatras are the level 6 units of the Heroes V Academy (merged into the Tower). Rakshasa Ranis have {No Enemy Retaliation}. Rakshasa Rajas have {No Enemy Retaliation} and {Dash} (forgoes this action, then doubles its Speed for the next 3 rounds). Rakshasa Kshatras have {Whirlwind} (attacks the enemies directly ahead and diagonally ahead at once) and {Dash} (forgoes this action, then doubles its Speed for the next 3 rounds).\n\n“Spirits of Death”: this is the title people give the Academy's fearsome Rakshasa Kshatras. They are strong, agile, bloodthirsty and well equipped, and they make anyone who dares come near tremble. The Spirits of Death never leave survivors and slay without mercy whoever stands in their way.\n\nSee also {Rakshasa Rani}, {Rakshasa Raja}.",
+		"faction": "tower",
+		"level": 6,
+		"cost": {
+			"gold": 1145
+		},
+		"speed": 8,
+		"hitPoints": 104,
+		"attack": 20,
+		"defense": 13,
+		"damage": {
+			"min": 23,
+			"max": 33
+		},
+		"doubleWide": true,
+		"fightValue": 1726,
+		"aiValue": 2038,
+		"growth": 2,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"h5Whirlwind": {
+				"type": "MULTIHEX_ENEMY_ATTACK",
+				"addInfo": [
+					"L",
+					"R",
+					"LB",
+					"RB"
+				],
+				"description": "{Whirlwind}\nHits enemies in front\nand diagonally in front"
+			},
+			"cast_h5AbDash": {
+				"type": "SPELLCASTER",
+				"subtype": "h5AbDash",
+				"val": 2,
+				"description": "{Dash}\nSkips this action, then\ndouble Speed for 3 rounds"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 2,
+				"hidden": true
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 1
+			}
+		},
+		"graphics": {
+			"animation": "h5/Academy_3rd_RakshasaKshatri/battle.json",
+			"map": "h5/Academy_3rd_RakshasaKshatri/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Academy_3rd_RakshasaKshatri/map/atkL.png",
+			"mapAttackFromRight": "h5/Academy_3rd_RakshasaKshatri/map/atkR.png",
+			"iconLarge": "h5/Academy_3rd_RakshasaKshatri/iconLarge.png",
+			"iconSmall": "h5/Academy_3rd_RakshasaKshatri/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_Academy_T6_attack00.ogg",
+			"wince": "h5/h5_Academy_T6_hit.ogg",
+			"defend": "h5/h5_Academy_T6_hit.ogg",
+			"killed": "h5/h5_Academy_T6_death.ogg",
+			"move": "h5/h5_Academy_T6_move.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					2,
+					3,
+					4,
+					5,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "DOUBLE_DAMAGE_CHANCE"
+				},
+				"values": [
+					3,
+					6,
+					9,
+					12,
+					15,
+					18,
+					21,
+					24,
+					27,
+					30
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_RETALIATION"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "MIND_IMMUNITY",
+					"description": "{Steadfast Mind}\nImmune to Mind spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h5Academy3rdStormLord": {
+		"name": {
+			"singular": "Storm Lord",
+			"plural": "Storm Lords"
+		},
+		"description": "Giants, Titans and Storm Lords are the level 7 units of the Heroes V Academy (merged into Tower). All of them have {Mind Control Immunity} (immune to Mind magic). Titans can also shoot and have {No Melee Penalty} and {Call Lightning} (lightning damage = 30 × the number of Titans, Air, cannot be retaliated against). Storm Lords can also shoot and have {No Melee Penalty} and {Stormcaller} (summons a thundercloud for 3 rounds that deals damage every round and suppresses shooting).\n\nStorm Lords are born with power to rival the gods. A Storm Lord can summon a violent tempest that sweeps across the whole battlefield. Lightning pours endlessly from the heart of the storm, and the gale easily tears the bows from archers' hands; hapless enemies suddenly find themselves victims of the raging elements.\n\nSee also {Giant}, {Titan}.",
+		"faction": "tower",
+		"level": 7,
+		"cost": {
+			"gold": 3210,
+			"gems": 2
+		},
+		"speed": 9,
+		"hitPoints": 192,
+		"attack": 21,
+		"defense": 21,
+		"damage": {
+			"min": 35,
+			"max": 62
+		},
+		"doubleWide": true,
+		"fightValue": 4928,
+		"aiValue": 6420,
+		"growth": 1,
+		"advMapAmount": {
+			"min": 1,
+			"max": 3
+		},
+		"abilities": {
+			"shooter": {
+				"type": "SHOOTER"
+			},
+			"noMeleePenalty": {
+				"type": "NO_MELEE_PENALTY",
+				"description": "{No Melee Penalty}\nNo melee penalty"
+			},
+			"mindImmunity": {
+				"type": "MIND_IMMUNITY",
+				"description": "{Mind Control Immunity}\nImmune to Mind spells"
+			},
+			"cast_h5AbCallStorm": {
+				"type": "SPELLCASTER",
+				"subtype": "h5AbCallStorm",
+				"val": 2,
+				"description": "{Stormcaller}\nStorm cloud for 3 rounds\nDamage, weakens shots"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 1,
+				"hidden": true
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 1,
+				"stacking": "h5Academy3rdStormLordExpCasts"
+			},
+			"noSpellcastByDefault": {
+				"type": "NO_SPELLCAST_BY_DEFAULT",
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h5/Academy_3rd_StormLord/battle.json",
+			"map": "h5/Academy_3rd_StormLord/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Academy_3rd_StormLord/map/atkL.png",
+			"mapAttackFromRight": "h5/Academy_3rd_StormLord/map/atkR.png",
+			"iconLarge": "h5/Academy_3rd_StormLord/iconLarge.png",
+			"iconSmall": "h5/Academy_3rd_StormLord/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"frameAngles": [
+					90,
+					60,
+					45,
+					30,
+					0,
+					-30,
+					-45,
+					-60,
+					-90
+				],
+				"offset": {
+					"upperX": 62,
+					"upperY": -77,
+					"middleX": 80,
+					"middleY": -61,
+					"lowerX": 43,
+					"lowerY": -44
+				},
+				"attackClimaxFrame": 6,
+				"ray": [
+					{
+						"start": [
+							55,
+							107,
+							96,
+							160
+						],
+						"end": [
+							36,
+							71,
+							64,
+							60
+						]
+					},
+					{
+						"start": [
+							110,
+							214,
+							192,
+							255
+						],
+						"end": [
+							110,
+							214,
+							192,
+							120
+						]
+					},
+					{
+						"start": [
+							190,
+							255,
+							255,
+							255
+						],
+						"end": [
+							110,
+							214,
+							192,
+							200
+						]
+					},
+					{
+						"start": [
+							110,
+							214,
+							192,
+							255
+						],
+						"end": [
+							110,
+							214,
+							192,
+							120
+						]
+					},
+					{
+						"start": [
+							55,
+							107,
+							96,
+							160
+						],
+						"end": [
+							36,
+							71,
+							64,
+							60
+						]
+					}
+				]
+			}
+		},
+		"sound": {
+			"attack": "h5/h5_Academy_T7_attack00.ogg",
+			"wince": "h5/h5_Academy_T7_hit.ogg",
+			"defend": "h5/h5_Academy_T7_hit.ogg",
+			"killed": "h5/h5_Academy_T7_death.ogg",
+			"move": "h5/h5_Academy_T7_move.ogg",
+			"shoot": "h5/h5_Academy_T7_rangeattack.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE"
+				},
+				"values": [
+					4,
+					8,
+					12,
+					16,
+					20,
+					24,
+					28,
+					32,
+					36,
+					40
+				]
+			},
+			{
+				"bonus": {
+					"type": "NEGATIVE_EFFECTS_IMMUNITY",
+					"subtype": "air",
+					"description": "{Air Ward}\nImmune to harmful Air spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_WALL_PENALTY",
+					"description": "{Siege Shooter}\nNo damage loss when shooting over walls"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_DISTANCE_PENALTY",
+					"description": "{Sharpshooter}\nNo penalty for long-range shots"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_RETALIATION"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "SPELL_IMMUNITY",
+					"subtype": "slow",
+					"description": "{Immune to Slow}\nUnaffected by Slow"
+				},
+				"values": [
+					false,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			}
+		],
+		"shots": 14
+	},
+	"h5AcademyArchMagi": {
+		"name": {
+			"singular": "Archmage",
+			"plural": "Archmages"
+		},
+		"description": "Mages, Archmages and Combat Mages are the level 4 units of the Heroes V Academy (merged into Tower). All of them can shoot and cast {Fist of Wrath} and {Cleansing} (2 times per battle, 10 mana), and have {No Range Penalty} (no penalty for distance when shooting) and {Magic Strike} (every unit along the line of fire takes damage). Archmages also have {Energy Channel} (spells cast by the allied hero cost -2 mana). Combat Mages also have {Eldritch Aura} (adjacent allies take no damage when they are in the line of a Magic Strike).\n\nThe most powerful Mages can be promoted to Archmages and gain more spells. Once Archmages take the field, the hero commanding them gains more mana.\n\nSee also {Mage}, {Combat Mage}.",
+		"faction": "tower",
+		"level": 4,
+		"cost": {
+			"gold": 360
+		},
+		"speed": 5,
+		"hitPoints": 31,
+		"attack": 13,
+		"defense": 12,
+		"damage": {
+			"min": 6,
+			"max": 6
+		},
+		"doubleWide": false,
+		"fightValue": 484,
+		"aiValue": 554,
+		"growth": 4,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"shooter": {
+				"type": "SHOOTER"
+			},
+			"noDistancePenalty": {
+				"type": "NO_DISTANCE_PENALTY",
+				"description": "{No Range Penalty}\nNo ranged damage penalty"
+			},
+			"h5MagicAttack": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5MagicAttack",
+				"icon": "h5/abilities/h5MagicAttack",
+				"description": "{Magic Strike}\nDamages every stack\nalong the line of fire"
+			},
+			"h5EnergyChannel": {
+				"type": "CHANGES_SPELL_COST_FOR_ALLY",
+				"val": 2,
+				"description": "{Energy Channel}\nOwn hero's spells\ncost 2 less mana",
+				"stacking": "h5AcademyArchMagiExpChangesSpellCostForAlly"
+			},
+			"cast_h5AbMagicFist": {
+				"type": "SPELLCASTER",
+				"subtype": "h5AbMagicFist",
+				"val": 2
+			},
+			"cast_h5AbFireball": {
+				"type": "SPELLCASTER",
+				"subtype": "h5AbFireball",
+				"val": 1
+			},
+			"cast_h5AbBloodlust": {
+				"type": "SPELLCASTER",
+				"subtype": "h5AbBloodlust",
+				"val": 2
+			},
+			"cast_h5AbDispel": {
+				"type": "SPELLCASTER",
+				"subtype": "h5AbDispel",
+				"val": 3
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 5,
+				"hidden": true
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 5
+			},
+			"h5Mana": {
+				"type": "H5_MANA_H5C",
+				"val": 25
+			},
+			"h5ManaMin": {
+				"type": "H5_MANA_MIN_H5C",
+				"val": 5,
+				"hidden": true
+			},
+			"h5ManaPool": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5ManaPool",
+				"hidden": true,
+				"description": "~"
+			},
+			"noSpellcastByDefault": {
+				"type": "NO_SPELLCAST_BY_DEFAULT",
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h5/Academy_Arch_Magi/battle.json",
+			"map": "h5/Academy_Arch_Magi/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Academy_Arch_Magi/map/atkL.png",
+			"mapAttackFromRight": "h5/Academy_Arch_Magi/map/atkR.png",
+			"iconLarge": "h5/Academy_Arch_Magi/iconLarge.png",
+			"iconSmall": "h5/Academy_Arch_Magi/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"frameAngles": [
+					90,
+					60,
+					45,
+					30,
+					0,
+					-30,
+					-45,
+					-60,
+					-90
+				],
+				"offset": {
+					"upperX": 41,
+					"upperY": -80,
+					"middleX": 48,
+					"middleY": -65,
+					"lowerX": 7,
+					"lowerY": -53
+				},
+				"attackClimaxFrame": 7,
+				"projectile": "h5/Academy_Arch_Magi/projectile.json"
+			}
+		},
+		"sound": {
+			"attack": "h5/h5_ArchMagiAttack.ogg",
+			"wince": "h5/h5_ArchMagi_hit.ogg",
+			"defend": "h5/h5_ArchMagi_hit.ogg",
+			"killed": "h5/h5_ArchMagiDeath.ogg",
+			"move": "h5/h5_ArchMagiMove.ogg",
+			"shoot": "h5/h5_ArchMagi_rangeattack.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					5,
+					6,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "CHANGES_SPELL_COST_FOR_ALLY",
+					"stacking": "h5AcademyArchMagiExpChangesSpellCostForAlly"
+				},
+				"values": [
+					2,
+					2,
+					2,
+					2,
+					3,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_WALL_PENALTY",
+					"description": "{Siege Shooter}\nNo damage loss when shooting over walls"
+				},
+				"values": [
+					false,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE"
+				},
+				"values": [
+					3,
+					6,
+					9,
+					12,
+					15,
+					18,
+					21,
+					24,
+					27,
+					30
+				]
+			}
+		],
+		"shots": 11
+	},
+	"h5AcademyGenie": {
+		"name": {
+			"singular": "Djinn",
+			"plural": "Djinn"
+		},
+		"description": "Djinn, Djinn Sultans and Djinn Viziers are the level 5 units of the Heroes V Academy (merged into Tower). All of them can fly. Djinn have {25% Magic Proof} (-25% magic damage) and {Random Hex} (casts a random Dark curse on an enemy, 3 times per battle). Djinn Sultans also have {50% Magic Proof} (-50% magic damage) and {Random Blessing} (casts a random curse on an enemy or a random blessing on an ally, 3 times per battle). Djinn Viziers also have {75% Magic Proof} (-75% magic damage), {Lightning Immunity} (immune to Air magic) and {Luck Gambler} (Luck +1–3 for an ally or -1–3 for an enemy, 3 times per battle).\n\nDjinn are ancient elemental spirits that Mages can summon and bind to themselves. Once bound, a Djinn can never break free; it serves and protects its master faithfully until its essence is spent. On the battlefield Djinn are a highly effective fighting force, but because of their chaotic and unpredictable nature no one can guess which spell they will use against the enemy. One thing is certain, though: they will never harm their own side. Nor are Djinn limited to casting spells in battle, for their heavy scimitars are deadly as well.\n\nSee also {Djinn Sultan}, {Djinn Vizier}.",
+		"faction": "tower",
+		"level": 5,
+		"cost": {
+			"gold": 360
+		},
+		"speed": 7,
+		"hitPoints": 30,
+		"attack": 9,
+		"defense": 9,
+		"damage": {
+			"min": 11,
+			"max": 13
+		},
+		"doubleWide": true,
+		"fightValue": 522,
+		"aiValue": 581,
+		"growth": 3,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"flying": {
+				"type": "FLYING"
+			},
+			"h5MagicProof": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "any",
+				"val": 25,
+				"description": "{25% Magic Proof}\nSpell damage -25%"
+			},
+			"cast_h5AbRandomCastDark": {
+				"type": "SPELLCASTER",
+				"subtype": "h5AbRandomCastDark",
+				"val": 2,
+				"description": "{Random Hex}\nRandom Dark curse on a\nfoe, 3 times per battle"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 3,
+				"hidden": true
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 1,
+				"stacking": "h5AcademyGenieExpCasts"
+			}
+		},
+		"graphics": {
+			"animation": "h5/Academy_Genie/battle.json",
+			"map": "h5/Academy_Genie/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Academy_Genie/map/atkL.png",
+			"mapAttackFromRight": "h5/Academy_Genie/map/atkR.png",
+			"iconLarge": "h5/Academy_Genie/iconLarge.png",
+			"iconSmall": "h5/Academy_Genie/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_GinieAttack.ogg",
+			"wince": "h5/h5_GinieHit.ogg",
+			"defend": "h5/h5_GinieHit.ogg",
+			"killed": "h5/h5_GinieDeath.ogg",
+			"move": "h5/h5_GinieMove.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					3,
+					4,
+					5,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					3,
+					4,
+					4,
+					6,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					2,
+					3,
+					3,
+					4,
+					5,
+					6,
+					6,
+					7
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					7
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "CASTS",
+					"stacking": "h5AcademyGenieExpCasts"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "SPELL_IMMUNITY",
+					"subtype": "blind",
+					"description": "{Immune to Blind}\nUnaffected by Blind"
+				},
+				"values": [
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE"
+				},
+				"values": [
+					3,
+					6,
+					9,
+					12,
+					15,
+					18,
+					21,
+					24,
+					27,
+					30
+				]
+			}
+		],
+		"upgrades": [
+			"h5AcademyMasterGenie",
+			"h5Academy3rdDjinnVizier"
+		]
+	},
+	"h5AcademyGiant": {
+		"name": {
+			"singular": "Giant",
+			"plural": "Giants"
+		},
+		"description": "Giants, Titans and Storm Lords are the level 7 units of the Heroes V Academy (merged into Tower). All of them have {Mind Control Immunity} (immune to Mind magic). Titans can also shoot and have {No Melee Penalty} and {Call Lightning} (lightning damage = 30 × the number of Titans, Air, cannot be retaliated against). Storm Lords can also shoot and have {No Melee Penalty} and {Stormcaller} (summons a thundercloud for 3 rounds that deals damage every round and suppresses shooting).\n\nOf all the creatures that Mages build or summon, Giants are the mightiest. They are made on the same principle as Gremlins, but on a far greater scale. Each Giant is fused with the soul of its maker, which gives it an unshakable will and ensures its absolute loyalty to the Mage, so Giants are immune to Mind Control magic. Rather than wield weapons, they prefer to swing their huge arms, using all manner of close-combat techniques to deal their enemies crushing blows.\n\nSee also {Titan}, {Storm Lord}.",
+		"faction": "tower",
+		"level": 7,
+		"cost": {
+			"gold": 2625,
+			"gems": 1
+		},
+		"speed": 9,
+		"hitPoints": 177,
+		"attack": 19,
+		"defense": 19,
+		"damage": {
+			"min": 35,
+			"max": 62
+		},
+		"doubleWide": true,
+		"fightValue": 3899,
+		"aiValue": 5079,
+		"growth": 1,
+		"advMapAmount": {
+			"min": 1,
+			"max": 3
+		},
+		"abilities": {
+			"mindImmunity": {
+				"type": "MIND_IMMUNITY",
+				"description": "{Mind Control Immunity}\nImmune to Mind spells"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 1,
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h5/Academy_Giant/battle.json",
+			"map": "h5/Academy_Giant/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Academy_Giant/map/atkL.png",
+			"mapAttackFromRight": "h5/Academy_Giant/map/atkR.png",
+			"iconLarge": "h5/Academy_Giant/iconLarge.png",
+			"iconSmall": "h5/Academy_Giant/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_GiantAttack.ogg",
+			"wince": "h5/h5_GiantHit.ogg",
+			"defend": "h5/h5_GiantHit.ogg",
+			"killed": "h5/h5_GiantDeath.ogg",
+			"move": "h5/h5_GiantMove.ogg",
+			"shoot": "h5/h5_GiantRangeAttack.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					10,
+					20,
+					30,
+					40,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "NEGATIVE_EFFECTS_IMMUNITY",
+					"subtype": "air",
+					"description": "{Air Ward}\nImmune to harmful Air spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_ATTACK"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "SPELL_IMMUNITY",
+					"subtype": "blind",
+					"description": "{Immune to Blind}\nUnaffected by Blind"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "NEGATIVE_EFFECTS_IMMUNITY",
+					"subtype": "earth",
+					"description": "{Earth Ward}\nImmune to harmful Earth spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "SPELL_IMMUNITY",
+					"subtype": "slow",
+					"description": "{Immune to Slow}\nUnaffected by Slow"
+				},
+				"values": [
+					false,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			}
+		],
+		"upgrades": [
+			"h5AcademyTitan",
+			"h5Academy3rdStormLord"
+		]
+	},
+	"h5AcademyGremlin": {
+		"name": {
+			"singular": "Gremlin",
+			"plural": "Gremlins"
+		},
+		"description": "Gremlins, Master Gremlins and Gremlin Saboteurs are the level 1 units of the Heroes V Academy (merged into Tower). All of them can shoot. Master Gremlins also have {Mend} (repairs a mechanical unit or war machine, restoring 5 × the number of Gremlins in Hit Points). Gremlin Saboteurs also have {Sabotage} (disables an enemy mechanical unit for 1 round; the stack's total Hit Points × 10 must exceed the target's).\n\nGremlins are in fact the product of magical experiments on captured garden sprites, though they are cleverer and more docile than garden sprites. They are the most basic unit of a Mage's army and are usually adept at striking the enemy from range with their fire-bomb launchers. Because these launchers are very sturdy, Gremlins also use them as metal clubs in hand-to-hand combat.\n\nSee also {Master Gremlin}, {Gremlin Saboteur}.",
+		"faction": "tower",
+		"level": 1,
+		"cost": {
+			"gold": 30
+		},
+		"speed": 4,
+		"hitPoints": 4,
+		"attack": 4,
+		"defense": 3,
+		"damage": {
+			"min": 1,
+			"max": 2
+		},
+		"doubleWide": false,
+		"fightValue": 43,
+		"aiValue": 43,
+		"growth": 17,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"shooter": {
+				"type": "SHOOTER"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 20,
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h5/Academy_Gremlin/battle.json",
+			"map": "h5/Academy_Gremlin/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Academy_Gremlin/map/atkL.png",
+			"mapAttackFromRight": "h5/Academy_Gremlin/map/atkR.png",
+			"iconLarge": "h5/Academy_Gremlin/iconLarge.png",
+			"iconSmall": "h5/Academy_Gremlin/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"frameAngles": [
+					90,
+					60,
+					45,
+					30,
+					0,
+					-30,
+					-45,
+					-60,
+					-90
+				],
+				"offset": {
+					"upperX": 18,
+					"upperY": -58,
+					"middleX": 14,
+					"middleY": -52,
+					"lowerX": -6,
+					"lowerY": -48
+				},
+				"attackClimaxFrame": 7,
+				"projectile": "h5/Academy_Gremlin/projectile.json"
+			}
+		},
+		"sound": {
+			"attack": "h5/h5_GremlinAttack00.ogg",
+			"wince": "h5/h5_GremlinHit.ogg",
+			"defend": "h5/h5_GremlinHit.ogg",
+			"killed": "h5/h5_GremlinDeath.ogg",
+			"move": "h5/h5_GremlinMove.ogg",
+			"shoot": "h5/h5_GremlinRangeAttack.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "SHOTS"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_WALL_PENALTY",
+					"description": "{Siege Shooter}\nNo damage loss when shooting over walls"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "ENEMY_DEFENCE_REDUCTION"
+				},
+				"values": [
+					2,
+					4,
+					6,
+					8,
+					10,
+					12,
+					14,
+					16,
+					18,
+					20
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE"
+				},
+				"values": [
+					2,
+					4,
+					6,
+					8,
+					10,
+					12,
+					14,
+					16,
+					18,
+					20
+				]
+			}
+		],
+		"shots": 14,
+		"upgrades": [
+			"h5AcademyMasterGremlin",
+			"h5Academy3rdGremlinSaboteur"
+		]
+	},
+	"h5AcademyIronGolem": {
+		"name": {
+			"singular": "Iron Golem",
+			"plural": "Iron Golems"
+		},
+		"description": "Iron Golems, Steel Golems and Magnetic Golems are the level 3 units of the Heroes V Academy (merged into Tower). All of them are {Mechanical} (mechanical creatures, immune to Mind magic). Iron Golems have {Immune to Slow} (immune to the Slow spell) and {50% Magic Proof} (-50% magic damage). Steel Golems also have {Unlimited Retaliation}, {Immune to Slow} (immune to the Slow spell) and {75% Magic Proof} (-75% magic damage). Magnetic Golems also have {Enchanted Obsidian} (immune to non-damaging spells; damaging spells restore 50% as Hit Points) and {Magic Magnetism} (reduces the damage allies take from area spells and uses half of the reduction to heal).\n\nGolems are mechanical soldiers of ancient magic and were once the main battle units of the Silver Cities. Each wields 2 long scimitars, and its body is its armor. Golems are unaffected by Slow-type spells and are highly resistant to magic (all magic damage is halved).\n\nSee also {Steel Golem}, {Magnetic Golem}.",
+		"faction": "tower",
+		"level": 3,
+		"cost": {
+			"gold": 160
+		},
+		"speed": 3,
+		"hitPoints": 20,
+		"attack": 8,
+		"defense": 7,
+		"damage": {
+			"min": 3,
+			"max": 4
+		},
+		"doubleWide": false,
+		"fightValue": 196,
+		"aiValue": 232,
+		"growth": 7,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"mechanical": {
+				"type": "MECHANICAL",
+				"description": "{Mechanical}\nMechanical creature\nImmune to Mind spells"
+			},
+			"mindImmunity": {
+				"type": "MIND_IMMUNITY"
+			},
+			"immune_slow": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "slow",
+				"description": "{Immune to Slow}\nImmune to Slow"
+			},
+			"immune_h5Slow": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "h5Slow",
+				"hidden": true
+			},
+			"immune_h5AbSlow": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "h5AbSlow",
+				"hidden": true
+			},
+			"h5MagicProof": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "any",
+				"val": 50,
+				"description": "{50% Magic Proof}\nSpell damage -50%",
+				"stacking": "h5AcademyIronGolemExpSpellDamageReduction"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 9,
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h5/Academy_Iron_Golem/battle.json",
+			"map": "h5/Academy_Iron_Golem/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Academy_Iron_Golem/map/atkL.png",
+			"mapAttackFromRight": "h5/Academy_Iron_Golem/map/atkR.png",
+			"iconLarge": "h5/Academy_Iron_Golem/iconLarge.png",
+			"iconSmall": "h5/Academy_Iron_Golem/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_SteelGolem_attack.ogg",
+			"wince": "h5/h5_SteelGolem_hit.ogg",
+			"defend": "h5/h5_SteelGolem_hit.ogg",
+			"move": "h5/h5_SteelGolemMove.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "SPELL_DAMAGE_REDUCTION",
+					"stacking": "h5AcademyIronGolemExpSpellDamageReduction",
+					"subtype": "any"
+				},
+				"values": [
+					50,
+					52,
+					54,
+					56,
+					58,
+					60,
+					62,
+					64,
+					66,
+					70
+				]
+			},
+			{
+				"bonus": {
+					"type": "BLOCKS_RETALIATION",
+					"description": "{No Retaliation}\nEnemy cannot retaliate when attacked"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			}
+		],
+		"upgrades": [
+			"h5AcademySteelGolem",
+			"h5Academy3rdObsidianGolem"
+		]
+	},
+	"h5AcademyMagi": {
+		"name": {
+			"singular": "Mage",
+			"plural": "Mages"
+		},
+		"description": "Mages, Archmages and Combat Mages are the level 4 units of the Heroes V Academy (merged into Tower). All of them can shoot and cast {Fist of Wrath} and {Cleansing} (2 times per battle, 10 mana), and have {No Range Penalty} (no penalty for distance when shooting) and {Magic Strike} (every unit along the line of fire takes damage). Archmages also have {Energy Channel} (spells cast by the allied hero cost -2 mana). Combat Mages also have {Eldritch Aura} (adjacent allies take no damage when they are in the line of a Magic Strike).\n\nSome of the Mages of the Silver Cities serve in the army. Armed only with a dagger and far from skilled at fighting, they are very weak in close combat. Compared with the powerful magic they command, however, these shortcomings can be all but ignored. Mages carry scrolls that grant them additional spells.\n\nSee also {Archmage}, {Combat Mage}.",
+		"faction": "tower",
+		"level": 4,
+		"cost": {
+			"gold": 265
+		},
+		"speed": 5,
+		"hitPoints": 19,
+		"attack": 13,
+		"defense": 12,
+		"damage": {
+			"min": 6,
+			"max": 6
+		},
+		"doubleWide": false,
+		"fightValue": 375,
+		"aiValue": 429,
+		"growth": 4,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"shooter": {
+				"type": "SHOOTER"
+			},
+			"noDistancePenalty": {
+				"type": "NO_DISTANCE_PENALTY",
+				"description": "{No Range Penalty}\nNo ranged damage penalty"
+			},
+			"h5MagicAttack": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5MagicAttack",
+				"icon": "h5/abilities/h5MagicAttack",
+				"description": "{Magic Strike}\nDamages every stack\nalong the line of fire"
+			},
+			"cast_h5AbMagicFist": {
+				"type": "SPELLCASTER",
+				"subtype": "h5AbMagicFist",
+				"val": 1
+			},
+			"cast_h5AbDispel": {
+				"type": "SPELLCASTER",
+				"subtype": "h5AbDispel",
+				"val": 2
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 5,
+				"hidden": true
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 2
+			},
+			"h5Mana": {
+				"type": "H5_MANA_H5C",
+				"val": 10,
+				"stacking": "h5AcademyMagiExpH5ManaH5c"
+			},
+			"h5ManaMin": {
+				"type": "H5_MANA_MIN_H5C",
+				"val": 5,
+				"hidden": true
+			},
+			"h5ManaPool": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5ManaPool",
+				"hidden": true,
+				"description": "~"
+			},
+			"noSpellcastByDefault": {
+				"type": "NO_SPELLCAST_BY_DEFAULT",
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h5/Academy_Magi/battle.json",
+			"map": "h5/Academy_Magi/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Academy_Magi/map/atkL.png",
+			"mapAttackFromRight": "h5/Academy_Magi/map/atkR.png",
+			"iconLarge": "h5/Academy_Magi/iconLarge.png",
+			"iconSmall": "h5/Academy_Magi/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"frameAngles": [
+					90,
+					60,
+					45,
+					30,
+					0,
+					-30,
+					-45,
+					-60,
+					-90
+				],
+				"offset": {
+					"upperX": 41,
+					"upperY": -79,
+					"middleX": 48,
+					"middleY": -64,
+					"lowerX": 8,
+					"lowerY": -53
+				},
+				"attackClimaxFrame": 7,
+				"projectile": "h5/Academy_Magi/projectile.json"
+			}
+		},
+		"sound": {
+			"attack": "h5/h5_MagieAttack.ogg",
+			"wince": "h5/h5_MagieHit.ogg",
+			"defend": "h5/h5_MagieHit.ogg",
+			"killed": "h5/h5_MagieDeath.ogg",
+			"move": "h5/h5_MagieMove.ogg",
+			"shoot": "h5/h5_MagieRangeAttack.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					5,
+					6,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "H5_MANA_H5C",
+					"stacking": "h5AcademyMagiExpH5ManaH5c"
+				},
+				"values": [
+					10,
+					10,
+					10,
+					10,
+					15,
+					15,
+					15,
+					15,
+					20,
+					20
+				]
+			},
+			{
+				"bonus": {
+					"type": "CHANGES_SPELL_COST_FOR_ALLY"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					2,
+					3,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE"
+				},
+				"values": [
+					3,
+					6,
+					9,
+					12,
+					15,
+					18,
+					21,
+					24,
+					27,
+					30
+				]
+			}
+		],
+		"shots": 8,
+		"upgrades": [
+			"h5AcademyArchMagi",
+			"h5Academy3rdCombatMage"
+		]
+	},
+	"h5AcademyMasterGenie": {
+		"name": {
+			"singular": "Djinn Sultan",
+			"plural": "Djinn Sultans"
+		},
+		"description": "Djinn, Djinn Sultans and Djinn Viziers are the level 5 units of the Heroes V Academy (merged into Tower). All of them can fly. Djinn have {25% Magic Proof} (-25% magic damage) and {Random Hex} (casts a random Dark curse on an enemy, 3 times per battle). Djinn Sultans also have {50% Magic Proof} (-50% magic damage) and {Random Blessing} (casts a random curse on an enemy or a random blessing on an ally, 3 times per battle). Djinn Viziers also have {75% Magic Proof} (-75% magic damage), {Lightning Immunity} (immune to Air magic) and {Luck Gambler} (Luck +1–3 for an ally or -1–3 for an enemy, 3 times per battle).\n\nDjinn Sultans can not only cast damaging spells on enemies but also bestow beneficial spells on allies. As with ordinary Djinn, however, which spell they cast is unpredictable.\n\nSee also {Djinn}, {Djinn Vizier}.",
+		"faction": "tower",
+		"level": 5,
+		"cost": {
+			"gold": 490
+		},
+		"speed": 7,
+		"hitPoints": 33,
+		"attack": 12,
+		"defense": 12,
+		"damage": {
+			"min": 13,
+			"max": 18
+		},
+		"doubleWide": true,
+		"fightValue": 701,
+		"aiValue": 780,
+		"growth": 3,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"flying": {
+				"type": "FLYING"
+			},
+			"h5MagicProof": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "any",
+				"val": 50,
+				"description": "{50% Magic Proof}\nSpell damage -50%"
+			},
+			"cast_h5AbRandomCastDarkLight": {
+				"type": "SPELLCASTER",
+				"subtype": "h5AbRandomCastDarkLight",
+				"val": 2,
+				"description": "{Random Blessing}\nRandom curse on foe or\nblessing on ally, 3/battle"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 3,
+				"hidden": true
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 1,
+				"stacking": "h5AcademyMasterGenieExpCasts"
+			}
+		},
+		"graphics": {
+			"animation": "h5/Academy_Master_Genie/battle.json",
+			"map": "h5/Academy_Master_Genie/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Academy_Master_Genie/map/atkL.png",
+			"mapAttackFromRight": "h5/Academy_Master_Genie/map/atkR.png",
+			"iconLarge": "h5/Academy_Master_Genie/iconLarge.png",
+			"iconSmall": "h5/Academy_Master_Genie/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_MasterGenieAttack00.ogg",
+			"wince": "h5/h5_MasterGenieHit.ogg",
+			"defend": "h5/h5_MasterGenieHit.ogg",
+			"killed": "h5/h5_MasterGenieDeath.ogg",
+			"move": "h5/h5_MasterGenieMove.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					3,
+					4,
+					5,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					3,
+					4,
+					4,
+					6,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					2,
+					3,
+					3,
+					4,
+					5,
+					6,
+					6,
+					7
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					7
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "CASTS",
+					"stacking": "h5AcademyMasterGenieExpCasts"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "SPELL_IMMUNITY",
+					"subtype": "blind",
+					"description": "{Immune to Blind}\nUnaffected by Blind"
+				},
+				"values": [
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "SPELL_IMMUNITY",
+					"subtype": "hypnotize",
+					"description": "{Immune to Sleep}\nUnaffected by Sleep"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "MIND_IMMUNITY",
+					"description": "{Steadfast Mind}\nImmune to Mind spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h5AcademyMasterGremlin": {
+		"name": {
+			"singular": "Master Gremlin",
+			"plural": "Master Gremlins"
+		},
+		"description": "Gremlins, Master Gremlins and Gremlin Saboteurs are the level 1 units of the Heroes V Academy (merged into Tower). All of them can shoot. Master Gremlins also have {Mend} (repairs a mechanical unit or war machine, restoring 5 × the number of Gremlins in Hit Points). Gremlin Saboteurs also have {Sabotage} (disables an enemy mechanical unit for 1 round; the stack's total Hit Points × 10 must exceed the target's).\n\nGremlins that distinguish themselves in battle can be promoted to Master Gremlins. They are able to repair all kinds of mechanical devices (Catapults, Golems and so on).\n\nSee also {Gremlin}, {Gremlin Saboteur}.",
+		"faction": "tower",
+		"level": 1,
+		"cost": {
+			"gold": 50
+		},
+		"speed": 5,
+		"hitPoints": 5,
+		"attack": 4,
+		"defense": 3,
+		"damage": {
+			"min": 1,
+			"max": 2
+		},
+		"doubleWide": false,
+		"fightValue": 71,
+		"aiValue": 72,
+		"growth": 17,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"shooter": {
+				"type": "SHOOTER"
+			},
+			"cast_h5AbRepair": {
+				"type": "SPELLCASTER",
+				"subtype": "h5AbRepair",
+				"val": 2,
+				"description": "{Mend}\nRepairs a machine, heals\n5 HP x Gremlin count"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 20,
+				"hidden": true
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 1
+			},
+			"noSpellcastByDefault": {
+				"type": "NO_SPELLCAST_BY_DEFAULT",
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h5/Academy_Master_Gremlin/battle.json",
+			"map": "h5/Academy_Master_Gremlin/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Academy_Master_Gremlin/map/atkL.png",
+			"mapAttackFromRight": "h5/Academy_Master_Gremlin/map/atkR.png",
+			"iconLarge": "h5/Academy_Master_Gremlin/iconLarge.png",
+			"iconSmall": "h5/Academy_Master_Gremlin/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"frameAngles": [
+					90,
+					60,
+					45,
+					30,
+					0,
+					-30,
+					-45,
+					-60,
+					-90
+				],
+				"offset": {
+					"upperX": 13,
+					"upperY": -56,
+					"middleX": 7,
+					"middleY": -52,
+					"lowerX": -12,
+					"lowerY": -52
+				},
+				"attackClimaxFrame": 7,
+				"projectile": "h5/Academy_Master_Gremlin/projectile.json"
+			}
+		},
+		"sound": {
+			"attack": "h5/h5_MasterGremlinAttack00.ogg",
+			"wince": "h5/h5_MasterGremlinHit.ogg",
+			"defend": "h5/h5_MasterGremlinHit.ogg",
+			"killed": "h5/h5_MasterGremlinDeath.ogg",
+			"move": "h5/h5_MasterGremlinmove.ogg",
+			"shoot": "h5/h5_MasterGremlinRangeAttack.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "SHOTS"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_WALL_PENALTY",
+					"description": "{Siege Shooter}\nNo damage loss when shooting over walls"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "SPELL_BEFORE_ATTACK",
+					"subtype": "landMine",
+					"addInfo": [
+						2,
+						0
+					]
+				},
+				"values": [
+					3,
+					6,
+					9,
+					12,
+					15,
+					18,
+					21,
+					24,
+					27,
+					30
+				]
+			},
+			{
+				"bonus": {
+					"type": "ENEMY_DEFENCE_REDUCTION"
+				},
+				"values": [
+					2,
+					4,
+					6,
+					8,
+					10,
+					12,
+					14,
+					16,
+					18,
+					20
+				]
+			}
+		],
+		"shots": 20
+	},
+	"h5AcademyObsidianGargoyle": {
+		"name": {
+			"singular": "Obsidian Gargoyle",
+			"plural": "Obsidian Gargoyles"
+		},
+		"description": "Stone Gargoyles, Obsidian Gargoyles and Marble Gargoyles are the level 2 units of the Heroes V Academy (merged into Tower). All of them can fly and have {Elemental} (non-living, immune to Mind magic) and {Enrage} (Attack increases when an allied stack is destroyed). Stone Gargoyles have {Lightning Immunity} (immune to Air magic). Obsidian Gargoyles also have {Lightning Immunity} (immune to Air magic), {Immune to Fire} (immune to Fire magic) and {Immune to Water} (immune to Water magic). Marble Gargoyles also have {Fire Vulnerability Aura} (it and adjacent units take +50% damage from Fire magic), {Ice Vulnerability Aura} (it and adjacent units take +50% damage from Water magic) and {Air Vulnerability Aura} (it and adjacent units take +50% damage from Air magic).\n\nObsidian Gargoyles are rarer and more expensive. Their advantage is that their bodies are made of hard-wearing material, which makes them highly resistant to blows. Fire, Ice and Lightning spells have no effect on them.\n\nSee also {Stone Gargoyle}, {Marble Gargoyle}.",
+		"faction": "tower",
+		"level": 2,
+		"cost": {
+			"gold": 130
+		},
+		"speed": 7,
+		"hitPoints": 23,
+		"attack": 5,
+		"defense": 9,
+		"damage": {
+			"min": 1,
+			"max": 2
+		},
+		"doubleWide": false,
+		"fightValue": 148,
+		"aiValue": 166,
+		"growth": 9,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"flying": {
+				"type": "FLYING"
+			},
+			"h5Elemental": {
+				"type": "H5_ELEMENTAL_H5C",
+				"val": 1,
+				"description": "{Elemental}\nNon-living\nImmune to Mind spells"
+			},
+			"nonLiving": {
+				"type": "NON_LIVING"
+			},
+			"mindImmunity": {
+				"type": "MIND_IMMUNITY"
+			},
+			"h5Enraged": {
+				"icon": "h5/abilities/enraged",
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5Enraged",
+				"description": "{Enrage}\nAttack rises whenever\nan allied stack dies"
+			},
+			"immuneToair": {
+				"type": "SPELL_SCHOOL_IMMUNITY",
+				"subtype": "air",
+				"description": "{Lightning Immunity}\nImmune to Air spells"
+			},
+			"immuneTofire": {
+				"type": "SPELL_SCHOOL_IMMUNITY",
+				"subtype": "fire",
+				"description": "{Immune to Fire}\nImmune to Fire spells"
+			},
+			"immuneTowater": {
+				"type": "SPELL_SCHOOL_IMMUNITY",
+				"subtype": "water",
+				"description": "{Immune to Water}\nImmune to Water spells"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 14,
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h5/Academy_Obsidian_Gargoyle/battle.json",
+			"map": "h5/Academy_Obsidian_Gargoyle/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Academy_Obsidian_Gargoyle/map/atkL.png",
+			"mapAttackFromRight": "h5/Academy_Obsidian_Gargoyle/map/atkR.png",
+			"iconLarge": "h5/Academy_Obsidian_Gargoyle/iconLarge.png",
+			"iconSmall": "h5/Academy_Obsidian_Gargoyle/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_ObsidianGargoyle_attack.ogg",
+			"wince": "h5/h5_ObsidianGargoyle_hit.ogg",
+			"defend": "h5/h5_ObsidianGargoyle_hit.ogg",
+			"killed": "h5/h5_ObsidianGorguleDeath.ogg",
+			"move": "h5/h5_ObsidianGorguleMove.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					3,
+					3,
+					3,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					3,
+					4,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					0,
+					1,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					3,
+					3,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "NEGATIVE_EFFECTS_IMMUNITY",
+					"subtype": "earth",
+					"description": "{Earth Ward}\nImmune to harmful Earth spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "DEFENSIVE_STANCE",
+					"valueType": "ADDITIVE_VALUE"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					3,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "GENERAL_DAMAGE_REDUCTION",
+					"subtype": "damageTypeMelee"
+				},
+				"values": [
+					2,
+					4,
+					6,
+					8,
+					10,
+					12,
+					14,
+					16,
+					18,
+					20
+				]
+			}
+		]
+	},
+	"h5AcademyRakshasa": {
+		"name": {
+			"singular": "Rakshasa Rani",
+			"plural": "Rakshasa Ranis"
+		},
+		"description": "Rakshasa Ranis, Rakshasa Rajas and Rakshasa Kshatras are the level 6 units of the Heroes V Academy (merged into Tower). Rakshasa Ranis have {No Enemy Retaliation}. Rakshasa Rajas have {No Enemy Retaliation} and {Dash} (gives up the current action to double Speed for the next 3 rounds). Rakshasa Kshatras have {Whirlwind} (attacks the enemies directly ahead and diagonally ahead at the same time) and {Dash} (gives up the current action to double Speed for the next 3 rounds).\n\nRakshasa Ranis are vengeful spirits from a forgotten age that have wandered the fringes of Ashan for thousands of years. Some wandering mages and warlocks rediscovered these creatures, consumed by their thirst for revenge, and after many trials and failures finally mastered the means of summoning and controlling them. Rakshasa Ranis are an impressive force on the battlefield, and their lion-headed, many-armed bodies often send a chill through their foes. So intimidating are their attacks that enemies cannot retaliate against them.\n\nSee also {Rakshasa Raja}, {Rakshasa Kshatra}.",
+		"faction": "tower",
+		"level": 6,
+		"cost": {
+			"gold": 940
+		},
+		"speed": 7,
+		"hitPoints": 92,
+		"attack": 18,
+		"defense": 13,
+		"damage": {
+			"min": 14,
+			"max": 21
+		},
+		"doubleWide": true,
+		"fightValue": 1410,
+		"aiValue": 1665,
+		"growth": 2,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"blockRetaliation": {
+				"type": "BLOCKS_RETALIATION",
+				"description": "{No Enemy Retaliation}\nNo enemy retaliation"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 2,
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h5/Academy_Rakshasa/battle.json",
+			"map": "h5/Academy_Rakshasa/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Academy_Rakshasa/map/atkL.png",
+			"mapAttackFromRight": "h5/Academy_Rakshasa/map/atkR.png",
+			"iconLarge": "h5/Academy_Rakshasa/iconLarge.png",
+			"iconSmall": "h5/Academy_Rakshasa/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_RakshasaAttack.ogg",
+			"wince": "h5/h5_RakshasaHit.ogg",
+			"defend": "h5/h5_RakshasaHit.ogg",
+			"killed": "h5/h5_RakshasaDeath.ogg",
+			"move": "h5/h5_RakshasaMove.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					2,
+					3,
+					4,
+					5,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "DOUBLE_DAMAGE_CHANCE"
+				},
+				"values": [
+					3,
+					6,
+					9,
+					12,
+					15,
+					18,
+					21,
+					24,
+					27,
+					30
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_RETALIATION"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "MIND_IMMUNITY",
+					"description": "{Steadfast Mind}\nImmune to Mind spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true
+				]
+			}
+		],
+		"upgrades": [
+			"h5AcademyRakshasaRukh",
+			"h5Academy3rdRakshasaKshatri"
+		]
+	},
+	"h5AcademyRakshasaRukh": {
+		"name": {
+			"singular": "Rakshasa Raja",
+			"plural": "Rakshasa Rajas"
+		},
+		"description": "Rakshasa Ranis, Rakshasa Rajas and Rakshasa Kshatras are the level 6 units of the Heroes V Academy (merged into Tower). Rakshasa Ranis have {No Enemy Retaliation}. Rakshasa Rajas have {No Enemy Retaliation} and {Dash} (gives up the current action to double Speed for the next 3 rounds). Rakshasa Kshatras have {Whirlwind} (attacks the enemies directly ahead and diagonally ahead at the same time) and {Dash} (gives up the current action to double Speed for the next 3 rounds).\n\nRakshasa Rajas are as formidable as Rakshasa Ranis, but in an emergency they can also put on a sudden burst of speed and move swiftly.\n\nSee also {Rakshasa Rani}, {Rakshasa Kshatra}.",
+		"faction": "tower",
+		"level": 6,
+		"cost": {
+			"gold": 1145
+		},
+		"speed": 7,
+		"hitPoints": 107,
+		"attack": 18,
+		"defense": 13,
+		"damage": {
+			"min": 21,
+			"max": 28
+		},
+		"doubleWide": true,
+		"fightValue": 1696,
+		"aiValue": 2002,
+		"growth": 2,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"blockRetaliation": {
+				"type": "BLOCKS_RETALIATION",
+				"description": "{No Enemy Retaliation}\nNo enemy retaliation"
+			},
+			"cast_h5AbDash": {
+				"type": "SPELLCASTER",
+				"subtype": "h5AbDash",
+				"val": 2,
+				"description": "{Dash}\nSkips this action, then\ndouble Speed for 3 rounds"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 2,
+				"hidden": true
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 1
+			}
+		},
+		"graphics": {
+			"animation": "h5/Academy_Rakshasa_Rukh/battle.json",
+			"map": "h5/Academy_Rakshasa_Rukh/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Academy_Rakshasa_Rukh/map/atkL.png",
+			"mapAttackFromRight": "h5/Academy_Rakshasa_Rukh/map/atkR.png",
+			"iconLarge": "h5/Academy_Rakshasa_Rukh/iconLarge.png",
+			"iconSmall": "h5/Academy_Rakshasa_Rukh/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_RakshasaRukhAttack.ogg",
+			"wince": "h5/h5_RakshasaRukhHit.ogg",
+			"defend": "h5/h5_RakshasaRukhHit.ogg",
+			"killed": "h5/h5_RakshasaRukhDeath.ogg",
+			"move": "h5/h5_RakshasaRukhMove.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					2,
+					3,
+					4,
+					5,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "DOUBLE_DAMAGE_CHANCE"
+				},
+				"values": [
+					3,
+					6,
+					9,
+					12,
+					15,
+					18,
+					21,
+					24,
+					27,
+					30
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_ATTACK"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "MIND_IMMUNITY",
+					"description": "{Steadfast Mind}\nImmune to Mind spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h5AcademySteelGolem": {
+		"name": {
+			"singular": "Steel Golem",
+			"plural": "Steel Golems"
+		},
+		"description": "Iron Golems, Steel Golems and Magnetic Golems are the level 3 units of the Heroes V Academy (merged into Tower). All of them are {Mechanical} (mechanical creatures, immune to Mind magic). Iron Golems have {Immune to Slow} (immune to the Slow spell) and {50% Magic Proof} (-50% magic damage). Steel Golems also have {Unlimited Retaliation}, {Immune to Slow} (immune to the Slow spell) and {75% Magic Proof} (-75% magic damage). Magnetic Golems also have {Enchanted Obsidian} (immune to non-damaging spells; damaging spells restore 50% as Hit Points) and {Magic Magnetism} (reduces the damage allies take from area spells and uses half of the reduction to heal).\n\nSteel Golems have been imbued with powerful enchantments by their creators. They are almost unaffected by magic (spells deal only 1/4 of their damage to them). Steel Golems are more dangerous than Iron Golems, because they retaliate the moment they are attacked.\n\nSee also {Iron Golem}, {Magnetic Golem}.",
+		"faction": "tower",
+		"level": 3,
+		"cost": {
+			"gold": 240
+		},
+		"speed": 3,
+		"hitPoints": 26,
+		"attack": 9,
+		"defense": 8,
+		"damage": {
+			"min": 4,
+			"max": 6
+		},
+		"doubleWide": false,
+		"fightValue": 287,
+		"aiValue": 340,
+		"growth": 7,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"unlimitedRetaliations": {
+				"type": "UNLIMITED_RETALIATIONS",
+				"description": "{Unlimited Retaliations}\nUnlimited retaliations"
+			},
+			"mechanical": {
+				"type": "MECHANICAL",
+				"description": "{Mechanical}\nMechanical creature\nImmune to Mind spells"
+			},
+			"mindImmunity": {
+				"type": "MIND_IMMUNITY"
+			},
+			"immune_slow": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "slow",
+				"description": "{Immune to Slow}\nImmune to Slow"
+			},
+			"immune_h5Slow": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "h5Slow",
+				"hidden": true
+			},
+			"immune_h5AbSlow": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "h5AbSlow",
+				"hidden": true
+			},
+			"h5MagicProof": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "any",
+				"val": 75,
+				"description": "{75% Magic Proof}\nSpell damage -75%",
+				"stacking": "h5AcademySteelGolemExpSpellDamageReduction"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 9,
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h5/Academy_Steel_Golem/battle.json",
+			"map": "h5/Academy_Steel_Golem/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Academy_Steel_Golem/map/atkL.png",
+			"mapAttackFromRight": "h5/Academy_Steel_Golem/map/atkR.png",
+			"iconLarge": "h5/Academy_Steel_Golem/iconLarge.png",
+			"iconSmall": "h5/Academy_Steel_Golem/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_SteelGolem_attack.ogg",
+			"wince": "h5/h5_SteelGolem_hit.ogg",
+			"defend": "h5/h5_SteelGolem_hit.ogg",
+			"move": "h5/h5_SteelGolemMove.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "SPELL_DAMAGE_REDUCTION",
+					"stacking": "h5AcademySteelGolemExpSpellDamageReduction",
+					"subtype": "any"
+				},
+				"values": [
+					75,
+					76,
+					77,
+					78,
+					79,
+					80,
+					81,
+					82,
+					83,
+					85
+				]
+			},
+			{
+				"bonus": {
+					"type": "BLOCKS_RETALIATION",
+					"description": "{No Retaliation}\nEnemy cannot retaliate when attacked"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h5AcademyStoneGargoyle": {
+		"name": {
+			"singular": "Stone Gargoyle",
+			"plural": "Stone Gargoyles"
+		},
+		"description": "Stone Gargoyles, Obsidian Gargoyles and Marble Gargoyles are the level 2 units of the Heroes V Academy (merged into Tower). All of them can fly and have {Elemental} (non-living, immune to Mind magic) and {Enrage} (Attack increases when an allied stack is destroyed). Stone Gargoyles have {Lightning Immunity} (immune to Air magic). Obsidian Gargoyles also have {Lightning Immunity} (immune to Air magic), {Immune to Fire} (immune to Fire magic) and {Immune to Water} (immune to Water magic). Marble Gargoyles also have {Fire Vulnerability Aura} (it and adjacent units take +50% damage from Fire magic), {Ice Vulnerability Aura} (it and adjacent units take +50% damage from Water magic) and {Air Vulnerability Aura} (it and adjacent units take +50% damage from Air magic).\n\nStone Gargoyles are statues of flying creatures brought to life by magic. Because they can fly and often crush their enemies with heavy stone slabs, even Mages must treat them with caution. Stone Gargoyles are immune to Lightning magic.\n\nSee also {Obsidian Gargoyle}, {Marble Gargoyle}.",
+		"faction": "tower",
+		"level": 2,
+		"cost": {
+			"gold": 85
+		},
+		"speed": 6,
+		"hitPoints": 17,
+		"attack": 5,
+		"defense": 7,
+		"damage": {
+			"min": 1,
+			"max": 1
+		},
+		"doubleWide": false,
+		"fightValue": 97,
+		"aiValue": 109,
+		"growth": 9,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"flying": {
+				"type": "FLYING"
+			},
+			"h5Elemental": {
+				"type": "H5_ELEMENTAL_H5C",
+				"val": 1,
+				"description": "{Elemental}\nNon-living\nImmune to Mind spells"
+			},
+			"nonLiving": {
+				"type": "NON_LIVING"
+			},
+			"mindImmunity": {
+				"type": "MIND_IMMUNITY"
+			},
+			"h5Enraged": {
+				"icon": "h5/abilities/enraged",
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5Enraged",
+				"description": "{Enrage}\nAttack rises whenever\nan allied stack dies"
+			},
+			"immuneToair": {
+				"type": "SPELL_SCHOOL_IMMUNITY",
+				"subtype": "air",
+				"description": "{Lightning Immunity}\nImmune to Air spells"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 14,
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h5/Academy_Stone_Gargoyle/battle.json",
+			"map": "h5/Academy_Stone_Gargoyle/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Academy_Stone_Gargoyle/map/atkL.png",
+			"mapAttackFromRight": "h5/Academy_Stone_Gargoyle/map/atkR.png",
+			"iconLarge": "h5/Academy_Stone_Gargoyle/iconLarge.png",
+			"iconSmall": "h5/Academy_Stone_Gargoyle/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_ObsidianGorguleAttack.ogg",
+			"wince": "h5/h5_ObsidianGorguleHit.ogg",
+			"defend": "h5/h5_ObsidianGorguleHit.ogg",
+			"killed": "h5/h5_ObsidianGorguleDeath.ogg",
+			"move": "h5/h5_ObsidianGorguleMove.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					3,
+					3,
+					3,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					3,
+					4,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					0,
+					1,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					3,
+					3,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "NEGATIVE_EFFECTS_IMMUNITY",
+					"subtype": "earth",
+					"description": "{Earth Ward}\nImmune to harmful Earth spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_RETALIATION"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE"
+				},
+				"values": [
+					3,
+					6,
+					9,
+					12,
+					15,
+					18,
+					21,
+					24,
+					27,
+					30
+				]
+			}
+		],
+		"upgrades": [
+			"h5AcademyObsidianGargoyle",
+			"h5Academy3rdMarbleGargoyle"
+		]
+	},
+	"h5AcademyTitan": {
+		"name": {
+			"singular": "Titan",
+			"plural": "Titans"
+		},
+		"description": "Giants, Titans and Storm Lords are the level 7 units of the Heroes V Academy (merged into Tower). All of them have {Mind Control Immunity} (immune to Mind magic). Titans can also shoot and have {No Melee Penalty} and {Call Lightning} (lightning damage = 30 × the number of Titans, Air, cannot be retaliated against). Storm Lords can also shoot and have {No Melee Penalty} and {Stormcaller} (summons a thundercloud for 3 rounds that deals damage every round and suppresses shooting).\n\nTitans are the highest achievement a Mage can dream of. Like Giants, Titans like to swing their huge hands in melee to crush their foes. They are immune to Mind Control magic and can unleash lightning to strike distant enemies.\n\nSee also {Giant}, {Storm Lord}.",
+		"faction": "tower",
+		"level": 7,
+		"cost": {
+			"gold": 3210,
+			"gems": 2
+		},
+		"speed": 9,
+		"hitPoints": 192,
+		"attack": 21,
+		"defense": 21,
+		"damage": {
+			"min": 35,
+			"max": 62
+		},
+		"doubleWide": true,
+		"fightValue": 4928,
+		"aiValue": 6420,
+		"growth": 1,
+		"advMapAmount": {
+			"min": 1,
+			"max": 3
+		},
+		"abilities": {
+			"shooter": {
+				"type": "SHOOTER"
+			},
+			"noMeleePenalty": {
+				"type": "NO_MELEE_PENALTY",
+				"description": "{No Melee Penalty}\nNo melee penalty"
+			},
+			"mindImmunity": {
+				"type": "MIND_IMMUNITY",
+				"description": "{Mind Control Immunity}\nImmune to Mind spells"
+			},
+			"cast_h5AbCallLightning": {
+				"type": "SPELLCASTER",
+				"subtype": "h5AbCallLightning",
+				"val": 2,
+				"description": "{Call Lightning}\nBolt deals 30 x Titans\nAir damage, no retaliation"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 1,
+				"hidden": true
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 1
+			},
+			"noSpellcastByDefault": {
+				"type": "NO_SPELLCAST_BY_DEFAULT",
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h5/Academy_Titan/battle.json",
+			"map": "h5/Academy_Titan/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Academy_Titan/map/atkL.png",
+			"mapAttackFromRight": "h5/Academy_Titan/map/atkR.png",
+			"iconLarge": "h5/Academy_Titan/iconLarge.png",
+			"iconSmall": "h5/Academy_Titan/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"frameAngles": [
+					90,
+					60,
+					45,
+					30,
+					0,
+					-30,
+					-45,
+					-60,
+					-90
+				],
+				"offset": {
+					"upperX": 65,
+					"upperY": -84,
+					"middleX": 84,
+					"middleY": -66,
+					"lowerX": 44,
+					"lowerY": -48
+				},
+				"attackClimaxFrame": 6,
+				"ray": [
+					{
+						"start": [
+							54,
+							100,
+							127,
+							160
+						],
+						"end": [
+							36,
+							67,
+							85,
+							60
+						]
+					},
+					{
+						"start": [
+							108,
+							201,
+							255,
+							255
+						],
+						"end": [
+							108,
+							201,
+							255,
+							120
+						]
+					},
+					{
+						"start": [
+							188,
+							255,
+							255,
+							255
+						],
+						"end": [
+							108,
+							201,
+							255,
+							200
+						]
+					},
+					{
+						"start": [
+							108,
+							201,
+							255,
+							255
+						],
+						"end": [
+							108,
+							201,
+							255,
+							120
+						]
+					},
+					{
+						"start": [
+							54,
+							100,
+							127,
+							160
+						],
+						"end": [
+							36,
+							67,
+							85,
+							60
+						]
+					}
+				]
+			}
+		},
+		"sound": {
+			"attack": "h5/h5_TitanAttack00.ogg",
+			"wince": "h5/h5_TitanHit.ogg",
+			"defend": "h5/h5_TitanHit.ogg",
+			"killed": "h5/h5_TitanDeath.ogg",
+			"move": "h5/h5_TitanMove.ogg",
+			"shoot": "h5/h5_TitanRangeAttack.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE"
+				},
+				"values": [
+					4,
+					8,
+					12,
+					16,
+					20,
+					24,
+					28,
+					32,
+					36,
+					40
+				]
+			},
+			{
+				"bonus": {
+					"type": "NEGATIVE_EFFECTS_IMMUNITY",
+					"subtype": "air",
+					"description": "{Air Ward}\nImmune to harmful Air spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_WALL_PENALTY",
+					"description": "{Siege Shooter}\nNo damage loss when shooting over walls"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_DISTANCE_PENALTY",
+					"description": "{Sharpshooter}\nNo penalty for long-range shots"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "ENEMY_DEFENCE_REDUCTION"
+				},
+				"values": [
+					3,
+					6,
+					9,
+					12,
+					15,
+					18,
+					21,
+					24,
+					27,
+					30
+				]
+			},
+			{
+				"bonus": {
+					"type": "SPELL_IMMUNITY",
+					"subtype": "slow",
+					"description": "{Immune to Slow}\nUnaffected by Slow"
+				},
+				"values": [
+					false,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			}
+		],
+		"shots": 14
+	}
+}

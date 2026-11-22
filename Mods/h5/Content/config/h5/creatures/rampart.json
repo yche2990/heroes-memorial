@@ -1,0 +1,5493 @@
+{
+	"h5Preserve3rdAngerTreant": {
+		"name": {
+			"singular": "Savage Treant",
+			"plural": "Savage Treants"
+		},
+		"description": "Treants, Ancient Treants and Savage Treants are the level 6 units of the Heroes V Sylvan (merged into Rampart). All of them have {Enrage} (Attack rises when a friendly stack dies) and {Entangling Roots} (attacks entangle the target so that it cannot move). Ancient Treants also have {Take Roots} (+50% Defense when waiting or defending, and unlimited retaliations until their next action). Savage Treants also have {Immune to Slow} (immune to Slow) and {Rage of the Forest} (converts half of Defense into Attack and raises Speed, but no longer entangles).\n\nSavage Treants are thought to be the oldest inhabitants of Irollan; they surely remember when Brigitta, the Mother of All Trees, was still a sapling. Savage Treants are revered to some degree as spirits of the forest, for the human form they take and for their violent, furious temper. These ancient creatures of immense strength sweep aside everything in their path with their limbs, and when facing enemies, mighty blows and gale-like speed are their specialty.\n\nSee also {Treant}, {Ancient Treant}.",
+		"faction": "rampart",
+		"level": 6,
+		"cost": {
+			"gold": 940
+		},
+		"speed": 7,
+		"hitPoints": 134,
+		"attack": 15,
+		"defense": 17,
+		"damage": {
+			"min": 11,
+			"max": 19
+		},
+		"doubleWide": true,
+		"fightValue": 1359,
+		"aiValue": 1605,
+		"growth": 2,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"h5Enraged": {
+				"icon": "h5/abilities/enraged",
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5Enraged",
+				"description": "{Enrage}\nAttack rises whenever\nan allied stack dies"
+			},
+			"h5EntanglingRoots": {
+				"type": "SPELL_AFTER_ATTACK",
+				"subtype": "bind",
+				"val": 100,
+				"addInfo": [
+					0,
+					2
+				],
+				"description": "{Entangling Roots}\nAttacks root the target\nin place"
+			},
+			"immune_slow": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "slow",
+				"description": "{Immune to Slow}\nImmune to Slow"
+			},
+			"immune_h5Slow": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "h5Slow",
+				"hidden": true
+			},
+			"immune_h5AbSlow": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "h5AbSlow",
+				"hidden": true
+			},
+			"cast_h5AbRageOfTheForest": {
+				"type": "SPELLCASTER",
+				"subtype": "h5AbRageOfTheForest",
+				"val": 2,
+				"description": "{Rage of the Forest}\nHalf Defense to Attack,\nmore Speed, no entangling"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 2,
+				"hidden": true
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 1
+			}
+		},
+		"graphics": {
+			"animation": "h5/Preserve_3rd_AngerTreant/battle.json",
+			"map": "h5/Preserve_3rd_AngerTreant/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Preserve_3rd_AngerTreant/map/atkL.png",
+			"mapAttackFromRight": "h5/Preserve_3rd_AngerTreant/map/atkR.png",
+			"iconLarge": "h5/Preserve_3rd_AngerTreant/iconLarge.png",
+			"iconSmall": "h5/Preserve_3rd_AngerTreant/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_Preserve_T6_attack00.ogg",
+			"wince": "h5/h5_Preserve_T6_hit.ogg",
+			"defend": "h5/h5_Preserve_T6_hit.ogg",
+			"killed": "h5/h5_Preserve_T6_death.ogg",
+			"move": "h5/h5_Preserve_T6_move.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					2,
+					3,
+					4,
+					5,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "HP_REGENERATION"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "NEGATIVE_EFFECTS_IMMUNITY",
+					"subtype": "earth",
+					"description": "{Earth Ward}\nImmune to harmful Earth spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "ENEMY_DEFENCE_REDUCTION"
+				},
+				"values": [
+					4,
+					8,
+					12,
+					16,
+					20,
+					24,
+					28,
+					32,
+					36,
+					40
+				]
+			}
+		]
+	},
+	"h5Preserve3rdBladeSinger": {
+		"name": {
+			"singular": "Wind Dancer",
+			"plural": "Wind Dancers"
+		},
+		"description": "Blade Dancers, War Dancers and Wind Dancers are the level 2 units of the Heroes V Sylvan (merged into Rampart). War Dancers have {War Dance Combo} (attacks all adjacent enemies; half damage to secondary targets). Wind Dancers have {Agility} (+2 Defense for each hex moved, until the end of their next action).\n\nThese warriors are trained by the greatest swordmasters of the elven world, and they move as gracefully as a feather in the wind. On the battlefield, Wind Dancers let their blades dance freely, striking straight at the enemy's vitals, as swift and sharp as leaves in a whirlwind. Few survive their silver blades.\n\nSee also {Blade Dancer}, {War Dancer}.",
+		"faction": "rampart",
+		"level": 2,
+		"cost": {
+			"gold": 225
+		},
+		"speed": 9,
+		"hitPoints": 14,
+		"attack": 11,
+		"defense": 10,
+		"damage": {
+			"min": 4,
+			"max": 5
+		},
+		"doubleWide": false,
+		"fightValue": 265,
+		"aiValue": 296,
+		"growth": 6,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"h5Agility": {
+				"icon": "h5/abilities/agility",
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5Agility",
+				"val": 2,
+				"description": "{Agility}\n+2 Defense per hex moved\nuntil end of next action"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 9,
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h5/Preserve_3rd_BladeSinger/battle.json",
+			"map": "h5/Preserve_3rd_BladeSinger/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Preserve_3rd_BladeSinger/map/atkL.png",
+			"mapAttackFromRight": "h5/Preserve_3rd_BladeSinger/map/atkR.png",
+			"iconLarge": "h5/Preserve_3rd_BladeSinger/iconLarge.png",
+			"iconSmall": "h5/Preserve_3rd_BladeSinger/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_Preserve_T2_attack00.ogg",
+			"wince": "h5/h5_Preserve_T2_hit.ogg",
+			"defend": "h5/h5_Preserve_T2_hit.ogg",
+			"killed": "h5/h5_Preserve_T2_death.ogg",
+			"move": "h5/h5_Preserve_T2_move.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					3,
+					3,
+					3,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					3,
+					4,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					0,
+					1,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					3,
+					3,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_ATTACK"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "GENERAL_DAMAGE_REDUCTION",
+					"subtype": "damageTypeRanged"
+				},
+				"values": [
+					2,
+					4,
+					6,
+					8,
+					10,
+					12,
+					14,
+					16,
+					18,
+					20
+				]
+			}
+		]
+	},
+	"h5Preserve3rdDryad": {
+		"name": {
+			"singular": "Dryad",
+			"plural": "Dryads"
+		},
+		"description": "Pixies, Sprites and Dryads are the level 1 units of the Heroes V Sylvan (merged into Rampart). All of them fly and have {No Enemy Retaliation} and {Sweeping Attack} (attacks enemies in the 3 hexes in front at once). Sprites can also cast {Wasp Swarm} and {Cleansing} (2 times per battle, 10 mana). Dryads also have {Symbiosis} (heals a Treant stack by 17 × the number of Dryads and the Dryads themselves by 3 × that number, once per battle).\n\nDryads live in the least-known corners of Irollan. These mysterious beings rarely show themselves to outsiders and choose to devote their lives to the ancient trees. With the magic granted by nature, they can heal the wounds of any plant. Treants benefit from these fairies, who tend their wounds, and hold them in high favor; the great trees offer the fairies fine dwellings to show their gratitude.\n\nSee also {Pixie}, {Sprite}.",
+		"faction": "rampart",
+		"level": 1,
+		"cost": {
+			"gold": 80
+		},
+		"speed": 8,
+		"hitPoints": 5,
+		"attack": 4,
+		"defense": 1,
+		"damage": {
+			"min": 2,
+			"max": 3
+		},
+		"doubleWide": false,
+		"fightValue": 117,
+		"aiValue": 119,
+		"growth": 10,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"flying": {
+				"type": "FLYING"
+			},
+			"blockRetaliation": {
+				"type": "BLOCKS_RETALIATION",
+				"description": "{No Enemy Retaliation}\nNo enemy retaliation"
+			},
+			"threeHeadedAttack": {
+				"type": "THREE_HEADED_ATTACK",
+				"description": "{Sweeping Attack}\nHits enemies in the 3\nhexes in front at once"
+			},
+			"cast_h5AbTreeantUnion": {
+				"type": "SPELLCASTER",
+				"subtype": "h5AbTreeantUnion",
+				"val": 2,
+				"description": "{Symbiosis}\nTreant heals 17 x Dryads,\nself 3x, 1/battle"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 10,
+				"hidden": true
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 1
+			}
+		},
+		"graphics": {
+			"animation": "h5/Preserve_3rd_Dryad/battle.json",
+			"map": "h5/Preserve_3rd_Dryad/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Preserve_3rd_Dryad/map/atkL.png",
+			"mapAttackFromRight": "h5/Preserve_3rd_Dryad/map/atkR.png",
+			"iconLarge": "h5/Preserve_3rd_Dryad/iconLarge.png",
+			"iconSmall": "h5/Preserve_3rd_Dryad/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_Preserve_T1_attack00.ogg",
+			"wince": "h5/h5_Preserve_T1_hit.ogg",
+			"defend": "h5/h5_Preserve_T1_hit.ogg",
+			"killed": "h5/h5_Preserve_T1_death.ogg",
+			"move": "h5/h5_Preserve_T1_move.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE"
+				},
+				"values": [
+					2,
+					4,
+					6,
+					8,
+					10,
+					12,
+					14,
+					16,
+					18,
+					20
+				]
+			},
+			{
+				"bonus": {
+					"type": "NEGATIVE_EFFECTS_IMMUNITY",
+					"subtype": "earth",
+					"description": "{Earth Ward}\nImmune to harmful Earth spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "DOUBLE_DAMAGE_CHANCE"
+				},
+				"values": [
+					2,
+					4,
+					6,
+					8,
+					10,
+					12,
+					14,
+					16,
+					18,
+					20
+				]
+			}
+		]
+	},
+	"h5Preserve3rdHighDruid": {
+		"name": {
+			"singular": "Greater Druid",
+			"plural": "Greater Druids"
+		},
+		"description": "Forest Druids, Elder Druids and Greater Druids are the level 4 units of the Heroes V Sylvan (merged into Rampart). All of them have a ranged attack and can cast {Lightning Bolt} and {Endurance} (2 times per battle, 12 mana). Elder Druids also have {Mana Feed} (give up their remaining casts to reduce the cost of the hero's spells). Greater Druids also have {Power Feed} (adds the stack's Spell Power to the hero's Spell Power).\n\nThe Greater Druids of Irollan know the most important secrets of elven magic. These fearsome sorcerers can halt enemy troops at the edge of the vast forest. Their powers are passed on as spells to the warriors who become Rangers, who prove the immeasurable worth of the Greater Druids on the battlefield.\n\nSee also {Forest Druid}, {Elder Druid}.",
+		"faction": "rampart",
+		"level": 4,
+		"cost": {
+			"gold": 465
+		},
+		"speed": 5,
+		"hitPoints": 35,
+		"attack": 15,
+		"defense": 10,
+		"damage": {
+			"min": 9,
+			"max": 12
+		},
+		"doubleWide": false,
+		"fightValue": 648,
+		"aiValue": 743,
+		"growth": 3,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"shooter": {
+				"type": "SHOOTER"
+			},
+			"cast_h5AbStoneskin": {
+				"type": "SPELLCASTER",
+				"subtype": "h5AbStoneskin",
+				"val": 2
+			},
+			"cast_h5AbPowerFeed": {
+				"type": "SPELLCASTER",
+				"subtype": "h5AbPowerFeed",
+				"val": 2,
+				"description": "{Power Feed}\nHero Spell Power + this\nstack's Spell Power"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 4,
+				"hidden": true
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 2
+			},
+			"h5Mana": {
+				"type": "H5_MANA_H5C",
+				"val": 15,
+				"stacking": "h5Preserve3rdHighDruidExpH5ManaH5c"
+			},
+			"h5ManaMin": {
+				"type": "H5_MANA_MIN_H5C",
+				"val": 6,
+				"hidden": true
+			},
+			"h5ManaPool": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5ManaPool",
+				"hidden": true,
+				"description": "~"
+			},
+			"h5ManaKeepCasts": {
+				"type": "H5_MANA_KEEPCASTS_H5C",
+				"val": 1,
+				"hidden": true
+			},
+			"noSpellcastByDefault": {
+				"type": "NO_SPELLCAST_BY_DEFAULT",
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h5/Preserve_3rd_HighDruid/battle.json",
+			"map": "h5/Preserve_3rd_HighDruid/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Preserve_3rd_HighDruid/map/atkL.png",
+			"mapAttackFromRight": "h5/Preserve_3rd_HighDruid/map/atkR.png",
+			"iconLarge": "h5/Preserve_3rd_HighDruid/iconLarge.png",
+			"iconSmall": "h5/Preserve_3rd_HighDruid/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"frameAngles": [
+					90,
+					60,
+					45,
+					30,
+					0,
+					-30,
+					-45,
+					-60,
+					-90
+				],
+				"offset": {
+					"upperX": 31,
+					"upperY": -70,
+					"middleX": 43,
+					"middleY": -56,
+					"lowerX": 12,
+					"lowerY": -45
+				},
+				"attackClimaxFrame": 7,
+				"projectile": "h5/Preserve_3rd_HighDruid/projectile.json"
+			}
+		},
+		"sound": {
+			"attack": "h5/h5_Preserve_T4_attack00.ogg",
+			"wince": "h5/h5_Preserve_T4_hit.ogg",
+			"defend": "h5/h5_Preserve_T4_hit.ogg",
+			"killed": "h5/h5_Preserve_T4_death.ogg",
+			"move": "h5/h5_Preserve_T4_move.ogg",
+			"shoot": "h5/h5_Preserve_T4_rangeattack.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					5,
+					6,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "H5_MANA_H5C",
+					"stacking": "h5Preserve3rdHighDruidExpH5ManaH5c"
+				},
+				"values": [
+					15,
+					15,
+					15,
+					15,
+					21,
+					21,
+					21,
+					21,
+					27,
+					27
+				]
+			},
+			{
+				"bonus": {
+					"type": "CHANGES_SPELL_COST_FOR_ALLY"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE"
+				},
+				"values": [
+					3,
+					6,
+					9,
+					12,
+					15,
+					18,
+					21,
+					24,
+					27,
+					30
+				]
+			}
+		],
+		"shots": 20
+	},
+	"h5Preserve3rdRainbowDragon": {
+		"name": {
+			"singular": "Crystal Dragon",
+			"plural": "Crystal Dragons"
+		},
+		"description": "Green Dragons, Emerald Dragons and Crystal Dragons are the level 7 units of the Heroes V Sylvan (merged into Rampart). All of them fly and are Dragons. Green Dragons have {Acid Breath} (attacks also hit the stack behind the target). Emerald Dragons also have {Immune to Earth} (immune to Earth magic) and {Acid Breath} (attacks also hit the stack behind the target). Crystal Dragons also have {Rainbow Breath} (attacks hit enemies 1–5 hexes behind the target).\n\nCrystal Dragons are known for their unpredictability. These wondrous creatures baffle their enemies on the battlefield; you never know what they will do next.\n\nSee also {Green Dragon}, {Emerald Dragon}.",
+		"faction": "rampart",
+		"level": 7,
+		"cost": {
+			"gold": 3305,
+			"gems": 2
+		},
+		"speed": 20,
+		"hitPoints": 202,
+		"attack": 21,
+		"defense": 19,
+		"damage": {
+			"min": 27,
+			"max": 53
+		},
+		"doubleWide": true,
+		"fightValue": 4774,
+		"aiValue": 6220,
+		"growth": 1,
+		"advMapAmount": {
+			"min": 1,
+			"max": 3
+		},
+		"abilities": {
+			"flying": {
+				"type": "FLYING"
+			},
+			"h5RainbowBreath": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5RainbowBreath",
+				"addInfo": {
+					"maxRadius": 5
+				},
+				"icon": "h5/abilities/h5RainbowBreath",
+				"description": "{Rainbow Breath}\nAlso hits foes 1-5 hexes\nbehind the target"
+			},
+			"dragonNature": {
+				"type": "DRAGON_NATURE"
+			},
+			"skeletonTarget": {
+				"type": "SKELETON_TRANSFORMER_TARGET",
+				"subtype": "boneDragon",
+				"hidden": true
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 1,
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h5/Preserve_3rd_RainbowDragon/battle.json",
+			"map": "h5/Preserve_3rd_RainbowDragon/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Preserve_3rd_RainbowDragon/map/atkL.png",
+			"mapAttackFromRight": "h5/Preserve_3rd_RainbowDragon/map/atkR.png",
+			"iconLarge": "h5/Preserve_3rd_RainbowDragon/iconLarge.png",
+			"iconSmall": "h5/Preserve_3rd_RainbowDragon/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_Preserve_T7_attack00.ogg",
+			"wince": "h5/h5_Preserve_T7_hit.ogg",
+			"defend": "h5/h5_Preserve_T7_hit.ogg",
+			"killed": "h5/h5_Preserve_T7_death.ogg",
+			"move": "h5/h5_Preserve_T7_move.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE"
+				},
+				"values": [
+					4,
+					8,
+					12,
+					16,
+					20,
+					24,
+					28,
+					32,
+					36,
+					40
+				]
+			},
+			{
+				"bonus": {
+					"type": "NEGATIVE_EFFECTS_IMMUNITY",
+					"subtype": "fire",
+					"description": "{Fire Ward}\nImmune to harmful Fire spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "NEGATIVE_EFFECTS_IMMUNITY",
+					"subtype": "water",
+					"description": "{Water Ward}\nImmune to harmful Water spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "NEGATIVE_EFFECTS_IMMUNITY",
+					"subtype": "air",
+					"description": "{Air Ward}\nImmune to harmful Air spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "DOUBLE_DAMAGE_CHANCE"
+				},
+				"values": [
+					2,
+					4,
+					6,
+					8,
+					10,
+					12,
+					14,
+					16,
+					18,
+					20
+				]
+			},
+			{
+				"bonus": {
+					"type": "SPELL_IMMUNITY",
+					"subtype": "blind",
+					"description": "{Immune to Blind}\nUnaffected by Blind"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h5Preserve3rdSharpShooter": {
+		"name": {
+			"singular": "Arcane Archer",
+			"plural": "Arcane Archers"
+		},
+		"description": "Hunters, Master Hunters and Arcane Archers are the level 3 units of the Heroes V Sylvan (merged into Rampart). All of them have a ranged attack. Hunters have {Elven Double Shot} (shoots twice). Master Hunters also have {Elven Double Shot} (shoots twice) and {Warding Arrows} (shots have a chance to push the target's ATB back by 20%). Arcane Archers also have {Piercing Arrow} (shots ignore 50% of Defense and have a chance to knock the target back 1 hex) and {No Range Penalty} (no ranged penalty).\n\nThe awe-inspiring sight of an Arcane Archer with a two-meter longbow is enough to cow any scheming invader who hopes to break into Irollan. Once caught in an Arcane Archer ambush, not even heavy armor can withstand the tremendous force carried by their arrows. With this skill, Arcane Archers leave their enemies no choice but to flee helplessly.\n\nSee also {Hunter}, {Master Hunter}.",
+		"faction": "rampart",
+		"level": 3,
+		"cost": {
+			"gold": 300
+		},
+		"speed": 7,
+		"hitPoints": 15,
+		"attack": 9,
+		"defense": 7,
+		"damage": {
+			"min": 7,
+			"max": 8
+		},
+		"doubleWide": false,
+		"fightValue": 360,
+		"aiValue": 426,
+		"growth": 6,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"shooter": {
+				"type": "SHOOTER"
+			},
+			"h5PiercingArrow": {
+				"icon": "h5/abilities/piercingArrow",
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5PiercingArrow",
+				"addInfo": {
+					"ignore": 50,
+					"pf": 2.0
+				},
+				"description": "{Piercing Arrow}\nIgnores 50% Defense; may\nknock target back 1 hex"
+			},
+			"noDistancePenalty": {
+				"type": "NO_DISTANCE_PENALTY",
+				"description": "{No Range Penalty}\nNo ranged damage penalty"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 7,
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h5/Preserve_3rd_SharpShooter/battle.json",
+			"map": "h5/Preserve_3rd_SharpShooter/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Preserve_3rd_SharpShooter/map/atkL.png",
+			"mapAttackFromRight": "h5/Preserve_3rd_SharpShooter/map/atkR.png",
+			"iconLarge": "h5/Preserve_3rd_SharpShooter/iconLarge.png",
+			"iconSmall": "h5/Preserve_3rd_SharpShooter/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"frameAngles": [
+					90,
+					60,
+					45,
+					30,
+					0,
+					-30,
+					-45,
+					-60,
+					-90
+				],
+				"offset": {
+					"upperX": -17,
+					"upperY": -62,
+					"middleX": -11,
+					"middleY": -66,
+					"lowerX": 6,
+					"lowerY": -67
+				},
+				"attackClimaxFrame": 6,
+				"projectile": "h5/Preserve_3rd_SharpShooter/projectile.json"
+			}
+		},
+		"sound": {
+			"attack": "h5/h5_Preserve_T3_attack00.ogg",
+			"wince": "h5/h5_Preserve_T3_hit.ogg",
+			"defend": "h5/h5_Preserve_T3_hit.ogg",
+			"killed": "h5/h5_Preserve_T3_death.ogg",
+			"move": "h5/h5_Preserve_T3_move.ogg",
+			"shoot": "h5/h5_Preserve_T3_rangeattack.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_WALL_PENALTY",
+					"description": "{Siege Shooter}\nNo damage loss when shooting over walls"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "FREE_SHOOTING",
+					"description": "{Point-Blank Shot}\nCan shoot even when enemies are adjacent"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "ENEMY_DEFENCE_REDUCTION"
+				},
+				"values": [
+					3,
+					6,
+					9,
+					12,
+					15,
+					18,
+					21,
+					24,
+					27,
+					30
+				]
+			}
+		],
+		"shots": 24
+	},
+	"h5Preserve3rdWhiteUnicorn": {
+		"name": {
+			"singular": "Pristine Unicorn",
+			"plural": "Pristine Unicorns"
+		},
+		"description": "Unicorns, Silver Unicorns and Pristine Unicorns are the level 5 units of the Heroes V Sylvan (merged into Rampart). Unicorns have {Anti-Magic Aura} (+30% magic resistance for adjacent allies). Silver Unicorns have {Blinding Attack} (melee attacks have a chance to blind the target) and {Anti-Magic Aura} (+30% magic resistance for adjacent allies). Pristine Unicorns have {Blinding Attack} (melee attacks have a chance to blind the target) and {Bond of Light} (when an ally receives Light magic, they also gain its effect at Expert level).\n\nPristine Unicorns are very rare, even in Irollan. They have been found in only one place, not far from Copper Canyon and Crystal Lake. They are worshipped by the elves and are the only beings who know how to protect this realm.\n\nSee also {Unicorn}, {Silver Unicorn}.",
+		"faction": "rampart",
+		"level": 5,
+		"cost": {
+			"gold": 705
+		},
+		"speed": 7,
+		"hitPoints": 59,
+		"attack": 12,
+		"defense": 13,
+		"damage": {
+			"min": 9,
+			"max": 23
+		},
+		"doubleWide": true,
+		"fightValue": 907,
+		"aiValue": 1010,
+		"growth": 3,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"h5BlindingAttack": {
+				"icon": "h5/abilities/blindingAttack",
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5ProcSpell",
+				"addInfo": {
+					"spell": "h5AbBlind",
+					"pf": 1.0,
+					"power": 8,
+					"mastery": 1,
+					"melee": true,
+					"ranged": false
+				},
+				"description": "{Blinding Attack}\nMelee attacks may\nBlind the target"
+			},
+			"h5BondOfLight": {
+				"type": "H5_BOND_OF_LIGHT_H5C",
+				"val": 3,
+				"description": "{Bond of Light}\nCopies Light spells cast\non allies at Expert"
+			},
+			"h5BondOfLightWatch": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5BondOfLight",
+				"addInfo": {
+					"mastery": 3
+				},
+				"propagator": "BATTLE_WIDE",
+				"stacking": "h5BondOfLightWatch",
+				"hidden": true,
+				"description": "~"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 3,
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h5/Preserve_3rd_WhiteUnicorn/battle.json",
+			"map": "h5/Preserve_3rd_WhiteUnicorn/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Preserve_3rd_WhiteUnicorn/map/atkL.png",
+			"mapAttackFromRight": "h5/Preserve_3rd_WhiteUnicorn/map/atkR.png",
+			"iconLarge": "h5/Preserve_3rd_WhiteUnicorn/iconLarge.png",
+			"iconSmall": "h5/Preserve_3rd_WhiteUnicorn/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_Preserve_T5_attack00.ogg",
+			"wince": "h5/h5_Preserve_T5_hit.ogg",
+			"defend": "h5/h5_Preserve_T5_hit.ogg",
+			"killed": "h5/h5_Preserve_T5_death.ogg",
+			"move": "h5/h5_Preserve_T5_move.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					3,
+					4,
+					5,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					3,
+					4,
+					4,
+					6,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					2,
+					3,
+					3,
+					4,
+					5,
+					6,
+					6,
+					7
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					7
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "SPELL_IMMUNITY",
+					"subtype": "blind",
+					"description": "{Immune to Blind}\nUnaffected by Blind"
+				},
+				"values": [
+					false,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "MIND_IMMUNITY",
+					"description": "{Steadfast Mind}\nImmune to Mind spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "SPELL_RESISTANCE_AURA"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					5,
+					5,
+					10,
+					10,
+					15,
+					20
+				]
+			}
+		]
+	},
+	"h5PreserveBladeJuggler": {
+		"name": {
+			"singular": "Blade Dancer",
+			"plural": "Blade Dancers"
+		},
+		"description": "Blade Dancers, War Dancers and Wind Dancers are the level 2 units of the Heroes V Sylvan (merged into Rampart). War Dancers have {War Dance Combo} (attacks all adjacent enemies; half damage to secondary targets). Wind Dancers have {Agility} (+2 Defense for each hex moved, until the end of their next action).\n\nThe elite of the forest warriors. Some elves devote their lives to an elven martial art called the blade dance, which favors dodging and swift strikes over resisting or brute assault. Blade Dancers wear no armor and are rather exposed to enemy attacks.\n\nSee also {War Dancer}, {Wind Dancer}.",
+		"faction": "rampart",
+		"level": 2,
+		"cost": {
+			"gold": 130
+		},
+		"speed": 6,
+		"hitPoints": 14,
+		"attack": 5,
+		"defense": 3,
+		"damage": {
+			"min": 2,
+			"max": 5
+		},
+		"doubleWide": false,
+		"fightValue": 164,
+		"aiValue": 184,
+		"growth": 6,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 9,
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h5/Preserve_Blade_Juggler/battle.json",
+			"map": "h5/Preserve_Blade_Juggler/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Preserve_Blade_Juggler/map/atkL.png",
+			"mapAttackFromRight": "h5/Preserve_Blade_Juggler/map/atkR.png",
+			"iconLarge": "h5/Preserve_Blade_Juggler/iconLarge.png",
+			"iconSmall": "h5/Preserve_Blade_Juggler/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_BladeJuggler_Attack.ogg",
+			"wince": "h5/h5_BladeJuggler_Hit.ogg",
+			"defend": "h5/h5_BladeJuggler_Hit.ogg",
+			"killed": "h5/h5_BladeJuggler_Death.ogg",
+			"move": "h5/h5_BladeJuggler_Move.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					3,
+					3,
+					3,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					3,
+					4,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					0,
+					1,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					3,
+					3,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_ATTACK"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "DOUBLE_DAMAGE_CHANCE"
+				},
+				"values": [
+					2,
+					4,
+					6,
+					8,
+					10,
+					12,
+					14,
+					16,
+					18,
+					20
+				]
+			}
+		],
+		"upgrades": [
+			"h5PreserveWarDancer",
+			"h5Preserve3rdBladeSinger"
+		]
+	},
+	"h5PreserveDruid": {
+		"name": {
+			"singular": "Forest Druid",
+			"plural": "Forest Druids"
+		},
+		"description": "Forest Druids, Elder Druids and Greater Druids are the level 4 units of the Heroes V Sylvan (merged into Rampart). All of them have a ranged attack and can cast {Lightning Bolt} and {Endurance} (2 times per battle, 12 mana). Elder Druids also have {Mana Feed} (give up their remaining casts to reduce the cost of the hero's spells). Greater Druids also have {Power Feed} (adds the stack's Spell Power to the hero's Spell Power).\n\nForest Druids are priests of Sylanna (the Elemental Dragon of Earth and the living embodiment of nature). They are granted the power to wield elemental magic and can summon elemental forces in times of need.\n\nSee also {Elder Druid}, {Greater Druid}.",
+		"faction": "rampart",
+		"level": 4,
+		"cost": {
+			"gold": 340
+		},
+		"speed": 5,
+		"hitPoints": 35,
+		"attack": 9,
+		"defense": 9,
+		"damage": {
+			"min": 6,
+			"max": 8
+		},
+		"doubleWide": false,
+		"fightValue": 478,
+		"aiValue": 547,
+		"growth": 3,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"shooter": {
+				"type": "SHOOTER"
+			},
+			"cast_h5AbLightningBolt": {
+				"type": "SPELLCASTER",
+				"subtype": "h5AbLightningBolt",
+				"val": 1
+			},
+			"cast_h5AbStoneskin": {
+				"type": "SPELLCASTER",
+				"subtype": "h5AbStoneskin",
+				"val": 2
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 4,
+				"hidden": true
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 2
+			},
+			"h5Mana": {
+				"type": "H5_MANA_H5C",
+				"val": 12,
+				"stacking": "h5PreserveDruidExpH5ManaH5c"
+			},
+			"h5ManaMin": {
+				"type": "H5_MANA_MIN_H5C",
+				"val": 5,
+				"hidden": true
+			},
+			"h5ManaPool": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5ManaPool",
+				"hidden": true,
+				"description": "~"
+			},
+			"noSpellcastByDefault": {
+				"type": "NO_SPELLCAST_BY_DEFAULT",
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h5/Preserve_Druid/battle.json",
+			"map": "h5/Preserve_Druid/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Preserve_Druid/map/atkL.png",
+			"mapAttackFromRight": "h5/Preserve_Druid/map/atkR.png",
+			"iconLarge": "h5/Preserve_Druid/iconLarge.png",
+			"iconSmall": "h5/Preserve_Druid/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"frameAngles": [
+					90,
+					60,
+					45,
+					30,
+					0,
+					-30,
+					-45,
+					-60,
+					-90
+				],
+				"offset": {
+					"upperX": 32,
+					"upperY": -72,
+					"middleX": 43,
+					"middleY": -59,
+					"lowerX": 16,
+					"lowerY": -47
+				},
+				"attackClimaxFrame": 7,
+				"projectile": "h5/Preserve_Druid/projectile.json"
+			}
+		},
+		"sound": {
+			"attack": "h5/h5_Druid_attack.ogg",
+			"wince": "h5/h5_Druid_hit.ogg",
+			"defend": "h5/h5_Druid_hit.ogg",
+			"killed": "h5/h5_Druid_death.ogg",
+			"move": "h5/h5_Druid_move.ogg",
+			"shoot": "h5/h5_Druid_attack.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					5,
+					6,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "H5_MANA_H5C",
+					"stacking": "h5PreserveDruidExpH5ManaH5c"
+				},
+				"values": [
+					12,
+					12,
+					12,
+					12,
+					17,
+					17,
+					17,
+					17,
+					22,
+					22
+				]
+			},
+			{
+				"bonus": {
+					"type": "CHANGES_SPELL_COST_FOR_ALLY"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE"
+				},
+				"values": [
+					3,
+					6,
+					9,
+					12,
+					15,
+					18,
+					21,
+					24,
+					27,
+					30
+				]
+			}
+		],
+		"shots": 14,
+		"upgrades": [
+			"h5PreserveDruidElder",
+			"h5Preserve3rdHighDruid"
+		]
+	},
+	"h5PreserveDruidElder": {
+		"name": {
+			"singular": "Elder Druid",
+			"plural": "Elder Druids"
+		},
+		"description": "Forest Druids, Elder Druids and Greater Druids are the level 4 units of the Heroes V Sylvan (merged into Rampart). All of them have a ranged attack and can cast {Lightning Bolt} and {Endurance} (2 times per battle, 12 mana). Elder Druids also have {Mana Feed} (give up their remaining casts to reduce the cost of the hero's spells). Greater Druids also have {Power Feed} (adds the stack's Spell Power to the hero's Spell Power).\n\nElder Druids are masters of elemental magic and keepers of the secret lore of their faith. Allied with all living beings, they can transfer their mana to the hero.\n\nSee also {Forest Druid}, {Greater Druid}.",
+		"faction": "rampart",
+		"level": 4,
+		"cost": {
+			"gold": 465
+		},
+		"speed": 5,
+		"hitPoints": 34,
+		"attack": 15,
+		"defense": 11,
+		"damage": {
+			"min": 8,
+			"max": 12
+		},
+		"doubleWide": false,
+		"fightValue": 636,
+		"aiValue": 729,
+		"growth": 3,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"shooter": {
+				"type": "SHOOTER"
+			},
+			"cast_h5AbStoneSpikes": {
+				"type": "SPELLCASTER",
+				"subtype": "h5AbStoneSpikes",
+				"val": 0
+			},
+			"cast_h5AbLightningBolt": {
+				"type": "SPELLCASTER",
+				"subtype": "h5AbLightningBolt",
+				"val": 2
+			},
+			"cast_h5AbStoneskin": {
+				"type": "SPELLCASTER",
+				"subtype": "h5AbStoneskin",
+				"val": 3
+			},
+			"cast_h5AbManaFeed": {
+				"type": "SPELLCASTER",
+				"subtype": "h5AbManaFeed",
+				"val": 2,
+				"description": "{Mana Feed}\nGives up remaining casts;\nhero spells cost less"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 4,
+				"hidden": true
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 3
+			},
+			"h5Mana": {
+				"type": "H5_MANA_H5C",
+				"val": 15,
+				"stacking": "h5PreserveDruidElderExpH5ManaH5c"
+			},
+			"h5ManaMin": {
+				"type": "H5_MANA_MIN_H5C",
+				"val": 5,
+				"hidden": true
+			},
+			"h5ManaPool": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5ManaPool",
+				"hidden": true,
+				"description": "~"
+			},
+			"h5ManaKeepCasts": {
+				"type": "H5_MANA_KEEPCASTS_H5C",
+				"val": 1,
+				"hidden": true
+			},
+			"noSpellcastByDefault": {
+				"type": "NO_SPELLCAST_BY_DEFAULT",
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h5/Preserve_Druid_Elder/battle.json",
+			"map": "h5/Preserve_Druid_Elder/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Preserve_Druid_Elder/map/atkL.png",
+			"mapAttackFromRight": "h5/Preserve_Druid_Elder/map/atkR.png",
+			"iconLarge": "h5/Preserve_Druid_Elder/iconLarge.png",
+			"iconSmall": "h5/Preserve_Druid_Elder/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"frameAngles": [
+					90,
+					60,
+					45,
+					30,
+					0,
+					-30,
+					-45,
+					-60,
+					-90
+				],
+				"offset": {
+					"upperX": 35,
+					"upperY": -69,
+					"middleX": 43,
+					"middleY": -57,
+					"lowerX": 16,
+					"lowerY": -46
+				},
+				"attackClimaxFrame": 7,
+				"projectile": "h5/Preserve_Druid_Elder/projectile.json"
+			}
+		},
+		"sound": {
+			"attack": "h5/h5_DruidElder_attack00.ogg",
+			"wince": "h5/h5_DruidElder_hit.ogg",
+			"defend": "h5/h5_DruidElder_hit.ogg",
+			"killed": "h5/h5_DruidElder_death.ogg",
+			"move": "h5/h5_Druid_move.ogg",
+			"shoot": "h5/h5_DruidElder_rangeattack.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					5,
+					6,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "H5_MANA_H5C",
+					"stacking": "h5PreserveDruidElderExpH5ManaH5c"
+				},
+				"values": [
+					15,
+					15,
+					15,
+					15,
+					20,
+					20,
+					20,
+					20,
+					25,
+					25
+				]
+			},
+			{
+				"bonus": {
+					"type": "CHANGES_SPELL_COST_FOR_ALLY"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE"
+				},
+				"values": [
+					3,
+					6,
+					9,
+					12,
+					15,
+					18,
+					21,
+					24,
+					27,
+					30
+				]
+			}
+		],
+		"shots": 20
+	},
+	"h5PreserveGoldDragon": {
+		"name": {
+			"singular": "Emerald Dragon",
+			"plural": "Emerald Dragons"
+		},
+		"description": "Green Dragons, Emerald Dragons and Crystal Dragons are the level 7 units of the Heroes V Sylvan (merged into Rampart). All of them fly and are Dragons. Green Dragons have {Acid Breath} (attacks also hit the stack behind the target). Emerald Dragons also have {Immune to Earth} (immune to Earth magic) and {Acid Breath} (attacks also hit the stack behind the target). Crystal Dragons also have {Rainbow Breath} (attacks hit enemies 1–5 hexes behind the target).\n\nEmerald Dragons are Sylanna's favorite children and are immune to Earth magic. Like their younger kin, they can spray deadly acid that dissolves their enemies into the thirsty soil.\n\nSee also {Green Dragon}, {Crystal Dragon}.",
+		"faction": "rampart",
+		"level": 7,
+		"cost": {
+			"gold": 3305,
+			"gems": 2
+		},
+		"speed": 20,
+		"hitPoints": 202,
+		"attack": 22,
+		"defense": 19,
+		"damage": {
+			"min": 29,
+			"max": 50
+		},
+		"doubleWide": true,
+		"fightValue": 4874,
+		"aiValue": 6349,
+		"growth": 1,
+		"advMapAmount": {
+			"min": 1,
+			"max": 3
+		},
+		"abilities": {
+			"flying": {
+				"type": "FLYING"
+			},
+			"immuneToearth": {
+				"type": "SPELL_SCHOOL_IMMUNITY",
+				"subtype": "earth",
+				"description": "{Immune to Earth}\nImmune to Earth spells"
+			},
+			"h5AcidBreath": {
+				"type": "MULTIHEX_UNIT_ATTACK",
+				"icon": "h5/abilities/h5AcidBreath",
+				"addInfo": [
+					"FF"
+				],
+				"description": "{Acid Breath}\nAlso hits the stack\nbehind the target"
+			},
+			"dragonNature": {
+				"type": "DRAGON_NATURE"
+			},
+			"skeletonTarget": {
+				"type": "SKELETON_TRANSFORMER_TARGET",
+				"subtype": "boneDragon",
+				"hidden": true
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 1,
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h5/Preserve_Gold_Dragon/battle.json",
+			"map": "h5/Preserve_Gold_Dragon/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Preserve_Gold_Dragon/map/atkL.png",
+			"mapAttackFromRight": "h5/Preserve_Gold_Dragon/map/atkR.png",
+			"iconLarge": "h5/Preserve_Gold_Dragon/iconLarge.png",
+			"iconSmall": "h5/Preserve_Gold_Dragon/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_GreenDragonUpgrade_Attack.ogg",
+			"wince": "h5/h5_GreenDragonUpgrade_Hit.ogg",
+			"defend": "h5/h5_GreenDragonUpgrade_Hit.ogg",
+			"killed": "h5/h5_GreenDragonUpgrade_Death.ogg",
+			"move": "h5/h5_GreenDragonUpgrade_Move.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_RETALIATION"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					10,
+					20,
+					30,
+					40,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "DOUBLE_DAMAGE_CHANCE"
+				},
+				"values": [
+					2,
+					4,
+					6,
+					8,
+					10,
+					12,
+					14,
+					16,
+					18,
+					20
+				]
+			},
+			{
+				"bonus": {
+					"type": "BLOCKS_RETALIATION",
+					"description": "{No Retaliation}\nEnemy cannot retaliate when attacked"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "SPELL_IMMUNITY",
+					"subtype": "poison",
+					"description": "{Immune to Poison}\nUnaffected by Poison"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "SPELL_IMMUNITY",
+					"subtype": "blind",
+					"description": "{Immune to Blind}\nUnaffected by Blind"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h5PreserveGrandElf": {
+		"name": {
+			"singular": "Master Hunter",
+			"plural": "Master Hunters"
+		},
+		"description": "Hunters, Master Hunters and Arcane Archers are the level 3 units of the Heroes V Sylvan (merged into Rampart). All of them have a ranged attack. Hunters have {Elven Double Shot} (shoots twice). Master Hunters also have {Elven Double Shot} (shoots twice) and {Warding Arrows} (shots have a chance to push the target's ATB back by 20%). Arcane Archers also have {Piercing Arrow} (shots ignore 50% of Defense and have a chance to knock the target back 1 hex) and {No Range Penalty} (no ranged penalty).\n\nMaster Hunters are dedicated to guarding the forest realm and give invaders no opening. Their arrows bear special charms, and before the enemy can react, two furious arrows are already whistling toward it. The enhanced arrows leave wounded enemies slow to recover.\n\nSee also {Hunter}, {Arcane Archer}.",
+		"faction": "rampart",
+		"level": 3,
+		"cost": {
+			"gold": 300
+		},
+		"speed": 6,
+		"hitPoints": 15,
+		"attack": 8,
+		"defense": 6,
+		"damage": {
+			"min": 4,
+			"max": 7
+		},
+		"doubleWide": false,
+		"fightValue": 348,
+		"aiValue": 413,
+		"growth": 6,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"shooter": {
+				"type": "SHOOTER"
+			},
+			"h5DoubleShot": {
+				"type": "ADDITIONAL_ATTACK",
+				"val": 1,
+				"effectRange": "ONLY_DISTANCE_FIGHT",
+				"description": "{Elven Double Shot}\nShoots twice"
+			},
+			"h5WardingArrows": {
+				"icon": "h5/abilities/wardingArrows",
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5ProcEffect",
+				"addInfo": {
+					"effect": "atbDrop",
+					"pf": 1.0,
+					"amount": 20,
+					"melee": false,
+					"ranged": true
+				},
+				"description": "{Warding Arrows}\nShots may delay target\nATB by 20%"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 7,
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h5/Preserve_Grand_Elf/battle.json",
+			"map": "h5/Preserve_Grand_Elf/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Preserve_Grand_Elf/map/atkL.png",
+			"mapAttackFromRight": "h5/Preserve_Grand_Elf/map/atkR.png",
+			"iconLarge": "h5/Preserve_Grand_Elf/iconLarge.png",
+			"iconSmall": "h5/Preserve_Grand_Elf/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"frameAngles": [
+					90,
+					60,
+					45,
+					30,
+					0,
+					-30,
+					-45,
+					-60,
+					-90
+				],
+				"offset": {
+					"upperX": -22,
+					"upperY": -59,
+					"middleX": -19,
+					"middleY": -65,
+					"lowerX": 1,
+					"lowerY": -69
+				},
+				"attackClimaxFrame": 6,
+				"projectile": "h5/Preserve_Grand_Elf/projectile.json"
+			}
+		},
+		"sound": {
+			"attack": "h5/h5_HighElf_Attack.ogg",
+			"wince": "h5/h5_HighElf_Hit.ogg",
+			"defend": "h5/h5_HighElf_Hit.ogg",
+			"killed": "h5/h5_HighElf_Death.ogg",
+			"move": "h5/h5_HighElf_Move.ogg",
+			"shoot": "h5/h5_HighElf_RangeAttack.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_DISTANCE_PENALTY",
+					"description": "{Sharpshooter}\nNo penalty for long-range shots"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_WALL_PENALTY",
+					"description": "{Siege Shooter}\nNo damage loss when shooting over walls"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "SHOTS"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "ENEMY_DEFENCE_REDUCTION"
+				},
+				"values": [
+					3,
+					6,
+					9,
+					12,
+					15,
+					18,
+					21,
+					24,
+					27,
+					30
+				]
+			}
+		],
+		"shots": 24
+	},
+	"h5PreserveGreenDragon": {
+		"name": {
+			"singular": "Green Dragon",
+			"plural": "Green Dragons"
+		},
+		"description": "Green Dragons, Emerald Dragons and Crystal Dragons are the level 7 units of the Heroes V Sylvan (merged into Rampart). All of them fly and are Dragons. Green Dragons have {Acid Breath} (attacks also hit the stack behind the target). Emerald Dragons also have {Immune to Earth} (immune to Earth magic) and {Acid Breath} (attacks also hit the stack behind the target). Crystal Dragons also have {Rainbow Breath} (attacks hit enemies 1–5 hexes behind the target).\n\nGreen Dragons are the offspring and servants of Sylanna, the Elemental Dragon of Earth. They nest on sheer cliffs and in hidden caves in the forest. Green Dragons are powerful allies of the elves, and a single blast of Acid Breath can badly wound many creatures.\n\nSee also {Emerald Dragon}, {Crystal Dragon}.",
+		"faction": "rampart",
+		"level": 7,
+		"cost": {
+			"gold": 2430,
+			"gems": 1
+		},
+		"speed": 16,
+		"hitPoints": 202,
+		"attack": 19,
+		"defense": 18,
+		"damage": {
+			"min": 27,
+			"max": 44
+		},
+		"doubleWide": true,
+		"fightValue": 3996,
+		"aiValue": 5205,
+		"growth": 1,
+		"advMapAmount": {
+			"min": 1,
+			"max": 3
+		},
+		"abilities": {
+			"flying": {
+				"type": "FLYING"
+			},
+			"h5AcidBreath": {
+				"type": "MULTIHEX_UNIT_ATTACK",
+				"icon": "h5/abilities/h5AcidBreath",
+				"addInfo": [
+					"FF"
+				],
+				"description": "{Acid Breath}\nAlso hits the stack\nbehind the target"
+			},
+			"dragonNature": {
+				"type": "DRAGON_NATURE"
+			},
+			"skeletonTarget": {
+				"type": "SKELETON_TRANSFORMER_TARGET",
+				"subtype": "boneDragon",
+				"hidden": true
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 1,
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h5/Preserve_Green_Dragon/battle.json",
+			"map": "h5/Preserve_Green_Dragon/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Preserve_Green_Dragon/map/atkL.png",
+			"mapAttackFromRight": "h5/Preserve_Green_Dragon/map/atkR.png",
+			"iconLarge": "h5/Preserve_Green_Dragon/iconLarge.png",
+			"iconSmall": "h5/Preserve_Green_Dragon/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_GreenDragonAttack.ogg",
+			"wince": "h5/h5_GreenDragonHit.ogg",
+			"defend": "h5/h5_GreenDragonHit.ogg",
+			"killed": "h5/h5_GreenDragonDeath.ogg",
+			"move": "h5/h5_GreenDragonMove.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_RETALIATION"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					10,
+					20,
+					30,
+					40,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "NEGATIVE_EFFECTS_IMMUNITY",
+					"subtype": "earth",
+					"description": "{Earth Ward}\nImmune to harmful Earth spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "DOUBLE_DAMAGE_CHANCE"
+				},
+				"values": [
+					2,
+					4,
+					6,
+					8,
+					10,
+					12,
+					14,
+					16,
+					18,
+					20
+				]
+			},
+			{
+				"bonus": {
+					"type": "SPELL_IMMUNITY",
+					"subtype": "poison",
+					"description": "{Immune to Poison}\nUnaffected by Poison"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "SPELL_IMMUNITY",
+					"subtype": "blind",
+					"description": "{Immune to Blind}\nUnaffected by Blind"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true
+				]
+			}
+		],
+		"upgrades": [
+			"h5PreserveGoldDragon",
+			"h5Preserve3rdRainbowDragon"
+		]
+	},
+	"h5PreservePixie": {
+		"name": {
+			"singular": "Pixie",
+			"plural": "Pixies"
+		},
+		"description": "Pixies, Sprites and Dryads are the level 1 units of the Heroes V Sylvan (merged into Rampart). All of them fly and have {No Enemy Retaliation} and {Sweeping Attack} (attacks enemies in the 3 hexes in front at once). Sprites can also cast {Wasp Swarm} and {Cleansing} (2 times per battle, 10 mana). Dryads also have {Symbiosis} (heals a Treant stack by 17 × the number of Dryads and the Dryads themselves by 3 × that number, once per battle).\n\nPixies are the guardian spirits of the Kirsh (the great trees that grow in the forest cities). They live in the branches and earn their keep by tending the great trees in exchange for a home. These creatures are not warlike, but they fight fiercely in defense of their homes. Their swift attacks can hit several targets at once, and their tiny bodies and nimble speed leave enemies unable to retaliate.\n\nSee also {Sprite}, {Dryad}.",
+		"faction": "rampart",
+		"level": 1,
+		"cost": {
+			"gold": 50
+		},
+		"speed": 8,
+		"hitPoints": 4,
+		"attack": 2,
+		"defense": 1,
+		"damage": {
+			"min": 1,
+			"max": 2
+		},
+		"doubleWide": false,
+		"fightValue": 68,
+		"aiValue": 68,
+		"growth": 10,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"flying": {
+				"type": "FLYING"
+			},
+			"blockRetaliation": {
+				"type": "BLOCKS_RETALIATION",
+				"description": "{No Enemy Retaliation}\nNo enemy retaliation"
+			},
+			"threeHeadedAttack": {
+				"type": "THREE_HEADED_ATTACK",
+				"description": "{Sweeping Attack}\nHits enemies in the 3\nhexes in front at once"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 10,
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h5/Preserve_Pixie/battle.json",
+			"map": "h5/Preserve_Pixie/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Preserve_Pixie/map/atkL.png",
+			"mapAttackFromRight": "h5/Preserve_Pixie/map/atkR.png",
+			"iconLarge": "h5/Preserve_Pixie/iconLarge.png",
+			"iconSmall": "h5/Preserve_Pixie/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_Pixie_attack.ogg",
+			"wince": "h5/h5_Pixie_hit.ogg",
+			"defend": "h5/h5_Pixie_hit.ogg",
+			"killed": "h5/h5_Pixie_death.ogg",
+			"move": "h5/h5_Pixie_move.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE"
+				},
+				"values": [
+					2,
+					4,
+					6,
+					8,
+					10,
+					12,
+					14,
+					16,
+					18,
+					20
+				]
+			},
+			{
+				"bonus": {
+					"type": "SPELL_AFTER_ATTACK",
+					"subtype": "disruptingRay",
+					"addInfo": [
+						2,
+						2
+					]
+				},
+				"values": [
+					3,
+					6,
+					9,
+					12,
+					15,
+					18,
+					21,
+					24,
+					27,
+					30
+				]
+			},
+			{
+				"bonus": {
+					"type": "NEGATIVE_EFFECTS_IMMUNITY",
+					"subtype": "air",
+					"description": "{Air Ward}\nImmune to harmful Air spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true
+				]
+			}
+		],
+		"upgrades": [
+			"h5PreserveSprite",
+			"h5Preserve3rdDryad"
+		]
+	},
+	"h5PreserveSprite": {
+		"name": {
+			"singular": "Sprite",
+			"plural": "Sprites"
+		},
+		"description": "Pixies, Sprites and Dryads are the level 1 units of the Heroes V Sylvan (merged into Rampart). All of them fly and have {No Enemy Retaliation} and {Sweeping Attack} (attacks enemies in the 3 hexes in front at once). Sprites can also cast {Wasp Swarm} and {Cleansing} (2 times per battle, 10 mana). Dryads also have {Symbiosis} (heals a Treant stack by 17 × the number of Dryads and the Dryads themselves by 3 × that number, once per battle).\n\nSprites are close kin of the Pixies and live on the higher boughs of the Kirsh trees. Their tiny bodies and nimble speed let them attack several targets at once and withdraw before the enemy can retaliate. Closely bound to the forest, they can call on the power of nature to cast spells in battle.\n\nSee also {Pixie}, {Dryad}.",
+		"faction": "rampart",
+		"level": 1,
+		"cost": {
+			"gold": 80
+		},
+		"speed": 9,
+		"hitPoints": 5,
+		"attack": 4,
+		"defense": 1,
+		"damage": {
+			"min": 2,
+			"max": 2
+		},
+		"doubleWide": false,
+		"fightValue": 114,
+		"aiValue": 115,
+		"growth": 10,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"flying": {
+				"type": "FLYING"
+			},
+			"blockRetaliation": {
+				"type": "BLOCKS_RETALIATION",
+				"description": "{No Enemy Retaliation}\nNo enemy retaliation"
+			},
+			"threeHeadedAttack": {
+				"type": "THREE_HEADED_ATTACK",
+				"description": "{Sweeping Attack}\nHits enemies in the 3\nhexes in front at once"
+			},
+			"cast_h5AbWaspSwarm": {
+				"type": "SPELLCASTER",
+				"subtype": "h5AbWaspSwarm",
+				"val": 0
+			},
+			"cast_h5AbDispel": {
+				"type": "SPELLCASTER",
+				"subtype": "h5AbDispel",
+				"val": 2
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 10,
+				"hidden": true
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 2
+			},
+			"h5Mana": {
+				"type": "H5_MANA_H5C",
+				"val": 10,
+				"stacking": "h5PreserveSpriteExpH5ManaH5c"
+			},
+			"h5ManaMin": {
+				"type": "H5_MANA_MIN_H5C",
+				"val": 5,
+				"hidden": true
+			},
+			"h5ManaPool": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5ManaPool",
+				"hidden": true,
+				"description": "~"
+			}
+		},
+		"graphics": {
+			"animation": "h5/Preserve_Sprite/battle.json",
+			"map": "h5/Preserve_Sprite/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Preserve_Sprite/map/atkL.png",
+			"mapAttackFromRight": "h5/Preserve_Sprite/map/atkR.png",
+			"iconLarge": "h5/Preserve_Sprite/iconLarge.png",
+			"iconSmall": "h5/Preserve_Sprite/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_Spirit_attack.ogg",
+			"wince": "h5/h5_Spirit_hit.ogg",
+			"defend": "h5/h5_Spirit_hit.ogg",
+			"killed": "h5/h5_Spirit_death.ogg",
+			"move": "h5/h5_Spirit_move.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE"
+				},
+				"values": [
+					2,
+					4,
+					6,
+					8,
+					10,
+					12,
+					14,
+					16,
+					18,
+					20
+				]
+			},
+			{
+				"bonus": {
+					"type": "SPELL_AFTER_ATTACK",
+					"subtype": "disruptingRay",
+					"addInfo": [
+						2,
+						2
+					]
+				},
+				"values": [
+					4,
+					8,
+					12,
+					16,
+					20,
+					24,
+					28,
+					32,
+					36,
+					40
+				]
+			},
+			{
+				"bonus": {
+					"type": "H5_MANA_H5C",
+					"stacking": "h5PreserveSpriteExpH5ManaH5c"
+				},
+				"values": [
+					10,
+					10,
+					10,
+					10,
+					10,
+					15,
+					15,
+					15,
+					15,
+					15
+				]
+			}
+		]
+	},
+	"h5PreserveTreant": {
+		"name": {
+			"singular": "Treant",
+			"plural": "Treants"
+		},
+		"description": "Treants, Ancient Treants and Savage Treants are the level 6 units of the Heroes V Sylvan (merged into Rampart). All of them have {Enrage} (Attack rises when a friendly stack dies) and {Entangling Roots} (attacks entangle the target so that it cannot move). Ancient Treants also have {Take Roots} (+50% Defense when waiting or defending, and unlimited retaliations until their next action). Savage Treants also have {Immune to Slow} (immune to Slow) and {Rage of the Forest} (converts half of Defense into Attack and raises Speed, but no longer entangles).\n\nTreants are the embodiment of the forest. At the bidding of the mightiest druids, they have left the deep woods. It is said that when the first elves entered the depths of the primeval forest, they found the Treants already waiting for them, and the Treants swore to serve the forest kingdom forever. Do not underestimate them for their clumsy gait: these sturdy trunks are extremely resistant to blows, and any enemy creature that fights a Treant will be tightly entangled by its vines, roots and branches.\n\nSee also {Ancient Treant}, {Savage Treant}.",
+		"faction": "rampart",
+		"level": 6,
+		"cost": {
+			"gold": 740
+		},
+		"speed": 7,
+		"hitPoints": 134,
+		"attack": 14,
+		"defense": 17,
+		"damage": {
+			"min": 7,
+			"max": 16
+		},
+		"doubleWide": true,
+		"fightValue": 1148,
+		"aiValue": 1356,
+		"growth": 2,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"h5Enraged": {
+				"icon": "h5/abilities/enraged",
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5Enraged",
+				"description": "{Enrage}\nAttack rises whenever\nan allied stack dies"
+			},
+			"h5EntanglingRoots": {
+				"type": "SPELL_AFTER_ATTACK",
+				"subtype": "bind",
+				"val": 100,
+				"addInfo": [
+					0,
+					2
+				],
+				"description": "{Entangling Roots}\nAttacks root the target\nin place"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 2,
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h5/Preserve_Treant/battle.json",
+			"map": "h5/Preserve_Treant/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Preserve_Treant/map/atkL.png",
+			"mapAttackFromRight": "h5/Preserve_Treant/map/atkR.png",
+			"iconLarge": "h5/Preserve_Treant/iconLarge.png",
+			"iconSmall": "h5/Preserve_Treant/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_Dendroid_attack.ogg",
+			"wince": "h5/h5_Dendroid_hit.ogg",
+			"defend": "h5/h5_Dendroid_hit.ogg",
+			"killed": "h5/h5_Dendroid_death.ogg",
+			"move": "h5/h5_Dendroid_move.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					2,
+					3,
+					4,
+					5,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "HP_REGENERATION"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "NEGATIVE_EFFECTS_IMMUNITY",
+					"subtype": "earth",
+					"description": "{Earth Ward}\nImmune to harmful Earth spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_RETALIATION"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			}
+		],
+		"upgrades": [
+			"h5PreserveTreantGuardian",
+			"h5Preserve3rdAngerTreant"
+		]
+	},
+	"h5PreserveTreantGuardian": {
+		"name": {
+			"singular": "Ancient Treant",
+			"plural": "Ancient Treants"
+		},
+		"description": "Treants, Ancient Treants and Savage Treants are the level 6 units of the Heroes V Sylvan (merged into Rampart). All of them have {Enrage} (Attack rises when a friendly stack dies) and {Entangling Roots} (attacks entangle the target so that it cannot move). Ancient Treants also have {Take Roots} (+50% Defense when waiting or defending, and unlimited retaliations until their next action). Savage Treants also have {Immune to Slow} (immune to Slow) and {Rage of the Forest} (converts half of Defense into Attack and raises Speed, but no longer entangles).\n\nThese trees have risen one after another to aid the elves at war. Ancient Treants can bind enemies tightly with their vines, roots and branches, slowly but very surely. In addition, their ability to take root makes Ancient Treants even harder to deal with.\n\nSee also {Treant}, {Savage Treant}.",
+		"faction": "rampart",
+		"level": 6,
+		"cost": {
+			"gold": 940
+		},
+		"speed": 7,
+		"hitPoints": 139,
+		"attack": 14,
+		"defense": 18,
+		"damage": {
+			"min": 9,
+			"max": 19
+		},
+		"doubleWide": true,
+		"fightValue": 1333,
+		"aiValue": 1574,
+		"growth": 2,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"h5Enraged": {
+				"icon": "h5/abilities/enraged",
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5Enraged",
+				"description": "{Enrage}\nAttack rises whenever\nan allied stack dies"
+			},
+			"h5TakeRoots": {
+				"icon": "h5/abilities/takeRoots",
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5TakeRoots",
+				"val": 50,
+				"description": "{Take Roots}\nWait/Defend: +50% Defense,\nunlimited retaliation"
+			},
+			"h5EntanglingRoots": {
+				"type": "SPELL_AFTER_ATTACK",
+				"subtype": "bind",
+				"val": 100,
+				"addInfo": [
+					0,
+					2
+				],
+				"description": "{Entangling Roots}\nAttacks root the target\nin place"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 2,
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h5/Preserve_Treant_Guardian/battle.json",
+			"map": "h5/Preserve_Treant_Guardian/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Preserve_Treant_Guardian/map/atkL.png",
+			"mapAttackFromRight": "h5/Preserve_Treant_Guardian/map/atkR.png",
+			"iconLarge": "h5/Preserve_Treant_Guardian/iconLarge.png",
+			"iconSmall": "h5/Preserve_Treant_Guardian/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_DendroidSoldier_Attack.ogg",
+			"wince": "h5/h5_DendroidSoldier_Hit.ogg",
+			"defend": "h5/h5_DendroidSoldier_Hit.ogg",
+			"killed": "h5/h5_DendroidSoldier_Death.ogg",
+			"move": "h5/h5_DendroidSoldier_Move.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					2,
+					3,
+					4,
+					5,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "HP_REGENERATION"
+				},
+				"values": [
+					6,
+					12,
+					18,
+					24,
+					30,
+					36,
+					42,
+					48,
+					54,
+					60
+				]
+			},
+			{
+				"bonus": {
+					"type": "NEGATIVE_EFFECTS_IMMUNITY",
+					"subtype": "earth",
+					"description": "{Earth Ward}\nImmune to harmful Earth spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "DEFENSIVE_STANCE",
+					"valueType": "ADDITIVE_VALUE"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					6,
+					7
+				]
+			}
+		]
+	},
+	"h5PreserveUnicorn": {
+		"name": {
+			"singular": "Unicorn",
+			"plural": "Unicorns"
+		},
+		"description": "Unicorns, Silver Unicorns and Pristine Unicorns are the level 5 units of the Heroes V Sylvan (merged into Rampart). Unicorns have {Anti-Magic Aura} (+30% magic resistance for adjacent allies). Silver Unicorns have {Blinding Attack} (melee attacks have a chance to blind the target) and {Anti-Magic Aura} (+30% magic resistance for adjacent allies). Pristine Unicorns have {Blinding Attack} (melee attacks have a chance to blind the target) and {Bond of Light} (when an ally receives Light magic, they also gain its effect at Expert level).\n\nUnicorns are the spirits of nature and the sacred beasts of the elves. They are regarded as the totem of all Irollan, and it is said that when the last Unicorn dies, the elven kingdom and all its people will meet their doom. Though the truth of this legend cannot be known, the shining aura of the Unicorn truly shields its allies from enemy magic.\n\nSee also {Silver Unicorn}, {Pristine Unicorn}.",
+		"faction": "rampart",
+		"level": 5,
+		"cost": {
+			"gold": 490
+		},
+		"speed": 7,
+		"hitPoints": 42,
+		"attack": 10,
+		"defense": 10,
+		"damage": {
+			"min": 9,
+			"max": 19
+		},
+		"doubleWide": true,
+		"fightValue": 667,
+		"aiValue": 743,
+		"growth": 3,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"h5AreaZone": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5AreaZone",
+				"val": 0,
+				"stacking": "h5AreaZone",
+				"propagator": "BATTLE_WIDE",
+				"hidden": true,
+				"description": "~"
+			},
+			"h5MagicResAura": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5AllyAura",
+				"val": 1,
+				"icon": "h5/abilities/auraMagicRes",
+				"description": "{Anti-Magic Aura}\nAdjacent allies +30%\nMagic Resistance"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 3,
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h5/Preserve_Unicorn/battle.json",
+			"map": "h5/Preserve_Unicorn/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Preserve_Unicorn/map/atkL.png",
+			"mapAttackFromRight": "h5/Preserve_Unicorn/map/atkR.png",
+			"iconLarge": "h5/Preserve_Unicorn/iconLarge.png",
+			"iconSmall": "h5/Preserve_Unicorn/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_Unicorn_attack.ogg",
+			"wince": "h5/h5_Unicorn_hit.ogg",
+			"defend": "h5/h5_Unicorn_hit.ogg",
+			"killed": "h5/h5_Unicorn_death.ogg",
+			"move": "h5/h5_Unicorn_move.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					3,
+					4,
+					5,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					3,
+					4,
+					4,
+					6,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					2,
+					3,
+					3,
+					4,
+					5,
+					6,
+					6,
+					7
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					7
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "SPELL_AFTER_ATTACK",
+					"subtype": "blind",
+					"addInfo": [
+						2,
+						2
+					]
+				},
+				"values": [
+					5,
+					5,
+					10,
+					10,
+					15,
+					15,
+					20,
+					20,
+					25,
+					30
+				]
+			},
+			{
+				"bonus": {
+					"type": "SPELL_IMMUNITY",
+					"subtype": "blind",
+					"description": "{Immune to Blind}\nUnaffected by Blind"
+				},
+				"values": [
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_RETALIATION"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			}
+		],
+		"upgrades": [
+			"h5PreserveWarUnicorn",
+			"h5Preserve3rdWhiteUnicorn"
+		]
+	},
+	"h5PreserveWarDancer": {
+		"name": {
+			"singular": "War Dancer",
+			"plural": "War Dancers"
+		},
+		"description": "Blade Dancers, War Dancers and Wind Dancers are the level 2 units of the Heroes V Sylvan (merged into Rampart). War Dancers have {War Dance Combo} (attacks all adjacent enemies; half damage to secondary targets). Wind Dancers have {Agility} (+2 Defense for each hex moved, until the end of their next action).\n\nAfter long, hard training in the blade dance, some elven warriors master a dance technique that spreads damage to all nearby enemies. War Dancers have even more refined agility and coordination and can attack all adjacent enemy creatures.\n\nSee also {Blade Dancer}, {Wind Dancer}.",
+		"faction": "rampart",
+		"level": 2,
+		"cost": {
+			"gold": 225
+		},
+		"speed": 8,
+		"hitPoints": 14,
+		"attack": 9,
+		"defense": 5,
+		"damage": {
+			"min": 3,
+			"max": 5
+		},
+		"doubleWide": false,
+		"fightValue": 268,
+		"aiValue": 299,
+		"growth": 6,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"attackAllAdjacent": {
+				"type": "ATTACKS_ALL_ADJACENT",
+				"description": "{War Dance Combo}\nHits all adjacent foes\nhalf dmg to non-targets"
+			},
+			"h5WarDance": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5WarDance",
+				"val": 50,
+				"icon": "h5/abilities/h5WarDance"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 9,
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h5/Preserve_War_Dancer/battle.json",
+			"map": "h5/Preserve_War_Dancer/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Preserve_War_Dancer/map/atkL.png",
+			"mapAttackFromRight": "h5/Preserve_War_Dancer/map/atkR.png",
+			"iconLarge": "h5/Preserve_War_Dancer/iconLarge.png",
+			"iconSmall": "h5/Preserve_War_Dancer/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_WarDancer_attack.ogg",
+			"wince": "h5/h5_WarDancer_hit.ogg",
+			"defend": "h5/h5_WarDancer_hit.ogg",
+			"killed": "h5/h5_WarDancer_death.ogg",
+			"move": "h5/h5_WarDancer_move.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					3,
+					3,
+					3,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					3,
+					4,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					0,
+					1,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					3,
+					3,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_ATTACK"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "DOUBLE_DAMAGE_CHANCE"
+				},
+				"values": [
+					3,
+					6,
+					9,
+					12,
+					15,
+					18,
+					21,
+					24,
+					27,
+					30
+				]
+			}
+		]
+	},
+	"h5PreserveWarUnicorn": {
+		"name": {
+			"singular": "Silver Unicorn",
+			"plural": "Silver Unicorns"
+		},
+		"description": "Unicorns, Silver Unicorns and Pristine Unicorns are the level 5 units of the Heroes V Sylvan (merged into Rampart). Unicorns have {Anti-Magic Aura} (+30% magic resistance for adjacent allies). Silver Unicorns have {Blinding Attack} (melee attacks have a chance to blind the target) and {Anti-Magic Aura} (+30% magic resistance for adjacent allies). Pristine Unicorns have {Blinding Attack} (melee attacks have a chance to blind the target) and {Bond of Light} (when an ally receives Light magic, they also gain its effect at Expert level).\n\nSilver Unicorns come from the heart of the forest. Powerful allies of the elves, they stand ready to drive out any invader. The Silver Unicorn's Anti-Magic Aura protects all creatures around it from enemy magic, and when Silver Unicorns attack, a dazzling bolt of lightning shoots from their gleaming horns, blinding the enemy for a time.\n\nSee also {Unicorn}, {Pristine Unicorn}.",
+		"faction": "rampart",
+		"level": 5,
+		"cost": {
+			"gold": 705
+		},
+		"speed": 7,
+		"hitPoints": 57,
+		"attack": 14,
+		"defense": 15,
+		"damage": {
+			"min": 9,
+			"max": 19
+		},
+		"doubleWide": true,
+		"fightValue": 897,
+		"aiValue": 998,
+		"growth": 3,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"h5BlindingAttack": {
+				"icon": "h5/abilities/blindingAttack",
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5ProcSpell",
+				"addInfo": {
+					"spell": "h5AbBlind",
+					"pf": 1.0,
+					"power": 8,
+					"mastery": 1,
+					"melee": true,
+					"ranged": false
+				},
+				"description": "{Blinding Attack}\nMelee attacks may\nBlind the target"
+			},
+			"h5AreaZone": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5AreaZone",
+				"val": 0,
+				"stacking": "h5AreaZone",
+				"propagator": "BATTLE_WIDE",
+				"hidden": true,
+				"description": "~"
+			},
+			"h5MagicResAura": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5AllyAura",
+				"val": 1,
+				"icon": "h5/abilities/auraMagicRes",
+				"description": "{Anti-Magic Aura}\nAdjacent allies +30%\nMagic Resistance"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 3,
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h5/Preserve_War_Unicorn/battle.json",
+			"map": "h5/Preserve_War_Unicorn/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Preserve_War_Unicorn/map/atkL.png",
+			"mapAttackFromRight": "h5/Preserve_War_Unicorn/map/atkR.png",
+			"iconLarge": "h5/Preserve_War_Unicorn/iconLarge.png",
+			"iconSmall": "h5/Preserve_War_Unicorn/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_WarUnicorn_attack.ogg",
+			"wince": "h5/h5_WarUnicorn_hit.ogg",
+			"defend": "h5/h5_WarUnicorn_hit.ogg",
+			"killed": "h5/h5_WarUnicorn_death.ogg",
+			"move": "h5/h5_WarUnicorn_move.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					3,
+					4,
+					5,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					3,
+					4,
+					4,
+					6,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					2,
+					3,
+					3,
+					4,
+					5,
+					6,
+					6,
+					7
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					7
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "SPELL_IMMUNITY",
+					"subtype": "blind",
+					"description": "{Immune to Blind}\nUnaffected by Blind"
+				},
+				"values": [
+					false,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "MIND_IMMUNITY",
+					"description": "{Steadfast Mind}\nImmune to Mind spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_RETALIATION"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			}
+		]
+	},
+	"h5PreserveWoodElf": {
+		"name": {
+			"singular": "Hunter",
+			"plural": "Hunters"
+		},
+		"description": "Hunters, Master Hunters and Arcane Archers are the level 3 units of the Heroes V Sylvan (merged into Rampart). All of them have a ranged attack. Hunters have {Elven Double Shot} (shoots twice). Master Hunters also have {Elven Double Shot} (shoots twice) and {Warding Arrows} (shots have a chance to push the target's ATB back by 20%). Arcane Archers also have {Piercing Arrow} (shots ignore 50% of Defense and have a chance to knock the target back 1 hex) and {No Range Penalty} (no ranged penalty).\n\nIn peacetime, Hunters provide food for forest society and are respected by their people for their skill and strength. Hunters are found throughout Ashan; they obey the law, live in harmony with nature and never kill needlessly. When war comes, Hunters rise without hesitation to protect the forest from invaders. They are famed for the speed of their strikes: before the enemy can react, two furious arrows are already whistling toward it.\n\nSee also {Master Hunter}, {Arcane Archer}.",
+		"faction": "rampart",
+		"level": 3,
+		"cost": {
+			"gold": 190
+		},
+		"speed": 6,
+		"hitPoints": 11,
+		"attack": 6,
+		"defense": 1,
+		"damage": {
+			"min": 3,
+			"max": 6
+		},
+		"doubleWide": false,
+		"fightValue": 249,
+		"aiValue": 295,
+		"growth": 6,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"shooter": {
+				"type": "SHOOTER"
+			},
+			"h5DoubleShot": {
+				"type": "ADDITIONAL_ATTACK",
+				"val": 1,
+				"effectRange": "ONLY_DISTANCE_FIGHT",
+				"description": "{Elven Double Shot}\nShoots twice"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 7,
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h5/Preserve_Wood_Elf/battle.json",
+			"map": "h5/Preserve_Wood_Elf/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Preserve_Wood_Elf/map/atkL.png",
+			"mapAttackFromRight": "h5/Preserve_Wood_Elf/map/atkR.png",
+			"iconLarge": "h5/Preserve_Wood_Elf/iconLarge.png",
+			"iconSmall": "h5/Preserve_Wood_Elf/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"frameAngles": [
+					90,
+					60,
+					45,
+					30,
+					0,
+					-30,
+					-45,
+					-60,
+					-90
+				],
+				"offset": {
+					"upperX": -22,
+					"upperY": -60,
+					"middleX": -19,
+					"middleY": -66,
+					"lowerX": 1,
+					"lowerY": -70
+				},
+				"attackClimaxFrame": 6,
+				"projectile": "h5/Preserve_Wood_Elf/projectile.json"
+			}
+		},
+		"sound": {
+			"attack": "h5/h5_WoodElf_Attack.ogg",
+			"wince": "h5/h5_WoodElf_Hit.ogg",
+			"defend": "h5/h5_WoodElf_Hit.ogg",
+			"killed": "h5/h5_WoodElf_Death.ogg",
+			"move": "h5/h5_WoodElf_Move.ogg",
+			"shoot": "h5/h5_WoodElf_RangeAttack.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_DISTANCE_PENALTY",
+					"description": "{Sharpshooter}\nNo penalty for long-range shots"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "SHOTS"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_WALL_PENALTY",
+					"description": "{Siege Shooter}\nNo damage loss when shooting over walls"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "ENEMY_DEFENCE_REDUCTION"
+				},
+				"values": [
+					2,
+					4,
+					6,
+					8,
+					10,
+					12,
+					14,
+					16,
+					18,
+					20
+				]
+			}
+		],
+		"shots": 24,
+		"upgrades": [
+			"h5PreserveGrandElf",
+			"h5Preserve3rdSharpShooter"
+		]
+	}
+}

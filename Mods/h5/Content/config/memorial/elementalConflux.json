@@ -1,0 +1,72 @@
+{
+	"core:creatureGeneratorSpecial": {
+		"types": {
+			"elementalConfluxH5": {
+				"name": "Elemental Conflux H5",
+				"kingdomOverviewImage": "icons/kingdomOverview/object-pack-elemental-conflux-h567/elementalConfluxH5",
+				"bannedForRandomDwelling": true,
+				"creatures": [
+					[
+						"heroes-memorial.h5:h5NeutralsAirElemental"
+					],
+					[
+						"heroes-memorial.h5:h5NeutralsWaterElemental"
+					],
+					[
+						"heroes-memorial.h5:h5NeutralsFireElemental"
+					],
+					[
+						"heroes-memorial.h5:h5NeutralsEarthElemental"
+					],
+					[
+						"tears-of-ashan:lightElementalAU"
+					],
+					[
+						"tears-of-ashan:darkElementalAU"
+					]
+				],
+				"guards": [
+					{
+						"amount": 3,
+						"type": "heroes-memorial.h5:h5NeutralsAirElemental"
+					},
+					{
+						"amount": 3,
+						"type": "heroes-memorial.h5:h5NeutralsWaterElemental"
+					},
+					{
+						"amount": 3,
+						"type": "heroes-memorial.h5:h5NeutralsFireElemental"
+					},
+					{
+						"amount": 3,
+						"type": "heroes-memorial.h5:h5NeutralsEarthElemental"
+					},
+					{
+						"amount": 2,
+						"type": "tears-of-ashan:lightElementalAU"
+					},
+					{
+						"amount": 2,
+						"type": "tears-of-ashan:darkElementalAU"
+					}
+				],
+				"sounds": {
+					"ambient": [
+						"objects/elementalConfluxH5_ambient"
+					]
+				},
+				"templates": {
+					"default": {
+						"animation": "objects/elementalConflux/elementalConfluxH5.json",
+						"mask": [
+							"VVVV",
+							"VBBB",
+							"VBAB"
+						]
+					}
+				}
+			}
+		}
+	}
+}

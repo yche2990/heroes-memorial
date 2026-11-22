@@ -1,0 +1,1533 @@
+{
+	"h5PlagueTick": {
+		"implements": "combatEvent",
+		"script": "combat/h5PlagueTick",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {},
+			"additionalProperties": false
+		},
+		"description": "{Decay}\nTakes ${val} Earth damage after each action."
+	},
+	"h5ShieldTick": {
+		"implements": "combatEvent",
+		"script": "combat/h5ShieldTick",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"reduce": {
+					"type": "number"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": "{Celestial Shield}\nAttack damage taken is reduced by ${reduce}%, absorbing up to ${val} damage in total."
+	},
+	"h5Frags": {
+		"implements": "combatEvent",
+		"script": "combat/h5Frags",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {},
+			"additionalProperties": false
+		},
+		"description": ""
+	},
+	"h5ProcSpell": {
+		"implements": "combatEvent",
+		"script": "combat/h5ProcSpell",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"spell": {
+					"type": "string"
+				},
+				"spells": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"pf": {
+					"type": "number"
+				},
+				"chance": {
+					"type": "number"
+				},
+				"power": {
+					"type": "number"
+				},
+				"mastery": {
+					"type": "number"
+				},
+				"melee": {
+					"type": "boolean"
+				},
+				"ranged": {
+					"type": "boolean"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": ""
+	},
+	"h5ProcEffect": {
+		"implements": "combatEvent",
+		"script": "combat/h5ProcEffect",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"effect": {
+					"type": "string",
+					"enum": [
+						"bash",
+						"extraAttack",
+						"atbReset",
+						"fear",
+						"pushAtb",
+						"atbDrop"
+					]
+				},
+				"pf": {
+					"type": "number"
+				},
+				"melee": {
+					"type": "boolean"
+				},
+				"ranged": {
+					"type": "boolean"
+				},
+				"amount": {
+					"type": "number"
+				},
+				"perCell": {
+					"type": "boolean"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": ""
+	},
+	"h5PiercingArrow": {
+		"implements": "combatEvent",
+		"script": "combat/h5PiercingArrow",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"ignore": {
+					"type": "number"
+				},
+				"pf": {
+					"type": "number"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": "{Piercing Arrow}\nShots ignore ${ignore}% of the target's Defense and may knock the target back one hex."
+	},
+	"h5Poison": {
+		"implements": "combatEvent",
+		"script": "combat/h5Poison",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"perCreature": {
+					"type": "number"
+				},
+				"turns": {
+					"type": "number"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": "{Poisonous Attack}\nAttacks poison the enemy: for the next ${turns} rounds it takes “${perCreature} x this stack's count” damage each round."
+	},
+	"h5PoisonTick": {
+		"implements": "combatEvent",
+		"script": "combat/h5PoisonTick",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {},
+			"additionalProperties": false
+		},
+		"description": "{Poison}\nTakes ${val} damage at the start of each round."
+	},
+	"h5Regeneration": {
+		"implements": "combatEvent",
+		"script": "combat/h5Regeneration",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"min": {
+					"type": "number"
+				},
+				"max": {
+					"type": "number"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": "{Vitality Regeneration}\nRestores ${min}-${max} Hit Points at the start of each round."
+	},
+	"h5Enraged": {
+		"implements": "combatEvent",
+		"script": "combat/h5Enraged",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {},
+			"additionalProperties": false
+		},
+		"description": "{Enrage}\nEach time a friendly stack is wiped out, Attack rises by “the fallen creature's Attack x that stack's share of army strength” (rounded, at least +1), cumulative per stack."
+	},
+	"h5BattleRage": {
+		"implements": "combatEvent",
+		"script": "combat/h5BattleRage",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"attack": {
+					"type": "number"
+				},
+				"initiative": {
+					"type": "number"
+				},
+				"turns": {
+					"type": "number"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": "{Battle Rage}\nAfter taking damage: +${attack} Attack and +${initiative} Initiative for ${turns} rounds."
+	},
+	"h5BattleFrenzy": {
+		"implements": "combatEvent",
+		"script": "combat/h5BattleFrenzy",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {},
+			"additionalProperties": false
+		},
+		"description": "{Battle Frenzy}\nEach retaliation deals ${val}% of the previous retaliation's damage."
+	},
+	"h5FierceRetaliation": {
+		"implements": "combatEvent",
+		"script": "combat/h5FierceRetaliation",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {},
+			"additionalProperties": false
+		},
+		"description": "{Fierce Retaliation}\nRetaliation deals ${val}% of normal damage."
+	},
+	"h5FastAttack": {
+		"implements": "combatEvent",
+		"script": "combat/h5FastAttack",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {},
+			"additionalProperties": false
+		},
+		"description": "{Swift Attack}\nWhen attacking a slowed target, the target cannot retaliate."
+	},
+	"h5AntiGiant": {
+		"implements": "combatEvent",
+		"script": "combat/h5AntiGiant",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"attack": {
+					"type": "number"
+				},
+				"defence": {
+					"type": "number"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": "{Giant Slayer}\n+${attack} Attack and +${defence} Defense when fighting large creatures."
+	},
+	"h5AxeOfSlaughter": {
+		"implements": "combatEvent",
+		"script": "combat/h5AxeOfSlaughter",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {},
+			"additionalProperties": false
+		},
+		"description": "{Blade of Slaughter}\nAttacks and retaliations deal an extra “target count x ${val}” damage to the target."
+	},
+	"h5VorpalSword": {
+		"implements": "combatEvent",
+		"script": "combat/h5VorpalSword",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {},
+			"additionalProperties": false
+		},
+		"description": "{Soul Stealer}\nEach attack or retaliation kills at least ${val} enemy units."
+	},
+	"h5DeadlyStrike": {
+		"implements": "combatEvent",
+		"script": "combat/h5DeadlyStrike",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"share": {
+					"type": "number"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": "{Deadly Strike}\nAttacks and retaliations have a ${val}% chance to strike off ${share}% of the enemy stack's total Hit Points."
+	},
+	"h5WeakeningStrike": {
+		"implements": "combatEvent",
+		"script": "combat/h5WeakeningStrike",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {},
+			"additionalProperties": false
+		},
+		"description": "{Weakening Strike}\nEach hit lowers the enemy's Attack and Defense by ${val} each (cumulative for the battle, not below 0)."
+	},
+	"h5TakeRoots": {
+		"implements": "combatEvent",
+		"script": "combat/h5TakeRoots",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {},
+			"additionalProperties": false
+		},
+		"description": "{Take Roots}\n+${val}% Defense when waiting or defending, and unlimited retaliations until the end of its next action."
+	},
+	"h5PreparedPosition": {
+		"implements": "combatEvent",
+		"script": "combat/h5PreparedPosition",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {},
+			"additionalProperties": false
+		},
+		"description": "{Prepared Position}\n+${val} Defense while standing on its deployment position; lost permanently once it moves away."
+	},
+	"h5Agility": {
+		"implements": "combatEvent",
+		"script": "combat/h5Agility",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {},
+			"additionalProperties": false
+		},
+		"description": "{Agility}\n+${val} Defense per hex moved, until the end of its next action."
+	},
+	"h47Incorporeal": {
+		"implements": "combatEvent",
+		"script": "combat/h47Incorporeal",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"mark": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": ""
+	},
+	"core:damageCalculator": {
+		"patches": {
+			"append": "damage/h5DamagePatch"
+		}
+	},
+	"h5ForgetRetaliation": {
+		"implements": "combatEvent",
+		"script": "combat/h5ForgetRetaliation",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {},
+			"additionalProperties": false
+		},
+		"description": ""
+	},
+	"h5AcidBlood": {
+		"implements": "combatEvent",
+		"script": "combat/h5AcidBlood",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {},
+			"additionalProperties": false
+		},
+		"description": "{Acid Blood}\nWhen attacked in melee, sprays acid toward the attacker's side; enemies within 4 hexes in a line take ${val}% of this stack's normal damage"
+	},
+	"h5ChainShot": {
+		"implements": "combatEvent",
+		"script": "combat/h5ChainShot",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"targets": {
+					"type": "number"
+				},
+				"factor": {
+					"type": "number"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": "{Chain Shot}\nAfter a shot, the arrow jumps in turn to the ${targets} nearest enemy stacks, halving damage with each jump; Demons are unaffected"
+	},
+	"h5ChampionCharge": {
+		"implements": "combatEvent",
+		"script": "combat/h5ChampionCharge",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"minDistance": {
+					"type": "number"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": "{Champion Charge}\nAfter charging at least ${minDistance} hexes, a melee attack deals ${val}% damage to the enemy behind the target"
+	},
+	"h5Cowardice": {
+		"implements": "combatEvent",
+		"script": "combat/h5Cowardice",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {},
+			"additionalProperties": false
+		},
+		"description": "{Cowardice}\nDoes not retaliate after being attacked in melee and flees to a random empty hex within movement range"
+	},
+	"h5DeathCloud": {
+		"implements": "combatEvent",
+		"script": "combat/h5DeathCloud",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {},
+			"additionalProperties": false
+		},
+		"description": "{Death Cloud}\nWhen shooting, non-undead stacks around the target (friend or foe) take ${val}% damage"
+	},
+	"h5MagicAttack": {
+		"implements": "combatEvent",
+		"script": "combat/h5MagicAttack",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {},
+			"additionalProperties": false
+		},
+		"description": "{Magic Strike}\nEvery stack along the line of fire (including friendly ones) takes the same damage"
+	},
+	"h5LightningBreath": {
+		"implements": "combatEvent",
+		"script": "combat/h5LightningBreath",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {},
+			"additionalProperties": false
+		},
+		"description": "{Lightning Breath}\nWhen attacking, the target and enemies adjacent to it share the damage; no effect on retaliation"
+	},
+	"h5LiquidFlame": {
+		"implements": "combatEvent",
+		"script": "combat/h5LiquidFlame",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"turns": {
+					"type": "number"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": "{Liquid Flame}\nAfter attacking, leaves fire on the target's hex for ${turns} rounds; stacks entering the fire take ${val} Fire damage per Lava Dragon"
+	},
+	"h5LizardBite": {
+		"implements": "combatEvent",
+		"script": "combat/h5LizardBite",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {},
+			"additionalProperties": false
+		},
+		"description": "{Lizard Bite}\nWhen an ally attacks an enemy adjacent to this stack, this stack bites too, dealing ${val}% of normal damage"
+	},
+	"h5PackHunter": {
+		"implements": "combatEvent",
+		"script": "combat/h5PackHunter",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {},
+			"additionalProperties": false
+		},
+		"description": "{Pack Hunter}\nWhen attacking, other Wolf packs adjacent to the target join the attack"
+	},
+	"h5RainbowBreath": {
+		"implements": "combatEvent",
+		"script": "combat/h5RainbowBreath",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"maxRadius": {
+					"type": "number"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": "{Rainbow Breath}\nEnemies in random hexes 1-${maxRadius} behind the target in the attack direction each take normal damage once"
+	},
+	"h5RideByAttack": {
+		"implements": "combatEvent",
+		"script": "combat/h5RideByAttack",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {},
+			"additionalProperties": false
+		},
+		"description": "{Ride-By Attack}\nWhen charging, enemies adjacent to both sides of the path take ${val}% damage"
+	},
+	"h5RiderCharge": {
+		"implements": "combatEvent",
+		"script": "combat/h5RiderCharge",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {},
+			"additionalProperties": false
+		},
+		"description": "{Rider Charge}\nFor each hex charged, ${val}% of the target's Defense is ignored (max 100%)"
+	},
+	"h5ShieldWall": {
+		"implements": "combatEvent",
+		"script": "combat/h5ShieldWall",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"max": {
+					"type": "number"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": "{Shield Wall}\nFor each hex an enemy moves before a melee attack, damage to this stack is reduced by ${val}% (max ${max}%); no effect against flyers"
+	},
+	"h5Stormstrike": {
+		"implements": "combatEvent",
+		"script": "combat/h5Stormstrike",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {},
+			"additionalProperties": false
+		},
+		"description": "{Stormstrike}\nAfter a melee hit, lightning chains between adjacent enemies, each taking the same damage as the hit"
+	},
+	"h5Flamewave": {
+		"implements": "combatEvent",
+		"script": "combat/h5Flamewave",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"pf": {
+					"type": "number"
+				},
+				"length": {
+					"type": "number"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": "{Flamewave}\nAttacks may unleash a fan-shaped wave of fire; within ${length} rows behind the target, row N takes 1/N of base damage"
+	},
+	"h5FrightAura": {
+		"implements": "combatEvent",
+		"script": "combat/h5FrightAura",
+		"patches": [],
+		"priority": 100,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"range": {
+					"type": "number"
+				},
+				"morale": {
+					"type": "number"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": "{Aura of Fear}\nEnemies within ${range} hexes have -${morale} Morale"
+	},
+	"h5SearingAura": {
+		"implements": "combatEvent",
+		"script": "combat/h5SearingAura",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {},
+			"additionalProperties": false
+		},
+		"description": "{Searing Aura}\nAdjacent enemies take ${val} Fire damage per creature in this stack before each of their actions"
+	},
+	"h5WarDance": {
+		"implements": "combatEvent",
+		"script": "combat/h5WarDance",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {},
+			"additionalProperties": false
+		},
+		"description": "{War Dance Combo}\nAttacks all surrounding enemies; the main target takes normal damage, others take ${val}% damage"
+	},
+	"h5AreaZone": {
+		"implements": "combatEvent",
+		"script": "combat/h5AreaZone",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {},
+			"additionalProperties": false
+		},
+		"description": ""
+	},
+	"h5DemonRage": {
+		"implements": "combatEvent",
+		"script": "combat/h5DemonRage",
+		"patches": [],
+		"priority": 5,
+		"schema": {
+			"type": "object",
+			"properties": {},
+			"additionalProperties": false
+		},
+		"description": ""
+	},
+	"h5BearRoar": {
+		"implements": "combatEvent",
+		"script": "combat/h5BearRoar",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"pf": {
+					"type": "number"
+				},
+				"smallMult": {
+					"type": "number"
+				},
+				"turns": {
+					"type": "number"
+				},
+				"morale": {
+					"type": "number"
+				},
+				"health": {
+					"type": "number"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": "{Bear Roar}\nAttacks may scare the target and enemies around it (delaying their action), with double chance against small creatures; also gives itself +${morale} Morale and +${health}% Hit Points for ${turns} rounds."
+	},
+	"h5MagicMagnetism": {
+		"implements": "combatEvent",
+		"script": "combat/h5MagicMagnetism",
+		"patches": [],
+		"priority": 10,
+		"schema": {
+			"type": "object",
+			"properties": {},
+			"additionalProperties": false
+		},
+		"description": "{Magic Magnetism}\nWhen caught in an area damage spell, allies in the same area take less damage (5% less per week's growth of Magnetic Golems, between 50% and 100%); half of the prevented damage heals this stack. No effect against Armageddon."
+	},
+	"h5EnchantedObsidian": {
+		"implements": "combatEvent",
+		"script": "combat/h5EnchantedObsidian",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {},
+			"additionalProperties": false
+		},
+		"description": "{Enchanted Obsidian}\nUnaffected by all spells except damage spells; damage spells deal no damage and instead restore ${val}% of the damage as Hit Points, and can revive. Fist of Wrath and Call Lightning deal damage as normal."
+	},
+	"h5BondOfLight": {
+		"implements": "combatEvent",
+		"script": "combat/h5BondOfLight",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"mastery": {
+					"type": "number"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": ""
+	},
+	"h5Taunt": {
+		"implements": "combatEvent",
+		"script": "combat/h5Taunt",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"pf": {
+					"type": "number"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": ""
+	},
+	"h5Maneuver": {
+		"implements": "combatEvent",
+		"script": "combat/h5Maneuver",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {},
+			"additionalProperties": false
+		},
+		"description": "{Maneuver}\nAfter being attacked in melee, retreats to an empty hex within movement range and retaliates with a shot for ${val}% of normal damage; if it cannot retreat, it retaliates in melee as usual."
+	},
+	"h5Treachery": {
+		"implements": "combatEvent",
+		"script": "combat/h5Treachery",
+		"patches": [],
+		"priority": 100,
+		"schema": {
+			"type": "object",
+			"properties": {},
+			"additionalProperties": false
+		},
+		"description": "{Treachery}\nDefects to the enemy when its count falls below ${val}% of the starting count (once per battle, until the battle ends)."
+	},
+	"h5ManaBurn": {
+		"implements": "combatEvent",
+		"script": "combat/h5ManaBurn",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"mode": {
+					"type": "string",
+					"enum": [
+						"destroy",
+						"steal"
+					]
+				},
+				"perGrowth": {
+					"type": "number"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": ""
+	},
+	"h5ManaDrain": {
+		"implements": "combatEvent",
+		"script": "combat/h5ManaDrain",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {},
+			"additionalProperties": false
+		},
+		"description": "{Mana Drain}\nWhen attacking an enemy spellcaster, drains one of its casts and uses the mana to heal itself (${val}% of attack damage); can revive."
+	},
+	"h5AbStrike": {
+		"implements": "spellEffect",
+		"script": "spells/h5AbStrike",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"adjacent": {
+					"type": "boolean"
+				},
+				"chain": {
+					"type": "boolean"
+				},
+				"goblin": {
+					"type": "boolean"
+				},
+				"hitAnimation": {
+					"type": "string"
+				},
+				"hitSound": {
+					"type": "string"
+				},
+				"key": {
+					"type": "string"
+				},
+				"log": {
+					"type": "string"
+				},
+				"mode": {
+					"type": "string"
+				},
+				"pct": {
+					"type": "number"
+				},
+				"per": {
+					"type": "number"
+				},
+				"spellDamage": {
+					"type": "boolean"
+				},
+				"uses": {
+					"type": "number"
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"h5AbAmmoSteal": {
+		"implements": "spellEffect",
+		"script": "spells/h5AbAmmoSteal",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"bonus": {
+					"type": "number"
+				},
+				"mark": {
+					"type": "string"
+				},
+				"perCreatures": {
+					"type": "number"
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"h5AbRefund": {
+		"implements": "spellEffect",
+		"script": "spells/h5AbRefund",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"key": {
+					"type": "string"
+				},
+				"uses": {
+					"type": "number"
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"h5AbTarget": {
+		"implements": "spellEffect",
+		"script": "spells/h5AbTarget",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"animation": {
+					"type": "string"
+				},
+				"atbMax": {
+					"type": "number"
+				},
+				"atbPer": {
+					"type": "number"
+				},
+				"coef": {
+					"type": "number"
+				},
+				"dark": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"dmgPer": {
+					"type": "number"
+				},
+				"level": {
+					"type": "number"
+				},
+				"light": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"mark": {
+					"type": "string"
+				},
+				"maxTurns": {
+					"type": "number"
+				},
+				"mode": {
+					"type": "string"
+				},
+				"sound": {
+					"type": "string"
+				},
+				"spell": {
+					"type": "string"
+				},
+				"sultan": {
+					"type": "boolean"
+				},
+				"turns": {
+					"type": "number"
+				},
+				"uses": {
+					"type": "number"
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"h5AbSelfBuff": {
+		"implements": "spellEffect",
+		"script": "spells/h5AbSelfBuff",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"animation": {
+					"type": "string"
+				},
+				"kind": {
+					"type": "string"
+				},
+				"mark": {
+					"type": "string"
+				},
+				"pct": {
+					"type": "number"
+				},
+				"revealMark": {
+					"type": "string"
+				},
+				"revealScript": {
+					"type": "string"
+				},
+				"show": {
+					"type": "string"
+				},
+				"sound": {
+					"type": "string"
+				},
+				"spell": {
+					"type": "string"
+				},
+				"turns": {
+					"type": "number"
+				},
+				"uses": {
+					"type": "number"
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"h5AbRestore": {
+		"implements": "spellEffect",
+		"script": "spells/h5AbRestore",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"animation": {
+					"type": "string"
+				},
+				"casts": {
+					"type": "number"
+				},
+				"mark": {
+					"type": "string"
+				},
+				"max": {
+					"type": "number"
+				},
+				"mode": {
+					"type": "string"
+				},
+				"pct": {
+					"type": "number"
+				},
+				"per": {
+					"type": "number"
+				},
+				"selfPer": {
+					"type": "number"
+				},
+				"show": {
+					"type": "string"
+				},
+				"sound": {
+					"type": "string"
+				},
+				"uses": {
+					"type": "number"
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"h5AbSummonBalor": {
+		"implements": "spellEffect",
+		"script": "spells/h5AbSummonBalor",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"id": {
+					"type": "string"
+				},
+				"perCaster": {
+					"type": "number"
+				},
+				"permanent": {
+					"type": "boolean"
+				},
+				"requireAny": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"h5AbSummonSame": {
+		"implements": "spellEffect",
+		"script": "spells/h5AbSummonSame",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"mark": {
+					"type": "string"
+				},
+				"uses": {
+					"type": "number"
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"h5AbBurst": {
+		"implements": "spellEffect",
+		"script": "spells/h5AbBurst",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"arg": {
+					"type": "number"
+				},
+				"base": {
+					"type": "array",
+					"items": {
+						"type": "number"
+					}
+				},
+				"coef": {
+					"type": "number"
+				},
+				"const": {
+					"type": "number"
+				},
+				"hitAnimation": {
+					"type": "string"
+				},
+				"hitSound": {
+					"type": "string"
+				},
+				"level": {
+					"type": "number"
+				},
+				"mark": {
+					"type": "string"
+				},
+				"mode": {
+					"type": "string"
+				},
+				"per": {
+					"type": "array",
+					"items": {
+						"type": "number"
+					}
+				},
+				"range": {
+					"type": "number"
+				},
+				"uses": {
+					"type": "number"
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"h5AbBerserkerRage": {
+		"implements": "spellEffect",
+		"script": "spells/h5AbBerserkerRage",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"mark": {
+					"type": "string"
+				},
+				"show": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"h5AbMove": {
+		"implements": "spellEffect",
+		"script": "spells/h5AbMove",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"hitAnimation": {
+					"type": "string"
+				},
+				"hitSound": {
+					"type": "string"
+				},
+				"mark": {
+					"type": "string"
+				},
+				"maxDist": {
+					"type": "number"
+				},
+				"minDist": {
+					"type": "number"
+				},
+				"mode": {
+					"type": "string"
+				},
+				"perCell": {
+					"type": "number"
+				},
+				"retaliate": {
+					"type": "number"
+				},
+				"uses": {
+					"type": "number"
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"h5AbZone": {
+		"implements": "spellEffect",
+		"script": "spells/h5AbZone",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"animation": {
+					"type": "string"
+				},
+				"appear": {
+					"type": "string"
+				},
+				"removal": {
+					"type": "string"
+				},
+				"mark": {
+					"type": "string"
+				},
+				"maxPenalty": {
+					"type": "number"
+				},
+				"mode": {
+					"type": "string"
+				},
+				"pct": {
+					"type": "number"
+				},
+				"per": {
+					"type": "number"
+				},
+				"tickScript": {
+					"type": "string"
+				},
+				"turns": {
+					"type": "number"
+				},
+				"uses": {
+					"type": "number"
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"h5AbPackDive": {
+		"implements": "spellEffect",
+		"script": "spells/h5AbPackDive",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"landScript": {
+					"type": "string"
+				},
+				"mark": {
+					"type": "string"
+				},
+				"pct": {
+					"type": "number"
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"h47Dive": {
+		"implements": "spellEffect",
+		"script": "spells/h47Dive",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"mark": {
+					"type": "string"
+				},
+				"landScript": {
+					"type": "string"
+				},
+				"factor": {
+					"type": "number"
+				},
+				"markAppear": {
+					"type": "string"
+				},
+				"markAnimation": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"h47DiveLand": {
+		"implements": "combatEvent",
+		"script": "combat/h47DiveLand",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"mark": {
+					"type": "string"
+				},
+				"spell": {
+					"type": "string"
+				},
+				"factor": {
+					"type": "number"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": ""
+	},
+	"h5AbPackDiveLand": {
+		"implements": "combatEvent",
+		"script": "combat/h5AbPackDiveLand",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"mark": {
+					"type": "string"
+				},
+				"pct": {
+					"type": "number"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": ""
+	},
+	"h5AbStormTick": {
+		"implements": "combatEvent",
+		"script": "combat/h5AbStormTick",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"maxPenalty": {
+					"type": "number"
+				},
+				"per": {
+					"type": "number"
+				},
+				"power": {
+					"type": "number"
+				},
+				"spell": {
+					"type": "string"
+				},
+				"center": {
+					"type": "number"
+				},
+				"caster": {
+					"type": "number"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": ""
+	},
+	"h5AbReveal": {
+		"implements": "combatEvent",
+		"script": "combat/h5AbReveal",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {
+				"mark": {
+					"type": "string"
+				},
+				"spell": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": ""
+	},
+	"h5NecroRaise": {
+		"implements": "combatEvent",
+		"script": "combat/h5NecroRaise",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {},
+			"additionalProperties": false
+		},
+		"description": ""
+	},
+	"core:summon": {
+		"patches": {
+			"append": "spells/h5GatingSummon"
+		}
+	},
+	"h5UnstoppableCharge": {
+		"implements": "combatEvent",
+		"script": "combat/h5UnstoppableCharge",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {},
+			"additionalProperties": false
+		},
+		"description": "{Unstoppable Charge}\nRetaliation deals ${val}% of normal damage."
+	},
+	"h5UrgashCall": {
+		"implements": "combatEvent",
+		"script": "combat/h5UrgashCall",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {},
+			"additionalProperties": false
+		},
+		"description": "{Urgash's Call}\nAt battle start, summons reinforcements of the same creature equal to ${val}% of this stack."
+	},
+	"h5AllyAura": {
+		"implements": "combatEvent",
+		"script": "combat/h5AllyAura",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {},
+			"additionalProperties": false
+		},
+		"description": "{Adjacent Ally Aura}\nFriendly stacks adjacent to this stack gain a bonus"
+	},
+	"h5ManaGate": {
+		"implements": "spellEffect",
+		"script": "spells/h5ManaGate",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"mana": {
+					"type": "number"
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"h5ManaPool": {
+		"implements": "combatEvent",
+		"script": "combat/h5ManaPool",
+		"patches": [],
+		"priority": 0,
+		"schema": {
+			"type": "object",
+			"properties": {},
+			"additionalProperties": false
+		},
+		"description": ""
+	},
+	"h5PhantomClone": {
+		"implements": "spellEffect",
+		"script": "spells/h5PhantomClone",
+		"patches": [],
+		"schema": {
+			"properties": {
+				"type": {},
+				"indirect": {},
+				"optional": {},
+				"ignoreImmunity": {
+					"type": "boolean"
+				},
+				"chainLength": {
+					"type": "number"
+				},
+				"maxTier": {
+					"type": "number"
+				}
+			},
+			"additionalProperties": false
+		},
+		"description": "Clone from Phantom Forces (H5): uses the engine's core:clone, marks its source as the original Clone spell, and lasts for the effect's duration"
+	}
+}

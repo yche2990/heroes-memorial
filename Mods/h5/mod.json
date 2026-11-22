@@ -1,0 +1,210 @@
+{
+	"name": "Heroes V Memorial",
+	"description": "Heroes V creatures in the matching VCMI towns with their original abilities and Blood Rage, Heroes V spells, and the Memorial Magic Academies, Troop Exchanges and Sanctum.",
+	"chinese": {
+		"name": "英雄无敌5纪念版",
+		"translations": [
+			"config/translations/chinese.json"
+		],
+		"description": "英雄无敌5的兵种（带原版能力和狂暴之血）加入对应的 VCMI 城镇，另有英雄无敌5魔法，以及纪念魔法学院、换兵所和纪念圣殿。"
+	},
+	"version": "0.1.0",
+	"author": "yche2990",
+	"modType": "Creatures",
+	"compatibility": {
+		"min": "1.8.0"
+	},
+	"depends": [
+		"highlands-town",
+		"tears-of-ashan"
+	],
+	"creatures": [
+		"config/h5/creatures/bastille.json",
+		"config/h5/creatures/castle.json",
+		"config/h5/creatures/dungeon.json",
+		"config/h5/creatures/inferno.json",
+		"config/h5/creatures/necropolis.json",
+		"config/h5/creatures/neutral.json",
+		"config/h5/creatures/rampart.json",
+		"config/h5/creatures/stronghold.json",
+		"config/h5/creatures/tower.json"
+	],
+	"spells": [
+		"config/h5/spells/heroSpells.json",
+		"config/h5/spells/creatureSpells.json",
+		"config/h5/spells/triggers.json",
+		"config/h5/spells/frag_B2_area.json",
+		"config/h5/spells/frag_C_active.json",
+		"config/h5/spells/frag_D_gateDesc.json"
+	],
+	"scripts": [
+		"config/h5/scripts.json"
+	],
+	"skills": [
+		"config/h5/skills.json"
+	],
+	"bonuses": [
+		"config/h5/bonuses.json"
+	],
+	"rumors": [
+		"config/rumors/h5creaturesRumors.json",
+		"config/rumors/objectpackh5memorialRumors.json"
+	],
+	"settings": {
+		"bonuses": {
+			"global": {
+				"h5ElemTerrain_lava": {
+					"type": "NONE",
+					"val": 1,
+					"valueType": "BASE_NUMBER",
+					"hidden": true,
+					"limiters": [
+						{
+							"type": "TERRAIN_LIMITER",
+							"parameters": [
+								"lava"
+							]
+						}
+					]
+				},
+				"h5ElemTerrain_water": {
+					"type": "NONE",
+					"val": 2,
+					"valueType": "BASE_NUMBER",
+					"hidden": true,
+					"limiters": [
+						{
+							"type": "TERRAIN_LIMITER",
+							"parameters": [
+								"water"
+							]
+						}
+					]
+				},
+				"h5ElemTerrain_snow": {
+					"type": "NONE",
+					"val": 2,
+					"valueType": "BASE_NUMBER",
+					"hidden": true,
+					"limiters": [
+						{
+							"type": "TERRAIN_LIMITER",
+							"parameters": [
+								"snow"
+							]
+						}
+					]
+				},
+				"h5ElemTerrain_swamp": {
+					"type": "NONE",
+					"val": 2,
+					"valueType": "BASE_NUMBER",
+					"hidden": true,
+					"limiters": [
+						{
+							"type": "TERRAIN_LIMITER",
+							"parameters": [
+								"swamp"
+							]
+						}
+					]
+				},
+				"h5ElemTerrain_dirt": {
+					"type": "NONE",
+					"val": 3,
+					"valueType": "BASE_NUMBER",
+					"hidden": true,
+					"limiters": [
+						{
+							"type": "TERRAIN_LIMITER",
+							"parameters": [
+								"dirt"
+							]
+						}
+					]
+				},
+				"h5ElemTerrain_rough": {
+					"type": "NONE",
+					"val": 3,
+					"valueType": "BASE_NUMBER",
+					"hidden": true,
+					"limiters": [
+						{
+							"type": "TERRAIN_LIMITER",
+							"parameters": [
+								"rough"
+							]
+						}
+					]
+				},
+				"h5ElemTerrain_subterra": {
+					"type": "NONE",
+					"val": 3,
+					"valueType": "BASE_NUMBER",
+					"hidden": true,
+					"limiters": [
+						{
+							"type": "TERRAIN_LIMITER",
+							"parameters": [
+								"subterra"
+							]
+						}
+					]
+				},
+				"h5ElemTerrain_rock": {
+					"type": "NONE",
+					"val": 3,
+					"valueType": "BASE_NUMBER",
+					"hidden": true,
+					"limiters": [
+						{
+							"type": "TERRAIN_LIMITER",
+							"parameters": [
+								"rock"
+							]
+						}
+					]
+				},
+				"h5ElemTerrain_grass": {
+					"type": "NONE",
+					"val": 4,
+					"valueType": "BASE_NUMBER",
+					"hidden": true,
+					"limiters": [
+						{
+							"type": "TERRAIN_LIMITER",
+							"parameters": [
+								"grass"
+							]
+						}
+					]
+				},
+				"h5ElemTerrain_sand": {
+					"type": "NONE",
+					"val": 4,
+					"valueType": "BASE_NUMBER",
+					"hidden": true,
+					"limiters": [
+						{
+							"type": "TERRAIN_LIMITER",
+							"parameters": [
+								"sand"
+							]
+						}
+					]
+				}
+			}
+		}
+	},
+	"objects": [
+		"config/h5memorial/swap.json",
+		"config/h5memorial/magic.json",
+		"config/h5sanctum/sanctum.json",
+		"config/memorial/elementalConflux.json"
+	],
+	"english": {
+		"translations": [
+			"config/translations/english.json"
+		]
+	}
+}

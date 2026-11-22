@@ -1,0 +1,454 @@
+{
+	"colorMuxers": {
+		"h5light_Spells_AnimateDead": [
+			{
+				"time": 0.0,
+				"alpha": 1.0
+			},
+			{
+				"time": 8.8,
+				"color": [
+					1.0,
+					0.463,
+					0.458,
+					0.4
+				],
+				"alpha": 1.0
+			},
+			{
+				"time": 10.0,
+				"alpha": 1.0
+			}
+		],
+		"h5light_Spells_Berserk": [
+			{
+				"time": 0.0,
+				"alpha": 1.0
+			},
+			{
+				"time": 9.8,
+				"color": [
+					1.0,
+					0.381,
+					0.259,
+					0.4
+				],
+				"alpha": 1.0
+			},
+			{
+				"time": 11.0,
+				"alpha": 1.0
+			}
+		],
+		"h5light_Spells_Bless": [
+			{
+				"time": 0.0,
+				"alpha": 1.0
+			},
+			{
+				"time": 5.4,
+				"color": [
+					1.0,
+					0.64,
+					0.359,
+					0.4
+				],
+				"alpha": 1.0
+			},
+			{
+				"time": 6.6,
+				"alpha": 1.0
+			}
+		],
+		"h5light_Spells_Blind": [
+			{
+				"time": 0.0,
+				"alpha": 1.0
+			},
+			{
+				"time": 5.8,
+				"color": [
+					0.861,
+					0.858,
+					1.0,
+					0.4
+				],
+				"alpha": 1.0
+			},
+			{
+				"time": 7.0,
+				"alpha": 1.0
+			}
+		],
+		"h5light_Spells_ChainLightningHit": [
+			{
+				"time": 0.0,
+				"alpha": 1.0
+			},
+			{
+				"time": 0.6,
+				"color": [
+					0.482,
+					0.471,
+					1.0,
+					0.4
+				],
+				"alpha": 1.0
+			},
+			{
+				"time": 1.8,
+				"alpha": 1.0
+			}
+		],
+		"h5light_Spells_DeflectArrows": [
+			{
+				"time": 0.0,
+				"alpha": 1.0
+			},
+			{
+				"time": 8.8,
+				"color": [
+					0.555,
+					0.637,
+					1.0,
+					0.4
+				],
+				"alpha": 1.0
+			},
+			{
+				"time": 10.0,
+				"alpha": 1.0
+			}
+		],
+		"h5light_Spells_Dispel": [
+			{
+				"time": 0.0,
+				"alpha": 1.0
+			},
+			{
+				"time": 9.8,
+				"color": [
+					0.615,
+					0.702,
+					1.0,
+					0.4
+				],
+				"alpha": 1.0
+			},
+			{
+				"time": 11.0,
+				"alpha": 1.0
+			}
+		],
+		"h5light_Spells_DisruptingRay": [
+			{
+				"time": 0.0,
+				"alpha": 1.0
+			},
+			{
+				"time": 5.2,
+				"color": [
+					0.518,
+					0.171,
+					1.0,
+					0.4
+				],
+				"alpha": 1.0
+			},
+			{
+				"time": 6.4,
+				"alpha": 1.0
+			}
+		],
+		"h5light_Spells_DivineVengeance_FX_DivineVengeance_Effect": [
+			{
+				"time": 0.0,
+				"alpha": 1.0
+			},
+			{
+				"time": 7.0,
+				"color": [
+					1.0,
+					0.681,
+					0.375,
+					0.4
+				],
+				"alpha": 1.0
+			},
+			{
+				"time": 8.2,
+				"alpha": 1.0
+			}
+		],
+		"h5light_Spells_FireBallHit": [
+			{
+				"time": 0.0,
+				"alpha": 1.0
+			},
+			{
+				"time": 1.4,
+				"color": [
+					1.0,
+					0.555,
+					0.202,
+					0.4
+				],
+				"alpha": 1.0
+			},
+			{
+				"time": 2.6,
+				"alpha": 1.0
+			}
+		],
+		"h5light_Spells_IceBolt": [
+			{
+				"time": 0.0,
+				"alpha": 1.0
+			},
+			{
+				"time": 3.2,
+				"color": [
+					0.926,
+					0.976,
+					1.0,
+					0.4
+				],
+				"alpha": 1.0
+			},
+			{
+				"time": 4.4,
+				"alpha": 1.0
+			}
+		],
+		"h5Invisibility": [
+			{
+				"time": 0.0,
+				"alpha": 1.0
+			},
+			{
+				"time": 1.0,
+				"alpha": 0.45
+			}
+		],
+		"h5light_Spells_Heal": [
+			{
+				"time": 0.0,
+				"alpha": 1.0
+			},
+			{
+				"time": 4.0,
+				"color": [
+					0.385,
+					0.784,
+					1.0,
+					0.4
+				],
+				"alpha": 1.0
+			},
+			{
+				"time": 5.2,
+				"alpha": 1.0
+			}
+		],
+		"h5light_Spells_LightningBolt": [
+			{
+				"time": 0.0,
+				"alpha": 1.0
+			},
+			{
+				"time": 9.8,
+				"color": [
+					0.815,
+					0.604,
+					1.0,
+					0.4
+				],
+				"alpha": 1.0
+			},
+			{
+				"time": 11.0,
+				"alpha": 1.0
+			}
+		],
+		"h5light_Spells_Anti_magic": [
+			{
+				"time": 0.0,
+				"alpha": 1.0
+			},
+			{
+				"time": 7.4,
+				"color": [
+					0.529,
+					0.333,
+					1.0,
+					0.4
+				],
+				"alpha": 1.0
+			},
+			{
+				"time": 8.6,
+				"alpha": 1.0
+			}
+		],
+		"h5light_Spells_Armageddon": [
+			{
+				"time": 0.0,
+				"alpha": 1.0
+			},
+			{
+				"time": 25.6,
+				"color": [
+					1.0,
+					0.722,
+					0.52,
+					0.4
+				],
+				"alpha": 1.0
+			},
+			{
+				"time": 26.8,
+				"alpha": 1.0
+			}
+		],
+		"h5light_Spells_CelestialShield": [
+			{
+				"time": 0.0,
+				"alpha": 1.0
+			},
+			{
+				"time": 0.4,
+				"color": [
+					1.0,
+					0.772,
+					0.504,
+					0.4
+				],
+				"alpha": 1.0
+			},
+			{
+				"time": 1.6,
+				"alpha": 1.0
+			}
+		],
+		"h5light_Spells_Resurrect": [
+			{
+				"time": 0.0,
+				"alpha": 1.0
+			},
+			{
+				"time": 11.2,
+				"color": [
+					1.0,
+					0.586,
+					0.269,
+					0.4
+				],
+				"alpha": 1.0
+			},
+			{
+				"time": 12.4,
+				"alpha": 1.0
+			}
+		],
+		"h5light_Spells_HolyWord": [
+			{
+				"time": 0.0,
+				"alpha": 1.0
+			},
+			{
+				"time": 19.4,
+				"color": [
+					1.0,
+					0.767,
+					0.371,
+					0.4
+				],
+				"alpha": 1.0
+			},
+			{
+				"time": 20.6,
+				"alpha": 1.0
+			}
+		],
+		"h5light_Spells_hypnotize": [
+			{
+				"time": 0.0,
+				"alpha": 1.0
+			},
+			{
+				"time": 14.6,
+				"color": [
+					0.561,
+					0.544,
+					1.0,
+					0.4
+				],
+				"alpha": 1.0
+			},
+			{
+				"time": 15.8,
+				"alpha": 1.0
+			}
+		],
+		"h5light_Spells_Implosion": [
+			{
+				"time": 0.0,
+				"alpha": 1.0
+			},
+			{
+				"time": 3.6,
+				"color": [
+					0.583,
+					0.355,
+					1.0,
+					0.4
+				],
+				"alpha": 1.0
+			},
+			{
+				"time": 4.8,
+				"alpha": 1.0
+			}
+		],
+		"h5light_Spells_Teleport_Start": [
+			{
+				"time": 0.0,
+				"alpha": 1.0
+			},
+			{
+				"time": 3.2,
+				"color": [
+					0.483,
+					0.578,
+					1.0,
+					0.4
+				],
+				"alpha": 1.0
+			},
+			{
+				"time": 4.4,
+				"alpha": 1.0
+			}
+		],
+		"h5light_Spells_UnholyWord": [
+			{
+				"time": 0.0,
+				"alpha": 1.0
+			},
+			{
+				"time": 15.4,
+				"color": [
+					0.703,
+					0.497,
+					1.0,
+					0.4
+				],
+				"alpha": 1.0
+			},
+			{
+				"time": 16.6,
+				"alpha": 1.0
+			}
+		]
+	}
+}

@@ -1,0 +1,1256 @@
+{
+	"heroes-memorial.h5:h5Academy3rdMarbleGargoyle": {
+		"abilities": {
+			"aiAssistShadow": {
+				"type": "GENERAL_DAMAGE_REDUCTION",
+				"subtype": "damageTypeAll",
+				"val": 25,
+				"hidden": true,
+				"stacking": "aiAssistShadow",
+				"limiters": [
+					"noneOf",
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "HERO_SPELL_CASTS_PER_COMBAT_TURN"
+					},
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "MEMORIAL_AI_GATE"
+					}
+				]
+			}
+		}
+	},
+	"heroes-memorial.h5:h5Academy3rdObsidianGolem": {
+		"abilities": {
+			"aiAssistShadow": {
+				"type": "GENERAL_DAMAGE_REDUCTION",
+				"subtype": "damageTypeAll",
+				"val": 41,
+				"hidden": true,
+				"stacking": "aiAssistShadow",
+				"limiters": [
+					"noneOf",
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "HERO_SPELL_CASTS_PER_COMBAT_TURN"
+					},
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "MEMORIAL_AI_GATE"
+					}
+				]
+			}
+		}
+	},
+	"heroes-memorial.h5:h5Dungeon3rdMinotaurCaptain": {
+		"abilities": {
+			"aiAssistShadow": {
+				"type": "GENERAL_DAMAGE_REDUCTION",
+				"subtype": "damageTypeAll",
+				"val": 16,
+				"hidden": true,
+				"stacking": "aiAssistShadow",
+				"limiters": [
+					"noneOf",
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "HERO_SPELL_CASTS_PER_COMBAT_TURN"
+					},
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "MEMORIAL_AI_GATE"
+					}
+				]
+			}
+		}
+	},
+	"heroes-memorial.h5:h5Dungeon3rdShadowMistress": {
+		"abilities": {
+			"aiAssistShadow": {
+				"type": "GENERAL_DAMAGE_REDUCTION",
+				"subtype": "damageTypeAll",
+				"val": 41,
+				"hidden": true,
+				"stacking": "aiAssistShadow",
+				"limiters": [
+					"noneOf",
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "HERO_SPELL_CASTS_PER_COMBAT_TURN"
+					},
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "MEMORIAL_AI_GATE"
+					}
+				]
+			}
+		}
+	},
+	"heroes-memorial.h5:h5DungeonAssassin": {
+		"abilities": {
+			"aiAssistShadow": {
+				"type": "GENERAL_DAMAGE_REDUCTION",
+				"subtype": "damageTypeAll",
+				"val": 13,
+				"hidden": true,
+				"stacking": "aiAssistShadow",
+				"limiters": [
+					"noneOf",
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "HERO_SPELL_CASTS_PER_COMBAT_TURN"
+					},
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "MEMORIAL_AI_GATE"
+					}
+				]
+			}
+		}
+	},
+	"heroes-memorial.h5:h5DungeonMatriarch": {
+		"abilities": {
+			"aiAssistShadow": {
+				"type": "GENERAL_DAMAGE_REDUCTION",
+				"subtype": "damageTypeAll",
+				"val": 32,
+				"hidden": true,
+				"stacking": "aiAssistShadow",
+				"limiters": [
+					"noneOf",
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "HERO_SPELL_CASTS_PER_COMBAT_TURN"
+					},
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "MEMORIAL_AI_GATE"
+					}
+				]
+			}
+		}
+	},
+	"heroes-memorial.h5:h5DungeonMatron": {
+		"abilities": {
+			"aiAssistShadow": {
+				"type": "GENERAL_DAMAGE_REDUCTION",
+				"subtype": "damageTypeAll",
+				"val": 35,
+				"hidden": true,
+				"stacking": "aiAssistShadow",
+				"limiters": [
+					"noneOf",
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "HERO_SPELL_CASTS_PER_COMBAT_TURN"
+					},
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "MEMORIAL_AI_GATE"
+					}
+				]
+			}
+		}
+	},
+	"heroes-memorial.h5:h5Dwarf3rdBattleRager": {
+		"abilities": {
+			"aiAssistShadow": {
+				"type": "GENERAL_DAMAGE_REDUCTION",
+				"subtype": "damageTypeAll",
+				"val": 17,
+				"hidden": true,
+				"stacking": "aiAssistShadow",
+				"limiters": [
+					"noneOf",
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "HERO_SPELL_CASTS_PER_COMBAT_TURN"
+					},
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "MEMORIAL_AI_GATE"
+					}
+				]
+			}
+		}
+	},
+	"heroes-memorial.h5:h5Dwarf3rdFlameKeeper": {
+		"abilities": {
+			"aiAssistShadow": {
+				"type": "GENERAL_DAMAGE_REDUCTION",
+				"subtype": "damageTypeAll",
+				"val": 20,
+				"hidden": true,
+				"stacking": "aiAssistShadow",
+				"limiters": [
+					"noneOf",
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "HERO_SPELL_CASTS_PER_COMBAT_TURN"
+					},
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "MEMORIAL_AI_GATE"
+					}
+				]
+			}
+		}
+	},
+	"heroes-memorial.h5:h5Dwarf3rdLavaDragon": {
+		"abilities": {
+			"aiAssistShadow": {
+				"type": "GENERAL_DAMAGE_REDUCTION",
+				"subtype": "damageTypeAll",
+				"val": 32,
+				"hidden": true,
+				"stacking": "aiAssistShadow",
+				"limiters": [
+					"noneOf",
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "HERO_SPELL_CASTS_PER_COMBAT_TURN"
+					},
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "MEMORIAL_AI_GATE"
+					}
+				]
+			}
+		}
+	},
+	"heroes-memorial.h5:h5Dwarf3rdThunderThane": {
+		"abilities": {
+			"aiAssistShadow": {
+				"type": "GENERAL_DAMAGE_REDUCTION",
+				"subtype": "damageTypeAll",
+				"val": 41,
+				"hidden": true,
+				"stacking": "aiAssistShadow",
+				"limiters": [
+					"noneOf",
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "HERO_SPELL_CASTS_PER_COMBAT_TURN"
+					},
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "MEMORIAL_AI_GATE"
+					}
+				]
+			}
+		}
+	},
+	"heroes-memorial.h5:h5DwarfAxeFighter": {
+		"abilities": {
+			"aiAssistShadow": {
+				"type": "GENERAL_DAMAGE_REDUCTION",
+				"subtype": "damageTypeAll",
+				"val": 16,
+				"hidden": true,
+				"stacking": "aiAssistShadow",
+				"limiters": [
+					"noneOf",
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "HERO_SPELL_CASTS_PER_COMBAT_TURN"
+					},
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "MEMORIAL_AI_GATE"
+					}
+				]
+			}
+		}
+	},
+	"heroes-memorial.h5:h5DwarfRuneMage": {
+		"abilities": {
+			"aiAssistShadow": {
+				"type": "GENERAL_DAMAGE_REDUCTION",
+				"subtype": "damageTypeAll",
+				"val": 37,
+				"hidden": true,
+				"stacking": "aiAssistShadow",
+				"limiters": [
+					"noneOf",
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "HERO_SPELL_CASTS_PER_COMBAT_TURN"
+					},
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "MEMORIAL_AI_GATE"
+					}
+				]
+			}
+		}
+	},
+	"heroes-memorial.h5:h5DwarfThane": {
+		"abilities": {
+			"aiAssistShadow": {
+				"type": "GENERAL_DAMAGE_REDUCTION",
+				"subtype": "damageTypeAll",
+				"val": 58,
+				"hidden": true,
+				"stacking": "aiAssistShadow",
+				"limiters": [
+					"noneOf",
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "HERO_SPELL_CASTS_PER_COMBAT_TURN"
+					},
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "MEMORIAL_AI_GATE"
+					}
+				]
+			}
+		}
+	},
+	"heroes-memorial.h5:h5HavenFootman": {
+		"abilities": {
+			"aiAssistShadow": {
+				"type": "GENERAL_DAMAGE_REDUCTION",
+				"subtype": "damageTypeAll",
+				"val": 12,
+				"hidden": true,
+				"stacking": "aiAssistShadow",
+				"limiters": [
+					"noneOf",
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "HERO_SPELL_CASTS_PER_COMBAT_TURN"
+					},
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "MEMORIAL_AI_GATE"
+					}
+				]
+			}
+		}
+	},
+	"heroes-memorial.h5:h5InfernoBalor": {
+		"abilities": {
+			"aiAssistShadow": {
+				"type": "GENERAL_DAMAGE_REDUCTION",
+				"subtype": "damageTypeAll",
+				"val": 40,
+				"hidden": true,
+				"stacking": "aiAssistShadow",
+				"limiters": [
+					"noneOf",
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "HERO_SPELL_CASTS_PER_COMBAT_TURN"
+					},
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "MEMORIAL_AI_GATE"
+					}
+				]
+			}
+		}
+	},
+	"heroes-memorial.h5:h5InfernoInfernalSuccubus": {
+		"abilities": {
+			"aiAssistShadow": {
+				"type": "GENERAL_DAMAGE_REDUCTION",
+				"subtype": "damageTypeAll",
+				"val": 30,
+				"hidden": true,
+				"stacking": "aiAssistShadow",
+				"limiters": [
+					"noneOf",
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "HERO_SPELL_CASTS_PER_COMBAT_TURN"
+					},
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "MEMORIAL_AI_GATE"
+					}
+				]
+			}
+		}
+	},
+	"heroes-memorial.h5:h5InfernoPitFiend": {
+		"abilities": {
+			"aiAssistShadow": {
+				"type": "GENERAL_DAMAGE_REDUCTION",
+				"subtype": "damageTypeAll",
+				"val": 42,
+				"hidden": true,
+				"stacking": "aiAssistShadow",
+				"limiters": [
+					"noneOf",
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "HERO_SPELL_CASTS_PER_COMBAT_TURN"
+					},
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "MEMORIAL_AI_GATE"
+					}
+				]
+			}
+		}
+	},
+	"heroes-memorial.h5:h5Necropolis3rdDiseaseZombie": {
+		"abilities": {
+			"aiAssistShadow": {
+				"type": "GENERAL_DAMAGE_REDUCTION",
+				"subtype": "damageTypeAll",
+				"val": 45,
+				"hidden": true,
+				"stacking": "aiAssistShadow",
+				"limiters": [
+					"noneOf",
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "HERO_SPELL_CASTS_PER_COMBAT_TURN"
+					},
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "MEMORIAL_AI_GATE"
+					}
+				]
+			}
+		}
+	},
+	"heroes-memorial.h5:h5Necropolis3rdHorrorDragon": {
+		"abilities": {
+			"aiAssistShadow": {
+				"type": "GENERAL_DAMAGE_REDUCTION",
+				"subtype": "damageTypeAll",
+				"val": 12,
+				"hidden": true,
+				"stacking": "aiAssistShadow",
+				"limiters": [
+					"noneOf",
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "HERO_SPELL_CASTS_PER_COMBAT_TURN"
+					},
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "MEMORIAL_AI_GATE"
+					}
+				]
+			}
+		}
+	},
+	"heroes-memorial.h5:h5NecropolisBoneDragon": {
+		"abilities": {
+			"aiAssistShadow": {
+				"type": "GENERAL_DAMAGE_REDUCTION",
+				"subtype": "damageTypeAll",
+				"val": 29,
+				"hidden": true,
+				"stacking": "aiAssistShadow",
+				"limiters": [
+					"noneOf",
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "HERO_SPELL_CASTS_PER_COMBAT_TURN"
+					},
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "MEMORIAL_AI_GATE"
+					}
+				]
+			}
+		}
+	},
+	"heroes-memorial.h5:h5NecropolisDemilich": {
+		"abilities": {
+			"aiAssistShadow": {
+				"type": "GENERAL_DAMAGE_REDUCTION",
+				"subtype": "damageTypeAll",
+				"val": 11,
+				"hidden": true,
+				"stacking": "aiAssistShadow",
+				"limiters": [
+					"noneOf",
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "HERO_SPELL_CASTS_PER_COMBAT_TURN"
+					},
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "MEMORIAL_AI_GATE"
+					}
+				]
+			}
+		}
+	},
+	"heroes-memorial.h5:h5NecropolisGhosts": {
+		"abilities": {
+			"aiAssistShadow": {
+				"type": "GENERAL_DAMAGE_REDUCTION",
+				"subtype": "damageTypeAll",
+				"val": 26,
+				"hidden": true,
+				"stacking": "aiAssistShadow",
+				"limiters": [
+					"noneOf",
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "HERO_SPELL_CASTS_PER_COMBAT_TURN"
+					},
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "MEMORIAL_AI_GATE"
+					}
+				]
+			}
+		}
+	},
+	"heroes-memorial.h5:h5NecropolisLich": {
+		"abilities": {
+			"aiAssistShadow": {
+				"type": "GENERAL_DAMAGE_REDUCTION",
+				"subtype": "damageTypeAll",
+				"val": 26,
+				"hidden": true,
+				"stacking": "aiAssistShadow",
+				"limiters": [
+					"noneOf",
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "HERO_SPELL_CASTS_PER_COMBAT_TURN"
+					},
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "MEMORIAL_AI_GATE"
+					}
+				]
+			}
+		}
+	},
+	"heroes-memorial.h5:h5NecropolisManes": {
+		"abilities": {
+			"aiAssistShadow": {
+				"type": "GENERAL_DAMAGE_REDUCTION",
+				"subtype": "damageTypeAll",
+				"val": 26,
+				"hidden": true,
+				"stacking": "aiAssistShadow",
+				"limiters": [
+					"noneOf",
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "HERO_SPELL_CASTS_PER_COMBAT_TURN"
+					},
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "MEMORIAL_AI_GATE"
+					}
+				]
+			}
+		}
+	},
+	"heroes-memorial.h5:h5NecropolisShadowDragon": {
+		"abilities": {
+			"aiAssistShadow": {
+				"type": "GENERAL_DAMAGE_REDUCTION",
+				"subtype": "damageTypeAll",
+				"val": 15,
+				"hidden": true,
+				"stacking": "aiAssistShadow",
+				"limiters": [
+					"noneOf",
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "HERO_SPELL_CASTS_PER_COMBAT_TURN"
+					},
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "MEMORIAL_AI_GATE"
+					}
+				]
+			}
+		}
+	},
+	"heroes-memorial.h5:h5NecropolisWalkingDead": {
+		"abilities": {
+			"aiAssistShadow": {
+				"type": "GENERAL_DAMAGE_REDUCTION",
+				"subtype": "damageTypeAll",
+				"val": 37,
+				"hidden": true,
+				"stacking": "aiAssistShadow",
+				"limiters": [
+					"noneOf",
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "HERO_SPELL_CASTS_PER_COMBAT_TURN"
+					},
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "MEMORIAL_AI_GATE"
+					}
+				]
+			}
+		}
+	},
+	"heroes-memorial.h5:h5NecropolisWight": {
+		"abilities": {
+			"aiAssistShadow": {
+				"type": "GENERAL_DAMAGE_REDUCTION",
+				"subtype": "damageTypeAll",
+				"val": 13,
+				"hidden": true,
+				"stacking": "aiAssistShadow",
+				"limiters": [
+					"noneOf",
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "HERO_SPELL_CASTS_PER_COMBAT_TURN"
+					},
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "MEMORIAL_AI_GATE"
+					}
+				]
+			}
+		}
+	},
+	"heroes-memorial.h5:h5NecropolisZombie": {
+		"abilities": {
+			"aiAssistShadow": {
+				"type": "GENERAL_DAMAGE_REDUCTION",
+				"subtype": "damageTypeAll",
+				"val": 46,
+				"hidden": true,
+				"stacking": "aiAssistShadow",
+				"limiters": [
+					"noneOf",
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "HERO_SPELL_CASTS_PER_COMBAT_TURN"
+					},
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "MEMORIAL_AI_GATE"
+					}
+				]
+			}
+		}
+	},
+	"heroes-memorial.h5:h5NeutralsMummy": {
+		"abilities": {
+			"aiAssistShadow": {
+				"type": "GENERAL_DAMAGE_REDUCTION",
+				"subtype": "damageTypeAll",
+				"val": 38,
+				"hidden": true,
+				"stacking": "aiAssistShadow",
+				"limiters": [
+					"noneOf",
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "HERO_SPELL_CASTS_PER_COMBAT_TURN"
+					},
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "MEMORIAL_AI_GATE"
+					}
+				]
+			}
+		}
+	},
+	"heroes-memorial.h5:h5NeutralsWaterElemental": {
+		"abilities": {
+			"aiAssistShadow": {
+				"type": "GENERAL_DAMAGE_REDUCTION",
+				"subtype": "damageTypeAll",
+				"val": 30,
+				"hidden": true,
+				"stacking": "aiAssistShadow",
+				"limiters": [
+					"noneOf",
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "HERO_SPELL_CASTS_PER_COMBAT_TURN"
+					},
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "MEMORIAL_AI_GATE"
+					}
+				]
+			}
+		}
+	},
+	"heroes-memorial.h5:h5NeutralsWolf": {
+		"abilities": {
+			"aiAssistShadow": {
+				"type": "GENERAL_DAMAGE_REDUCTION",
+				"subtype": "damageTypeAll",
+				"val": 22,
+				"hidden": true,
+				"stacking": "aiAssistShadow",
+				"limiters": [
+					"noneOf",
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "HERO_SPELL_CASTS_PER_COMBAT_TURN"
+					},
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "MEMORIAL_AI_GATE"
+					}
+				]
+			}
+		}
+	},
+	"heroes-memorial.h5:h5Orcs3rdCyclopBloodeyed": {
+		"abilities": {
+			"aiAssistShadow": {
+				"type": "GENERAL_DAMAGE_REDUCTION",
+				"subtype": "damageTypeAll",
+				"val": 36,
+				"hidden": true,
+				"stacking": "aiAssistShadow",
+				"limiters": [
+					"noneOf",
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "HERO_SPELL_CASTS_PER_COMBAT_TURN"
+					},
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "MEMORIAL_AI_GATE"
+					}
+				]
+			}
+		}
+	},
+	"heroes-memorial.h5:h5Orcs3rdGoblinDefiler": {
+		"abilities": {
+			"aiAssistShadow": {
+				"type": "GENERAL_DAMAGE_REDUCTION",
+				"subtype": "damageTypeAll",
+				"val": 21,
+				"hidden": true,
+				"stacking": "aiAssistShadow",
+				"limiters": [
+					"noneOf",
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "HERO_SPELL_CASTS_PER_COMBAT_TURN"
+					},
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "MEMORIAL_AI_GATE"
+					}
+				]
+			}
+		}
+	},
+	"heroes-memorial.h5:h5Orcs3rdOrcWarmonger": {
+		"abilities": {
+			"aiAssistShadow": {
+				"type": "GENERAL_DAMAGE_REDUCTION",
+				"subtype": "damageTypeAll",
+				"val": 28,
+				"hidden": true,
+				"stacking": "aiAssistShadow",
+				"limiters": [
+					"noneOf",
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "HERO_SPELL_CASTS_PER_COMBAT_TURN"
+					},
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "MEMORIAL_AI_GATE"
+					}
+				]
+			}
+		}
+	},
+	"heroes-memorial.h5:h5Orcs3rdShamanHag": {
+		"abilities": {
+			"aiAssistShadow": {
+				"type": "GENERAL_DAMAGE_REDUCTION",
+				"subtype": "damageTypeAll",
+				"val": 15,
+				"hidden": true,
+				"stacking": "aiAssistShadow",
+				"limiters": [
+					"noneOf",
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "HERO_SPELL_CASTS_PER_COMBAT_TURN"
+					},
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "MEMORIAL_AI_GATE"
+					}
+				]
+			}
+		}
+	},
+	"heroes-memorial.h5:h5Orcs3rdWyvernPaokai": {
+		"abilities": {
+			"aiAssistShadow": {
+				"type": "GENERAL_DAMAGE_REDUCTION",
+				"subtype": "damageTypeAll",
+				"val": 14,
+				"hidden": true,
+				"stacking": "aiAssistShadow",
+				"limiters": [
+					"noneOf",
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "HERO_SPELL_CASTS_PER_COMBAT_TURN"
+					},
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "MEMORIAL_AI_GATE"
+					}
+				]
+			}
+		}
+	},
+	"heroes-memorial.h5:h5OrcsCyclop1": {
+		"abilities": {
+			"aiAssistShadow": {
+				"type": "GENERAL_DAMAGE_REDUCTION",
+				"subtype": "damageTypeAll",
+				"val": 34,
+				"hidden": true,
+				"stacking": "aiAssistShadow",
+				"limiters": [
+					"noneOf",
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "HERO_SPELL_CASTS_PER_COMBAT_TURN"
+					},
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "MEMORIAL_AI_GATE"
+					}
+				]
+			}
+		}
+	},
+	"heroes-memorial.h5:h5OrcsCyclop2": {
+		"abilities": {
+			"aiAssistShadow": {
+				"type": "GENERAL_DAMAGE_REDUCTION",
+				"subtype": "damageTypeAll",
+				"val": 50,
+				"hidden": true,
+				"stacking": "aiAssistShadow",
+				"limiters": [
+					"noneOf",
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "HERO_SPELL_CASTS_PER_COMBAT_TURN"
+					},
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "MEMORIAL_AI_GATE"
+					}
+				]
+			}
+		}
+	},
+	"heroes-memorial.h5:h5OrcsGoblin1": {
+		"abilities": {
+			"aiAssistShadow": {
+				"type": "GENERAL_DAMAGE_REDUCTION",
+				"subtype": "damageTypeAll",
+				"val": 20,
+				"hidden": true,
+				"stacking": "aiAssistShadow",
+				"limiters": [
+					"noneOf",
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "HERO_SPELL_CASTS_PER_COMBAT_TURN"
+					},
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "MEMORIAL_AI_GATE"
+					}
+				]
+			}
+		}
+	},
+	"heroes-memorial.h5:h5OrcsGoblin2": {
+		"abilities": {
+			"aiAssistShadow": {
+				"type": "GENERAL_DAMAGE_REDUCTION",
+				"subtype": "damageTypeAll",
+				"val": 28,
+				"hidden": true,
+				"stacking": "aiAssistShadow",
+				"limiters": [
+					"noneOf",
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "HERO_SPELL_CASTS_PER_COMBAT_TURN"
+					},
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "MEMORIAL_AI_GATE"
+					}
+				]
+			}
+		}
+	},
+	"heroes-memorial.h5:h5OrcsOrc1": {
+		"abilities": {
+			"aiAssistShadow": {
+				"type": "GENERAL_DAMAGE_REDUCTION",
+				"subtype": "damageTypeAll",
+				"val": 37,
+				"hidden": true,
+				"stacking": "aiAssistShadow",
+				"limiters": [
+					"noneOf",
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "HERO_SPELL_CASTS_PER_COMBAT_TURN"
+					},
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "MEMORIAL_AI_GATE"
+					}
+				]
+			}
+		}
+	},
+	"heroes-memorial.h5:h5OrcsOrc2": {
+		"abilities": {
+			"aiAssistShadow": {
+				"type": "GENERAL_DAMAGE_REDUCTION",
+				"subtype": "damageTypeAll",
+				"val": 28,
+				"hidden": true,
+				"stacking": "aiAssistShadow",
+				"limiters": [
+					"noneOf",
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "HERO_SPELL_CASTS_PER_COMBAT_TURN"
+					},
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "MEMORIAL_AI_GATE"
+					}
+				]
+			}
+		}
+	},
+	"heroes-memorial.h5:h5OrcsOrcChief1": {
+		"abilities": {
+			"aiAssistShadow": {
+				"type": "GENERAL_DAMAGE_REDUCTION",
+				"subtype": "damageTypeAll",
+				"val": 34,
+				"hidden": true,
+				"stacking": "aiAssistShadow",
+				"limiters": [
+					"noneOf",
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "HERO_SPELL_CASTS_PER_COMBAT_TURN"
+					},
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "MEMORIAL_AI_GATE"
+					}
+				]
+			}
+		}
+	},
+	"heroes-memorial.h5:h5OrcsOrcChief2": {
+		"abilities": {
+			"aiAssistShadow": {
+				"type": "GENERAL_DAMAGE_REDUCTION",
+				"subtype": "damageTypeAll",
+				"val": 29,
+				"hidden": true,
+				"stacking": "aiAssistShadow",
+				"limiters": [
+					"noneOf",
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "HERO_SPELL_CASTS_PER_COMBAT_TURN"
+					},
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "MEMORIAL_AI_GATE"
+					}
+				]
+			}
+		}
+	},
+	"heroes-memorial.h5:h5OrcsShaman1": {
+		"abilities": {
+			"aiAssistShadow": {
+				"type": "GENERAL_DAMAGE_REDUCTION",
+				"subtype": "damageTypeAll",
+				"val": 18,
+				"hidden": true,
+				"stacking": "aiAssistShadow",
+				"limiters": [
+					"noneOf",
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "HERO_SPELL_CASTS_PER_COMBAT_TURN"
+					},
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "MEMORIAL_AI_GATE"
+					}
+				]
+			}
+		}
+	},
+	"heroes-memorial.h5:h5OrcsShaman2": {
+		"abilities": {
+			"aiAssistShadow": {
+				"type": "GENERAL_DAMAGE_REDUCTION",
+				"subtype": "damageTypeAll",
+				"val": 34,
+				"hidden": true,
+				"stacking": "aiAssistShadow",
+				"limiters": [
+					"noneOf",
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "HERO_SPELL_CASTS_PER_COMBAT_TURN"
+					},
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "MEMORIAL_AI_GATE"
+					}
+				]
+			}
+		}
+	},
+	"heroes-memorial.h5:h5OrcsWyvern1": {
+		"abilities": {
+			"aiAssistShadow": {
+				"type": "GENERAL_DAMAGE_REDUCTION",
+				"subtype": "damageTypeAll",
+				"val": 33,
+				"hidden": true,
+				"stacking": "aiAssistShadow",
+				"limiters": [
+					"noneOf",
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "HERO_SPELL_CASTS_PER_COMBAT_TURN"
+					},
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "MEMORIAL_AI_GATE"
+					}
+				]
+			}
+		}
+	},
+	"heroes-memorial.h5:h5OrcsWyvern2": {
+		"abilities": {
+			"aiAssistShadow": {
+				"type": "GENERAL_DAMAGE_REDUCTION",
+				"subtype": "damageTypeAll",
+				"val": 30,
+				"hidden": true,
+				"stacking": "aiAssistShadow",
+				"limiters": [
+					"noneOf",
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "HERO_SPELL_CASTS_PER_COMBAT_TURN"
+					},
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "MEMORIAL_AI_GATE"
+					}
+				]
+			}
+		}
+	},
+	"heroes-memorial.h5:h5Preserve3rdBladeSinger": {
+		"abilities": {
+			"aiAssistShadow": {
+				"type": "GENERAL_DAMAGE_REDUCTION",
+				"subtype": "damageTypeAll",
+				"val": 18,
+				"hidden": true,
+				"stacking": "aiAssistShadow",
+				"limiters": [
+					"noneOf",
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "HERO_SPELL_CASTS_PER_COMBAT_TURN"
+					},
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "MEMORIAL_AI_GATE"
+					}
+				]
+			}
+		}
+	},
+	"heroes-memorial.h5:h5Preserve3rdHighDruid": {
+		"abilities": {
+			"aiAssistShadow": {
+				"type": "GENERAL_DAMAGE_REDUCTION",
+				"subtype": "damageTypeAll",
+				"val": 12,
+				"hidden": true,
+				"stacking": "aiAssistShadow",
+				"limiters": [
+					"noneOf",
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "HERO_SPELL_CASTS_PER_COMBAT_TURN"
+					},
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "MEMORIAL_AI_GATE"
+					}
+				]
+			}
+		}
+	},
+	"heroes-memorial.h5:h5Preserve3rdRainbowDragon": {
+		"abilities": {
+			"aiAssistShadow": {
+				"type": "GENERAL_DAMAGE_REDUCTION",
+				"subtype": "damageTypeAll",
+				"val": 29,
+				"hidden": true,
+				"stacking": "aiAssistShadow",
+				"limiters": [
+					"noneOf",
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "HERO_SPELL_CASTS_PER_COMBAT_TURN"
+					},
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "MEMORIAL_AI_GATE"
+					}
+				]
+			}
+		}
+	},
+	"heroes-memorial.h5:h5Preserve3rdSharpShooter": {
+		"abilities": {
+			"aiAssistShadow": {
+				"type": "GENERAL_DAMAGE_REDUCTION",
+				"subtype": "damageTypeAll",
+				"val": 17,
+				"hidden": true,
+				"stacking": "aiAssistShadow",
+				"limiters": [
+					"noneOf",
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "HERO_SPELL_CASTS_PER_COMBAT_TURN"
+					},
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "MEMORIAL_AI_GATE"
+					}
+				]
+			}
+		}
+	},
+	"heroes-memorial.h5:h5PreserveDruid": {
+		"abilities": {
+			"aiAssistShadow": {
+				"type": "GENERAL_DAMAGE_REDUCTION",
+				"subtype": "damageTypeAll",
+				"val": 16,
+				"hidden": true,
+				"stacking": "aiAssistShadow",
+				"limiters": [
+					"noneOf",
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "HERO_SPELL_CASTS_PER_COMBAT_TURN"
+					},
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "MEMORIAL_AI_GATE"
+					}
+				]
+			}
+		}
+	},
+	"heroes-memorial.h5:h5PreserveDruidElder": {
+		"abilities": {
+			"aiAssistShadow": {
+				"type": "GENERAL_DAMAGE_REDUCTION",
+				"subtype": "damageTypeAll",
+				"val": 12,
+				"hidden": true,
+				"stacking": "aiAssistShadow",
+				"limiters": [
+					"noneOf",
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "HERO_SPELL_CASTS_PER_COMBAT_TURN"
+					},
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "MEMORIAL_AI_GATE"
+					}
+				]
+			}
+		}
+	},
+	"heroes-memorial.h5:h5PreserveGrandElf": {
+		"abilities": {
+			"aiAssistShadow": {
+				"type": "GENERAL_DAMAGE_REDUCTION",
+				"subtype": "damageTypeAll",
+				"val": 15,
+				"hidden": true,
+				"stacking": "aiAssistShadow",
+				"limiters": [
+					"noneOf",
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "HERO_SPELL_CASTS_PER_COMBAT_TURN"
+					},
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "MEMORIAL_AI_GATE"
+					}
+				]
+			}
+		}
+	},
+	"heroes-memorial.h5:h5PreserveWarDancer": {
+		"abilities": {
+			"aiAssistShadow": {
+				"type": "GENERAL_DAMAGE_REDUCTION",
+				"subtype": "damageTypeAll",
+				"val": 34,
+				"hidden": true,
+				"stacking": "aiAssistShadow",
+				"limiters": [
+					"noneOf",
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "HERO_SPELL_CASTS_PER_COMBAT_TURN"
+					},
+					{
+						"type": "HAS_ANOTHER_BONUS_LIMITER",
+						"bonusType": "MEMORIAL_AI_GATE"
+					}
+				]
+			}
+		}
+	}
+}

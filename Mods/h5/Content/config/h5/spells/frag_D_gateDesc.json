@@ -1,0 +1,210 @@
+{
+	"tears-of-ashan:gate72ArchDevil": {
+		"levels": {
+			"base": {
+				"description": "{Gate Arch Devils}\r\n\r\nAllows you to use Gating to gate Arch Devils.\r\n\r\nOnce cast, other creatures may also be gated.\r\n\r\nH5 Synergy: if you have at least 4 stacks of H5 demons (not counting summoned ones) on the battlefield, summons the same number of H5 Arch Devils instead."
+			},
+			"basic": {
+				"description": "{Basic Gate Arch Devils}\r\n\r\nAllows you to use Gating to gate (Power x 1) Arch Devils.\r\n\r\nOnce cast, other creatures may also be gated.\r\n\r\nH5 Synergy: if you have at least 4 stacks of H5 demons (not counting summoned ones) on the battlefield, summons the same number of H5 Arch Devils instead."
+			},
+			"advanced": {
+				"description": "{Advanced Gate Arch Devils}\r\n\r\nAllows you to use Gating to gate (Power x 1) Arch Devils.\r\n\r\nOnce cast, other creatures may also be gated.\r\n\r\nH5 Synergy: if you have at least 4 stacks of H5 demons (not counting summoned ones) on the battlefield, summons the same number of H5 Arch Devils instead."
+			},
+			"expert": {
+				"description": "{Expert Gate Arch Devils}\r\n\r\nAllows you to use Gating to gate (Power x 1) Arch Devils.\r\n\r\nOnce cast, other creatures may also be gated.\r\n\r\nH5 Synergy: if you have at least 4 stacks of H5 demons (not counting summoned ones) on the battlefield, summons the same number of H5 Arch Devils instead."
+			}
+		}
+	},
+	"tears-of-ashan:gate41Demon": {
+		"levels": {
+			"base": {
+				"description": "{Gate Demons}\r\n\r\nAllows you to use Gating to gate Demons.\r\n\r\nOnce cast, other creatures may also be gated.\r\n\r\nH5 Synergy: if you have at least 4 stacks of H5 demons (not counting summoned ones) on the battlefield, summons the same number of H5 Horned Demons instead."
+			},
+			"basic": {
+				"description": "{Basic Gate Demons}\r\n\r\nAllows you to use Gating to gate (Power x 2) Demons.\r\n\r\nOnce cast, other creatures may also be gated.\r\n\r\nH5 Synergy: if you have at least 4 stacks of H5 demons (not counting summoned ones) on the battlefield, summons the same number of H5 Horned Demons instead."
+			},
+			"advanced": {
+				"description": "{Advanced Gate Demons}\r\n\r\nAllows you to use Gating to gate (Power x 3) Demons.\r\n\r\nOnce cast, other creatures may also be gated.\r\n\r\nH5 Synergy: if you have at least 4 stacks of H5 demons (not counting summoned ones) on the battlefield, summons the same number of H5 Horned Demons instead."
+			},
+			"expert": {
+				"description": "{Expert Gate Demons}\r\n\r\nAllows you to use Gating to gate (Power x 4) Demons.\r\n\r\nOnce cast, other creatures may also be gated.\r\n\r\nH5 Synergy: if you have at least 4 stacks of H5 demons (not counting summoned ones) on the battlefield, summons the same number of H5 Horned Demons instead."
+			}
+		}
+	},
+	"tears-of-ashan:gate71Devil": {
+		"levels": {
+			"base": {
+				"description": "{Gate Devils}\r\n\r\nAllows you to use Gating to gate Devils.\r\n\r\nOnce cast, other creatures may also be gated.\r\n\r\nH5 Synergy: if you have at least 4 stacks of H5 demons (not counting summoned ones) on the battlefield, summons the same number of H5 Devils instead."
+			},
+			"basic": {
+				"description": "{Basic Gate Devils}\r\n\r\nAllows you to use Gating to gate (Power x 1) Devils.\r\n\r\nOnce cast, other creatures may also be gated.\r\n\r\nH5 Synergy: if you have at least 4 stacks of H5 demons (not counting summoned ones) on the battlefield, summons the same number of H5 Devils instead."
+			},
+			"advanced": {
+				"description": "{Advanced Gate Devils}\r\n\r\nAllows you to use Gating to gate (Power x 1) Devils.\r\n\r\nOnce cast, other creatures may also be gated.\r\n\r\nH5 Synergy: if you have at least 4 stacks of H5 demons (not counting summoned ones) on the battlefield, summons the same number of H5 Devils instead."
+			},
+			"expert": {
+				"description": "{Expert Gate Devils}\r\n\r\nAllows you to use Gating to gate (Power x 1) Devils.\r\n\r\nOnce cast, other creatures may also be gated.\r\n\r\nH5 Synergy: if you have at least 4 stacks of H5 demons (not counting summoned ones) on the battlefield, summons the same number of H5 Devils instead."
+			}
+		}
+	},
+	"tears-of-ashan:gate74DevilSpec": {
+		"levels": {
+			"base": {
+				"description": "{Gate Devils}\r\n\r\nAllows you to use Gating to gate Devils.\r\n\r\nOnce cast, other creatures may also be gated.\r\n\r\nH5 Synergy: if you have at least 4 stacks of H5 demons (not counting summoned ones) on the battlefield, summons the same number of H5 Devils instead."
+			},
+			"basic": {
+				"description": "{Basic Gate Devils}\r\n\r\nAllows you to use Gating to gate (Power x 1) Devils.\r\n\r\nOnce cast, other creatures may also be gated.\r\n\r\nH5 Synergy: if you have at least 4 stacks of H5 demons (not counting summoned ones) on the battlefield, summons the same number of H5 Devils instead."
+			},
+			"advanced": {
+				"description": "{Advanced Gate Devils}\r\n\r\nAllows you to use Gating to gate (Power x 1) Devils.\r\n\r\nOnce cast, other creatures may also be gated.\r\n\r\nH5 Synergy: if you have at least 4 stacks of H5 demons (not counting summoned ones) on the battlefield, summons the same number of H5 Devils instead."
+			},
+			"expert": {
+				"description": "{Expert Gate Devils}\r\n\r\nAllows you to use Gating to gate (Power x 1) Devils.\r\n\r\nOnce cast, other creatures may also be gated.\r\n\r\nH5 Synergy: if you have at least 4 stacks of H5 demons (not counting summoned ones) on the battlefield, summons the same number of H5 Devils instead."
+			}
+		}
+	},
+	"tears-of-ashan:gate61Efreeti": {
+		"levels": {
+			"base": {
+				"description": "{Gate Efreet}\r\n\r\nAllows you to use Gating to gate Efreet.\r\n\r\nOnce cast, other creatures may also be gated.\r\n\r\nH5 Synergy: if you have at least 4 stacks of H5 demons (not counting summoned ones) on the battlefield, summons the same number of H5 Pit Fiends instead."
+			},
+			"basic": {
+				"description": "{Basic Gate Efreet}\r\n\r\nAllows you to use Gating to gate (Power x 1) Efreet.\r\n\r\nOnce cast, other creatures may also be gated.\r\n\r\nH5 Synergy: if you have at least 4 stacks of H5 demons (not counting summoned ones) on the battlefield, summons the same number of H5 Pit Fiends instead."
+			},
+			"advanced": {
+				"description": "{Advanced Gate Efreet}\r\n\r\nAllows you to use Gating to gate (Power x 2) Efreet.\r\n\r\nOnce cast, other creatures may also be gated.\r\n\r\nH5 Synergy: if you have at least 4 stacks of H5 demons (not counting summoned ones) on the battlefield, summons the same number of H5 Pit Fiends instead."
+			},
+			"expert": {
+				"description": "{Expert Gate Efreet}\r\n\r\nAllows you to use Gating to gate (Power x 2) Efreet.\r\n\r\nOnce cast, other creatures may also be gated.\r\n\r\nH5 Synergy: if you have at least 4 stacks of H5 demons (not counting summoned ones) on the battlefield, summons the same number of H5 Pit Fiends instead."
+			}
+		}
+	},
+	"tears-of-ashan:gate21Gog": {
+		"levels": {
+			"base": {
+				"description": "{Gate Gogs}\r\n\r\nAllows you to use Gating to gate Gogs.\r\n\r\nOnce cast, other creatures may also be gated.\r\n\r\nH5 Synergy: if you have at least 4 stacks of H5 demons (not counting summoned ones) on the battlefield, summons the same number of H5 Horned Demons instead."
+			},
+			"basic": {
+				"description": "{Basic Gate Gogs}\r\n\r\nAllows you to use Gating to gate (Power x 3) Gogs.\r\n\r\nOnce cast, other creatures may also be gated.\r\n\r\nH5 Synergy: if you have at least 4 stacks of H5 demons (not counting summoned ones) on the battlefield, summons the same number of H5 Horned Demons instead."
+			},
+			"advanced": {
+				"description": "{Advanced Gate Gogs}\r\n\r\nAllows you to use Gating to gate (Power x 5) Gogs.\r\n\r\nOnce cast, other creatures may also be gated.\r\n\r\nH5 Synergy: if you have at least 4 stacks of H5 demons (not counting summoned ones) on the battlefield, summons the same number of H5 Horned Demons instead."
+			},
+			"expert": {
+				"description": "{Expert Gate Gogs}\r\n\r\nAllows you to use Gating to gate (Power x 7) Gogs.\r\n\r\nOnce cast, other creatures may also be gated.\r\n\r\nH5 Synergy: if you have at least 4 stacks of H5 demons (not counting summoned ones) on the battlefield, summons the same number of H5 Horned Demons instead."
+			}
+		}
+	},
+	"tears-of-ashan:gate31HellHound": {
+		"levels": {
+			"base": {
+				"description": "{Gate Hell Hounds}\r\n\r\nAllows you to use Gating to gate Hell Hounds.\r\n\r\nOnce cast, other creatures may also be gated.\r\n\r\nH5 Synergy: if you have at least 4 stacks of H5 demons (not counting summoned ones) on the battlefield, summons the same number of H5 Hell Hounds instead."
+			},
+			"basic": {
+				"description": "{Basic Gate Hell Hounds}\r\n\r\nAllows you to use Gating to gate (Power x 3) Hell Hounds.\r\n\r\nOnce cast, other creatures may also be gated.\r\n\r\nH5 Synergy: if you have at least 4 stacks of H5 demons (not counting summoned ones) on the battlefield, summons the same number of H5 Hell Hounds instead."
+			},
+			"advanced": {
+				"description": "{Advanced Gate Hell Hounds}\r\n\r\nAllows you to use Gating to gate (Power x 4) Hell Hounds.\r\n\r\nOnce cast, other creatures may also be gated.\r\n\r\nH5 Synergy: if you have at least 4 stacks of H5 demons (not counting summoned ones) on the battlefield, summons the same number of H5 Hell Hounds instead."
+			},
+			"expert": {
+				"description": "{Expert Gate Hell Hounds}\r\n\r\nAllows you to use Gating to gate (Power x 5) Hell Hounds.\r\n\r\nOnce cast, other creatures may also be gated.\r\n\r\nH5 Synergy: if you have at least 4 stacks of H5 demons (not counting summoned ones) on the battlefield, summons the same number of H5 Hell Hounds instead."
+			}
+		}
+	},
+	"tears-of-ashan:gate64HellSteed": {
+		"levels": {
+			"base": {
+				"description": "{Gate Hell Steeds}\r\n\r\nAllows you to use Gating to gate Hell Steeds.\r\n\r\nOnce cast, other creatures may also be gated.\r\n\r\nH5 Synergy: if you have at least 4 stacks of H5 demons (not counting summoned ones) on the battlefield, summons the same number of H5 Hell Steeds instead."
+			},
+			"basic": {
+				"description": "{Basic Gate Hell Steeds}\r\n\r\nAllows you to use Gating to gate (Power x 1) Hell Steeds.\r\n\r\nOnce cast, other creatures may also be gated.\r\n\r\nH5 Synergy: if you have at least 4 stacks of H5 demons (not counting summoned ones) on the battlefield, summons the same number of H5 Hell Steeds instead."
+			},
+			"advanced": {
+				"description": "{Advanced Gate Hell Steeds}\r\n\r\nAllows you to use Gating to gate (Power x 2) Hell Steeds.\r\n\r\nOnce cast, other creatures may also be gated.\r\n\r\nH5 Synergy: if you have at least 4 stacks of H5 demons (not counting summoned ones) on the battlefield, summons the same number of H5 Hell Steeds instead."
+			},
+			"expert": {
+				"description": "{Expert Gate Hell Steeds}\r\n\r\nAllows you to use Gating to gate (Power x 2) Hell Steeds.\r\n\r\nOnce cast, other creatures may also be gated.\r\n\r\nH5 Synergy: if you have at least 4 stacks of H5 demons (not counting summoned ones) on the battlefield, summons the same number of H5 Hell Steeds instead."
+			}
+		}
+	},
+	"tears-of-ashan:gate11Imp": {
+		"levels": {
+			"base": {
+				"description": "{Gate Imps}\r\n\r\nAllows you to use Gating to gate Imps.\r\n\r\nOnce cast, other creatures may also be gated.\r\n\r\nH5 Synergy: if you have at least 4 stacks of H5 demons (not counting summoned ones) on the battlefield, summons the same number of H5 Devil Spawn instead."
+			},
+			"basic": {
+				"description": "{Basic Gate Imps}\r\n\r\nAllows you to use Gating to gate (Power x 4) Imps.\r\n\r\nOnce cast, other creatures may also be gated.\r\n\r\nH5 Synergy: if you have at least 4 stacks of H5 demons (not counting summoned ones) on the battlefield, summons the same number of H5 Devil Spawn instead."
+			},
+			"advanced": {
+				"description": "{Advanced Gate Imps}\r\n\r\nAllows you to use Gating to gate (Power x 8) Imps.\r\n\r\nOnce cast, other creatures may also be gated.\r\n\r\nH5 Synergy: if you have at least 4 stacks of H5 demons (not counting summoned ones) on the battlefield, summons the same number of H5 Devil Spawn instead."
+			},
+			"expert": {
+				"description": "{Expert Gate Imps}\r\n\r\nAllows you to use Gating to gate (Power x 12) Imps.\r\n\r\nOnce cast, other creatures may also be gated.\r\n\r\nH5 Synergy: if you have at least 4 stacks of H5 demons (not counting summoned ones) on the battlefield, summons the same number of H5 Devil Spawn instead."
+			}
+		}
+	},
+	"tears-of-ashan:gate66Nightmare": {
+		"levels": {
+			"base": {
+				"description": "{Gate Nightmares}\r\n\r\nAllows you to use Gating to gate Nightmares.\r\n\r\nOnce cast, other creatures may also be gated.\r\n\r\nH5 Synergy: if you have at least 4 stacks of H5 demons (not counting summoned ones) on the battlefield, summons the same number of H5 Nightmares instead."
+			},
+			"basic": {
+				"description": "{Basic Gate Nightmares}\r\n\r\nAllows you to use Gating to gate (Power x 1) Nightmares.\r\n\r\nOnce cast, other creatures may also be gated.\r\n\r\nH5 Synergy: if you have at least 4 stacks of H5 demons (not counting summoned ones) on the battlefield, summons the same number of H5 Nightmares instead."
+			},
+			"advanced": {
+				"description": "{Advanced Gate Nightmares}\r\n\r\nAllows you to use Gating to gate (Power x 2) Nightmares.\r\n\r\nOnce cast, other creatures may also be gated.\r\n\r\nH5 Synergy: if you have at least 4 stacks of H5 demons (not counting summoned ones) on the battlefield, summons the same number of H5 Nightmares instead."
+			},
+			"expert": {
+				"description": "{Expert Gate Nightmares}\r\n\r\nAllows you to use Gating to gate (Power x 2) Nightmares.\r\n\r\nOnce cast, other creatures may also be gated.\r\n\r\nH5 Synergy: if you have at least 4 stacks of H5 demons (not counting summoned ones) on the battlefield, summons the same number of H5 Nightmares instead."
+			}
+		}
+	},
+	"tears-of-ashan:gate51PitFiend": {
+		"levels": {
+			"base": {
+				"description": "{Gate Pit Fiends}\r\n\r\nAllows you to use Gating to gate Pit Fiends.\r\n\r\nOnce cast, other creatures may also be gated.\r\n\r\nH5 Synergy: if you have at least 4 stacks of H5 demons (not counting summoned ones) on the battlefield, summons the same number of H5 Pit Fiends instead."
+			},
+			"basic": {
+				"description": "{Basic Gate Pit Fiends}\r\n\r\nAllows you to use Gating to gate (Power x 1) Pit Fiends.\r\n\r\nOnce cast, other creatures may also be gated.\r\n\r\nH5 Synergy: if you have at least 4 stacks of H5 demons (not counting summoned ones) on the battlefield, summons the same number of H5 Pit Fiends instead."
+			},
+			"advanced": {
+				"description": "{Advanced Gate Pit Fiends}\r\n\r\nAllows you to use Gating to gate (Power x 2) Pit Fiends.\r\n\r\nOnce cast, other creatures may also be gated.\r\n\r\nH5 Synergy: if you have at least 4 stacks of H5 demons (not counting summoned ones) on the battlefield, summons the same number of H5 Pit Fiends instead."
+			},
+			"expert": {
+				"description": "{Expert Gate Pit Fiends}\r\n\r\nAllows you to use Gating to gate (Power x 3) Pit Fiends.\r\n\r\nOnce cast, other creatures may also be gated.\r\n\r\nH5 Synergy: if you have at least 4 stacks of H5 demons (not counting summoned ones) on the battlefield, summons the same number of H5 Pit Fiends instead."
+			}
+		}
+	},
+	"tears-of-ashan:gate54Succubus": {
+		"levels": {
+			"base": {
+				"description": "{Gate Succubi}\r\n\r\nAllows you to use Gating to gate Succubi.\r\n\r\nOnce cast, other creatures may also be gated.\r\n\r\nH5 Synergy: if you have at least 4 stacks of H5 demons (not counting summoned ones) on the battlefield, summons the same number of H5 Succubi instead."
+			},
+			"basic": {
+				"description": "{Basic Gate Succubi}\r\n\r\nAllows you to use Gating to gate (Power x 1) Succubi.\r\n\r\nOnce cast, other creatures may also be gated.\r\n\r\nH5 Synergy: if you have at least 4 stacks of H5 demons (not counting summoned ones) on the battlefield, summons the same number of H5 Succubi instead."
+			},
+			"advanced": {
+				"description": "{Advanced Gate Succubi}\r\n\r\nAllows you to use Gating to gate (Power x 2) Succubi.\r\n\r\nOnce cast, other creatures may also be gated.\r\n\r\nH5 Synergy: if you have at least 4 stacks of H5 demons (not counting summoned ones) on the battlefield, summons the same number of H5 Succubi instead."
+			},
+			"expert": {
+				"description": "{Expert Gate Succubi}\r\n\r\nAllows you to use Gating to gate (Power x 3) Succubi.\r\n\r\nOnce cast, other creatures may also be gated.\r\n\r\nH5 Synergy: if you have at least 4 stacks of H5 demons (not counting summoned ones) on the battlefield, summons the same number of H5 Succubi instead."
+			}
+		}
+	},
+	"tears-of-ashan:gate55SuccubusSeducer": {
+		"levels": {
+			"base": {
+				"description": "{Gate Succubus Seducers}\r\n\r\nAllows you to use Gating to gate Succubus Seducers.\r\n\r\nOnce cast, other creatures may also be gated.\r\n\r\nH5 Synergy: if you have at least 4 stacks of H5 demons (not counting summoned ones) on the battlefield, summons the same number of H5 Succubus Mistresses instead."
+			},
+			"basic": {
+				"description": "{Basic Gate Succubus Seducers}\r\n\r\nAllows you to use Gating to gate (Power x 1) Succubus Seducers.\r\n\r\nOnce cast, other creatures may also be gated.\r\n\r\nH5 Synergy: if you have at least 4 stacks of H5 demons (not counting summoned ones) on the battlefield, summons the same number of H5 Succubus Mistresses instead."
+			},
+			"advanced": {
+				"description": "{Advanced Gate Succubus Seducers}\r\n\r\nAllows you to use Gating to gate (Power x 2) Succubus Seducers.\r\n\r\nOnce cast, other creatures may also be gated.\r\n\r\nH5 Synergy: if you have at least 4 stacks of H5 demons (not counting summoned ones) on the battlefield, summons the same number of H5 Succubus Mistresses instead."
+			},
+			"expert": {
+				"description": "{Expert Gate Succubus Seducers}\r\n\r\nAllows you to use Gating to gate (Power x 3) Succubus Seducers.\r\n\r\nOnce cast, other creatures may also be gated.\r\n\r\nH5 Synergy: if you have at least 4 stacks of H5 demons (not counting summoned ones) on the battlefield, summons the same number of H5 Succubus Mistresses instead."
+			}
+		}
+	}
+}

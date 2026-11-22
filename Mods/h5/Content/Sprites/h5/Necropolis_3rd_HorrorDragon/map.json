@@ -1,0 +1,22 @@
+{
+ "basepath": "h5/Necropolis_3rd_HorrorDragon/map/",
+ "sequences": [
+  {
+   "group": 0,
+   "frames": [
+    "stand_01.png",
+    "stand_02.png",
+    "stand_03.png",
+    "stand_04.png",
+    "stand_05.png",
+    "stand_06.png",
+    "stand_07.png",
+    "stand_08.png",
+    "stand_09.png",
+    "stand_10.png",
+    "stand_11.png",
+    "stand_12.png"
+   ]
+  }
+ ]
+}

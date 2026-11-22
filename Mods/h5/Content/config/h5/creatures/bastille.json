@@ -1,0 +1,5900 @@
+{
+	"h5Dwarf3rdBattleRager": {
+		"name": {
+			"singular": "Battlerager",
+			"plural": "Battleragers"
+		},
+		"description": "Brawlers, Berserkers and Battleragers are the level 4 units of the Heroes V Fortress (merged into Bulwark). All of them have {Mind Control Immunity} (immune to Mind magic). Berserkers also have {Berserker Rage} (converts all Defense into Attack and attacks the nearest unit without retaliation). Battleragers also have {Giant Slayer} (+4 Attack and +4 Defense when fighting large creatures), {Shield Bash} (melee attacks have a chance to stun the target, which cannot retaliate and has its ATB reset to 0) and {Battle Rage} (+5 Attack and +20% Speed for 2 rounds after taking damage).\n\nThese dwarven killing machines fear neither hydras, dragons nor any other terrifying creature. They merely laugh off their wounds and throw themselves into even fiercer attacks.\n\nSee also {Brawler}, {Berserker}.",
+		"faction": "highlands-town:highlands",
+		"level": 4,
+		"cost": {
+			"gold": 230
+		},
+		"speed": 6,
+		"hitPoints": 31,
+		"attack": 9,
+		"defense": 9,
+		"damage": {
+			"min": 3,
+			"max": 6
+		},
+		"doubleWide": false,
+		"fightValue": 326,
+		"aiValue": 374,
+		"growth": 5,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"h5AntiGiant": {
+				"icon": "h5/abilities/antiGiant",
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5AntiGiant",
+				"addInfo": {
+					"attack": 4,
+					"defence": 4
+				},
+				"description": "{Giant Slayer}\nVs. large creatures:\n+4 Attack, +4 Defense"
+			},
+			"h5Bash": {
+				"icon": "h5/abilities/bash",
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5ProcEffect",
+				"addInfo": {
+					"effect": "bash",
+					"pf": 1.5,
+					"melee": true,
+					"ranged": false
+				},
+				"description": "{Shield Bash}\nMelee may stun: no\nretaliation, ATB reset"
+			},
+			"mindImmunity": {
+				"type": "MIND_IMMUNITY",
+				"description": "{Mind Control Immunity}\nImmune to Mind spells"
+			},
+			"h5BattleRage": {
+				"icon": "h5/abilities/battleRage",
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5BattleRage",
+				"addInfo": {
+					"attack": 5,
+					"initiative": 2,
+					"turns": 2
+				},
+				"description": "{Battle Rage}\nWhen hurt: +5 Attack,\n+20% Speed for 2 rounds"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 6,
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h5/Dwarf_3rd_BattleRager/battle.json",
+			"map": "h5/Dwarf_3rd_BattleRager/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Dwarf_3rd_BattleRager/map/atkL.png",
+			"mapAttackFromRight": "h5/Dwarf_3rd_BattleRager/map/atkR.png",
+			"iconLarge": "h5/Dwarf_3rd_BattleRager/iconLarge.png",
+			"iconSmall": "h5/Dwarf_3rd_BattleRager/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_Dwarves_T4_attack00.ogg",
+			"wince": "h5/h5_Dwarves_T4_hit.ogg",
+			"defend": "h5/h5_Dwarves_T4_hit.ogg",
+			"killed": "h5/h5_Dwarves_T4_death.ogg",
+			"move": "h5/h5_Dwarves_T4_move.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					5,
+					6,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "DOUBLE_DAMAGE_CHANCE"
+				},
+				"values": [
+					3,
+					6,
+					9,
+					12,
+					15,
+					18,
+					21,
+					24,
+					27,
+					30
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_ATTACK"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1
+				]
+			}
+		]
+	},
+	"h5Dwarf3rdFlameKeeper": {
+		"name": {
+			"singular": "Rune Keeper",
+			"plural": "Rune Keepers"
+		},
+		"description": "Rune Priests, Rune Patriarchs and Rune Keepers are the level 5 units of the Heroes V Fortress (merged into Bulwark). All of them can shoot and cast {Deflect Missile} (2 times per battle, 15 mana), and have {Mark of Fire} (a chance to make the target take double damage from Fire magic for 2 rounds). Rune Priests have {50% Fire Proof} (-50% Fire magic damage). Rune Patriarchs also have {Immune to Fire} (immune to Fire magic) and {Cross Shot} (the shot hits the target and the ring of hexes around it, friend and foe alike). Rune Keepers also have {Immune to Fire} (immune to Fire magic).\n\nKilling a Rune Keeper is no simple task, and without armor that resists Fire magic it is downright impossible. Rune Keepers have no fear of fire themselves: the Marks of Fire they carve make enemies suffer double in the flames, and the Fireball Volleys they command can turn an entire enemy line into a sea of fire.\n\nSee also {Rune Priest}, {Rune Patriarch}.",
+		"faction": "highlands-town:highlands",
+		"level": 5,
+		"cost": {
+			"gold": 545
+		},
+		"speed": 4,
+		"hitPoints": 48,
+		"attack": 8,
+		"defense": 8,
+		"damage": {
+			"min": 16,
+			"max": 19
+		},
+		"doubleWide": false,
+		"fightValue": 827,
+		"aiValue": 921,
+		"growth": 3,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"shooter": {
+				"type": "SHOOTER"
+			},
+			"immuneTofire": {
+				"type": "SPELL_SCHOOL_IMMUNITY",
+				"subtype": "fire",
+				"description": "{Immune to Fire}\nImmune to Fire spells"
+			},
+			"h5MarkOfFire": {
+				"icon": "h5/abilities/markOfFire",
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5ProcSpell",
+				"addInfo": {
+					"spell": "h5AbMarkOfFire",
+					"pf": 1.0,
+					"mastery": 0,
+					"melee": true,
+					"ranged": true
+				},
+				"description": "{Mark of Fire}\nMay make target take 2x\nFire spell dmg, 2 rounds"
+			},
+			"cast_h5AbDeflectArrows": {
+				"type": "SPELLCASTER",
+				"subtype": "h5AbDeflectArrows",
+				"val": 2
+			},
+			"cast_h5AbFireball": {
+				"type": "SPELLCASTER",
+				"subtype": "h5AbFireball",
+				"val": 2
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 3,
+				"hidden": true
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 4
+			},
+			"h5Mana": {
+				"type": "H5_MANA_H5C",
+				"val": 25,
+				"stacking": "h5Dwarf3rdFlameKeeperExpH5ManaH5c"
+			},
+			"h5ManaMin": {
+				"type": "H5_MANA_MIN_H5C",
+				"val": 6,
+				"hidden": true
+			},
+			"h5ManaPool": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5ManaPool",
+				"hidden": true,
+				"description": "~"
+			},
+			"noSpellcastByDefault": {
+				"type": "NO_SPELLCAST_BY_DEFAULT",
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h5/Dwarf_3rd_FlameKeeper/battle.json",
+			"map": "h5/Dwarf_3rd_FlameKeeper/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Dwarf_3rd_FlameKeeper/map/atkL.png",
+			"mapAttackFromRight": "h5/Dwarf_3rd_FlameKeeper/map/atkR.png",
+			"iconLarge": "h5/Dwarf_3rd_FlameKeeper/iconLarge.png",
+			"iconSmall": "h5/Dwarf_3rd_FlameKeeper/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"frameAngles": [
+					90,
+					60,
+					45,
+					30,
+					0,
+					-30,
+					-45,
+					-60,
+					-90
+				],
+				"offset": {
+					"upperX": 41,
+					"upperY": -78,
+					"middleX": 54,
+					"middleY": -62,
+					"lowerX": 16,
+					"lowerY": -47
+				},
+				"attackClimaxFrame": 6,
+				"ray": [
+					{
+						"start": [
+							127,
+							115,
+							75,
+							160
+						],
+						"end": [
+							85,
+							76,
+							50,
+							60
+						]
+					},
+					{
+						"start": [
+							255,
+							230,
+							150,
+							255
+						],
+						"end": [
+							255,
+							230,
+							150,
+							120
+						]
+					},
+					{
+						"start": [
+							255,
+							255,
+							230,
+							255
+						],
+						"end": [
+							255,
+							230,
+							150,
+							200
+						]
+					},
+					{
+						"start": [
+							255,
+							230,
+							150,
+							255
+						],
+						"end": [
+							255,
+							230,
+							150,
+							120
+						]
+					},
+					{
+						"start": [
+							127,
+							115,
+							75,
+							160
+						],
+						"end": [
+							85,
+							76,
+							50,
+							60
+						]
+					}
+				]
+			}
+		},
+		"sound": {
+			"attack": "h5/h5_Dwarves_T5_attack00.ogg",
+			"wince": "h5/h5_Dwarves_T5_hit.ogg",
+			"defend": "h5/h5_Dwarves_T5_hit.ogg",
+			"killed": "h5/h5_Dwarves_T5_death.ogg",
+			"move": "h5/h5_Dwarves_T5_move.ogg",
+			"shoot": "h5/h5_Dwarves_T5_rangeattack.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					3,
+					4,
+					5,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					3,
+					4,
+					4,
+					6,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					2,
+					3,
+					3,
+					4,
+					5,
+					6,
+					6,
+					7
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					7
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "H5_MANA_H5C",
+					"stacking": "h5Dwarf3rdFlameKeeperExpH5ManaH5c"
+				},
+				"values": [
+					25,
+					25,
+					25,
+					25,
+					31,
+					31,
+					31,
+					31,
+					37,
+					37
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE"
+				},
+				"values": [
+					3,
+					6,
+					9,
+					12,
+					15,
+					18,
+					21,
+					24,
+					27,
+					30
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_WALL_PENALTY",
+					"description": "{Siege Shooter}\nNo damage loss when shooting over walls"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_DISTANCE_PENALTY",
+					"description": "{Sharpshooter}\nNo penalty for long-range shots"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true
+				]
+			}
+		],
+		"shots": 14
+	},
+	"h5Dwarf3rdHarpooner": {
+		"name": {
+			"singular": "Harpooner",
+			"plural": "Harpooners"
+		},
+		"description": "Spearwielders, Skirmishers and Harpooners are the level 2 units of the Heroes V Fortress (merged into Bulwark). All of them can shoot. Spearwielders have {Wound} (a chance to give the target -40% Speed for 2 rounds). Skirmishers also have {No Melee Penalty} and {Wound} (a chance to give the target -40% Speed for 2 rounds). Harpooners are also immune to {Armor Break} and have {Armored} (unaffected by any spell or effect that lowers Defense) and {Harpoon Strike} (damages the enemy it hits and pulls it one hex closer).\n\nHarpooners know their craft well, and in their hands the harpoon becomes extraordinarily powerful. Once struck by a harpoon, enemies risk being knocked down rank after rank, leaving them exposed to the dwarves' axes.\n\nSee also {Spearwielder}, {Skirmisher}.",
+		"faction": "highlands-town:highlands",
+		"level": 2,
+		"cost": {
+			"gold": 125
+		},
+		"speed": 5,
+		"hitPoints": 11,
+		"attack": 9,
+		"defense": 5,
+		"damage": {
+			"min": 2,
+			"max": 5
+		},
+		"doubleWide": false,
+		"fightValue": 147,
+		"aiValue": 165,
+		"growth": 9,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"shooter": {
+				"type": "SHOOTER"
+			},
+			"h5Armored": {
+				"type": "H5_ARMORED_H5C",
+				"val": 1,
+				"description": "{Armored}\nImmune to all spells and\neffects lowering Defense"
+			},
+			"immune_h5DisruptingRay": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "h5DisruptingRay",
+				"hidden": true
+			},
+			"immune_h5AbDisruptingRay": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "h5AbDisruptingRay",
+				"hidden": true
+			},
+			"immune_disruptingRay": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "disruptingRay"
+			},
+			"immune_acidBreath": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "acidBreath"
+			},
+			"cast_h5AbHarpoonStrike": {
+				"type": "SPELLCASTER",
+				"subtype": "h5AbHarpoonStrike",
+				"val": 2,
+				"description": "{Harpoon Strike}\nShoots a foe for damage\nand pulls it 1 hex closer"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 14,
+				"hidden": true
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 1
+			},
+			"noSpellcastByDefault": {
+				"type": "NO_SPELLCAST_BY_DEFAULT",
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h5/Dwarf_3rd_Harpooner/battle.json",
+			"map": "h5/Dwarf_3rd_Harpooner/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Dwarf_3rd_Harpooner/map/atkL.png",
+			"mapAttackFromRight": "h5/Dwarf_3rd_Harpooner/map/atkR.png",
+			"iconLarge": "h5/Dwarf_3rd_Harpooner/iconLarge.png",
+			"iconSmall": "h5/Dwarf_3rd_Harpooner/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"frameAngles": [
+					90,
+					60,
+					45,
+					30,
+					0,
+					-30,
+					-45,
+					-60,
+					-90
+				],
+				"offset": {
+					"upperX": 37,
+					"upperY": -50,
+					"middleX": 50,
+					"middleY": -29,
+					"lowerX": 29,
+					"lowerY": -33
+				},
+				"attackClimaxFrame": 6,
+				"projectile": "h5/Dwarf_3rd_Harpooner/projectile.json"
+			}
+		},
+		"sound": {
+			"attack": "h5/h5_Dwarves_T2_attack00.ogg",
+			"wince": "h5/h5_Dwarves_T2_hit.ogg",
+			"defend": "h5/h5_Dwarves_T2_hit.ogg",
+			"killed": "h5/h5_Dwarves_T2_death.ogg",
+			"move": "h5/h5_Dwarves_T2_move.ogg",
+			"shoot": "h5/h5_Dwarves_T2_rangeattack.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					3,
+					3,
+					3,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					3,
+					4,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					0,
+					1,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					3,
+					3,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE"
+				},
+				"values": [
+					3,
+					6,
+					9,
+					12,
+					15,
+					18,
+					21,
+					24,
+					27,
+					30
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_WALL_PENALTY",
+					"description": "{Siege Shooter}\nNo damage loss when shooting over walls"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_DISTANCE_PENALTY",
+					"description": "{Sharpshooter}\nNo penalty for long-range shots"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true
+				]
+			}
+		],
+		"shots": 11
+	},
+	"h5Dwarf3rdLavaDragon": {
+		"name": {
+			"singular": "Lava Dragon",
+			"plural": "Lava Dragons"
+		},
+		"description": "Fire Dragons, Magma Dragons and Lava Dragons are the level 7 units of the Heroes V Fortress (merged into Bulwark). All of them are dragons and have {Elemental} (non-living, immune to Mind magic) and {Immune to Fire} (immune to Fire magic). Fire Dragons have {Fire Shield} (reflects 20% of melee damage back to the attacker) and {Fire Breath} (the attack also hits the unit behind the target). Magma Dragons also have {Fire Breath} (the attack also hits the unit behind the target) and {Magma Shield} (reflects 40% of melee damage back to the attacker). Lava Dragons also have {Liquid Flame} (leaves flames on the attacked spot for 2 rounds; units that step on them take 9 × the number of Lava Dragons in Fire damage).\n\nLava Dragons are born deep in the earth's core, in lakes of white-hot molten lava. These fire-breathing monsters can easily burn enemies to ashes and raise a wall of fire that keeps them burning.\n\nSee also {Fire Dragon}, {Magma Dragon}.",
+		"faction": "highlands-town:highlands",
+		"level": 7,
+		"cost": {
+			"gold": 3305,
+			"crystal": 2
+		},
+		"speed": 6,
+		"hitPoints": 278,
+		"attack": 21,
+		"defense": 25,
+		"damage": {
+			"min": 39,
+			"max": 49
+		},
+		"doubleWide": true,
+		"fightValue": 4907,
+		"aiValue": 6393,
+		"growth": 1,
+		"advMapAmount": {
+			"min": 1,
+			"max": 3
+		},
+		"abilities": {
+			"h5Elemental": {
+				"type": "H5_ELEMENTAL_H5C",
+				"val": 1,
+				"description": "{Elemental}\nNon-living\nImmune to Mind spells"
+			},
+			"nonLiving": {
+				"type": "NON_LIVING"
+			},
+			"mindImmunity": {
+				"type": "MIND_IMMUNITY"
+			},
+			"immuneTofire": {
+				"type": "SPELL_SCHOOL_IMMUNITY",
+				"subtype": "fire",
+				"description": "{Immune to Fire}\nImmune to Fire spells"
+			},
+			"h5LiquidFlame": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5LiquidFlame",
+				"val": 9,
+				"addInfo": {
+					"turns": 2
+				},
+				"icon": "h5/abilities/h5LiquidFlame",
+				"description": "{Liquid Flame}\nLeaves fire 2 rounds;\nentering: 9 x count dmg"
+			},
+			"dragonNature": {
+				"type": "DRAGON_NATURE"
+			},
+			"skeletonTarget": {
+				"type": "SKELETON_TRANSFORMER_TARGET",
+				"subtype": "boneDragon",
+				"hidden": true
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 1,
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h5/Dwarf_3rd_LavaDragon/battle.json",
+			"map": "h5/Dwarf_3rd_LavaDragon/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Dwarf_3rd_LavaDragon/map/atkL.png",
+			"mapAttackFromRight": "h5/Dwarf_3rd_LavaDragon/map/atkR.png",
+			"iconLarge": "h5/Dwarf_3rd_LavaDragon/iconLarge.png",
+			"iconSmall": "h5/Dwarf_3rd_LavaDragon/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_Dwarves_T7_attack00.ogg",
+			"wince": "h5/h5_Dwarves_T7_hit.ogg",
+			"defend": "h5/h5_Dwarves_T7_hit.ogg",
+			"killed": "h5/h5_Dwarves_T7_death.ogg",
+			"move": "h5/h5_Dwarves_T7_move.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_RETALIATION"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "ENEMY_DEFENCE_REDUCTION"
+				},
+				"values": [
+					3,
+					6,
+					9,
+					12,
+					15,
+					18,
+					21,
+					24,
+					27,
+					30
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE"
+				},
+				"values": [
+					2,
+					4,
+					6,
+					8,
+					10,
+					12,
+					14,
+					16,
+					18,
+					20
+				]
+			},
+			{
+				"bonus": {
+					"type": "NEGATIVE_EFFECTS_IMMUNITY",
+					"subtype": "water",
+					"description": "{Water Ward}\nImmune to harmful Water spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "BLOCKS_RETALIATION",
+					"description": "{No Retaliation}\nEnemy cannot retaliate when attacked"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "SPELL_IMMUNITY",
+					"subtype": "slow",
+					"description": "{Immune to Slow}\nUnaffected by Slow"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h5Dwarf3rdStoneDefender": {
+		"name": {
+			"singular": "Mountain Guard",
+			"plural": "Mountain Guards"
+		},
+		"description": "Defenders, Shieldguards and Mountain Guards are the level 1 units of the Heroes V Fortress (merged into Bulwark). All of them are immune to {Armor Break} and have {Enrage} (Attack increases when an allied stack is destroyed), {Large Shield} (half damage from ranged attacks) and {Armored} (unaffected by any spell or effect that lowers Defense). Shieldguards also have {Shield Wall} (-10% damage from an enemy melee attack for every hex the enemy moved, up to 90%). Mountain Guards also have {Hold Ground} (cannot be knocked back, pulled or displaced) and {Prepared Position} (+5 Defense while standing in its starting position).\n\nMountain Guards have granite-like defenses that can withstand the most savage enemy attacks. These legendary dwarf warriors wear armor as solid as fortress walls, which makes them a real headache for any foe. As long as they keep their footing, getting past this barrier is very hard.\n\nSee also {Defender}, {Shieldguard}.",
+		"faction": "highlands-town:highlands",
+		"level": 1,
+		"cost": {
+			"gold": 60
+		},
+		"speed": 4,
+		"hitPoints": 10,
+		"attack": 4,
+		"defense": 9,
+		"damage": {
+			"min": 1,
+			"max": 2
+		},
+		"doubleWide": false,
+		"fightValue": 76,
+		"aiValue": 77,
+		"growth": 15,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"h5Enraged": {
+				"icon": "h5/abilities/enraged",
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5Enraged",
+				"description": "{Enrage}\nAttack rises whenever\nan allied stack dies"
+			},
+			"h5LargeShield": {
+				"type": "GENERAL_DAMAGE_REDUCTION",
+				"subtype": "damageTypeRanged",
+				"val": 50,
+				"stacking": "h5LargeShield",
+				"description": "{Large Shield}\nRanged damage taken\nis halved"
+			},
+			"h5Armored": {
+				"type": "H5_ARMORED_H5C",
+				"val": 1,
+				"description": "{Armored}\nImmune to all spells and\neffects lowering Defense"
+			},
+			"immune_h5DisruptingRay": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "h5DisruptingRay",
+				"hidden": true
+			},
+			"immune_h5AbDisruptingRay": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "h5AbDisruptingRay",
+				"hidden": true
+			},
+			"immune_disruptingRay": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "disruptingRay"
+			},
+			"immune_acidBreath": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "acidBreath"
+			},
+			"h5HoldGround": {
+				"type": "H5_HOLD_GROUND_H5C",
+				"val": 1,
+				"description": "{Hold Ground}\nCannot be knocked back,\npulled or displaced"
+			},
+			"h5PreparedPosition": {
+				"icon": "h5/abilities/preparedPosition",
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5PreparedPosition",
+				"val": 5,
+				"description": "{Prepared Position}\n+5 Defense while on\nits starting hex"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 18,
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h5/Dwarf_3rd_StoneDefender/battle.json",
+			"map": "h5/Dwarf_3rd_StoneDefender/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Dwarf_3rd_StoneDefender/map/atkL.png",
+			"mapAttackFromRight": "h5/Dwarf_3rd_StoneDefender/map/atkR.png",
+			"iconLarge": "h5/Dwarf_3rd_StoneDefender/iconLarge.png",
+			"iconSmall": "h5/Dwarf_3rd_StoneDefender/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_Dwarves_T1_attack00.ogg",
+			"wince": "h5/h5_Dwarves_T1_hit.ogg",
+			"defend": "h5/h5_Dwarves_T1_hit.ogg",
+			"killed": "h5/h5_Dwarves_T1_death.ogg",
+			"move": "h5/h5_Dwarves_T1_move.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "DEFENSIVE_STANCE",
+					"valueType": "ADDITIVE_VALUE"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					3,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE"
+				},
+				"values": [
+					2,
+					4,
+					6,
+					8,
+					10,
+					12,
+					14,
+					16,
+					18,
+					20
+				]
+			},
+			{
+				"bonus": {
+					"type": "GENERAL_DAMAGE_REDUCTION",
+					"subtype": "damageTypeMelee"
+				},
+				"values": [
+					2,
+					4,
+					6,
+					8,
+					10,
+					12,
+					14,
+					16,
+					18,
+					20
+				]
+			}
+		]
+	},
+	"h5Dwarf3rdThunderThane": {
+		"name": {
+			"singular": "Thunder Thane",
+			"plural": "Thunder Thanes"
+		},
+		"description": "Thanes, Warlords and Thunder Thanes are the level 6 units of the Heroes V Fortress (merged into Bulwark). All of them can teleport. Thanes have {Stormstrike} (after attacking, lightning chains to adjacent enemies for the same damage). Warlords also have {Immune to Fire} (immune to Fire magic), {Flamewave} (melee attacks have a chance to raise a wave of fire; of the 5 rows behind the target, row N takes 1/N damage) and {Flamestrike} (the next attack deals 1.2 times damage and applies Mark of Fire). Thunder Thanes also have {Stormstrike} (after attacking, lightning chains to adjacent enemies for the same damage), {Lightning Immunity} (immune to Air magic) and {Storm Bolt} (a ranged Stormstrike that also chains, 1 time per battle, 2 times from experience level 6).\n\nTheir deadliest weapon is not the axe in their hands but the mysterious power hidden in their clenched fists. Thunder Thanes can unleash bolts of lightning to strike down their foes, leaving hapless enemies nowhere to hide.\n\nSee also {Thane}, {Warlord}.",
+		"faction": "highlands-town:highlands",
+		"level": 6,
+		"cost": {
+			"gold": 1145
+		},
+		"speed": 11,
+		"hitPoints": 111,
+		"attack": 12,
+		"defense": 15,
+		"damage": {
+			"min": 8,
+			"max": 12
+		},
+		"doubleWide": true,
+		"fightValue": 1630,
+		"aiValue": 1925,
+		"growth": 2,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"flying": {
+				"type": "FLYING",
+				"subtype": "movementTeleporting"
+			},
+			"h5Stormstrike": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5Stormstrike",
+				"val": 100,
+				"icon": "h5/abilities/h5Stormstrike",
+				"description": "{Stormstrike}\nLightning chains to\nadjacent foes, same dmg"
+			},
+			"immuneToair": {
+				"type": "SPELL_SCHOOL_IMMUNITY",
+				"subtype": "air",
+				"description": "{Lightning Immunity}\nImmune to Air spells"
+			},
+			"cast_h5AbStormbolt": {
+				"type": "SPELLCASTER",
+				"subtype": "h5AbStormbolt",
+				"val": 2,
+				"description": "{Storm Bolt}\nRanged chaining Stormstrike\n1/battle, 2 from Rank 6"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 2,
+				"hidden": true
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 1,
+				"stacking": "h5Dwarf3rdThunderThaneExpCasts"
+			}
+		},
+		"graphics": {
+			"animation": "h5/Dwarf_3rd_ThunderThane/battle.json",
+			"map": "h5/Dwarf_3rd_ThunderThane/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Dwarf_3rd_ThunderThane/map/atkL.png",
+			"mapAttackFromRight": "h5/Dwarf_3rd_ThunderThane/map/atkR.png",
+			"iconLarge": "h5/Dwarf_3rd_ThunderThane/iconLarge.png",
+			"iconSmall": "h5/Dwarf_3rd_ThunderThane/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_Dwarves_T6_attack00.ogg",
+			"wince": "h5/h5_Dwarves_T6_hit.ogg",
+			"defend": "h5/h5_Dwarves_T6_hit.ogg",
+			"killed": "h5/h5_Dwarves_T6_death.ogg",
+			"startMoving": "h5/h5_Dwarves_T6_moveStart.ogg",
+			"endMoving": "h5/h5_Dwarves_T6_moveEnd.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					2,
+					3,
+					4,
+					5,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_RETALIATION"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "CASTS",
+					"stacking": "h5Dwarf3rdThunderThaneExpCasts"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "DOUBLE_DAMAGE_CHANCE"
+				},
+				"values": [
+					3,
+					6,
+					9,
+					12,
+					15,
+					18,
+					21,
+					24,
+					27,
+					30
+				]
+			}
+		]
+	},
+	"h5Dwarf3rdWhiteBearRider": {
+		"name": {
+			"singular": "Whitebear Rider",
+			"plural": "Whitebear Riders"
+		},
+		"description": "Bear Riders, Blackbear Riders and Whitebear Riders are the level 3 units of the Heroes V Fortress (merged into Bulwark). All of them have {Enrage} (Attack increases when an allied stack is destroyed). Blackbear Riders are also immune to {Armor Break} and have {Armored} (unaffected by any spell or effect that lowers Defense) and {Paw Strike} (a chance to knock the target back 1 hex and reset its ATB to 0). Whitebear Riders also have {Bear Roar} (a chance to drive off the target and adjacent enemies in fear; on success, +1 Morale and +10% Hit Points).\n\nThe dwarves brought these huge white bears from the far north and specially trained them into war machines. Their sharp teeth, powerful claws and the stench they give off are a nightmare for anyone who dares stand in their way.\n\nSee also {Bear Rider}, {Blackbear Rider}.",
+		"faction": "highlands-town:highlands",
+		"level": 3,
+		"cost": {
+			"gold": 295
+		},
+		"speed": 8,
+		"hitPoints": 33,
+		"attack": 12,
+		"defense": 17,
+		"damage": {
+			"min": 4,
+			"max": 5
+		},
+		"doubleWide": true,
+		"fightValue": 340,
+		"aiValue": 402,
+		"growth": 6,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"h5Enraged": {
+				"icon": "h5/abilities/enraged",
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5Enraged",
+				"description": "{Enrage}\nAttack rises whenever\nan allied stack dies"
+			},
+			"h5BearRoar": {
+				"icon": "h5/abilities/bearRoar",
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5BearRoar",
+				"addInfo": {
+					"pf": 0.9,
+					"smallMult": 2.0,
+					"turns": 2,
+					"morale": 1,
+					"health": 10
+				},
+				"description": "{Bear Roar}\nMay scare target, nearby\nfoes; +1 Morale, +10% HP"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 7,
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h5/Dwarf_3rd_WhiteBearRider/battle.json",
+			"map": "h5/Dwarf_3rd_WhiteBearRider/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Dwarf_3rd_WhiteBearRider/map/atkL.png",
+			"mapAttackFromRight": "h5/Dwarf_3rd_WhiteBearRider/map/atkR.png",
+			"iconLarge": "h5/Dwarf_3rd_WhiteBearRider/iconLarge.png",
+			"iconSmall": "h5/Dwarf_3rd_WhiteBearRider/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_Dwarves_T3_attack00.ogg",
+			"wince": "h5/h5_Dwarves_T3_hit.ogg",
+			"defend": "h5/h5_Dwarves_T3_hit.ogg",
+			"killed": "h5/h5_Dwarves_T3_death.ogg",
+			"move": "h5/h5_Dwarves_T3_move.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "SPELL_IMMUNITY",
+					"subtype": "iceBolt",
+					"description": "{Immune to Ice Bolt}\nUnaffected by Ice Bolt"
+				},
+				"values": [
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "SPELL_IMMUNITY",
+					"subtype": "frostRing",
+					"description": "{Immune to Frost Ring}\nUnaffected by Frost Ring"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_RETALIATION"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "ENEMY_DEFENCE_REDUCTION"
+				},
+				"values": [
+					3,
+					6,
+					9,
+					12,
+					15,
+					18,
+					21,
+					24,
+					27,
+					30
+				]
+			}
+		]
+	},
+	"h5DwarfAxeFighter": {
+		"name": {
+			"singular": "Spearwielder",
+			"plural": "Spearwielders"
+		},
+		"description": "Spearwielders, Skirmishers and Harpooners are the level 2 units of the Heroes V Fortress (merged into Bulwark). All of them can shoot. Spearwielders have {Wound} (a chance to give the target -40% Speed for 2 rounds). Skirmishers also have {No Melee Penalty} and {Wound} (a chance to give the target -40% Speed for 2 rounds). Harpooners are also immune to {Armor Break} and have {Armored} (unaffected by any spell or effect that lowers Defense) and {Harpoon Strike} (damages the enemy it hits and pulls it one hex closer).\n\nSpearwielders are the trump card of the dwarven forces. Their powerful strikes and skill with double-bladed spears give them a chance to reduce the target's Speed and Initiative.\n\nSee also {Skirmisher}, {Harpooner}.",
+		"faction": "highlands-town:highlands",
+		"level": 2,
+		"cost": {
+			"gold": 85
+		},
+		"speed": 5,
+		"hitPoints": 10,
+		"attack": 7,
+		"defense": 7,
+		"damage": {
+			"min": 1,
+			"max": 2
+		},
+		"doubleWide": false,
+		"fightValue": 99,
+		"aiValue": 111,
+		"growth": 9,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"shooter": {
+				"type": "SHOOTER"
+			},
+			"h5Wound": {
+				"icon": "h5/abilities/wound",
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5ProcSpell",
+				"addInfo": {
+					"spell": "h5AbWound",
+					"pf": 0.7,
+					"mastery": 0,
+					"melee": true,
+					"ranged": true
+				},
+				"description": "{Wound}\nMay reduce target Speed\nby 40% for 2 rounds"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 14,
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h5/Dwarf_Axe_Fighter/battle.json",
+			"map": "h5/Dwarf_Axe_Fighter/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Dwarf_Axe_Fighter/map/atkL.png",
+			"mapAttackFromRight": "h5/Dwarf_Axe_Fighter/map/atkR.png",
+			"iconLarge": "h5/Dwarf_Axe_Fighter/iconLarge.png",
+			"iconSmall": "h5/Dwarf_Axe_Fighter/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"frameAngles": [
+					90,
+					60,
+					45,
+					30,
+					0,
+					-30,
+					-45,
+					-60,
+					-90
+				],
+				"offset": {
+					"upperX": 36,
+					"upperY": -44,
+					"middleX": 48,
+					"middleY": -30,
+					"lowerX": 14,
+					"lowerY": -17
+				},
+				"attackClimaxFrame": 6,
+				"projectile": "h5/Dwarf_Axe_Fighter/projectile.json"
+			}
+		},
+		"sound": {
+			"attack": "h5/h5_t2_dwarfspearfighter_attack00.ogg",
+			"wince": "h5/h5_t2_dwarfspearfighter_hit.ogg",
+			"defend": "h5/h5_t2_dwarfspearfighter_hit.ogg",
+			"killed": "h5/h5_t2_dwarfspearfighter_death.ogg",
+			"move": "h5/h5_t2_dwarfspearfighter_move.ogg",
+			"shoot": "h5/h5_t2_dwarfspearthrower_rangeattack.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					3,
+					3,
+					3,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					3,
+					4,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					0,
+					1,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					3,
+					3,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE"
+				},
+				"values": [
+					3,
+					6,
+					9,
+					12,
+					15,
+					18,
+					21,
+					24,
+					27,
+					30
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_WALL_PENALTY",
+					"description": "{Siege Shooter}\nNo damage loss when shooting over walls"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "ENEMY_DEFENCE_REDUCTION"
+				},
+				"values": [
+					2,
+					4,
+					6,
+					8,
+					10,
+					12,
+					14,
+					16,
+					18,
+					20
+				]
+			}
+		],
+		"shots": 6,
+		"upgrades": [
+			"h5DwarfAxeThrower",
+			"h5Dwarf3rdHarpooner"
+		]
+	},
+	"h5DwarfAxeThrower": {
+		"name": {
+			"singular": "Skirmisher",
+			"plural": "Skirmishers"
+		},
+		"description": "Spearwielders, Skirmishers and Harpooners are the level 2 units of the Heroes V Fortress (merged into Bulwark). All of them can shoot. Spearwielders have {Wound} (a chance to give the target -40% Speed for 2 rounds). Skirmishers also have {No Melee Penalty} and {Wound} (a chance to give the target -40% Speed for 2 rounds). Harpooners are also immune to {Armor Break} and have {Armored} (unaffected by any spell or effect that lowers Defense) and {Harpoon Strike} (damages the enemy it hits and pulls it one hex closer).\n\nSpearwielders who master the art of throwing their weapons become Skirmishers. When they attack enemies from a distance, they can reduce the enemy's Speed and Initiative. They keep the same close-combat ability as Spearwielders but suffer no melee penalty.\n\nSee also {Spearwielder}, {Harpooner}.",
+		"faction": "highlands-town:highlands",
+		"level": 2,
+		"cost": {
+			"gold": 125
+		},
+		"speed": 5,
+		"hitPoints": 14,
+		"attack": 7,
+		"defense": 7,
+		"damage": {
+			"min": 2,
+			"max": 3
+		},
+		"doubleWide": false,
+		"fightValue": 147,
+		"aiValue": 165,
+		"growth": 9,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"shooter": {
+				"type": "SHOOTER"
+			},
+			"noMeleePenalty": {
+				"type": "NO_MELEE_PENALTY",
+				"description": "{No Melee Penalty}\nNo melee penalty"
+			},
+			"h5Wound": {
+				"icon": "h5/abilities/wound",
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5ProcSpell",
+				"addInfo": {
+					"spell": "h5AbWound",
+					"pf": 0.7,
+					"mastery": 0,
+					"melee": true,
+					"ranged": true
+				},
+				"description": "{Wound}\nMay reduce target Speed\nby 40% for 2 rounds"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 14,
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h5/Dwarf_Axe_Thrower/battle.json",
+			"map": "h5/Dwarf_Axe_Thrower/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Dwarf_Axe_Thrower/map/atkL.png",
+			"mapAttackFromRight": "h5/Dwarf_Axe_Thrower/map/atkR.png",
+			"iconLarge": "h5/Dwarf_Axe_Thrower/iconLarge.png",
+			"iconSmall": "h5/Dwarf_Axe_Thrower/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"frameAngles": [
+					90,
+					60,
+					45,
+					30,
+					0,
+					-30,
+					-45,
+					-60,
+					-90
+				],
+				"offset": {
+					"upperX": 34,
+					"upperY": -41,
+					"middleX": 44,
+					"middleY": -27,
+					"lowerX": 13,
+					"lowerY": -15
+				},
+				"attackClimaxFrame": 6,
+				"projectile": "h5/Dwarf_Axe_Thrower/projectile.json"
+			}
+		},
+		"sound": {
+			"attack": "h5/h5_t2_dwarfspearthrower_attack00.ogg",
+			"wince": "h5/h5_t2_dwarfspearthrower_hit.ogg",
+			"defend": "h5/h5_t2_dwarfspearthrower_hit.ogg",
+			"killed": "h5/h5_t2_dwarfspearthrower_death.ogg",
+			"move": "h5/h5_t2_dwarfspearthrower_move.ogg",
+			"shoot": "h5/h5_t2_dwarfspearthrower_rangeattack.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					3,
+					3,
+					3,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					3,
+					4,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					0,
+					1,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					3,
+					3,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE"
+				},
+				"values": [
+					3,
+					6,
+					9,
+					12,
+					15,
+					18,
+					21,
+					24,
+					27,
+					30
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_WALL_PENALTY",
+					"description": "{Siege Shooter}\nNo damage loss when shooting over walls"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "SHOTS"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			}
+		],
+		"shots": 11
+	},
+	"h5DwarfBearRaider": {
+		"name": {
+			"singular": "Bear Rider",
+			"plural": "Bear Riders"
+		},
+		"description": "Bear Riders, Blackbear Riders and Whitebear Riders are the level 3 units of the Heroes V Fortress (merged into Bulwark). All of them have {Enrage} (Attack increases when an allied stack is destroyed). Blackbear Riders are also immune to {Armor Break} and have {Armored} (unaffected by any spell or effect that lowers Defense) and {Paw Strike} (a chance to knock the target back 1 hex and reset its ATB to 0). Whitebear Riders also have {Bear Roar} (a chance to drive off the target and adjacent enemies in fear; on success, +1 Morale and +10% Hit Points).\n\nNo army is complete without fast-moving cavalry, so the dwarves tamed ferocious bears. Although the bears move slowly, their great defensive strength makes up well for this shortcoming.\n\nSee also {Blackbear Rider}, {Whitebear Rider}.",
+		"faction": "highlands-town:highlands",
+		"level": 3,
+		"cost": {
+			"gold": 205
+		},
+		"speed": 7,
+		"hitPoints": 27,
+		"attack": 8,
+		"defense": 14,
+		"damage": {
+			"min": 3,
+			"max": 4
+		},
+		"doubleWide": true,
+		"fightValue": 245,
+		"aiValue": 290,
+		"growth": 6,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"h5Enraged": {
+				"icon": "h5/abilities/enraged",
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5Enraged",
+				"description": "{Enrage}\nAttack rises whenever\nan allied stack dies"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 7,
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h5/Dwarf_Bear_Raider/battle.json",
+			"map": "h5/Dwarf_Bear_Raider/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Dwarf_Bear_Raider/map/atkL.png",
+			"mapAttackFromRight": "h5/Dwarf_Bear_Raider/map/atkR.png",
+			"iconLarge": "h5/Dwarf_Bear_Raider/iconLarge.png",
+			"iconSmall": "h5/Dwarf_Bear_Raider/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_t3_dwarfbearrider_attack00.ogg",
+			"wince": "h5/h5_t3_dwarfbearrider_hit.ogg",
+			"defend": "h5/h5_t3_dwarfbearrider_hit.ogg",
+			"killed": "h5/h5_t3_dwarfbearrider_death.ogg",
+			"move": "h5/h5_t3_dwarfbearrider_move.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_RETALIATION"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "DEFENSIVE_STANCE",
+					"valueType": "ADDITIVE_VALUE"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5,
+					6
+				]
+			},
+			{
+				"bonus": {
+					"type": "DOUBLE_DAMAGE_CHANCE"
+				},
+				"values": [
+					3,
+					6,
+					9,
+					12,
+					15,
+					18,
+					21,
+					24,
+					27,
+					30
+				]
+			}
+		],
+		"upgrades": [
+			"h5DwarfBlackbearRaider",
+			"h5Dwarf3rdWhiteBearRider"
+		]
+	},
+	"h5DwarfBerserker": {
+		"name": {
+			"singular": "Berserker",
+			"plural": "Berserkers"
+		},
+		"description": "Brawlers, Berserkers and Battleragers are the level 4 units of the Heroes V Fortress (merged into Bulwark). All of them have {Mind Control Immunity} (immune to Mind magic). Berserkers also have {Berserker Rage} (converts all Defense into Attack and attacks the nearest unit without retaliation). Battleragers also have {Giant Slayer} (+4 Attack and +4 Defense when fighting large creatures), {Shield Bash} (melee attacks have a chance to stun the target, which cannot retaliate and has its ATB reset to 0) and {Battle Rage} (+5 Attack and +20% Speed for 2 rounds after taking damage).\n\nBerserkers are much like Brawlers, but they wear gauntlets fitted with sharp blades. In battle, Berserkers can fall into a frenzy, sacrificing their defense to strike nearby creatures more effectively without suffering retaliation.\n\nSee also {Brawler}, {Battlerager}.",
+		"faction": "highlands-town:highlands",
+		"level": 4,
+		"cost": {
+			"gold": 230
+		},
+		"speed": 6,
+		"hitPoints": 26,
+		"attack": 9,
+		"defense": 9,
+		"damage": {
+			"min": 3,
+			"max": 7
+		},
+		"doubleWide": false,
+		"fightValue": 326,
+		"aiValue": 374,
+		"growth": 5,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"mindImmunity": {
+				"type": "MIND_IMMUNITY",
+				"description": "{Mind Control Immunity}\nImmune to Mind spells"
+			},
+			"cast_h5AbBerserkerRage": {
+				"type": "SPELLCASTER",
+				"subtype": "h5AbBerserkerRage",
+				"val": 1,
+				"description": "{Berserker Rage}\nAll Defense to Attack;\nhits nearest, unanswered"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 6,
+				"hidden": true
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 1
+			}
+		},
+		"graphics": {
+			"animation": "h5/Dwarf_Berserker/battle.json",
+			"map": "h5/Dwarf_Berserker/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Dwarf_Berserker/map/atkL.png",
+			"mapAttackFromRight": "h5/Dwarf_Berserker/map/atkR.png",
+			"iconLarge": "h5/Dwarf_Berserker/iconLarge.png",
+			"iconSmall": "h5/Dwarf_Berserker/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_t4_dwarfberserker_attack00.ogg",
+			"wince": "h5/h5_t4_dwarfberserker_hit.ogg",
+			"defend": "h5/h5_t4_dwarfberserker_hit.ogg",
+			"killed": "h5/h5_t4_dwarfberserker_death.ogg",
+			"move": "h5/h5_t4_dwarfberserker_move.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					5,
+					6,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "DOUBLE_DAMAGE_CHANCE"
+				},
+				"values": [
+					4,
+					8,
+					12,
+					16,
+					20,
+					24,
+					28,
+					32,
+					36,
+					40
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_ATTACK"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1
+				]
+			}
+		]
+	},
+	"h5DwarfBlackbearRaider": {
+		"name": {
+			"singular": "Blackbear Rider",
+			"plural": "Blackbear Riders"
+		},
+		"description": "Bear Riders, Blackbear Riders and Whitebear Riders are the level 3 units of the Heroes V Fortress (merged into Bulwark). All of them have {Enrage} (Attack increases when an allied stack is destroyed). Blackbear Riders are also immune to {Armor Break} and have {Armored} (unaffected by any spell or effect that lowers Defense) and {Paw Strike} (a chance to knock the target back 1 hex and reset its ATB to 0). Whitebear Riders also have {Bear Roar} (a chance to drive off the target and adjacent enemies in fear; on success, +1 Morale and +10% Hit Points).\n\nBlackbear Riders are the elite of the dwarven cavalry. These mighty black bears wear heavy armor and gain greater stamina through rigorous training. What is more, the black bears can fly into a rage and swipe at enemies with their sharp claws, knocking them off balance and lowering their Initiative.\n\nSee also {Bear Rider}, {Whitebear Rider}.",
+		"faction": "highlands-town:highlands",
+		"level": 3,
+		"cost": {
+			"gold": 295
+		},
+		"speed": 8,
+		"hitPoints": 33,
+		"attack": 9,
+		"defense": 20,
+		"damage": {
+			"min": 4,
+			"max": 5
+		},
+		"doubleWide": true,
+		"fightValue": 337,
+		"aiValue": 400,
+		"growth": 6,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"h5Enraged": {
+				"icon": "h5/abilities/enraged",
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5Enraged",
+				"description": "{Enrage}\nAttack rises whenever\nan allied stack dies"
+			},
+			"h5Armored": {
+				"type": "H5_ARMORED_H5C",
+				"val": 1,
+				"description": "{Armored}\nImmune to all spells and\neffects lowering Defense"
+			},
+			"immune_h5DisruptingRay": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "h5DisruptingRay",
+				"hidden": true
+			},
+			"immune_h5AbDisruptingRay": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "h5AbDisruptingRay",
+				"hidden": true
+			},
+			"immune_disruptingRay": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "disruptingRay"
+			},
+			"immune_acidBreath": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "acidBreath"
+			},
+			"h5PawStrike": {
+				"icon": "h5/abilities/pawStrike",
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5ProcEffect",
+				"addInfo": {
+					"effect": "pushAtb",
+					"pf": 1.0,
+					"melee": true,
+					"ranged": false,
+					"perCell": true
+				},
+				"description": "{Paw Strike}\nMay knock target back\n1 hex, ATB reset"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 7,
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h5/Dwarf_Blackbear_Raider/battle.json",
+			"map": "h5/Dwarf_Blackbear_Raider/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Dwarf_Blackbear_Raider/map/atkL.png",
+			"mapAttackFromRight": "h5/Dwarf_Blackbear_Raider/map/atkR.png",
+			"iconLarge": "h5/Dwarf_Blackbear_Raider/iconLarge.png",
+			"iconSmall": "h5/Dwarf_Blackbear_Raider/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_t3_dwarfblackbearrider_attack00.ogg",
+			"wince": "h5/h5_t3_dwarfblackbearrider_hit.ogg",
+			"defend": "h5/h5_t3_dwarfblackbearrider_hit.ogg",
+			"killed": "h5/h5_t3_dwarfblackbearrider_death.ogg",
+			"move": "h5/h5_t3_dwarfblackbearrider_move.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_RETALIATION"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE"
+				},
+				"values": [
+					3,
+					6,
+					9,
+					12,
+					15,
+					18,
+					21,
+					24,
+					27,
+					30
+				]
+			},
+			{
+				"bonus": {
+					"type": "DEFENSIVE_STANCE",
+					"valueType": "ADDITIVE_VALUE"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					5,
+					6,
+					6,
+					7,
+					8
+				]
+			}
+		]
+	},
+	"h5DwarfBrawler": {
+		"name": {
+			"singular": "Brawler",
+			"plural": "Brawlers"
+		},
+		"description": "Brawlers, Berserkers and Battleragers are the level 4 units of the Heroes V Fortress (merged into Bulwark). All of them have {Mind Control Immunity} (immune to Mind magic). Berserkers also have {Berserker Rage} (converts all Defense into Attack and attacks the nearest unit without retaliation). Battleragers also have {Giant Slayer} (+4 Attack and +4 Defense when fighting large creatures), {Shield Bash} (melee attacks have a chance to stun the target, which cannot retaliate and has its ATB reset to 0) and {Battle Rage} (+5 Attack and +20% Speed for 2 rounds after taking damage).\n\nBrawlers are masters of hand-to-hand combat who scorn weapons. They firmly believe that sturdy gauntlets and strong arms are enough to cripple an opponent. Thanks to their unshakable faith in their fighting skill, Brawlers ignore all magic that affects the mind.\n\nSee also {Berserker}, {Battlerager}.",
+		"faction": "highlands-town:highlands",
+		"level": 4,
+		"cost": {
+			"gold": 170
+		},
+		"speed": 6,
+		"hitPoints": 21,
+		"attack": 8,
+		"defense": 7,
+		"damage": {
+			"min": 2,
+			"max": 5
+		},
+		"doubleWide": false,
+		"fightValue": 239,
+		"aiValue": 274,
+		"growth": 5,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"mindImmunity": {
+				"type": "MIND_IMMUNITY",
+				"description": "{Mind Control Immunity}\nImmune to Mind spells"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 6,
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h5/Dwarf_Brawler/battle.json",
+			"map": "h5/Dwarf_Brawler/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Dwarf_Brawler/map/atkL.png",
+			"mapAttackFromRight": "h5/Dwarf_Brawler/map/atkR.png",
+			"iconLarge": "h5/Dwarf_Brawler/iconLarge.png",
+			"iconSmall": "h5/Dwarf_Brawler/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_t4_dwarfbrawler_attack00.ogg",
+			"wince": "h5/h5_t4_dwarfbrawler_hit.ogg",
+			"defend": "h5/h5_t4_dwarfbrawler_hit.ogg",
+			"killed": "h5/h5_t4_dwarfbrawler_death.ogg",
+			"move": "h5/h5_t4_dwarfbrawler_move.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					5,
+					6,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "DOUBLE_DAMAGE_CHANCE"
+				},
+				"values": [
+					3,
+					6,
+					9,
+					12,
+					15,
+					18,
+					21,
+					24,
+					27,
+					30
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_ATTACK"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1
+				]
+			}
+		],
+		"upgrades": [
+			"h5DwarfBerserker",
+			"h5Dwarf3rdBattleRager"
+		]
+	},
+	"h5DwarfDefender": {
+		"name": {
+			"singular": "Defender",
+			"plural": "Defenders"
+		},
+		"description": "Defenders, Shieldguards and Mountain Guards are the level 1 units of the Heroes V Fortress (merged into Bulwark). All of them are immune to {Armor Break} and have {Enrage} (Attack increases when an allied stack is destroyed), {Large Shield} (half damage from ranged attacks) and {Armored} (unaffected by any spell or effect that lowers Defense). Shieldguards also have {Shield Wall} (-10% damage from an enemy melee attack for every hex the enemy moved, up to 90%). Mountain Guards also have {Hold Ground} (cannot be knocked back, pulled or displaced) and {Prepared Position} (+5 Defense while standing in its starting position).\n\nDefenders are the most numerous troops of the dwarven Stone Halls and the steadfast backbone of the dwarven army. Defenders wear heavy armor and always hold their ground, even against powerful enemies.\n\nSee also {Shieldguard}, {Mountain Guard}.",
+		"faction": "highlands-town:highlands",
+		"level": 1,
+		"cost": {
+			"gold": 35
+		},
+		"speed": 4,
+		"hitPoints": 6,
+		"attack": 2,
+		"defense": 6,
+		"damage": {
+			"min": 1,
+			"max": 1
+		},
+		"doubleWide": false,
+		"fightValue": 47,
+		"aiValue": 48,
+		"growth": 15,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"h5Enraged": {
+				"icon": "h5/abilities/enraged",
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5Enraged",
+				"description": "{Enrage}\nAttack rises whenever\nan allied stack dies"
+			},
+			"h5LargeShield": {
+				"type": "GENERAL_DAMAGE_REDUCTION",
+				"subtype": "damageTypeRanged",
+				"val": 50,
+				"stacking": "h5LargeShield",
+				"description": "{Large Shield}\nRanged damage taken\nis halved"
+			},
+			"h5Armored": {
+				"type": "H5_ARMORED_H5C",
+				"val": 1,
+				"description": "{Armored}\nImmune to all spells and\neffects lowering Defense"
+			},
+			"immune_h5DisruptingRay": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "h5DisruptingRay",
+				"hidden": true
+			},
+			"immune_h5AbDisruptingRay": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "h5AbDisruptingRay",
+				"hidden": true
+			},
+			"immune_disruptingRay": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "disruptingRay"
+			},
+			"immune_acidBreath": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "acidBreath"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 18,
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h5/Dwarf_Defender/battle.json",
+			"map": "h5/Dwarf_Defender/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Dwarf_Defender/map/atkL.png",
+			"mapAttackFromRight": "h5/Dwarf_Defender/map/atkR.png",
+			"iconLarge": "h5/Dwarf_Defender/iconLarge.png",
+			"iconSmall": "h5/Dwarf_Defender/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_t1_dwarfdeffender_attack00.ogg",
+			"wince": "h5/h5_t1_dwarfdeffender_hit.ogg",
+			"defend": "h5/h5_t1_dwarfdeffender_hit.ogg",
+			"killed": "h5/h5_t1_dwarfdeffender_death.ogg",
+			"move": "h5/h5_t1_dwarfdeffender_move.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE"
+				},
+				"values": [
+					2,
+					4,
+					6,
+					8,
+					10,
+					12,
+					14,
+					16,
+					18,
+					20
+				]
+			},
+			{
+				"bonus": {
+					"type": "DEFENSIVE_STANCE",
+					"valueType": "ADDITIVE_VALUE"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_RETALIATION"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			}
+		],
+		"upgrades": [
+			"h5DwarfStoutDefender",
+			"h5Dwarf3rdStoneDefender"
+		]
+	},
+	"h5DwarfFireDragon": {
+		"name": {
+			"singular": "Fire Dragon",
+			"plural": "Fire Dragons"
+		},
+		"description": "Fire Dragons, Magma Dragons and Lava Dragons are the level 7 units of the Heroes V Fortress (merged into Bulwark). All of them are dragons and have {Elemental} (non-living, immune to Mind magic) and {Immune to Fire} (immune to Fire magic). Fire Dragons have {Fire Shield} (reflects 20% of melee damage back to the attacker) and {Fire Breath} (the attack also hits the unit behind the target). Magma Dragons also have {Fire Breath} (the attack also hits the unit behind the target) and {Magma Shield} (reflects 40% of melee damage back to the attacker). Lava Dragons also have {Liquid Flame} (leaves flames on the attacked spot for 2 rounds; units that step on them take 9 × the number of Lava Dragons in Fire damage).\n\nFire Dragons are the children of Arkath, the Dragon of Fire; they are the masters of flame and the guardians of the dwarves. Like Black Dragons, Fire Dragons can breathe fire on their enemies. Any unit that attacks a Fire Dragon in melee is burned by its scorching skin. Naturally, Fire Dragons are immune to all Fire magic.\n\nSee also {Magma Dragon}, {Lava Dragon}.",
+		"faction": "highlands-town:highlands",
+		"level": 7,
+		"cost": {
+			"gold": 2625,
+			"crystal": 1
+		},
+		"speed": 6,
+		"hitPoints": 233,
+		"attack": 18,
+		"defense": 23,
+		"damage": {
+			"min": 35,
+			"max": 44
+		},
+		"doubleWide": true,
+		"fightValue": 3948,
+		"aiValue": 5143,
+		"growth": 1,
+		"advMapAmount": {
+			"min": 1,
+			"max": 3
+		},
+		"abilities": {
+			"h5Elemental": {
+				"type": "H5_ELEMENTAL_H5C",
+				"val": 1,
+				"description": "{Elemental}\nNon-living\nImmune to Mind spells"
+			},
+			"nonLiving": {
+				"type": "NON_LIVING"
+			},
+			"mindImmunity": {
+				"type": "MIND_IMMUNITY"
+			},
+			"immuneTofire": {
+				"type": "SPELL_SCHOOL_IMMUNITY",
+				"subtype": "fire",
+				"description": "{Immune to Fire}\nImmune to Fire spells"
+			},
+			"fireShield": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "fireShield",
+				"val": 20,
+				"stacking": "fireShield",
+				"description": "{Fire Shield}\nReflects 20% of melee\ndamage to attacker"
+			},
+			"h5FireBreath": {
+				"type": "MULTIHEX_UNIT_ATTACK",
+				"icon": "h5/abilities/h5FireBreath",
+				"addInfo": [
+					"FF"
+				],
+				"description": "{Fire Breath}\nAlso hits the stack\nbehind the target"
+			},
+			"dragonNature": {
+				"type": "DRAGON_NATURE"
+			},
+			"skeletonTarget": {
+				"type": "SKELETON_TRANSFORMER_TARGET",
+				"subtype": "boneDragon",
+				"hidden": true
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 1,
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h5/Dwarf_Fire_Dragon/battle.json",
+			"map": "h5/Dwarf_Fire_Dragon/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Dwarf_Fire_Dragon/map/atkL.png",
+			"mapAttackFromRight": "h5/Dwarf_Fire_Dragon/map/atkR.png",
+			"iconLarge": "h5/Dwarf_Fire_Dragon/iconLarge.png",
+			"iconSmall": "h5/Dwarf_Fire_Dragon/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_t7_dwarfmagmadragon_attack00.ogg",
+			"wince": "h5/h5_t7_dwarffiredragon_hit.ogg",
+			"defend": "h5/h5_t7_dwarffiredragon_hit.ogg",
+			"killed": "h5/h5_t7_dwarffiredragon_death.ogg",
+			"move": "h5/h5_t7_dwarfmagmadragon_move.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_RETALIATION"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "NEGATIVE_EFFECTS_IMMUNITY",
+					"subtype": "water",
+					"description": "{Water Ward}\nImmune to harmful Water spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE"
+				},
+				"values": [
+					2,
+					4,
+					6,
+					8,
+					10,
+					12,
+					14,
+					16,
+					18,
+					20
+				]
+			},
+			{
+				"bonus": {
+					"type": "BLOCKS_RETALIATION",
+					"description": "{No Retaliation}\nEnemy cannot retaliate when attacked"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "DOUBLE_DAMAGE_CHANCE"
+				},
+				"values": [
+					2,
+					4,
+					6,
+					8,
+					10,
+					12,
+					14,
+					16,
+					18,
+					20
+				]
+			},
+			{
+				"bonus": {
+					"type": "SPELL_IMMUNITY",
+					"subtype": "slow",
+					"description": "{Immune to Slow}\nUnaffected by Slow"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			}
+		],
+		"upgrades": [
+			"h5DwarfMagmaDragon",
+			"h5Dwarf3rdLavaDragon"
+		]
+	},
+	"h5DwarfFlameMage": {
+		"name": {
+			"singular": "Rune Patriarch",
+			"plural": "Rune Patriarchs"
+		},
+		"description": "Rune Priests, Rune Patriarchs and Rune Keepers are the level 5 units of the Heroes V Fortress (merged into Bulwark). All of them can shoot and cast {Deflect Missile} (2 times per battle, 15 mana), and have {Mark of Fire} (a chance to make the target take double damage from Fire magic for 2 rounds). Rune Priests have {50% Fire Proof} (-50% Fire magic damage). Rune Patriarchs also have {Immune to Fire} (immune to Fire magic) and {Cross Shot} (the shot hits the target and the ring of hexes around it, friend and foe alike). Rune Keepers also have {Immune to Fire} (immune to Fire magic).\n\nExperienced Rune Priests can become Rune Patriarchs through sacred rituals in the hidden temples of the Deepfire Clan. Their fiery attacks can burn the enemies around the target.\n\nSee also {Rune Priest}, {Rune Keeper}.",
+		"faction": "highlands-town:highlands",
+		"level": 5,
+		"cost": {
+			"gold": 545
+		},
+		"speed": 4,
+		"hitPoints": 45,
+		"attack": 7,
+		"defense": 8,
+		"damage": {
+			"min": 13,
+			"max": 16
+		},
+		"doubleWide": false,
+		"fightValue": 814,
+		"aiValue": 906,
+		"growth": 3,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"shooter": {
+				"type": "SHOOTER"
+			},
+			"immuneTofire": {
+				"type": "SPELL_SCHOOL_IMMUNITY",
+				"subtype": "fire",
+				"description": "{Immune to Fire}\nImmune to Fire spells"
+			},
+			"h5MarkOfFire": {
+				"icon": "h5/abilities/markOfFire",
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5ProcSpell",
+				"addInfo": {
+					"spell": "h5AbMarkOfFire",
+					"pf": 1.0,
+					"mastery": 0,
+					"melee": true,
+					"ranged": true
+				},
+				"description": "{Mark of Fire}\nMay make target take 2x\nFire spell dmg, 2 rounds"
+			},
+			"h5CrossAttack": {
+				"type": "SPELL_LIKE_ATTACK",
+				"subtype": "h5AbCrossShot",
+				"val": 0,
+				"description": "{Cross Shot}\nHits target and its ring\nof hexes, friend or foe"
+			},
+			"cast_h5AbDeflectArrows": {
+				"type": "SPELLCASTER",
+				"subtype": "h5AbDeflectArrows",
+				"val": 2
+			},
+			"cast_h5AbFirewall": {
+				"type": "SPELLCASTER",
+				"subtype": "h5AbFirewall",
+				"val": 2
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 3,
+				"hidden": true
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 4
+			},
+			"h5Mana": {
+				"type": "H5_MANA_H5C",
+				"val": 25,
+				"stacking": "h5DwarfFlameMageExpH5ManaH5c"
+			},
+			"h5ManaMin": {
+				"type": "H5_MANA_MIN_H5C",
+				"val": 6,
+				"hidden": true
+			},
+			"h5ManaPool": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5ManaPool",
+				"hidden": true,
+				"description": "~"
+			},
+			"noSpellcastByDefault": {
+				"type": "NO_SPELLCAST_BY_DEFAULT",
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h5/Dwarf_Flame_Mage/battle.json",
+			"map": "h5/Dwarf_Flame_Mage/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Dwarf_Flame_Mage/map/atkL.png",
+			"mapAttackFromRight": "h5/Dwarf_Flame_Mage/map/atkR.png",
+			"iconLarge": "h5/Dwarf_Flame_Mage/iconLarge.png",
+			"iconSmall": "h5/Dwarf_Flame_Mage/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"frameAngles": [
+					90,
+					60,
+					45,
+					30,
+					0,
+					-30,
+					-45,
+					-60,
+					-90
+				],
+				"offset": {
+					"upperX": 46,
+					"upperY": -84,
+					"middleX": 60,
+					"middleY": -65,
+					"lowerX": 17,
+					"lowerY": -49
+				},
+				"attackClimaxFrame": 6,
+				"ray": [
+					{
+						"start": [
+							127,
+							115,
+							75,
+							160
+						],
+						"end": [
+							85,
+							76,
+							50,
+							60
+						]
+					},
+					{
+						"start": [
+							255,
+							230,
+							150,
+							255
+						],
+						"end": [
+							255,
+							230,
+							150,
+							120
+						]
+					},
+					{
+						"start": [
+							255,
+							255,
+							230,
+							255
+						],
+						"end": [
+							255,
+							230,
+							150,
+							200
+						]
+					},
+					{
+						"start": [
+							255,
+							230,
+							150,
+							255
+						],
+						"end": [
+							255,
+							230,
+							150,
+							120
+						]
+					},
+					{
+						"start": [
+							127,
+							115,
+							75,
+							160
+						],
+						"end": [
+							85,
+							76,
+							50,
+							60
+						]
+					}
+				]
+			}
+		},
+		"sound": {
+			"attack": "h5/h5_t5_dwarfflamemage_attack00.ogg",
+			"wince": "h5/h5_t5_dwarfrunemage_hit.ogg",
+			"defend": "h5/h5_t5_dwarfrunemage_hit.ogg",
+			"killed": "h5/h5_t5_dwarfflamemage_death.ogg",
+			"move": "h5/h5_t5_dwarfflamemage_move.ogg",
+			"shoot": "h5/h5_t5_dwarfflamemage_rangeattack.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					3,
+					4,
+					5,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					3,
+					4,
+					4,
+					6,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					2,
+					3,
+					3,
+					4,
+					5,
+					6,
+					6,
+					7
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					7
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "H5_MANA_H5C",
+					"stacking": "h5DwarfFlameMageExpH5ManaH5c"
+				},
+				"values": [
+					25,
+					25,
+					25,
+					25,
+					31,
+					31,
+					31,
+					31,
+					37,
+					37
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE"
+				},
+				"values": [
+					3,
+					6,
+					9,
+					12,
+					15,
+					18,
+					21,
+					24,
+					27,
+					30
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_WALL_PENALTY",
+					"description": "{Siege Shooter}\nNo damage loss when shooting over walls"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			}
+		],
+		"shots": 14
+	},
+	"h5DwarfMagmaDragon": {
+		"name": {
+			"singular": "Magma Dragon",
+			"plural": "Magma Dragons"
+		},
+		"description": "Fire Dragons, Magma Dragons and Lava Dragons are the level 7 units of the Heroes V Fortress (merged into Bulwark). All of them are dragons and have {Elemental} (non-living, immune to Mind magic) and {Immune to Fire} (immune to Fire magic). Fire Dragons have {Fire Shield} (reflects 20% of melee damage back to the attacker) and {Fire Breath} (the attack also hits the unit behind the target). Magma Dragons also have {Fire Breath} (the attack also hits the unit behind the target) and {Magma Shield} (reflects 40% of melee damage back to the attacker). Lava Dragons also have {Liquid Flame} (leaves flames on the attacked spot for 2 rounds; units that step on them take 9 × the number of Lava Dragons in Fire damage).\n\nMagma Dragons are studded with burning stones, and this rock-like skin gives these fiery beasts impenetrable armor.\n\nSee also {Fire Dragon}, {Lava Dragon}.",
+		"faction": "highlands-town:highlands",
+		"level": 7,
+		"cost": {
+			"gold": 3305,
+			"crystal": 2
+		},
+		"speed": 6,
+		"hitPoints": 283,
+		"attack": 21,
+		"defense": 29,
+		"damage": {
+			"min": 35,
+			"max": 44
+		},
+		"doubleWide": true,
+		"fightValue": 4932,
+		"aiValue": 6425,
+		"growth": 1,
+		"advMapAmount": {
+			"min": 1,
+			"max": 3
+		},
+		"abilities": {
+			"h5Elemental": {
+				"type": "H5_ELEMENTAL_H5C",
+				"val": 1,
+				"description": "{Elemental}\nNon-living\nImmune to Mind spells"
+			},
+			"nonLiving": {
+				"type": "NON_LIVING"
+			},
+			"mindImmunity": {
+				"type": "MIND_IMMUNITY"
+			},
+			"immuneTofire": {
+				"type": "SPELL_SCHOOL_IMMUNITY",
+				"subtype": "fire",
+				"description": "{Immune to Fire}\nImmune to Fire spells"
+			},
+			"h5FireBreath": {
+				"type": "MULTIHEX_UNIT_ATTACK",
+				"icon": "h5/abilities/h5FireBreath",
+				"addInfo": [
+					"FF"
+				],
+				"description": "{Fire Breath}\nAlso hits the stack\nbehind the target"
+			},
+			"fireShield": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "fireShield",
+				"val": 40,
+				"stacking": "fireShield",
+				"description": "{Magma Shield}\nReflects 40% of melee\ndamage to attacker"
+			},
+			"dragonNature": {
+				"type": "DRAGON_NATURE"
+			},
+			"skeletonTarget": {
+				"type": "SKELETON_TRANSFORMER_TARGET",
+				"subtype": "boneDragon",
+				"hidden": true
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 1,
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h5/Dwarf_Magma_Dragon/battle.json",
+			"map": "h5/Dwarf_Magma_Dragon/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Dwarf_Magma_Dragon/map/atkL.png",
+			"mapAttackFromRight": "h5/Dwarf_Magma_Dragon/map/atkR.png",
+			"iconLarge": "h5/Dwarf_Magma_Dragon/iconLarge.png",
+			"iconSmall": "h5/Dwarf_Magma_Dragon/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_t7_dwarffiredragon_attack00.ogg",
+			"wince": "h5/h5_t7_dwarffiredragon_hit.ogg",
+			"defend": "h5/h5_t7_dwarffiredragon_hit.ogg",
+			"killed": "h5/h5_t7_dwarffiredragon_death.ogg",
+			"move": "h5/h5_t7_dwarffiredragon_move.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_RETALIATION"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "DEFENSIVE_STANCE",
+					"valueType": "ADDITIVE_VALUE"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10,
+					12
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE"
+				},
+				"values": [
+					3,
+					6,
+					9,
+					12,
+					15,
+					18,
+					21,
+					24,
+					27,
+					30
+				]
+			},
+			{
+				"bonus": {
+					"type": "NEGATIVE_EFFECTS_IMMUNITY",
+					"subtype": "water",
+					"description": "{Water Ward}\nImmune to harmful Water spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "GENERAL_DAMAGE_REDUCTION",
+					"subtype": "damageTypeMelee"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					5,
+					5,
+					10,
+					10,
+					15,
+					20
+				]
+			},
+			{
+				"bonus": {
+					"type": "SPELL_IMMUNITY",
+					"subtype": "slow",
+					"description": "{Immune to Slow}\nUnaffected by Slow"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h5DwarfRuneMage": {
+		"name": {
+			"singular": "Rune Priest",
+			"plural": "Rune Priests"
+		},
+		"description": "Rune Priests, Rune Patriarchs and Rune Keepers are the level 5 units of the Heroes V Fortress (merged into Bulwark). All of them can shoot and cast {Deflect Missile} (2 times per battle, 15 mana), and have {Mark of Fire} (a chance to make the target take double damage from Fire magic for 2 rounds). Rune Priests have {50% Fire Proof} (-50% Fire magic damage). Rune Patriarchs also have {Immune to Fire} (immune to Fire magic) and {Cross Shot} (the shot hits the target and the ring of hexes around it, friend and foe alike). Rune Keepers also have {Immune to Fire} (immune to Fire magic).\n\nThe dwarves believe that golden eyes at birth are the mark of Arkath, the Dragon of Fire, and such children are recruited into the dwarves' special corps of battle mages: the Rune Priests. Rune Priests can attack enemies from a distance, and under Arkath's protection Fire magic deals them only half damage. Rune Priests can place the Mark of Fire to increase the fire damage the target takes.\n\nSee also {Rune Patriarch}, {Rune Keeper}.",
+		"faction": "highlands-town:highlands",
+		"level": 5,
+		"cost": {
+			"gold": 365
+		},
+		"speed": 3,
+		"hitPoints": 45,
+		"attack": 8,
+		"defense": 5,
+		"damage": {
+			"min": 11,
+			"max": 14
+		},
+		"doubleWide": false,
+		"fightValue": 580,
+		"aiValue": 646,
+		"growth": 3,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"shooter": {
+				"type": "SHOOTER"
+			},
+			"h5FireProof": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "fire",
+				"val": 50,
+				"description": "{50% Fire Proof}\nFire spell damage -50%"
+			},
+			"h5MarkOfFire": {
+				"icon": "h5/abilities/markOfFire",
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5ProcSpell",
+				"addInfo": {
+					"spell": "h5AbMarkOfFire",
+					"pf": 1.0,
+					"mastery": 0,
+					"melee": true,
+					"ranged": true
+				},
+				"description": "{Mark of Fire}\nMay make target take 2x\nFire spell dmg, 2 rounds"
+			},
+			"cast_h5AbDeflectArrows": {
+				"type": "SPELLCASTER",
+				"subtype": "h5AbDeflectArrows",
+				"val": 1
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 3,
+				"hidden": true
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 2
+			},
+			"h5Mana": {
+				"type": "H5_MANA_H5C",
+				"val": 15,
+				"stacking": "h5DwarfRuneMageExpH5ManaH5c"
+			},
+			"h5ManaMin": {
+				"type": "H5_MANA_MIN_H5C",
+				"val": 6,
+				"hidden": true
+			},
+			"h5ManaPool": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5ManaPool",
+				"hidden": true,
+				"description": "~"
+			},
+			"noSpellcastByDefault": {
+				"type": "NO_SPELLCAST_BY_DEFAULT",
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h5/Dwarf_Rune_Mage/battle.json",
+			"map": "h5/Dwarf_Rune_Mage/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Dwarf_Rune_Mage/map/atkL.png",
+			"mapAttackFromRight": "h5/Dwarf_Rune_Mage/map/atkR.png",
+			"iconLarge": "h5/Dwarf_Rune_Mage/iconLarge.png",
+			"iconSmall": "h5/Dwarf_Rune_Mage/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"frameAngles": [
+					90,
+					60,
+					45,
+					30,
+					0,
+					-30,
+					-45,
+					-60,
+					-90
+				],
+				"offset": {
+					"upperX": 51,
+					"upperY": -95,
+					"middleX": 36,
+					"middleY": -80,
+					"lowerX": -17,
+					"lowerY": -75
+				},
+				"attackClimaxFrame": 6,
+				"ray": [
+					{
+						"start": [
+							127,
+							115,
+							75,
+							160
+						],
+						"end": [
+							85,
+							76,
+							50,
+							60
+						]
+					},
+					{
+						"start": [
+							255,
+							230,
+							150,
+							255
+						],
+						"end": [
+							255,
+							230,
+							150,
+							120
+						]
+					},
+					{
+						"start": [
+							255,
+							255,
+							230,
+							255
+						],
+						"end": [
+							255,
+							230,
+							150,
+							200
+						]
+					},
+					{
+						"start": [
+							255,
+							230,
+							150,
+							255
+						],
+						"end": [
+							255,
+							230,
+							150,
+							120
+						]
+					},
+					{
+						"start": [
+							127,
+							115,
+							75,
+							160
+						],
+						"end": [
+							85,
+							76,
+							50,
+							60
+						]
+					}
+				]
+			}
+		},
+		"sound": {
+			"attack": "h5/h5_t5_dwarfrunemage_attack00.ogg",
+			"wince": "h5/h5_t5_dwarfrunemage_hit.ogg",
+			"defend": "h5/h5_t5_dwarfrunemage_hit.ogg",
+			"killed": "h5/h5_t5_dwarfrunemage_death.ogg",
+			"move": "h5/h5_t5_dwarfrunemage_move.ogg",
+			"shoot": "h5/h5_t5_dwarfrunemage_rangeattack.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					3,
+					4,
+					5,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					3,
+					4,
+					4,
+					6,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					2,
+					3,
+					3,
+					4,
+					5,
+					6,
+					6,
+					7
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					7
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "H5_MANA_H5C",
+					"stacking": "h5DwarfRuneMageExpH5ManaH5c"
+				},
+				"values": [
+					15,
+					15,
+					15,
+					15,
+					21,
+					21,
+					21,
+					21,
+					27,
+					27
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE"
+				},
+				"values": [
+					3,
+					6,
+					9,
+					12,
+					15,
+					18,
+					21,
+					24,
+					27,
+					30
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_WALL_PENALTY",
+					"description": "{Siege Shooter}\nNo damage loss when shooting over walls"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			}
+		],
+		"shots": 14,
+		"upgrades": [
+			"h5DwarfFlameMage",
+			"h5Dwarf3rdFlameKeeper"
+		]
+	},
+	"h5DwarfStoutDefender": {
+		"name": {
+			"singular": "Shieldguard",
+			"plural": "Shieldguards"
+		},
+		"description": "Defenders, Shieldguards and Mountain Guards are the level 1 units of the Heroes V Fortress (merged into Bulwark). All of them are immune to {Armor Break} and have {Enrage} (Attack increases when an allied stack is destroyed), {Large Shield} (half damage from ranged attacks) and {Armored} (unaffected by any spell or effect that lowers Defense). Shieldguards also have {Shield Wall} (-10% damage from an enemy melee attack for every hex the enemy moved, up to 90%). Mountain Guards also have {Hold Ground} (cannot be knocked back, pulled or displaced) and {Prepared Position} (+5 Defense while standing in its starting position).\n\nShieldguards are battle-hardened warriors whose sacred duty is to protect their allies. With their powerful shields, Shieldguards effectively reduce the damage they take. In melee, the farther an enemy has moved, the less damage it can deal to them.\n\nSee also {Defender}, {Mountain Guard}.",
+		"faction": "highlands-town:highlands",
+		"level": 1,
+		"cost": {
+			"gold": 60
+		},
+		"speed": 4,
+		"hitPoints": 10,
+		"attack": 2,
+		"defense": 7,
+		"damage": {
+			"min": 1,
+			"max": 2
+		},
+		"doubleWide": false,
+		"fightValue": 78,
+		"aiValue": 78,
+		"growth": 15,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"h5Enraged": {
+				"icon": "h5/abilities/enraged",
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5Enraged",
+				"description": "{Enrage}\nAttack rises whenever\nan allied stack dies"
+			},
+			"h5LargeShield": {
+				"type": "GENERAL_DAMAGE_REDUCTION",
+				"subtype": "damageTypeRanged",
+				"val": 50,
+				"stacking": "h5LargeShield",
+				"description": "{Large Shield}\nRanged damage taken\nis halved"
+			},
+			"h5Armored": {
+				"type": "H5_ARMORED_H5C",
+				"val": 1,
+				"description": "{Armored}\nImmune to all spells and\neffects lowering Defense"
+			},
+			"immune_h5DisruptingRay": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "h5DisruptingRay",
+				"hidden": true
+			},
+			"immune_h5AbDisruptingRay": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "h5AbDisruptingRay",
+				"hidden": true
+			},
+			"immune_disruptingRay": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "disruptingRay"
+			},
+			"immune_acidBreath": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "acidBreath"
+			},
+			"h5AreaZone": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5AreaZone",
+				"val": 0,
+				"stacking": "h5AreaZone",
+				"propagator": "BATTLE_WIDE",
+				"hidden": true,
+				"description": "~"
+			},
+			"h5ShieldWall": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5ShieldWall",
+				"val": 10,
+				"addInfo": {
+					"max": 90
+				},
+				"icon": "h5/abilities/h5ShieldWall",
+				"description": "{Shield Wall}\n-10% damage per hex foe\nmoved to attack, max 90%"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 18,
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h5/Dwarf_Stout_Defender/battle.json",
+			"map": "h5/Dwarf_Stout_Defender/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Dwarf_Stout_Defender/map/atkL.png",
+			"mapAttackFromRight": "h5/Dwarf_Stout_Defender/map/atkR.png",
+			"iconLarge": "h5/Dwarf_Stout_Defender/iconLarge.png",
+			"iconSmall": "h5/Dwarf_Stout_Defender/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_t1_dwarfstoutdeffender_attack00.ogg",
+			"wince": "h5/h5_t1_dwarfstoutdeffender_hit.ogg",
+			"defend": "h5/h5_t1_dwarfstoutdeffender_hit.ogg",
+			"killed": "h5/h5_t1_dwarfstoutdeffender_death.ogg",
+			"move": "h5/h5_t1_dwarfstoutdeffender_move.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "DEFENSIVE_STANCE",
+					"valueType": "ADDITIVE_VALUE"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					3,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE"
+				},
+				"values": [
+					2,
+					4,
+					6,
+					8,
+					10,
+					12,
+					14,
+					16,
+					18,
+					20
+				]
+			},
+			{
+				"bonus": {
+					"type": "GENERAL_DAMAGE_REDUCTION",
+					"subtype": "damageTypeMelee"
+				},
+				"values": [
+					2,
+					4,
+					6,
+					8,
+					10,
+					12,
+					14,
+					16,
+					18,
+					20
+				]
+			}
+		]
+	},
+	"h5DwarfThane": {
+		"name": {
+			"singular": "Thane",
+			"plural": "Thanes"
+		},
+		"description": "Thanes, Warlords and Thunder Thanes are the level 6 units of the Heroes V Fortress (merged into Bulwark). All of them can teleport. Thanes have {Stormstrike} (after attacking, lightning chains to adjacent enemies for the same damage). Warlords also have {Immune to Fire} (immune to Fire magic), {Flamewave} (melee attacks have a chance to raise a wave of fire; of the 5 rows behind the target, row N takes 1/N damage) and {Flamestrike} (the next attack deals 1.2 times damage and applies Mark of Fire). Thunder Thanes also have {Stormstrike} (after attacking, lightning chains to adjacent enemies for the same damage), {Lightning Immunity} (immune to Air magic) and {Storm Bolt} (a ranged Stormstrike that also chains, 1 time per battle, 2 times from experience level 6).\n\nThanes are not only strong warriors but also seasoned mages. A Thane can teleport instantly in front of the enemy and swing his great axe to slaughter the enemy troops. His great axe can even release chain lightning as it strikes, hitting nearby enemies.\n\nSee also {Warlord}, {Thunder Thane}.",
+		"faction": "highlands-town:highlands",
+		"level": 6,
+		"cost": {
+			"gold": 875
+		},
+		"speed": 11,
+		"hitPoints": 77,
+		"attack": 11,
+		"defense": 15,
+		"damage": {
+			"min": 7,
+			"max": 11
+		},
+		"doubleWide": true,
+		"fightValue": 1411,
+		"aiValue": 1665,
+		"growth": 2,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"flying": {
+				"type": "FLYING",
+				"subtype": "movementTeleporting"
+			},
+			"h5Stormstrike": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5Stormstrike",
+				"val": 100,
+				"icon": "h5/abilities/h5Stormstrike",
+				"description": "{Stormstrike}\nLightning chains to\nadjacent foes, same dmg"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 2,
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h5/Dwarf_Thane/battle.json",
+			"map": "h5/Dwarf_Thane/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Dwarf_Thane/map/atkL.png",
+			"mapAttackFromRight": "h5/Dwarf_Thane/map/atkR.png",
+			"iconLarge": "h5/Dwarf_Thane/iconLarge.png",
+			"iconSmall": "h5/Dwarf_Thane/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_t6_dwarfthane_attack00.ogg",
+			"wince": "h5/h5_t6_dwarfthane_hit.ogg",
+			"defend": "h5/h5_t6_dwarfthane_hit.ogg",
+			"killed": "h5/h5_t6_dwarfthane_death.ogg",
+			"startMoving": "h5/h5_t6_dwarfthane_movestart.ogg",
+			"endMoving": "h5/h5_t6_dwarfthane_moveend.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					2,
+					3,
+					4,
+					5,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "SPELL_IMMUNITY",
+					"subtype": "lightningBolt",
+					"description": "{Immune to Lightning}\nUnaffected by Lightning Bolt"
+				},
+				"values": [
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "SPELL_IMMUNITY",
+					"subtype": "chainLightning",
+					"description": "{Lightning Immunity}\nUnaffected by Chain Lightning"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_RETALIATION"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "DOUBLE_DAMAGE_CHANCE"
+				},
+				"values": [
+					3,
+					6,
+					9,
+					12,
+					15,
+					18,
+					21,
+					24,
+					27,
+					30
+				]
+			}
+		],
+		"upgrades": [
+			"h5DwarfWarlord",
+			"h5Dwarf3rdThunderThane"
+		]
+	},
+	"h5DwarfWarlord": {
+		"name": {
+			"singular": "Warlord",
+			"plural": "Warlords"
+		},
+		"description": "Thanes, Warlords and Thunder Thanes are the level 6 units of the Heroes V Fortress (merged into Bulwark). All of them can teleport. Thanes have {Stormstrike} (after attacking, lightning chains to adjacent enemies for the same damage). Warlords also have {Immune to Fire} (immune to Fire magic), {Flamewave} (melee attacks have a chance to raise a wave of fire; of the 5 rows behind the target, row N takes 1/N damage) and {Flamestrike} (the next attack deals 1.2 times damage and applies Mark of Fire). Thunder Thanes also have {Stormstrike} (after attacking, lightning chains to adjacent enemies for the same damage), {Lightning Immunity} (immune to Air magic) and {Storm Bolt} (a ranged Stormstrike that also chains, 1 time per battle, 2 times from experience level 6).\n\nWarlords are Thanes who were transformed by sacrificing themselves in the hope of commanding the divine power of fire. In battle, Warlords can deliver powerful Fire strikes against a target and the units next to it.\n\nSee also {Thane}, {Thunder Thane}.",
+		"faction": "highlands-town:highlands",
+		"level": 6,
+		"cost": {
+			"gold": 1145
+		},
+		"speed": 11,
+		"hitPoints": 92,
+		"attack": 11,
+		"defense": 15,
+		"damage": {
+			"min": 20,
+			"max": 24
+		},
+		"doubleWide": true,
+		"fightValue": 1657,
+		"aiValue": 1956,
+		"growth": 2,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"flying": {
+				"type": "FLYING",
+				"subtype": "movementTeleporting"
+			},
+			"immuneTofire": {
+				"type": "SPELL_SCHOOL_IMMUNITY",
+				"subtype": "fire",
+				"description": "{Immune to Fire}\nImmune to Fire spells"
+			},
+			"h5Flamewave": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5Flamewave",
+				"addInfo": {
+					"pf": 2.0,
+					"length": 5
+				},
+				"icon": "h5/abilities/h5Flamewave",
+				"description": "{Flamewave}\nMelee may unleash a wave:\nrow N of 5 behind takes 1/N"
+			},
+			"cast_h5AbFlamestrike": {
+				"type": "SPELLCASTER",
+				"subtype": "h5AbFlamestrike",
+				"val": 2,
+				"description": "{Flamestrike}\nNext hit 1.2x damage\nand applies Mark of Fire"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 2,
+				"hidden": true
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 1,
+				"stacking": "h5DwarfWarlordExpCasts"
+			}
+		},
+		"graphics": {
+			"animation": "h5/Dwarf_Warlord/battle.json",
+			"map": "h5/Dwarf_Warlord/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Dwarf_Warlord/map/atkL.png",
+			"mapAttackFromRight": "h5/Dwarf_Warlord/map/atkR.png",
+			"iconLarge": "h5/Dwarf_Warlord/iconLarge.png",
+			"iconSmall": "h5/Dwarf_Warlord/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_t6_dwarfwarlord_attack00.ogg",
+			"wince": "h5/h5_t6_dwarfwarlord_hit.ogg",
+			"defend": "h5/h5_t6_dwarfwarlord_hit.ogg",
+			"killed": "h5/h5_t6_dwarfwarlord_death.ogg",
+			"startMoving": "h5/h5_t6_dwarfwarlord_movestart.ogg",
+			"endMoving": "h5/h5_t6_dwarfwarlord_moveend.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					2,
+					3,
+					4,
+					5,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_RETALIATION"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "CASTS",
+					"stacking": "h5DwarfWarlordExpCasts"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "DOUBLE_DAMAGE_CHANCE"
+				},
+				"values": [
+					3,
+					6,
+					9,
+					12,
+					15,
+					18,
+					21,
+					24,
+					27,
+					30
+				]
+			}
+		]
+	}
+}

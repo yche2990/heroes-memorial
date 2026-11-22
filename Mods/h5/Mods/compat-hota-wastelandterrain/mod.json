@@ -1,0 +1,34 @@
+{
+	"name": "Heroes V Memorial: Summon Elementals on HotA Wasteland",
+	"description": "Summon Elementals picks the right element on the HotA Wasteland terrain.",
+	"chinese": {
+		"name": "英雄无敌5纪念版：召唤元素认荒地地形",
+		"description": "在 HotA 的荒地地形上，召唤元素按地形召出对应的元素。"
+	},
+	"version": "0.1.0",
+	"author": "yche2990",
+	"modType": "Compatibility",
+	"depends": [
+		"hota.wastelandterrain"
+	],
+	"settings": {
+		"bonuses": {
+			"global": {
+				"h5ElemTerrain_hota_wastelandterrain_wasteland": {
+					"type": "NONE",
+					"val": 3,
+					"valueType": "BASE_NUMBER",
+					"hidden": true,
+					"limiters": [
+						{
+							"type": "TERRAIN_LIMITER",
+							"parameters": [
+								"hota.wastelandterrain:wasteland"
+							]
+						}
+					]
+				}
+			}
+		}
+	}
+}

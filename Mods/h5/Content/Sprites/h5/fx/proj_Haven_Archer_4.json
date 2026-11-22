@@ -1,0 +1,11 @@
+{
+	"basepath": "h5/fx/proj_Haven_Archer/",
+	"sequences": [
+		{
+			"group": 0,
+			"frames": [
+				"projectile_4.png"
+			]
+		}
+	]
+}

@@ -1,0 +1,1197 @@
+{
+	"heroes-memorial.h5:h5MemorialSanctum": {
+		"types": {
+			"h5MemorialSanctum": {
+				"rewards": {
+					"appendItems": [
+						{
+							"limiter": {
+								"anyOf": [
+									{
+										"allOf": [
+											{
+												"anyOf": [
+													{
+														"creatures": [
+															{
+																"amount": 1,
+																"type": "heroes-memorial.h5:h5HavenMilitiaman"
+															}
+														]
+													},
+													{
+														"creatures": [
+															{
+																"amount": 1,
+																"type": "heroes-memorial.h5:h5HavenRenegatesLandlord"
+															}
+														]
+													}
+												]
+											},
+											{
+												"anyOf": [
+													{
+														"creatures": [
+															{
+																"amount": 1,
+																"type": "heroes-memorial.h5:h5HavenMarksman"
+															}
+														]
+													},
+													{
+														"creatures": [
+															{
+																"amount": 1,
+																"type": "heroes-memorial.h5:h5HavenRenegatesLongbowman"
+															}
+														]
+													}
+												]
+											},
+											{
+												"anyOf": [
+													{
+														"creatures": [
+															{
+																"amount": 1,
+																"type": "heroes-memorial.h5:h5HavenRenegatesVindicator"
+															}
+														]
+													},
+													{
+														"creatures": [
+															{
+																"amount": 1,
+																"type": "heroes-memorial.h5:h5HavenSwordsman"
+															}
+														]
+													}
+												]
+											},
+											{
+												"anyOf": [
+													{
+														"creatures": [
+															{
+																"amount": 1,
+																"type": "heroes-memorial.h5:h5HavenRenegatesBattleGriffin"
+															}
+														]
+													},
+													{
+														"creatures": [
+															{
+																"amount": 1,
+																"type": "heroes-memorial.h5:h5HavenRoyalGriffin"
+															}
+														]
+													}
+												]
+											},
+											{
+												"anyOf": [
+													{
+														"creatures": [
+															{
+																"amount": 1,
+																"type": "heroes-memorial.h5:h5HavenCleric"
+															}
+														]
+													},
+													{
+														"creatures": [
+															{
+																"amount": 1,
+																"type": "heroes-memorial.h5:h5HavenRenegatesZealot"
+															}
+														]
+													}
+												]
+											},
+											{
+												"anyOf": [
+													{
+														"creatures": [
+															{
+																"amount": 1,
+																"type": "heroes-memorial.h5:h5HavenPaladin"
+															}
+														]
+													},
+													{
+														"creatures": [
+															{
+																"amount": 1,
+																"type": "heroes-memorial.h5:h5HavenRenegatesChampion"
+															}
+														]
+													}
+												]
+											},
+											{
+												"anyOf": [
+													{
+														"creatures": [
+															{
+																"amount": 1,
+																"type": "heroes-memorial.h5:h5HavenArchangel"
+															}
+														]
+													},
+													{
+														"creatures": [
+															{
+																"amount": 1,
+																"type": "heroes-memorial.h5:h5HavenRenegatesSeraph"
+															}
+														]
+													}
+												]
+											}
+										]
+									},
+									{
+										"allOf": [
+											{
+												"anyOf": [
+													{
+														"creatures": [
+															{
+																"amount": 1,
+																"type": "heroes-memorial.h5:h5Preserve3rdDryad"
+															}
+														]
+													},
+													{
+														"creatures": [
+															{
+																"amount": 1,
+																"type": "heroes-memorial.h5:h5PreserveSprite"
+															}
+														]
+													}
+												]
+											},
+											{
+												"anyOf": [
+													{
+														"creatures": [
+															{
+																"amount": 1,
+																"type": "heroes-memorial.h5:h5Preserve3rdBladeSinger"
+															}
+														]
+													},
+													{
+														"creatures": [
+															{
+																"amount": 1,
+																"type": "heroes-memorial.h5:h5PreserveWarDancer"
+															}
+														]
+													}
+												]
+											},
+											{
+												"anyOf": [
+													{
+														"creatures": [
+															{
+																"amount": 1,
+																"type": "heroes-memorial.h5:h5Preserve3rdSharpShooter"
+															}
+														]
+													},
+													{
+														"creatures": [
+															{
+																"amount": 1,
+																"type": "heroes-memorial.h5:h5PreserveGrandElf"
+															}
+														]
+													}
+												]
+											},
+											{
+												"anyOf": [
+													{
+														"creatures": [
+															{
+																"amount": 1,
+																"type": "heroes-memorial.h5:h5Preserve3rdHighDruid"
+															}
+														]
+													},
+													{
+														"creatures": [
+															{
+																"amount": 1,
+																"type": "heroes-memorial.h5:h5PreserveDruidElder"
+															}
+														]
+													}
+												]
+											},
+											{
+												"anyOf": [
+													{
+														"creatures": [
+															{
+																"amount": 1,
+																"type": "heroes-memorial.h5:h5Preserve3rdWhiteUnicorn"
+															}
+														]
+													},
+													{
+														"creatures": [
+															{
+																"amount": 1,
+																"type": "heroes-memorial.h5:h5PreserveWarUnicorn"
+															}
+														]
+													}
+												]
+											},
+											{
+												"anyOf": [
+													{
+														"creatures": [
+															{
+																"amount": 1,
+																"type": "heroes-memorial.h5:h5Preserve3rdAngerTreant"
+															}
+														]
+													},
+													{
+														"creatures": [
+															{
+																"amount": 1,
+																"type": "heroes-memorial.h5:h5PreserveTreantGuardian"
+															}
+														]
+													}
+												]
+											},
+											{
+												"anyOf": [
+													{
+														"creatures": [
+															{
+																"amount": 1,
+																"type": "heroes-memorial.h5:h5Preserve3rdRainbowDragon"
+															}
+														]
+													},
+													{
+														"creatures": [
+															{
+																"amount": 1,
+																"type": "heroes-memorial.h5:h5PreserveGoldDragon"
+															}
+														]
+													}
+												]
+											}
+										]
+									},
+									{
+										"allOf": [
+											{
+												"anyOf": [
+													{
+														"creatures": [
+															{
+																"amount": 1,
+																"type": "heroes-memorial.h5:h5Academy3rdGremlinSaboteur"
+															}
+														]
+													},
+													{
+														"creatures": [
+															{
+																"amount": 1,
+																"type": "heroes-memorial.h5:h5AcademyMasterGremlin"
+															}
+														]
+													}
+												]
+											},
+											{
+												"anyOf": [
+													{
+														"creatures": [
+															{
+																"amount": 1,
+																"type": "heroes-memorial.h5:h5Academy3rdMarbleGargoyle"
+															}
+														]
+													},
+													{
+														"creatures": [
+															{
+																"amount": 1,
+																"type": "heroes-memorial.h5:h5AcademyObsidianGargoyle"
+															}
+														]
+													}
+												]
+											},
+											{
+												"anyOf": [
+													{
+														"creatures": [
+															{
+																"amount": 1,
+																"type": "heroes-memorial.h5:h5Academy3rdObsidianGolem"
+															}
+														]
+													},
+													{
+														"creatures": [
+															{
+																"amount": 1,
+																"type": "heroes-memorial.h5:h5AcademySteelGolem"
+															}
+														]
+													}
+												]
+											},
+											{
+												"anyOf": [
+													{
+														"creatures": [
+															{
+																"amount": 1,
+																"type": "heroes-memorial.h5:h5Academy3rdCombatMage"
+															}
+														]
+													},
+													{
+														"creatures": [
+															{
+																"amount": 1,
+																"type": "heroes-memorial.h5:h5AcademyArchMagi"
+															}
+														]
+													}
+												]
+											},
+											{
+												"anyOf": [
+													{
+														"creatures": [
+															{
+																"amount": 1,
+																"type": "heroes-memorial.h5:h5Academy3rdDjinnVizier"
+															}
+														]
+													},
+													{
+														"creatures": [
+															{
+																"amount": 1,
+																"type": "heroes-memorial.h5:h5AcademyMasterGenie"
+															}
+														]
+													}
+												]
+											},
+											{
+												"anyOf": [
+													{
+														"creatures": [
+															{
+																"amount": 1,
+																"type": "heroes-memorial.h5:h5Academy3rdRakshasaKshatri"
+															}
+														]
+													},
+													{
+														"creatures": [
+															{
+																"amount": 1,
+																"type": "heroes-memorial.h5:h5AcademyRakshasaRukh"
+															}
+														]
+													}
+												]
+											},
+											{
+												"anyOf": [
+													{
+														"creatures": [
+															{
+																"amount": 1,
+																"type": "heroes-memorial.h5:h5Academy3rdStormLord"
+															}
+														]
+													},
+													{
+														"creatures": [
+															{
+																"amount": 1,
+																"type": "heroes-memorial.h5:h5AcademyTitan"
+															}
+														]
+													}
+												]
+											}
+										]
+									},
+									{
+										"allOf": [
+											{
+												"anyOf": [
+													{
+														"creatures": [
+															{
+																"amount": 1,
+																"type": "heroes-memorial.h5:h5Dungeon3rdStalker"
+															}
+														]
+													},
+													{
+														"creatures": [
+															{
+																"amount": 1,
+																"type": "heroes-memorial.h5:h5DungeonAssassin"
+															}
+														]
+													}
+												]
+											},
+											{
+												"anyOf": [
+													{
+														"creatures": [
+															{
+																"amount": 1,
+																"type": "heroes-memorial.h5:h5Dungeon3rdBloodWitch2"
+															}
+														]
+													},
+													{
+														"creatures": [
+															{
+																"amount": 1,
+																"type": "heroes-memorial.h5:h5DungeonBloodWitch"
+															}
+														]
+													}
+												]
+											},
+											{
+												"anyOf": [
+													{
+														"creatures": [
+															{
+																"amount": 1,
+																"type": "heroes-memorial.h5:h5Dungeon3rdMinotaurCaptain"
+															}
+														]
+													},
+													{
+														"creatures": [
+															{
+																"amount": 1,
+																"type": "heroes-memorial.h5:h5DungeonMinotaurKing"
+															}
+														]
+													}
+												]
+											},
+											{
+												"anyOf": [
+													{
+														"creatures": [
+															{
+																"amount": 1,
+																"type": "heroes-memorial.h5:h5Dungeon3rdBlackRider"
+															}
+														]
+													},
+													{
+														"creatures": [
+															{
+																"amount": 1,
+																"type": "heroes-memorial.h5:h5DungeonRavager"
+															}
+														]
+													}
+												]
+											},
+											{
+												"anyOf": [
+													{
+														"creatures": [
+															{
+																"amount": 1,
+																"type": "heroes-memorial.h5:h5Dungeon3rdAcidicHydra"
+															}
+														]
+													},
+													{
+														"creatures": [
+															{
+																"amount": 1,
+																"type": "heroes-memorial.h5:h5DungeonChaosHydra"
+															}
+														]
+													}
+												]
+											},
+											{
+												"anyOf": [
+													{
+														"creatures": [
+															{
+																"amount": 1,
+																"type": "heroes-memorial.h5:h5Dungeon3rdShadowMistress"
+															}
+														]
+													},
+													{
+														"creatures": [
+															{
+																"amount": 1,
+																"type": "heroes-memorial.h5:h5DungeonMatriarch"
+															}
+														]
+													}
+												]
+											},
+											{
+												"anyOf": [
+													{
+														"creatures": [
+															{
+																"amount": 1,
+																"type": "heroes-memorial.h5:h5Dungeon3rdRedDragon"
+															}
+														]
+													},
+													{
+														"creatures": [
+															{
+																"amount": 1,
+																"type": "heroes-memorial.h5:h5DungeonBlackDragon"
+															}
+														]
+													}
+												]
+											}
+										]
+									},
+									{
+										"allOf": [
+											{
+												"anyOf": [
+													{
+														"creatures": [
+															{
+																"amount": 1,
+																"type": "heroes-memorial.h5:h5Necropolis3rdSkeletonWarrior"
+															}
+														]
+													},
+													{
+														"creatures": [
+															{
+																"amount": 1,
+																"type": "heroes-memorial.h5:h5NecropolisSkeletonArcher"
+															}
+														]
+													}
+												]
+											},
+											{
+												"anyOf": [
+													{
+														"creatures": [
+															{
+																"amount": 1,
+																"type": "heroes-memorial.h5:h5Necropolis3rdDiseaseZombie"
+															}
+														]
+													},
+													{
+														"creatures": [
+															{
+																"amount": 1,
+																"type": "heroes-memorial.h5:h5NecropolisZombie"
+															}
+														]
+													}
+												]
+											},
+											{
+												"anyOf": [
+													{
+														"creatures": [
+															{
+																"amount": 1,
+																"type": "heroes-memorial.h5:h5Necropolis3rdPoltergeist"
+															}
+														]
+													},
+													{
+														"creatures": [
+															{
+																"amount": 1,
+																"type": "heroes-memorial.h5:h5NecropolisGhosts"
+															}
+														]
+													}
+												]
+											},
+											{
+												"anyOf": [
+													{
+														"creatures": [
+															{
+																"amount": 1,
+																"type": "heroes-memorial.h5:h5Necropolis3rdNosferatu"
+															}
+														]
+													},
+													{
+														"creatures": [
+															{
+																"amount": 1,
+																"type": "heroes-memorial.h5:h5NecropolisVampireLord"
+															}
+														]
+													}
+												]
+											},
+											{
+												"anyOf": [
+													{
+														"creatures": [
+															{
+																"amount": 1,
+																"type": "heroes-memorial.h5:h5Necropolis3rdLichMaster"
+															}
+														]
+													},
+													{
+														"creatures": [
+															{
+																"amount": 1,
+																"type": "heroes-memorial.h5:h5NecropolisDemilich"
+															}
+														]
+													}
+												]
+											},
+											{
+												"anyOf": [
+													{
+														"creatures": [
+															{
+																"amount": 1,
+																"type": "heroes-memorial.h5:h5Necropolis3rdBanshee"
+															}
+														]
+													},
+													{
+														"creatures": [
+															{
+																"amount": 1,
+																"type": "heroes-memorial.h5:h5NecropolisWraith"
+															}
+														]
+													}
+												]
+											},
+											{
+												"anyOf": [
+													{
+														"creatures": [
+															{
+																"amount": 1,
+																"type": "heroes-memorial.h5:h5Necropolis3rdHorrorDragon"
+															}
+														]
+													},
+													{
+														"creatures": [
+															{
+																"amount": 1,
+																"type": "heroes-memorial.h5:h5NecropolisShadowDragon"
+															}
+														]
+													}
+												]
+											}
+										]
+									},
+									{
+										"allOf": [
+											{
+												"anyOf": [
+													{
+														"creatures": [
+															{
+																"amount": 1,
+																"type": "heroes-memorial.h5:h5Inferno3rdQuasit"
+															}
+														]
+													},
+													{
+														"creatures": [
+															{
+																"amount": 1,
+																"type": "heroes-memorial.h5:h5InfernoImp"
+															}
+														]
+													}
+												]
+											},
+											{
+												"anyOf": [
+													{
+														"creatures": [
+															{
+																"amount": 1,
+																"type": "heroes-memorial.h5:h5Inferno3rdHornedLeaper"
+															}
+														]
+													},
+													{
+														"creatures": [
+															{
+																"amount": 1,
+																"type": "heroes-memorial.h5:h5InfernoHornedDemon"
+															}
+														]
+													}
+												]
+											},
+											{
+												"anyOf": [
+													{
+														"creatures": [
+															{
+																"amount": 1,
+																"type": "heroes-memorial.h5:h5Inferno3rdFirebreatherHound"
+															}
+														]
+													},
+													{
+														"creatures": [
+															{
+																"amount": 1,
+																"type": "heroes-memorial.h5:h5InfernoCerberius"
+															}
+														]
+													}
+												]
+											},
+											{
+												"anyOf": [
+													{
+														"creatures": [
+															{
+																"amount": 1,
+																"type": "heroes-memorial.h5:h5Inferno3rdSuccubusSeducer"
+															}
+														]
+													},
+													{
+														"creatures": [
+															{
+																"amount": 1,
+																"type": "heroes-memorial.h5:h5InfernoInfernalSuccubus"
+															}
+														]
+													}
+												]
+											},
+											{
+												"anyOf": [
+													{
+														"creatures": [
+															{
+																"amount": 1,
+																"type": "heroes-memorial.h5:h5Inferno3rdHellmare"
+															}
+														]
+													},
+													{
+														"creatures": [
+															{
+																"amount": 1,
+																"type": "heroes-memorial.h5:h5InfernoFrightfulNightmare"
+															}
+														]
+													}
+												]
+											},
+											{
+												"anyOf": [
+													{
+														"creatures": [
+															{
+																"amount": 1,
+																"type": "heroes-memorial.h5:h5Inferno3rdPitSpawn"
+															}
+														]
+													},
+													{
+														"creatures": [
+															{
+																"amount": 1,
+																"type": "heroes-memorial.h5:h5InfernoBalor"
+															}
+														]
+													}
+												]
+											},
+											{
+												"anyOf": [
+													{
+														"creatures": [
+															{
+																"amount": 1,
+																"type": "heroes-memorial.h5:h5Inferno3rdArchDemon"
+															}
+														]
+													},
+													{
+														"creatures": [
+															{
+																"amount": 1,
+																"type": "heroes-memorial.h5:h5InfernoArchDevil"
+															}
+														]
+													}
+												]
+											}
+										]
+									},
+									{
+										"allOf": [
+											{
+												"anyOf": [
+													{
+														"creatures": [
+															{
+																"amount": 1,
+																"type": "heroes-memorial.h5:h5Orcs3rdGoblinDefiler"
+															}
+														]
+													},
+													{
+														"creatures": [
+															{
+																"amount": 1,
+																"type": "heroes-memorial.h5:h5OrcsGoblin2"
+															}
+														]
+													}
+												]
+											},
+											{
+												"anyOf": [
+													{
+														"creatures": [
+															{
+																"amount": 1,
+																"type": "heroes-memorial.h5:h5Orcs3rdCentaurMaradeur"
+															}
+														]
+													},
+													{
+														"creatures": [
+															{
+																"amount": 1,
+																"type": "heroes-memorial.h5:h5OrcsCentaur2"
+															}
+														]
+													}
+												]
+											},
+											{
+												"anyOf": [
+													{
+														"creatures": [
+															{
+																"amount": 1,
+																"type": "heroes-memorial.h5:h5Orcs3rdOrcWarmonger"
+															}
+														]
+													},
+													{
+														"creatures": [
+															{
+																"amount": 1,
+																"type": "heroes-memorial.h5:h5OrcsOrc2"
+															}
+														]
+													}
+												]
+											},
+											{
+												"anyOf": [
+													{
+														"creatures": [
+															{
+																"amount": 1,
+																"type": "heroes-memorial.h5:h5Orcs3rdShamanHag"
+															}
+														]
+													},
+													{
+														"creatures": [
+															{
+																"amount": 1,
+																"type": "heroes-memorial.h5:h5OrcsShaman2"
+															}
+														]
+													}
+												]
+											},
+											{
+												"anyOf": [
+													{
+														"creatures": [
+															{
+																"amount": 1,
+																"type": "heroes-memorial.h5:h5Orcs3rdOrcchiefChieftain"
+															}
+														]
+													},
+													{
+														"creatures": [
+															{
+																"amount": 1,
+																"type": "heroes-memorial.h5:h5OrcsOrcChief2"
+															}
+														]
+													}
+												]
+											},
+											{
+												"anyOf": [
+													{
+														"creatures": [
+															{
+																"amount": 1,
+																"type": "heroes-memorial.h5:h5Orcs3rdWyvernPaokai"
+															}
+														]
+													},
+													{
+														"creatures": [
+															{
+																"amount": 1,
+																"type": "heroes-memorial.h5:h5OrcsWyvern2"
+															}
+														]
+													}
+												]
+											},
+											{
+												"anyOf": [
+													{
+														"creatures": [
+															{
+																"amount": 1,
+																"type": "heroes-memorial.h5:h5Orcs3rdCyclopBloodeyed"
+															}
+														]
+													},
+													{
+														"creatures": [
+															{
+																"amount": 1,
+																"type": "heroes-memorial.h5:h5OrcsCyclop2"
+															}
+														]
+													}
+												]
+											}
+										]
+									},
+									{
+										"allOf": [
+											{
+												"anyOf": [
+													{
+														"creatures": [
+															{
+																"amount": 1,
+																"type": "heroes-memorial.h5:h5Dwarf3rdStoneDefender"
+															}
+														]
+													},
+													{
+														"creatures": [
+															{
+																"amount": 1,
+																"type": "heroes-memorial.h5:h5DwarfStoutDefender"
+															}
+														]
+													}
+												]
+											},
+											{
+												"anyOf": [
+													{
+														"creatures": [
+															{
+																"amount": 1,
+																"type": "heroes-memorial.h5:h5Dwarf3rdHarpooner"
+															}
+														]
+													},
+													{
+														"creatures": [
+															{
+																"amount": 1,
+																"type": "heroes-memorial.h5:h5DwarfAxeThrower"
+															}
+														]
+													}
+												]
+											},
+											{
+												"anyOf": [
+													{
+														"creatures": [
+															{
+																"amount": 1,
+																"type": "heroes-memorial.h5:h5Dwarf3rdWhiteBearRider"
+															}
+														]
+													},
+													{
+														"creatures": [
+															{
+																"amount": 1,
+																"type": "heroes-memorial.h5:h5DwarfBlackbearRaider"
+															}
+														]
+													}
+												]
+											},
+											{
+												"anyOf": [
+													{
+														"creatures": [
+															{
+																"amount": 1,
+																"type": "heroes-memorial.h5:h5Dwarf3rdBattleRager"
+															}
+														]
+													},
+													{
+														"creatures": [
+															{
+																"amount": 1,
+																"type": "heroes-memorial.h5:h5DwarfBerserker"
+															}
+														]
+													}
+												]
+											},
+											{
+												"anyOf": [
+													{
+														"creatures": [
+															{
+																"amount": 1,
+																"type": "heroes-memorial.h5:h5Dwarf3rdFlameKeeper"
+															}
+														]
+													},
+													{
+														"creatures": [
+															{
+																"amount": 1,
+																"type": "heroes-memorial.h5:h5DwarfFlameMage"
+															}
+														]
+													}
+												]
+											},
+											{
+												"anyOf": [
+													{
+														"creatures": [
+															{
+																"amount": 1,
+																"type": "heroes-memorial.h5:h5Dwarf3rdThunderThane"
+															}
+														]
+													},
+													{
+														"creatures": [
+															{
+																"amount": 1,
+																"type": "heroes-memorial.h5:h5DwarfWarlord"
+															}
+														]
+													}
+												]
+											},
+											{
+												"anyOf": [
+													{
+														"creatures": [
+															{
+																"amount": 1,
+																"type": "heroes-memorial.h5:h5Dwarf3rdLavaDragon"
+															}
+														]
+													},
+													{
+														"creatures": [
+															{
+																"amount": 1,
+																"type": "heroes-memorial.h5:h5DwarfMagmaDragon"
+															}
+														]
+													}
+												]
+											}
+										]
+									},
+									{
+										"heroLevel": 999
+									},
+									{
+										"heroLevel": 999
+									},
+									{
+										"heroLevel": 999
+									},
+									{
+										"heroLevel": 999
+									},
+									{
+										"heroLevel": 999
+									},
+									{
+										"heroLevel": 999
+									},
+									{
+										"heroLevel": 999
+									},
+									{
+										"heroLevel": 999
+									}
+								]
+							},
+							"primary": {
+								"knowledge": 3
+							}
+						}
+					]
+				}
+			}
+		}
+	}
+}

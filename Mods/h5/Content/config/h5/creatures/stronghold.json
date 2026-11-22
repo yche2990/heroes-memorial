@@ -1,0 +1,5668 @@
+{
+	"h5Orcs3rdCentaurMaradeur": {
+		"name": {
+			"singular": "Centaur Marauder",
+			"plural": "Centaur Marauders"
+		},
+		"description": "Centaurs, Centaur Nomads and Centaur Marauders are the level 2 units of the Heroes V Stronghold (merged into Stronghold). All of them have a ranged attack and {Blood Rage} (builds up rage in battle and gains stat bonuses as it rises in level). Centaurs have {Maneuver} (steps back when attacked in melee and retaliates with a shot at 50% damage). Centaur Nomads also have {Maneuver} (steps back when attacked in melee and retaliates with a shot at 50% damage). Centaur Marauders also have {No Melee Penalty}.\n\nCentaur Marauders are the heavy cavalry of the orc army. They are not fine shooters, but with sturdy armor and sharp blades they are by far the strongest centaurs in close combat. The best reward for them is the right to charge at the front, where they can take more enemy heads to skin.\n\nSee also {Centaur}, {Centaur Nomad}.",
+		"faction": "stronghold",
+		"level": 2,
+		"cost": {
+			"gold": 130
+		},
+		"speed": 6,
+		"hitPoints": 11,
+		"attack": 7,
+		"defense": 7,
+		"damage": {
+			"min": 3,
+			"max": 5
+		},
+		"doubleWide": true,
+		"fightValue": 156,
+		"aiValue": 174,
+		"growth": 9,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"shooter": {
+				"type": "SHOOTER"
+			},
+			"h5DemonRaged": {
+				"type": "H5_DEMON_RAGED_H5C",
+				"val": 1,
+				"description": "{Blood Rage}\nGains rage in battle;\nlevels grant stat bonuses"
+			},
+			"h5DemonRageWatch": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5DemonRage",
+				"propagator": "BATTLE_WIDE",
+				"stacking": "h5DemonRageWatch",
+				"hidden": true,
+				"description": "~"
+			},
+			"noMeleePenalty": {
+				"type": "NO_MELEE_PENALTY",
+				"description": "{No Melee Penalty}\nNo melee penalty"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 14,
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h5/Orcs_3rd_CentaurMaradeur/battle.json",
+			"map": "h5/Orcs_3rd_CentaurMaradeur/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Orcs_3rd_CentaurMaradeur/map/atkL.png",
+			"mapAttackFromRight": "h5/Orcs_3rd_CentaurMaradeur/map/atkR.png",
+			"iconLarge": "h5/Orcs_3rd_CentaurMaradeur/iconLarge.png",
+			"iconSmall": "h5/Orcs_3rd_CentaurMaradeur/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"frameAngles": [
+					90,
+					60,
+					45,
+					30,
+					0,
+					-30,
+					-45,
+					-60,
+					-90
+				],
+				"offset": {
+					"upperX": 74,
+					"upperY": -108,
+					"middleX": 93,
+					"middleY": -83,
+					"lowerX": 61,
+					"lowerY": -51
+				},
+				"attackClimaxFrame": 6,
+				"projectile": "h5/Orcs_3rd_CentaurMaradeur/projectile.json"
+			}
+		},
+		"sound": {
+			"attack": "h5/h5_Orc_T2c_attack00.ogg",
+			"wince": "h5/h5_Orc_T2c_hit.ogg",
+			"defend": "h5/h5_Orc_T2c_hit.ogg",
+			"killed": "h5/h5_Orc_T2c_death.ogg",
+			"move": "h5/h5_Orc_T2c_move.ogg",
+			"shoot": "h5/h5_Orc_T2c_rangeattack.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					3,
+					3,
+					3,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					3,
+					4,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					0,
+					1,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					3,
+					3,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "SHOTS"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_DISTANCE_PENALTY",
+					"description": "{Sharpshooter}\nNo penalty for long-range shots"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_RETALIATION"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			}
+		],
+		"shots": 17
+	},
+	"h5Orcs3rdCyclopBloodeyed": {
+		"name": {
+			"singular": "Bloodeye Cyclops",
+			"plural": "Bloodeye Cyclopes"
+		},
+		"description": "Cyclopes, Untamed Cyclopes and Bloodeye Cyclopes are the level 7 units of the Heroes V Stronghold (merged into Stronghold). All of them have {Blood Rage} (builds up rage in battle and gains stat bonuses as it rises in level) and {Devour Goblin} (eats 1 adjacent Goblin to fully heal one creature). Untamed Cyclopes also have {Shattering Strike} (attacks a 2×2 area in front, with a chance to reset ATB to zero; can attack walls), {Shooting Penalty} (half damage when shooting; no melee penalty) and {Goblin Throw} (hurls an adjacent Goblin at an enemy; half damage at long range). Bloodeye Cyclopes also have {Evil Eye} (the attack pierces 2 hexes and gives targets -3 Luck for 3 rounds), {Shooting Penalty} (half damage when shooting; no melee penalty) and {Goblin Throw} (hurls an adjacent Goblin at an enemy; half damage at long range).\n\nBloodeye Cyclopes have no need for clubs. Their weapon is a single blood-red eye whose cursed gaze pierces a whole row of enemies, and anyone it fixes upon suffers one misfortune after another.\n\nSee also {Cyclops}, {Untamed Cyclops}.",
+		"faction": "stronghold",
+		"level": 7,
+		"cost": {
+			"gold": 3355,
+			"mercury": 2
+		},
+		"speed": 9,
+		"hitPoints": 238,
+		"attack": 20,
+		"defense": 20,
+		"damage": {
+			"min": 31,
+			"max": 44
+		},
+		"doubleWide": true,
+		"fightValue": 4800,
+		"aiValue": 6253,
+		"growth": 1,
+		"advMapAmount": {
+			"min": 1,
+			"max": 3
+		},
+		"abilities": {
+			"h5DemonRaged": {
+				"type": "H5_DEMON_RAGED_H5C",
+				"val": 1,
+				"description": "{Blood Rage}\nGains rage in battle;\nlevels grant stat bonuses"
+			},
+			"h5DemonRageWatch": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5DemonRage",
+				"propagator": "BATTLE_WIDE",
+				"stacking": "h5DemonRageWatch",
+				"hidden": true,
+				"description": "~"
+			},
+			"h5EvilEyeHexes": {
+				"type": "MULTIHEX_ENEMY_ATTACK",
+				"addInfo": [
+					"FF"
+				],
+				"description": "{Evil Eye}\nAttack pierces 2 hexes;\ntarget -3 Luck, 3 rounds"
+			},
+			"h5EvilEye": {
+				"type": "SPELL_AFTER_ATTACK",
+				"subtype": "h5AbEvilEye",
+				"val": 100,
+				"addInfo": [
+					0,
+					2
+				]
+			},
+			"noMeleePenalty": {
+				"type": "NO_MELEE_PENALTY",
+				"description": "{Shooting Penalty}\nShooting damage halved\nNo melee penalty"
+			},
+			"noDistancePenalty": {
+				"type": "NO_DISTANCE_PENALTY",
+				"hidden": true
+			},
+			"h5RangePenalty": {
+				"type": "PERCENTAGE_DAMAGE_BOOST",
+				"subtype": "damageTypeRanged",
+				"val": -50
+			},
+			"cast_h5AbSwallowGoblin": {
+				"type": "SPELLCASTER",
+				"subtype": "h5AbSwallowGoblin",
+				"val": 2,
+				"description": "{Devour Goblin}\nEats 1 adjacent Goblin,\nfully heals one creature"
+			},
+			"cast_h5AbGoblinThrow": {
+				"type": "SPELLCASTER",
+				"subtype": "h5AbGoblinThrow",
+				"val": 2,
+				"description": "{Goblin Throw}\nHurls adjacent Goblin at\nfoe; half dmg if far"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 1,
+				"hidden": true
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 1
+			}
+		},
+		"graphics": {
+			"animation": "h5/Orcs_3rd_CyclopBloodeyed/battle.json",
+			"map": "h5/Orcs_3rd_CyclopBloodeyed/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Orcs_3rd_CyclopBloodeyed/map/atkL.png",
+			"mapAttackFromRight": "h5/Orcs_3rd_CyclopBloodeyed/map/atkR.png",
+			"iconLarge": "h5/Orcs_3rd_CyclopBloodeyed/iconLarge.png",
+			"iconSmall": "h5/Orcs_3rd_CyclopBloodeyed/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_Orc_T7c_attack00.ogg",
+			"wince": "h5/h5_Orc_T7c_hit.ogg",
+			"defend": "h5/h5_Orc_T7c_hit.ogg",
+			"killed": "h5/h5_Orc_T7c_death.ogg",
+			"move": "h5/h5_Orc_T7c_move.ogg",
+			"shoot": "h5/h5_Orc_T7c_rangeattack.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_ATTACK"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "SPELL_IMMUNITY",
+					"subtype": "blind",
+					"description": "{Immune to Blind}\nUnaffected by Blind"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE"
+				},
+				"values": [
+					2,
+					4,
+					6,
+					8,
+					10,
+					12,
+					14,
+					16,
+					18,
+					20
+				]
+			},
+			{
+				"bonus": {
+					"type": "ENEMY_DEFENCE_REDUCTION"
+				},
+				"values": [
+					2,
+					4,
+					6,
+					8,
+					10,
+					12,
+					14,
+					16,
+					18,
+					20
+				]
+			},
+			{
+				"bonus": {
+					"type": "NEGATIVE_EFFECTS_IMMUNITY",
+					"subtype": "earth",
+					"description": "{Earth Ward}\nImmune to harmful Earth spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "MIND_IMMUNITY",
+					"description": "{Steadfast Mind}\nImmune to Mind spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h5Orcs3rdGoblinDefiler": {
+		"name": {
+			"singular": "Goblin Witch-Doctor",
+			"plural": "Goblin Witch-Doctors"
+		},
+		"description": "Goblins, Goblin Trappers and Goblin Witch-Doctors are the level 1 units of the Heroes V Stronghold (merged into Stronghold). All of them have {Blood Rage} (builds up rage in battle and gains stat bonuses as it rises in level) and {Cowardice} (do not retaliate when attacked in melee and flee at random after acting). Goblins have {Treachery} (if their number drops below 30% of the starting count, they defect to the enemy). Goblin Trappers also have {Set Snares} (place an invisible trap that stops any enemy who steps on it). Goblin Witch-Doctors also have {Defile Magic} (enemy spellcasting units lose 1 cast, and their spells have half power for 2 rounds).\n\nGoblin Witch-Doctors are highly respected among their kin. Renowned for their experience and talent, these shamans know how to beat the drum, how to dance around the fire and how to tell terrifying stories. They give enemies who try to cast spells a constant headache: nothing infuriates a mage more than seeing his magic fail or weaken.\n\nSee also {Goblin}, {Goblin Trapper}.",
+		"faction": "stronghold",
+		"level": 1,
+		"cost": {
+			"gold": 30
+		},
+		"speed": 5,
+		"hitPoints": 4,
+		"attack": 4,
+		"defense": 1,
+		"damage": {
+			"min": 1,
+			"max": 2
+		},
+		"doubleWide": false,
+		"fightValue": 45,
+		"aiValue": 45,
+		"growth": 21,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"h5DemonRaged": {
+				"type": "H5_DEMON_RAGED_H5C",
+				"val": 1,
+				"description": "{Blood Rage}\nGains rage in battle;\nlevels grant stat bonuses"
+			},
+			"h5DemonRageWatch": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5DemonRage",
+				"propagator": "BATTLE_WIDE",
+				"stacking": "h5DemonRageWatch",
+				"hidden": true,
+				"description": "~"
+			},
+			"h5Cowardice": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5Cowardice",
+				"icon": "h5/abilities/h5Cowardice",
+				"description": "{Cowardice}\nNo melee retaliation;\nflees at random after"
+			},
+			"h5CowardiceNoRet": {
+				"type": "NO_RETALIATION",
+				"hidden": true
+			},
+			"cast_h5AbDefileMagic": {
+				"type": "SPELLCASTER",
+				"subtype": "h5AbDefileMagic",
+				"val": 2,
+				"description": "{Defile Magic}\nEnemy caster -1 cast,\nhalf power for 2 rounds"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 25,
+				"hidden": true
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 1
+			}
+		},
+		"graphics": {
+			"animation": "h5/Orcs_3rd_GoblinDefiler/battle.json",
+			"map": "h5/Orcs_3rd_GoblinDefiler/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Orcs_3rd_GoblinDefiler/map/atkL.png",
+			"mapAttackFromRight": "h5/Orcs_3rd_GoblinDefiler/map/atkR.png",
+			"iconLarge": "h5/Orcs_3rd_GoblinDefiler/iconLarge.png",
+			"iconSmall": "h5/Orcs_3rd_GoblinDefiler/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_Orc_T1c_attack00.ogg",
+			"wince": "h5/h5_Orc_T1c_hit.ogg",
+			"defend": "h5/h5_Orc_T1c_hit.ogg",
+			"killed": "h5/h5_Orc_T1c_death.ogg",
+			"move": "h5/h5_Orc_T1c_move.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE"
+				},
+				"values": [
+					2,
+					4,
+					6,
+					8,
+					10,
+					12,
+					14,
+					16,
+					18,
+					20
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_ATTACK"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "SPELL_IMMUNITY",
+					"subtype": "curse",
+					"description": "{Immune to Curse}\nUnaffected by Curse"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h5Orcs3rdOrcWarmonger": {
+		"name": {
+			"singular": "Warmonger",
+			"plural": "Warmongers"
+		},
+		"description": "Orc Warriors, Brutes and Warmongers are the level 3 units of the Heroes V Stronghold (merged into Stronghold). All of them have {Enrage} (Attack rises when a friendly stack dies) and {Blood Rage} (builds up rage in battle and gains stat bonuses as it rises in level). Brutes also have {Brutality} (melee attacks have a chance to strike twice). Warmongers also have {Fierce Retaliation} (×2 retaliation damage) and {Taunt} (chance to take enemy attacks in place of adjacent allies).\n\nWarmongers stand for meeting violence with violence and for overwhelming force. These masters of melee are convinced that their blades are far deadlier than their comrades' flails. True warriors, they charge into the enemy ranks at the head of every battle without hesitation and fight to the death to protect their comrades.\n\nSee also {Orc Warrior}, {Brute}.",
+		"faction": "stronghold",
+		"level": 3,
+		"cost": {
+			"gold": 190
+		},
+		"speed": 5,
+		"hitPoints": 22,
+		"attack": 6,
+		"defense": 8,
+		"damage": {
+			"min": 3,
+			"max": 4
+		},
+		"doubleWide": false,
+		"fightValue": 213,
+		"aiValue": 253,
+		"growth": 8,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"h5DemonRaged": {
+				"type": "H5_DEMON_RAGED_H5C",
+				"val": 1,
+				"description": "{Blood Rage}\nGains rage in battle;\nlevels grant stat bonuses"
+			},
+			"h5DemonRageWatch": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5DemonRage",
+				"propagator": "BATTLE_WIDE",
+				"stacking": "h5DemonRageWatch",
+				"hidden": true,
+				"description": "~"
+			},
+			"h5FierceRetaliation": {
+				"icon": "h5/abilities/fierceRetaliation",
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5FierceRetaliation",
+				"val": 200,
+				"description": "{Fierce Retaliation}\nRetaliation damage x2"
+			},
+			"h5Enraged": {
+				"icon": "h5/abilities/enraged",
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5Enraged",
+				"description": "{Enrage}\nAttack rises whenever\nan allied stack dies"
+			},
+			"h5Taunt": {
+				"type": "H5_TAUNT_H5C",
+				"val": 1,
+				"description": "{Taunt}\nMay take attacks aimed\nat adjacent allies"
+			},
+			"h5TauntWatch": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5Taunt",
+				"addInfo": {
+					"pf": 1.2
+				},
+				"propagator": "BATTLE_WIDE",
+				"stacking": "h5TauntWatch",
+				"hidden": true,
+				"description": "~"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 11,
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h5/Orcs_3rd_OrcWarmonger/battle.json",
+			"map": "h5/Orcs_3rd_OrcWarmonger/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Orcs_3rd_OrcWarmonger/map/atkL.png",
+			"mapAttackFromRight": "h5/Orcs_3rd_OrcWarmonger/map/atkR.png",
+			"iconLarge": "h5/Orcs_3rd_OrcWarmonger/iconLarge.png",
+			"iconSmall": "h5/Orcs_3rd_OrcWarmonger/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_Orc_T3c_attack00.ogg",
+			"wince": "h5/h5_Orc_T3c_hit.ogg",
+			"defend": "h5/h5_Orc_T3c_hit.ogg",
+			"killed": "h5/h5_Orc_T3c_death.ogg",
+			"move": "h5/h5_Orc_T3c_move.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_RETALIATION"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "DEFENSIVE_STANCE",
+					"valueType": "ADDITIVE_VALUE"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					3,
+					3,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "MIND_IMMUNITY",
+					"description": "{Steadfast Mind}\nImmune to Mind spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h5Orcs3rdOrcchiefChieftain": {
+		"name": {
+			"singular": "Chieftain",
+			"plural": "Chieftains"
+		},
+		"description": "Slayers, Executioners and Chieftains are the level 5 units of the Heroes V Stronghold (merged into Stronghold). All of them have {Blood Rage} (builds up rage in battle and gains stat bonuses as it rises in level). Slayers have {Cleave} (strikes again when an attack kills at least 1 creature). Executioners also have {Aura of Fear} (-3 Morale to enemies within 3 hexes), {Bravery} (Morale is always at least +1) and {Cleave} (strikes again when an attack kills at least 1 creature). Chieftains also have {Presence of Commander} (+10% Speed to adjacent allies) and {Word of the Chief} (damages an allied stack by as many points as there are Chieftains and gives it +Speed% equal to the number of Chieftains, max 60%).\n\nThe War Council grants the title of Chieftain only to the very finest Slayers. To earn it, a Slayer must survive countless battles and prove both his loyalty to the tribe and his worth as an outstanding chieftain. Warriors follow a Chieftain into battle without hesitation, knowing that under such a leader they will create countless legends and win eternal glory.\n\nSee also {Slayer}, {Executioner}.",
+		"faction": "stronghold",
+		"level": 5,
+		"cost": {
+			"gold": 390
+		},
+		"speed": 7,
+		"hitPoints": 36,
+		"attack": 11,
+		"defense": 13,
+		"damage": {
+			"min": 9,
+			"max": 11
+		},
+		"doubleWide": false,
+		"fightValue": 557,
+		"aiValue": 620,
+		"growth": 4,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"h5DemonRaged": {
+				"type": "H5_DEMON_RAGED_H5C",
+				"val": 1,
+				"description": "{Blood Rage}\nGains rage in battle;\nlevels grant stat bonuses"
+			},
+			"h5DemonRageWatch": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5DemonRage",
+				"propagator": "BATTLE_WIDE",
+				"stacking": "h5DemonRageWatch",
+				"hidden": true,
+				"description": "~"
+			},
+			"h5AreaZone": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5AreaZone",
+				"val": 0,
+				"stacking": "h5AreaZone",
+				"propagator": "BATTLE_WIDE",
+				"hidden": true,
+				"description": "~"
+			},
+			"h5PresenceOfCommander": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5AllyAura",
+				"val": 3,
+				"icon": "h5/abilities/auraCommander",
+				"description": "{Presence of Commander}\nAdjacent allies +10% Speed"
+			},
+			"cast_h5AbOrderOfTheChief": {
+				"type": "SPELLCASTER",
+				"subtype": "h5AbOrderOfTheChief",
+				"val": 2,
+				"description": "{Word of the Chief}\nHurts ally by Chieftains;\nSpeed +that %, max 60%"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 5,
+				"hidden": true
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 1,
+				"stacking": "h5Orcs3rdOrcchiefChieftainExpCasts"
+			}
+		},
+		"graphics": {
+			"animation": "h5/Orcs_3rd_OrcchiefChieftain/battle.json",
+			"map": "h5/Orcs_3rd_OrcchiefChieftain/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Orcs_3rd_OrcchiefChieftain/map/atkL.png",
+			"mapAttackFromRight": "h5/Orcs_3rd_OrcchiefChieftain/map/atkR.png",
+			"iconLarge": "h5/Orcs_3rd_OrcchiefChieftain/iconLarge.png",
+			"iconSmall": "h5/Orcs_3rd_OrcchiefChieftain/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_Orc_T5c_attack00.ogg",
+			"wince": "h5/h5_Orc_T5c_hit.ogg",
+			"defend": "h5/h5_Orc_T5c_hit.ogg",
+			"killed": "h5/h5_Orc_T5c_death.ogg",
+			"move": "h5/h5_Orc_T5c_move.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					3,
+					4,
+					5,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					3,
+					4,
+					4,
+					6,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					2,
+					3,
+					3,
+					4,
+					5,
+					6,
+					6,
+					7
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					7
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "ENEMY_DEFENCE_REDUCTION"
+				},
+				"values": [
+					3,
+					6,
+					9,
+					12,
+					15,
+					18,
+					21,
+					24,
+					27,
+					30
+				]
+			},
+			{
+				"bonus": {
+					"type": "MIND_IMMUNITY",
+					"description": "{Steadfast Mind}\nImmune to Mind spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "DOUBLE_DAMAGE_CHANCE"
+				},
+				"values": [
+					4,
+					8,
+					12,
+					16,
+					20,
+					24,
+					28,
+					32,
+					36,
+					40
+				]
+			}
+		]
+	},
+	"h5Orcs3rdShamanHag": {
+		"name": {
+			"singular": "Earth Daughter",
+			"plural": "Earth Daughters"
+		},
+		"description": "Shaman Witches, Sky Daughters and Earth Daughters are the level 4 units of the Heroes V Stronghold (merged into Stronghold). All of them can cast {Slow} and {Haste} (2 times per battle, 8 mana) and have {Blood Rage} (builds up rage in battle and gains stat bonuses as it rises in level). Sky Daughters also have {Sacrifice Goblin} (sacrifices 1 adjacent Goblin for +1 Attack, Defense and Morale, max 5). Earth Daughters also have {Hexing Attack} (after attacking, casts a random Expert-level curse), {Swift Attack} (Slowed targets cannot retaliate against its attacks) and {Sacrifice Goblin} (sacrifices 1 adjacent Goblin for +1 Attack, Defense and Morale, max 5).\n\nTo become an Earth Daughter, a shaman priestess must spend many years training deep in the steppe, a land of swamps that hides many cursed caves. Only there can she master the highest mysteries of the mage and learn how to transform her body and soul. Once she has, she breaks her dagger and bids farewell to her past and her present.\n\nSee also {Shaman Witch}, {Sky Daughter}.",
+		"faction": "stronghold",
+		"level": 4,
+		"cost": {
+			"gold": 380
+		},
+		"speed": 6,
+		"hitPoints": 36,
+		"attack": 13,
+		"defense": 9,
+		"damage": {
+			"min": 6,
+			"max": 10
+		},
+		"doubleWide": false,
+		"fightValue": 520,
+		"aiValue": 596,
+		"growth": 4,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"h5DemonRaged": {
+				"type": "H5_DEMON_RAGED_H5C",
+				"val": 1,
+				"description": "{Blood Rage}\nGains rage in battle;\nlevels grant stat bonuses"
+			},
+			"h5DemonRageWatch": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5DemonRage",
+				"propagator": "BATTLE_WIDE",
+				"stacking": "h5DemonRageWatch",
+				"hidden": true,
+				"description": "~"
+			},
+			"h5HexingAttack": {
+				"icon": "h5/abilities/hexingAttack",
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5ProcSpell",
+				"addInfo": {
+					"spells": [
+						"h5AbCurse",
+						"h5AbSlow",
+						"h5AbWeakness",
+						"h5AbDisruptingRay"
+					],
+					"chance": 100,
+					"mastery": 3,
+					"melee": true,
+					"ranged": true
+				},
+				"description": "{Hexing Attack}\nAfter attacking, casts a\nrandom Expert curse"
+			},
+			"h5FastAttack": {
+				"icon": "h5/abilities/fastAttack",
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5FastAttack",
+				"description": "{Swift Attack}\nSlowed targets cannot\nretaliate"
+			},
+			"cast_h5AbSacrificeGoblin": {
+				"type": "SPELLCASTER",
+				"subtype": "h5AbSacrificeGoblin",
+				"val": 2,
+				"description": "{Sacrifice Goblin}\nSacrifices adjacent Goblin\nAttack/Defense/Morale +1 (max 5)"
+			},
+			"cast_h5AbSlow": {
+				"type": "SPELLCASTER",
+				"subtype": "h5AbSlow",
+				"val": 2
+			},
+			"cast_h5AbHaste": {
+				"type": "SPELLCASTER",
+				"subtype": "h5AbHaste",
+				"val": 2
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 5,
+				"hidden": true
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 2
+			},
+			"h5Mana": {
+				"type": "H5_MANA_H5C",
+				"val": 8,
+				"stacking": "h5Orcs3rdShamanHagExpH5ManaH5c"
+			},
+			"h5ManaMin": {
+				"type": "H5_MANA_MIN_H5C",
+				"val": 4,
+				"hidden": true
+			},
+			"h5ManaPool": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5ManaPool",
+				"hidden": true,
+				"description": "~"
+			},
+			"h5ManaKeepCasts": {
+				"type": "H5_MANA_KEEPCASTS_H5C",
+				"val": 1,
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h5/Orcs_3rd_ShamanHag/battle.json",
+			"map": "h5/Orcs_3rd_ShamanHag/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Orcs_3rd_ShamanHag/map/atkL.png",
+			"mapAttackFromRight": "h5/Orcs_3rd_ShamanHag/map/atkR.png",
+			"iconLarge": "h5/Orcs_3rd_ShamanHag/iconLarge.png",
+			"iconSmall": "h5/Orcs_3rd_ShamanHag/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_Orc_T4b_attack00.ogg",
+			"wince": "h5/h5_Orc_T4b_hit.ogg",
+			"defend": "h5/h5_Orc_T4b_hit.ogg",
+			"killed": "h5/h5_Orc_T4b_death.ogg",
+			"move": "h5/h5_Orc_T4b_move.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					5,
+					6,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "H5_MANA_H5C",
+					"stacking": "h5Orcs3rdShamanHagExpH5ManaH5c"
+				},
+				"values": [
+					8,
+					8,
+					8,
+					8,
+					12,
+					12,
+					12,
+					12,
+					16,
+					16
+				]
+			},
+			{
+				"bonus": {
+					"type": "NEGATIVE_EFFECTS_IMMUNITY",
+					"subtype": "earth",
+					"description": "{Earth Ward}\nImmune to harmful Earth spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE"
+				},
+				"values": [
+					3,
+					6,
+					9,
+					12,
+					15,
+					18,
+					21,
+					24,
+					27,
+					30
+				]
+			}
+		]
+	},
+	"h5Orcs3rdWyvernPaokai": {
+		"name": {
+			"singular": "Lightning Wyvern",
+			"plural": "Lightning Wyverns"
+		},
+		"description": "Wyverns, Foul Wyverns and Lightning Wyverns are the level 6 units of the Heroes V Stronghold (merged into Stronghold). All of them fly. Wyverns have {Vitality Regeneration} (restores 23–38 Hit Points at the start of each round). Foul Wyverns also have {Vitality Regeneration} (restores 23–38 Hit Points at the start of each round) and {Venom} (poisons the target for 3 rounds; each round it takes 5 × the number of attackers in damage). Lightning Wyverns also have {Lightning Breath} (damage is split evenly between the target and adjacent enemies), {Immune to Blind} (immune to Blind) and {Scavenger} (eats corpses to restore Hit Points equal to 20% of the corpse's Hit Points).\n\nLightning Wyverns are the blind arbiters of the orcs. Cowards and traitors among the orcs are brought before the Lightning Wyverns for judgment, to decide who will be pardoned and who will be executed or forgotten. There is no such thing as a merciful verdict: Lightning Wyverns always want fresh food to fill their bellies, so few survive their claws.\n\nSee also {Wyvern}, {Foul Wyvern}.",
+		"faction": "stronghold",
+		"level": 6,
+		"cost": {
+			"gold": 1075
+		},
+		"speed": 9,
+		"hitPoints": 92,
+		"attack": 14,
+		"defense": 12,
+		"damage": {
+			"min": 19,
+			"max": 23
+		},
+		"doubleWide": true,
+		"fightValue": 1720,
+		"aiValue": 2031,
+		"growth": 2,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"flying": {
+				"type": "FLYING"
+			},
+			"h5LightningBreath": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5LightningBreath",
+				"icon": "h5/abilities/h5LightningBreath",
+				"description": "{Lightning Breath}\nTarget and adjacent foes\nshare the damage"
+			},
+			"immune_blind": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "blind",
+				"description": "{Immune to Blind}\nImmune to Blind"
+			},
+			"immune_h5Blind": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "h5Blind",
+				"hidden": true
+			},
+			"immune_h5AbBlind": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "h5AbBlind",
+				"hidden": true
+			},
+			"cast_h5AbScavenger": {
+				"type": "SPELLCASTER",
+				"subtype": "h5AbScavenger",
+				"val": 2,
+				"description": "{Scavenger}\nEats a corpse to heal\n20% of its HP"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 2,
+				"hidden": true
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 1
+			}
+		},
+		"graphics": {
+			"animation": "h5/Orcs_3rd_WyvernPaokai/battle.json",
+			"map": "h5/Orcs_3rd_WyvernPaokai/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Orcs_3rd_WyvernPaokai/map/atkL.png",
+			"mapAttackFromRight": "h5/Orcs_3rd_WyvernPaokai/map/atkR.png",
+			"iconLarge": "h5/Orcs_3rd_WyvernPaokai/iconLarge.png",
+			"iconSmall": "h5/Orcs_3rd_WyvernPaokai/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_Orc_T6c_attack00.ogg",
+			"wince": "h5/h5_Orc_T6c_hit.ogg",
+			"defend": "h5/h5_Orc_T6c_hit.ogg",
+			"killed": "h5/h5_Orc_T6c_death.ogg",
+			"move": "h5/h5_Orc_T6c_move.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					2,
+					3,
+					4,
+					5,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "SPELL_IMMUNITY",
+					"subtype": "lightningBolt",
+					"description": "{Immune to Lightning}\nUnaffected by Lightning Bolt"
+				},
+				"values": [
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "SPELL_IMMUNITY",
+					"subtype": "chainLightning",
+					"description": "{Lightning Immunity}\nUnaffected by Chain Lightning"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_RETALIATION"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "DOUBLE_DAMAGE_CHANCE"
+				},
+				"values": [
+					3,
+					6,
+					9,
+					12,
+					15,
+					18,
+					21,
+					24,
+					27,
+					30
+				]
+			}
+		]
+	},
+	"h5OrcsCentaur1": {
+		"name": {
+			"singular": "Centaur",
+			"plural": "Centaurs"
+		},
+		"description": "Centaurs, Centaur Nomads and Centaur Marauders are the level 2 units of the Heroes V Stronghold (merged into Stronghold). All of them have a ranged attack and {Blood Rage} (builds up rage in battle and gains stat bonuses as it rises in level). Centaurs have {Maneuver} (steps back when attacked in melee and retaliates with a shot at 50% damage). Centaur Nomads also have {Maneuver} (steps back when attacked in melee and retaliates with a shot at 50% damage). Centaur Marauders also have {No Melee Penalty}.\n\nCentaurs are the light cavalry of the orc army, nimble and agile, and armed with short bows. Deployed well, they are a force not to be underestimated. If attacked head-on, they first fall back, regroup and then strike back with arrows.\n\nSee also {Centaur Nomad}, {Centaur Marauder}.",
+		"faction": "stronghold",
+		"level": 2,
+		"cost": {
+			"gold": 95
+		},
+		"speed": 6,
+		"hitPoints": 7,
+		"attack": 5,
+		"defense": 2,
+		"damage": {
+			"min": 2,
+			"max": 4
+		},
+		"doubleWide": true,
+		"fightValue": 104,
+		"aiValue": 116,
+		"growth": 9,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"shooter": {
+				"type": "SHOOTER"
+			},
+			"h5DemonRaged": {
+				"type": "H5_DEMON_RAGED_H5C",
+				"val": 1,
+				"description": "{Blood Rage}\nGains rage in battle;\nlevels grant stat bonuses"
+			},
+			"h5DemonRageWatch": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5DemonRage",
+				"propagator": "BATTLE_WIDE",
+				"stacking": "h5DemonRageWatch",
+				"hidden": true,
+				"description": "~"
+			},
+			"h5Maneuver": {
+				"icon": "h5/abilities/maneuver",
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5Maneuver",
+				"val": 50,
+				"description": "{Maneuver}\nWhen hit in melee, steps\nback, shoots back at 50%"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 14,
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h5/Orcs_Centaur1/battle.json",
+			"map": "h5/Orcs_Centaur1/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Orcs_Centaur1/map/atkL.png",
+			"mapAttackFromRight": "h5/Orcs_Centaur1/map/atkR.png",
+			"iconLarge": "h5/Orcs_Centaur1/iconLarge.png",
+			"iconSmall": "h5/Orcs_Centaur1/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"frameAngles": [
+					90,
+					60,
+					45,
+					30,
+					0,
+					-30,
+					-45,
+					-60,
+					-90
+				],
+				"offset": {
+					"upperX": 69,
+					"upperY": -96,
+					"middleX": 86,
+					"middleY": -75,
+					"lowerX": 50,
+					"lowerY": -59
+				},
+				"attackClimaxFrame": 6,
+				"projectile": "h5/Orcs_Centaur1/projectile.json"
+			}
+		},
+		"sound": {
+			"attack": "h5/h5_Orc_T2a_attack00.ogg",
+			"wince": "h5/h5_Orc_T2a_hit.ogg",
+			"defend": "h5/h5_Orc_T2a_hit.ogg",
+			"killed": "h5/h5_Orc_T2a_death.ogg",
+			"move": "h5/h5_Orc_T2a_move.ogg",
+			"shoot": "h5/h5_Orc_T2a_rangeattack.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					3,
+					3,
+					3,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					3,
+					4,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					0,
+					1,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					3,
+					3,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "SHOTS"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_DISTANCE_PENALTY",
+					"description": "{Sharpshooter}\nNo penalty for long-range shots"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "ENEMY_DEFENCE_REDUCTION"
+				},
+				"values": [
+					2,
+					4,
+					6,
+					8,
+					10,
+					12,
+					14,
+					16,
+					18,
+					20
+				]
+			},
+			{
+				"bonus": {
+					"type": "DOUBLE_DAMAGE_CHANCE"
+				},
+				"values": [
+					2,
+					4,
+					6,
+					8,
+					10,
+					12,
+					14,
+					16,
+					18,
+					20
+				]
+			}
+		],
+		"shots": 22,
+		"upgrades": [
+			"h5OrcsCentaur2",
+			"h5Orcs3rdCentaurMaradeur"
+		]
+	},
+	"h5OrcsCentaur2": {
+		"name": {
+			"singular": "Centaur Nomad",
+			"plural": "Centaur Nomads"
+		},
+		"description": "Centaurs, Centaur Nomads and Centaur Marauders are the level 2 units of the Heroes V Stronghold (merged into Stronghold). All of them have a ranged attack and {Blood Rage} (builds up rage in battle and gains stat bonuses as it rises in level). Centaurs have {Maneuver} (steps back when attacked in melee and retaliates with a shot at 50% damage). Centaur Nomads also have {Maneuver} (steps back when attacked in melee and retaliates with a shot at 50% damage). Centaur Marauders also have {No Melee Penalty}.\n\nCentaur Nomads are the most experienced archers. Their bows are powerful, with a range several times that of ordinary archers, and their aggressive nature adds even more force to their attacks.\n\nSee also {Centaur}, {Centaur Marauder}.",
+		"faction": "stronghold",
+		"level": 2,
+		"cost": {
+			"gold": 130
+		},
+		"speed": 6,
+		"hitPoints": 10,
+		"attack": 7,
+		"defense": 3,
+		"damage": {
+			"min": 3,
+			"max": 5
+		},
+		"doubleWide": true,
+		"fightValue": 150,
+		"aiValue": 167,
+		"growth": 9,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"shooter": {
+				"type": "SHOOTER"
+			},
+			"h5DemonRaged": {
+				"type": "H5_DEMON_RAGED_H5C",
+				"val": 1,
+				"description": "{Blood Rage}\nGains rage in battle;\nlevels grant stat bonuses"
+			},
+			"h5DemonRageWatch": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5DemonRage",
+				"propagator": "BATTLE_WIDE",
+				"stacking": "h5DemonRageWatch",
+				"hidden": true,
+				"description": "~"
+			},
+			"h5Maneuver": {
+				"icon": "h5/abilities/maneuver",
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5Maneuver",
+				"val": 50,
+				"description": "{Maneuver}\nWhen hit in melee, steps\nback, shoots back at 50%"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 14,
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h5/Orcs_Centaur2/battle.json",
+			"map": "h5/Orcs_Centaur2/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Orcs_Centaur2/map/atkL.png",
+			"mapAttackFromRight": "h5/Orcs_Centaur2/map/atkR.png",
+			"iconLarge": "h5/Orcs_Centaur2/iconLarge.png",
+			"iconSmall": "h5/Orcs_Centaur2/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"frameAngles": [
+					90,
+					60,
+					45,
+					30,
+					0,
+					-30,
+					-45,
+					-60,
+					-90
+				],
+				"offset": {
+					"upperX": 82,
+					"upperY": -118,
+					"middleX": 105,
+					"middleY": -94,
+					"lowerX": 55,
+					"lowerY": -56
+				},
+				"attackClimaxFrame": 6,
+				"projectile": "h5/Orcs_Centaur2/projectile.json"
+			}
+		},
+		"sound": {
+			"attack": "h5/h5_Orc_T2b_attack00.ogg",
+			"wince": "h5/h5_Orc_T2b_hit.ogg",
+			"defend": "h5/h5_Orc_T2b_hit.ogg",
+			"killed": "h5/h5_Orc_T2b_death.ogg",
+			"move": "h5/h5_Orc_T2b_move.ogg",
+			"shoot": "h5/h5_Orc_T2b_rangeattack.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					3,
+					3,
+					3,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					3,
+					4,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					0,
+					1,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					3,
+					3,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "SHOTS"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_DISTANCE_PENALTY",
+					"description": "{Sharpshooter}\nNo penalty for long-range shots"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_WALL_PENALTY",
+					"description": "{Siege Shooter}\nNo damage loss when shooting over walls"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "ENEMY_DEFENCE_REDUCTION"
+				},
+				"values": [
+					3,
+					6,
+					9,
+					12,
+					15,
+					18,
+					21,
+					24,
+					27,
+					30
+				]
+			}
+		],
+		"shots": 22
+	},
+	"h5OrcsCyclop1": {
+		"name": {
+			"singular": "Cyclops",
+			"plural": "Cyclopes"
+		},
+		"description": "Cyclopes, Untamed Cyclopes and Bloodeye Cyclopes are the level 7 units of the Heroes V Stronghold (merged into Stronghold). All of them have {Blood Rage} (builds up rage in battle and gains stat bonuses as it rises in level) and {Devour Goblin} (eats 1 adjacent Goblin to fully heal one creature). Untamed Cyclopes also have {Shattering Strike} (attacks a 2×2 area in front, with a chance to reset ATB to zero; can attack walls), {Shooting Penalty} (half damage when shooting; no melee penalty) and {Goblin Throw} (hurls an adjacent Goblin at an enemy; half damage at long range). Bloodeye Cyclopes also have {Evil Eye} (the attack pierces 2 hexes and gives targets -3 Luck for 3 rounds), {Shooting Penalty} (half damage when shooting; no melee penalty) and {Goblin Throw} (hurls an adjacent Goblin at an enemy; half damage at long range).\n\nSavage, brutal, unpredictable and endlessly hungry. Cyclopes have long lived deep in the mountains and had no interest in joining the orcs in battle. They were persuaded only after the tribal council promised them goblins — their favorite food.\n\nSee also {Untamed Cyclops}, {Bloodeye Cyclops}.",
+		"faction": "stronghold",
+		"level": 7,
+		"cost": {
+			"gold": 2820,
+			"mercury": 1
+		},
+		"speed": 6,
+		"hitPoints": 222,
+		"attack": 20,
+		"defense": 19,
+		"damage": {
+			"min": 35,
+			"max": 46
+		},
+		"doubleWide": true,
+		"fightValue": 3873,
+		"aiValue": 5045,
+		"growth": 1,
+		"advMapAmount": {
+			"min": 1,
+			"max": 3
+		},
+		"abilities": {
+			"h5DemonRaged": {
+				"type": "H5_DEMON_RAGED_H5C",
+				"val": 1,
+				"description": "{Blood Rage}\nGains rage in battle;\nlevels grant stat bonuses"
+			},
+			"h5DemonRageWatch": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5DemonRage",
+				"propagator": "BATTLE_WIDE",
+				"stacking": "h5DemonRageWatch",
+				"hidden": true,
+				"description": "~"
+			},
+			"cast_h5AbSwallowGoblin": {
+				"type": "SPELLCASTER",
+				"subtype": "h5AbSwallowGoblin",
+				"val": 2,
+				"description": "{Devour Goblin}\nEats 1 adjacent Goblin,\nfully heals one creature"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 1,
+				"hidden": true
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 1
+			}
+		},
+		"graphics": {
+			"animation": "h5/Orcs_Cyclop1/battle.json",
+			"map": "h5/Orcs_Cyclop1/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Orcs_Cyclop1/map/atkL.png",
+			"mapAttackFromRight": "h5/Orcs_Cyclop1/map/atkR.png",
+			"iconLarge": "h5/Orcs_Cyclop1/iconLarge.png",
+			"iconSmall": "h5/Orcs_Cyclop1/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_Orc_T7a_attack00.ogg",
+			"wince": "h5/h5_Orc_T7a_hit.ogg",
+			"defend": "h5/h5_Orc_T7a_hit.ogg",
+			"killed": "h5/h5_Orc_T7a_death.ogg",
+			"move": "h5/h5_Orc_T7a_move.ogg",
+			"shoot": "h5/h5_Orc_T7a_rangeattack.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_ATTACK"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "SPELL_IMMUNITY",
+					"subtype": "blind",
+					"description": "{Immune to Blind}\nUnaffected by Blind"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "ENEMY_DEFENCE_REDUCTION"
+				},
+				"values": [
+					2,
+					4,
+					6,
+					8,
+					10,
+					12,
+					14,
+					16,
+					18,
+					20
+				]
+			},
+			{
+				"bonus": {
+					"type": "DOUBLE_DAMAGE_CHANCE"
+				},
+				"values": [
+					2,
+					4,
+					6,
+					8,
+					10,
+					12,
+					14,
+					16,
+					18,
+					20
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE"
+				},
+				"values": [
+					2,
+					4,
+					6,
+					8,
+					10,
+					12,
+					14,
+					16,
+					18,
+					20
+				]
+			},
+			{
+				"bonus": {
+					"type": "MIND_IMMUNITY",
+					"description": "{Steadfast Mind}\nImmune to Mind spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true
+				]
+			}
+		],
+		"upgrades": [
+			"h5OrcsCyclop2",
+			"h5Orcs3rdCyclopBloodeyed"
+		]
+	},
+	"h5OrcsCyclop2": {
+		"name": {
+			"singular": "Untamed Cyclops",
+			"plural": "Untamed Cyclopes"
+		},
+		"description": "Cyclopes, Untamed Cyclopes and Bloodeye Cyclopes are the level 7 units of the Heroes V Stronghold (merged into Stronghold). All of them have {Blood Rage} (builds up rage in battle and gains stat bonuses as it rises in level) and {Devour Goblin} (eats 1 adjacent Goblin to fully heal one creature). Untamed Cyclopes also have {Shattering Strike} (attacks a 2×2 area in front, with a chance to reset ATB to zero; can attack walls), {Shooting Penalty} (half damage when shooting; no melee penalty) and {Goblin Throw} (hurls an adjacent Goblin at an enemy; half damage at long range). Bloodeye Cyclopes also have {Evil Eye} (the attack pierces 2 hexes and gives targets -3 Luck for 3 rounds), {Shooting Penalty} (half damage when shooting; no melee penalty) and {Goblin Throw} (hurls an adjacent Goblin at an enemy; half damage at long range).\n\nThese huge monsters are so savage and brutal that even orcs fear them. When an Untamed Cyclops flies into a rage, its actions are no longer under conscious control; best known of all is its inhuman abuse of goblins. Cyclopes possess unmatched strength and can smash gates, towers and walls like siege engines. The most wretched of all are the guards who survive a fall from the walls only to land in a Cyclops's palm.\n\nSee also {Cyclops}, {Bloodeye Cyclops}.",
+		"faction": "stronghold",
+		"level": 7,
+		"cost": {
+			"gold": 3355,
+			"mercury": 2
+		},
+		"speed": 6,
+		"hitPoints": 228,
+		"attack": 21,
+		"defense": 19,
+		"damage": {
+			"min": 40,
+			"max": 50
+		},
+		"doubleWide": true,
+		"fightValue": 4800,
+		"aiValue": 6253,
+		"growth": 1,
+		"advMapAmount": {
+			"min": 1,
+			"max": 3
+		},
+		"abilities": {
+			"h5DemonRaged": {
+				"type": "H5_DEMON_RAGED_H5C",
+				"val": 1,
+				"description": "{Blood Rage}\nGains rage in battle;\nlevels grant stat bonuses"
+			},
+			"h5DemonRageWatch": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5DemonRage",
+				"propagator": "BATTLE_WIDE",
+				"stacking": "h5DemonRageWatch",
+				"hidden": true,
+				"description": "~"
+			},
+			"h5CrushingBlowHexes": {
+				"type": "MULTIHEX_UNIT_ATTACK",
+				"icon": "h5/abilities/h5CrushingBlow",
+				"addInfo": [
+					"FF",
+					"FL",
+					"FR"
+				],
+				"description": "{Shattering Strike}\nHits a 2x2 area; may reset\nATB; can attack walls"
+			},
+			"h5CrushingBlow": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5ProcEffect",
+				"addInfo": {
+					"effect": "atbReset",
+					"pf": 0.8,
+					"melee": true,
+					"ranged": false
+				}
+			},
+			"h5CrushingBlowWalls": {
+				"type": "CATAPULT",
+				"subtype": "h5AbCrushWalls"
+			},
+			"noMeleePenalty": {
+				"type": "NO_MELEE_PENALTY",
+				"description": "{Shooting Penalty}\nShooting damage halved\nNo melee penalty"
+			},
+			"noDistancePenalty": {
+				"type": "NO_DISTANCE_PENALTY",
+				"hidden": true
+			},
+			"h5RangePenalty": {
+				"type": "PERCENTAGE_DAMAGE_BOOST",
+				"subtype": "damageTypeRanged",
+				"val": -50
+			},
+			"cast_h5AbSwallowGoblin": {
+				"type": "SPELLCASTER",
+				"subtype": "h5AbSwallowGoblin",
+				"val": 2,
+				"description": "{Devour Goblin}\nEats 1 adjacent Goblin,\nfully heals one creature"
+			},
+			"cast_h5AbGoblinThrow": {
+				"type": "SPELLCASTER",
+				"subtype": "h5AbGoblinThrow",
+				"val": 2,
+				"description": "{Goblin Throw}\nHurls adjacent Goblin at\nfoe; half dmg if far"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 1,
+				"hidden": true
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 1
+			}
+		},
+		"graphics": {
+			"animation": "h5/Orcs_Cyclop2/battle.json",
+			"map": "h5/Orcs_Cyclop2/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Orcs_Cyclop2/map/atkL.png",
+			"mapAttackFromRight": "h5/Orcs_Cyclop2/map/atkR.png",
+			"iconLarge": "h5/Orcs_Cyclop2/iconLarge.png",
+			"iconSmall": "h5/Orcs_Cyclop2/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_Orc_T7b_attack00.ogg",
+			"wince": "h5/h5_Orc_T7b_hit.ogg",
+			"defend": "h5/h5_Orc_T7b_hit.ogg",
+			"killed": "h5/h5_Orc_T7b_death.ogg",
+			"move": "h5/h5_Orc_T7b_move.ogg",
+			"shoot": "h5/h5_Orc_T7b_rangeattack.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_ATTACK"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "SPELL_IMMUNITY",
+					"subtype": "blind",
+					"description": "{Immune to Blind}\nUnaffected by Blind"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "ENEMY_DEFENCE_REDUCTION"
+				},
+				"values": [
+					2,
+					4,
+					6,
+					8,
+					10,
+					12,
+					14,
+					16,
+					18,
+					20
+				]
+			},
+			{
+				"bonus": {
+					"type": "DOUBLE_DAMAGE_CHANCE"
+				},
+				"values": [
+					3,
+					6,
+					9,
+					12,
+					15,
+					18,
+					21,
+					24,
+					27,
+					30
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE"
+				},
+				"values": [
+					2,
+					4,
+					6,
+					8,
+					10,
+					12,
+					14,
+					16,
+					18,
+					20
+				]
+			},
+			{
+				"bonus": {
+					"type": "SPELL_IMMUNITY",
+					"subtype": "berserk",
+					"description": "{Immune to Berserk}\nUnaffected by Berserk"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h5OrcsGoblin1": {
+		"name": {
+			"singular": "Goblin",
+			"plural": "Goblins"
+		},
+		"description": "Goblins, Goblin Trappers and Goblin Witch-Doctors are the level 1 units of the Heroes V Stronghold (merged into Stronghold). All of them have {Blood Rage} (builds up rage in battle and gains stat bonuses as it rises in level) and {Cowardice} (do not retaliate when attacked in melee and flee at random after acting). Goblins have {Treachery} (if their number drops below 30% of the starting count, they defect to the enemy). Goblin Trappers also have {Set Snares} (place an invisible trap that stops any enemy who steps on it). Goblin Witch-Doctors also have {Defile Magic} (enemy spellcasting units lose 1 cast, and their spells have half power for 2 rounds).\n\nGoblins are timid, cowardly creatures and never make good warriors. At the slightest threat to their lives they run away, and they surrender without hesitation even when their kin are killed before the enemy. Only when there is nowhere left to run do Goblins turn fierce and fight for their survival.\n\nSee also {Goblin Trapper}, {Goblin Witch-Doctor}.",
+		"faction": "stronghold",
+		"level": 1,
+		"cost": {
+			"gold": 15
+		},
+		"speed": 5,
+		"hitPoints": 3,
+		"attack": 2,
+		"defense": 1,
+		"damage": {
+			"min": 1,
+			"max": 1
+		},
+		"doubleWide": false,
+		"fightValue": 28,
+		"aiValue": 29,
+		"growth": 21,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"h5DemonRaged": {
+				"type": "H5_DEMON_RAGED_H5C",
+				"val": 1,
+				"description": "{Blood Rage}\nGains rage in battle;\nlevels grant stat bonuses"
+			},
+			"h5DemonRageWatch": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5DemonRage",
+				"propagator": "BATTLE_WIDE",
+				"stacking": "h5DemonRageWatch",
+				"hidden": true,
+				"description": "~"
+			},
+			"h5Cowardice": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5Cowardice",
+				"icon": "h5/abilities/h5Cowardice",
+				"description": "{Cowardice}\nNo melee retaliation;\nflees at random after"
+			},
+			"h5CowardiceNoRet": {
+				"type": "NO_RETALIATION",
+				"hidden": true
+			},
+			"h5Treachery": {
+				"icon": "h5/abilities/treachery",
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5Treachery",
+				"val": 30,
+				"description": "{Treachery}\nDefects to the enemy below\n30% of starting count"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 25,
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h5/Orcs_Goblin1/battle.json",
+			"map": "h5/Orcs_Goblin1/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Orcs_Goblin1/map/atkL.png",
+			"mapAttackFromRight": "h5/Orcs_Goblin1/map/atkR.png",
+			"iconLarge": "h5/Orcs_Goblin1/iconLarge.png",
+			"iconSmall": "h5/Orcs_Goblin1/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_Orc_T1a_attack00.ogg",
+			"wince": "h5/h5_Orc_T1a_hit.ogg",
+			"defend": "h5/h5_Orc_T1a_hit.ogg",
+			"killed": "h5/h5_Orc_T1a_death.ogg",
+			"move": "h5/h5_Orc_T1a_move.ogg",
+			"shoot": "h5/h5_Orc_T1a_rangeattack.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_ATTACK"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "DOUBLE_DAMAGE_CHANCE"
+				},
+				"values": [
+					2,
+					4,
+					6,
+					8,
+					10,
+					12,
+					14,
+					16,
+					18,
+					20
+				]
+			},
+			{
+				"bonus": {
+					"type": "ENEMY_DEFENCE_REDUCTION"
+				},
+				"values": [
+					2,
+					4,
+					6,
+					8,
+					10,
+					12,
+					14,
+					16,
+					18,
+					20
+				]
+			}
+		],
+		"upgrades": [
+			"h5OrcsGoblin2",
+			"h5Orcs3rdGoblinDefiler"
+		]
+	},
+	"h5OrcsGoblin2": {
+		"name": {
+			"singular": "Goblin Trapper",
+			"plural": "Goblin Trappers"
+		},
+		"description": "Goblins, Goblin Trappers and Goblin Witch-Doctors are the level 1 units of the Heroes V Stronghold (merged into Stronghold). All of them have {Blood Rage} (builds up rage in battle and gains stat bonuses as it rises in level) and {Cowardice} (do not retaliate when attacked in melee and flee at random after acting). Goblins have {Treachery} (if their number drops below 30% of the starting count, they defect to the enemy). Goblin Trappers also have {Set Snares} (place an invisible trap that stops any enemy who steps on it). Goblin Witch-Doctors also have {Defile Magic} (enemy spellcasting units lose 1 cast, and their spells have half power for 2 rounds).\n\nThe main duty of Goblin Trappers is to set all kinds of insidious traps that cause the enemy great trouble and hinder its advance, and they love scattering traps of every sort across the battlefield. They consider themselves great warriors: before battle they always smear themselves with mud and wear necklaces strung from the teeth of their victims on their chests.\n\nSee also {Goblin}, {Goblin Witch-Doctor}.",
+		"faction": "stronghold",
+		"level": 1,
+		"cost": {
+			"gold": 30
+		},
+		"speed": 5,
+		"hitPoints": 6,
+		"attack": 2,
+		"defense": 4,
+		"damage": {
+			"min": 1,
+			"max": 1
+		},
+		"doubleWide": false,
+		"fightValue": 47,
+		"aiValue": 47,
+		"growth": 21,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"h5DemonRaged": {
+				"type": "H5_DEMON_RAGED_H5C",
+				"val": 1,
+				"description": "{Blood Rage}\nGains rage in battle;\nlevels grant stat bonuses"
+			},
+			"h5DemonRageWatch": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5DemonRage",
+				"propagator": "BATTLE_WIDE",
+				"stacking": "h5DemonRageWatch",
+				"hidden": true,
+				"description": "~"
+			},
+			"h5Cowardice": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5Cowardice",
+				"icon": "h5/abilities/h5Cowardice",
+				"description": "{Cowardice}\nNo melee retaliation;\nflees at random after"
+			},
+			"h5CowardiceNoRet": {
+				"type": "NO_RETALIATION",
+				"hidden": true
+			},
+			"cast_h5AbSetSnares": {
+				"type": "SPELLCASTER",
+				"subtype": "h5AbSetSnares",
+				"val": 2,
+				"description": "{Set Snares}\nPlaces a hidden snare;\nenemies stop on it"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 25,
+				"hidden": true
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 1,
+				"stacking": "h5OrcsGoblin2ExpCasts"
+			}
+		},
+		"graphics": {
+			"animation": "h5/Orcs_Goblin2/battle.json",
+			"map": "h5/Orcs_Goblin2/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Orcs_Goblin2/map/atkL.png",
+			"mapAttackFromRight": "h5/Orcs_Goblin2/map/atkR.png",
+			"iconLarge": "h5/Orcs_Goblin2/iconLarge.png",
+			"iconSmall": "h5/Orcs_Goblin2/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_Orc_T1b_attack00.ogg",
+			"wince": "h5/h5_Orc_T1b_hit.ogg",
+			"defend": "h5/h5_Orc_T1b_hit.ogg",
+			"killed": "h5/h5_Orc_T1b_death.ogg",
+			"move": "h5/h5_Orc_T1b_move.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_ATTACK"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "DEFENSIVE_STANCE",
+					"valueType": "ADDITIVE_VALUE"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "ENEMY_DEFENCE_REDUCTION"
+				},
+				"values": [
+					3,
+					6,
+					9,
+					12,
+					15,
+					18,
+					21,
+					24,
+					27,
+					30
+				]
+			}
+		]
+	},
+	"h5OrcsOrc1": {
+		"name": {
+			"singular": "Orc Warrior",
+			"plural": "Orc Warriors"
+		},
+		"description": "Orc Warriors, Brutes and Warmongers are the level 3 units of the Heroes V Stronghold (merged into Stronghold). All of them have {Enrage} (Attack rises when a friendly stack dies) and {Blood Rage} (builds up rage in battle and gains stat bonuses as it rises in level). Brutes also have {Brutality} (melee attacks have a chance to strike twice). Warmongers also have {Fierce Retaliation} (×2 retaliation damage) and {Taunt} (chance to take enemy attacks in place of adjacent allies).\n\nThe main fighting unit of the orc army. These tough, fierce warriors can run for miles across the great steppe into battle without the slightest fear. Famed for their brutality, they have never known the word “retreat”, and they despise goblins, who are a byword for cowardice.\n\nSee also {Brute}, {Warmonger}.",
+		"faction": "stronghold",
+		"level": 3,
+		"cost": {
+			"gold": 125
+		},
+		"speed": 5,
+		"hitPoints": 13,
+		"attack": 8,
+		"defense": 3,
+		"damage": {
+			"min": 2,
+			"max": 4
+		},
+		"doubleWide": false,
+		"fightValue": 153,
+		"aiValue": 181,
+		"growth": 8,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"h5Enraged": {
+				"icon": "h5/abilities/enraged",
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5Enraged",
+				"description": "{Enrage}\nAttack rises whenever\nan allied stack dies"
+			},
+			"h5DemonRaged": {
+				"type": "H5_DEMON_RAGED_H5C",
+				"val": 1,
+				"description": "{Blood Rage}\nGains rage in battle;\nlevels grant stat bonuses"
+			},
+			"h5DemonRageWatch": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5DemonRage",
+				"propagator": "BATTLE_WIDE",
+				"stacking": "h5DemonRageWatch",
+				"hidden": true,
+				"description": "~"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 11,
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h5/Orcs_Orc1/battle.json",
+			"map": "h5/Orcs_Orc1/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Orcs_Orc1/map/atkL.png",
+			"mapAttackFromRight": "h5/Orcs_Orc1/map/atkR.png",
+			"iconLarge": "h5/Orcs_Orc1/iconLarge.png",
+			"iconSmall": "h5/Orcs_Orc1/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_Orc_T3a_attack00.ogg",
+			"wince": "h5/h5_Orc_T3a_hit.ogg",
+			"defend": "h5/h5_Orc_T3a_hit.ogg",
+			"killed": "h5/h5_Orc_T3a_death.ogg",
+			"move": "h5/h5_Orc_T3a_move.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_ATTACK"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "DOUBLE_DAMAGE_CHANCE"
+				},
+				"values": [
+					2,
+					4,
+					6,
+					8,
+					10,
+					12,
+					14,
+					16,
+					18,
+					20
+				]
+			}
+		],
+		"upgrades": [
+			"h5OrcsOrc2",
+			"h5Orcs3rdOrcWarmonger"
+		]
+	},
+	"h5OrcsOrc2": {
+		"name": {
+			"singular": "Brute",
+			"plural": "Brutes"
+		},
+		"description": "Orc Warriors, Brutes and Warmongers are the level 3 units of the Heroes V Stronghold (merged into Stronghold). All of them have {Enrage} (Attack rises when a friendly stack dies) and {Blood Rage} (builds up rage in battle and gains stat bonuses as it rises in level). Brutes also have {Brutality} (melee attacks have a chance to strike twice). Warmongers also have {Fierce Retaliation} (×2 retaliation damage) and {Taunt} (chance to take enemy attacks in place of adjacent allies).\n\nFighting Brutes is a strenuous and thankless task. Born warriors, they leave rivers of blood wherever they go. Nothing excites them more than hand-to-hand brawling, and on the battlefield they are pure killing machines, charging with whirling flails and leaving nothing behind but the mangled corpses of their enemies. An ordinary warrior can take on one foe at a time, but with their terrible weapons and savage nature, Brutes can take on two or more.\n\nSee also {Orc Warrior}, {Warmonger}.",
+		"faction": "stronghold",
+		"level": 3,
+		"cost": {
+			"gold": 190
+		},
+		"speed": 7,
+		"hitPoints": 13,
+		"attack": 9,
+		"defense": 6,
+		"damage": {
+			"min": 3,
+			"max": 5
+		},
+		"doubleWide": false,
+		"fightValue": 204,
+		"aiValue": 242,
+		"growth": 8,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"h5Enraged": {
+				"icon": "h5/abilities/enraged",
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5Enraged",
+				"description": "{Enrage}\nAttack rises whenever\nan allied stack dies"
+			},
+			"h5DemonRaged": {
+				"type": "H5_DEMON_RAGED_H5C",
+				"val": 1,
+				"description": "{Blood Rage}\nGains rage in battle;\nlevels grant stat bonuses"
+			},
+			"h5DemonRageWatch": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5DemonRage",
+				"propagator": "BATTLE_WIDE",
+				"stacking": "h5DemonRageWatch",
+				"hidden": true,
+				"description": "~"
+			},
+			"h5Brutality": {
+				"icon": "h5/abilities/brutality",
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5ProcEffect",
+				"addInfo": {
+					"effect": "extraAttack",
+					"pf": 1.0,
+					"melee": true,
+					"ranged": false
+				},
+				"description": "{Brutality}\nMelee may strike twice"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 11,
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h5/Orcs_Orc2/battle.json",
+			"map": "h5/Orcs_Orc2/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Orcs_Orc2/map/atkL.png",
+			"mapAttackFromRight": "h5/Orcs_Orc2/map/atkR.png",
+			"iconLarge": "h5/Orcs_Orc2/iconLarge.png",
+			"iconSmall": "h5/Orcs_Orc2/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_Orc_T3b_attack00.ogg",
+			"wince": "h5/h5_Orc_T3b_hit.ogg",
+			"defend": "h5/h5_Orc_T3b_hit.ogg",
+			"killed": "h5/h5_Orc_T3b_death.ogg",
+			"move": "h5/h5_Orc_T3b_move.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "DOUBLE_DAMAGE_CHANCE"
+				},
+				"values": [
+					2,
+					4,
+					6,
+					8,
+					10,
+					12,
+					14,
+					16,
+					18,
+					20
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_ATTACK"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "ENEMY_DEFENCE_REDUCTION"
+				},
+				"values": [
+					2,
+					4,
+					6,
+					8,
+					10,
+					12,
+					14,
+					16,
+					18,
+					20
+				]
+			}
+		]
+	},
+	"h5OrcsOrcChief1": {
+		"name": {
+			"singular": "Slayer",
+			"plural": "Slayers"
+		},
+		"description": "Slayers, Executioners and Chieftains are the level 5 units of the Heroes V Stronghold (merged into Stronghold). All of them have {Blood Rage} (builds up rage in battle and gains stat bonuses as it rises in level). Slayers have {Cleave} (strikes again when an attack kills at least 1 creature). Executioners also have {Aura of Fear} (-3 Morale to enemies within 3 hexes), {Bravery} (Morale is always at least +1) and {Cleave} (strikes again when an attack kills at least 1 creature). Chieftains also have {Presence of Commander} (+10% Speed to adjacent allies) and {Word of the Chief} (damages an allied stack by as many points as there are Chieftains and gives it +Speed% equal to the number of Chieftains, max 60%).\n\nSlayers are the elite unit of the orc army and the leaders of the rank-and-file soldiers. In battle they lead from the front, carving a bloody path for their troops with gleaming double-bladed axes, while their fervor inspires the army.\n\nSee also {Executioner}, {Chieftain}.",
+		"faction": "stronghold",
+		"level": 5,
+		"cost": {
+			"gold": 275
+		},
+		"speed": 6,
+		"hitPoints": 25,
+		"attack": 9,
+		"defense": 7,
+		"damage": {
+			"min": 7,
+			"max": 9
+		},
+		"doubleWide": false,
+		"fightValue": 433,
+		"aiValue": 482,
+		"growth": 4,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"h5Cleave": {
+				"type": "FEROCITY",
+				"val": 1,
+				"description": "{Cleave}\nAttacks again after\nkilling 1+ creatures"
+			},
+			"h5DemonRaged": {
+				"type": "H5_DEMON_RAGED_H5C",
+				"val": 1,
+				"description": "{Blood Rage}\nGains rage in battle;\nlevels grant stat bonuses"
+			},
+			"h5DemonRageWatch": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5DemonRage",
+				"propagator": "BATTLE_WIDE",
+				"stacking": "h5DemonRageWatch",
+				"hidden": true,
+				"description": "~"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 5,
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h5/Orcs_OrcChief1/battle.json",
+			"map": "h5/Orcs_OrcChief1/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Orcs_OrcChief1/map/atkL.png",
+			"mapAttackFromRight": "h5/Orcs_OrcChief1/map/atkR.png",
+			"iconLarge": "h5/Orcs_OrcChief1/iconLarge.png",
+			"iconSmall": "h5/Orcs_OrcChief1/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_Orc_T5a_attack00.ogg",
+			"wince": "h5/h5_Orc_T5a_hit.ogg",
+			"defend": "h5/h5_Orc_T5a_hit.ogg",
+			"killed": "h5/h5_Orc_T5a_death.ogg",
+			"move": "h5/h5_Orc_T5a_move.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					3,
+					4,
+					5,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					3,
+					4,
+					4,
+					6,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					2,
+					3,
+					3,
+					4,
+					5,
+					6,
+					6,
+					7
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					7
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "ENEMY_DEFENCE_REDUCTION"
+				},
+				"values": [
+					4,
+					8,
+					12,
+					16,
+					20,
+					24,
+					28,
+					32,
+					36,
+					40
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_ATTACK"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1
+				]
+			}
+		],
+		"upgrades": [
+			"h5OrcsOrcChief2",
+			"h5Orcs3rdOrcchiefChieftain"
+		]
+	},
+	"h5OrcsOrcChief2": {
+		"name": {
+			"singular": "Executioner",
+			"plural": "Executioners"
+		},
+		"description": "Slayers, Executioners and Chieftains are the level 5 units of the Heroes V Stronghold (merged into Stronghold). All of them have {Blood Rage} (builds up rage in battle and gains stat bonuses as it rises in level). Slayers have {Cleave} (strikes again when an attack kills at least 1 creature). Executioners also have {Aura of Fear} (-3 Morale to enemies within 3 hexes), {Bravery} (Morale is always at least +1) and {Cleave} (strikes again when an attack kills at least 1 creature). Chieftains also have {Presence of Commander} (+10% Speed to adjacent allies) and {Word of the Chief} (damages an allied stack by as many points as there are Chieftains and gives it +Speed% equal to the number of Chieftains, max 60%).\n\nExecutioners firmly believe that ferocity is the best defense and that striking fear into the enemy is the highest reward. So they ignore danger and refuse to wear any armor in battle. These fearless fighters always appear where the fighting is fiercest and pay their enemies no heed. War thrills them, and they never show mercy to any creature that dares to challenge them.\n\nSee also {Slayer}, {Chieftain}.",
+		"faction": "stronghold",
+		"level": 5,
+		"cost": {
+			"gold": 390
+		},
+		"speed": 7,
+		"hitPoints": 30,
+		"attack": 12,
+		"defense": 9,
+		"damage": {
+			"min": 8,
+			"max": 11
+		},
+		"doubleWide": false,
+		"fightValue": 577,
+		"aiValue": 642,
+		"growth": 4,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"h5AreaZone": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5AreaZone",
+				"val": 0,
+				"stacking": "h5AreaZone",
+				"propagator": "BATTLE_WIDE",
+				"hidden": true,
+				"description": "~"
+			},
+			"h5FrightAura": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5FrightAura",
+				"addInfo": {
+					"range": 3,
+					"morale": 3
+				},
+				"icon": "h5/abilities/h5FrightAura",
+				"description": "{Aura of Fear}\nEnemies within 3 hexes have -3 Morale"
+			},
+			"h5Bravery": {
+				"type": "MORALE",
+				"val": 1,
+				"valueType": "AT_LEAST",
+				"stacking": "h5Bravery",
+				"description": "{Bravery}\nMorale is at least +1"
+			},
+			"h5Cleave": {
+				"type": "FEROCITY",
+				"val": 1,
+				"description": "{Cleave}\nAttacks again after\nkilling 1+ creatures"
+			},
+			"h5DemonRaged": {
+				"type": "H5_DEMON_RAGED_H5C",
+				"val": 1,
+				"description": "{Blood Rage}\nGains rage in battle;\nlevels grant stat bonuses"
+			},
+			"h5DemonRageWatch": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5DemonRage",
+				"propagator": "BATTLE_WIDE",
+				"stacking": "h5DemonRageWatch",
+				"hidden": true,
+				"description": "~"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 5,
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h5/Orcs_OrcChief2/battle.json",
+			"map": "h5/Orcs_OrcChief2/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Orcs_OrcChief2/map/atkL.png",
+			"mapAttackFromRight": "h5/Orcs_OrcChief2/map/atkR.png",
+			"iconLarge": "h5/Orcs_OrcChief2/iconLarge.png",
+			"iconSmall": "h5/Orcs_OrcChief2/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_Orc_T5b_attack00.ogg",
+			"wince": "h5/h5_Orc_T5b_hit.ogg",
+			"defend": "h5/h5_Orc_T5b_hit.ogg",
+			"killed": "h5/h5_Orc_T5b_death.ogg",
+			"move": "h5/h5_Orc_T5b_move.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					3,
+					4,
+					5,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					3,
+					4,
+					4,
+					6,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					2,
+					3,
+					3,
+					4,
+					5,
+					6,
+					6,
+					7
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					7
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "ENEMY_DEFENCE_REDUCTION"
+				},
+				"values": [
+					4,
+					8,
+					12,
+					16,
+					20,
+					24,
+					28,
+					32,
+					36,
+					40
+				]
+			},
+			{
+				"bonus": {
+					"type": "DOUBLE_DAMAGE_CHANCE"
+				},
+				"values": [
+					3,
+					6,
+					9,
+					12,
+					15,
+					18,
+					21,
+					24,
+					27,
+					30
+				]
+			},
+			{
+				"bonus": {
+					"type": "MIND_IMMUNITY",
+					"description": "{Steadfast Mind}\nImmune to Mind spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h5OrcsShaman1": {
+		"name": {
+			"singular": "Shaman Witch",
+			"plural": "Shaman Witches"
+		},
+		"description": "Shaman Witches, Sky Daughters and Earth Daughters are the level 4 units of the Heroes V Stronghold (merged into Stronghold). All of them can cast {Slow} and {Haste} (2 times per battle, 8 mana) and have {Blood Rage} (builds up rage in battle and gains stat bonuses as it rises in level). Sky Daughters also have {Sacrifice Goblin} (sacrifices 1 adjacent Goblin for +1 Attack, Defense and Morale, max 5). Earth Daughters also have {Hexing Attack} (after attacking, casts a random Expert-level curse), {Swift Attack} (Slowed targets cannot retaliate against its attacks) and {Sacrifice Goblin} (sacrifices 1 adjacent Goblin for +1 Attack, Defense and Morale, max 5).\n\nSome may find these women beautiful, but once they take up their daggers and start casting spells, you will quickly think otherwise. Shamans love privilege, worship and the awe of others, especially that of the most fearsome warriors; the talk about these supremely wise women has been gathered from chieftains far and wide.\n\nSee also {Sky Daughter}, {Earth Daughter}.",
+		"faction": "stronghold",
+		"level": 4,
+		"cost": {
+			"gold": 275
+		},
+		"speed": 6,
+		"hitPoints": 31,
+		"attack": 6,
+		"defense": 6,
+		"damage": {
+			"min": 5,
+			"max": 8
+		},
+		"doubleWide": false,
+		"fightValue": 370,
+		"aiValue": 424,
+		"growth": 4,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"h5DemonRaged": {
+				"type": "H5_DEMON_RAGED_H5C",
+				"val": 1,
+				"description": "{Blood Rage}\nGains rage in battle;\nlevels grant stat bonuses"
+			},
+			"h5DemonRageWatch": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5DemonRage",
+				"propagator": "BATTLE_WIDE",
+				"stacking": "h5DemonRageWatch",
+				"hidden": true,
+				"description": "~"
+			},
+			"cast_h5AbSlow": {
+				"type": "SPELLCASTER",
+				"subtype": "h5AbSlow",
+				"val": 2
+			},
+			"cast_h5AbHaste": {
+				"type": "SPELLCASTER",
+				"subtype": "h5AbHaste",
+				"val": 2
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 5,
+				"hidden": true
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 2
+			},
+			"h5Mana": {
+				"type": "H5_MANA_H5C",
+				"val": 8,
+				"stacking": "h5OrcsShaman1ExpH5ManaH5c"
+			},
+			"h5ManaMin": {
+				"type": "H5_MANA_MIN_H5C",
+				"val": 4,
+				"hidden": true
+			},
+			"h5ManaPool": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5ManaPool",
+				"hidden": true,
+				"description": "~"
+			}
+		},
+		"graphics": {
+			"animation": "h5/Orcs_Shaman1/battle.json",
+			"map": "h5/Orcs_Shaman1/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Orcs_Shaman1/map/atkL.png",
+			"mapAttackFromRight": "h5/Orcs_Shaman1/map/atkR.png",
+			"iconLarge": "h5/Orcs_Shaman1/iconLarge.png",
+			"iconSmall": "h5/Orcs_Shaman1/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_Orc_T4a_attack00.ogg",
+			"wince": "h5/h5_Orc_T4a_hit.ogg",
+			"defend": "h5/h5_Orc_T4a_hit.ogg",
+			"killed": "h5/h5_Orc_T4a_death.ogg",
+			"move": "h5/h5_Orc_T4a_move.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					5,
+					6,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "H5_MANA_H5C",
+					"stacking": "h5OrcsShaman1ExpH5ManaH5c"
+				},
+				"values": [
+					8,
+					8,
+					8,
+					8,
+					12,
+					12,
+					12,
+					12,
+					16,
+					16
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE"
+				},
+				"values": [
+					3,
+					6,
+					9,
+					12,
+					15,
+					18,
+					21,
+					24,
+					27,
+					30
+				]
+			}
+		],
+		"upgrades": [
+			"h5OrcsShaman2",
+			"h5Orcs3rdShamanHag"
+		]
+	},
+	"h5OrcsShaman2": {
+		"name": {
+			"singular": "Sky Daughter",
+			"plural": "Sky Daughters"
+		},
+		"description": "Shaman Witches, Sky Daughters and Earth Daughters are the level 4 units of the Heroes V Stronghold (merged into Stronghold). All of them can cast {Slow} and {Haste} (2 times per battle, 8 mana) and have {Blood Rage} (builds up rage in battle and gains stat bonuses as it rises in level). Sky Daughters also have {Sacrifice Goblin} (sacrifices 1 adjacent Goblin for +1 Attack, Defense and Morale, max 5). Earth Daughters also have {Hexing Attack} (after attacking, casts a random Expert-level curse), {Swift Attack} (Slowed targets cannot retaliate against its attacks) and {Sacrifice Goblin} (sacrifices 1 adjacent Goblin for +1 Attack, Defense and Morale, max 5).\n\nBy comparison, what goblins fear most is the Sky Daughter. The reason is simple: these wicked hags use fresh goblins in their vile magic and slaughter them without mercy. In fact, the thrill of slaughtering goblins gives the witches power and lets them strike their enemies with lightning.\n\nSee also {Shaman Witch}, {Earth Daughter}.",
+		"faction": "stronghold",
+		"level": 4,
+		"cost": {
+			"gold": 380
+		},
+		"speed": 6,
+		"hitPoints": 36,
+		"attack": 9,
+		"defense": 11,
+		"damage": {
+			"min": 5,
+			"max": 8
+		},
+		"doubleWide": false,
+		"fightValue": 511,
+		"aiValue": 586,
+		"growth": 4,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"h5DemonRaged": {
+				"type": "H5_DEMON_RAGED_H5C",
+				"val": 1,
+				"description": "{Blood Rage}\nGains rage in battle;\nlevels grant stat bonuses"
+			},
+			"h5DemonRageWatch": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5DemonRage",
+				"propagator": "BATTLE_WIDE",
+				"stacking": "h5DemonRageWatch",
+				"hidden": true,
+				"description": "~"
+			},
+			"cast_h5AbSacrificeGoblin": {
+				"type": "SPELLCASTER",
+				"subtype": "h5AbSacrificeGoblin",
+				"val": 2,
+				"description": "{Sacrifice Goblin}\nSacrifices adjacent Goblin\nAttack/Defense/Morale +1 (max 5)"
+			},
+			"cast_h5AbSlow": {
+				"type": "SPELLCASTER",
+				"subtype": "h5AbSlow",
+				"val": 2
+			},
+			"cast_h5AbHaste": {
+				"type": "SPELLCASTER",
+				"subtype": "h5AbHaste",
+				"val": 2
+			},
+			"cast_h5AbChainLightning": {
+				"type": "SPELLCASTER",
+				"subtype": "h5AbChainLightning",
+				"val": 1
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 5,
+				"hidden": true
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 3
+			},
+			"h5Mana": {
+				"type": "H5_MANA_H5C",
+				"val": 12,
+				"stacking": "h5OrcsShaman2ExpH5ManaH5c"
+			},
+			"h5ManaMin": {
+				"type": "H5_MANA_MIN_H5C",
+				"val": 4,
+				"hidden": true
+			},
+			"h5ManaPool": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5ManaPool",
+				"hidden": true,
+				"description": "~"
+			},
+			"h5ManaKeepCasts": {
+				"type": "H5_MANA_KEEPCASTS_H5C",
+				"val": 1,
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h5/Orcs_Shaman2/battle.json",
+			"map": "h5/Orcs_Shaman2/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Orcs_Shaman2/map/atkL.png",
+			"mapAttackFromRight": "h5/Orcs_Shaman2/map/atkR.png",
+			"iconLarge": "h5/Orcs_Shaman2/iconLarge.png",
+			"iconSmall": "h5/Orcs_Shaman2/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_Orc_T4c_attack00.ogg",
+			"wince": "h5/h5_Orc_T4c_hit.ogg",
+			"defend": "h5/h5_Orc_T4c_hit.ogg",
+			"killed": "h5/h5_Orc_T4c_death.ogg",
+			"move": "h5/h5_Orc_T4c_move.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					5,
+					6,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "H5_MANA_H5C",
+					"stacking": "h5OrcsShaman2ExpH5ManaH5c"
+				},
+				"values": [
+					12,
+					12,
+					12,
+					12,
+					16,
+					16,
+					16,
+					16,
+					20,
+					20
+				]
+			},
+			{
+				"bonus": {
+					"type": "NEGATIVE_EFFECTS_IMMUNITY",
+					"subtype": "air",
+					"description": "{Air Ward}\nImmune to harmful Air spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE"
+				},
+				"values": [
+					3,
+					6,
+					9,
+					12,
+					15,
+					18,
+					21,
+					24,
+					27,
+					30
+				]
+			}
+		]
+	},
+	"h5OrcsWyvern1": {
+		"name": {
+			"singular": "Wyvern",
+			"plural": "Wyverns"
+		},
+		"description": "Wyverns, Foul Wyverns and Lightning Wyverns are the level 6 units of the Heroes V Stronghold (merged into Stronghold). All of them fly. Wyverns have {Vitality Regeneration} (restores 23–38 Hit Points at the start of each round). Foul Wyverns also have {Vitality Regeneration} (restores 23–38 Hit Points at the start of each round) and {Venom} (poisons the target for 3 rounds; each round it takes 5 × the number of attackers in damage). Lightning Wyverns also have {Lightning Breath} (damage is split evenly between the target and adjacent enemies), {Immune to Blind} (immune to Blind) and {Scavenger} (eats corpses to restore Hit Points equal to 20% of the corpse's Hit Points).\n\nThey live on mountain cliffs and prey on wild horses. Wyverns are notorious for their violent temper and peculiar hunting habits. They cannot tolerate another of their kind beside them and kill it on sight. Legend says the ancestors of Wyverns were lizards transformed by some special magic, but this is only speculation, since the first Wyverns were wiped out by their descendants long ago.\n\nSee also {Foul Wyvern}, {Lightning Wyvern}.",
+		"faction": "stronghold",
+		"level": 6,
+		"cost": {
+			"gold": 840
+		},
+		"speed": 8,
+		"hitPoints": 69,
+		"attack": 12,
+		"defense": 11,
+		"damage": {
+			"min": 14,
+			"max": 23
+		},
+		"doubleWide": true,
+		"fightValue": 1376,
+		"aiValue": 1625,
+		"growth": 2,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"flying": {
+				"type": "FLYING"
+			},
+			"h5Regeneration": {
+				"icon": "h5/abilities/regeneration",
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5Regeneration",
+				"addInfo": {
+					"min": 23,
+					"max": 38
+				},
+				"description": "{Vitality Regeneration}\nRestores 23-38 HP at\nthe start of each round"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 2,
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h5/Orcs_Wyvern1/battle.json",
+			"map": "h5/Orcs_Wyvern1/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Orcs_Wyvern1/map/atkL.png",
+			"mapAttackFromRight": "h5/Orcs_Wyvern1/map/atkR.png",
+			"iconLarge": "h5/Orcs_Wyvern1/iconLarge.png",
+			"iconSmall": "h5/Orcs_Wyvern1/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_Orc_T6a_attack00.ogg",
+			"wince": "h5/h5_Orc_T6a_hit.ogg",
+			"defend": "h5/h5_Orc_T6a_hit.ogg",
+			"killed": "h5/h5_Orc_T6a_death.ogg",
+			"move": "h5/h5_Orc_T6a_move.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					2,
+					3,
+					4,
+					5,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "SPELL_AFTER_ATTACK",
+					"subtype": "poison",
+					"addInfo": [
+						2,
+						2
+					]
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_RETALIATION"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			}
+		],
+		"upgrades": [
+			"h5OrcsWyvern2",
+			"h5Orcs3rdWyvernPaokai"
+		]
+	},
+	"h5OrcsWyvern2": {
+		"name": {
+			"singular": "Foul Wyvern",
+			"plural": "Foul Wyverns"
+		},
+		"description": "Wyverns, Foul Wyverns and Lightning Wyverns are the level 6 units of the Heroes V Stronghold (merged into Stronghold). All of them fly. Wyverns have {Vitality Regeneration} (restores 23–38 Hit Points at the start of each round). Foul Wyverns also have {Vitality Regeneration} (restores 23–38 Hit Points at the start of each round) and {Venom} (poisons the target for 3 rounds; each round it takes 5 × the number of attackers in damage). Lightning Wyverns also have {Lightning Breath} (damage is split evenly between the target and adjacent enemies), {Immune to Blind} (immune to Blind) and {Scavenger} (eats corpses to restore Hit Points equal to 20% of the corpse's Hit Points).\n\nShamans sometimes gather newly hatched Wyverns and raise them on special food that promotes the growth of their venom sacs. In battle, the venomous breath of Foul Wyverns causes the enemy great agony, and the regenerative powers of these long-winged great lizards make them an undying legion.\n\nSee also {Wyvern}, {Lightning Wyvern}.",
+		"faction": "stronghold",
+		"level": 6,
+		"cost": {
+			"gold": 1075
+		},
+		"speed": 9,
+		"hitPoints": 81,
+		"attack": 15,
+		"defense": 11,
+		"damage": {
+			"min": 19,
+			"max": 25
+		},
+		"doubleWide": true,
+		"fightValue": 1720,
+		"aiValue": 2030,
+		"growth": 2,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"flying": {
+				"type": "FLYING"
+			},
+			"h5Regeneration": {
+				"icon": "h5/abilities/regeneration",
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5Regeneration",
+				"addInfo": {
+					"min": 23,
+					"max": 38
+				},
+				"description": "{Vitality Regeneration}\nRestores 23-38 HP at\nthe start of each round"
+			},
+			"h5Venom": {
+				"icon": "h5/abilities/venom",
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5Poison",
+				"addInfo": {
+					"perCreature": 5,
+					"turns": 3
+				},
+				"description": "{Venom}\nPoison 3 rounds: 5 dmg\nper attacker each round"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 2,
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h5/Orcs_Wyvern2/battle.json",
+			"map": "h5/Orcs_Wyvern2/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Orcs_Wyvern2/map/atkL.png",
+			"mapAttackFromRight": "h5/Orcs_Wyvern2/map/atkR.png",
+			"iconLarge": "h5/Orcs_Wyvern2/iconLarge.png",
+			"iconSmall": "h5/Orcs_Wyvern2/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_Orc_T6b_attack00.ogg",
+			"wince": "h5/h5_Orc_T6b_hit.ogg",
+			"defend": "h5/h5_Orc_T6b_hit.ogg",
+			"killed": "h5/h5_Orc_T6b_death.ogg",
+			"move": "h5/h5_Orc_T6b_move.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					2,
+					3,
+					4,
+					5,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "SPELL_AFTER_ATTACK",
+					"subtype": "poison",
+					"addInfo": [
+						2,
+						2
+					]
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					35,
+					45,
+					55,
+					65,
+					75
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_RETALIATION"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "SPELL_IMMUNITY",
+					"subtype": "poison",
+					"description": "{Immune to Poison}\nUnaffected by Poison"
+				},
+				"values": [
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			}
+		]
+	}
+}

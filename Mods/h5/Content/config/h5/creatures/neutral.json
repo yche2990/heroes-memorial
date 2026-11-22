@@ -1,0 +1,2700 @@
+{
+	"h5NeutralsAirElemental": {
+		"name": {
+			"singular": "Wind Elemental",
+			"plural": "Wind Elementals"
+		},
+		"description": "Wind Elementals are level 4 neutral units in Heroes V. They fly and have {No Enemy Retaliation}, {Elemental} (non-living; immune to Mind magic) and {Lightning Immunity} (immune to Air magic).\n\nWind Elementals are sentient beings made of wind and light, and they are very dangerous opponents. Closely bound to storms, they are immune to lightning strikes, and their insubstantial forms leave enemies unable to retaliate against their attacks.",
+		"faction": "neutral",
+		"level": 4,
+		"cost": {
+			"gold": 420
+		},
+		"speed": 12,
+		"hitPoints": 31,
+		"attack": 10,
+		"defense": 7,
+		"damage": {
+			"min": 4,
+			"max": 6
+		},
+		"doubleWide": false,
+		"fightValue": 611,
+		"aiValue": 701,
+		"growth": 3,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"flying": {
+				"type": "FLYING"
+			},
+			"blockRetaliation": {
+				"type": "BLOCKS_RETALIATION",
+				"description": "{No Enemy Retaliation}\nNo enemy retaliation"
+			},
+			"h5Elemental": {
+				"type": "H5_ELEMENTAL_H5C",
+				"val": 1,
+				"description": "{Elemental}\nNon-living\nImmune to Mind spells"
+			},
+			"nonLiving": {
+				"type": "NON_LIVING"
+			},
+			"mindImmunity": {
+				"type": "MIND_IMMUNITY"
+			},
+			"immuneToair": {
+				"type": "SPELL_SCHOOL_IMMUNITY",
+				"subtype": "air",
+				"description": "{Lightning Immunity}\nImmune to Air spells"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 4,
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h5/Neutrals_Air_Elemental/battle.json",
+			"map": "h5/Neutrals_Air_Elemental/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Neutrals_Air_Elemental/map/atkL.png",
+			"mapAttackFromRight": "h5/Neutrals_Air_Elemental/map/atkR.png",
+			"iconLarge": "h5/Neutrals_Air_Elemental/iconLarge.png",
+			"iconSmall": "h5/Neutrals_Air_Elemental/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_WindElementalAttack.ogg",
+			"wince": "h5/h5_WindElementalHit.ogg",
+			"defend": "h5/h5_WindElementalHit.ogg",
+			"killed": "h5/h5_WindElementalDeath.ogg",
+			"move": "h5/h5_WindElementalMove.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					5,
+					6,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_ATTACK"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "COMBAT_EVENT_TRIGGER",
+					"subtype": "enchanted",
+					"addInfo": {
+						"spell": "airShield",
+						"level": 2
+					},
+					"description": "{Eternal Air Shield}\nStarts each battle with Air Shield on itself"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "DOUBLE_DAMAGE_CHANCE"
+				},
+				"values": [
+					2,
+					4,
+					6,
+					8,
+					10,
+					12,
+					14,
+					16,
+					18,
+					20
+				]
+			}
+		]
+	},
+	"h5NeutralsBlackKnight": {
+		"name": {
+			"singular": "Black Knight",
+			"plural": "Black Knights"
+		},
+		"description": "Black Knights are level 6 neutral units in Heroes V. They have {Undead} (undead creature) and {Cursing Attack} (casts Weakness on the target when attacking).\n\nBlack Knights descend from cursed, fallen champions. They are independent vampire warriors closely tied to the Necropolis realm. They strike their enemies brutally and can curse enemy troops.",
+		"faction": "neutral",
+		"level": 6,
+		"cost": {
+			"gold": 805
+		},
+		"speed": 9,
+		"hitPoints": 69,
+		"attack": 9,
+		"defense": 8,
+		"damage": {
+			"min": 14,
+			"max": 33
+		},
+		"doubleWide": true,
+		"fightValue": 1199,
+		"aiValue": 1416,
+		"growth": 2,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"undead": {
+				"type": "UNDEAD",
+				"description": "{Undead}\nUndead creature"
+			},
+			"h5CursingAttack": {
+				"type": "SPELL_AFTER_ATTACK",
+				"subtype": "h5AbCurse",
+				"val": 100,
+				"addInfo": [
+					1,
+					2
+				],
+				"description": "{Cursing Attack}\nCasts Weakness on the\ntarget when attacking"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 2,
+				"hidden": true
+			},
+			"h5NecroRaise": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5NecroRaise",
+				"hidden": true
+			},
+			"h5NecroRaiseInfo": {
+				"type": "H5_NECRO_RAISE_H5C"
+			}
+		},
+		"graphics": {
+			"animation": "h5/Neutrals_Black_Knight/battle.json",
+			"map": "h5/Neutrals_Black_Knight/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Neutrals_Black_Knight/map/atkL.png",
+			"mapAttackFromRight": "h5/Neutrals_Black_Knight/map/atkR.png",
+			"iconLarge": "h5/Neutrals_Black_Knight/iconLarge.png",
+			"iconSmall": "h5/Neutrals_Black_Knight/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_DeathKnightAttack.ogg",
+			"wince": "h5/h5_DeathKnightHit.ogg",
+			"defend": "h5/h5_DeathKnightHit.ogg",
+			"killed": "h5/h5_DeathKnightDeath.ogg",
+			"move": "h5/h5_DeathKnightMove.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					2,
+					3,
+					4,
+					5,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "BLOCKS_RETALIATION",
+					"description": "{No Retaliation}\nEnemy cannot retaliate when attacked"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "SPELL_AFTER_ATTACK",
+					"subtype": "dispelHelpful",
+					"addInfo": [
+						2,
+						2
+					]
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "DOUBLE_DAMAGE_CHANCE"
+				},
+				"values": [
+					2,
+					4,
+					6,
+					8,
+					10,
+					12,
+					14,
+					16,
+					18,
+					20
+				]
+			}
+		]
+	},
+	"h5NeutralsDeathKnight": {
+		"name": {
+			"singular": "Death Knight",
+			"plural": "Death Knights"
+		},
+		"description": "Death Knights are level 6 neutral units in Heroes V. They have {Undead} (undead creature), {Cursing Attack} (casts Weakness on the target when attacking) and {Deadly Strike} (25% chance to destroy half of the target's total Hit Points in one blow).\n\nThe exiled Death Knights come from the dark heart of the Necropolis realm, and dreadful curses await the reckless fools who dare to challenge these undead warriors. A Death Knight can slay many enemies with a single blow.",
+		"faction": "neutral",
+		"level": 6,
+		"cost": {
+			"gold": 805
+		},
+		"speed": 9,
+		"hitPoints": 69,
+		"attack": 17,
+		"defense": 15,
+		"damage": {
+			"min": 23,
+			"max": 33
+		},
+		"doubleWide": true,
+		"fightValue": 1712,
+		"aiValue": 2022,
+		"growth": 2,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"undead": {
+				"type": "UNDEAD",
+				"description": "{Undead}\nUndead creature"
+			},
+			"h5CursingAttack": {
+				"type": "SPELL_AFTER_ATTACK",
+				"subtype": "h5AbCurse",
+				"val": 100,
+				"addInfo": [
+					1,
+					2
+				],
+				"description": "{Cursing Attack}\nCasts Weakness on the\ntarget when attacking"
+			},
+			"h5DeadlyStrike": {
+				"icon": "h5/abilities/deadlyStrike",
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5DeadlyStrike",
+				"val": 25,
+				"addInfo": {
+					"share": 50
+				},
+				"description": "{Deadly Strike}\n25% chance to deal half\nof target's total HP"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 2,
+				"hidden": true
+			},
+			"h5NecroRaise": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5NecroRaise",
+				"hidden": true
+			},
+			"h5NecroRaiseInfo": {
+				"type": "H5_NECRO_RAISE_H5C"
+			}
+		},
+		"graphics": {
+			"animation": "h5/Neutrals_Death_Knight/battle.json",
+			"map": "h5/Neutrals_Death_Knight/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Neutrals_Death_Knight/map/atkL.png",
+			"mapAttackFromRight": "h5/Neutrals_Death_Knight/map/atkR.png",
+			"iconLarge": "h5/Neutrals_Death_Knight/iconLarge.png",
+			"iconSmall": "h5/Neutrals_Death_Knight/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_DeathKnightAttack.ogg",
+			"wince": "h5/h5_DeathKnightHit.ogg",
+			"defend": "h5/h5_DeathKnightHit.ogg",
+			"killed": "h5/h5_DeathKnightDeath.ogg",
+			"move": "h5/h5_DeathKnightMove.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					2,
+					3,
+					4,
+					5,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "BLOCKS_RETALIATION",
+					"description": "{No Retaliation}\nEnemy cannot retaliate when attacked"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "SPELL_AFTER_ATTACK",
+					"subtype": "dispelHelpful",
+					"addInfo": [
+						2,
+						2
+					]
+				},
+				"values": [
+					4,
+					8,
+					12,
+					16,
+					20,
+					24,
+					28,
+					32,
+					36,
+					40
+				]
+			},
+			{
+				"bonus": {
+					"type": "DOUBLE_DAMAGE_CHANCE"
+				},
+				"values": [
+					3,
+					6,
+					9,
+					12,
+					15,
+					18,
+					21,
+					24,
+					27,
+					30
+				]
+			}
+		]
+	},
+	"h5NeutralsEarthElemental": {
+		"name": {
+			"singular": "Land Elemental",
+			"plural": "Land Elementals"
+		},
+		"description": "Land Elementals are level 4 neutral units in Heroes V. They have {Unlimited Retaliation}, {Elemental} (non-living; immune to Mind magic), {Immune to Earth} (immune to Earth magic) and {50% Magic Proof} (-50% magic damage).\n\nLike the place of their birth, Land Elementals are as strong and unyielding as rock and soil. They are completely immune to Earth magic and 50% resistant to other magic.",
+		"faction": "neutral",
+		"level": 4,
+		"cost": {
+			"gold": 420
+		},
+		"speed": 4,
+		"hitPoints": 77,
+		"attack": 10,
+		"defense": 13,
+		"damage": {
+			"min": 9,
+			"max": 12
+		},
+		"doubleWide": false,
+		"fightValue": 644,
+		"aiValue": 738,
+		"growth": 3,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"unlimitedRetaliations": {
+				"type": "UNLIMITED_RETALIATIONS",
+				"description": "{Unlimited Retaliations}\nUnlimited retaliations"
+			},
+			"h5Elemental": {
+				"type": "H5_ELEMENTAL_H5C",
+				"val": 1,
+				"description": "{Elemental}\nNon-living\nImmune to Mind spells"
+			},
+			"nonLiving": {
+				"type": "NON_LIVING"
+			},
+			"mindImmunity": {
+				"type": "MIND_IMMUNITY"
+			},
+			"immuneToearth": {
+				"type": "SPELL_SCHOOL_IMMUNITY",
+				"subtype": "earth",
+				"description": "{Immune to Earth}\nImmune to Earth spells"
+			},
+			"h5MagicProof": {
+				"type": "SPELL_DAMAGE_REDUCTION",
+				"subtype": "any",
+				"val": 50,
+				"description": "{50% Magic Proof}\nSpell damage -50%"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 4,
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h5/Neutrals_Earth_Elemental/battle.json",
+			"map": "h5/Neutrals_Earth_Elemental/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Neutrals_Earth_Elemental/map/atkL.png",
+			"mapAttackFromRight": "h5/Neutrals_Earth_Elemental/map/atkR.png",
+			"iconLarge": "h5/Neutrals_Earth_Elemental/iconLarge.png",
+			"iconSmall": "h5/Neutrals_Earth_Elemental/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_EarthElementalAttack.ogg",
+			"wince": "h5/h5_EarthElementalHit.ogg",
+			"defend": "h5/h5_EarthElementalHit.ogg",
+			"move": "h5/h5_EarthElementalMove.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					5,
+					6,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "SPELL_IMMUNITY",
+					"subtype": "lightningBolt",
+					"description": "{Immune to Lightning}\nUnaffected by Lightning Bolt"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "SPELL_IMMUNITY",
+					"subtype": "chainLightning",
+					"description": "{Lightning Immunity}\nUnaffected by Chain Lightning"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "DEFENSIVE_STANCE",
+					"valueType": "ADDITIVE_VALUE"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE"
+				},
+				"values": [
+					3,
+					6,
+					9,
+					12,
+					15,
+					18,
+					21,
+					24,
+					27,
+					30
+				]
+			}
+		]
+	},
+	"h5NeutralsFireElemental": {
+		"name": {
+			"singular": "Fire Elemental",
+			"plural": "Fire Elementals"
+		},
+		"description": "Fire Elementals are level 4 neutral units in Heroes V. They have a ranged attack, plus {Elemental} (non-living; immune to Mind magic), {Immune to Fire} (immune to Fire magic) and {Fire Shield} (reflects 20% of melee damage back to the attacker).\n\nFire Elementals are yellow spirits from a vast core of molten lava. Infused with the essence of everything that burns, they are protected by a powerful Fire Shield. Fire Elementals can attack at range, and they pose a considerable threat at any distance.",
+		"faction": "neutral",
+		"level": 4,
+		"cost": {
+			"gold": 420
+		},
+		"speed": 5,
+		"hitPoints": 44,
+		"attack": 13,
+		"defense": 6,
+		"damage": {
+			"min": 10,
+			"max": 18
+		},
+		"doubleWide": false,
+		"fightValue": 623,
+		"aiValue": 714,
+		"growth": 3,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"shooter": {
+				"type": "SHOOTER"
+			},
+			"h5Elemental": {
+				"type": "H5_ELEMENTAL_H5C",
+				"val": 1,
+				"description": "{Elemental}\nNon-living\nImmune to Mind spells"
+			},
+			"nonLiving": {
+				"type": "NON_LIVING"
+			},
+			"mindImmunity": {
+				"type": "MIND_IMMUNITY"
+			},
+			"immuneTofire": {
+				"type": "SPELL_SCHOOL_IMMUNITY",
+				"subtype": "fire",
+				"description": "{Immune to Fire}\nImmune to Fire spells"
+			},
+			"fireShield": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "fireShield",
+				"val": 20,
+				"stacking": "fireShield",
+				"description": "{Fire Shield}\nReflects 20% of melee\ndamage to attacker"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 4,
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h5/Neutrals_Fire_Elemental/battle.json",
+			"map": "h5/Neutrals_Fire_Elemental/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Neutrals_Fire_Elemental/map/atkL.png",
+			"mapAttackFromRight": "h5/Neutrals_Fire_Elemental/map/atkR.png",
+			"iconLarge": "h5/Neutrals_Fire_Elemental/iconLarge.png",
+			"iconSmall": "h5/Neutrals_Fire_Elemental/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"frameAngles": [
+					90,
+					60,
+					45,
+					30,
+					0,
+					-30,
+					-45,
+					-60,
+					-90
+				],
+				"offset": {
+					"upperX": 25,
+					"upperY": -69,
+					"middleX": 50,
+					"middleY": -55,
+					"lowerX": 27,
+					"lowerY": -38
+				},
+				"attackClimaxFrame": 6,
+				"ray": [
+					{
+						"start": [
+							127,
+							97,
+							31,
+							160
+						],
+						"end": [
+							85,
+							64,
+							21,
+							60
+						]
+					},
+					{
+						"start": [
+							255,
+							194,
+							63,
+							255
+						],
+						"end": [
+							255,
+							194,
+							63,
+							120
+						]
+					},
+					{
+						"start": [
+							255,
+							255,
+							143,
+							255
+						],
+						"end": [
+							255,
+							194,
+							63,
+							200
+						]
+					},
+					{
+						"start": [
+							255,
+							194,
+							63,
+							255
+						],
+						"end": [
+							255,
+							194,
+							63,
+							120
+						]
+					},
+					{
+						"start": [
+							127,
+							97,
+							31,
+							160
+						],
+						"end": [
+							85,
+							64,
+							21,
+							60
+						]
+					}
+				]
+			}
+		},
+		"sound": {
+			"attack": "h5/h5_FireElementalAttack00.ogg",
+			"wince": "h5/h5_FireElementalHit.ogg",
+			"defend": "h5/h5_FireElementalHit.ogg",
+			"killed": "h5/h5_FireElementalDeath.ogg",
+			"move": "h5/h5_FireElementalMove.ogg",
+			"shoot": "h5/h5_FireElementalRangeAttack.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					5,
+					6,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_DISTANCE_PENALTY",
+					"description": "{Sharpshooter}\nNo penalty for long-range shots"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "SHOTS"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_WALL_PENALTY",
+					"description": "{Siege Shooter}\nNo damage loss when shooting over walls"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "ENEMY_DEFENCE_REDUCTION"
+				},
+				"values": [
+					3,
+					6,
+					9,
+					12,
+					15,
+					18,
+					21,
+					24,
+					27,
+					30
+				]
+			}
+		],
+		"shots": 24
+	},
+	"h5NeutralsManticore": {
+		"name": {
+			"singular": "Flying Manticore",
+			"plural": "Flying Manticores"
+		},
+		"description": "Flying Manticores are level 6 neutral units in Heroes V. They fly and have {Poisonous Attack} (poisons the target for 10 rounds; each round it takes 4 × the number of attackers in damage).\n\nThe mighty Flying Manticore is a monster with a lion's body, dragon's wings and a venomous sting, and it is an extremely tough opponent. In battle Flying Manticores swoop swiftly on the enemy lines and kill with their venom. Compared with their venom, the stuff assassins use is practically medicine.",
+		"faction": "neutral",
+		"level": 6,
+		"cost": {
+			"gold": 1210
+		},
+		"speed": 7,
+		"hitPoints": 92,
+		"attack": 11,
+		"defense": 10,
+		"damage": {
+			"min": 28,
+			"max": 47
+		},
+		"doubleWide": true,
+		"fightValue": 1687,
+		"aiValue": 1992,
+		"growth": 2,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"flying": {
+				"type": "FLYING"
+			},
+			"h5Poison": {
+				"icon": "h5/abilities/poison",
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5Poison",
+				"addInfo": {
+					"perCreature": 4,
+					"turns": 10
+				},
+				"description": "{Poisonous Attack}\nPoison 10 rounds: 4 dmg\nper attacker each round"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 2,
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h5/Neutrals_Manticore/battle.json",
+			"map": "h5/Neutrals_Manticore/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Neutrals_Manticore/map/atkL.png",
+			"mapAttackFromRight": "h5/Neutrals_Manticore/map/atkR.png",
+			"iconLarge": "h5/Neutrals_Manticore/iconLarge.png",
+			"iconSmall": "h5/Neutrals_Manticore/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_neutral_h5a1_mantikora_attack00.ogg",
+			"wince": "h5/h5_neutral_h5a1_mantikora_hit.ogg",
+			"defend": "h5/h5_neutral_h5a1_mantikora_hit.ogg",
+			"killed": "h5/h5_neutral_h5a1_mantikora_death.ogg",
+			"move": "h5/h5_neutral_h5a1_mantikora_move.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					2,
+					3,
+					4,
+					5,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_RETALIATION"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "SPELL_IMMUNITY",
+					"subtype": "poison",
+					"description": "{Immune to Poison}\nUnaffected by Poison"
+				},
+				"values": [
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "MIND_IMMUNITY",
+					"description": "{Steadfast Mind}\nImmune to Mind spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h5NeutralsMummy": {
+		"name": {
+			"singular": "Mummy",
+			"plural": "Mummies"
+		},
+		"description": "Mummies are level 5 neutral units in Heroes V. They can cast {Confusion} and {Animate Dead} (2 times per battle, 20 mana) and have {Undead} (undead creature) and {Hexing Attack} (after attacking, casts a random Expert-level curse).\n\nThese revived ancient mages are a severe test for any army. Mummies curse their targets with all manner of dark spells as they attack, and they can also raise their fallen comrades.",
+		"faction": "neutral",
+		"level": 5,
+		"cost": {
+			"gold": 705
+		},
+		"speed": 6,
+		"hitPoints": 37,
+		"attack": 7,
+		"defense": 8,
+		"damage": {
+			"min": 19,
+			"max": 28
+		},
+		"doubleWide": false,
+		"fightValue": 960,
+		"aiValue": 1068,
+		"growth": 3,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"undead": {
+				"type": "UNDEAD",
+				"description": "{Undead}\nUndead creature"
+			},
+			"h5HexingAttack": {
+				"icon": "h5/abilities/hexingAttack",
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5ProcSpell",
+				"addInfo": {
+					"spells": [
+						"h5AbCurse",
+						"h5AbSlow",
+						"h5AbWeakness",
+						"h5AbDisruptingRay"
+					],
+					"chance": 100,
+					"mastery": 3,
+					"melee": true,
+					"ranged": true
+				},
+				"description": "{Hexing Attack}\nAfter attacking, casts a\nrandom Expert curse"
+			},
+			"cast_h5AbForgetfulness": {
+				"type": "SPELLCASTER",
+				"subtype": "h5AbForgetfulness",
+				"val": 3
+			},
+			"cast_h5AbAnimateDead": {
+				"type": "SPELLCASTER",
+				"subtype": "h5AbAnimateDead",
+				"val": 3
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 3,
+				"hidden": true
+			},
+			"h5SpellDmg30": {
+				"type": "H5_SPELLDMG30_H5C",
+				"val": 30,
+				"hidden": true
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 2
+			},
+			"h5Mana": {
+				"type": "H5_MANA_H5C",
+				"val": 20,
+				"stacking": "h5NeutralsMummyExpH5ManaH5c"
+			},
+			"h5ManaMin": {
+				"type": "H5_MANA_MIN_H5C",
+				"val": 9,
+				"hidden": true
+			},
+			"h5ManaPool": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5ManaPool",
+				"hidden": true,
+				"description": "~"
+			},
+			"h5NecroRaise": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5NecroRaise",
+				"hidden": true
+			},
+			"h5NecroRaiseInfo": {
+				"type": "H5_NECRO_RAISE_H5C"
+			}
+		},
+		"graphics": {
+			"animation": "h5/Neutrals_Mummy/battle.json",
+			"map": "h5/Neutrals_Mummy/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Neutrals_Mummy/map/atkL.png",
+			"mapAttackFromRight": "h5/Neutrals_Mummy/map/atkR.png",
+			"iconLarge": "h5/Neutrals_Mummy/iconLarge.png",
+			"iconSmall": "h5/Neutrals_Mummy/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_neutral_mummy_attack00.ogg",
+			"wince": "h5/h5_neutral_mummy_hit.ogg",
+			"defend": "h5/h5_neutral_mummy_hit.ogg",
+			"killed": "h5/h5_neutral_h5a1_mummy_death.ogg",
+			"move": "h5/h5_neutral_h5a1_mummy_move.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					3,
+					4,
+					5,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					3,
+					4,
+					4,
+					6,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					2,
+					3,
+					3,
+					4,
+					5,
+					6,
+					6,
+					7
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					7
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE"
+				},
+				"values": [
+					3,
+					6,
+					9,
+					12,
+					15,
+					18,
+					21,
+					24,
+					27,
+					30
+				]
+			},
+			{
+				"bonus": {
+					"type": "H5_MANA_H5C",
+					"stacking": "h5NeutralsMummyExpH5ManaH5c"
+				},
+				"values": [
+					20,
+					20,
+					20,
+					20,
+					20,
+					29,
+					29,
+					29,
+					29,
+					29
+				]
+			}
+		]
+	},
+	"h5NeutralsPhoenix": {
+		"name": {
+			"singular": "Phoenix",
+			"plural": "Phoenixes"
+		},
+		"description": "Phoenixes are level 7 neutral units in Heroes V. They fly and have {Immune to Fire} (immune to Fire magic), {Fire Shield} (reflects 20% of melee damage back to the attacker) and {Revival} (when the whole stack dies, it returns at full strength, once per battle).\n\nThese firebirds, made entirely of flame, soar freely through the skies. Any hero, on whichever side, lucky enough to find their secret nests and invite them into the army gains the powerful support of the Phoenix. Because Phoenixes are made of fire, attacking them is difficult, and any creature that attacks a Phoenix is simply playing with fire. As the ancient saying goes, the phoenix is reborn from the flames. It is a truly marvelous creature.",
+		"faction": "neutral",
+		"level": 7,
+		"cost": {
+			"gold": 9725
+		},
+		"speed": 21,
+		"hitPoints": 152,
+		"attack": 23,
+		"defense": 24,
+		"damage": {
+			"min": 27,
+			"max": 44
+		},
+		"doubleWide": true,
+		"fightValue": 6934,
+		"aiValue": 9033,
+		"growth": 1,
+		"advMapAmount": {
+			"min": 1,
+			"max": 3
+		},
+		"abilities": {
+			"flying": {
+				"type": "FLYING"
+			},
+			"immuneTofire": {
+				"type": "SPELL_SCHOOL_IMMUNITY",
+				"subtype": "fire",
+				"description": "{Immune to Fire}\nImmune to Fire spells"
+			},
+			"fireShield": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "fireShield",
+				"val": 20,
+				"stacking": "fireShield",
+				"description": "{Fire Shield}\nReflects 20% of melee\ndamage to attacker"
+			},
+			"rebirth": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "rebirth",
+				"val": 100,
+				"addInfo": {
+					"guaranteed": true
+				},
+				"description": "{Revival}\nRevives in full once all\ndie, 1/battle"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 1,
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h5/Neutrals_Phoenix/battle.json",
+			"map": "h5/Neutrals_Phoenix/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Neutrals_Phoenix/map/atkL.png",
+			"mapAttackFromRight": "h5/Neutrals_Phoenix/map/atkR.png",
+			"iconLarge": "h5/Neutrals_Phoenix/iconLarge.png",
+			"iconSmall": "h5/Neutrals_Phoenix/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_Attack00.ogg",
+			"wince": "h5/h5_Hit.ogg",
+			"defend": "h5/h5_Hit.ogg",
+			"killed": "h5/h5_Death.ogg",
+			"move": "h5/h5_Move.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE"
+				},
+				"values": [
+					2,
+					4,
+					6,
+					8,
+					10,
+					12,
+					14,
+					16,
+					18,
+					20
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_RETALIATION"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "SPELL_IMMUNITY",
+					"subtype": "iceBolt",
+					"description": "{Immune to Ice Bolt}\nUnaffected by Ice Bolt"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "SPELL_IMMUNITY",
+					"subtype": "frostRing",
+					"description": "{Immune to Frost Ring}\nUnaffected by Frost Ring"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "MIND_IMMUNITY",
+					"description": "{Steadfast Mind}\nImmune to Mind spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "DOUBLE_DAMAGE_CHANCE"
+				},
+				"values": [
+					2,
+					4,
+					6,
+					8,
+					10,
+					12,
+					14,
+					16,
+					18,
+					20
+				]
+			}
+		]
+	},
+	"h5NeutralsWaterElemental": {
+		"name": {
+			"singular": "Water Elemental",
+			"plural": "Water Elementals"
+		},
+		"description": "Water Elementals are level 4 neutral units in Heroes V. They can cast {Ice Bolt} and {Circle of Winter} (2 times per battle, 12 mana) and have {Elemental} (non-living; immune to Mind magic) and {Immune to Water} (immune to Water magic).\n\nLike others of their kind, these elementals are spirits formed from the primordial matter of Ashan. Water Elementals are all the more dangerous: immune to all frost magic, they can strike their enemies with Ice Bolt and Circle of Winter.",
+		"faction": "neutral",
+		"level": 4,
+		"cost": {
+			"gold": 420
+		},
+		"speed": 5,
+		"hitPoints": 44,
+		"attack": 10,
+		"defense": 10,
+		"damage": {
+			"min": 7,
+			"max": 11
+		},
+		"doubleWide": false,
+		"fightValue": 598,
+		"aiValue": 685,
+		"growth": 3,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"h5Elemental": {
+				"type": "H5_ELEMENTAL_H5C",
+				"val": 1,
+				"description": "{Elemental}\nNon-living\nImmune to Mind spells"
+			},
+			"nonLiving": {
+				"type": "NON_LIVING"
+			},
+			"mindImmunity": {
+				"type": "MIND_IMMUNITY"
+			},
+			"immuneTowater": {
+				"type": "SPELL_SCHOOL_IMMUNITY",
+				"subtype": "water",
+				"description": "{Immune to Water}\nImmune to Water spells"
+			},
+			"cast_h5AbIceBolt": {
+				"type": "SPELLCASTER",
+				"subtype": "h5AbIceBolt",
+				"val": 1
+			},
+			"cast_h5AbFrostRing": {
+				"type": "SPELLCASTER",
+				"subtype": "h5AbFrostRing",
+				"val": 1
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 4,
+				"hidden": true
+			},
+			"h5SpellDmg30": {
+				"type": "H5_SPELLDMG30_H5C",
+				"val": 30,
+				"hidden": true
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 2
+			},
+			"h5Mana": {
+				"type": "H5_MANA_H5C",
+				"val": 12,
+				"stacking": "h5NeutralsWaterElementalExpH5ManaH5c"
+			},
+			"h5ManaMin": {
+				"type": "H5_MANA_MIN_H5C",
+				"val": 6,
+				"hidden": true
+			},
+			"h5ManaPool": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5ManaPool",
+				"hidden": true,
+				"description": "~"
+			}
+		},
+		"graphics": {
+			"animation": "h5/Neutrals_Water_Elemental/battle.json",
+			"map": "h5/Neutrals_Water_Elemental/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Neutrals_Water_Elemental/map/atkL.png",
+			"mapAttackFromRight": "h5/Neutrals_Water_Elemental/map/atkR.png",
+			"iconLarge": "h5/Neutrals_Water_Elemental/iconLarge.png",
+			"iconSmall": "h5/Neutrals_Water_Elemental/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_WaterElementalAttack.ogg",
+			"wince": "h5/h5_WaterElementalHit.ogg",
+			"defend": "h5/h5_WaterElementalHit.ogg",
+			"killed": "h5/h5_WaterElementalDeath.ogg",
+			"move": "h5/h5_WaterElementalMove.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					5,
+					6,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "H5_MANA_H5C",
+					"stacking": "h5NeutralsWaterElementalExpH5ManaH5c"
+				},
+				"values": [
+					12,
+					12,
+					12,
+					12,
+					12,
+					18,
+					18,
+					18,
+					18,
+					18
+				]
+			},
+			{
+				"bonus": {
+					"type": "SPELL_DAMAGE_REDUCTION",
+					"subtype": "fire"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					50,
+					50,
+					50,
+					50,
+					50,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "DEFENSIVE_STANCE",
+					"valueType": "ADDITIVE_VALUE"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE"
+				},
+				"values": [
+					3,
+					6,
+					9,
+					12,
+					15,
+					18,
+					21,
+					24,
+					27,
+					30
+				]
+			}
+		]
+	},
+	"h5NeutralsWolf": {
+		"name": {
+			"singular": "Wolf",
+			"plural": "Wolves"
+		},
+		"description": "Wolves are level 4 neutral units in Heroes V. They have {Pack Hunter} (when attacking, other Wolf stacks next to the target attack too) and {Howl} (summons the same number of Wolves, once per battle).\n\nWolves are extremely dangerous, bloodthirsty creatures that always fight in packs and use their abilities cleverly. When one Wolf in a pack attacks and the others are nearby, they attack the same target too. And before attacking, they let out a terrible howl that summons nearby companions to join the fight. So when fighting Wolves, remember one thing: more Wolves will be coming.",
+		"faction": "neutral",
+		"level": 4,
+		"cost": {
+			"gold": 160
+		},
+		"speed": 8,
+		"hitPoints": 26,
+		"attack": 6,
+		"defense": 4,
+		"damage": {
+			"min": 3,
+			"max": 4
+		},
+		"doubleWide": false,
+		"fightValue": 267,
+		"aiValue": 306,
+		"growth": 5,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"h5PackHunter": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5PackHunter",
+				"icon": "h5/abilities/h5PackHunter",
+				"description": "{Pack Hunter}\nAllied Wolf stacks next\nto the target join in"
+			},
+			"cast_h5AbHowl": {
+				"type": "SPELLCASTER",
+				"subtype": "h5AbHowl",
+				"val": 2,
+				"description": "{Howl}\nSummons as many Wolves,\n1/battle"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 8,
+				"hidden": true
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 1
+			}
+		},
+		"graphics": {
+			"animation": "h5/Neutrals_Wolf/battle.json",
+			"map": "h5/Neutrals_Wolf/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Neutrals_Wolf/map/atkL.png",
+			"mapAttackFromRight": "h5/Neutrals_Wolf/map/atkR.png",
+			"iconLarge": "h5/Neutrals_Wolf/iconLarge.png",
+			"iconSmall": "h5/Neutrals_Wolf/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_neutral_h5a1_wolf_attack00.ogg",
+			"wince": "h5/h5_neutral_h5a1_wolf_hit.ogg",
+			"defend": "h5/h5_neutral_h5a1_wolf_hit.ogg",
+			"killed": "h5/h5_neutral_h5a1_wolf_death.ogg",
+			"move": "h5/h5_Neutral_H5A1_Wolf_move.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					5,
+					6,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_ATTACK"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "ENEMY_DEFENCE_REDUCTION"
+				},
+				"values": [
+					3,
+					6,
+					9,
+					12,
+					15,
+					18,
+					21,
+					24,
+					27,
+					30
+				]
+			}
+		]
+	}
+}

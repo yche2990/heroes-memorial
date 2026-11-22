@@ -1,0 +1,5754 @@
+{
+	"h5HavenAngel": {
+		"name": {
+			"singular": "Angel",
+			"plural": "Angels"
+		},
+		"description": "Angels, Archangels and Seraphs are the level 7 units of the Heroes V Haven (merged into Castle). All of them can fly. Archangels also have {Resurrect Allies} (resurrects 101 × the number of Archangels in Hit Points of an allied stack, 1 time per battle, 2 times from experience level 7). Seraphs can also cast {Righteous Might} and {Divine Vengeance} (2 times per battle, 14 mana).\n\nIn the world of Ashan, Angels are the human-shaped incarnations of Elrath, the Dragon of Light, and the ultimate embodiment of its power. These creatures of light fight bravely and strike with deadly force. Legend has it that even if an Angel's body is destroyed, its soul returns to the Dragon of Light to await the chance to serve its lord again.\n\nSee also {Archangel}, {Seraph}.",
+		"faction": "castle",
+		"level": 7,
+		"cost": {
+			"gold": 2725,
+			"crystal": 1
+		},
+		"speed": 11,
+		"hitPoints": 182,
+		"attack": 19,
+		"defense": 19,
+		"damage": {
+			"min": 40,
+			"max": 40
+		},
+		"doubleWide": true,
+		"fightValue": 3934,
+		"aiValue": 5125,
+		"growth": 1,
+		"advMapAmount": {
+			"min": 1,
+			"max": 3
+		},
+		"abilities": {
+			"flying": {
+				"type": "FLYING"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 1,
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h5/Haven_Angel/battle.json",
+			"map": "h5/Haven_Angel/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Haven_Angel/map/atkL.png",
+			"mapAttackFromRight": "h5/Haven_Angel/map/atkR.png",
+			"iconLarge": "h5/Haven_Angel/iconLarge.png",
+			"iconSmall": "h5/Haven_Angel/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_Angel_Attack00.ogg",
+			"wince": "h5/h5_Angel_Hit.ogg",
+			"defend": "h5/h5_Angel_Hit.ogg",
+			"killed": "h5/h5_Angel_Death.ogg",
+			"move": "h5/h5_Angel_Move.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					10,
+					20,
+					30,
+					40,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "MIND_IMMUNITY",
+					"description": "{Steadfast Mind}\nImmune to Mind spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "SPELL_IMMUNITY",
+					"subtype": "armageddon",
+					"description": "{Immune to Armageddon}\nUnaffected by Armageddon"
+				},
+				"values": [
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "NEGATIVE_EFFECTS_IMMUNITY",
+					"subtype": "water",
+					"description": "{Water Ward}\nImmune to harmful Water spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_RETALIATION"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "SPELL_RESISTANCE_AURA"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					5,
+					5,
+					10,
+					10,
+					15,
+					20
+				]
+			}
+		],
+		"upgrades": [
+			"h5HavenArchangel",
+			"h5HavenRenegatesSeraph"
+		]
+	},
+	"h5HavenArchangel": {
+		"name": {
+			"singular": "Archangel",
+			"plural": "Archangels"
+		},
+		"description": "Angels, Archangels and Seraphs are the level 7 units of the Heroes V Haven (merged into Castle). All of them can fly. Archangels also have {Resurrect Allies} (resurrects 101 × the number of Archangels in Hit Points of an allied stack, 1 time per battle, 2 times from experience level 7). Seraphs can also cast {Righteous Might} and {Divine Vengeance} (2 times per battle, 14 mana).\n\nArchangels are the highest creatures in the sacred hierarchy of the Dragon of Light's servants. Their souls come from the bravest, most fearless and most loyal heroes of ancient times. As lieutenants of the Dragon of Light, they hold the supreme power to resurrect warriors in battle, so that those warriors can serve their master once more.\n\nSee also {Angel}, {Seraph}.",
+		"faction": "castle",
+		"level": 7,
+		"cost": {
+			"gold": 3405,
+			"crystal": 2
+		},
+		"speed": 15,
+		"hitPoints": 222,
+		"attack": 22,
+		"defense": 22,
+		"damage": {
+			"min": 44,
+			"max": 44
+		},
+		"doubleWide": true,
+		"fightValue": 4975,
+		"aiValue": 6481,
+		"growth": 1,
+		"advMapAmount": {
+			"min": 1,
+			"max": 3
+		},
+		"abilities": {
+			"flying": {
+				"type": "FLYING"
+			},
+			"cast_h5AbResurrectAllies": {
+				"type": "SPELLCASTER",
+				"subtype": "h5AbResurrectAllies",
+				"val": 2,
+				"description": "{Resurrect Allies}\nRestores 101 HP x Angels\n1/battle, 2 from Rank 7"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 1,
+				"hidden": true
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 1,
+				"stacking": "h5HavenArchangelExpCasts"
+			}
+		},
+		"graphics": {
+			"animation": "h5/Haven_Archangel/battle.json",
+			"map": "h5/Haven_Archangel/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Haven_Archangel/map/atkL.png",
+			"mapAttackFromRight": "h5/Haven_Archangel/map/atkR.png",
+			"iconLarge": "h5/Haven_Archangel/iconLarge.png",
+			"iconSmall": "h5/Haven_Archangel/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_Archangel_attack00.ogg",
+			"wince": "h5/h5_Archangel_hit.ogg",
+			"defend": "h5/h5_Archangel_hit.ogg",
+			"killed": "h5/h5_Archangel_death.ogg",
+			"move": "h5/h5_Archangel_move.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					10,
+					20,
+					30,
+					40,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "MIND_IMMUNITY",
+					"description": "{Steadfast Mind}\nImmune to Mind spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "CASTS",
+					"stacking": "h5HavenArchangelExpCasts"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "NEGATIVE_EFFECTS_IMMUNITY",
+					"subtype": "water",
+					"description": "{Water Ward}\nImmune to harmful Water spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "SPELL_RESISTANCE_AURA"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					5,
+					5,
+					10,
+					10,
+					15,
+					20
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_RETALIATION"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			}
+		]
+	},
+	"h5HavenArcher": {
+		"name": {
+			"singular": "Archer",
+			"plural": "Archers"
+		},
+		"description": "Archers, Bolt Archers and Crossbowmen are the level 2 units of the Heroes V Haven (merged into Castle). All of them can shoot. Archers have {Scatter Shot} (fires at an area, where friend and foe alike take half ranged damage). Bolt Archers also have {Precise Shot} (ignores the target's Defense when shooting at a distance of less than 3 hexes). Crossbowmen also have {No Range Penalty} (no penalty for distance when shooting).\n\nArchers are very useful in battle, as they can weaken the enemy before the lines meet. The Archers of the Griffin Empire excel at loosing dense volleys of arrows to destroy their foes.\n\nSee also {Bolt Archer}, {Crossbowman}.",
+		"faction": "castle",
+		"level": 2,
+		"cost": {
+			"gold": 95
+		},
+		"speed": 5,
+		"hitPoints": 8,
+		"attack": 7,
+		"defense": 5,
+		"damage": {
+			"min": 2,
+			"max": 4
+		},
+		"doubleWide": false,
+		"fightValue": 120,
+		"aiValue": 135,
+		"growth": 8,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"shooter": {
+				"type": "SHOOTER"
+			},
+			"cast_h5AbScatterShot": {
+				"type": "SPELLCASTER",
+				"subtype": "h5AbScatterShot",
+				"val": 2,
+				"description": "{Scatter Shot}\nShoots an area; friend and\nfoe take half shot damage"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 12,
+				"hidden": true
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 1
+			},
+			"noSpellcastByDefault": {
+				"type": "NO_SPELLCAST_BY_DEFAULT",
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h5/Haven_Archer/battle.json",
+			"map": "h5/Haven_Archer/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Haven_Archer/map/atkL.png",
+			"mapAttackFromRight": "h5/Haven_Archer/map/atkR.png",
+			"iconLarge": "h5/Haven_Archer/iconLarge.png",
+			"iconSmall": "h5/Haven_Archer/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"frameAngles": [
+					90,
+					60,
+					45,
+					30,
+					0,
+					-30,
+					-45,
+					-60,
+					-90
+				],
+				"offset": {
+					"upperX": 7,
+					"upperY": -57,
+					"middleX": 4,
+					"middleY": -55,
+					"lowerX": -4,
+					"lowerY": -54
+				},
+				"attackClimaxFrame": 6,
+				"projectile": "h5/Haven_Archer/projectile.json"
+			}
+		},
+		"sound": {
+			"attack": "h5/h5_Archer_close_attack.ogg",
+			"wince": "h5/h5_Archer_hit.ogg",
+			"defend": "h5/h5_Archer_hit.ogg",
+			"killed": "h5/h5_Archer_death.ogg",
+			"move": "h5/h5_Archer_move.ogg",
+			"shoot": "h5/h5_Archer_attack_.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					3,
+					3,
+					3,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					3,
+					4,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					0,
+					1,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					3,
+					3,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "ENEMY_DEFENCE_REDUCTION"
+				},
+				"values": [
+					4,
+					8,
+					12,
+					16,
+					20,
+					24,
+					28,
+					32,
+					36,
+					40
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_WALL_PENALTY",
+					"description": "{Siege Shooter}\nNo damage loss when shooting over walls"
+				},
+				"values": [
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			}
+		],
+		"shots": 24,
+		"upgrades": [
+			"h5HavenMarksman",
+			"h5HavenRenegatesLongbowman"
+		]
+	},
+	"h5HavenCavalier": {
+		"name": {
+			"singular": "Knight",
+			"plural": "Knights"
+		},
+		"description": "Knights, Paladins and Champions are the level 6 units of the Heroes V Haven (merged into Castle). All of them have {Jousting} (+5% damage for every hex moved in the charge). Paladins also have {Immune to Berserk} (immune to the Berserk curse) and {Lay Hands} (fully heals one creature of an allied stack and removes all negative spells from it). Champions also have {Champion Charge} (when attacking after a charge of 2 or more hexes, the unit behind the target takes 50% damage).\n\nKnights are the shock troops of the Holy Griffin Empire. Clad in heavy armor and mounted on powerful warhorses, they charge the enemy from afar, which is their most powerful form of attack.\n\nSee also {Paladin}, {Champion}.",
+		"faction": "castle",
+		"level": 6,
+		"cost": {
+			"gold": 875
+		},
+		"speed": 9,
+		"hitPoints": 69,
+		"attack": 17,
+		"defense": 13,
+		"damage": {
+			"min": 19,
+			"max": 28
+		},
+		"doubleWide": true,
+		"fightValue": 1461,
+		"aiValue": 1726,
+		"growth": 2,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"jousting": {
+				"type": "JOUSTING",
+				"val": 5,
+				"description": "{Jousting}\nDamage +5% per\nhex charged",
+				"stacking": "h5HavenCavalierExpJousting"
+			},
+			"skeletonTarget": {
+				"type": "SKELETON_TRANSFORMER_TARGET",
+				"subtype": "blackKnight",
+				"hidden": true
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 2,
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h5/Haven_Cavalier/battle.json",
+			"map": "h5/Haven_Cavalier/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Haven_Cavalier/map/atkL.png",
+			"mapAttackFromRight": "h5/Haven_Cavalier/map/atkR.png",
+			"iconLarge": "h5/Haven_Cavalier/iconLarge.png",
+			"iconSmall": "h5/Haven_Cavalier/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_Cavalier_Attack00.ogg",
+			"wince": "h5/h5_Cavalier_Hit.ogg",
+			"defend": "h5/h5_Cavalier_Hit.ogg",
+			"killed": "h5/h5_Cavalier_Death.ogg",
+			"move": "h5/h5_Cavalier_Move.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					2,
+					3,
+					4,
+					5,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "JOUSTING",
+					"stacking": "h5HavenCavalierExpJousting"
+				},
+				"values": [
+					5,
+					5,
+					6,
+					6,
+					7,
+					7,
+					8,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CHARGE_IMMUNITY",
+					"description": "{Steady Ranks}\nImmune to charge damage bonuses"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "DOUBLE_DAMAGE_CHANCE"
+				},
+				"values": [
+					3,
+					6,
+					9,
+					12,
+					15,
+					18,
+					21,
+					24,
+					27,
+					30
+				]
+			},
+			{
+				"bonus": {
+					"type": "BLOCKS_RETALIATION",
+					"description": "{No Retaliation}\nEnemy cannot retaliate when attacked"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true
+				]
+			}
+		],
+		"upgrades": [
+			"h5HavenPaladin",
+			"h5HavenRenegatesChampion"
+		]
+	},
+	"h5HavenCleric": {
+		"name": {
+			"singular": "Inquisitor",
+			"plural": "Inquisitors"
+		},
+		"description": "Priests, Inquisitors and Zealots are the level 5 units of the Heroes V Haven (merged into Castle). All of them can shoot and have {No Melee Penalty}. Inquisitors can also cast {Haste}, {Divine Strength} and {Endurance} (3 times per battle, 12 mana). Zealots can also cast {Cleansing} and {Righteous Might} (2 times per battle, 15 mana), and have {Purge} (attacks have a chance to dispel the target's beneficial spells).\n\nInquisitors are the faithful defenders of the teachings of Elrath, the Dragon of Light. They never hesitate to rush into battle against heretics or any enemy that threatens the Church. Inquisitors take no part in hand-to-hand fighting; they usually strike their enemies by calling down the wrath of Elrath. They can also cast protective and strengthening spells on their allies.\n\nSee also {Priest}, {Zealot}.",
+		"faction": "castle",
+		"level": 5,
+		"cost": {
+			"gold": 665
+		},
+		"speed": 6,
+		"hitPoints": 59,
+		"attack": 13,
+		"defense": 14,
+		"damage": {
+			"min": 9,
+			"max": 11
+		},
+		"doubleWide": false,
+		"fightValue": 926,
+		"aiValue": 1030,
+		"growth": 3,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"shooter": {
+				"type": "SHOOTER"
+			},
+			"noMeleePenalty": {
+				"type": "NO_MELEE_PENALTY",
+				"description": "{No Melee Penalty}\nNo melee penalty"
+			},
+			"cast_h5AbHaste": {
+				"type": "SPELLCASTER",
+				"subtype": "h5AbHaste",
+				"val": 2
+			},
+			"cast_h5AbBless": {
+				"type": "SPELLCASTER",
+				"subtype": "h5AbBless",
+				"val": 2
+			},
+			"cast_h5AbStoneskin": {
+				"type": "SPELLCASTER",
+				"subtype": "h5AbStoneskin",
+				"val": 2
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 3,
+				"hidden": true
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 3
+			},
+			"h5Mana": {
+				"type": "H5_MANA_H5C",
+				"val": 12,
+				"stacking": "h5HavenClericExpH5ManaH5c"
+			},
+			"h5ManaMin": {
+				"type": "H5_MANA_MIN_H5C",
+				"val": 4,
+				"hidden": true
+			},
+			"h5ManaPool": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5ManaPool",
+				"hidden": true,
+				"description": "~"
+			},
+			"noSpellcastByDefault": {
+				"type": "NO_SPELLCAST_BY_DEFAULT",
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h5/Haven_Cleric/battle.json",
+			"map": "h5/Haven_Cleric/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Haven_Cleric/map/atkL.png",
+			"mapAttackFromRight": "h5/Haven_Cleric/map/atkR.png",
+			"iconLarge": "h5/Haven_Cleric/iconLarge.png",
+			"iconSmall": "h5/Haven_Cleric/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"frameAngles": [
+					90,
+					60,
+					45,
+					30,
+					0,
+					-30,
+					-45,
+					-60,
+					-90
+				],
+				"offset": {
+					"upperX": 22,
+					"upperY": -76,
+					"middleX": 25,
+					"middleY": -68,
+					"lowerX": 3,
+					"lowerY": -62
+				},
+				"attackClimaxFrame": 6,
+				"ray": [
+					{
+						"start": [
+							127,
+							115,
+							75,
+							160
+						],
+						"end": [
+							85,
+							76,
+							50,
+							60
+						]
+					},
+					{
+						"start": [
+							255,
+							230,
+							150,
+							255
+						],
+						"end": [
+							255,
+							230,
+							150,
+							120
+						]
+					},
+					{
+						"start": [
+							255,
+							255,
+							230,
+							255
+						],
+						"end": [
+							255,
+							230,
+							150,
+							200
+						]
+					},
+					{
+						"start": [
+							255,
+							230,
+							150,
+							255
+						],
+						"end": [
+							255,
+							230,
+							150,
+							120
+						]
+					},
+					{
+						"start": [
+							127,
+							115,
+							75,
+							160
+						],
+						"end": [
+							85,
+							76,
+							50,
+							60
+						]
+					}
+				]
+			}
+		},
+		"sound": {
+			"attack": "h5/h5_ClericAttack00.ogg",
+			"wince": "h5/h5_Cleric_Hit.ogg",
+			"defend": "h5/h5_Cleric_Hit.ogg",
+			"killed": "h5/h5_Priest_Death.ogg",
+			"move": "h5/h5_Cleric_Move.ogg",
+			"shoot": "h5/h5_ClericRangeattack.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					3,
+					4,
+					5,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					3,
+					4,
+					4,
+					6,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					2,
+					3,
+					3,
+					4,
+					5,
+					6,
+					6,
+					7
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					7
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "MIND_IMMUNITY",
+					"description": "{Steadfast Mind}\nImmune to Mind spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "SPELL_DAMAGE_REDUCTION",
+					"subtype": "any"
+				},
+				"values": [
+					3,
+					6,
+					9,
+					12,
+					15,
+					18,
+					21,
+					24,
+					27,
+					30
+				]
+			},
+			{
+				"bonus": {
+					"type": "H5_MANA_H5C",
+					"stacking": "h5HavenClericExpH5ManaH5c"
+				},
+				"values": [
+					12,
+					12,
+					12,
+					12,
+					16,
+					16,
+					16,
+					16,
+					20,
+					20
+				]
+			}
+		],
+		"shots": 20
+	},
+	"h5HavenFootman": {
+		"name": {
+			"singular": "Footman",
+			"plural": "Footmen"
+		},
+		"description": "Footmen, Squires and Vindicators are the level 3 units of the Heroes V Haven (merged into Castle). All of them have {Enrage} (Attack increases when an allied stack is destroyed) and {Large Shield} (half damage from ranged attacks). Footmen have {Shield Bash} (melee attacks have a chance to stun the target, which cannot retaliate and has its ATB reset to 0). Squires also have {Shield Allies} (adjacent allies take half damage from ranged attacks) and {Shield Bash} (melee attacks have a chance to stun the target, which cannot retaliate and has its ATB reset to 0). Vindicators also have {Cleave} (attacks once more when an attack kills at least 1 creature).\n\nFootmen are the core defensive force of the Griffin Empire's army. They can effectively hold back enemy assaults, giving the Empire's other troops the chance to destroy the enemy.\n\nSee also {Squire}, {Vindicator}.",
+		"faction": "castle",
+		"level": 3,
+		"cost": {
+			"gold": 135
+		},
+		"speed": 5,
+		"hitPoints": 17,
+		"attack": 6,
+		"defense": 11,
+		"damage": {
+			"min": 2,
+			"max": 3
+		},
+		"doubleWide": false,
+		"fightValue": 162,
+		"aiValue": 192,
+		"growth": 8,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"h5Enraged": {
+				"icon": "h5/abilities/enraged",
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5Enraged",
+				"description": "{Enrage}\nAttack rises whenever\nan allied stack dies"
+			},
+			"h5LargeShield": {
+				"type": "GENERAL_DAMAGE_REDUCTION",
+				"subtype": "damageTypeRanged",
+				"val": 50,
+				"stacking": "h5LargeShield",
+				"description": "{Large Shield}\nRanged damage taken\nis halved"
+			},
+			"h5Bash": {
+				"icon": "h5/abilities/bash",
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5ProcEffect",
+				"addInfo": {
+					"effect": "bash",
+					"pf": 1.5,
+					"melee": true,
+					"ranged": false
+				},
+				"description": "{Shield Bash}\nMelee may stun: no\nretaliation, ATB reset"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 10,
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h5/Haven_Footman/battle.json",
+			"map": "h5/Haven_Footman/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Haven_Footman/map/atkL.png",
+			"mapAttackFromRight": "h5/Haven_Footman/map/atkR.png",
+			"iconLarge": "h5/Haven_Footman/iconLarge.png",
+			"iconSmall": "h5/Haven_Footman/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_Footman_attack.ogg",
+			"wince": "h5/h5_Footman_hit.ogg",
+			"defend": "h5/h5_Footman_hit.ogg",
+			"killed": "h5/h5_Footman_death.ogg",
+			"move": "h5/h5_Footman_move.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "GENERAL_DAMAGE_REDUCTION",
+					"subtype": "damageTypeMelee"
+				},
+				"values": [
+					2,
+					4,
+					6,
+					8,
+					10,
+					12,
+					14,
+					16,
+					18,
+					20
+				]
+			},
+			{
+				"bonus": {
+					"type": "DEFENSIVE_STANCE",
+					"valueType": "ADDITIVE_VALUE"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_RETALIATION"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1
+				]
+			}
+		],
+		"upgrades": [
+			"h5HavenSwordsman",
+			"h5HavenRenegatesVindicator"
+		]
+	},
+	"h5HavenGriffin": {
+		"name": {
+			"singular": "Griffin",
+			"plural": "Griffins"
+		},
+		"description": "Griffins, Imperial Griffins and Battle Griffins are the level 4 units of the Heroes V Haven (merged into Castle). All of them can fly and have {Unlimited Retaliation} and {Immune to Blind} (immune to the Blind curse). Imperial Griffins also have {Battle Dive} (soars into the air for one round, then dives for 2 times damage, hitting friend and foe alike). Battle Griffins also have {Battle Frenzy} (each retaliation deals 1.5 times the damage of the previous one) and {Pack Dive} (dives and sweeps across two rows of enemies for 75% damage, 1 time per battle).\n\nGriffins are the fastest troops of the Haven faction, and the whole Empire takes its name from them. They excel at striking in skirmishes, flying into the enemy ranks from afar. When forced into melee, Griffins are relatively weak, but whatever happens they always fight to the last drop of blood.\n\nSee also {Imperial Griffin}, {Battle Griffin}.",
+		"faction": "castle",
+		"level": 4,
+		"cost": {
+			"gold": 265
+		},
+		"speed": 11,
+		"hitPoints": 31,
+		"attack": 9,
+		"defense": 6,
+		"damage": {
+			"min": 4,
+			"max": 9
+		},
+		"doubleWide": true,
+		"fightValue": 394,
+		"aiValue": 452,
+		"growth": 4,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"flying": {
+				"type": "FLYING"
+			},
+			"unlimitedRetaliations": {
+				"type": "UNLIMITED_RETALIATIONS",
+				"description": "{Unlimited Retaliations}\nUnlimited retaliations"
+			},
+			"immune_blind": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "blind",
+				"description": "{Immune to Blind}\nImmune to Blind"
+			},
+			"immune_h5Blind": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "h5Blind",
+				"hidden": true
+			},
+			"immune_h5AbBlind": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "h5AbBlind",
+				"hidden": true
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 5,
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h5/Haven_Griffin/battle.json",
+			"map": "h5/Haven_Griffin/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Haven_Griffin/map/atkL.png",
+			"mapAttackFromRight": "h5/Haven_Griffin/map/atkR.png",
+			"iconLarge": "h5/Haven_Griffin/iconLarge.png",
+			"iconSmall": "h5/Haven_Griffin/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_Griffin_attack.ogg",
+			"wince": "h5/h5_Griffin_hit.ogg",
+			"defend": "h5/h5_Griffin_hit.ogg",
+			"killed": "h5/h5_Griffin_death.ogg",
+			"move": "h5/h5_Griffin_move.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					5,
+					6,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "FIRST_STRIKE",
+					"subtype": "damageTypeMelee",
+					"description": "{Preemptive Strike}\nRetaliates before the melee attacker strikes"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "DOUBLE_DAMAGE_CHANCE"
+				},
+				"values": [
+					2,
+					4,
+					6,
+					8,
+					10,
+					12,
+					14,
+					16,
+					18,
+					20
+				]
+			},
+			{
+				"bonus": {
+					"type": "NEGATIVE_EFFECTS_IMMUNITY",
+					"subtype": "air",
+					"description": "{Air Ward}\nImmune to harmful Air spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true
+				]
+			}
+		],
+		"upgrades": [
+			"h5HavenRoyalGriffin",
+			"h5HavenRenegatesBattleGriffin"
+		]
+	},
+	"h5HavenMarksman": {
+		"name": {
+			"singular": "Bolt Archer",
+			"plural": "Bolt Archers"
+		},
+		"description": "Archers, Bolt Archers and Crossbowmen are the level 2 units of the Heroes V Haven (merged into Castle). All of them can shoot. Archers have {Scatter Shot} (fires at an area, where friend and foe alike take half ranged damage). Bolt Archers also have {Precise Shot} (ignores the target's Defense when shooting at a distance of less than 3 hexes). Crossbowmen also have {No Range Penalty} (no penalty for distance when shooting).\n\nBolt Archers are a key force in battle, as they can weaken the enemy before the lines meet. Their powerful crossbows are loaded with devastating lightning bolts, which are especially deadly at close range.\n\nSee also {Archer}, {Crossbowman}.",
+		"faction": "castle",
+		"level": 2,
+		"cost": {
+			"gold": 150
+		},
+		"speed": 5,
+		"hitPoints": 11,
+		"attack": 7,
+		"defense": 7,
+		"damage": {
+			"min": 2,
+			"max": 7
+		},
+		"doubleWide": false,
+		"fightValue": 171,
+		"aiValue": 192,
+		"growth": 8,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"shooter": {
+				"type": "SHOOTER"
+			},
+			"h5PreciseShot": {
+				"type": "H5_PRECISE_SHOT_H5C",
+				"val": 3,
+				"description": "{Precise Shot}\nIgnores target Defense\nwithin 3 hexes"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 12,
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h5/Haven_Marksman/battle.json",
+			"map": "h5/Haven_Marksman/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Haven_Marksman/map/atkL.png",
+			"mapAttackFromRight": "h5/Haven_Marksman/map/atkR.png",
+			"iconLarge": "h5/Haven_Marksman/iconLarge.png",
+			"iconSmall": "h5/Haven_Marksman/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"frameAngles": [
+					90,
+					60,
+					45,
+					30,
+					0,
+					-30,
+					-45,
+					-60,
+					-90
+				],
+				"offset": {
+					"upperX": 7,
+					"upperY": -53,
+					"middleX": 0,
+					"middleY": -51,
+					"lowerX": -8,
+					"lowerY": -52
+				},
+				"attackClimaxFrame": 6,
+				"projectile": "h5/Haven_Marksman/projectile.json"
+			}
+		},
+		"sound": {
+			"attack": "h5/h5_MarksmanAttack01.ogg",
+			"wince": "h5/h5_Marksman_hit.ogg",
+			"defend": "h5/h5_Marksman_hit.ogg",
+			"killed": "h5/h5_Marksman_death.ogg",
+			"move": "h5/h5_Marksman_move.ogg",
+			"shoot": "h5/h5_Marksman_attack_.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					3,
+					3,
+					3,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					3,
+					4,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					0,
+					1,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					3,
+					3,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "ENEMY_DEFENCE_REDUCTION"
+				},
+				"values": [
+					3,
+					6,
+					9,
+					12,
+					15,
+					18,
+					21,
+					24,
+					27,
+					30
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_WALL_PENALTY",
+					"description": "{Siege Shooter}\nNo damage loss when shooting over walls"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_DISTANCE_PENALTY",
+					"description": "{Sharpshooter}\nNo penalty for long-range shots"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true
+				]
+			}
+		],
+		"shots": 24
+	},
+	"h5HavenMilitiaman": {
+		"name": {
+			"singular": "Conscript",
+			"plural": "Conscripts"
+		},
+		"description": "Peasants, Conscripts and Thugs are the level 1 units of the Heroes V Haven (merged into Castle). All of them have {Taxpayer} (each one brings the hero 1 gold per day). Conscripts also have {Shield Bash} (melee attacks have a chance to stun the target, which cannot retaliate and has its ATB reset to 0). Thugs also have {Brutality} (melee attacks have a chance to strike twice).\n\nConscripts are the basic infantry of the Holy Griffin Empire. Though quite weak and poorly trained, they are very numerous and in melee can often leave their enemies dazed.\n\nSee also {Peasant}, {Thug}.",
+		"faction": "castle",
+		"level": 1,
+		"cost": {
+			"gold": 35
+		},
+		"speed": 4,
+		"hitPoints": 5,
+		"attack": 2,
+		"defense": 3,
+		"damage": {
+			"min": 1,
+			"max": 2
+		},
+		"doubleWide": false,
+		"fightValue": 49,
+		"aiValue": 49,
+		"growth": 19,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"h5Bash": {
+				"icon": "h5/abilities/bash",
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5ProcEffect",
+				"addInfo": {
+					"effect": "bash",
+					"pf": 1.5,
+					"melee": true,
+					"ranged": false
+				},
+				"description": "{Shield Bash}\nMelee may stun: no\nretaliation, ATB reset"
+			},
+			"h5Taxpayer": {
+				"type": "GENERATE_RESOURCE",
+				"subtype": "gold",
+				"val": 1,
+				"propagator": "HERO",
+				"updater": {
+					"type": "TIMES_ARMY_SIZE",
+					"stepSize": 1,
+					"filteredCreature": "h5HavenMilitiaman"
+				},
+				"stacking": "h5Taxpayer_h5HavenMilitiaman",
+				"description": "{Taxpayer}\nEach one brings the\nhero 1 gold per day"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 22,
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h5/Haven_Militiaman/battle.json",
+			"map": "h5/Haven_Militiaman/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Haven_Militiaman/map/atkL.png",
+			"mapAttackFromRight": "h5/Haven_Militiaman/map/atkR.png",
+			"iconLarge": "h5/Haven_Militiaman/iconLarge.png",
+			"iconSmall": "h5/Haven_Militiaman/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_MilitiaMan_Attack00.ogg",
+			"wince": "h5/h5_Hit.ogg",
+			"defend": "h5/h5_Hit.ogg",
+			"killed": "h5/h5_Death.ogg",
+			"move": "h5/h5_Move.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "DEFENSIVE_STANCE",
+					"valueType": "ADDITIVE_VALUE"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "DOUBLE_DAMAGE_CHANCE"
+				},
+				"values": [
+					2,
+					4,
+					6,
+					8,
+					10,
+					12,
+					14,
+					16,
+					18,
+					20
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_RETALIATION"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			}
+		]
+	},
+	"h5HavenPaladin": {
+		"name": {
+			"singular": "Paladin",
+			"plural": "Paladins"
+		},
+		"description": "Knights, Paladins and Champions are the level 6 units of the Heroes V Haven (merged into Castle). All of them have {Jousting} (+5% damage for every hex moved in the charge). Paladins also have {Immune to Berserk} (immune to the Berserk curse) and {Lay Hands} (fully heals one creature of an allied stack and removes all negative spells from it). Champions also have {Champion Charge} (when attacking after a charge of 2 or more hexes, the unit behind the target takes 50% damage).\n\nPaladins are the elite troops and ultimate guardians of the Holy Griffin Empire. Clad in heavy armor and mounted on powerful warhorses, they charge the enemy from afar, which is their most powerful form of attack. They can also dispel harmful spells that the enemy has cast on their army.\n\nSee also {Knight}, {Champion}.",
+		"faction": "castle",
+		"level": 6,
+		"cost": {
+			"gold": 1145
+		},
+		"speed": 12,
+		"hitPoints": 77,
+		"attack": 18,
+		"defense": 15,
+		"damage": {
+			"min": 19,
+			"max": 28
+		},
+		"doubleWide": true,
+		"fightValue": 1685,
+		"aiValue": 1990,
+		"growth": 2,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"jousting": {
+				"type": "JOUSTING",
+				"val": 5,
+				"description": "{Jousting}\nDamage +5% per\nhex charged",
+				"stacking": "h5HavenPaladinExpJousting"
+			},
+			"immune_berserk": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "berserk",
+				"description": "{Immune to Berserk}\nImmune to Berserk"
+			},
+			"immune_h5Berserk": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "h5Berserk",
+				"hidden": true
+			},
+			"immune_h5AbBerserk": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "h5AbBerserk",
+				"hidden": true
+			},
+			"cast_h5AbLayHands": {
+				"type": "SPELLCASTER",
+				"subtype": "h5AbLayHands",
+				"val": 2,
+				"description": "{Lay Hands}\nFully heals 1 ally unit,\ndispels negative spells"
+			},
+			"skeletonTarget": {
+				"type": "SKELETON_TRANSFORMER_TARGET",
+				"subtype": "blackKnight",
+				"hidden": true
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 2,
+				"hidden": true
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 1
+			}
+		},
+		"graphics": {
+			"animation": "h5/Haven_Paladin/battle.json",
+			"map": "h5/Haven_Paladin/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Haven_Paladin/map/atkL.png",
+			"mapAttackFromRight": "h5/Haven_Paladin/map/atkR.png",
+			"iconLarge": "h5/Haven_Paladin/iconLarge.png",
+			"iconSmall": "h5/Haven_Paladin/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_Cavalier_Attack00.ogg",
+			"wince": "h5/h5_Cavalier_Hit.ogg",
+			"defend": "h5/h5_Cavalier_Hit.ogg",
+			"killed": "h5/h5_Cavalier_Death.ogg",
+			"move": "h5/h5_Cavalier_Move.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					2,
+					3,
+					4,
+					5,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "JOUSTING",
+					"stacking": "h5HavenPaladinExpJousting"
+				},
+				"values": [
+					5,
+					5,
+					6,
+					6,
+					7,
+					7,
+					8,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "MIND_IMMUNITY",
+					"description": "{Steadfast Mind}\nImmune to Mind spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "CHARGE_IMMUNITY",
+					"description": "{Steady Ranks}\nImmune to charge damage bonuses"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "SPELL_DAMAGE_REDUCTION",
+					"subtype": "any"
+				},
+				"values": [
+					2,
+					4,
+					6,
+					8,
+					10,
+					12,
+					14,
+					16,
+					18,
+					20
+				]
+			}
+		]
+	},
+	"h5HavenPeasant": {
+		"name": {
+			"singular": "Peasant",
+			"plural": "Peasants"
+		},
+		"description": "Peasants, Conscripts and Thugs are the level 1 units of the Heroes V Haven (merged into Castle). All of them have {Taxpayer} (each one brings the hero 1 gold per day). Conscripts also have {Shield Bash} (melee attacks have a chance to stun the target, which cannot retaliate and has its ATB reset to 0). Thugs also have {Brutality} (melee attacks have a chance to strike twice).\n\nPeasants are the most basic infantry of the Holy Griffin Empire. They are weak and lack proper training, but they win by sheer numbers. Peasants are an important source of the nation's income.\n\nSee also {Conscript}, {Thug}.",
+		"faction": "castle",
+		"level": 1,
+		"cost": {
+			"gold": 20
+		},
+		"speed": 4,
+		"hitPoints": 3,
+		"attack": 2,
+		"defense": 1,
+		"damage": {
+			"min": 1,
+			"max": 1
+		},
+		"doubleWide": false,
+		"fightValue": 28,
+		"aiValue": 28,
+		"growth": 19,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"h5Taxpayer": {
+				"type": "GENERATE_RESOURCE",
+				"subtype": "gold",
+				"val": 1,
+				"propagator": "HERO",
+				"updater": {
+					"type": "TIMES_ARMY_SIZE",
+					"stepSize": 1,
+					"filteredCreature": "h5HavenPeasant"
+				},
+				"stacking": "h5Taxpayer_h5HavenPeasant",
+				"description": "{Taxpayer}\nEach one brings the\nhero 1 gold per day"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 22,
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h5/Haven_Peasant/battle.json",
+			"map": "h5/Haven_Peasant/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Haven_Peasant/map/atkL.png",
+			"mapAttackFromRight": "h5/Haven_Peasant/map/atkR.png",
+			"iconLarge": "h5/Haven_Peasant/iconLarge.png",
+			"iconSmall": "h5/Haven_Peasant/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_MilitiaMan_Attack00.ogg",
+			"wince": "h5/h5_Hit.ogg",
+			"defend": "h5/h5_Hit.ogg",
+			"killed": "h5/h5_Death.ogg",
+			"move": "h5/h5_Move.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "SPELL_AFTER_ATTACK",
+					"subtype": "slow",
+					"addInfo": [
+						2,
+						2
+					]
+				},
+				"values": [
+					3,
+					6,
+					9,
+					12,
+					15,
+					18,
+					21,
+					24,
+					27,
+					30
+				]
+			},
+			{
+				"bonus": {
+					"type": "DEFENSIVE_STANCE",
+					"valueType": "ADDITIVE_VALUE"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_RETALIATION"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			}
+		],
+		"upgrades": [
+			"h5HavenMilitiaman",
+			"h5HavenRenegatesLandlord"
+		]
+	},
+	"h5HavenPriest": {
+		"name": {
+			"singular": "Priest",
+			"plural": "Priests"
+		},
+		"description": "Priests, Inquisitors and Zealots are the level 5 units of the Heroes V Haven (merged into Castle). All of them can shoot and have {No Melee Penalty}. Inquisitors can also cast {Haste}, {Divine Strength} and {Endurance} (3 times per battle, 12 mana). Zealots can also cast {Cleansing} and {Righteous Might} (2 times per battle, 15 mana), and have {Purge} (attacks have a chance to dispel the target's beneficial spells).\n\nPriests are the faithful defenders of the Griffin Empire's faith. They rush into battle against heretics or any enemy that threatens the Church of Elrath. As men of the cloth they take no part in hand-to-hand fighting, and usually strike their enemies by calling down the wrath of their god.\n\nSee also {Inquisitor}, {Zealot}.",
+		"faction": "castle",
+		"level": 5,
+		"cost": {
+			"gold": 470
+		},
+		"speed": 6,
+		"hitPoints": 40,
+		"attack": 10,
+		"defense": 10,
+		"damage": {
+			"min": 9,
+			"max": 11
+		},
+		"doubleWide": false,
+		"fightValue": 676,
+		"aiValue": 752,
+		"growth": 3,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"shooter": {
+				"type": "SHOOTER"
+			},
+			"noMeleePenalty": {
+				"type": "NO_MELEE_PENALTY",
+				"description": "{No Melee Penalty}\nNo melee penalty"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 3,
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h5/Haven_Priest/battle.json",
+			"map": "h5/Haven_Priest/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Haven_Priest/map/atkL.png",
+			"mapAttackFromRight": "h5/Haven_Priest/map/atkR.png",
+			"iconLarge": "h5/Haven_Priest/iconLarge.png",
+			"iconSmall": "h5/Haven_Priest/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"frameAngles": [
+					90,
+					60,
+					45,
+					30,
+					0,
+					-30,
+					-45,
+					-60,
+					-90
+				],
+				"offset": {
+					"upperX": 22,
+					"upperY": -76,
+					"middleX": 24,
+					"middleY": -68,
+					"lowerX": 3,
+					"lowerY": -62
+				},
+				"attackClimaxFrame": 6,
+				"ray": [
+					{
+						"start": [
+							127,
+							115,
+							75,
+							160
+						],
+						"end": [
+							85,
+							76,
+							50,
+							60
+						]
+					},
+					{
+						"start": [
+							255,
+							230,
+							150,
+							255
+						],
+						"end": [
+							255,
+							230,
+							150,
+							120
+						]
+					},
+					{
+						"start": [
+							255,
+							255,
+							230,
+							255
+						],
+						"end": [
+							255,
+							230,
+							150,
+							200
+						]
+					},
+					{
+						"start": [
+							255,
+							230,
+							150,
+							255
+						],
+						"end": [
+							255,
+							230,
+							150,
+							120
+						]
+					},
+					{
+						"start": [
+							127,
+							115,
+							75,
+							160
+						],
+						"end": [
+							85,
+							76,
+							50,
+							60
+						]
+					}
+				]
+			}
+		},
+		"sound": {
+			"attack": "h5/h5_Priest_Attack.ogg",
+			"wince": "h5/h5_Cleric_Hit.ogg",
+			"defend": "h5/h5_Cleric_Hit.ogg",
+			"killed": "h5/h5_Priest_Death.ogg",
+			"move": "h5/h5_Cleric_Move.ogg",
+			"shoot": "h5/h5_Priest_spec.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					3,
+					4,
+					5,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					3,
+					4,
+					4,
+					6,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					2,
+					3,
+					3,
+					4,
+					5,
+					6,
+					6,
+					7
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					7
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "MIND_IMMUNITY",
+					"description": "{Steadfast Mind}\nImmune to Mind spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "SPELL_DAMAGE_REDUCTION",
+					"subtype": "any"
+				},
+				"values": [
+					3,
+					6,
+					9,
+					12,
+					15,
+					18,
+					21,
+					24,
+					27,
+					30
+				]
+			}
+		],
+		"shots": 20,
+		"upgrades": [
+			"h5HavenCleric",
+			"h5HavenRenegatesZealot"
+		]
+	},
+	"h5HavenRenegatesBattleGriffin": {
+		"name": {
+			"singular": "Battle Griffin",
+			"plural": "Battle Griffins"
+		},
+		"description": "Griffins, Imperial Griffins and Battle Griffins are the level 4 units of the Heroes V Haven (merged into Castle). All of them can fly and have {Unlimited Retaliation} and {Immune to Blind} (immune to the Blind curse). Imperial Griffins also have {Battle Dive} (soars into the air for one round, then dives for 2 times damage, hitting friend and foe alike). Battle Griffins also have {Battle Frenzy} (each retaliation deals 1.5 times the damage of the previous one) and {Pack Dive} (dives and sweeps across two rows of enemies for 75% damage, 1 time per battle).\n\nFrom the moment they are born, Battle Griffins know how to endure pain and repay the enemy with even fiercer vengeance. Nothing dares approach an adult griffin. Once a Battle Griffin is wounded or attacked, it strikes back even more fiercely.\n\nSee also {Griffin}, {Imperial Griffin}.",
+		"faction": "castle",
+		"level": 4,
+		"cost": {
+			"gold": 390
+		},
+		"speed": 11,
+		"hitPoints": 53,
+		"attack": 9,
+		"defense": 15,
+		"damage": {
+			"min": 5,
+			"max": 11
+		},
+		"doubleWide": true,
+		"fightValue": 524,
+		"aiValue": 601,
+		"growth": 4,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"flying": {
+				"type": "FLYING"
+			},
+			"unlimitedRetaliations": {
+				"type": "UNLIMITED_RETALIATIONS",
+				"description": "{Unlimited Retaliations}\nUnlimited retaliations"
+			},
+			"immune_blind": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "blind",
+				"description": "{Immune to Blind}\nImmune to Blind"
+			},
+			"immune_h5Blind": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "h5Blind",
+				"hidden": true
+			},
+			"immune_h5AbBlind": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "h5AbBlind",
+				"hidden": true
+			},
+			"h5BattleFrenzy": {
+				"icon": "h5/abilities/battleFrenzy",
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5BattleFrenzy",
+				"val": 150,
+				"description": "{Battle Frenzy}\nEach retaliation deals\n1.5x the previous one"
+			},
+			"cast_h5AbPackDive": {
+				"type": "SPELLCASTER",
+				"subtype": "h5AbPackDive",
+				"val": 2,
+				"description": "{Pack Dive}\nDive sweeps 2 enemy rows\n75% damage, 1/battle"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 5,
+				"hidden": true
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 1
+			}
+		},
+		"graphics": {
+			"animation": "h5/Haven_Renegates_BattleGriffin/battle.json",
+			"map": "h5/Haven_Renegates_BattleGriffin/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Haven_Renegates_BattleGriffin/map/atkL.png",
+			"mapAttackFromRight": "h5/Haven_Renegates_BattleGriffin/map/atkR.png",
+			"iconLarge": "h5/Haven_Renegates_BattleGriffin/iconLarge.png",
+			"iconSmall": "h5/Haven_Renegates_BattleGriffin/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_Royal_griffin_attack.ogg",
+			"wince": "h5/h5_Griffin_hit.ogg",
+			"defend": "h5/h5_Griffin_hit.ogg",
+			"killed": "h5/h5_Royal_griffin_death.ogg",
+			"move": "h5/h5_Royal_griffin_move.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					5,
+					6,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "FIRST_STRIKE",
+					"subtype": "damageTypeMelee",
+					"description": "{Preemptive Strike}\nRetaliates before the melee attacker strikes"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "DOUBLE_DAMAGE_CHANCE"
+				},
+				"values": [
+					2,
+					4,
+					6,
+					8,
+					10,
+					12,
+					14,
+					16,
+					18,
+					20
+				]
+			},
+			{
+				"bonus": {
+					"type": "NEGATIVE_EFFECTS_IMMUNITY",
+					"subtype": "air",
+					"description": "{Air Ward}\nImmune to harmful Air spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h5HavenRenegatesChampion": {
+		"name": {
+			"singular": "Champion",
+			"plural": "Champions"
+		},
+		"description": "Knights, Paladins and Champions are the level 6 units of the Heroes V Haven (merged into Castle). All of them have {Jousting} (+5% damage for every hex moved in the charge). Paladins also have {Immune to Berserk} (immune to the Berserk curse) and {Lay Hands} (fully heals one creature of an allied stack and removes all negative spells from it). Champions also have {Champion Charge} (when attacking after a charge of 2 or more hexes, the unit behind the target takes 50% damage).\n\nNothing frightens foot soldiers more than meeting heavy cavalry. Champions swing their mighty weapons to strike down every enemy in their path and let their warhorses trample over the bodies. They are ever victorious on the battlefield.\n\nSee also {Knight}, {Paladin}.",
+		"faction": "castle",
+		"level": 6,
+		"cost": {
+			"gold": 1145
+		},
+		"speed": 12,
+		"hitPoints": 77,
+		"attack": 18,
+		"defense": 13,
+		"damage": {
+			"min": 19,
+			"max": 33
+		},
+		"doubleWide": true,
+		"fightValue": 1685,
+		"aiValue": 1990,
+		"growth": 2,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"jousting": {
+				"type": "JOUSTING",
+				"val": 5,
+				"description": "{Jousting}\nDamage +5% per\nhex charged",
+				"stacking": "h5HavenRenegatesChampionExpJousting"
+			},
+			"h5ChampionCharge": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5ChampionCharge",
+				"val": 50,
+				"addInfo": {
+					"minDistance": 2
+				},
+				"icon": "h5/abilities/h5ChampionCharge",
+				"description": "{Champion Charge}\nAfter 2+ hex charge, stack\nbehind target takes 50%"
+			},
+			"skeletonTarget": {
+				"type": "SKELETON_TRANSFORMER_TARGET",
+				"subtype": "blackKnight",
+				"hidden": true
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 2,
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h5/Haven_Renegates_Champion/battle.json",
+			"map": "h5/Haven_Renegates_Champion/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Haven_Renegates_Champion/map/atkL.png",
+			"mapAttackFromRight": "h5/Haven_Renegates_Champion/map/atkR.png",
+			"iconLarge": "h5/Haven_Renegates_Champion/iconLarge.png",
+			"iconSmall": "h5/Haven_Renegates_Champion/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_Cavalier_Attack00.ogg",
+			"wince": "h5/h5_Cavalier_Hit.ogg",
+			"defend": "h5/h5_Cavalier_Hit.ogg",
+			"killed": "h5/h5_Cavalier_Death.ogg",
+			"move": "h5/h5_Cavalier_Move.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					2,
+					3,
+					4,
+					5,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "JOUSTING",
+					"stacking": "h5HavenRenegatesChampionExpJousting"
+				},
+				"values": [
+					5,
+					6,
+					6,
+					7,
+					7,
+					8,
+					9,
+					10,
+					11,
+					12
+				]
+			},
+			{
+				"bonus": {
+					"type": "BLOCKS_RETALIATION",
+					"description": "{No Retaliation}\nEnemy cannot retaliate when attacked"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "CHARGE_IMMUNITY",
+					"description": "{Steady Ranks}\nImmune to charge damage bonuses"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "DOUBLE_DAMAGE_CHANCE"
+				},
+				"values": [
+					2,
+					4,
+					6,
+					8,
+					10,
+					12,
+					14,
+					16,
+					18,
+					20
+				]
+			}
+		]
+	},
+	"h5HavenRenegatesLandlord": {
+		"name": {
+			"singular": "Thug",
+			"plural": "Thugs"
+		},
+		"description": "Peasants, Conscripts and Thugs are the level 1 units of the Heroes V Haven (merged into Castle). All of them have {Taxpayer} (each one brings the hero 1 gold per day). Conscripts also have {Shield Bash} (melee attacks have a chance to stun the target, which cannot retaliate and has its ATB reset to 0). Thugs also have {Brutality} (melee attacks have a chance to strike twice).\n\nThugs regard brutality as a necessary means of achieving their goals. These iron-hard warriors never fear war; their arms move like the wind as they wipe out every obstacle in their path.\n\nSee also {Peasant}, {Conscript}.",
+		"faction": "castle",
+		"level": 1,
+		"cost": {
+			"gold": 35
+		},
+		"speed": 4,
+		"hitPoints": 5,
+		"attack": 4,
+		"defense": 1,
+		"damage": {
+			"min": 1,
+			"max": 2
+		},
+		"doubleWide": false,
+		"fightValue": 49,
+		"aiValue": 49,
+		"growth": 19,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"h5Taxpayer": {
+				"type": "GENERATE_RESOURCE",
+				"subtype": "gold",
+				"val": 1,
+				"propagator": "HERO",
+				"updater": {
+					"type": "TIMES_ARMY_SIZE",
+					"stepSize": 1,
+					"filteredCreature": "h5HavenRenegatesLandlord"
+				},
+				"stacking": "h5Taxpayer_h5HavenRenegatesLandlord",
+				"description": "{Taxpayer}\nEach one brings the\nhero 1 gold per day"
+			},
+			"h5Brutality": {
+				"icon": "h5/abilities/brutality",
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5ProcEffect",
+				"addInfo": {
+					"effect": "extraAttack",
+					"pf": 1.0,
+					"melee": true,
+					"ranged": false
+				},
+				"description": "{Brutality}\nMelee may strike twice"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 22,
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h5/Haven_Renegates_Landlord/battle.json",
+			"map": "h5/Haven_Renegates_Landlord/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Haven_Renegates_Landlord/map/atkL.png",
+			"mapAttackFromRight": "h5/Haven_Renegates_Landlord/map/atkR.png",
+			"iconLarge": "h5/Haven_Renegates_Landlord/iconLarge.png",
+			"iconSmall": "h5/Haven_Renegates_Landlord/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_Attack.ogg",
+			"wince": "h5/h5_Hit.ogg",
+			"defend": "h5/h5_Hit.ogg",
+			"killed": "h5/h5_Death.ogg",
+			"move": "h5/h5_Move.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "DOUBLE_DAMAGE_CHANCE"
+				},
+				"values": [
+					2,
+					4,
+					6,
+					8,
+					10,
+					12,
+					14,
+					16,
+					18,
+					20
+				]
+			},
+			{
+				"bonus": {
+					"type": "ENEMY_DEFENCE_REDUCTION"
+				},
+				"values": [
+					2,
+					4,
+					6,
+					8,
+					10,
+					12,
+					14,
+					16,
+					18,
+					20
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_ATTACK"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1
+				]
+			}
+		]
+	},
+	"h5HavenRenegatesLongbowman": {
+		"name": {
+			"singular": "Crossbowman",
+			"plural": "Crossbowmen"
+		},
+		"description": "Archers, Bolt Archers and Crossbowmen are the level 2 units of the Heroes V Haven (merged into Castle). All of them can shoot. Archers have {Scatter Shot} (fires at an area, where friend and foe alike take half ranged damage). Bolt Archers also have {Precise Shot} (ignores the target's Defense when shooting at a distance of less than 3 hexes). Crossbowmen also have {No Range Penalty} (no penalty for distance when shooting).\n\nWith the change of regime, new technologies emerged, and new equipment brought Crossbowmen to the Griffin Empire. Their heavy crossbows have a very long range, and their bolts lose none of their power no matter where on the battlefield the enemy stands.\n\nSee also {Archer}, {Bolt Archer}.",
+		"faction": "castle",
+		"level": 2,
+		"cost": {
+			"gold": 150
+		},
+		"speed": 5,
+		"hitPoints": 11,
+		"attack": 9,
+		"defense": 7,
+		"damage": {
+			"min": 2,
+			"max": 7
+		},
+		"doubleWide": false,
+		"fightValue": 175,
+		"aiValue": 195,
+		"growth": 8,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"shooter": {
+				"type": "SHOOTER"
+			},
+			"noDistancePenalty": {
+				"type": "NO_DISTANCE_PENALTY",
+				"description": "{No Range Penalty}\nNo ranged damage penalty"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 12,
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h5/Haven_Renegates_Longbowman/battle.json",
+			"map": "h5/Haven_Renegates_Longbowman/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Haven_Renegates_Longbowman/map/atkL.png",
+			"mapAttackFromRight": "h5/Haven_Renegates_Longbowman/map/atkR.png",
+			"iconLarge": "h5/Haven_Renegates_Longbowman/iconLarge.png",
+			"iconSmall": "h5/Haven_Renegates_Longbowman/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"frameAngles": [
+					90,
+					60,
+					45,
+					30,
+					0,
+					-30,
+					-45,
+					-60,
+					-90
+				],
+				"offset": {
+					"upperX": 7,
+					"upperY": -53,
+					"middleX": 0,
+					"middleY": -51,
+					"lowerX": -8,
+					"lowerY": -53
+				},
+				"attackClimaxFrame": 6,
+				"projectile": "h5/Haven_Renegates_Longbowman/projectile.json"
+			}
+		},
+		"sound": {
+			"attack": "h5/h5_MarksmanAttack01.ogg",
+			"wince": "h5/h5_Marksman_hit.ogg",
+			"defend": "h5/h5_Marksman_hit.ogg",
+			"killed": "h5/h5_Marksman_death.ogg",
+			"move": "h5/h5_Marksman_move.ogg",
+			"shoot": "h5/h5_MarksmanAttack01.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					3,
+					3,
+					3,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					3,
+					4,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					0,
+					1,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					3,
+					3,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "ENEMY_DEFENCE_REDUCTION"
+				},
+				"values": [
+					4,
+					8,
+					12,
+					16,
+					20,
+					24,
+					28,
+					32,
+					36,
+					40
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_WALL_PENALTY",
+					"description": "{Siege Shooter}\nNo damage loss when shooting over walls"
+				},
+				"values": [
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "SHOTS"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			}
+		],
+		"shots": 24
+	},
+	"h5HavenRenegatesSeraph": {
+		"name": {
+			"singular": "Seraph",
+			"plural": "Seraphs"
+		},
+		"description": "Angels, Archangels and Seraphs are the level 7 units of the Heroes V Haven (merged into Castle). All of them can fly. Archangels also have {Resurrect Allies} (resurrects 101 × the number of Archangels in Hit Points of an allied stack, 1 time per battle, 2 times from experience level 7). Seraphs can also cast {Righteous Might} and {Divine Vengeance} (2 times per battle, 14 mana).\n\nThe pure white wings of the Seraphs are stained with the blood of their enemies, which dispels any illusion that angels are benevolent creatures. Seraphs are not merciful saviors but the nightmare of all their enemies.\n\nSee also {Angel}, {Archangel}.",
+		"faction": "castle",
+		"level": 7,
+		"cost": {
+			"gold": 3405,
+			"crystal": 2
+		},
+		"speed": 15,
+		"hitPoints": 222,
+		"attack": 25,
+		"defense": 18,
+		"damage": {
+			"min": 22,
+			"max": 66
+		},
+		"doubleWide": true,
+		"fightValue": 4853,
+		"aiValue": 6323,
+		"growth": 1,
+		"advMapAmount": {
+			"min": 1,
+			"max": 3
+		},
+		"abilities": {
+			"flying": {
+				"type": "FLYING"
+			},
+			"h5Frags": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5Frags",
+				"propagator": "BATTLE_WIDE",
+				"hidden": true,
+				"stacking": "h5Frags",
+				"description": "~"
+			},
+			"cast_h5AbBloodlust": {
+				"type": "SPELLCASTER",
+				"subtype": "h5AbBloodlust",
+				"val": 2
+			},
+			"cast_h5AbDivineVengeance": {
+				"type": "SPELLCASTER",
+				"subtype": "h5AbDivineVengeance",
+				"val": 1
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 1,
+				"hidden": true
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 2
+			},
+			"h5Mana": {
+				"type": "H5_MANA_H5C",
+				"val": 14
+			},
+			"h5ManaMin": {
+				"type": "H5_MANA_MIN_H5C",
+				"val": 6,
+				"hidden": true
+			},
+			"h5ManaPool": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5ManaPool",
+				"hidden": true,
+				"description": "~"
+			}
+		},
+		"graphics": {
+			"animation": "h5/Haven_Renegates_Seraph/battle.json",
+			"map": "h5/Haven_Renegates_Seraph/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Haven_Renegates_Seraph/map/atkL.png",
+			"mapAttackFromRight": "h5/Haven_Renegates_Seraph/map/atkR.png",
+			"iconLarge": "h5/Haven_Renegates_Seraph/iconLarge.png",
+			"iconSmall": "h5/Haven_Renegates_Seraph/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_Archangel_attack00.ogg",
+			"wince": "h5/h5_Archangel_hit.ogg",
+			"defend": "h5/h5_Archangel_hit.ogg",
+			"killed": "h5/h5_Archangel_death.ogg",
+			"move": "h5/h5_Archangel_move.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					10,
+					20,
+					30,
+					40,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "MIND_IMMUNITY",
+					"description": "{Steadfast Mind}\nImmune to Mind spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "COMBAT_EVENT_TRIGGER",
+					"subtype": "enchanted",
+					"addInfo": {
+						"spell": "bless",
+						"level": 3
+					},
+					"description": "{Eternal Bless}\nStarts each battle with Bless on itself"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "NEGATIVE_EFFECTS_IMMUNITY",
+					"subtype": "water",
+					"description": "{Water Ward}\nImmune to harmful Water spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "DOUBLE_DAMAGE_CHANCE"
+				},
+				"values": [
+					2,
+					4,
+					6,
+					8,
+					10,
+					12,
+					14,
+					16,
+					18,
+					20
+				]
+			},
+			{
+				"bonus": {
+					"type": "SPELL_IMMUNITY",
+					"subtype": "armageddon",
+					"description": "{Immune to Armageddon}\nUnaffected by Armageddon"
+				},
+				"values": [
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h5HavenRenegatesVindicator": {
+		"name": {
+			"singular": "Vindicator",
+			"plural": "Vindicators"
+		},
+		"description": "Footmen, Squires and Vindicators are the level 3 units of the Heroes V Haven (merged into Castle). All of them have {Enrage} (Attack increases when an allied stack is destroyed) and {Large Shield} (half damage from ranged attacks). Footmen have {Shield Bash} (melee attacks have a chance to stun the target, which cannot retaliate and has its ATB reset to 0). Squires also have {Shield Allies} (adjacent allies take half damage from ranged attacks) and {Shield Bash} (melee attacks have a chance to stun the target, which cannot retaliate and has its ATB reset to 0). Vindicators also have {Cleave} (attacks once more when an attack kills at least 1 creature).\n\nBattle-hardened swordsmen are a true treasure on the battlefield. Clad in heavy armor and wielding double-edged swords, Vindicators lead every charge, always first into the fray to clear the way for the advancing infantry.\n\nSee also {Footman}, {Squire}.",
+		"faction": "castle",
+		"level": 3,
+		"cost": {
+			"gold": 205
+		},
+		"speed": 5,
+		"hitPoints": 28,
+		"attack": 12,
+		"defense": 11,
+		"damage": {
+			"min": 2,
+			"max": 4
+		},
+		"doubleWide": false,
+		"fightValue": 241,
+		"aiValue": 285,
+		"growth": 8,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"h5LargeShield": {
+				"type": "GENERAL_DAMAGE_REDUCTION",
+				"subtype": "damageTypeRanged",
+				"val": 50,
+				"stacking": "h5LargeShield",
+				"description": "{Large Shield}\nRanged damage taken\nis halved"
+			},
+			"h5Cleave": {
+				"type": "FEROCITY",
+				"val": 1,
+				"description": "{Cleave}\nAttacks again after\nkilling 1+ creatures"
+			},
+			"h5Enraged": {
+				"icon": "h5/abilities/enraged",
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5Enraged",
+				"description": "{Enrage}\nAttack rises whenever\nan allied stack dies"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 10,
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h5/Haven_Renegates_Vindicator/battle.json",
+			"map": "h5/Haven_Renegates_Vindicator/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Haven_Renegates_Vindicator/map/atkL.png",
+			"mapAttackFromRight": "h5/Haven_Renegates_Vindicator/map/atkR.png",
+			"iconLarge": "h5/Haven_Renegates_Vindicator/iconLarge.png",
+			"iconSmall": "h5/Haven_Renegates_Vindicator/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_Swordsman_attack00.ogg",
+			"wince": "h5/h5_Swordsman_hit.ogg",
+			"defend": "h5/h5_Swordsman_hit.ogg",
+			"killed": "h5/h5_Footman_death.ogg",
+			"move": "h5/h5_Footman_move.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "DOUBLE_DAMAGE_CHANCE"
+				},
+				"values": [
+					3,
+					6,
+					9,
+					12,
+					15,
+					18,
+					21,
+					24,
+					27,
+					30
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_ATTACK"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "GENERAL_DAMAGE_REDUCTION",
+					"subtype": "damageTypeMelee"
+				},
+				"values": [
+					2,
+					4,
+					6,
+					8,
+					10,
+					12,
+					14,
+					16,
+					18,
+					20
+				]
+			}
+		]
+	},
+	"h5HavenRenegatesZealot": {
+		"name": {
+			"singular": "Zealot",
+			"plural": "Zealots"
+		},
+		"description": "Priests, Inquisitors and Zealots are the level 5 units of the Heroes V Haven (merged into Castle). All of them can shoot and have {No Melee Penalty}. Inquisitors can also cast {Haste}, {Divine Strength} and {Endurance} (3 times per battle, 12 mana). Zealots can also cast {Cleansing} and {Righteous Might} (2 times per battle, 15 mana), and have {Purge} (attacks have a chance to dispel the target's beneficial spells).\n\nGuided by a higher power, Zealots mercilessly flog the godless and impious heretics with their rods. They never abandon their mission; do not expect to find a shred of mercy in them.\n\nSee also {Priest}, {Inquisitor}.",
+		"faction": "castle",
+		"level": 5,
+		"cost": {
+			"gold": 665
+		},
+		"speed": 6,
+		"hitPoints": 59,
+		"attack": 17,
+		"defense": 12,
+		"damage": {
+			"min": 9,
+			"max": 11
+		},
+		"doubleWide": false,
+		"fightValue": 948,
+		"aiValue": 1055,
+		"growth": 3,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"shooter": {
+				"type": "SHOOTER"
+			},
+			"noMeleePenalty": {
+				"type": "NO_MELEE_PENALTY",
+				"description": "{No Melee Penalty}\nNo melee penalty"
+			},
+			"h5Purger": {
+				"icon": "h5/abilities/purger",
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5ProcSpell",
+				"addInfo": {
+					"spell": "h5AbPurge",
+					"pf": 2.0,
+					"mastery": 3,
+					"melee": true,
+					"ranged": true
+				},
+				"description": "{Purge}\nAttacks may dispel the\ntarget's beneficial spells"
+			},
+			"cast_h5AbDispel": {
+				"type": "SPELLCASTER",
+				"subtype": "h5AbDispel",
+				"val": 2
+			},
+			"cast_h5AbBloodlust": {
+				"type": "SPELLCASTER",
+				"subtype": "h5AbBloodlust",
+				"val": 3
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 3,
+				"hidden": true
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 2
+			},
+			"h5Mana": {
+				"type": "H5_MANA_H5C",
+				"val": 15
+			},
+			"h5ManaMin": {
+				"type": "H5_MANA_MIN_H5C",
+				"val": 6,
+				"hidden": true
+			},
+			"h5ManaPool": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5ManaPool",
+				"hidden": true,
+				"description": "~"
+			},
+			"noSpellcastByDefault": {
+				"type": "NO_SPELLCAST_BY_DEFAULT",
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h5/Haven_Renegates_Zealot/battle.json",
+			"map": "h5/Haven_Renegates_Zealot/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Haven_Renegates_Zealot/map/atkL.png",
+			"mapAttackFromRight": "h5/Haven_Renegates_Zealot/map/atkR.png",
+			"iconLarge": "h5/Haven_Renegates_Zealot/iconLarge.png",
+			"iconSmall": "h5/Haven_Renegates_Zealot/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"frameAngles": [
+					90,
+					60,
+					45,
+					30,
+					0,
+					-30,
+					-45,
+					-60,
+					-90
+				],
+				"offset": {
+					"upperX": 25,
+					"upperY": -85,
+					"middleX": 27,
+					"middleY": -76,
+					"lowerX": 3,
+					"lowerY": -69
+				},
+				"attackClimaxFrame": 6,
+				"ray": [
+					{
+						"start": [
+							127,
+							115,
+							75,
+							160
+						],
+						"end": [
+							85,
+							76,
+							50,
+							60
+						]
+					},
+					{
+						"start": [
+							255,
+							230,
+							150,
+							255
+						],
+						"end": [
+							255,
+							230,
+							150,
+							120
+						]
+					},
+					{
+						"start": [
+							255,
+							255,
+							230,
+							255
+						],
+						"end": [
+							255,
+							230,
+							150,
+							200
+						]
+					},
+					{
+						"start": [
+							255,
+							230,
+							150,
+							255
+						],
+						"end": [
+							255,
+							230,
+							150,
+							120
+						]
+					},
+					{
+						"start": [
+							127,
+							115,
+							75,
+							160
+						],
+						"end": [
+							85,
+							76,
+							50,
+							60
+						]
+					}
+				]
+			}
+		},
+		"sound": {
+			"attack": "h5/h5_ClericAttack00.ogg",
+			"wince": "h5/h5_Cleric_Hit.ogg",
+			"defend": "h5/h5_Cleric_Hit.ogg",
+			"killed": "h5/h5_Priest_Death.ogg",
+			"move": "h5/h5_Cleric_Move.ogg",
+			"shoot": "h5/h5_ClericRangeattack.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					3,
+					4,
+					5,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					3,
+					4,
+					4,
+					6,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					2,
+					3,
+					3,
+					4,
+					5,
+					6,
+					6,
+					7
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					7
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "MIND_IMMUNITY",
+					"description": "{Steadfast Mind}\nImmune to Mind spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "SPELL_DAMAGE_REDUCTION",
+					"subtype": "any"
+				},
+				"values": [
+					3,
+					6,
+					9,
+					12,
+					15,
+					18,
+					21,
+					24,
+					27,
+					30
+				]
+			},
+			{
+				"bonus": {
+					"type": "HP_REGENERATION"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					50,
+					50,
+					50,
+					50,
+					50,
+					50
+				]
+			}
+		],
+		"shots": 20
+	},
+	"h5HavenRoyalGriffin": {
+		"name": {
+			"singular": "Imperial Griffin",
+			"plural": "Imperial Griffins"
+		},
+		"description": "Griffins, Imperial Griffins and Battle Griffins are the level 4 units of the Heroes V Haven (merged into Castle). All of them can fly and have {Unlimited Retaliation} and {Immune to Blind} (immune to the Blind curse). Imperial Griffins also have {Battle Dive} (soars into the air for one round, then dives for 2 times damage, hitting friend and foe alike). Battle Griffins also have {Battle Frenzy} (each retaliation deals 1.5 times the damage of the previous one) and {Pack Dive} (dives and sweeps across two rows of enemies for 75% damage, 1 time per battle).\n\nImperial Griffins are the fastest troops of the Empire. They are experienced in skirmishes and can fly straight into the enemy ranks or dive on the enemy from above.\n\nSee also {Griffin}, {Battle Griffin}.",
+		"faction": "castle",
+		"level": 4,
+		"cost": {
+			"gold": 390
+		},
+		"speed": 11,
+		"hitPoints": 36,
+		"attack": 12,
+		"defense": 10,
+		"damage": {
+			"min": 4,
+			"max": 13
+		},
+		"doubleWide": true,
+		"fightValue": 538,
+		"aiValue": 617,
+		"growth": 4,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"flying": {
+				"type": "FLYING"
+			},
+			"unlimitedRetaliations": {
+				"type": "UNLIMITED_RETALIATIONS",
+				"description": "{Unlimited Retaliations}\nUnlimited retaliations"
+			},
+			"immune_blind": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "blind",
+				"description": "{Immune to Blind}\nImmune to Blind"
+			},
+			"immune_h5Blind": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "h5Blind",
+				"hidden": true
+			},
+			"immune_h5AbBlind": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "h5AbBlind",
+				"hidden": true
+			},
+			"cast_h5AbBattleDive": {
+				"type": "SPELLCASTER",
+				"subtype": "h5AbBattleDive",
+				"val": 2,
+				"description": "{Battle Dive}\nAirborne 1 round, then\ndives for 2x, hits all"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 5,
+				"hidden": true
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 1
+			}
+		},
+		"graphics": {
+			"animation": "h5/Haven_Royal_Griffin/battle.json",
+			"map": "h5/Haven_Royal_Griffin/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Haven_Royal_Griffin/map/atkL.png",
+			"mapAttackFromRight": "h5/Haven_Royal_Griffin/map/atkR.png",
+			"iconLarge": "h5/Haven_Royal_Griffin/iconLarge.png",
+			"iconSmall": "h5/Haven_Royal_Griffin/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_Royal_griffin_attack.ogg",
+			"wince": "h5/h5_Griffin_hit.ogg",
+			"defend": "h5/h5_Griffin_hit.ogg",
+			"killed": "h5/h5_Royal_griffin_death.ogg",
+			"move": "h5/h5_Royal_griffin_move.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					5,
+					6,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "FIRST_STRIKE",
+					"subtype": "damageTypeMelee",
+					"description": "{Preemptive Strike}\nRetaliates before the melee attacker strikes"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "DOUBLE_DAMAGE_CHANCE"
+				},
+				"values": [
+					3,
+					6,
+					9,
+					12,
+					15,
+					18,
+					21,
+					24,
+					27,
+					30
+				]
+			},
+			{
+				"bonus": {
+					"type": "NEGATIVE_EFFECTS_IMMUNITY",
+					"subtype": "air",
+					"description": "{Air Ward}\nImmune to harmful Air spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h5HavenSwordsman": {
+		"name": {
+			"singular": "Squire",
+			"plural": "Squires"
+		},
+		"description": "Footmen, Squires and Vindicators are the level 3 units of the Heroes V Haven (merged into Castle). All of them have {Enrage} (Attack increases when an allied stack is destroyed) and {Large Shield} (half damage from ranged attacks). Footmen have {Shield Bash} (melee attacks have a chance to stun the target, which cannot retaliate and has its ATB reset to 0). Squires also have {Shield Allies} (adjacent allies take half damage from ranged attacks) and {Shield Bash} (melee attacks have a chance to stun the target, which cannot retaliate and has its ATB reset to 0). Vindicators also have {Cleave} (attacks once more when an attack kills at least 1 creature).\n\nSquires are the elite infantry of the Griffin Empire. They can effectively hold back enemy charges, giving other troops the chance to destroy the enemy. With their excellent close-combat and defensive skills, they can both fight in melee and protect the creatures around them.\n\nSee also {Footman}, {Vindicator}.",
+		"faction": "castle",
+		"level": 3,
+		"cost": {
+			"gold": 205
+		},
+		"speed": 5,
+		"hitPoints": 28,
+		"attack": 8,
+		"defense": 13,
+		"damage": {
+			"min": 2,
+			"max": 4
+		},
+		"doubleWide": false,
+		"fightValue": 231,
+		"aiValue": 274,
+		"growth": 8,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"h5Enraged": {
+				"icon": "h5/abilities/enraged",
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5Enraged",
+				"description": "{Enrage}\nAttack rises whenever\nan allied stack dies"
+			},
+			"h5LargeShield": {
+				"type": "GENERAL_DAMAGE_REDUCTION",
+				"subtype": "damageTypeRanged",
+				"val": 50,
+				"stacking": "h5LargeShield",
+				"description": "{Large Shield}\nRanged damage taken\nis halved"
+			},
+			"h5AreaZone": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5AreaZone",
+				"val": 0,
+				"stacking": "h5AreaZone",
+				"propagator": "BATTLE_WIDE",
+				"hidden": true,
+				"description": "~"
+			},
+			"h5ShieldOther": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5AllyAura",
+				"val": 4,
+				"icon": "h5/abilities/auraShield",
+				"description": "{Shield Allies}\nAdjacent allies take\nhalf ranged damage"
+			},
+			"h5Bash": {
+				"icon": "h5/abilities/bash",
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5ProcEffect",
+				"addInfo": {
+					"effect": "bash",
+					"pf": 1.5,
+					"melee": true,
+					"ranged": false
+				},
+				"description": "{Shield Bash}\nMelee may stun: no\nretaliation, ATB reset"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 10,
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h5/Haven_Swordsman/battle.json",
+			"map": "h5/Haven_Swordsman/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Haven_Swordsman/map/atkL.png",
+			"mapAttackFromRight": "h5/Haven_Swordsman/map/atkR.png",
+			"iconLarge": "h5/Haven_Swordsman/iconLarge.png",
+			"iconSmall": "h5/Haven_Swordsman/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_Swordsman_attack00.ogg",
+			"wince": "h5/h5_Swordsman_hit.ogg",
+			"defend": "h5/h5_Swordsman_hit.ogg",
+			"killed": "h5/h5_Footman_death.ogg",
+			"move": "h5/h5_Footman_move.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "GENERAL_DAMAGE_REDUCTION",
+					"subtype": "damageTypeMelee"
+				},
+				"values": [
+					3,
+					6,
+					9,
+					12,
+					15,
+					18,
+					21,
+					24,
+					27,
+					30
+				]
+			},
+			{
+				"bonus": {
+					"type": "DEFENSIVE_STANCE",
+					"valueType": "ADDITIVE_VALUE"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_RETALIATION"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			}
+		]
+	}
+}

@@ -1,0 +1,778 @@
+{
+	"H5_BLESS_H5C": {
+		"hidden": true,
+		"creatureNature": false
+	},
+	"H5_CURSE_H5C": {
+		"hidden": true,
+		"creatureNature": false
+	},
+	"H5_FORGET_H5C": {
+		"hidden": true,
+		"creatureNature": false
+	},
+	"H5_SLEEP_H5C": {
+		"hidden": true,
+		"creatureNature": false
+	},
+	"H5_FRAGS_H5C": {
+		"hidden": true,
+		"creatureNature": false
+	},
+	"H5_SHIELD_USED_H5C": {
+		"hidden": true,
+		"creatureNature": false
+	},
+	"H5_GROWTH_H5C": {
+		"hidden": true,
+		"creatureNature": false
+	},
+	"H5_SPELLDMG30_H5C": {
+		"hidden": true,
+		"creatureNature": false
+	},
+	"H5_MARK_H5C": {
+		"hidden": true,
+		"creatureNature": false,
+		"valueDescriptions": {
+			"1": "%s are stunned by a Shield Bash: they cannot retaliate and lose their turn priority.",
+			"2": "%s are hit by a Shattering Strike and lose their turn priority.",
+			"3": "%s are hit by a Sniper Arrow; their turn is delayed.",
+			"4": "%s are struck with Fear and flee to the edge of the battlefield.",
+			"5": "%s are knocked back one hex.",
+			"6": "%s take %d poison damage.",
+			"7": "%s recover %d HP.",
+			"8": "%s are enraged: Attack +%d.",
+			"9": "%s enter Battle Rage.",
+			"10": "The Slaying Blade of %s deals %d extra damage.",
+			"11": "The Soul Stealer of %s kills %d enemies.",
+			"12": "%s land a Lethal Blow for %d extra damage."
+		}
+	},
+	"H5_PIERCING_H5C": {
+		"hidden": true,
+		"creatureNature": false
+	},
+	"H47_GHOST_H5C": {
+		"hidden": true,
+		"creatureNature": false,
+		"valueDescriptions": {
+			"1": "%s turn ghostly and evade the attack."
+		}
+	},
+	"H5_ARMORED_H5C": {
+		"graphics": {
+			"icon": "h5/abilities/armored"
+		},
+		"creatureNature": false,
+		"description": "{Unbreakable Armor}\nImmune to all spells and effects that lower Defense."
+	},
+	"H5_PRECISE_SHOT_H5C": {
+		"graphics": {
+			"icon": "h5/abilities/preciseShot"
+		},
+		"creatureNature": false,
+		"description": "{Precise Shot}\nIgnores target Defense when shooting at targets less than ${val} hexes away."
+	},
+	"H5_HOLD_GROUND_H5C": {
+		"graphics": {
+			"icon": "h5/abilities/holdGround"
+		},
+		"creatureNature": false,
+		"description": "{Hold Ground}\nCannot be pushed by enemy attacks or abilities."
+	},
+	"H5_ELDRITCH_AURA_H5C": {
+		"graphics": {
+			"icon": "h5/abilities/eldritchAura"
+		},
+		"creatureNature": false,
+		"description": "{Spell Deflection}\nNearby allies are not caught by attack spells from enemy casters."
+	},
+	"H5_ELEMENTAL_H5C": {
+		"graphics": {
+			"icon": "h5/abilities/elemental"
+		},
+		"creatureNature": false,
+		"description": "{Elemental}\nNon-living: immune to poison, blindness and Mind spells; cannot be healed or resurrected."
+	},
+	"H5_DEMON_RAGED_H5C": {
+		"creatureNature": false,
+		"graphics": {
+			"icon": "h5/abilities/bloodRage0.png"
+		},
+		"description": "{Blood Fury}\nBuilds rage when fighting under a hero with the Blood Rage skill: melee +100, shooting +50, casting on enemies +40, own stack lost +30 (+60 with Enrage), enemy stack lost +20, hit by a harmful spell +10; defend -30, wait -100, dazed or intimidated -20/-100. 200/500/1000 points unlock levels 1/2/3 (Basic/Advanced/Expert Blood Rage each open one level). Rage also absorbs part of the damage taken."
+	},
+	"H5_ENRAGED_SHOW_H5C": {
+		"graphics": {
+			"icon": "h5/abilities/enraged"
+		},
+		"creatureNature": false,
+		"description": "{Enrage}\nAttack +${val}."
+	},
+	"H5_BATTLE_RAGE_SHOW_H5C": {
+		"graphics": {
+			"icon": "h5/abilities/battleRage"
+		},
+		"creatureNature": false,
+		"description": "{Battle Rage}\nAttack +${val}, Initiative raised."
+	},
+	"H5_WEAKENED_SHOW_H5C": {
+		"graphics": {
+			"icon": "h5/abilities/weakened"
+		},
+		"creatureNature": false,
+		"description": "{Weakening Strike}\nAttack and Defense lowered (Attack -${val} in total)."
+	},
+	"H5_PREPARED_SHOW_H5C": {
+		"graphics": {
+			"icon": "h5/abilities/preparedPosition"
+		},
+		"creatureNature": false,
+		"description": "{Guard Stance}\nDefense +${val}."
+	},
+	"H5_AGILITY_SHOW_H5C": {
+		"graphics": {
+			"icon": "h5/abilities/agility"
+		},
+		"creatureNature": false,
+		"description": "{Agility}\nDefense +${val} until the end of its next action."
+	},
+	"H5_ROOTS_SHOW_H5C": {
+		"graphics": {
+			"icon": "h5/abilities/takeRoots"
+		},
+		"creatureNature": false,
+		"description": "{Take Root}\nDefense +${val}%, unlimited retaliations."
+	},
+	"H5_SOURCE_H5C": {
+		"hidden": true,
+		"creatureNature": false
+	},
+	"H5_AREA_MARK_H5C": {
+		"hidden": true,
+		"creatureNature": false
+	},
+	"H5_FRIGHTENED_H5C": {
+		"creatureNature": false,
+		"graphics": {
+			"icon": "h5/abilities/h5Frightened"
+		},
+		"description": "{Fear}\nAn enemy with Aura of Fear is near: Morale -${val}."
+	},
+	"H5_RAGE_POINTS_H5C": {
+		"creatureNature": false,
+		"graphics": {
+			"icon": "h5/abilities/bloodRage1.png"
+		},
+		"description": "{Rage Points}\nCurrently ${val} points."
+	},
+	"H5_BLOOD_RAGE_H5C": {
+		"creatureNature": false,
+		"graphics": {
+			"valueIcons": {
+				"10": "h5/abilities/bloodRage0.png",
+				"11": "h5/abilities/bloodRage1.png",
+				"12": "h5/abilities/bloodRage2.png",
+				"13": "h5/abilities/bloodRage3.png",
+				"20": "h5/abilities/bloodRage0.png",
+				"21": "h5/abilities/bloodRage1.png",
+				"22": "h5/abilities/bloodRage2.png",
+				"23": "h5/abilities/bloodRage3.png",
+				"30": "h5/abilities/bloodRage0.png",
+				"31": "h5/abilities/bloodRage1.png",
+				"32": "h5/abilities/bloodRage2.png",
+				"33": "h5/abilities/bloodRage3.png",
+				"40": "h5/abilities/bloodRage0.png",
+				"41": "h5/abilities/bloodRage1.png",
+				"42": "h5/abilities/bloodRage2.png",
+				"43": "h5/abilities/bloodRage3.png",
+				"50": "h5/abilities/bloodRage0.png",
+				"51": "h5/abilities/bloodRage1.png",
+				"52": "h5/abilities/bloodRage2.png",
+				"53": "h5/abilities/bloodRage3.png",
+				"60": "h5/abilities/bloodRage0.png",
+				"61": "h5/abilities/bloodRage1.png",
+				"62": "h5/abilities/bloodRage2.png",
+				"63": "h5/abilities/bloodRage3.png",
+				"70": "h5/abilities/bloodRage0.png",
+				"71": "h5/abilities/bloodRage1.png",
+				"72": "h5/abilities/bloodRage2.png",
+				"73": "h5/abilities/bloodRage3.png",
+				"80": "h5/abilities/bloodRage0.png",
+				"81": "h5/abilities/bloodRage1.png",
+				"82": "h5/abilities/bloodRage2.png",
+				"83": "h5/abilities/bloodRage3.png",
+				"90": "h5/abilities/bloodRage0.png",
+				"91": "h5/abilities/bloodRage1.png",
+				"92": "h5/abilities/bloodRage2.png",
+				"93": "h5/abilities/bloodRage3.png",
+				"100": "h5/abilities/bloodRage0.png",
+				"101": "h5/abilities/bloodRage1.png",
+				"102": "h5/abilities/bloodRage2.png",
+				"103": "h5/abilities/bloodRage3.png",
+				"110": "h5/abilities/bloodRage0.png",
+				"111": "h5/abilities/bloodRage1.png",
+				"112": "h5/abilities/bloodRage2.png",
+				"113": "h5/abilities/bloodRage3.png",
+				"120": "h5/abilities/bloodRage0.png",
+				"121": "h5/abilities/bloodRage1.png",
+				"122": "h5/abilities/bloodRage2.png",
+				"123": "h5/abilities/bloodRage3.png",
+				"130": "h5/abilities/bloodRage0.png",
+				"131": "h5/abilities/bloodRage1.png",
+				"132": "h5/abilities/bloodRage2.png",
+				"133": "h5/abilities/bloodRage3.png",
+				"140": "h5/abilities/bloodRage0.png",
+				"141": "h5/abilities/bloodRage1.png",
+				"142": "h5/abilities/bloodRage2.png",
+				"143": "h5/abilities/bloodRage3.png",
+				"150": "h5/abilities/bloodRage0.png",
+				"151": "h5/abilities/bloodRage1.png",
+				"152": "h5/abilities/bloodRage2.png",
+				"153": "h5/abilities/bloodRage3.png",
+				"160": "h5/abilities/bloodRage0.png",
+				"161": "h5/abilities/bloodRage1.png",
+				"162": "h5/abilities/bloodRage2.png",
+				"163": "h5/abilities/bloodRage3.png",
+				"170": "h5/abilities/bloodRage0.png",
+				"171": "h5/abilities/bloodRage1.png",
+				"172": "h5/abilities/bloodRage2.png",
+				"173": "h5/abilities/bloodRage3.png",
+				"180": "h5/abilities/bloodRage0.png",
+				"181": "h5/abilities/bloodRage1.png",
+				"182": "h5/abilities/bloodRage2.png",
+				"183": "h5/abilities/bloodRage3.png"
+			}
+		},
+		"valueDescriptions": {
+			"10": "{Blood Fury}\nGoblin: no Blood Rage level yet (200/500/1000 points for levels 1/2/3).",
+			"11": "{Blood Fury}\nGoblin: Blood Rage level 1.\nLevel 1: Hit Points +1",
+			"12": "{Blood Fury}\nGoblin: Blood Rage level 2.\nLevel 1: Hit Points +1\nLevel 2: loses Treachery, Defense +4",
+			"13": "{Blood Fury}\nGoblin: Blood Rage level 3.\nLevel 1: Hit Points +1\nLevel 2: loses Treachery, Defense +4\nLevel 3: gains No Retaliation",
+			"20": "{Blood Fury}\nGoblin Trapper: no Blood Rage level yet (200/500/1000 points for levels 1/2/3).",
+			"21": "{Blood Fury}\nGoblin Trapper: Blood Rage level 1.\nLevel 1: Hit Points +2",
+			"22": "{Blood Fury}\nGoblin Trapper: Blood Rage level 2.\nLevel 1: Hit Points +2\nLevel 2: gains Wound, Attack +6",
+			"23": "{Blood Fury}\nGoblin Trapper: Blood Rage level 3.\nLevel 1: Hit Points +2\nLevel 2: gains Wound, Attack +6\nLevel 3: gains No Retaliation",
+			"30": "{Blood Fury}\nGoblin Witch-Doctor: no Blood Rage level yet (200/500/1000 points for levels 1/2/3).",
+			"31": "{Blood Fury}\nGoblin Witch-Doctor: Blood Rage level 1.\nLevel 1: Hit Points +2",
+			"32": "{Blood Fury}\nGoblin Witch-Doctor: Blood Rage level 2.\nLevel 1: Hit Points +2\nLevel 2: gains Purge and Curse Attack",
+			"33": "{Blood Fury}\nGoblin Witch-Doctor: Blood Rage level 3.\nLevel 1: Hit Points +2\nLevel 2: gains Purge and Curse Attack\nLevel 3: gains Hex Attack and No Retaliation",
+			"40": "{Blood Fury}\nCentaur: no Blood Rage level yet (200/500/1000 points for levels 1/2/3).",
+			"41": "{Blood Fury}\nCentaur: Blood Rage level 1.\nLevel 1: Attack +11",
+			"42": "{Blood Fury}\nCentaur: Blood Rage level 2.\nLevel 1: Attack +11\nLevel 2: Initiative +2 (Speed +20%)",
+			"43": "{Blood Fury}\nCentaur: Blood Rage level 3.\nLevel 1: Attack +11\nLevel 2: Initiative +2 (Speed +20%)\nLevel 3: Accurate Shot (no range or wall penalty)",
+			"50": "{Blood Fury}\nCentaur Nomad: no Blood Rage level yet (200/500/1000 points for levels 1/2/3).",
+			"51": "{Blood Fury}\nCentaur Nomad: Blood Rage level 1.\nLevel 1: Attack +11",
+			"52": "{Blood Fury}\nCentaur Nomad: Blood Rage level 2.\nLevel 1: Attack +11\nLevel 2: Initiative +2 (Speed +20%)",
+			"53": "{Blood Fury}\nCentaur Nomad: Blood Rage level 3.\nLevel 1: Attack +11\nLevel 2: Initiative +2 (Speed +20%)\nLevel 3: Accurate Shot (no range or wall penalty)",
+			"60": "{Blood Fury}\nCentaur Marauder: no Blood Rage level yet (200/500/1000 points for levels 1/2/3).",
+			"61": "{Blood Fury}\nCentaur Marauder: Blood Rage level 1.\nLevel 1: Attack +11",
+			"62": "{Blood Fury}\nCentaur Marauder: Blood Rage level 2.\nLevel 1: Attack +11\nLevel 2: Initiative +2 (Speed +20%)",
+			"63": "{Blood Fury}\nCentaur Marauder: Blood Rage level 3.\nLevel 1: Attack +11\nLevel 2: Initiative +2 (Speed +20%)\nLevel 3: Accurate Shot (no range or wall penalty)",
+			"70": "{Blood Fury}\nOrc Warrior: no Blood Rage level yet (200/500/1000 points for levels 1/2/3).",
+			"71": "{Blood Fury}\nOrc Warrior: Blood Rage level 1.\nLevel 1: Speed +1, Hit Points +5",
+			"72": "{Blood Fury}\nOrc Warrior: Blood Rage level 2.\nLevel 1: Speed +1, Hit Points +5\nLevel 2: Damage +3",
+			"73": "{Blood Fury}\nOrc Warrior: Blood Rage level 3.\nLevel 1: Speed +1, Hit Points +5\nLevel 2: Damage +3\nLevel 3: gains Shield Bash",
+			"80": "{Blood Fury}\nBrute: no Blood Rage level yet (200/500/1000 points for levels 1/2/3).",
+			"81": "{Blood Fury}\nBrute: Blood Rage level 1.\nLevel 1: Speed +2, Hit Points +5",
+			"82": "{Blood Fury}\nBrute: Blood Rage level 2.\nLevel 1: Speed +2, Hit Points +5\nLevel 2: Damage +3",
+			"83": "{Blood Fury}\nBrute: Blood Rage level 3.\nLevel 1: Speed +2, Hit Points +5\nLevel 2: Damage +3\nLevel 3: gains Shield Bash",
+			"90": "{Blood Fury}\nWarmonger: no Blood Rage level yet (200/500/1000 points for levels 1/2/3).",
+			"91": "{Blood Fury}\nWarmonger: Blood Rage level 1.\nLevel 1: Hit Points +9",
+			"92": "{Blood Fury}\nWarmonger: Blood Rage level 2.\nLevel 1: Hit Points +9\nLevel 2: gains Unlimited Retaliation",
+			"93": "{Blood Fury}\nWarmonger: Blood Rage level 3.\nLevel 1: Hit Points +9\nLevel 2: gains Unlimited Retaliation\nLevel 3: Defense +17",
+			"100": "{Blood Fury}\nShaman Witch: no Blood Rage level yet (200/500/1000 points for levels 1/2/3).",
+			"101": "{Blood Fury}\nShaman Witch: Blood Rage level 1.\nLevel 1: Initiative +2 (Speed +20%)",
+			"102": "{Blood Fury}\nShaman Witch: Blood Rage level 2.\nLevel 1: Initiative +2 (Speed +20%)\nLevel 2: Hit Points +7",
+			"103": "{Blood Fury}\nShaman Witch: Blood Rage level 3.\nLevel 1: Initiative +2 (Speed +20%)\nLevel 2: Hit Points +7\nLevel 3: Defense +18",
+			"110": "{Blood Fury}\nSky Daughter: no Blood Rage level yet (200/500/1000 points for levels 1/2/3).",
+			"111": "{Blood Fury}\nSky Daughter: Blood Rage level 1.\nLevel 1: Initiative +2 (Speed +20%)",
+			"112": "{Blood Fury}\nSky Daughter: Blood Rage level 2.\nLevel 1: Initiative +2 (Speed +20%)\nLevel 2: Spell Power x2, Hit Points +8",
+			"113": "{Blood Fury}\nSky Daughter: Blood Rage level 3.\nLevel 1: Initiative +2 (Speed +20%)\nLevel 2: Spell Power x2, Hit Points +8\nLevel 3: Spell Power x4",
+			"120": "{Blood Fury}\nEarth Daughter: no Blood Rage level yet (200/500/1000 points for levels 1/2/3).",
+			"121": "{Blood Fury}\nEarth Daughter: Blood Rage level 1.\nLevel 1: Initiative +3 (Speed +30%)",
+			"122": "{Blood Fury}\nEarth Daughter: Blood Rage level 2.\nLevel 1: Initiative +3 (Speed +30%)\nLevel 2: Hit Points +8",
+			"123": "{Blood Fury}\nEarth Daughter: Blood Rage level 3.\nLevel 1: Initiative +3 (Speed +30%)\nLevel 2: Hit Points +8\nLevel 3: Defense +18",
+			"130": "{Blood Fury}\nSlayer: no Blood Rage level yet (200/500/1000 points for levels 1/2/3).",
+			"131": "{Blood Fury}\nSlayer: Blood Rage level 1.\nLevel 1: Speed +1, Attack +2",
+			"132": "{Blood Fury}\nSlayer: Blood Rage level 2.\nLevel 1: Speed +1, Attack +2\nLevel 2: Hit Points +7",
+			"133": "{Blood Fury}\nSlayer: Blood Rage level 3.\nLevel 1: Speed +1, Attack +2\nLevel 2: Hit Points +7\nLevel 3: gains Double Attack",
+			"140": "{Blood Fury}\nExecutioner: no Blood Rage level yet (200/500/1000 points for levels 1/2/3).",
+			"141": "{Blood Fury}\nExecutioner: Blood Rage level 1.\nLevel 1: Speed +1, Attack +2",
+			"142": "{Blood Fury}\nExecutioner: Blood Rage level 2.\nLevel 1: Speed +1, Attack +2\nLevel 2: Hit Points +7",
+			"143": "{Blood Fury}\nExecutioner: Blood Rage level 3.\nLevel 1: Speed +1, Attack +2\nLevel 2: Hit Points +7\nLevel 3: gains Double Attack",
+			"150": "{Blood Fury}\nChieftain: no Blood Rage level yet (200/500/1000 points for levels 1/2/3).",
+			"151": "{Blood Fury}\nChieftain: Blood Rage level 1.\nLevel 1: Speed +1, Initiative +2 (Speed +20%)",
+			"152": "{Blood Fury}\nChieftain: Blood Rage level 2.\nLevel 1: Speed +1, Initiative +2 (Speed +20%)\nLevel 2: Hit Points +9",
+			"153": "{Blood Fury}\nChieftain: Blood Rage level 3.\nLevel 1: Speed +1, Initiative +2 (Speed +20%)\nLevel 2: Hit Points +9\nLevel 3: gains Double Attack",
+			"160": "{Blood Fury}\nCyclops: no Blood Rage level yet (200/500/1000 points for levels 1/2/3).",
+			"161": "{Blood Fury}\nCyclops: Blood Rage level 1.\nLevel 1: Damage +4",
+			"162": "{Blood Fury}\nCyclops: Blood Rage level 2.\nLevel 1: Damage +4\nLevel 2: gains Aura of Fear",
+			"163": "{Blood Fury}\nCyclops: Blood Rage level 3.\nLevel 1: Damage +4\nLevel 2: gains Aura of Fear\nLevel 3: gains Intimidating Attack",
+			"170": "{Blood Fury}\nUntamed Cyclops: no Blood Rage level yet (200/500/1000 points for levels 1/2/3).",
+			"171": "{Blood Fury}\nUntamed Cyclops: Blood Rage level 1.\nLevel 1: Damage +4",
+			"172": "{Blood Fury}\nUntamed Cyclops: Blood Rage level 2.\nLevel 1: Damage +4\nLevel 2: gains Aura of Fear",
+			"173": "{Blood Fury}\nUntamed Cyclops: Blood Rage level 3.\nLevel 1: Damage +4\nLevel 2: gains Aura of Fear\nLevel 3: gains Intimidating Attack",
+			"180": "{Blood Fury}\nBloodeye Cyclops: no Blood Rage level yet (200/500/1000 points for levels 1/2/3).",
+			"181": "{Blood Fury}\nBloodeye Cyclops: Blood Rage level 1.\nLevel 1: Damage +4",
+			"182": "{Blood Fury}\nBloodeye Cyclops: Blood Rage level 2.\nLevel 1: Damage +4\nLevel 2: gains Aura of Fear",
+			"183": "{Blood Fury}\nBloodeye Cyclops: Blood Rage level 3.\nLevel 1: Damage +4\nLevel 2: gains Aura of Fear\nLevel 3: gains Intimidating Attack"
+		}
+	},
+	"H5_RAGE_SKILL_H5C": {
+		"hidden": true,
+		"creatureNature": false
+	},
+	"H5_RAGE_EVENT_H5C": {
+		"hidden": true,
+		"creatureNature": false
+	},
+	"H5_SPELLPOWER_MULT_H5C": {
+		"hidden": true,
+		"creatureNature": false
+	},
+	"H5_NO_TREACHERY_H5C": {
+		"hidden": true,
+		"creatureNature": false
+	},
+	"H5_TREACHERY_DONE_H5C": {
+		"hidden": true,
+		"creatureNature": false,
+		"valueDescriptions": {
+			"1": "%s turn traitor and defect to the enemy!"
+		}
+	},
+	"H5_BEAR_ROAR_H5C": {
+		"hidden": true,
+		"creatureNature": false,
+		"valueDescriptions": {
+			"1": "The Bear Roar of %s drives back %s."
+		}
+	},
+	"H5_TAUNT_H5C": {
+		"creatureNature": false,
+		"graphics": {
+			"icon": "h5/abilities/taunt.png"
+		},
+		"description": "{Taunt}\nWhen an adjacent ally is attacked, it may draw the attack onto itself (taking about 95% of the damage).",
+		"valueDescriptions": {
+			"900001": "%s taunt the enemy, shielding %s from %d damage."
+		}
+	},
+	"H5_TAUNT_LINK_H5C": {
+		"hidden": true,
+		"creatureNature": false
+	},
+	"H5_BOND_OF_LIGHT_H5C": {
+		"creatureNature": false,
+		"graphics": {
+			"icon": "h5/abilities/bondOfLight.png"
+		},
+		"description": "{Follower of Light}\nWhen your hero or units cast Light Magic on an ally (except damage spells and Transposition), it gains the same effect at Expert level.",
+		"valueDescriptions": {
+			"900001": "%s follow the Light and also receive %s."
+		}
+	},
+	"H5_MANEUVER_H5C": {
+		"hidden": true,
+		"creatureNature": false,
+		"valueDescriptions": {
+			"1": "%s fall back and retaliate with a shot."
+		}
+	},
+	"H5_MAGNETISM_H5C": {
+		"hidden": true,
+		"creatureNature": false,
+		"valueDescriptions": {
+			"1": "%s draw the spell to themselves; allies take %d less damage."
+		}
+	},
+	"H5_OBSIDIAN_H5C": {
+		"hidden": true,
+		"creatureNature": false,
+		"valueDescriptions": {
+			"1": "The enchanted armor of %s absorbs the spell, restoring %d HP."
+		}
+	},
+	"H5_MANADRAIN_H5C": {
+		"hidden": true,
+		"creatureNature": false,
+		"valueDescriptions": {
+			"1": "%s drain mana from %s, restoring %d HP."
+		}
+	},
+	"H5_RAGE_LOG_H5C": {
+		"hidden": true,
+		"creatureNature": false,
+		"valueDescriptions": {
+			"1": "%s reach Blood Rage level %d!",
+			"2": "The rage of %s absorbs %d damage."
+		}
+	},
+	"H5_AB_LIGHTNING_H5C": {
+		"hidden": true,
+		"creatureNature": false,
+		"valueDescriptions": {
+			"1": "%s Call Lightning on %s for %d damage."
+		}
+	},
+	"H5_AB_INCINERATE_H5C": {
+		"hidden": true,
+		"creatureNature": false,
+		"valueDescriptions": {
+			"1": "%s Incinerate %s for %d damage."
+		}
+	},
+	"H5_AB_HARMTOUCH_H5C": {
+		"hidden": true,
+		"creatureNature": false,
+		"valueDescriptions": {
+			"1": "The Harm Touch of %s slays %s: %d killed."
+		}
+	},
+	"H5_AB_STORMBOLT_H5C": {
+		"hidden": true,
+		"creatureNature": false,
+		"valueDescriptions": {
+			"1": "The Storm Bolt of %s hits %s for %d damage."
+		}
+	},
+	"H5_AB_GOBLINTHROW_H5C": {
+		"hidden": true,
+		"creatureNature": false,
+		"valueDescriptions": {
+			"1": "%s hurl a Goblin at %s for %d damage."
+		}
+	},
+	"H5_AB_LEAP_H5C": {
+		"hidden": true,
+		"creatureNature": false,
+		"valueDescriptions": {
+			"1": "%s leap next to %s."
+		}
+	},
+	"H5_LEAP_H5C": {
+		"hidden": true,
+		"creatureNature": false
+	},
+	"H5_AB_HARPOON_H5C": {
+		"hidden": true,
+		"creatureNature": false,
+		"valueDescriptions": {
+			"1": "The harpoon of %s hits %s for %d damage."
+		}
+	},
+	"H5_AB_SUMMONOTHER_H5C": {
+		"hidden": true,
+		"creatureNature": false,
+		"valueDescriptions": {
+			"1": "%s teleport %s to their side."
+		}
+	},
+	"H5_AB_GAMBLE_H5C": {
+		"hidden": true,
+		"creatureNature": false,
+		"valueDescriptions": {
+			"1": "%s spin the Luck Gambler: %s get Luck %d for %d rounds."
+		}
+	},
+	"H5_AB_ORDER_H5C": {
+		"hidden": true,
+		"creatureNature": false,
+		"valueDescriptions": {
+			"1": "%s give orders to %s: %d damage dealt, Speed up by %d percent."
+		}
+	},
+	"H5_AB_SABOTAGE_H5C": {
+		"hidden": true,
+		"creatureNature": false,
+		"valueDescriptions": {
+			"1": "%s sabotage %s, disabling them for one round."
+		}
+	},
+	"H5_AB_SEDUCE_H5C": {
+		"hidden": true,
+		"creatureNature": false,
+		"valueDescriptions": {
+			"1": "%s seduce %s, taking control for %d rounds."
+		}
+	},
+	"H5_AB_DEFILE_H5C": {
+		"hidden": true,
+		"creatureNature": false,
+		"valueDescriptions": {
+			"1": "%s defile the magic of %s."
+		}
+	},
+	"H5_AB_RANDOM_H5C": {
+		"hidden": true,
+		"creatureNature": false,
+		"valueDescriptions": {
+			"1": "%s cast a Random Hex on %s."
+		}
+	},
+	"H5_AB_SYPHON_H5C": {
+		"hidden": true,
+		"creatureNature": false,
+		"valueDescriptions": {
+			"1": "%s syphon magic from %s (base %d): %d allied stacks gain +1 cast."
+		}
+	},
+	"H5_AB_MANAFEED_H5C": {
+		"hidden": true,
+		"creatureNature": false,
+		"valueDescriptions": {
+			"1": "%s feed their magic to the hero %s: spell cost -%d."
+		}
+	},
+	"H5_DASH_SHOW_H5C": {
+		"creatureNature": false,
+		"graphics": {
+			"icon": "h5/abilities/dash"
+		},
+		"description": "{Dash}\nSpeed +100%, ${val} rounds left."
+	},
+	"H5_AB_DASH_H5C": {
+		"hidden": true,
+		"creatureNature": false,
+		"valueDescriptions": {
+			"1": "%s Dash: Speed doubled for %d rounds."
+		}
+	},
+	"H5_FOREST_RAGE_SHOW_H5C": {
+		"creatureNature": false,
+		"graphics": {
+			"icon": "h5/abilities/rageOfTheForest"
+		},
+		"description": "{Rage of the Forest}\n${val} Defense turned to Attack, Speed raised, no longer entangles enemies."
+	},
+	"H5_AB_FORESTRAGE_H5C": {
+		"hidden": true,
+		"creatureNature": false,
+		"valueDescriptions": {
+			"1": "%s fly into Rage of the Forest, turning %d Defense into Attack."
+		}
+	},
+	"H5_FLAMESTRIKE_SHOW_H5C": {
+		"creatureNature": false,
+		"graphics": {
+			"icon": "h5/abilities/flamestrike"
+		},
+		"description": "{Flamestrike}\nNext attack deals +${val}% damage and leaves a Mark of Fire."
+	},
+	"H5_AB_FLAMESTRIKE_H5C": {
+		"hidden": true,
+		"creatureNature": false,
+		"valueDescriptions": {
+			"1": "%s charge a Flamestrike: their next attack deals %d percent more damage."
+		}
+	},
+	"H5_POWER_FEED_SHOW_H5C": {
+		"creatureNature": false,
+		"graphics": {
+			"icon": "h5/abilities/powerFeed"
+		},
+		"description": "{Power Feed}\nYour hero's Spell Power +${val}."
+	},
+	"H5_AB_POWERFEED_H5C": {
+		"hidden": true,
+		"creatureNature": false,
+		"valueDescriptions": {
+			"1": "%s form a Power Feed with their hero: hero Spell Power +%d."
+		}
+	},
+	"H5_AB_REVEAL_H5C": {
+		"hidden": true,
+		"creatureNature": false,
+		"valueDescriptions": {
+			"1": "Enemies draw near, and %s are revealed."
+		}
+	},
+	"H5_INVISIBLE_SHOW_H5C": {
+		"creatureNature": false,
+		"graphics": {
+			"icon": "h5/abilities/invisibility"
+		},
+		"description": "{Invisibility}\nCannot be targeted by attacks or spells; its attacks draw no retaliation. Revealed after attacking or when enemies are adjacent."
+	},
+	"H5_AB_INVISIBLE_H5C": {
+		"hidden": true,
+		"creatureNature": false,
+		"valueDescriptions": {
+			"1": "%s turn invisible for %d rounds."
+		}
+	},
+	"H5_BERSERKER_SHOW_H5C": {
+		"creatureNature": false,
+		"graphics": {
+			"icon": "h5/abilities/berserkerRage"
+		},
+		"description": "{Berserker Rage}\n${val} Defense turned to Attack; attacks the nearest unit, which cannot retaliate."
+	},
+	"H5_AB_BERSERK_H5C": {
+		"hidden": true,
+		"creatureNature": false,
+		"valueDescriptions": {
+			"1": "%s go berserk, turning %d Defense into Attack.",
+			"2": "%s calm their berserk rage."
+		}
+	},
+	"H5_AB_DEATHWAIL_H5C": {
+		"hidden": true,
+		"creatureNature": false,
+		"valueDescriptions": {
+			"1": "The Death Wail of %s hits %s for %d damage."
+		}
+	},
+	"H5_AB_EXPLOSION_H5C": {
+		"hidden": true,
+		"creatureNature": false,
+		"valueDescriptions": {
+			"1": "The explosion of %s hits %s for %d damage."
+		}
+	},
+	"H5_AB_RESTORE_H5C": {
+		"hidden": true,
+		"creatureNature": false,
+		"valueDescriptions": {
+			"1": "%s heal %s for %d HP, reviving %d."
+		}
+	},
+	"H5_SACRIFICE_SHOW_H5C": {
+		"creatureNature": false,
+		"graphics": {
+			"icon": "h5/abilities/sacrificeGoblin"
+		},
+		"description": "{Sacrifice Goblin}\nAttack, Defense and Morale +${val} each."
+	},
+	"H5_AB_HOWL_H5C": {
+		"hidden": true,
+		"creatureNature": false,
+		"valueDescriptions": {
+			"1": "%s howl, calling %d companions."
+		}
+	},
+	"H5_AB_SCATTER_H5C": {
+		"hidden": true,
+		"creatureNature": false,
+		"valueDescriptions": {
+			"1": "%s fire a Scatter Shot."
+		}
+	},
+	"H5_AB_STORM_H5C": {
+		"hidden": true,
+		"creatureNature": false,
+		"valueDescriptions": {
+			"1": "%s call down a storm cloud."
+		}
+	},
+	"H5_AB_SNARE_H5C": {
+		"hidden": true,
+		"creatureNature": false,
+		"valueDescriptions": {
+			"1": "%s set a trap."
+		}
+	},
+	"H5_DIVE_H5C": {
+		"hidden": true,
+		"creatureNature": false,
+		"valueDescriptions": {
+			"1": "%s soar into the air.",
+			"2": "%s dive down on %s for %d damage.",
+			"3": "%s dive down but miss."
+		}
+	},
+	"H5_PACKDIVE_H5C": {
+		"hidden": true,
+		"creatureNature": false,
+		"valueDescriptions": {
+			"1": "%s soar into the air.",
+			"2": "%s dive down on %s for %d damage."
+		}
+	},
+	"H5_AB_AMMOSTEAL_H5C": {
+		"hidden": true,
+		"creatureNature": false,
+		"valueDescriptions": {
+			"1": "%s rob %s of %d shots."
+		}
+	},
+	"H5_DEFILED_H5C": {
+		"creatureNature": false,
+		"graphics": {
+			"icon": "h5/abilities/defiledMagic"
+		},
+		"description": "{Defile Magic}\nIts spells have only ${val}% power."
+	},
+	"H5_GATING_H5C": {
+		"creatureNature": false,
+		"graphics": {
+			"icon": "h5/abilities/h5Gating.png"
+		},
+		"description": "{Hell Gate}\nWith at least 4 stacks of H5 demons on your side (not counting summons and clones), demons your hero brings in with Gating become their H5 counterparts in the same number, basic to basic and upgraded to upgraded; Gogs and Efreet, which H5 lacks, become Horned Demons and Pit Fiends of the same tier."
+	},
+	"H5_NECRO_RAISE_H5C": {
+		"creatureNature": false,
+		"graphics": {
+			"icon": "h5/abilities/h5NecroRaise.png"
+		},
+		"description": "{H5 Necromancy}\nIf the hero's army has at least 4 stacks of H5 undead (stacks present at battle start, not counting summons and clones), Necromancy after this victory raises H5 creatures instead: Skeletons become H5 Skeletons; Walking Dead, Ghosts, Vampires, Liches, Black Knights, Bone Dragons and others unlocked by skills, artifacts or specialties become H5 units of the same tier and form (upgrades to the first upgrade, third forms to third forms). The number raised uses the normal formula, scaled by the new unit's Hit Points. Raise targets from other mods (Undead Valley, Crypt units and so on) are unchanged."
+	},
+	"H5_ULTIMATE_H5C": {
+		"creatureNature": false
+	},
+	"H5_RAGE_START_H5C": {
+		"hidden": true,
+		"creatureNature": false
+	},
+	"H5_URGASH_LOG_H5C": {
+		"hidden": true,
+		"creatureNature": false,
+		"valueDescriptions": {
+			"1": "Call of Urgash: %s come through the Gating to join the fight (%d)."
+		}
+	},
+	"H5_AURA_MAGICRES_H5C": {
+		"creatureNature": false,
+		"graphics": {
+			"icon": "h5/abilities/auraMagicRes"
+		},
+		"description": "{Magic Resistance Aura}\nAn adjacent Unicorn gives Magic Resistance +${val}%"
+	},
+	"H5_AURA_BRAVERY_H5C": {
+		"creatureNature": false,
+		"graphics": {
+			"icon": "h5/abilities/auraBravery"
+		},
+		"description": "{Aura of Bravery}\nAn adjacent Minotaur Taskmaster keeps Morale at least +${val}"
+	},
+	"H5_AURA_COMMANDER_H5C": {
+		"creatureNature": false,
+		"graphics": {
+			"icon": "h5/abilities/auraCommander"
+		},
+		"description": "{Leading the Charge}\nAn adjacent Chieftain gives Speed +${val}%"
+	},
+	"H5_AURA_SHIELD_H5C": {
+		"creatureNature": false,
+		"graphics": {
+			"icon": "h5/abilities/auraShield"
+		},
+		"description": "{Shield Allies}\nAdjacent allies cut ranged damage taken by ${val}%"
+	},
+	"H5_MANA_H5C": {
+		"creatureNature": false,
+		"graphics": {
+			"icon": "h5/abilities/mana"
+		},
+		"description": "{Mana}\n${val} in total, refilled at the start of each battle\nCasting costs the spell's price"
+	},
+	"H5_MANA_MIN_H5C": {
+		"hidden": true,
+		"creatureNature": false
+	},
+	"H5_MANA_KEEPCASTS_H5C": {
+		"hidden": true,
+		"creatureNature": false
+	}
+}

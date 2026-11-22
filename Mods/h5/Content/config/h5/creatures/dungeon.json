@@ -1,0 +1,5464 @@
+{
+	"h5Dungeon3rdAcidicHydra": {
+		"name": {
+			"singular": "Foul Hydra",
+			"plural": "Foul Hydras"
+		},
+		"description": "Hydras, Deep Hydras and Foul Hydras are the level 5 units of the Heroes V Dungeon (merged into Dungeon). All of them have {No Enemy Retaliation} and {Enrage} (Attack increases when an allied stack is destroyed). Hydras have {Three-Headed Attack} (attacks the enemies in the 3 hexes in front at once). Deep Hydras also have {Six-Headed Attack} (attacks all adjacent enemies) and {Vitality Regeneration} (restores 22–37 Hit Points at the start of each round). Foul Hydras also have {Acid Blood} (when attacked in melee, sprays acid 4 hexes toward the attacker, dealing 25% damage) and {Six-Headed Attack} (attacks all adjacent enemies).\n\nFoul Hydras feed on the giant spiders of the caves, and this has changed the composition of their blood. Even a small wound makes their blood seethe, and acid gushes out in all directions like a fountain. So once wounded, a Foul Hydra repays its attackers with its own blood.\n\nSee also {Hydra}, {Deep Hydra}.",
+		"faction": "dungeon",
+		"level": 5,
+		"cost": {
+			"gold": 625
+		},
+		"speed": 6,
+		"hitPoints": 93,
+		"attack": 12,
+		"defense": 12,
+		"damage": {
+			"min": 9,
+			"max": 11
+		},
+		"doubleWide": true,
+		"fightValue": 830,
+		"aiValue": 924,
+		"growth": 3,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"h5AcidBlood": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5AcidBlood",
+				"val": 25,
+				"icon": "h5/abilities/h5AcidBlood",
+				"description": "{Acid Blood}\nWhen hit in melee, sprays\nacid 4 hexes, 25% dmg"
+			},
+			"h5Enraged": {
+				"icon": "h5/abilities/enraged",
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5Enraged",
+				"description": "{Enrage}\nAttack rises whenever\nan allied stack dies"
+			},
+			"blockRetaliation": {
+				"type": "BLOCKS_RETALIATION",
+				"description": "{No Enemy Retaliation}\nNo enemy retaliation"
+			},
+			"attackAllAdjacent": {
+				"type": "ATTACKS_ALL_ADJACENT",
+				"description": "{Six-Headed Attack}\nAttacks all adjacent enemies"
+			},
+			"skeletonTarget": {
+				"type": "SKELETON_TRANSFORMER_TARGET",
+				"subtype": "boneDragon",
+				"hidden": true
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 3,
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h5/Dungeon_3rd_AcidicHydra/battle.json",
+			"map": "h5/Dungeon_3rd_AcidicHydra/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Dungeon_3rd_AcidicHydra/map/atkL.png",
+			"mapAttackFromRight": "h5/Dungeon_3rd_AcidicHydra/map/atkR.png",
+			"iconLarge": "h5/Dungeon_3rd_AcidicHydra/iconLarge.png",
+			"iconSmall": "h5/Dungeon_3rd_AcidicHydra/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_Dungeon_T5_attack00.ogg",
+			"wince": "h5/h5_Dungeon_T5_hit.ogg",
+			"defend": "h5/h5_Dungeon_T5_hit.ogg",
+			"killed": "h5/h5_Dungeon_T5_death.ogg",
+			"move": "h5/h5_Dungeon_T5_move.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					3,
+					4,
+					5,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					3,
+					4,
+					4,
+					6,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					2,
+					3,
+					3,
+					4,
+					5,
+					6,
+					6,
+					7
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					7
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_RETALIATION"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "DEFENSIVE_STANCE",
+					"valueType": "ADDITIVE_VALUE"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "SPELL_AFTER_ATTACK",
+					"subtype": "acidBreath",
+					"addInfo": [
+						2,
+						2
+					]
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			}
+		]
+	},
+	"h5Dungeon3rdBlackRider": {
+		"name": {
+			"singular": "Brisk Raider",
+			"plural": "Brisk Raiders"
+		},
+		"description": "Dark Raiders, Grim Raiders and Brisk Raiders are the level 4 units of the Heroes V Dungeon (merged into Dungeon). Dark Raiders have {Rider Charge} (-20% to the target's Defense for every hex moved in the charge). Grim Raiders have {Rider Charge} (-20% to the target's Defense for every hex moved in the charge) and {Lizard Bite} (joins in when an ally attacks an adjacent enemy, dealing 50% damage). Brisk Raiders have {Lizard Bite} (joins in when an ally attacks an adjacent enemy, dealing 50% damage) and {Ride-By Attack} (enemies beside the charge path take 25% damage).\n\nCharging on fearsome lizards with tridents in hand, Brisk Raiders are the very image of the proud armies of the underworld. Their weapons have no weakness, and with their unstoppable momentum they cut down god and demon alike in their path.\n\nSee also {Dark Raider}, {Grim Raider}.",
+		"faction": "dungeon",
+		"level": 4,
+		"cost": {
+			"gold": 475
+		},
+		"speed": 9,
+		"hitPoints": 62,
+		"attack": 15,
+		"defense": 11,
+		"damage": {
+			"min": 6,
+			"max": 11
+		},
+		"doubleWide": true,
+		"fightValue": 626,
+		"aiValue": 718,
+		"growth": 3,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"h5AreaZone": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5AreaZone",
+				"val": 0,
+				"stacking": "h5AreaZone",
+				"propagator": "BATTLE_WIDE",
+				"hidden": true,
+				"description": "~"
+			},
+			"h5LizardBite": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5LizardBite",
+				"val": 50,
+				"icon": "h5/abilities/h5LizardBite",
+				"description": "{Lizard Bite}\nJoins ally attacks on\nadjacent foes, 50% dmg"
+			},
+			"h5RideByAttack": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5RideByAttack",
+				"val": 25,
+				"icon": "h5/abilities/h5RideByAttack",
+				"description": "{Ride-By Attack}\nFoes beside charge path\ntake 25% damage"
+			},
+			"skeletonTarget": {
+				"type": "SKELETON_TRANSFORMER_TARGET",
+				"subtype": "blackKnight",
+				"hidden": true
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 4,
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h5/Dungeon_3rd_BlackRider/battle.json",
+			"map": "h5/Dungeon_3rd_BlackRider/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Dungeon_3rd_BlackRider/map/atkL.png",
+			"mapAttackFromRight": "h5/Dungeon_3rd_BlackRider/map/atkR.png",
+			"iconLarge": "h5/Dungeon_3rd_BlackRider/iconLarge.png",
+			"iconSmall": "h5/Dungeon_3rd_BlackRider/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_Dungeon_T4_attack00.ogg",
+			"wince": "h5/h5_Dungeon_T4_hit.ogg",
+			"defend": "h5/h5_Dungeon_T4_hit.ogg",
+			"killed": "h5/h5_Dungeon_T4_death.ogg",
+			"move": "h5/h5_Dungeon_T4_move.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					5,
+					6,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "JOUSTING"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					4,
+					5,
+					6,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CHARGE_IMMUNITY",
+					"description": "{Steady Ranks}\nImmune to charge damage bonuses"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "RETURN_AFTER_STRIKE",
+					"description": "{Raid}\nReturns to its position after attacking"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h5Dungeon3rdBloodWitch2": {
+		"name": {
+			"singular": "Blood Sister",
+			"plural": "Blood Sisters"
+		},
+		"description": "Blood Maidens, Blood Furies and Blood Sisters are the level 2 units of the Heroes V Dungeon (merged into Dungeon). All of them have {Strike and Return} (returns to its original position after attacking). Blood Furies also have {No Enemy Retaliation}. Blood Sisters also have {No Enemy Retaliation} and {Immune to Weakness} (immune to the Weakness curse).\n\nSavage and reckless: that is the Blood Sister. Blood Sisters believe themselves invincible; they strike faster than any enemy and easily dodge their foes' blades.\n\nSee also {Blood Maiden}, {Blood Fury}.",
+		"faction": "dungeon",
+		"level": 2,
+		"cost": {
+			"gold": 330
+		},
+		"speed": 9,
+		"hitPoints": 24,
+		"attack": 9,
+		"defense": 7,
+		"damage": {
+			"min": 3,
+			"max": 7
+		},
+		"doubleWide": false,
+		"fightValue": 410,
+		"aiValue": 459,
+		"growth": 6,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"blockRetaliation": {
+				"type": "BLOCKS_RETALIATION",
+				"description": "{No Enemy Retaliation}\nNo enemy retaliation"
+			},
+			"returnAfterStrike": {
+				"type": "RETURN_AFTER_STRIKE",
+				"description": "{Strike and Return}\nReturns to its position after attacking"
+			},
+			"immune_curse": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "curse",
+				"description": "{Immune to Weakness}\nImmune to Weakness"
+			},
+			"immune_h5Curse": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "h5Curse",
+				"hidden": true
+			},
+			"immune_h5AbCurse": {
+				"type": "SPELL_IMMUNITY",
+				"subtype": "h5AbCurse",
+				"hidden": true
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 5,
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h5/Dungeon_3rd_BloodWitch2/battle.json",
+			"map": "h5/Dungeon_3rd_BloodWitch2/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Dungeon_3rd_BloodWitch2/map/atkL.png",
+			"mapAttackFromRight": "h5/Dungeon_3rd_BloodWitch2/map/atkR.png",
+			"iconLarge": "h5/Dungeon_3rd_BloodWitch2/iconLarge.png",
+			"iconSmall": "h5/Dungeon_3rd_BloodWitch2/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_Dungeon_T2_attack00.ogg",
+			"wince": "h5/h5_Dungeon_T2_hit.ogg",
+			"defend": "h5/h5_Dungeon_T2_hit.ogg",
+			"killed": "h5/h5_Dungeon_T2_death.ogg",
+			"move": "h5/h5_Dungeon_T2_move.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					3,
+					3,
+					3,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					3,
+					4,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					0,
+					1,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					3,
+					3,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "DOUBLE_DAMAGE_CHANCE"
+				},
+				"values": [
+					3,
+					6,
+					9,
+					12,
+					15,
+					18,
+					21,
+					24,
+					27,
+					30
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_ATTACK"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE"
+				},
+				"values": [
+					2,
+					4,
+					6,
+					8,
+					10,
+					12,
+					14,
+					16,
+					18,
+					20
+				]
+			}
+		]
+	},
+	"h5Dungeon3rdMinotaurCaptain": {
+		"name": {
+			"singular": "Minotaur Taskmaster",
+			"plural": "Minotaur Taskmasters"
+		},
+		"description": "Minotaurs, Minotaur Guards and Minotaur Taskmasters are the level 3 units of the Heroes V Dungeon (merged into Dungeon). Minotaurs have {Bravery} (Morale is always at least +1). Minotaur Guards have {Double Attack} (attacks twice) and {Bravery} (Morale is always at least +1). Minotaur Taskmasters have {Aura of Bravery} (adjacent allies always have at least +1 Morale).\n\nEven slaves need leaders. The orders of Minotaur Taskmasters are obeyed even by the Dark Elves. Taskmasters know that on the battlefield a slave faces nothing but death, and only constant encouragement can make slaves brave.\n\nSee also {Minotaur}, {Minotaur Guard}.",
+		"faction": "dungeon",
+		"level": 3,
+		"cost": {
+			"gold": 320
+		},
+		"speed": 6,
+		"hitPoints": 43,
+		"attack": 9,
+		"defense": 7,
+		"damage": {
+			"min": 4,
+			"max": 7
+		},
+		"doubleWide": false,
+		"fightValue": 393,
+		"aiValue": 465,
+		"growth": 5,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"h5AreaZone": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5AreaZone",
+				"val": 0,
+				"stacking": "h5AreaZone",
+				"propagator": "BATTLE_WIDE",
+				"hidden": true,
+				"description": "~"
+			},
+			"h5AuraOfBravery": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5AllyAura",
+				"val": 2,
+				"icon": "h5/abilities/auraBravery",
+				"description": "{Aura of Bravery}\nAdjacent allies have\nat least +1 Morale"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 6,
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h5/Dungeon_3rd_MinotaurCaptain/battle.json",
+			"map": "h5/Dungeon_3rd_MinotaurCaptain/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Dungeon_3rd_MinotaurCaptain/map/atkL.png",
+			"mapAttackFromRight": "h5/Dungeon_3rd_MinotaurCaptain/map/atkR.png",
+			"iconLarge": "h5/Dungeon_3rd_MinotaurCaptain/iconLarge.png",
+			"iconSmall": "h5/Dungeon_3rd_MinotaurCaptain/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_Dungeon_T3_attack00.ogg",
+			"wince": "h5/h5_Dungeon_T3_hit.ogg",
+			"defend": "h5/h5_Dungeon_T3_hit.ogg",
+			"killed": "h5/h5_Dungeon_T3_death.ogg",
+			"move": "h5/h5_Dungeon_T3_move.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "ENEMY_DEFENCE_REDUCTION"
+				},
+				"values": [
+					4,
+					8,
+					12,
+					16,
+					20,
+					24,
+					28,
+					32,
+					36,
+					40
+				]
+			},
+			{
+				"bonus": {
+					"type": "MIND_IMMUNITY",
+					"description": "{Steadfast Mind}\nImmune to Mind spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "BLOCKS_RETALIATION",
+					"description": "{No Retaliation}\nEnemy cannot retaliate when attacked"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h5Dungeon3rdRedDragon": {
+		"name": {
+			"singular": "Scarlet Dragon",
+			"plural": "Scarlet Dragons"
+		},
+		"description": "Shadow Dragons, Black Dragons and Scarlet Dragons are the level 7 units of the Heroes V Dungeon (merged into Dungeon). All of them can fly, are dragons and have {Fire Breath} (the attack also hits the unit behind the target). Black Dragons also have {Magic Immunity} (immune to all magic). Scarlet Dragons also have {Incinerate} (deals 1.5 times damage to an adjacent enemy, which cannot retaliate).\n\nOnly a madman would dream of fighting a Scarlet Dragon. When they swoop down from the sky, merciless flames engulf everything on the battlefield, and survival is all but impossible. When Scarlet Dragons join the fight, there is no warrior whose blood does not run cold.\n\nSee also {Shadow Dragon}, {Black Dragon}.",
+		"faction": "dungeon",
+		"level": 7,
+		"cost": {
+			"gold": 3600,
+			"sulfur": 2
+		},
+		"speed": 18,
+		"hitPoints": 238,
+		"attack": 21,
+		"defense": 21,
+		"damage": {
+			"min": 40,
+			"max": 53
+		},
+		"doubleWide": true,
+		"fightValue": 5165,
+		"aiValue": 6729,
+		"growth": 1,
+		"advMapAmount": {
+			"min": 1,
+			"max": 3
+		},
+		"abilities": {
+			"flying": {
+				"type": "FLYING"
+			},
+			"h5FireBreath": {
+				"type": "MULTIHEX_UNIT_ATTACK",
+				"icon": "h5/abilities/h5FireBreath",
+				"addInfo": [
+					"FF"
+				],
+				"description": "{Fire Breath}\nAlso hits the stack\nbehind the target"
+			},
+			"cast_h5AbIncinerate": {
+				"type": "SPELLCASTER",
+				"subtype": "h5AbIncinerate",
+				"val": 2,
+				"description": "{Incinerate}\nHits adjacent foe for 1.5x\ndamage, no retaliation"
+			},
+			"dragonNature": {
+				"type": "DRAGON_NATURE"
+			},
+			"skeletonTarget": {
+				"type": "SKELETON_TRANSFORMER_TARGET",
+				"subtype": "boneDragon",
+				"hidden": true
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 1,
+				"hidden": true
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 1
+			}
+		},
+		"graphics": {
+			"animation": "h5/Dungeon_3rd_RedDragon/battle.json",
+			"map": "h5/Dungeon_3rd_RedDragon/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Dungeon_3rd_RedDragon/map/atkL.png",
+			"mapAttackFromRight": "h5/Dungeon_3rd_RedDragon/map/atkR.png",
+			"iconLarge": "h5/Dungeon_3rd_RedDragon/iconLarge.png",
+			"iconSmall": "h5/Dungeon_3rd_RedDragon/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_Dungeon_T7_attack00.ogg",
+			"wince": "h5/h5_Dungeon_T7_hit.ogg",
+			"defend": "h5/h5_Dungeon_T7_hit.ogg",
+			"killed": "h5/h5_Dungeon_T7_death.ogg",
+			"move": "h5/h5_Dungeon_T7_move.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "BLOCKS_RETALIATION",
+					"description": "{No Retaliation}\nEnemy cannot retaliate when attacked"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "NEGATIVE_EFFECTS_IMMUNITY",
+					"subtype": "fire",
+					"description": "{Fire Ward}\nImmune to harmful Fire spells"
+				},
+				"values": [
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					10,
+					20,
+					30,
+					40,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_RETALIATION"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "SPELL_IMMUNITY",
+					"subtype": "berserk",
+					"description": "{Immune to Berserk}\nUnaffected by Berserk"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "SPELL_IMMUNITY",
+					"subtype": "frostRing",
+					"description": "{Immune to Frost Ring}\nUnaffected by Frost Ring"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h5Dungeon3rdShadowMistress": {
+		"name": {
+			"singular": "Shadow Mistress",
+			"plural": "Shadow Mistresses"
+		},
+		"description": "Shadow Witches, Shadow Matriarchs and Shadow Mistresses are the level 6 units of the Heroes V Dungeon (merged into Dungeon). All of them can cast {Slow}, {Armor Break} and {Righteous Might} (2 times per battle, 11 mana). Shadow Witches can shoot. Shadow Matriarchs can also shoot and have {Whip Strike} (melee attacks have a chance to cast Slow, Suffering or Berserk). Shadow Mistresses also have {Whip Strike} (melee attacks have a chance to cast Slow, Suffering or Berserk) and {Invisibility} (invisible for 3 rounds; its attacks cannot be retaliated against, and it is revealed after attacking).\n\nWithout exception, Dark Elves are captivated by the beauty of the Shadow Mistresses, yet they never risk speaking a single word to them, for it would bring them to ruin. These witches wield whips of fire, and remember: the lash is not reserved for the battlefield alone.\n\nSee also {Shadow Witch}, {Shadow Matriarch}.",
+		"faction": "dungeon",
+		"level": 6,
+		"cost": {
+			"gold": 1145
+		},
+		"speed": 7,
+		"hitPoints": 77,
+		"attack": 15,
+		"defense": 13,
+		"damage": {
+			"min": 19,
+			"max": 28
+		},
+		"doubleWide": false,
+		"fightValue": 1754,
+		"aiValue": 2071,
+		"growth": 2,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"h5WhipStrike": {
+				"icon": "h5/abilities/whipStrike",
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5ProcSpell",
+				"addInfo": {
+					"spells": [
+						"h5AbSlow",
+						"h5AbWeakness",
+						"h5AbBerserk"
+					],
+					"pf": 1.5,
+					"power": 3,
+					"mastery": 1,
+					"melee": true,
+					"ranged": false
+				},
+				"description": "{Whip Strike}\nMelee may cast Slow,\nSuffering or Berserk"
+			},
+			"cast_h5AbSlow": {
+				"type": "SPELLCASTER",
+				"subtype": "h5AbSlow",
+				"val": 2
+			},
+			"cast_h5AbDisruptingRay": {
+				"type": "SPELLCASTER",
+				"subtype": "h5AbDisruptingRay",
+				"val": 2
+			},
+			"cast_h5AbForgetfulness": {
+				"type": "SPELLCASTER",
+				"subtype": "h5AbForgetfulness",
+				"val": 0
+			},
+			"cast_h5AbBloodlust": {
+				"type": "SPELLCASTER",
+				"subtype": "h5AbBloodlust",
+				"val": 2
+			},
+			"cast_h5AbInvisibility": {
+				"type": "SPELLCASTER",
+				"subtype": "h5AbInvisibility",
+				"val": 2,
+				"description": "{Invisibility}\nInvisible 3 rounds; no\nretaliation; attack reveals"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 2,
+				"hidden": true
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 3
+			},
+			"h5Mana": {
+				"type": "H5_MANA_H5C",
+				"val": 14,
+				"stacking": "h5Dungeon3rdShadowMistressExpH5ManaH5c"
+			},
+			"h5ManaMin": {
+				"type": "H5_MANA_MIN_H5C",
+				"val": 4,
+				"hidden": true
+			},
+			"h5ManaPool": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5ManaPool",
+				"hidden": true,
+				"description": "~"
+			},
+			"h5ManaKeepCasts": {
+				"type": "H5_MANA_KEEPCASTS_H5C",
+				"val": 1,
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h5/Dungeon_3rd_ShadowMistress/battle.json",
+			"map": "h5/Dungeon_3rd_ShadowMistress/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Dungeon_3rd_ShadowMistress/map/atkL.png",
+			"mapAttackFromRight": "h5/Dungeon_3rd_ShadowMistress/map/atkR.png",
+			"iconLarge": "h5/Dungeon_3rd_ShadowMistress/iconLarge.png",
+			"iconSmall": "h5/Dungeon_3rd_ShadowMistress/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_Dungeon_T6_attack00.ogg",
+			"wince": "h5/h5_Dungeon_T6_hit.ogg",
+			"defend": "h5/h5_Dungeon_T6_hit.ogg",
+			"killed": "h5/h5_Dungeon_T6_death.ogg",
+			"move": "h5/h5_Dungeon_T6_move.ogg",
+			"shoot": "h5/h5_Dungeon_T6_rangeattack.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					2,
+					3,
+					4,
+					5,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "H5_MANA_H5C",
+					"stacking": "h5Dungeon3rdShadowMistressExpH5ManaH5c"
+				},
+				"values": [
+					14,
+					14,
+					14,
+					14,
+					18,
+					18,
+					18,
+					18,
+					22,
+					22
+				]
+			},
+			{
+				"bonus": {
+					"type": "MIND_IMMUNITY",
+					"description": "{Steadfast Mind}\nImmune to Mind spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "BLOCKS_RETALIATION",
+					"description": "{No Retaliation}\nEnemy cannot retaliate when attacked"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h5Dungeon3rdStalker": {
+		"name": {
+			"singular": "Stalker",
+			"plural": "Stalkers"
+		},
+		"description": "Agents, Cutthroats and Stalkers are the level 1 units of the Heroes V Dungeon (merged into Dungeon). Agents can shoot and have {Shooting Penalty} (half damage when shooting, no melee penalty). Cutthroats can shoot and have {Shooting Penalty} (half damage when shooting, no melee penalty) and {Poisonous Attack} (poisons the target for 3 rounds, dealing 1 × the number of poisoners in damage each round). Stalkers have {Poisonous Attack} (poisons the target for 3 rounds, dealing 1 × the number of poisoners in damage each round) and {Invisibility} (invisible for 3 rounds; its attacks cannot be retaliated against, and it is revealed after attacking).\n\nDark Elves always hold Cutthroats in high esteem, but they revere even more the master killers who come and go without a trace and strike their targets without warning. These are the Stalkers, those who have grasped the secrets of the shadow ambush. Stalkers slip like ghosts through traps, spells and flashing blades, silently close in on the guards, and then strike the fatal blow.\n\nSee also {Agent}, {Cutthroat}.",
+		"faction": "dungeon",
+		"level": 1,
+		"cost": {
+			"gold": 145
+		},
+		"speed": 7,
+		"hitPoints": 13,
+		"attack": 10,
+		"defense": 6,
+		"damage": {
+			"min": 3,
+			"max": 5
+		},
+		"doubleWide": false,
+		"fightValue": 196,
+		"aiValue": 198,
+		"growth": 10,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"h5Poison": {
+				"icon": "h5/abilities/poison",
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5Poison",
+				"addInfo": {
+					"perCreature": 1,
+					"turns": 3
+				},
+				"description": "{Poisonous Attack}\nPoison 3 rounds: 1 dmg\nper attacker each round"
+			},
+			"cast_h5AbInvisibility": {
+				"type": "SPELLCASTER",
+				"subtype": "h5AbInvisibility",
+				"val": 2,
+				"description": "{Invisibility}\nInvisible 3 rounds; no\nretaliation; attack reveals"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 7,
+				"hidden": true
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 1
+			}
+		},
+		"graphics": {
+			"animation": "h5/Dungeon_3rd_Stalker/battle.json",
+			"map": "h5/Dungeon_3rd_Stalker/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Dungeon_3rd_Stalker/map/atkL.png",
+			"mapAttackFromRight": "h5/Dungeon_3rd_Stalker/map/atkR.png",
+			"iconLarge": "h5/Dungeon_3rd_Stalker/iconLarge.png",
+			"iconSmall": "h5/Dungeon_3rd_Stalker/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_Dungeon_T1_attack00.ogg",
+			"wince": "h5/h5_Dungeon_T1_hit.ogg",
+			"defend": "h5/h5_Dungeon_T1_hit.ogg",
+			"killed": "h5/h5_Dungeon_T1_death.ogg",
+			"move": "h5/h5_Dungeon_T1_move.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "DOUBLE_DAMAGE_CHANCE"
+				},
+				"values": [
+					2,
+					4,
+					6,
+					8,
+					10,
+					12,
+					14,
+					16,
+					18,
+					20
+				]
+			},
+			{
+				"bonus": {
+					"type": "ENEMY_DEFENCE_REDUCTION"
+				},
+				"values": [
+					3,
+					6,
+					9,
+					12,
+					15,
+					18,
+					21,
+					24,
+					27,
+					30
+				]
+			},
+			{
+				"bonus": {
+					"type": "SPELL_IMMUNITY",
+					"subtype": "blind",
+					"description": "{Immune to Blind}\nUnaffected by Blind"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h5DungeonAssassin": {
+		"name": {
+			"singular": "Cutthroat",
+			"plural": "Cutthroats"
+		},
+		"description": "Agents, Cutthroats and Stalkers are the level 1 units of the Heroes V Dungeon (merged into Dungeon). Agents can shoot and have {Shooting Penalty} (half damage when shooting, no melee penalty). Cutthroats can shoot and have {Shooting Penalty} (half damage when shooting, no melee penalty) and {Poisonous Attack} (poisons the target for 3 rounds, dealing 1 × the number of poisoners in damage each round). Stalkers have {Poisonous Attack} (poisons the target for 3 rounds, dealing 1 × the number of poisoners in damage each round) and {Invisibility} (invisible for 3 rounds; its attacks cannot be retaliated against, and it is revealed after attacking).\n\nThe main role of Cutthroats on the battlefield is to attack the enemy from range with deadly crossbows. Their magic bolts can gravely wound enemies and poison them.\n\nSee also {Agent}, {Stalker}.",
+		"faction": "dungeon",
+		"level": 1,
+		"cost": {
+			"gold": 145
+		},
+		"speed": 5,
+		"hitPoints": 12,
+		"attack": 8,
+		"defense": 4,
+		"damage": {
+			"min": 2,
+			"max": 4
+		},
+		"doubleWide": false,
+		"fightValue": 199,
+		"aiValue": 201,
+		"growth": 10,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"shooter": {
+				"type": "SHOOTER"
+			},
+			"noMeleePenalty": {
+				"type": "NO_MELEE_PENALTY",
+				"description": "{Shooting Penalty}\nShooting damage halved\nNo melee penalty"
+			},
+			"noDistancePenalty": {
+				"type": "NO_DISTANCE_PENALTY",
+				"hidden": true
+			},
+			"h5RangePenalty": {
+				"type": "PERCENTAGE_DAMAGE_BOOST",
+				"subtype": "damageTypeRanged",
+				"val": -50
+			},
+			"h5Poison": {
+				"icon": "h5/abilities/poison",
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5Poison",
+				"addInfo": {
+					"perCreature": 1,
+					"turns": 3
+				},
+				"description": "{Poisonous Attack}\nPoison 3 rounds: 1 dmg\nper attacker each round"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 7,
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h5/Dungeon_Assassin/battle.json",
+			"map": "h5/Dungeon_Assassin/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Dungeon_Assassin/map/atkL.png",
+			"mapAttackFromRight": "h5/Dungeon_Assassin/map/atkR.png",
+			"iconLarge": "h5/Dungeon_Assassin/iconLarge.png",
+			"iconSmall": "h5/Dungeon_Assassin/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"frameAngles": [
+					90,
+					60,
+					45,
+					30,
+					0,
+					-30,
+					-45,
+					-60,
+					-90
+				],
+				"offset": {
+					"upperX": 20,
+					"upperY": -97,
+					"middleX": 38,
+					"middleY": -86,
+					"lowerX": 21,
+					"lowerY": -74
+				},
+				"attackClimaxFrame": 6,
+				"projectile": "h5/Dungeon_Assassin/projectile.json"
+			}
+		},
+		"sound": {
+			"attack": "h5/h5_DarkAssasinAttack.ogg",
+			"wince": "h5/h5_DarkAssasinHit.ogg",
+			"defend": "h5/h5_DarkAssasinHit.ogg",
+			"killed": "h5/h5_DarkAssasinDeath.ogg",
+			"move": "h5/h5_DarkAssasinMove.ogg",
+			"shoot": "h5/h5_DarkAssasinRangeattack.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_WALL_PENALTY",
+					"description": "{Siege Shooter}\nNo damage loss when shooting over walls"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "SHOTS"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "DOUBLE_DAMAGE_CHANCE"
+				},
+				"values": [
+					2,
+					4,
+					6,
+					8,
+					10,
+					12,
+					14,
+					16,
+					18,
+					20
+				]
+			}
+		],
+		"shots": 14
+	},
+	"h5DungeonBlackDragon": {
+		"name": {
+			"singular": "Black Dragon",
+			"plural": "Black Dragons"
+		},
+		"description": "Shadow Dragons, Black Dragons and Scarlet Dragons are the level 7 units of the Heroes V Dungeon (merged into Dungeon). All of them can fly, are dragons and have {Fire Breath} (the attack also hits the unit behind the target). Black Dragons also have {Magic Immunity} (immune to all magic). Scarlet Dragons also have {Incinerate} (deals 1.5 times damage to an adjacent enemy, which cannot retaliate).\n\nBlack Dragons are the older and more powerful kin of the Shadow Dragons. They not only possess all the abilities of Shadow Dragons but are even fiercer, and they are completely immune to magic.\n\nSee also {Shadow Dragon}, {Scarlet Dragon}.",
+		"faction": "dungeon",
+		"level": 7,
+		"cost": {
+			"gold": 3600,
+			"sulfur": 2
+		},
+		"speed": 16,
+		"hitPoints": 243,
+		"attack": 21,
+		"defense": 21,
+		"damage": {
+			"min": 40,
+			"max": 62
+		},
+		"doubleWide": true,
+		"fightValue": 5209,
+		"aiValue": 6786,
+		"growth": 1,
+		"advMapAmount": {
+			"min": 1,
+			"max": 3
+		},
+		"abilities": {
+			"flying": {
+				"type": "FLYING"
+			},
+			"immuneToAllSpells": {
+				"type": "LEVEL_SPELL_IMMUNITY",
+				"val": 5,
+				"description": "{Magic Immunity}\nImmune to all spells"
+			},
+			"h5FireBreath": {
+				"type": "MULTIHEX_UNIT_ATTACK",
+				"icon": "h5/abilities/h5FireBreath",
+				"addInfo": [
+					"FF"
+				],
+				"description": "{Fire Breath}\nAlso hits the stack\nbehind the target"
+			},
+			"dragonNature": {
+				"type": "DRAGON_NATURE"
+			},
+			"skeletonTarget": {
+				"type": "SKELETON_TRANSFORMER_TARGET",
+				"subtype": "boneDragon",
+				"hidden": true
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 1,
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h5/Dungeon_Black_Dragon/battle.json",
+			"map": "h5/Dungeon_Black_Dragon/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Dungeon_Black_Dragon/map/atkL.png",
+			"mapAttackFromRight": "h5/Dungeon_Black_Dragon/map/atkR.png",
+			"iconLarge": "h5/Dungeon_Black_Dragon/iconLarge.png",
+			"iconSmall": "h5/Dungeon_Black_Dragon/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_DungeonDragonAttack.ogg",
+			"wince": "h5/h5_BlackDragonHit.ogg",
+			"defend": "h5/h5_BlackDragonHit.ogg",
+			"killed": "h5/h5_BlackDragonDeath.ogg",
+			"move": "h5/h5_BlackDragonMove.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "BLOCKS_RETALIATION",
+					"description": "{No Retaliation}\nEnemy cannot retaliate when attacked"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "RECEPTIVE",
+					"description": "{Receptive}\nCan receive friendly beneficial spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_RETALIATION"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "SPELL_AFTER_ATTACK",
+					"subtype": "dispelHelpful",
+					"addInfo": [
+						2,
+						2
+					]
+				},
+				"values": [
+					3,
+					6,
+					9,
+					12,
+					15,
+					18,
+					21,
+					24,
+					27,
+					30
+				]
+			},
+			{
+				"bonus": {
+					"type": "DOUBLE_DAMAGE_CHANCE"
+				},
+				"values": [
+					2,
+					4,
+					6,
+					8,
+					10,
+					12,
+					14,
+					16,
+					18,
+					20
+				]
+			},
+			{
+				"bonus": {
+					"type": "SPELL_RESISTANCE_AURA"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					5,
+					5,
+					10,
+					10,
+					15,
+					20
+				]
+			}
+		]
+	},
+	"h5DungeonBloodWitch": {
+		"name": {
+			"singular": "Blood Fury",
+			"plural": "Blood Furies"
+		},
+		"description": "Blood Maidens, Blood Furies and Blood Sisters are the level 2 units of the Heroes V Dungeon (merged into Dungeon). All of them have {Strike and Return} (returns to its original position after attacking). Blood Furies also have {No Enemy Retaliation}. Blood Sisters also have {No Enemy Retaliation} and {Immune to Weakness} (immune to the Weakness curse).\n\nBlood Furies are the elite warriors of the Dark Elf army. They can swiftly move up to an opponent, attack, and immediately return to their starting position. Blood Furies use this tactic so skillfully that the enemy has no time to react or retaliate.\n\nSee also {Blood Maiden}, {Blood Sister}.",
+		"faction": "dungeon",
+		"level": 2,
+		"cost": {
+			"gold": 330
+		},
+		"speed": 9,
+		"hitPoints": 18,
+		"attack": 9,
+		"defense": 5,
+		"damage": {
+			"min": 5,
+			"max": 6
+		},
+		"doubleWide": false,
+		"fightValue": 416,
+		"aiValue": 466,
+		"growth": 6,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"blockRetaliation": {
+				"type": "BLOCKS_RETALIATION",
+				"description": "{No Enemy Retaliation}\nNo enemy retaliation"
+			},
+			"returnAfterStrike": {
+				"type": "RETURN_AFTER_STRIKE",
+				"description": "{Strike and Return}\nReturns to its position after attacking"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 5,
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h5/Dungeon_Blood_Witch/battle.json",
+			"map": "h5/Dungeon_Blood_Witch/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Dungeon_Blood_Witch/map/atkL.png",
+			"mapAttackFromRight": "h5/Dungeon_Blood_Witch/map/atkR.png",
+			"iconLarge": "h5/Dungeon_Blood_Witch/iconLarge.png",
+			"iconSmall": "h5/Dungeon_Blood_Witch/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_BloodyWitchAttack00.ogg",
+			"wince": "h5/h5_BloodyWitchHit.ogg",
+			"defend": "h5/h5_BloodyWitchHit.ogg",
+			"killed": "h5/h5_BloodyWitchDeath.ogg",
+			"move": "h5/h5_BloodyWitchMove.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					3,
+					3,
+					3,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					3,
+					4,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					0,
+					1,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					3,
+					3,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "DOUBLE_DAMAGE_CHANCE"
+				},
+				"values": [
+					3,
+					6,
+					9,
+					12,
+					15,
+					18,
+					21,
+					24,
+					27,
+					30
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_ATTACK"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "SPELL_IMMUNITY",
+					"subtype": "curse",
+					"description": "{Immune to Curse}\nUnaffected by Curse"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h5DungeonChaosHydra": {
+		"name": {
+			"singular": "Deep Hydra",
+			"plural": "Deep Hydras"
+		},
+		"description": "Hydras, Deep Hydras and Foul Hydras are the level 5 units of the Heroes V Dungeon (merged into Dungeon). All of them have {No Enemy Retaliation} and {Enrage} (Attack increases when an allied stack is destroyed). Hydras have {Three-Headed Attack} (attacks the enemies in the 3 hexes in front at once). Deep Hydras also have {Six-Headed Attack} (attacks all adjacent enemies) and {Vitality Regeneration} (restores 22–37 Hit Points at the start of each round). Foul Hydras also have {Acid Blood} (when attacked in melee, sprays acid 4 hexes toward the attacker, dealing 25% damage) and {Six-Headed Attack} (attacks all adjacent enemies).\n\nDeep Hydras are older than ordinary Hydras and have six heads instead of three. This greatly increases their killing power and lets them attack more enemies.\n\nSee also {Hydra}, {Foul Hydra}.",
+		"faction": "dungeon",
+		"level": 5,
+		"cost": {
+			"gold": 625
+		},
+		"speed": 5,
+		"hitPoints": 93,
+		"attack": 12,
+		"defense": 13,
+		"damage": {
+			"min": 9,
+			"max": 13
+		},
+		"doubleWide": true,
+		"fightValue": 824,
+		"aiValue": 917,
+		"growth": 3,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"blockRetaliation": {
+				"type": "BLOCKS_RETALIATION",
+				"description": "{No Enemy Retaliation}\nNo enemy retaliation"
+			},
+			"h5Enraged": {
+				"icon": "h5/abilities/enraged",
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5Enraged",
+				"description": "{Enrage}\nAttack rises whenever\nan allied stack dies"
+			},
+			"attackAllAdjacent": {
+				"type": "ATTACKS_ALL_ADJACENT",
+				"description": "{Six-Headed Attack}\nAttacks all adjacent enemies"
+			},
+			"h5Regeneration": {
+				"icon": "h5/abilities/regeneration",
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5Regeneration",
+				"addInfo": {
+					"min": 22,
+					"max": 37
+				},
+				"description": "{Vitality Regeneration}\nRestores 22-37 HP at\nthe start of each round"
+			},
+			"skeletonTarget": {
+				"type": "SKELETON_TRANSFORMER_TARGET",
+				"subtype": "boneDragon",
+				"hidden": true
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 3,
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h5/Dungeon_Chaos_Hydra/battle.json",
+			"map": "h5/Dungeon_Chaos_Hydra/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Dungeon_Chaos_Hydra/map/atkL.png",
+			"mapAttackFromRight": "h5/Dungeon_Chaos_Hydra/map/atkR.png",
+			"iconLarge": "h5/Dungeon_Chaos_Hydra/iconLarge.png",
+			"iconSmall": "h5/Dungeon_Chaos_Hydra/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_ChaosHydraAttack02.ogg",
+			"wince": "h5/h5_ChaosHydraHit.ogg",
+			"defend": "h5/h5_ChaosHydraHit.ogg",
+			"killed": "h5/h5_ChaosHydraDeath.ogg",
+			"move": "h5/h5_ChaosHydraMove.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					3,
+					4,
+					5,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					3,
+					4,
+					4,
+					6,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					2,
+					3,
+					3,
+					4,
+					5,
+					6,
+					6,
+					7
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					7
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_RETALIATION"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "DEFENSIVE_STANCE",
+					"valueType": "ADDITIVE_VALUE"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "LEVEL_SPELL_IMMUNITY"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1
+				]
+			}
+		]
+	},
+	"h5DungeonDeepDragon": {
+		"name": {
+			"singular": "Shadow Dragon",
+			"plural": "Shadow Dragons"
+		},
+		"description": "Shadow Dragons, Black Dragons and Scarlet Dragons are the level 7 units of the Heroes V Dungeon (merged into Dungeon). All of them can fly, are dragons and have {Fire Breath} (the attack also hits the unit behind the target). Black Dragons also have {Magic Immunity} (immune to all magic). Scarlet Dragons also have {Incinerate} (deals 1.5 times damage to an adjacent enemy, which cannot retaliate).\n\nShadow Dragons live in the dark corners deep underground. The Dark Elves worship them as incarnations of the Great Mother, and they occasionally help their worshippers. A single Shadow Dragon can be a truly formidable foe. Shadow Dragons breathe clouds of fire that can reduce even the most stubborn enemy to ashes in an instant.\n\nSee also {Black Dragon}, {Scarlet Dragon}.",
+		"faction": "dungeon",
+		"level": 7,
+		"cost": {
+			"gold": 2915,
+			"sulfur": 1
+		},
+		"speed": 16,
+		"hitPoints": 202,
+		"attack": 18,
+		"defense": 17,
+		"damage": {
+			"min": 40,
+			"max": 62
+		},
+		"doubleWide": true,
+		"fightValue": 4232,
+		"aiValue": 5513,
+		"growth": 1,
+		"advMapAmount": {
+			"min": 1,
+			"max": 3
+		},
+		"abilities": {
+			"flying": {
+				"type": "FLYING"
+			},
+			"h5FireBreath": {
+				"type": "MULTIHEX_UNIT_ATTACK",
+				"icon": "h5/abilities/h5FireBreath",
+				"addInfo": [
+					"FF"
+				],
+				"description": "{Fire Breath}\nAlso hits the stack\nbehind the target"
+			},
+			"dragonNature": {
+				"type": "DRAGON_NATURE"
+			},
+			"skeletonTarget": {
+				"type": "SKELETON_TRANSFORMER_TARGET",
+				"subtype": "boneDragon",
+				"hidden": true
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 1,
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h5/Dungeon_Deep_Dragon/battle.json",
+			"map": "h5/Dungeon_Deep_Dragon/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Dungeon_Deep_Dragon/map/atkL.png",
+			"mapAttackFromRight": "h5/Dungeon_Deep_Dragon/map/atkR.png",
+			"iconLarge": "h5/Dungeon_Deep_Dragon/iconLarge.png",
+			"iconSmall": "h5/Dungeon_Deep_Dragon/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_DungeonDragonAttack.ogg",
+			"wince": "h5/h5_DungeonDragonHit.ogg",
+			"defend": "h5/h5_DungeonDragonHit.ogg",
+			"killed": "h5/h5_DungeonDragonDeath.ogg",
+			"move": "h5/h5_DungeonDragonMove.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					10,
+					20,
+					30,
+					40,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "SPELL_IMMUNITY",
+					"subtype": "blind",
+					"description": "{Immune to Blind}\nUnaffected by Blind"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "BLOCKS_RETALIATION",
+					"description": "{No Retaliation}\nEnemy cannot retaliate when attacked"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_RETALIATION"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "DOUBLE_DAMAGE_CHANCE"
+				},
+				"values": [
+					2,
+					4,
+					6,
+					8,
+					10,
+					12,
+					14,
+					16,
+					18,
+					20
+				]
+			},
+			{
+				"bonus": {
+					"type": "SPELL_IMMUNITY",
+					"subtype": "berserk",
+					"description": "{Immune to Berserk}\nUnaffected by Berserk"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true
+				]
+			}
+		],
+		"upgrades": [
+			"h5DungeonBlackDragon",
+			"h5Dungeon3rdRedDragon"
+		]
+	},
+	"h5DungeonHydra": {
+		"name": {
+			"singular": "Hydra",
+			"plural": "Hydras"
+		},
+		"description": "Hydras, Deep Hydras and Foul Hydras are the level 5 units of the Heroes V Dungeon (merged into Dungeon). All of them have {No Enemy Retaliation} and {Enrage} (Attack increases when an allied stack is destroyed). Hydras have {Three-Headed Attack} (attacks the enemies in the 3 hexes in front at once). Deep Hydras also have {Six-Headed Attack} (attacks all adjacent enemies) and {Vitality Regeneration} (restores 22–37 Hit Points at the start of each round). Foul Hydras also have {Acid Blood} (when attacked in melee, sprays acid 4 hexes toward the attacker, dealing 25% damage) and {Six-Headed Attack} (attacks all adjacent enemies).\n\nHydras are another underground creature tamed and enslaved by the Dark Elves. Although they look as if they might be related to dragons, they are in fact slow-witted and lack magic, and their origin is still unknown. Whatever the case, they are very powerfully built and can use their three heads to fight several enemies at once.\n\nSee also {Deep Hydra}, {Foul Hydra}.",
+		"faction": "dungeon",
+		"level": 5,
+		"cost": {
+			"gold": 430
+		},
+		"speed": 5,
+		"hitPoints": 59,
+		"attack": 12,
+		"defense": 10,
+		"damage": {
+			"min": 7,
+			"max": 13
+		},
+		"doubleWide": true,
+		"fightValue": 603,
+		"aiValue": 671,
+		"growth": 3,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"blockRetaliation": {
+				"type": "BLOCKS_RETALIATION",
+				"description": "{No Enemy Retaliation}\nNo enemy retaliation"
+			},
+			"h5Enraged": {
+				"icon": "h5/abilities/enraged",
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5Enraged",
+				"description": "{Enrage}\nAttack rises whenever\nan allied stack dies"
+			},
+			"threeHeadedAttack": {
+				"type": "THREE_HEADED_ATTACK",
+				"description": "{Three-Headed Attack}\nHits enemies in the 3\nhexes in front at once"
+			},
+			"skeletonTarget": {
+				"type": "SKELETON_TRANSFORMER_TARGET",
+				"subtype": "boneDragon",
+				"hidden": true
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 3,
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h5/Dungeon_Hydra/battle.json",
+			"map": "h5/Dungeon_Hydra/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Dungeon_Hydra/map/atkL.png",
+			"mapAttackFromRight": "h5/Dungeon_Hydra/map/atkR.png",
+			"iconLarge": "h5/Dungeon_Hydra/iconLarge.png",
+			"iconSmall": "h5/Dungeon_Hydra/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_HydraAttack.ogg",
+			"wince": "h5/h5_HydraHit.ogg",
+			"defend": "h5/h5_HydraHit.ogg",
+			"killed": "h5/h5_HydraDeath.ogg",
+			"move": "h5/h5_HydraMove.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					3,
+					4,
+					5,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					3,
+					4,
+					4,
+					6,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					2,
+					3,
+					3,
+					4,
+					5,
+					6,
+					6,
+					7
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					7
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "ADDITIONAL_RETALIATION"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "DEFENSIVE_STANCE",
+					"valueType": "ADDITIVE_VALUE"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "SPELL_IMMUNITY",
+					"subtype": "blind",
+					"description": "{Immune to Blind}\nUnaffected by Blind"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "ENEMY_DEFENCE_REDUCTION"
+				},
+				"values": [
+					3,
+					6,
+					9,
+					12,
+					15,
+					18,
+					21,
+					24,
+					27,
+					30
+				]
+			}
+		],
+		"upgrades": [
+			"h5DungeonChaosHydra",
+			"h5Dungeon3rdAcidicHydra"
+		]
+	},
+	"h5DungeonMatriarch": {
+		"name": {
+			"singular": "Shadow Matriarch",
+			"plural": "Shadow Matriarchs"
+		},
+		"description": "Shadow Witches, Shadow Matriarchs and Shadow Mistresses are the level 6 units of the Heroes V Dungeon (merged into Dungeon). All of them can cast {Slow}, {Armor Break} and {Righteous Might} (2 times per battle, 11 mana). Shadow Witches can shoot. Shadow Matriarchs can also shoot and have {Whip Strike} (melee attacks have a chance to cast Slow, Suffering or Berserk). Shadow Mistresses also have {Whip Strike} (melee attacks have a chance to cast Slow, Suffering or Berserk) and {Invisibility} (invisible for 3 rounds; its attacks cannot be retaliated against, and it is revealed after attacking).\n\nShadow Matriarchs are the elite force of the Dark Elf army. They use war whips in melee, but these are far less impressive than their deadly Dark magic. Shadow Matriarchs command more spells than Shadow Witches.\n\nSee also {Shadow Witch}, {Shadow Mistress}.",
+		"faction": "dungeon",
+		"level": 6,
+		"cost": {
+			"gold": 1145
+		},
+		"speed": 7,
+		"hitPoints": 69,
+		"attack": 15,
+		"defense": 13,
+		"damage": {
+			"min": 16,
+			"max": 25
+		},
+		"doubleWide": false,
+		"fightValue": 1697,
+		"aiValue": 2003,
+		"growth": 2,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"shooter": {
+				"type": "SHOOTER"
+			},
+			"h5WhipStrike": {
+				"icon": "h5/abilities/whipStrike",
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5ProcSpell",
+				"addInfo": {
+					"spells": [
+						"h5AbSlow",
+						"h5AbWeakness",
+						"h5AbBerserk"
+					],
+					"pf": 1.5,
+					"power": 3,
+					"mastery": 1,
+					"melee": true,
+					"ranged": false
+				},
+				"description": "{Whip Strike}\nMelee may cast Slow,\nSuffering or Berserk"
+			},
+			"cast_h5AbSlow": {
+				"type": "SPELLCASTER",
+				"subtype": "h5AbSlow",
+				"val": 2
+			},
+			"cast_h5AbDisruptingRay": {
+				"type": "SPELLCASTER",
+				"subtype": "h5AbDisruptingRay",
+				"val": 2
+			},
+			"cast_h5AbForgetfulness": {
+				"type": "SPELLCASTER",
+				"subtype": "h5AbForgetfulness",
+				"val": 0
+			},
+			"cast_h5AbBloodlust": {
+				"type": "SPELLCASTER",
+				"subtype": "h5AbBloodlust",
+				"val": 2
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 2,
+				"hidden": true
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 3
+			},
+			"h5Mana": {
+				"type": "H5_MANA_H5C",
+				"val": 14,
+				"stacking": "h5DungeonMatriarchExpH5ManaH5c"
+			},
+			"h5ManaMin": {
+				"type": "H5_MANA_MIN_H5C",
+				"val": 4,
+				"hidden": true
+			},
+			"h5ManaPool": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5ManaPool",
+				"hidden": true,
+				"description": "~"
+			},
+			"noSpellcastByDefault": {
+				"type": "NO_SPELLCAST_BY_DEFAULT",
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h5/Dungeon_Matriarch/battle.json",
+			"map": "h5/Dungeon_Matriarch/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Dungeon_Matriarch/map/atkL.png",
+			"mapAttackFromRight": "h5/Dungeon_Matriarch/map/atkR.png",
+			"iconLarge": "h5/Dungeon_Matriarch/iconLarge.png",
+			"iconSmall": "h5/Dungeon_Matriarch/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"frameAngles": [
+					90,
+					60,
+					45,
+					30,
+					0,
+					-30,
+					-45,
+					-60,
+					-90
+				],
+				"offset": {
+					"upperX": 26,
+					"upperY": -72,
+					"middleX": 43,
+					"middleY": -60,
+					"lowerX": 18,
+					"lowerY": -46
+				},
+				"attackClimaxFrame": 6,
+				"projectile": "h5/Dungeon_Matriarch/projectile.json"
+			}
+		},
+		"sound": {
+			"attack": "h5/h5_MatronAttack00.ogg",
+			"wince": "h5/h5_MatronHit.ogg",
+			"defend": "h5/h5_MatronHit.ogg",
+			"killed": "h5/h5_MatronDeath.ogg",
+			"move": "h5/h5_MatronMove.ogg",
+			"shoot": "h5/h5_MatronRangeAttack.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					2,
+					3,
+					4,
+					5,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "H5_MANA_H5C",
+					"stacking": "h5DungeonMatriarchExpH5ManaH5c"
+				},
+				"values": [
+					14,
+					14,
+					14,
+					14,
+					18,
+					18,
+					18,
+					18,
+					22,
+					22
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_WALL_PENALTY",
+					"description": "{Siege Shooter}\nNo damage loss when shooting over walls"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_DISTANCE_PENALTY",
+					"description": "{Sharpshooter}\nNo penalty for long-range shots"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true
+				]
+			}
+		],
+		"shots": 11
+	},
+	"h5DungeonMatron": {
+		"name": {
+			"singular": "Shadow Witch",
+			"plural": "Shadow Witches"
+		},
+		"description": "Shadow Witches, Shadow Matriarchs and Shadow Mistresses are the level 6 units of the Heroes V Dungeon (merged into Dungeon). All of them can cast {Slow}, {Armor Break} and {Righteous Might} (2 times per battle, 11 mana). Shadow Witches can shoot. Shadow Matriarchs can also shoot and have {Whip Strike} (melee attacks have a chance to cast Slow, Suffering or Berserk). Shadow Mistresses also have {Whip Strike} (melee attacks have a chance to cast Slow, Suffering or Berserk) and {Invisibility} (invisible for 3 rounds; its attacks cannot be retaliated against, and it is revealed after attacking).\n\nShadow Witches are the priestesses of Malassa. In melee they strike the enemy with war whips, but their mightiest weapon is their deadly Dark magic.\n\nSee also {Shadow Matriarch}, {Shadow Mistress}.",
+		"faction": "dungeon",
+		"level": 6,
+		"cost": {
+			"gold": 940
+		},
+		"speed": 7,
+		"hitPoints": 61,
+		"attack": 13,
+		"defense": 11,
+		"damage": {
+			"min": 16,
+			"max": 22
+		},
+		"doubleWide": false,
+		"fightValue": 1467,
+		"aiValue": 1732,
+		"growth": 2,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"shooter": {
+				"type": "SHOOTER"
+			},
+			"cast_h5AbSlow": {
+				"type": "SPELLCASTER",
+				"subtype": "h5AbSlow",
+				"val": 2
+			},
+			"cast_h5AbDisruptingRay": {
+				"type": "SPELLCASTER",
+				"subtype": "h5AbDisruptingRay",
+				"val": 2
+			},
+			"cast_h5AbBloodlust": {
+				"type": "SPELLCASTER",
+				"subtype": "h5AbBloodlust",
+				"val": 2
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 2,
+				"hidden": true
+			},
+			"casts": {
+				"type": "CASTS",
+				"val": 2
+			},
+			"h5Mana": {
+				"type": "H5_MANA_H5C",
+				"val": 11,
+				"stacking": "h5DungeonMatronExpH5ManaH5c"
+			},
+			"h5ManaMin": {
+				"type": "H5_MANA_MIN_H5C",
+				"val": 4,
+				"hidden": true
+			},
+			"h5ManaPool": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5ManaPool",
+				"hidden": true,
+				"description": "~"
+			},
+			"noSpellcastByDefault": {
+				"type": "NO_SPELLCAST_BY_DEFAULT",
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h5/Dungeon_Matron/battle.json",
+			"map": "h5/Dungeon_Matron/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Dungeon_Matron/map/atkL.png",
+			"mapAttackFromRight": "h5/Dungeon_Matron/map/atkR.png",
+			"iconLarge": "h5/Dungeon_Matron/iconLarge.png",
+			"iconSmall": "h5/Dungeon_Matron/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"frameAngles": [
+					90,
+					60,
+					45,
+					30,
+					0,
+					-30,
+					-45,
+					-60,
+					-90
+				],
+				"offset": {
+					"upperX": 26,
+					"upperY": -72,
+					"middleX": 43,
+					"middleY": -59,
+					"lowerX": 18,
+					"lowerY": -46
+				},
+				"attackClimaxFrame": 6,
+				"projectile": "h5/Dungeon_Matron/projectile.json"
+			}
+		},
+		"sound": {
+			"attack": "h5/h5_DungeonPristess_attack.ogg",
+			"wince": "h5/h5_DungeonPristess_hit.ogg",
+			"defend": "h5/h5_DungeonPristess_hit.ogg",
+			"killed": "h5/h5_DungeonPristess_death.ogg",
+			"move": "h5/h5_DungeonPristess_move.ogg",
+			"shoot": "h5/h5_DungeonPristess_rangeattack.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					2,
+					3,
+					4,
+					5,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					8,
+					9
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "H5_MANA_H5C",
+					"stacking": "h5DungeonMatronExpH5ManaH5c"
+				},
+				"values": [
+					11,
+					11,
+					11,
+					11,
+					15,
+					15,
+					15,
+					15,
+					19,
+					19
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_WALL_PENALTY",
+					"description": "{Siege Shooter}\nNo damage loss when shooting over walls"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "MAGIC_RESISTANCE"
+				},
+				"values": [
+					3,
+					6,
+					9,
+					12,
+					15,
+					18,
+					21,
+					24,
+					27,
+					30
+				]
+			}
+		],
+		"shots": 11,
+		"upgrades": [
+			"h5DungeonMatriarch",
+			"h5Dungeon3rdShadowMistress"
+		]
+	},
+	"h5DungeonMinotaur": {
+		"name": {
+			"singular": "Minotaur",
+			"plural": "Minotaurs"
+		},
+		"description": "Minotaurs, Minotaur Guards and Minotaur Taskmasters are the level 3 units of the Heroes V Dungeon (merged into Dungeon). Minotaurs have {Bravery} (Morale is always at least +1). Minotaur Guards have {Double Attack} (attacks twice) and {Bravery} (Morale is always at least +1). Minotaur Taskmasters have {Aura of Bravery} (adjacent allies always have at least +1 Morale).\n\nMinotaurs were originally half-man, half-bull creatures created by the mages of the Seven Cities to replace the orcs. To win their freedom they fled east and hid underground. Later the Minotaurs were conquered by the Dark Elves and once again put in chains and muzzles. In Dark Elf society, Minotaurs are lowly laborers who do the most menial and monotonous work. Despite such treatment, Minotaurs remain true to their nature: brave and loyal. They give their all in everything, even shedding their blood on the battlefield for the Dark Elves who enslave them, in the hope of earning their freedom this way; what troubles the Dark Elves is that one day the Minotaurs may awaken on their own and seize their freedom by revolt.\n\nSee also {Minotaur Guard}, {Minotaur Taskmaster}.",
+		"faction": "dungeon",
+		"level": 3,
+		"cost": {
+			"gold": 225
+		},
+		"speed": 5,
+		"hitPoints": 34,
+		"attack": 8,
+		"defense": 3,
+		"damage": {
+			"min": 3,
+			"max": 6
+		},
+		"doubleWide": false,
+		"fightValue": 275,
+		"aiValue": 326,
+		"growth": 5,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"h5Bravery": {
+				"type": "MORALE",
+				"val": 1,
+				"valueType": "AT_LEAST",
+				"stacking": "h5Bravery",
+				"description": "{Bravery}\nMorale is at least +1"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 6,
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h5/Dungeon_Minotaur/battle.json",
+			"map": "h5/Dungeon_Minotaur/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Dungeon_Minotaur/map/atkL.png",
+			"mapAttackFromRight": "h5/Dungeon_Minotaur/map/atkR.png",
+			"iconLarge": "h5/Dungeon_Minotaur/iconLarge.png",
+			"iconSmall": "h5/Dungeon_Minotaur/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_MinotaurAttack_correct.ogg",
+			"wince": "h5/h5_MinotaurHit.ogg",
+			"defend": "h5/h5_MinotaurHit.ogg",
+			"killed": "h5/h5_MinotaurDeath.ogg",
+			"move": "h5/h5_MinotaurMove_cycle.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "ENEMY_DEFENCE_REDUCTION"
+				},
+				"values": [
+					4,
+					8,
+					12,
+					16,
+					20,
+					24,
+					28,
+					32,
+					36,
+					40
+				]
+			},
+			{
+				"bonus": {
+					"type": "MIND_IMMUNITY",
+					"description": "{Steadfast Mind}\nImmune to Mind spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true
+				]
+			}
+		],
+		"upgrades": [
+			"h5DungeonMinotaurKing",
+			"h5Dungeon3rdMinotaurCaptain"
+		]
+	},
+	"h5DungeonMinotaurKing": {
+		"name": {
+			"singular": "Minotaur Guard",
+			"plural": "Minotaur Guards"
+		},
+		"description": "Minotaurs, Minotaur Guards and Minotaur Taskmasters are the level 3 units of the Heroes V Dungeon (merged into Dungeon). Minotaurs have {Bravery} (Morale is always at least +1). Minotaur Guards have {Double Attack} (attacks twice) and {Bravery} (Morale is always at least +1). Minotaur Taskmasters have {Aura of Bravery} (adjacent allies always have at least +1 Morale).\n\nMinotaur warriors who perform outstandingly receive advanced combat training and are promoted to Minotaur Guards. Covered in tattoos, they are skilled with deadly double-bladed axes and can deliver two heavy blows in a row.\n\nSee also {Minotaur}, {Minotaur Taskmaster}.",
+		"faction": "dungeon",
+		"level": 3,
+		"cost": {
+			"gold": 320
+		},
+		"speed": 5,
+		"hitPoints": 38,
+		"attack": 8,
+		"defense": 3,
+		"damage": {
+			"min": 3,
+			"max": 6
+		},
+		"doubleWide": false,
+		"fightValue": 381,
+		"aiValue": 452,
+		"growth": 5,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"h5DoubleAttack": {
+				"type": "ADDITIONAL_ATTACK",
+				"val": 1,
+				"description": "{Double Attack}\nAttacks twice"
+			},
+			"h5Bravery": {
+				"type": "MORALE",
+				"val": 1,
+				"valueType": "AT_LEAST",
+				"stacking": "h5Bravery",
+				"description": "{Bravery}\nMorale is at least +1"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 6,
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h5/Dungeon_Minotaur_King/battle.json",
+			"map": "h5/Dungeon_Minotaur_King/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Dungeon_Minotaur_King/map/atkL.png",
+			"mapAttackFromRight": "h5/Dungeon_Minotaur_King/map/atkR.png",
+			"iconLarge": "h5/Dungeon_Minotaur_King/iconLarge.png",
+			"iconSmall": "h5/Dungeon_Minotaur_King/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_MinotaurKing_attack.ogg",
+			"wince": "h5/h5_MinotaurHit.ogg",
+			"defend": "h5/h5_MinotaurHit.ogg",
+			"killed": "h5/h5_MinotaurKing_Death.ogg",
+			"move": "h5/h5_MinotaurMove_cycle.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "ENEMY_DEFENCE_REDUCTION"
+				},
+				"values": [
+					4,
+					8,
+					12,
+					16,
+					20,
+					24,
+					28,
+					32,
+					36,
+					40
+				]
+			},
+			{
+				"bonus": {
+					"type": "MIND_IMMUNITY",
+					"description": "{Steadfast Mind}\nImmune to Mind spells"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			}
+		]
+	},
+	"h5DungeonRavager": {
+		"name": {
+			"singular": "Grim Raider",
+			"plural": "Grim Raiders"
+		},
+		"description": "Dark Raiders, Grim Raiders and Brisk Raiders are the level 4 units of the Heroes V Dungeon (merged into Dungeon). Dark Raiders have {Rider Charge} (-20% to the target's Defense for every hex moved in the charge). Grim Raiders have {Rider Charge} (-20% to the target's Defense for every hex moved in the charge) and {Lizard Bite} (joins in when an ally attacks an adjacent enemy, dealing 50% damage). Brisk Raiders have {Lizard Bite} (joins in when an ally attacks an adjacent enemy, dealing 50% damage) and {Ride-By Attack} (enemies beside the charge path take 25% damage).\n\nGrim Raiders resemble their slightly weaker kin, the Dark Raiders, but they are more skilled fighters, and their well-trained lizard mounts can bite enemies.\n\nSee also {Dark Raider}, {Brisk Raider}.",
+		"faction": "dungeon",
+		"level": 4,
+		"cost": {
+			"gold": 475
+		},
+		"speed": 8,
+		"hitPoints": 62,
+		"attack": 13,
+		"defense": 11,
+		"damage": {
+			"min": 6,
+			"max": 12
+		},
+		"doubleWide": true,
+		"fightValue": 611,
+		"aiValue": 700,
+		"growth": 3,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"h5RiderCharge": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5RiderCharge",
+				"val": 20,
+				"icon": "h5/abilities/h5RiderCharge",
+				"description": "{Rider Charge}\nTarget Defense -20%\nper hex charged"
+			},
+			"h5AreaZone": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5AreaZone",
+				"val": 0,
+				"stacking": "h5AreaZone",
+				"propagator": "BATTLE_WIDE",
+				"hidden": true,
+				"description": "~"
+			},
+			"h5LizardBite": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5LizardBite",
+				"val": 50,
+				"icon": "h5/abilities/h5LizardBite",
+				"description": "{Lizard Bite}\nJoins ally attacks on\nadjacent foes, 50% dmg"
+			},
+			"skeletonTarget": {
+				"type": "SKELETON_TRANSFORMER_TARGET",
+				"subtype": "blackKnight",
+				"hidden": true
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 4,
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h5/Dungeon_Ravager/battle.json",
+			"map": "h5/Dungeon_Ravager/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Dungeon_Ravager/map/atkL.png",
+			"mapAttackFromRight": "h5/Dungeon_Ravager/map/atkR.png",
+			"iconLarge": "h5/Dungeon_Ravager/iconLarge.png",
+			"iconSmall": "h5/Dungeon_Ravager/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_Maradeur_attack.ogg",
+			"wince": "h5/h5_Maradeur_hit.ogg",
+			"defend": "h5/h5_Maradeur_hit.ogg",
+			"killed": "h5/h5_Maradeur_death.ogg",
+			"move": "h5/h5_Maradeur_Move.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					5,
+					6,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "JOUSTING"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					4,
+					5,
+					6,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CHARGE_IMMUNITY",
+					"description": "{Steady Ranks}\nImmune to charge damage bonuses"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "DOUBLE_DAMAGE_CHANCE"
+				},
+				"values": [
+					3,
+					6,
+					9,
+					12,
+					15,
+					18,
+					21,
+					24,
+					27,
+					30
+				]
+			}
+		]
+	},
+	"h5DungeonRider": {
+		"name": {
+			"singular": "Dark Raider",
+			"plural": "Dark Raiders"
+		},
+		"description": "Dark Raiders, Grim Raiders and Brisk Raiders are the level 4 units of the Heroes V Dungeon (merged into Dungeon). Dark Raiders have {Rider Charge} (-20% to the target's Defense for every hex moved in the charge). Grim Raiders have {Rider Charge} (-20% to the target's Defense for every hex moved in the charge) and {Lizard Bite} (joins in when an ally attacks an adjacent enemy, dealing 50% damage). Brisk Raiders have {Lizard Bite} (joins in when an ally attacks an adjacent enemy, dealing 50% damage) and {Ride-By Attack} (enemies beside the charge path take 25% damage).\n\nDark Raiders are the backbone of Ygg-Chall's army. These well-trained warriors carry lances, wear heavy armor and ride giant lizards into battle. Speed is their main weapon, and the damage of their lances depends on the distance of the charge.\n\nSee also {Grim Raider}, {Brisk Raider}.",
+		"faction": "dungeon",
+		"level": 4,
+		"cost": {
+			"gold": 315
+		},
+		"speed": 6,
+		"hitPoints": 41,
+		"attack": 12,
+		"defense": 9,
+		"damage": {
+			"min": 6,
+			"max": 11
+		},
+		"doubleWide": true,
+		"fightValue": 450,
+		"aiValue": 515,
+		"growth": 3,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"h5RiderCharge": {
+				"type": "COMBAT_EVENT_TRIGGER",
+				"subtype": "h5RiderCharge",
+				"val": 20,
+				"icon": "h5/abilities/h5RiderCharge",
+				"description": "{Rider Charge}\nTarget Defense -20%\nper hex charged"
+			},
+			"skeletonTarget": {
+				"type": "SKELETON_TRANSFORMER_TARGET",
+				"subtype": "blackKnight",
+				"hidden": true
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 4,
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h5/Dungeon_Rider/battle.json",
+			"map": "h5/Dungeon_Rider/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Dungeon_Rider/map/atkL.png",
+			"mapAttackFromRight": "h5/Dungeon_Rider/map/atkR.png",
+			"iconLarge": "h5/Dungeon_Rider/iconLarge.png",
+			"iconSmall": "h5/Dungeon_Rider/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_RiderAttack00.ogg",
+			"wince": "h5/h5_RiderHit.ogg",
+			"defend": "h5/h5_RiderHit.ogg",
+			"killed": "h5/h5_RiderDeath.ogg",
+			"move": "h5/h5_RiderMove.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					5,
+					6,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					2,
+					2,
+					3,
+					4,
+					4,
+					5,
+					6,
+					7,
+					8
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "JOUSTING"
+				},
+				"values": [
+					0,
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "CHARGE_IMMUNITY",
+					"description": "{Steady Ranks}\nImmune to charge damage bonuses"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "DOUBLE_DAMAGE_CHANCE"
+				},
+				"values": [
+					3,
+					6,
+					9,
+					12,
+					15,
+					18,
+					21,
+					24,
+					27,
+					30
+				]
+			}
+		],
+		"upgrades": [
+			"h5DungeonRavager",
+			"h5Dungeon3rdBlackRider"
+		]
+	},
+	"h5DungeonScout": {
+		"name": {
+			"singular": "Agent",
+			"plural": "Agents"
+		},
+		"description": "Agents, Cutthroats and Stalkers are the level 1 units of the Heroes V Dungeon (merged into Dungeon). Agents can shoot and have {Shooting Penalty} (half damage when shooting, no melee penalty). Cutthroats can shoot and have {Shooting Penalty} (half damage when shooting, no melee penalty) and {Poisonous Attack} (poisons the target for 3 rounds, dealing 1 × the number of poisoners in damage each round). Stalkers have {Poisonous Attack} (poisons the target for 3 rounds, dealing 1 × the number of poisoners in damage each round) and {Invisibility} (invisible for 3 rounds; its attacks cannot be retaliated against, and it is revealed after attacking).\n\nThe main role of Agents on the battlefield is to attack the enemy from range with crossbows. They are also trained in melee and can protect themselves well in hand-to-hand combat.\n\nSee also {Cutthroat}, {Stalker}.",
+		"faction": "dungeon",
+		"level": 1,
+		"cost": {
+			"gold": 85
+		},
+		"speed": 5,
+		"hitPoints": 9,
+		"attack": 6,
+		"defense": 4,
+		"damage": {
+			"min": 2,
+			"max": 4
+		},
+		"doubleWide": false,
+		"fightValue": 122,
+		"aiValue": 123,
+		"growth": 10,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"shooter": {
+				"type": "SHOOTER"
+			},
+			"noMeleePenalty": {
+				"type": "NO_MELEE_PENALTY",
+				"description": "{Shooting Penalty}\nShooting damage halved\nNo melee penalty"
+			},
+			"noDistancePenalty": {
+				"type": "NO_DISTANCE_PENALTY",
+				"hidden": true
+			},
+			"h5RangePenalty": {
+				"type": "PERCENTAGE_DAMAGE_BOOST",
+				"subtype": "damageTypeRanged",
+				"val": -50
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 7,
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h5/Dungeon_Scout/battle.json",
+			"map": "h5/Dungeon_Scout/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Dungeon_Scout/map/atkL.png",
+			"mapAttackFromRight": "h5/Dungeon_Scout/map/atkR.png",
+			"iconLarge": "h5/Dungeon_Scout/iconLarge.png",
+			"iconSmall": "h5/Dungeon_Scout/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1,
+			"missile": {
+				"frameAngles": [
+					90,
+					60,
+					45,
+					30,
+					0,
+					-30,
+					-45,
+					-60,
+					-90
+				],
+				"offset": {
+					"upperX": 23,
+					"upperY": -108,
+					"middleX": 43,
+					"middleY": -97,
+					"lowerX": 23,
+					"lowerY": -83
+				},
+				"attackClimaxFrame": 6,
+				"projectile": "h5/Dungeon_Scout/projectile.json"
+			}
+		},
+		"sound": {
+			"attack": "h5/h5_DarkWarriorAttack.ogg",
+			"wince": "h5/h5_DarkWarriorHit.ogg",
+			"defend": "h5/h5_DarkWarriorHit.ogg",
+			"killed": "h5/h5_DarkWarriorDeath.ogg",
+			"move": "h5/h5_DarkWarriorMove.ogg",
+			"shoot": "h5/h5_DarkWarrior_rangeattack.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2,
+					3,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1
+				]
+			},
+			{
+				"bonus": {
+					"type": "NO_WALL_PENALTY",
+					"description": "{Siege Shooter}\nNo damage loss when shooting over walls"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "SHOTS"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					4,
+					4,
+					5
+				]
+			},
+			{
+				"bonus": {
+					"type": "ENEMY_DEFENCE_REDUCTION"
+				},
+				"values": [
+					2,
+					4,
+					6,
+					8,
+					10,
+					12,
+					14,
+					16,
+					18,
+					20
+				]
+			},
+			{
+				"bonus": {
+					"type": "DOUBLE_DAMAGE_CHANCE"
+				},
+				"values": [
+					2,
+					4,
+					6,
+					8,
+					10,
+					12,
+					14,
+					16,
+					18,
+					20
+				]
+			}
+		],
+		"shots": 14,
+		"upgrades": [
+			"h5DungeonAssassin",
+			"h5Dungeon3rdStalker"
+		]
+	},
+	"h5DungeonWitch": {
+		"name": {
+			"singular": "Blood Maiden",
+			"plural": "Blood Maidens"
+		},
+		"description": "Blood Maidens, Blood Furies and Blood Sisters are the level 2 units of the Heroes V Dungeon (merged into Dungeon). All of them have {Strike and Return} (returns to its original position after attacking). Blood Furies also have {No Enemy Retaliation}. Blood Sisters also have {No Enemy Retaliation} and {Immune to Weakness} (immune to the Weakness curse).\n\nBlood Maidens are lightning-fast female warriors who wield a short sword in each hand. They can swiftly move up to an opponent, attack, and immediately return to their starting position.\n\nSee also {Blood Fury}, {Blood Sister}.",
+		"faction": "dungeon",
+		"level": 2,
+		"cost": {
+			"gold": 235
+		},
+		"speed": 8,
+		"hitPoints": 18,
+		"attack": 7,
+		"defense": 3,
+		"damage": {
+			"min": 5,
+			"max": 6
+		},
+		"doubleWide": false,
+		"fightValue": 287,
+		"aiValue": 321,
+		"growth": 6,
+		"advMapAmount": {
+			"min": 2,
+			"max": 6
+		},
+		"abilities": {
+			"returnAfterStrike": {
+				"type": "RETURN_AFTER_STRIKE",
+				"description": "{Strike and Return}\nReturns to its position after attacking"
+			},
+			"h5Growth": {
+				"type": "H5_GROWTH_H5C",
+				"val": 5,
+				"hidden": true
+			}
+		},
+		"graphics": {
+			"animation": "h5/Dungeon_Witch/battle.json",
+			"map": "h5/Dungeon_Witch/map.json",
+			"mapMask": [
+				"VV",
+				"VA"
+			],
+			"mapAttackFromLeft": "h5/Dungeon_Witch/map/atkL.png",
+			"mapAttackFromRight": "h5/Dungeon_Witch/map/atkR.png",
+			"iconLarge": "h5/Dungeon_Witch/iconLarge.png",
+			"iconSmall": "h5/Dungeon_Witch/iconSmall.png",
+			"animationTime": {
+				"walk": 1,
+				"attack": 1,
+				"idle": 10
+			},
+			"timeBetweenFidgets": 1
+		},
+		"sound": {
+			"attack": "h5/h5_ShadowWitchAttack.ogg",
+			"wince": "h5/h5_ShadowWitchHit.ogg",
+			"defend": "h5/h5_ShadowWitchHit.ogg",
+			"killed": "h5/h5_ShadowWitchDeath.ogg",
+			"move": "h5/h5_ShadowWitchMove2.ogg"
+		},
+		"stackExperience": [
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "attack"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					2,
+					2,
+					2,
+					3,
+					3,
+					3,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "PRIMARY_SKILL",
+					"subtype": "defence"
+				},
+				"values": [
+					1,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					3,
+					4,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMin"
+				},
+				"values": [
+					0,
+					0,
+					1,
+					1,
+					1,
+					2,
+					2,
+					3,
+					3,
+					3
+				]
+			},
+			{
+				"bonus": {
+					"type": "CREATURE_DAMAGE",
+					"subtype": "creatureDamageMax"
+				},
+				"values": [
+					0,
+					1,
+					1,
+					1,
+					2,
+					2,
+					2,
+					3,
+					3,
+					4
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACK_HEALTH",
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"values": [
+					5,
+					10,
+					15,
+					20,
+					25,
+					30,
+					35,
+					40,
+					45,
+					50
+				]
+			},
+			{
+				"bonus": {
+					"type": "STACKS_SPEED"
+				},
+				"values": [
+					0,
+					0,
+					0,
+					1,
+					1,
+					1,
+					1,
+					1,
+					1,
+					2
+				]
+			},
+			{
+				"bonus": {
+					"type": "BLOCKS_RETALIATION",
+					"description": "{No Retaliation}\nEnemy cannot retaliate when attacked"
+				},
+				"values": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			{
+				"bonus": {
+					"type": "DOUBLE_DAMAGE_CHANCE"
+				},
+				"values": [
+					2,
+					4,
+					6,
+					8,
+					10,
+					12,
+					14,
+					16,
+					18,
+					20
+				]
+			}
+		],
+		"upgrades": [
+			"h5DungeonBloodWitch",
+			"h5Dungeon3rdBloodWitch2"
+		]
+	}
+}
