@@ -9,4 +9,10 @@ function Script:summonedEffectValue(mechanics)
 	return mechanics:applySpecificSpellBonus(self.amount or 1)
 end
 
+--- Cursor and status bar text while choosing a target: return nil to use the engine default ("Cast X on Y" / "Cast X", with damage and healing estimates added automatically).
+--- Every spell effect script must define this function.
+function Script:describeTargetStep(mechanics, partialTarget, hoveredHex)
+	return nil
+end
+
 return Script

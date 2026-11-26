@@ -162,9 +162,55 @@ end
 --- but unitEffect.lua does not inherit it (heal, dispel, damage and timed all come from unitEffect), and the log reports function 'describeTargetStep' not found.
 --- If the base class lacks it, one returning nil is added (= the engine's default cursor text, same display as before); once the engine adds it, the engine's is used.
 if not Base.describeTargetStep then
-	function Script:describeTargetStep(mechanics, partialTarget, hoveredHex)
-		return nil
+end
+
+--- Cursor and status bar text while choosing a target, by mode: harpoon kadCursorPull "Hook X with the harpoon", leap kadCursorCharge "Leap at X", teleport kadCursorPull "Teleport X next to you".
+--- The text is in the spell parameter hoverText (one %s = the stack pointed at); spells without hoverText use the engine default.
+function Script:describeTargetStep(mechanics, partialTarget, hoveredHex)
+	if #partialTarget ~= 0 or self.hoverText == nil or hoveredHex == nil or not hoveredHex:isValid() then return nil end
+	local battle = mechanics:getBattle()
+	local unit = battle:getUnitByPos(hoveredHex, true) or battle:getUnitByPos(hoveredHex, false)
+	local text = { append = { self.hoverText } }
+	if unit ~= nil then
+		text.replaceStrings = { unit:getCreature():getNameTextID(unit:getCount()) }
 	end
+	return {
+		cursor = ({ leap = "kadCursorCharge", harpoon = "kadCursorPull", summon = "kadCursorPull" })[self.mode or ""] or "castSpell",
+		text = text,
+		blockedText = { append = { "core.genrltxt.23" } }, -- Select a target for the spell (as the engine default)
+		healthGainTextID = (self.mode == "harpoon") and "vcmi.battleWindow.damageEstimation.damage" or "vcmi.battleWindow.healValuePreview"
+	}
+end
+
+--- Hover estimate: only the harpoon attack deals damage on the spot, the expected value of A.attackDamage (shot, 100%) (random damage averaged, without luck).
+--- The leap's damage is resolved later by the engine's normal attack, and teleport deals no damage; both return 0
+function Script:getHealthChange(mechanics, spellTarget)
+	local zero = { hpDelta = 0, unitsDelta = 0 }
+	if self.mode ~= "harpoon" then return zero end
+	local ok, result = pcall(function()
+		local caster = mechanics:getUnitCaster()
+		if caster == nil or not caster:isAlive() then return zero end
+		local dest = self:filterTarget(mechanics, spellTarget or {})[1]
+		local unit = dest and dest.unit
+		if unit == nil or not unit:isAlive() then return zero end
+		local minDamage = caster:getMinDamage(true)
+		local maxDamage = math.max(minDamage, caster:getMaxDamage(true))
+		local base = caster:getCount() * (minDamage + maxDamage) / 2
+		local diff = caster:getAttack(true) - unit:getDefense(true)
+		local factor
+		if diff > 0 then
+			factor = 1 + 0.05 * math.min(diff, 60)
+		else
+			factor = 1 - 0.025 * math.min(-diff, 28)
+		end
+		local dmg = math.max(1, math.floor(base * factor))
+		local copy = unit:copy()
+		local hp, cnt = copy:getAvailableHealth(), copy:getCount()
+		copy:damage(dmg)
+		return { hpDelta = -(hp - copy:getAvailableHealth()), unitsDelta = -(cnt - copy:getCount()) }
+	end)
+	if ok and result then return result end
+	return zero
 end
 
 return Script

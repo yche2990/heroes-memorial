@@ -153,8 +153,66 @@ function Script:apply(mechanics, server, target)
 	end
 end
 
+--- Cursor and status bar text while choosing a target: only the cursor changes (cursor proxy cursor_map.json): Poison Cloud (H7)
+--- The text copies the engine default (BattleSpellMechanics::describeTargetStep): on a unit "Cast X on Y" (core.genrltxt.27, Y singular or plural by count),
+--- when it cannot be cast "Select a target for the spell" (23); on a hex "Cast X" (26); damage and healing estimates are appended as usual.
+--- Steps (or modes) not listed in the table return nil and fall back to the engine default.
 function Script:describeTargetStep(mechanics, partialTarget, hoveredHex)
-	return nil
+	local CURSORS = { [1] = "kadCursorPlace" } -- step number -> cursor
+	local AIM = { ["*"] = "location" } -- target type of the first step (spell targetType)
+	if hoveredHex == nil or not hoveredHex:isValid() or mechanics:isMassive() then return nil end
+	local step = #partialTarget + 1
+	local cursor = CURSORS[step]
+	if cursor == nil then return nil end
+	local spell = mechanics:getSpell()
+	if step ~= 1 then return nil end
+	local aim = AIM[spell:getJsonKey()] or AIM["*"]
+	if aim ~= "creature" and aim ~= "location" then return nil end
+	local spellName = spell:getNameTextID()
+	if aim == "creature" then
+		local battle = mechanics:getBattle()
+		local unit = battle:getUnitByPos(hoveredHex, true) or battle:getUnitByPos(hoveredHex, false)
+		local names = { spellName }
+		if unit ~= nil then table.insert(names, unit:getCreature():getNameTextID(unit:getCount())) end
+		return {
+			cursor = cursor,
+			text = { append = { "core.genrltxt.27" }, replaceStrings = names }, -- Cast %s on %s
+			blockedText = { append = { "core.genrltxt.23" } },                  -- Select a target for the spell
+			healthGainTextID = "vcmi.battleWindow.healValuePreview"
+		}
+	end
+	return {
+		cursor = cursor,
+		text = { append = { "core.genrltxt.26" }, replaceStrings = { spellName } }, -- Cast %s
+		healthGainTextID = "vcmi.battleWindow.healValuePreview"
+	}
+end
+
+--- Hover estimate: same formula as apply, only the cast itself. Non-immune stacks on the target hex and the ring around it (friend or foe; except those already hurt by the cloud this round)
+--- each take base + perPower x Spell Power earth damage (adjusted by the spell damage rules); damage and kills are summed. The spreading in later rounds is not counted
+function Script:getHealthChange(mechanics, spellTarget)
+	local zero = { hpDelta = 0, unitsDelta = 0 }
+	local ok, result = pcall(function()
+		local dest = spellTarget and spellTarget[1]
+		if dest == nil or dest.hex == nil or not dest.hex:isValid() then return zero end
+		local raw = Lib.value(self.base, self.perPower, Lib.level(mechanics), Lib.power(mechanics)) * Lib.casterDamageFactor(mechanics)
+		local out = { hpDelta = 0, unitsDelta = 0 }
+		for _, u in ipairs(self:victims(mechanics:getBattle(), dest.hex, 1, mechanics:getSpell():getJsonKey())) do
+			if E.markVal(u, Script.HIT) == nil then
+				local amount = Lib.adjust(mechanics, u, raw)
+				if amount > 0 then
+					local copy = u:copy()
+					local hp, cnt = copy:getAvailableHealth(), copy:getCount()
+					copy:damage(amount)
+					out.hpDelta = out.hpDelta - (hp - copy:getAvailableHealth())
+					out.unitsDelta = out.unitsDelta - (cnt - copy:getCount())
+				end
+			end
+		end
+		return out
+	end)
+	if ok and result then return result end
+	return zero
 end
 
 return Script

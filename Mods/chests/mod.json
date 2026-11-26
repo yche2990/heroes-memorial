@@ -8,7 +8,7 @@
 		],
 		"description": "地图上的三种宝箱（军资、秘卷、遗物），由英雄无敌3～7的兵种守护。"
 	},
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"author": "yche2990",
 	"modType": "Objects",
 	"compatibility": {

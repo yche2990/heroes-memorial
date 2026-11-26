@@ -61,4 +61,46 @@ function Script:describeTargetStep()
 	return nil
 end
 
+--- Hover estimate: same formula as apply. Enemy stacks of the caster adjacent to the main target each take base + perPower x SP air damage (through the engine's spell damage rules, at least 1).
+--- The main target's share is reported by the h5Damage effect of the same spell, and the engine adds the two
+function Script:getHealthChange(mechanics, spellTarget)
+	local zero = { hpDelta = 0, unitsDelta = 0 }
+	local ok, result = pcall(function()
+		local battle = mechanics:getBattle()
+		local side = Air.sideNum(mechanics:getCasterSide())
+		local raw = Lib.value(self.base, self.perPower, Lib.level(mechanics), Lib.power(mechanics)) * Lib.casterDamageFactor(mechanics)
+		if raw <= 0 then return zero end
+		local victims, seen = {}, {}
+		for _, dest in ipairs(self:filterTarget(mechanics, spellTarget or {})) do
+			local main = dest.unit
+			if main then
+				seen[main:unitID()] = true
+				local around = Air.adjacentUnits(battle, main, function(u)
+					return Air.sideNum(u:getSide()) ~= side and not u:isInvincible()
+						and u:isValidTarget(false) and mechanics:isReceptive(u)
+				end)
+				for _, u in ipairs(around) do
+					if not seen[u:unitID()] then
+						seen[u:unitID()] = true
+						victims[#victims + 1] = u
+					end
+				end
+			end
+		end
+		local out = { hpDelta = 0, unitsDelta = 0 }
+		for _, u in ipairs(victims) do
+			if u:isAlive() then
+				local copy = u:copy()
+				local hp, cnt = copy:getAvailableHealth(), copy:getCount()
+				copy:damage(math.max(1, Lib.adjust(mechanics, u, raw)))
+				out.hpDelta = out.hpDelta - (hp - copy:getAvailableHealth())
+				out.unitsDelta = out.unitsDelta - (cnt - copy:getCount())
+			end
+		end
+		return out
+	end)
+	if ok and result then return result end
+	return zero
+end
+
 return Script

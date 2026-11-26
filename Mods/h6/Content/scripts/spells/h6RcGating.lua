@@ -77,11 +77,6 @@ function Script:transformTarget(mechanics, aimPoint, spellTarget)
 end
 function Script:filterTarget(mechanics, target) return target end
 
-function Script:describeTargetStep(mechanics, partialTarget, hoveredHex)
-	if #partialTarget ~= 1 then return nil end
-	return { cursor = "combatSacrifice", text = { append = { "core.genrltxt.543" } }, blockedText = { append = { "core.genrltxt.543" } } }
-end
-
 function Script:apply(mechanics, server, target)
 	local battle, side = mechanics:getBattle(), mechanics:getCasterSide()
 	if #target < 2 then return end
@@ -107,6 +102,41 @@ function Script:apply(mechanics, server, target)
 		end
 	end
 	server:refreshBattleUnits(battle)
+end
+
+--- Cursor and status bar text while choosing a target: the second step picks a free hex for the Gate (at level IV it summons directly), cursor kadCursorSummon.
+--- The second step used to show the Sacrifice cursor and "Select a stack to sacrifice"; now it uses the spell parameter hoverText ("Open the gate here" / "Summon demons here"),
+--- hexes where it does not fit show the original "X cannot be placed here"; healthGainTextID added (the summon estimate "+N" is appended when present). The first step uses the engine default.
+function Script:describeTargetStep(mechanics, partialTarget, hoveredHex)
+	if #partialTarget ~= 1 then return nil end
+	local spellName = mechanics:getSpell():getNameTextID()
+	local text = { append = { "core.genrltxt.26" }, replaceStrings = { spellName } } -- without hoverText: Cast %s
+	if self.hoverText ~= nil then
+		text = { append = { self.hoverText } }
+	end
+	return {
+		cursor = "kadCursorSummon",
+		text = text,
+		blockedText = { append = { "core.genrltxt.181" }, replaceStrings = { spellName } }, -- %s cannot be placed here
+		healthGainTextID = "vcmi.battleWindow.healValuePreview"
+	}
+end
+
+--- Hover estimate: only level IV summons at once, same formula as apply. amount(source stack) creatures of the same kind (this number is also shown before the free hex is chosen).
+--- Levels I-III first place the gate, which opens next round if it still stands; casting summons nothing, returns 0
+function Script:getHealthChange(mechanics, spellTarget)
+	local zero = { hpDelta = 0, unitsDelta = 0 }
+	if (self.tier or 1) < 4 then return zero end
+	local ok, result = pcall(function()
+		local first = spellTarget and spellTarget[1]
+		local tpl = first and first.unit
+		if not self:template(mechanics, tpl) then return zero end
+		local count = self:amount(mechanics, tpl)
+		if count <= 0 then return zero end
+		return { hpDelta = count * tpl:getMaxHealth(), unitsDelta = count, unitType = tpl:getCreature() }
+	end)
+	if ok and result then return result end
+	return zero
 end
 
 return Script

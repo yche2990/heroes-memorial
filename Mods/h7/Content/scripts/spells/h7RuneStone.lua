@@ -21,10 +21,6 @@ Script.__index = Script
 local ACT_ANIM = { fortune = "h7/fx/h7rActFortune", destruction = "h7/fx/h7rActDestruction", resilience = "h7/fx/h7rActResilience" }
 local ACT_SOUND = { fortune = "h7/r_rune_fortune.ogg", destruction = "h7/r_rune_destruction.ogg", resilience = "h7/r_rune_resilience.ogg" }
 
-function Script:describeTargetStep(mechanics, partialTarget, hoveredHex)
-	return nil
-end
-
 local function destHex(target)
 	local d = target and target[1]
 	if d == nil or d.hex == nil or not d.hex:isValid() then return nil end
@@ -338,6 +334,60 @@ function Script:apply(mechanics, server, target)
 	if server:describeChanges() then
 		server:refreshBattleUnits(battle)
 	end
+end
+
+--- Cursor and status bar text while choosing a target: cursor kadCursorSummon; the summon mode (the hero summons a rune stone) needs a free hex; activation modes (click any hex in the aura) use the engine default.
+--- Hexes where it fits show "Cast X" (as the engine default, with the estimate); hexes where it does not fit show the original "X cannot be placed here" (core.genrltxt.181),
+--- where the engine default would show no text at all.
+function Script:describeTargetStep(mechanics, partialTarget, hoveredHex)
+	if #partialTarget ~= 0 or hoveredHex == nil or not hoveredHex:isValid() or mechanics:isMassive() then return nil end
+	if self.mode ~= "summon" then return nil end
+	local spellName = mechanics:getSpell():getNameTextID()
+	return {
+		cursor = "kadCursorSummon",
+		text = { append = { "core.genrltxt.26" }, replaceStrings = { spellName } },        -- Cast %s
+		blockedText = { append = { "core.genrltxt.181" }, replaceStrings = { spellName } }, -- %s cannot be placed here
+		healthGainTextID = "vcmi.battleWindow.healValuePreview"
+	}
+end
+
+--- Hover estimate: only activating a Rune of Destruction (mode = activate, rune kind = destruction) deals damage, same formula as apply / activate:
+--- enemy stacks in the aura (except invulnerable ones and those absolutely immune to this spell) each take (damageBase + damagePerLevel x hero level) x (100 - "all spells" reduction)% damage,
+--- damage and kills are summed. Summoning a rune stone and the Fate, Endurance and Radiance runes return 0
+function Script:getHealthChange(mechanics, spellTarget)
+	local zero = { hpDelta = 0, unitsDelta = 0 }
+	if self.mode ~= "activate" then return zero end
+	local ok, result = pcall(function()
+		local stone = stoneCaster(self, mechanics)
+		if stone == nil then return zero end
+		local info = R.info(stone)
+		if info == nil or info.kind ~= "destruction" then return zero end
+		local battle = mechanics:getBattle()
+		local side = stone:getSide()
+		local raw = (self.damageBase or 18) + (self.damagePerLevel or 12) * R.heroLevel(stone)
+		local spell = mechanics:getSpell()
+		local list = R.unitsInAura(battle, stone, function(u)
+			if u:getSide() == side or not L.isReal(u) or u:isInvincible() then return false end
+			local okImm, imm = pcall(function() return u:hasAbsoluteImmunity(spell) end)
+			return not (okImm and imm)
+		end)
+		local out = { hpDelta = 0, unitsDelta = 0 }
+		for _, u in ipairs(list) do
+			local red = u:getBonusesValue({ type = "SPELL_DAMAGE_REDUCTION", subtype = "spellSchool.any" }) or 0
+			red = math.max(0, math.min(100, red))
+			local amount = math.floor(raw * (100 - red) / 100)
+			if amount > 0 then
+				local copy = u:copy()
+				local hp, cnt = copy:getAvailableHealth(), copy:getCount()
+				copy:damage(amount)
+				out.hpDelta = out.hpDelta - (hp - copy:getAvailableHealth())
+				out.unitsDelta = out.unitsDelta - (cnt - copy:getCount())
+			end
+		end
+		return out
+	end)
+	if ok and result then return result end
+	return zero
 end
 
 return Script

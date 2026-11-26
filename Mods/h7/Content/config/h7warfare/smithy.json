@@ -8,7 +8,7 @@
 				"aiValue": 0,
 				"rmg": {
 					"value": 15000,
-					"rarity": 1000,
+					"rarity": 100,
 					"zoneLimit": 1,
 					"mapLimit": 3
 				},
@@ -415,7 +415,7 @@
 					{
 						"appearChance": {
 							"dice": 1,
-							"min": 14,
+							"min": 13,
 							"max": 28
 						},
 						"limiter": {
@@ -455,7 +455,7 @@
 					{
 						"appearChance": {
 							"dice": 1,
-							"min": 29,
+							"min": 28,
 							"max": 42
 						},
 						"limiter": {
@@ -495,7 +495,7 @@
 					{
 						"appearChance": {
 							"dice": 1,
-							"min": 43,
+							"min": 42,
 							"max": 56
 						},
 						"limiter": {
@@ -535,7 +535,7 @@
 					{
 						"appearChance": {
 							"dice": 1,
-							"min": 57,
+							"min": 56,
 							"max": 70
 						},
 						"limiter": {
@@ -575,7 +575,7 @@
 					{
 						"appearChance": {
 							"dice": 1,
-							"min": 71,
+							"min": 70,
 							"max": 85
 						},
 						"limiter": {
@@ -615,7 +615,7 @@
 					{
 						"appearChance": {
 							"dice": 1,
-							"min": 86,
+							"min": 85,
 							"max": 100
 						},
 						"limiter": {

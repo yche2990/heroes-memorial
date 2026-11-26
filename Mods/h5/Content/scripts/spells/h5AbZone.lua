@@ -210,4 +210,86 @@ function Script:apply(mechanics, server, target)
 	L.useCast(server, battle, caster, "h5AbZone" .. (mode or ""), self.uses)
 end
 
+--- Cursor and status bar text while choosing a target: only the cursor changes (cursor proxy cursor_map.json): H5 area abilities
+--- The text copies the engine default (BattleSpellMechanics::describeTargetStep): on a unit "Cast X on Y" (core.genrltxt.27, Y singular or plural by count),
+--- when it cannot be cast "Select a target for the spell" (23); on a hex "Cast X" (26); damage and healing estimates are appended as usual.
+--- Steps (or modes) not listed in the table return nil and fall back to the engine default.
+function Script:describeTargetStep(mechanics, partialTarget, hoveredHex)
+	local BY_MODE = {
+		scatter = {},
+		snare = { [1] = "kadCursorPlace" },
+		storm = { [1] = "kadCursorPlace" },
+	}
+	local CURSORS = BY_MODE[self.mode or ""] or {  }
+	local AIM = { ["*"] = "location" } -- target type of the first step (spell targetType)
+	if hoveredHex == nil or not hoveredHex:isValid() or mechanics:isMassive() then return nil end
+	local step = #partialTarget + 1
+	local cursor = CURSORS[step]
+	if cursor == nil then return nil end
+	local spell = mechanics:getSpell()
+	if step ~= 1 then return nil end
+	local aim = AIM[spell:getJsonKey()] or AIM["*"]
+	if aim ~= "creature" and aim ~= "location" then return nil end
+	local spellName = spell:getNameTextID()
+	if aim == "creature" then
+		local battle = mechanics:getBattle()
+		local unit = battle:getUnitByPos(hoveredHex, true) or battle:getUnitByPos(hoveredHex, false)
+		local names = { spellName }
+		if unit ~= nil then table.insert(names, unit:getCreature():getNameTextID(unit:getCount())) end
+		return {
+			cursor = cursor,
+			text = { append = { "core.genrltxt.27" }, replaceStrings = names }, -- Cast %s on %s
+			blockedText = { append = { "core.genrltxt.23" } },                  -- Select a target for the spell
+			healthGainTextID = "vcmi.battleWindow.healValuePreview"
+		}
+	end
+	return {
+		cursor = cursor,
+		text = { append = { "core.genrltxt.26" }, replaceStrings = { spellName } }, -- Cast %s
+		healthGainTextID = "vcmi.battleWindow.healValuePreview"
+	}
+end
+
+--- Hover estimate: only Scatter deals damage on the spot, same formula as apply: every stack except the caster on the target hex and the ring around it (friend or foe)
+--- takes the expected value of A.attackDamage (shot, pct%) (random damage averaged, without luck); damage and kills are summed. Thundercloud and traps return 0
+function Script:getHealthChange(mechanics, spellTarget)
+	local zero = { hpDelta = 0, unitsDelta = 0 }
+	if self.mode ~= "scatter" then return zero end
+	local ok, result = pcall(function()
+		local battle = mechanics:getBattle()
+		local caster = mechanics:getUnitCaster()
+		if caster == nil or not caster:isAlive() then return zero end
+		local dest = spellTarget and spellTarget[1]
+		if dest == nil or dest.hex == nil or not dest.hex:isValid() then return zero end
+		local minDamage = caster:getMinDamage(true)
+		local maxDamage = math.max(minDamage, caster:getMaxDamage(true))
+		local base = caster:getCount() * (minDamage + maxDamage) / 2
+		local pct = self.pct or 50
+		local out = { hpDelta = 0, unitsDelta = 0 }
+		local seen = {}
+		for _, h in ipairs(areaHexes(battle, dest.hex, 1)) do
+			local u = battle:getUnitByPos(h, true)
+			if u ~= nil and not seen[u:unitID()] and u:unitID() ~= caster:unitID() and A.damageable(u) then
+				seen[u:unitID()] = true
+				local diff = caster:getAttack(true) - u:getDefense(true)
+				local factor
+				if diff > 0 then
+					factor = 1 + 0.05 * math.min(diff, 60)
+				else
+					factor = 1 - 0.025 * math.min(-diff, 28)
+				end
+				local dmg = math.max(1, math.floor(base * factor * pct / 100))
+				local copy = u:copy()
+				local hp, cnt = copy:getAvailableHealth(), copy:getCount()
+				copy:damage(dmg)
+				out.hpDelta = out.hpDelta - (hp - copy:getAvailableHealth())
+				out.unitsDelta = out.unitsDelta - (cnt - copy:getCount())
+			end
+		end
+		return out
+	end)
+	if ok and result then return result end
+	return zero
+end
+
 return Script

@@ -63,6 +63,7 @@ local function descOf(b, asCopy)
 		d.duration = ENUM.BonusDuration.oneBattle; d.turns = nil
 	elseif src == ENUM.BonusSource.spellEffect and L.spell(b:getSourceID()) ~= nil then
 		d.sourceType = src; d.sourceID = b:getSourceID()
+		d.sourceSecondaryID = 0 -- Lua cannot read the original spell level, so fill in 0, otherwise the status description for "any level" comes out garbled
 	elseif src == ENUM.BonusSource.creatureAbility and b:getSourceID() ~= "" then
 		d.sourceType = src; d.sourceID = b:getSourceID()
 	else
@@ -233,15 +234,23 @@ function M.syncHealth(server, battle, G, O)
 end
 
 --- Hide the original stack
+-- The engine picks spell targets (isValidTarget) without looking at the ghost marker, so mass spells would land on the hidden original stack. While it is hidden, give the original stack a hidden
+-- absolute spell immunity (LEVEL_SPELL_IMMUNITY 5, addInfo 1), removed when it is put back. Level 0 creature ability spells are not affected.
+M.HIDE_IMMUNE = "h6FormHiddenImmune"
+
 function M.hide(server, battle, O)
 	local st = O:copy()
 	st:setGhost(true)
 	st:setHadMorale(true)
 	server:changeUnit(battle, st, 0)
+	server:addUnitBonus(battle, O, { type = "LEVEL_SPELL_IMMUNITY", val = 5, addInfo = 1, hidden = true,
+		duration = ENUM.BonusDuration.oneBattle, sourceType = ENUM.BonusSource.other, stacking = M.HIDE_IMMUNE,
+		valueType = ENUM.BonusValueType.additiveValue }, false)
 end
 
 --- Put the original stack back: position and health as G (G must be removed first to free the hex)
 function M.restore(server, battle, O, pos, health)
+	L.removeByStacking(server, battle, O, "LEVEL_SPELL_IMMUNITY", M.HIDE_IMMUNE)
 	local st = O:copy()
 	st:setGhost(false)
 	st:setPosition(pos)

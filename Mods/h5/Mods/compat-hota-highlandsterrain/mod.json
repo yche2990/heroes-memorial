@@ -5,7 +5,7 @@
 		"name": "英雄无敌5纪念版：召唤元素认高地地形",
 		"description": "在 HotA 的高地地形上，召唤元素按地形召出对应的元素。"
 	},
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"author": "yche2990",
 	"modType": "Compatibility",
 	"depends": [

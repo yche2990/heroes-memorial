@@ -87,6 +87,8 @@
 		"patches": [],
 		"schema": {
 			"properties": {
+				"hoverText": {"type": "string"},
+				"blockedText": {"type": "string"},
 				"type": {},
 				"indirect": {},
 				"optional": {},
@@ -116,7 +118,8 @@
 				}
 			},
 			"additionalProperties": false
-		}
+		},
+		"stringRegistrations": [ "hoverText", "blockedText" ]
 	},
 	"h4SmokeFx": {
 		"implements": "spellEffect",

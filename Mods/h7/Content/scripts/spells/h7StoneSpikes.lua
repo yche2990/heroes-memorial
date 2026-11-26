@@ -59,4 +59,33 @@ function Script:describeTargetStep(mechanics, partialTarget, hoveredHex)
 	return nil
 end
 
+--- Hover estimate: same formula as apply (h5Damage damage, times centerFactor for the stack standing on the target hex); damage and kills of all targets are summed
+function Script:getHealthChange(mechanics, spellTarget)
+	local ok, result = pcall(function()
+		local out = { hpDelta = 0, unitsDelta = 0 }
+		local target = self:filterTarget(mechanics, spellTarget)
+		local center = nil
+		for _, dest in ipairs(target) do
+			if dest.unit == nil and dest.hex ~= nil then center = dest.hex break end
+		end
+		local factor = 1
+		if self.centerFactor then factor = self.centerFactor[Lib.level(mechanics) + 1] or 1 end
+		for _, dest in ipairs(target) do
+			local unit = dest.unit
+			if unit and unit:isAlive() then
+				local amount = Base.damageForTarget(self, 0, mechanics, unit)
+				if center and factor ~= 1 and unit:coversPos(center) then amount = math.floor(amount * factor) end
+				local copy = unit:copy()
+				local hp, cnt = copy:getAvailableHealth(), copy:getCount()
+				copy:damage(amount)
+				out.hpDelta = out.hpDelta - (hp - copy:getAvailableHealth())
+				out.unitsDelta = out.unitsDelta - (cnt - copy:getCount())
+			end
+		end
+		return out
+	end)
+	if ok and result then return result end
+	return { hpDelta = 0, unitsDelta = 0 }
+end
+
 return Script

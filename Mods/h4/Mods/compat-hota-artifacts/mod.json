@@ -5,7 +5,7 @@
 		"name": "英雄无敌4纪念版·遗忘之戒兼容",
 		"description": "遗忘之戒（HotA 宝物）也禁止英雄无敌4的复活类法术。"
 	},
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"author": "yche2990",
 	"modType": "Compatibility",
 	"depends": [

@@ -1266,6 +1266,7 @@
 		"patches": [],
 		"schema": {
 			"properties": {
+				"hoverText": {"type": "string"},
 				"type": {},
 				"indirect": {},
 				"optional": {},
@@ -1292,7 +1293,8 @@
 				}
 			},
 			"additionalProperties": false
-		}
+		},
+		"stringRegistrations": [ "hoverText" ]
 	},
 	"h47Dive": {
 		"implements": "spellEffect",

@@ -281,6 +281,7 @@
 		}
 	},
 	"h6AbSearingLight": {
+		"targetCondition" : { "noneOf" : { "bonus.SIEGE_WEAPON" : "absolute" } },   // control effects do not work on war machines
 		"type": "ability",
 		"name": "Searing Light",
 		"school": {
@@ -557,6 +558,7 @@
 		}
 	},
 	"h6Pacified": {
+		"targetCondition" : { "noneOf" : { "bonus.SIEGE_WEAPON" : "absolute" } },   // control effects do not work on war machines
 		"type": "ability",
 		"name": "Pacified",
 		"school": {

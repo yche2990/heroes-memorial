@@ -49,11 +49,6 @@ function Script:transformTarget(mechanics, aimPoint, spellTarget)
 	return result
 end
 
-function Script:describeTargetStep(mechanics, partialTarget, hoveredHex)
-	if #partialTarget ~= 1 then return nil end
-	return { cursor = "combatSacrifice", text = { append = { "core.genrltxt.543" } }, blockedText = { append = { "core.genrltxt.543" } } }
-end
-
 function Script:apply(mechanics, server, target)
 	local battle = mechanics:getBattle()
 	if #target ~= 2 then return end
@@ -73,6 +68,63 @@ function Script:apply(mechanics, server, target)
 		addInfo = { spell = key, partner = victim:unitID(), reduce = S.pick(mechanics, self.reduce) or 33 } })
 	add(victim, { type = "STACKS_SPEED", val = 0 })    -- Only so that the sacrificer also shows this spell
 	if server:describeChanges() then server:refreshBattleUnits(battle) end
+end
+
+--- Cursor and status bar text while choosing a target: the first step of Sacrifice (H6), the protected stack, uses kadCursorLink.
+--- The text copies the engine default (BattleSpellMechanics::describeTargetStep): on a unit "Cast X on Y" (core.genrltxt.27, Y singular or plural by count),
+--- when it cannot be cast "Select a target for the spell" (23); on a hex "Cast X" (26); damage and healing estimates are appended as usual.
+--- Steps (or modes) not listed in the table return nil and fall back to the engine default.
+local function h6SpSacrificeFirstStep(self, mechanics, partialTarget, hoveredHex)
+	local CURSORS = { [1] = "kadCursorLink" } -- step number -> cursor
+	local AIM = { ["*"] = "creature" } -- target type of the first step (spell targetType)
+	if hoveredHex == nil or not hoveredHex:isValid() or mechanics:isMassive() then return nil end
+	local step = #partialTarget + 1
+	local cursor = CURSORS[step]
+	if cursor == nil then return nil end
+	local spell = mechanics:getSpell()
+	if step ~= 1 then return nil end
+	local aim = AIM[spell:getJsonKey()] or AIM["*"]
+	if aim ~= "creature" and aim ~= "location" then return nil end
+	local spellName = spell:getNameTextID()
+	if aim == "creature" then
+		local battle = mechanics:getBattle()
+		local unit = battle:getUnitByPos(hoveredHex, true) or battle:getUnitByPos(hoveredHex, false)
+		local names = { spellName }
+		if unit ~= nil then table.insert(names, unit:getCreature():getNameTextID(unit:getCount())) end
+		return {
+			cursor = cursor,
+			text = { append = { "core.genrltxt.27" }, replaceStrings = names }, -- Cast %s on %s
+			blockedText = { append = { "core.genrltxt.23" } },                  -- Select a target for the spell
+			healthGainTextID = "vcmi.battleWindow.healValuePreview"
+		}
+	end
+	return {
+		cursor = cursor,
+		text = { append = { "core.genrltxt.26" }, replaceStrings = { spellName } }, -- Cast %s
+		healthGainTextID = "vcmi.battleWindow.healValuePreview"
+	}
+end
+
+--- Cursor and status bar text while choosing a target: the first step (the protected stack) uses the link cursor kadCursorLink and the default text (table above);
+--- the second step picks the stack to sacrifice, like the engine's sacrifice.lua: combatSacrifice, "Sacrifice X", and "Select a stack to sacrifice" over hexes that cannot be chosen.
+--- The second step used to show "Select a stack to sacrifice" over valid stacks too; now it names the stack; healthGainTextID added.
+function Script:describeTargetStep(mechanics, partialTarget, hoveredHex)
+	if #partialTarget == 0 then return h6SpSacrificeFirstStep(self, mechanics, partialTarget, hoveredHex) end
+	if #partialTarget ~= 1 then return nil end
+	local text = { append = { "core.genrltxt.543" } } -- Select a stack to sacrifice
+	if hoveredHex ~= nil and hoveredHex:isValid() then
+		local battle = mechanics:getBattle()
+		local victim = battle:getUnitByPos(hoveredHex, true) or battle:getUnitByPos(hoveredHex, false)
+		if victim ~= nil then
+			text = { append = { "core.genrltxt.549" }, replaceStrings = { victim:getCreature():getNameTextID(victim:getCount()) } } -- Sacrifice %s
+		end
+	end
+	return {
+		cursor = "combatSacrifice",
+		text = text,
+		blockedText = { append = { "core.genrltxt.543" } },
+		healthGainTextID = "vcmi.battleWindow.healValuePreview"
+	}
 end
 
 return Script

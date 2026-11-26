@@ -295,6 +295,7 @@
 		"patches": [],
 		"schema": {
 			"properties": {
+				"hoverText": {"type": "string"},
 				"type": {},
 				"indirect": {},
 				"optional": {},
@@ -312,7 +313,8 @@
 				}
 			},
 			"additionalProperties": false
-		}
+		},
+		"stringRegistrations": [ "hoverText" ]
 	},
 	"h6IllBlood": {
 		"implements": "spellEffect",
@@ -429,6 +431,7 @@
 		"patches": [],
 		"schema": {
 			"properties": {
+				"hoverText": {"type": "string"},
 				"type": {},
 				"indirect": {},
 				"optional": {},
@@ -452,7 +455,8 @@
 				}
 			},
 			"additionalProperties": false
-		}
+		},
+		"stringRegistrations": [ "hoverText" ]
 	},
 	"h6WordOfLight": {
 		"implements": "spellEffect",

@@ -1267,7 +1267,7 @@
 				"icon": "h6/abilities/ab_Heal"
 			},
 			"casts": {
-				"type": "CASTS",
+				"stacking": "h6HavenVestalExpCasts", "type": "CASTS",
 				"val": 1,
 				"hidden": true
 			},
@@ -1446,7 +1446,7 @@
 			},
 			{
 				"bonus": {
-					"type": "CASTS"
+					"stacking": "h6HavenVestalExpCasts", "type": "CASTS"
 				},
 				"values": [
 					1,
@@ -3355,7 +3355,7 @@
 				"icon": "h6/abilities/ab_Blade_of_Epiphany"
 			},
 			"casts": {
-				"type": "CASTS",
+				"stacking": "h6HavenCelestialExpCasts", "type": "CASTS",
 				"val": 1,
 				"hidden": true
 			},
@@ -3553,7 +3553,7 @@
 			},
 			{
 				"bonus": {
-					"type": "CASTS"
+					"stacking": "h6HavenCelestialExpCasts", "type": "CASTS"
 				},
 				"values": [
 					1,

@@ -129,4 +129,76 @@ if not Base.describeTargetStep then
 	end
 end
 
+--- For the hover estimate: expected value of A.attackDamage (random damage takes the average of min and max, otherwise the same formula)
+local function hcMeanAttack(attacker, target, pct, ranged)
+	local minDamage = attacker:getMinDamage(ranged)
+	local maxDamage = math.max(minDamage, attacker:getMaxDamage(ranged))
+	local base = attacker:getCount() * (minDamage + maxDamage) / 2
+	local diff = attacker:getAttack(ranged) - target:getDefense(ranged)
+	local factor
+	if diff > 0 then
+		factor = 1 + 0.05 * math.min(diff, 60)
+	else
+		factor = 1 - 0.025 * math.min(-diff, 28)
+	end
+	return math.max(1, math.floor(base * factor * pct / 100))
+end
+
+--- Hover estimate: same formula as apply. Call Lightning = number of creatures x per; Death Touch = kills 1; normal attack types use the expected damage (without luck);
+--- Goblin throw is halved beyond half the battlefield; spellDamage goes through spell resistance; Storm Bolt chains are added stack by stack in apply's order
+function Script:getHealthChange(mechanics, spellTarget)
+	local zero = { hpDelta = 0, unitsDelta = 0 }
+	local ok, result = pcall(function()
+		local battle = mechanics:getBattle()
+		local caster = mechanics:getUnitCaster()
+		if caster == nil or not caster:isAlive() then return zero end
+		local dest = spellTarget and spellTarget[1]
+		local unit = dest and dest.unit
+		if unit == nil or not unit:isAlive() or not self:isValidTarget(mechanics, unit) then return zero end
+		if self.goblin and self:goblinStack(battle, caster) == nil then return zero end
+		local out = { hpDelta = 0, unitsDelta = 0 }
+		local function one(u)
+			if not A.damageable(u) then return end
+			local dmg
+			if self.mode == "perCreature" then
+				dmg = caster:getCount() * (self.per or 1)
+			elseif self.mode == "killOne" then
+				dmg = u:getFirstHPleft()
+			else
+				dmg = hcMeanAttack(caster, u, self.pct or 100, false)
+				if self.goblin and C.unitDistance(caster, u) > 10 then dmg = math.floor(dmg / 2) end
+			end
+			if self.mode ~= "killOne" and self.spellDamage then
+				local okAdj, adj = pcall(function() return mechanics:getSpell():adjustDamage(battle, caster, u, dmg) end)
+				if okAdj and type(adj) == "number" then dmg = adj end
+			end
+			dmg = math.max(1, math.floor(dmg))
+			local copy = u:copy()
+			local hp, cnt = copy:getAvailableHealth(), copy:getCount()
+			copy:damage(dmg)
+			out.hpDelta = out.hpDelta - (hp - copy:getAvailableHealth())
+			out.unitsDelta = out.unitsDelta - (cnt - copy:getCount())
+		end
+		one(unit)
+		if self.chain then
+			local hit = { [unit:unitID()] = true }
+			local last = unit
+			for _ = 1, 30 do
+				local nextUnit = nil
+				for _, u in ipairs(C.adjacentUnits(battle, last, function(o) return battle:isHostile(caster, o) and not hit[o:unitID()] and A.damageable(o) and not A.schoolImmune(o, "air") end)) do
+					nextUnit = u
+					break
+				end
+				if nextUnit == nil then break end
+				hit[nextUnit:unitID()] = true
+				one(nextUnit)
+				last = nextUnit
+			end
+		end
+		return out
+	end)
+	if ok and result then return result end
+	return zero
+end
+
 return Script

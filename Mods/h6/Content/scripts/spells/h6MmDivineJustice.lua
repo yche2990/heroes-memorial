@@ -35,4 +35,28 @@ function Script:apply(mechanics, server, target)
 end
 if not Base.describeTargetStep then function Script:describeTargetStep() return nil end end
 
+--- Cursor and status bar text while choosing a target: return nil to use the engine default ("Cast X on Y" / "Cast X", with damage and healing estimates added automatically).
+--- Every spell effect script must define this function.
+function Script:describeTargetStep(mechanics, partialTarget, hoveredHex)
+	return nil
+end
+
+--- Hover estimate: same formula as apply. Total damage dealt by the target's attacks so far this battle x pct%, at most cap, physical damage (resistances not applied)
+function Script:getHealthChange(mechanics, spellTarget)
+	local zero = { hpDelta = 0, unitsDelta = 0 }
+	local ok, result = pcall(function()
+		local first = self:filterTarget(mechanics, spellTarget or {})[1]
+		local u = first and first.unit
+		if u == nil or not u:isAlive() then return zero end
+		local d = self:amount(mechanics, u)
+		if d <= 0 then return zero end
+		local copy = u:copy()
+		local hp, cnt = copy:getAvailableHealth(), copy:getCount()
+		copy:damage(d)
+		return { hpDelta = -(hp - copy:getAvailableHealth()), unitsDelta = -(cnt - copy:getCount()) }
+	end)
+	if ok and result then return result end
+	return zero
+end
+
 return Script

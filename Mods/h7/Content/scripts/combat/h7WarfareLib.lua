@@ -227,7 +227,20 @@ function M.hide(server, battle, O)
 	local st = O:copy(); st:setGhost(true); st:setHadMorale(true); server:changeUnit(battle, st, 0)
 end
 
+-- The engine picks spell targets without looking at the ghost marker, so mass spells would land on the hidden original machine. After a successful transformation the original machine gets a hidden absolute spell immunity
+-- (LEVEL_SPELL_IMMUNITY 5, addInfo 1), removed when it is put back
+M.HIDE_IMMUNE = "h7WarfareHiddenImmune"
+function M.hideImmune(server, battle, O)
+	server:addUnitBonus(battle, O, { type = "LEVEL_SPELL_IMMUNITY", val = 5, addInfo = 1, hidden = true,
+		duration = ENUM.BonusDuration.oneBattle, sourceType = ENUM.BonusSource.other, stacking = M.HIDE_IMMUNE,
+		valueType = ENUM.BonusValueType.additiveValue }, false)
+end
+
 function M.unhide(server, battle, O)
+	local ok, list = pcall(function()
+		return O:getBonuses({ type = "LEVEL_SPELL_IMMUNITY" }):filter(function(b) return b:getStacking() == M.HIDE_IMMUNE end)
+	end)
+	if ok and list ~= nil and list:size() > 0 then server:removeUnitBonuses(battle, O, list) end
 	local st = O:copy(); st:setGhost(false); server:changeUnit(battle, st, 0)
 end
 
@@ -293,6 +306,7 @@ function M.transfer(server, battle, O, G)
 			local d = { type = ty, val = b:getVal(), valueType = b:getValType(), sourceType = b:getSource(),
 				duration = ENUM.BonusDuration.oneBattle, stacking = b:getStacking(), hidden = b:isHidden() }
 			if sid ~= "" and sid ~= "-1" and sid:match("^[%a]") then d.sourceID = sid else d.sourceType = ENUM.BonusSource.other end
+			if d.sourceType == ENUM.BonusSource.spellEffect then d.sourceSecondaryID = 0 end -- Fill in spell level 0 as the source of the spell effect (Lua cannot read the original level)
 			if sub ~= nil and sub ~= "" and sub ~= "none" then d.subtype = sub end
 			-- Bonuses added as a percentage of a source (creature specialty "Attack/Defense +X% every N levels" is percentToTargetType and only scales the creature's own Attack/Defense):
 			-- Lua cannot read the original entry's target source; creature specialties are all creature abilities, so it is written that way
@@ -333,6 +347,7 @@ function M.swap(server, battle, O, unitKey, level)
 	end
 	M.transfer(server, battle, O, G)
 	M.applyLevel(server, battle, G, unitKey, level, atk, M.ballistaK(O, G))
+	M.hideImmune(server, battle, O)
 	add(server, battle, G, hidden({ type = M.MARK, stacking = M.LINK, val = O:unitID() }))
 	return G
 end

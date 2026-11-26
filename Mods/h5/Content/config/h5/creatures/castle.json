@@ -4314,9 +4314,9 @@
 		"speed": 15,
 		"hitPoints": 222,
 		"attack": 25,
-		"defense": 18,
+		"defense": 19,
 		"damage": {
-			"min": 22,
+			"min": 40,
 			"max": 66
 		},
 		"doubleWide": true,

@@ -4,13 +4,27 @@ local Script = setmetatable({}, {__index = Base})
 Script.__index = Script
 
 --- Passives of the Void Avatar (H6 boss):
----   Erase: normal attacks knock the single-hex stack hit back by 1 hex;
+---   Erase: a normal attack knocks the struck single-hex stack back 1 hex (when this action ends);
 ---   Void Oppression: at the start of each round, adjacent enemies are Dazed (H6 Dazed) and deal -aura% damage this round;
----   Curse of Oblivion: the first hit on it each round does nothing (healed at once), and melee attackers are pushed away 2 hexes;
+---   Curse of Oblivion: the first attacker each round deals no damage (restored at once); a melee attacker is pushed back 2 hexes when this action ends;
 ---   Reflection: after that, reflect% of the damage it takes is passed to a random adjacent enemy;
 ---   Void Gate: enemies carrying its gate (H6_VOIDGATE_H6C) lose gate% of their count at the start of each round;
 ---   Void Circle (while H6_VOIDCIRCLE_H6C is active): regains heal% of its health at battle start each round, enemies within 2 hexes take circle damage, and enemies beyond 2 hexes deal -90% damage to it.
 --- Parameters: aura, daze, reflect, gate, heal, circle, animation, sound
+
+-- Knockback does not move the unit in the middle of attack resolution (a pushed unit would still be retaliated against from a distance); remember it and push when this action ends; each stack is pushed at most once per action (the longest distance)
+local pendingKnock = {}
+local function queueKnock(unit, target, dist)
+	local id = unit:unitID()
+	pendingKnock[id] = pendingKnock[id] or {}
+	for _, e in ipairs(pendingKnock[id]) do
+		if e.id == target:unitID() then
+			if dist > e.dist then e.dist = dist end
+			return
+		end
+	end
+	table.insert(pendingKnock[id], { id = target:unitID(), dist = dist })
+end
 
 local function hostileNear(battle, unit, dist)
 	return battle:getUnitsIf(function(u) return L.real(u) and battle:isHostile(unit, u) and L.unitDistance(unit, u) <= dist end)
@@ -59,7 +73,7 @@ function Script:onAfterAttacked(server, battle, unit, other, payload)
 	if not L.markValue(unit, "h6Oblivion") then
 		L.setMark(server, battle, unit, "h6Oblivion", 1, 1)
 		if dmg > 0 then server:healUnit(battle, unit, dmg, ENUM.HealLevel.heal, ENUM.HealPower.permanent) end
-		if other:isAlive() and L.adjacent(unit, other) then L.knock(server, battle, unit, other, 2) end
+		if other:isAlive() and L.adjacent(unit, other) and server:describeChanges() then queueKnock(unit, other, 2) end
 		L.log(server, battle, "H6_OBLIVION_H6C", 1, { L.name(other) }, {})
 		if server:describeChanges() then server:refreshBattleUnits(battle) end
 		return
@@ -72,8 +86,25 @@ end
 function Script:onAfterAttack(server, battle, unit, other, payload)
 	if not unit:isAlive() then return end
 	for _, t in ipairs(payload.targets or {}) do
-		if t.unit and t.unit:isAlive() and battle:isHostile(unit, t.unit) then L.knock(server, battle, unit, t.unit, 1) end
+		if t.unit and t.unit:isAlive() and battle:isHostile(unit, t.unit) and server:describeChanges() then queueKnock(unit, t.unit, 1) end
 	end
+end
+
+-- Knock back everything at the end of this action (the avatar receives it both as the attacker and as the one hit)
+function Script:onActionFinished(server, battle, unit, other, payload)
+	local list = pendingKnock[unit:unitID()]
+	if list == nil then return end
+	pendingKnock[unit:unitID()] = nil
+	if not unit:isAlive() then return end
+	local moved = false
+	for _, e in ipairs(list) do
+		for _, u in ipairs(battle:getUnitsIf(function(u) return u:unitID() == e.id end)) do
+			if u:isAlive() and battle:isHostile(unit, u) and L.adjacent(unit, u) then
+				if L.knock(server, battle, unit, u, e.dist) then moved = true end
+			end
+		end
+	end
+	if moved and server:describeChanges() then server:refreshBattleUnits(battle) end
 end
 
 return Script

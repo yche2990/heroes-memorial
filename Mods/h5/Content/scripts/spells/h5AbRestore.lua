@@ -198,9 +198,88 @@ end
 --- but unitEffect.lua does not inherit it (heal, dispel, damage and timed all come from unitEffect), and the log reports function 'describeTargetStep' not found.
 --- If the base class lacks it, one returning nil is added (= the engine's default cursor text, same display as before); once the engine adds it, the engine's is used.
 if not Base.describeTargetStep then
-	function Script:describeTargetStep(mechanics, partialTarget, hoveredHex)
-		return nil
+end
+
+--- Cursor and status bar text while choosing a target: only the cursor changes (cursor proxy cursor_map.json): creature healing / resurrection abilities
+--- The text copies the engine default (BattleSpellMechanics::describeTargetStep): on a unit "Cast X on Y" (core.genrltxt.27, Y singular or plural by count),
+--- when it cannot be cast "Select a target for the spell" (23); on a hex "Cast X" (26); damage and healing estimates are appended as usual.
+--- Steps (or modes) not listed in the table return nil and fall back to the engine default.
+function Script:describeTargetStep(mechanics, partialTarget, hoveredHex)
+	local BY_MODE = {
+		layHands = { [1] = "combatHeal" },
+		repair = { [1] = "combatHeal" },
+		resurrect = { [1] = "combatHeal" },
+		sacrifice = { [1] = "combatSacrifice" },
+		scavenger = { [1] = "combatSacrifice" },
+		swallow = { [1] = "combatSacrifice" },
+		union = { [1] = "combatHeal" },
+	}
+	local CURSORS = BY_MODE[self.mode or ""] or { [1] = "combatHeal" }
+	local AIM = { ["*"] = "creature" } -- target type of the first step (spell targetType)
+	if hoveredHex == nil or not hoveredHex:isValid() or mechanics:isMassive() then return nil end
+	local step = #partialTarget + 1
+	local cursor = CURSORS[step]
+	if cursor == nil then return nil end
+	local spell = mechanics:getSpell()
+	if step ~= 1 then return nil end
+	local aim = AIM[spell:getJsonKey()] or AIM["*"]
+	if aim ~= "creature" and aim ~= "location" then return nil end
+	local spellName = spell:getNameTextID()
+	if aim == "creature" then
+		local battle = mechanics:getBattle()
+		local unit = battle:getUnitByPos(hoveredHex, true) or battle:getUnitByPos(hoveredHex, false)
+		local names = { spellName }
+		if unit ~= nil then table.insert(names, unit:getCreature():getNameTextID(unit:getCount())) end
+		return {
+			cursor = cursor,
+			text = { append = { "core.genrltxt.27" }, replaceStrings = names }, -- Cast %s on %s
+			blockedText = { append = { "core.genrltxt.23" } },                  -- Select a target for the spell
+			healthGainTextID = "vcmi.battleWindow.healValuePreview"
+		}
 	end
+	return {
+		cursor = cursor,
+		text = { append = { "core.genrltxt.26" }, replaceStrings = { spellName } }, -- Cast %s
+		healthGainTextID = "vcmi.battleWindow.healValuePreview"
+	}
+end
+
+--- Hover estimate: same formula as apply, computed with self:heal on a copy (with the Ring of Oblivion on the field only the top creature is healed, no resurrection).
+--- Holy Heal, Repair, Resurrect Ally and Symbiosis show the target's restored health and resurrected count (the dryad's own share in Symbiosis is not counted);
+--- Scavenger and Devouring Goblin show what the caster itself heals; Sacrifice Goblin does not change health and returns 0
+function Script:getHealthChange(mechanics, spellTarget)
+	local zero = { hpDelta = 0, unitsDelta = 0 }
+	local ok, result = pcall(function()
+		local caster = mechanics:getUnitCaster()
+		if caster == nil or not caster:isAlive() then return zero end
+		local dest = self:filterTarget(mechanics, spellTarget or {})[1]
+		local unit = dest and dest.unit
+		if unit == nil then return zero end
+		local mode = self.mode
+		local n = caster:getCount()
+		local who, amount, resurrect = unit, 0, false
+		if mode == "layHands" then
+			amount = injuries(unit)
+		elseif mode == "repair" or mode == "resurrect" then
+			amount, resurrect = (self.per or 5) * n, true
+		elseif mode == "union" then
+			amount, resurrect = (self.per or 20) * n, true
+		elseif mode == "scavenger" then
+			who, amount, resurrect = caster, math.floor(unit:getTotalHealth() * (self.pct or 20) / 100), true
+		elseif mode == "swallow" then
+			who, amount = caster, injuries(caster)
+		else
+			return zero
+		end
+		local lvl = ENUM.HealLevel.heal
+		if resurrect then amount, lvl = H5R.reviveHeal(who, amount) end
+		amount = math.floor(amount)
+		if amount <= 0 then return zero end
+		local healed, raised = who:copy():heal(amount, lvl, ENUM.HealPower.permanent)
+		return { hpDelta = healed or 0, unitsDelta = raised or 0, unitType = who:getCreature() }
+	end)
+	if ok and result then return result end
+	return zero
 end
 
 return Script

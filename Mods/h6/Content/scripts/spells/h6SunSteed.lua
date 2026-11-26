@@ -78,4 +78,10 @@ function Script:apply(mechanics, server, target)
 	L.log(server, battle, "H6_SUN_STEED_H6C", 1, { L.name(G) }, {})
 end
 
+--- Cursor and status bar text while choosing a target: return nil to use the engine default ("Cast X on Y" / "Cast X", with damage and healing estimates added automatically).
+--- Every spell effect script must define this function.
+function Script:describeTargetStep(mechanics, partialTarget, hoveredHex)
+	return nil
+end
+
 return Script

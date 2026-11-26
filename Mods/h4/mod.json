@@ -8,7 +8,7 @@
 		],
 		"description": "英雄无敌4的兵种（带原版能力）加入对应的 VCMI 城镇，另有英雄无敌4的英雄魔法和药水、十座英雄无敌4宝屋，以及纪念药剂坊、魔法学院、换兵所、纪念圣殿和元素汇集H4。"
 	},
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"author": "yche2990",
 	"modType": "Creatures",
 	"compatibility": {

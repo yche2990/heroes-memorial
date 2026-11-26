@@ -69,4 +69,40 @@ end
 --- 2026-11-07: the engine only gives spell effect scripts hexes as targets, so the stack on the hex is attached (see h6Lib.unitTarget)
 function Script:transformTarget(mechanics, aimPoint, spellTarget) return L.unitTarget(mechanics, spellTarget) end
 
+--- Cursor and status bar text while choosing a target: cursor combatSacrifice, "Drain X" (drains an adjacent ghost stack to heal) instead of "Cast".
+--- The text is in the spell parameter hoverText (one %s = the stack pointed at); spells without hoverText use the engine default.
+function Script:describeTargetStep(mechanics, partialTarget, hoveredHex)
+	if #partialTarget ~= 0 or self.hoverText == nil or hoveredHex == nil or not hoveredHex:isValid() then return nil end
+	local battle = mechanics:getBattle()
+	local unit = battle:getUnitByPos(hoveredHex, true) or battle:getUnitByPos(hoveredHex, false)
+	local text = { append = { self.hoverText } }
+	if unit ~= nil then
+		text.replaceStrings = { unit:getCreature():getNameTextID(unit:getCount()) }
+	end
+	return {
+		cursor = "combatSacrifice",
+		text = text,
+		blockedText = { append = { "core.genrltxt.23" } }, -- Select a target for the spell (as the engine default)
+		healthGainTextID = "vcmi.battleWindow.healValuePreview"
+	}
+end
+
+--- Hover estimate: same formula as apply. Drains this ghost stack (all of it dies); the caster heals drained health x pct% (heal level heal, no resurrection).
+--- Shows the health actually restored to the caster (the drained ghosts are not counted)
+function Script:getHealthChange(mechanics, spellTarget)
+	local zero = { hpDelta = 0, unitsDelta = 0 }
+	local ok, result = pcall(function()
+		local caster = mechanics:getUnitCaster()
+		local first = self:filterTarget(mechanics, spellTarget or {})[1]
+		local main = first and first.unit
+		if caster == nil or main == nil then return zero end
+		local amount = math.floor(main:getAvailableHealth() * (self.pct or 300) / 100)
+		if amount <= 0 then return zero end
+		local healed = caster:copy():heal(amount, ENUM.HealLevel.heal, ENUM.HealPower.permanent)
+		return { hpDelta = healed or 0, unitsDelta = 0 }
+	end)
+	if ok and result then return result end
+	return zero
+end
+
 return Script

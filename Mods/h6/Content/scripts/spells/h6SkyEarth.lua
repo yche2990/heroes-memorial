@@ -81,4 +81,40 @@ function Script:apply(mechanics, server, target)
 	L.useCast(server, battle, caster, self.key or mechanics:getSpell():getJsonKey(), nil)
 end
 
+--- Cursor and status bar text while choosing a target: return nil to use the engine default ("Cast X on Y" / "Cast X", with damage and healing estimates added automatically).
+--- Every spell effect script must define this function.
+function Script:describeTargetStep(mechanics, partialTarget, hoveredHex)
+	return nil
+end
+
+--- For the hover estimate: a copy of L.hit that returns damage, kills (0, 0 when the target cannot be hit or the values are invalid)
+local function hcHit(target, amount)
+	amount = math.floor(amount or 0)
+	if target == nil or not target:isAlive() or target:isGhost() or target:isInvincible() or amount <= 0 then return 0, 0 end
+	local copy = target:copy()
+	local hp, cnt = copy:getAvailableHealth(), copy:getCount()
+	copy:damage(amount)
+	return hp - copy:getAvailableHealth(), cnt - copy:getCount()
+end
+
+--- Hover estimate: same formula as apply. A non-flying enemy stack takes per x number of casters earth damage (after earth and all-spell reductions);
+--- allies are only hasted, returns 0. The mass version is an untargeted spell and has no hover
+function Script:getHealthChange(mechanics, spellTarget)
+	local zero = { hpDelta = 0, unitsDelta = 0 }
+	if self.mass then return zero end
+	local ok, result = pcall(function()
+		local battle = mechanics:getBattle()
+		local caster = mechanics:getUnitCaster()
+		if caster == nil or not caster:isAlive() then return zero end
+		local first = self:filterTarget(mechanics, spellTarget or {})[1]
+		local u = first and first.unit
+		if u == nil or not u:isAlive() or not battle:isHostile(caster, u) then return zero end
+		local amount = math.floor((self.per or 8) * caster:getCount() * (100 - L.schoolReduction(u, "earth")) / 100)
+		local d, killed = hcHit(u, amount)
+		return { hpDelta = -d, unitsDelta = -killed }
+	end)
+	if ok and result then return result end
+	return zero
+end
+
 return Script

@@ -966,6 +966,7 @@
 				},
 				"battleEffects": {
 					"move": {
+						"hoverText": "Harpoon the %s",
 						"type": "h5AbMove",
 						"mode": "harpoon",
 						"mark": "H5_AB_HARPOON_H5C"
@@ -1310,6 +1311,7 @@
 				},
 				"battleEffects": {
 					"move": {
+						"hoverText": "Leap at the %s",
 						"type": "h5AbMove",
 						"mode": "leap",
 						"minDist": 3,
@@ -2570,6 +2572,7 @@
 				},
 				"battleEffects": {
 					"move": {
+						"hoverText": "Teleport the %s to your side",
 						"type": "h5AbMove",
 						"mode": "summon",
 						"mark": "H5_AB_SUMMONOTHER_H5C"

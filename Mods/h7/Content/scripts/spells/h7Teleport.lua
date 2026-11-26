@@ -63,10 +63,6 @@ function Script:adjustTargetTypes(mechanics, types)
 	return Base.adjustTargetTypes(self, mechanics, types)
 end
 
-function Script:describeTargetStep()
-	return nil
-end
-
 function Script:applicableTarget(mechanics, problem, target)
 	if aiSingle(mechanics) and #target <= 1 then
 		if not Base.applicableTarget(self, mechanics, problem, target) then return false end
@@ -114,6 +110,15 @@ function Script:apply(mechanics, server, target)
 			stacking = "h7TeleportSpeed"
 		}, false)
 	end
+end
+
+--- Cursor and status bar text while choosing a target: same as the base class (spells/teleport): the second step, choosing where to land, uses combatTeleport, "Teleport here" / "Invalid teleport destination".
+--- This used to return nil, which overrode the base class cursor and text of the second step; it now defers to the base class.
+function Script:describeTargetStep(mechanics, partialTarget, hoveredHex)
+	if Base.describeTargetStep then
+		return Base.describeTargetStep(self, mechanics, partialTarget, hoveredHex)
+	end
+	return nil
 end
 
 return Script

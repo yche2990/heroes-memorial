@@ -35,6 +35,7 @@
 				},
 				"battleEffects": {
 					"main": {
+						"hoverText": "Open a gate here",
 						"type": "heroes-memorial.h6:h6RcGating",
 						"tier": 1,
 						"pct": 3.43,
@@ -105,6 +106,7 @@
 				},
 				"battleEffects": {
 					"main": {
+						"hoverText": "Open a gate here",
 						"type": "heroes-memorial.h6:h6RcGating",
 						"tier": 2,
 						"pct": 6.875,
@@ -175,6 +177,7 @@
 				},
 				"battleEffects": {
 					"main": {
+						"hoverText": "Open a gate here",
 						"type": "heroes-memorial.h6:h6RcGating",
 						"tier": 3,
 						"pct": 10.31,
@@ -245,6 +248,7 @@
 				},
 				"battleEffects": {
 					"main": {
+						"hoverText": "Summon the demons here",
 						"type": "heroes-memorial.h6:h6RcGating",
 						"tier": 4,
 						"pct": 11,

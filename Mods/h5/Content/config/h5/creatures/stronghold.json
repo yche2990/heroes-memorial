@@ -282,8 +282,8 @@
 		"attack": 20,
 		"defense": 20,
 		"damage": {
-			"min": 31,
-			"max": 44
+			"min": 35,
+			"max": 46
 		},
 		"doubleWide": true,
 		"fightValue": 4800,
@@ -869,7 +869,7 @@
 		},
 		"speed": 5,
 		"hitPoints": 22,
-		"attack": 6,
+		"attack": 8,
 		"defense": 8,
 		"damage": {
 			"min": 3,

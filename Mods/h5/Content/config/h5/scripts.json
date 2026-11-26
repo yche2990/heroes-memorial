@@ -1205,6 +1205,9 @@
 		"patches": [],
 		"schema": {
 			"properties": {
+				"hoverText": {
+					"type": "string"
+				},
 				"type": {},
 				"indirect": {},
 				"optional": {},
@@ -1237,7 +1240,10 @@
 				}
 			},
 			"additionalProperties": false
-		}
+		},
+		"stringRegistrations": [
+			"hoverText"
+		]
 	},
 	"h5AbZone": {
 		"implements": "spellEffect",

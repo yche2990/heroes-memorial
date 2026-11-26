@@ -190,6 +190,7 @@
 		}
 	},
 	"h4Displacement": {
+		"targetCondition" : {"noneOf": {"bonus.SIEGE_WEAPON": "absolute"}},
 		"type": "combat",
 		"name": "Displacement (H4)",
 		"school": {
@@ -215,6 +216,8 @@
 				},
 				"battleEffects": {
 					"fx": {
+						"blockedText": "Cannot push there",
+						"hoverText": "Push the %s here",
 						"type": "heroes-memorial.h4:h4SpellFx",
 						"mode": "displace",
 						"range": 2
@@ -9667,6 +9670,7 @@
 				},
 				"battleEffects": {
 					"fx": {
+						"hoverText": "The %s will take damage for the %s",
 						"type": "heroes-memorial.h4:h4SpellFx",
 						"mode": "martyr"
 					}
@@ -12352,6 +12356,7 @@
 		},
 		"targetCondition": {
 			"noneOf": {
+				"bonus.SIEGE_WEAPON" : "absolute",
 				"bonus.MIND_IMMUNITY": "normal"
 			}
 		},

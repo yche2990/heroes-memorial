@@ -1373,7 +1373,7 @@
 				"icon": "h6/abilities/ab_Wail_of_the_Netherworld"
 			},
 			"casts": {
-				"type": "CASTS",
+				"stacking": "h6NecroSpectreExpCasts", "type": "CASTS",
 				"val": 1,
 				"hidden": true
 			},
@@ -1553,7 +1553,7 @@
 			},
 			{
 				"bonus": {
-					"type": "CASTS"
+					"stacking": "h6NecroSpectreExpCasts", "type": "CASTS"
 				},
 				"values": [
 					1,

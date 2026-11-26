@@ -9,7 +9,7 @@ local Script = setmetatable({}, {__index = Base})
 Script.__index = Script
 
 function Script:isValidTarget(mechanics, unit)
-	if not M.real(unit) or unit:getSide() ~= mechanics:getCasterSide() or unit:isClone() or unit:isSummoned() then return false end
+	if not M.real(unit) or unit:getSide() ~= mechanics:getCasterSide() or unit:isClone() or unit:copy():isSummoned() then return false end
 	return self:spot(mechanics:getBattle(), unit) ~= nil
 end
 function Script:isReceptive(mechanics, unit) return true end
@@ -55,5 +55,27 @@ function Script:apply(mechanics, server, target)
 	server:refreshBattleUnits(battle)
 end
 if not Base.describeTargetStep then function Script:describeTargetStep() return nil end end
+
+--- Cursor and status bar text while choosing a target: return nil to use the engine default ("Cast X on Y" / "Cast X", with damage and healing estimates added automatically).
+--- Every spell effect script must define this function.
+function Script:describeTargetStep(mechanics, partialTarget, hoveredHex)
+	return nil
+end
+
+--- Hover estimate: same formula as apply. If there is a free hex next to it, an illusion of the same creature appears, count max(1, original stack size x hp% rounded)
+function Script:getHealthChange(mechanics, spellTarget)
+	local zero = { hpDelta = 0, unitsDelta = 0 }
+	local ok, result = pcall(function()
+		local first = self:filterTarget(mechanics, spellTarget or {})[1]
+		local u = first and first.unit
+		if u == nil or not u:isAlive() then return zero end
+		if self:spot(mechanics:getBattle(), u) == nil then return zero end
+		local cr = u:getCreature()
+		local n = math.max(1, math.floor(u:getCount() * (self.hp or 15) / 100 + 0.5))
+		return { hpDelta = n * u:getMaxHealth(), unitsDelta = n, unitType = cr }
+	end)
+	if ok and result then return result end
+	return zero
+end
 
 return Script

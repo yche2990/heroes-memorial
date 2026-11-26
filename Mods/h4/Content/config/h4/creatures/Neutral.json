@@ -1611,7 +1611,7 @@
 					"school": "water",
 					"show": "H4_FREEZE_H4C",
 					"log": 3,
-					"sound": "FRSTRING",
+					"sound": "FROSTING",
 					"fx": "h4/fx/freeze",
 					"tint": "heroes-memorial.h4:h4FrozenTint"
 				},

@@ -237,9 +237,76 @@ end
 --- but unitEffect.lua does not inherit it (heal, dispel, damage and timed all come from unitEffect), and the log reports function 'describeTargetStep' not found.
 --- If the base class lacks it, one returning nil is added (= the engine's default cursor text, same display as before); once the engine adds it, the engine's is used.
 if not Base.describeTargetStep then
-	function Script:describeTargetStep(mechanics, partialTarget, hoveredHex)
-		return nil
+end
+
+--- Cursor and status bar text while choosing a target: only the cursor changes (cursor proxy cursor_map.json): H5 status abilities
+--- The text copies the engine default (BattleSpellMechanics::describeTargetStep): on a unit "Cast X on Y" (core.genrltxt.27, Y singular or plural by count),
+--- when it cannot be cast "Select a target for the spell" (23); on a hex "Cast X" (26); damage and healing estimates are appended as usual.
+--- Steps (or modes) not listed in the table return nil and fall back to the engine default.
+function Script:describeTargetStep(mechanics, partialTarget, hoveredHex)
+	local BY_MODE = {
+		seduce = { [1] = "kadCursorCharm" },
+	}
+	local CURSORS = BY_MODE[self.mode or ""] or {  }
+	local AIM = { -- target type of the first step (spell targetType)
+		["heroes-memorial.h5:h5AbDefileMagic"] = "creature",
+		["heroes-memorial.h5:h5AbLuckGambler"] = "creature",
+		["heroes-memorial.h5:h5AbManaFeed"] = "nothing",
+		["heroes-memorial.h5:h5AbOrderOfTheChief"] = "creature",
+		["heroes-memorial.h5:h5AbRandomCastDark"] = "creature",
+		["heroes-memorial.h5:h5AbRandomCastDarkLight"] = "creature",
+		["heroes-memorial.h5:h5AbSabotage"] = "creature",
+		["heroes-memorial.h5:h5AbSeduce"] = "creature",
+		["heroes-memorial.h5:h5AbSyphonMana"] = "creature",
+	}
+	if hoveredHex == nil or not hoveredHex:isValid() or mechanics:isMassive() then return nil end
+	local step = #partialTarget + 1
+	local cursor = CURSORS[step]
+	if cursor == nil then return nil end
+	local spell = mechanics:getSpell()
+	if step ~= 1 then return nil end
+	local aim = AIM[spell:getJsonKey()] or AIM["*"]
+	if aim ~= "creature" and aim ~= "location" then return nil end
+	local spellName = spell:getNameTextID()
+	if aim == "creature" then
+		local battle = mechanics:getBattle()
+		local unit = battle:getUnitByPos(hoveredHex, true) or battle:getUnitByPos(hoveredHex, false)
+		local names = { spellName }
+		if unit ~= nil then table.insert(names, unit:getCreature():getNameTextID(unit:getCount())) end
+		return {
+			cursor = cursor,
+			text = { append = { "core.genrltxt.27" }, replaceStrings = names }, -- Cast %s on %s
+			blockedText = { append = { "core.genrltxt.23" } },                  -- Select a target for the spell
+			healthGainTextID = "vcmi.battleWindow.healValuePreview"
+		}
 	end
+	return {
+		cursor = cursor,
+		text = { append = { "core.genrltxt.26" }, replaceStrings = { spellName } }, -- Cast %s
+		healthGainTextID = "vcmi.battleWindow.healValuePreview"
+	}
+end
+
+--- Hover estimate: only Chieftain's Order deals damage on the spot, same formula as apply: allies lose number of chieftains x dmgPer (not adjusted).
+--- The spell of Random Magic is drawn only when cast; the other modes do not change health; all return 0
+function Script:getHealthChange(mechanics, spellTarget)
+	local zero = { hpDelta = 0, unitsDelta = 0 }
+	if self.mode ~= "order" then return zero end
+	local ok, result = pcall(function()
+		local caster = mechanics:getUnitCaster()
+		if caster == nil or not caster:isAlive() then return zero end
+		local dest = self:filterTarget(mechanics, spellTarget or {})[1]
+		local unit = dest and dest.unit
+		if unit == nil or not unit:isAlive() then return zero end
+		local dmg = math.floor(caster:getCount() * (self.dmgPer or 1))
+		if dmg <= 0 then return zero end
+		local copy = unit:copy()
+		local hp, cnt = copy:getAvailableHealth(), copy:getCount()
+		copy:damage(dmg)
+		return { hpDelta = -(hp - copy:getAvailableHealth()), unitsDelta = -(cnt - copy:getCount()) }
+	end)
+	if ok and result then return result end
+	return zero
 end
 
 return Script

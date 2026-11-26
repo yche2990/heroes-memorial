@@ -5,7 +5,7 @@
 		"name": "王朝武器·遗忘之戒兼容",
 		"description": "遗忘之戒（HotA 宝物）也禁止王朝武器给的复活。"
 	},
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"author": "yche2990",
 	"modType": "Compatibility",
 	"depends": [

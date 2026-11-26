@@ -97,8 +97,22 @@ function Script:apply(mechanics, server, target)
 	end
 end
 
+--- Cursor and status bar text while choosing a target: cursor kadCursorCharge, "Charge X" / "Pounce on X" (it rushes over first; the player then chooses the attack).
+--- The text is in the spell parameter hoverText (one %s = the stack pointed at); spells without hoverText use the engine default.
 function Script:describeTargetStep(mechanics, partialTarget, hoveredHex)
-	return nil
+	if #partialTarget ~= 0 or self.hoverText == nil or hoveredHex == nil or not hoveredHex:isValid() then return nil end
+	local battle = mechanics:getBattle()
+	local unit = battle:getUnitByPos(hoveredHex, true) or battle:getUnitByPos(hoveredHex, false)
+	local text = { append = { self.hoverText } }
+	if unit ~= nil then
+		text.replaceStrings = { unit:getCreature():getNameTextID(unit:getCount()) }
+	end
+	return {
+		cursor = "kadCursorCharge",
+		text = text,
+		blockedText = { append = { "core.genrltxt.23" } }, -- Select a target for the spell (as the engine default)
+		healthGainTextID = "vcmi.battleWindow.healValuePreview"
+	}
 end
 
 return Script

@@ -91,4 +91,69 @@ function Script:apply(mechanics, server, target)
 	if server:describeChanges() then server:refreshBattleUnits(battle) end
 end
 
+--- Cursor and status bar text while choosing a target: only the cursor changes (cursor proxy cursor_map.json): Sunburst (H6): rays in eight directions
+--- The text copies the engine default (BattleSpellMechanics::describeTargetStep): on a unit "Cast X on Y" (core.genrltxt.27, Y singular or plural by count),
+--- when it cannot be cast "Select a target for the spell" (23); on a hex "Cast X" (26); damage and healing estimates are appended as usual.
+--- Steps (or modes) not listed in the table return nil and fall back to the engine default.
+function Script:describeTargetStep(mechanics, partialTarget, hoveredHex)
+	local CURSORS = { [1] = "kadCursorRay" } -- step number -> cursor
+	local AIM = { ["*"] = "location" } -- target type of the first step (spell targetType)
+	if hoveredHex == nil or not hoveredHex:isValid() or mechanics:isMassive() then return nil end
+	local step = #partialTarget + 1
+	local cursor = CURSORS[step]
+	if cursor == nil then return nil end
+	local spell = mechanics:getSpell()
+	if step ~= 1 then return nil end
+	local aim = AIM[spell:getJsonKey()] or AIM["*"]
+	if aim ~= "creature" and aim ~= "location" then return nil end
+	local spellName = spell:getNameTextID()
+	if aim == "creature" then
+		local battle = mechanics:getBattle()
+		local unit = battle:getUnitByPos(hoveredHex, true) or battle:getUnitByPos(hoveredHex, false)
+		local names = { spellName }
+		if unit ~= nil then table.insert(names, unit:getCreature():getNameTextID(unit:getCount())) end
+		return {
+			cursor = cursor,
+			text = { append = { "core.genrltxt.27" }, replaceStrings = names }, -- Cast %s on %s
+			blockedText = { append = { "core.genrltxt.23" } },                  -- Select a target for the spell
+			healthGainTextID = "vcmi.battleWindow.healValuePreview"
+		}
+	end
+	return {
+		cursor = cursor,
+		text = { append = { "core.genrltxt.26" }, replaceStrings = { spellName } }, -- Cast %s
+		healthGainTextID = "vcmi.battleWindow.healValuePreview"
+	}
+end
+
+--- For the hover estimate: a copy of L.hit that returns damage, kills (0, 0 when the target cannot be hit or the values are invalid)
+local function hcHit(target, amount)
+	amount = math.floor(amount or 0)
+	if target == nil or not target:isAlive() or target:isGhost() or target:isInvincible() or amount <= 0 then return 0, 0 end
+	local copy = target:copy()
+	local hp, cnt = copy:getAvailableHealth(), copy:getCount()
+	copy:damage(amount)
+	return hp - copy:getAvailableHealth(), cnt - copy:getCount()
+end
+
+--- Hover estimate: same formula as apply. Every enemy stack on the target hex and on the 8 rays takes base + per x Spell Power light damage
+--- (through the engine's spell damage adjustment); damage and kills are summed
+function Script:getHealthChange(mechanics, spellTarget)
+	local zero = { hpDelta = 0, unitsDelta = 0 }
+	local ok, result = pcall(function()
+		local c = nil
+		for _, d in ipairs(spellTarget or {}) do if d.hex and d.hex:isValid() then c = d.hex; break end end
+		if c == nil then return zero end
+		local raw = S.value(mechanics, self.base, self.per)
+		local out = { hpDelta = 0, unitsDelta = 0 }
+		for _, u in ipairs(rayVictims(mechanics:getBattle(), c, mechanics:getCasterSide())) do
+			local d, killed = hcHit(u, S.spellDamage(mechanics, u, raw, "01lightSchool"))
+			out.hpDelta, out.unitsDelta = out.hpDelta - d, out.unitsDelta - killed
+		end
+		return out
+	end)
+	if ok and result then return result end
+	return zero
+end
+
 return Script

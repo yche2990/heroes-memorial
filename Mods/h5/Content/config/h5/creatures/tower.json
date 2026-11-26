@@ -13,7 +13,7 @@
 		"speed": 5,
 		"hitPoints": 30,
 		"attack": 15,
-		"defense": 11,
+		"defense": 12,
 		"damage": {
 			"min": 6,
 			"max": 6
@@ -829,7 +829,7 @@
 		},
 		"speed": 7,
 		"hitPoints": 23,
-		"attack": 4,
+		"attack": 5,
 		"defense": 10,
 		"damage": {
 			"min": 1,
@@ -1135,7 +1135,7 @@
 		"speed": 5,
 		"hitPoints": 22,
 		"attack": 9,
-		"defense": 6,
+		"defense": 7,
 		"damage": {
 			"min": 4,
 			"max": 6

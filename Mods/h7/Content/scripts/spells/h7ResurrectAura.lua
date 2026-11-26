@@ -81,4 +81,30 @@ function Script:describeTargetStep(mechanics, partialTarget, hoveredHex)
 	return nil
 end
 
+--- Hover estimate: same formula as apply, only the cast itself. Allies adjacent to the main target each heal amount[mastery] (with the Ring of Oblivion on the field only the top creature is healed),
+--- healing is summed (the main target's resurrection is reported by the main effect of the same spell). The heals in the next two rounds are not counted
+function Script:getHealthChange(mechanics, spellTarget)
+	local zero = { hpDelta = 0, unitsDelta = 0 }
+	local ok, result = pcall(function()
+		local lvl = Lib.level(mechanics)
+		local amount = self.amount and (self.amount[lvl + 1] or self.amount[#self.amount]) or 0
+		if amount <= 0 then return zero end
+		local out = { hpDelta = 0, unitsDelta = 0 }
+		for _, dest in ipairs(self:filterTarget(mechanics, spellTarget or {})) do
+			local unit = dest.unit
+			if unit and unit:isAlive() and unit:getTotalHealth() > unit:getAvailableHealth() then
+				local amt, level = C.reviveHeal(unit, amount)
+				amt = math.floor(amt)
+				if amt > 0 then
+					local healed = unit:copy():heal(amt, level, ENUM.HealPower.permanent)
+					out.hpDelta = out.hpDelta + (healed or 0)
+				end
+			end
+		end
+		return out
+	end)
+	if ok and result then return result end
+	return zero
+end
+
 return Script

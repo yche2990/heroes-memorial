@@ -70,4 +70,22 @@ end
 --- 2026-11-07: the engine only gives spell effect scripts hexes as targets, so the stack on the hex is attached (see h6Lib.unitTarget)
 function Script:transformTarget(mechanics, aimPoint, spellTarget) return L.unitTarget(mechanics, spellTarget) end
 
+--- Cursor and status bar text while choosing a target: cursor combatSacrifice, "Devour X" (swallows an enemy stack) instead of "Cast".
+--- The text is in the spell parameter hoverText (one %s = the stack pointed at); spells without hoverText use the engine default.
+function Script:describeTargetStep(mechanics, partialTarget, hoveredHex)
+	if #partialTarget ~= 0 or self.hoverText == nil or hoveredHex == nil or not hoveredHex:isValid() then return nil end
+	local battle = mechanics:getBattle()
+	local unit = battle:getUnitByPos(hoveredHex, true) or battle:getUnitByPos(hoveredHex, false)
+	local text = { append = { self.hoverText } }
+	if unit ~= nil then
+		text.replaceStrings = { unit:getCreature():getNameTextID(unit:getCount()) }
+	end
+	return {
+		cursor = "combatSacrifice",
+		text = text,
+		blockedText = { append = { "core.genrltxt.23" } }, -- Select a target for the spell (as the engine default)
+		healthGainTextID = "vcmi.battleWindow.healValuePreview"
+	}
+end
+
 return Script

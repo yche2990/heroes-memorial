@@ -99,9 +99,74 @@ end
 --- but unitEffect.lua does not inherit it (heal, dispel, damage and timed all come from unitEffect), and the log reports function 'describeTargetStep' not found.
 --- If the base class lacks it, one returning nil is added (= the engine's default cursor text, same display as before); once the engine adds it, the engine's is used.
 if not Base.describeTargetStep then
-	function Script:describeTargetStep(mechanics, partialTarget, hoveredHex)
-		return nil
+end
+
+--- Cursor and status bar text while choosing a target: only the cursor changes (cursor proxy cursor_map.json): Animate Dead, Reincarnation, Resurrection (H4/H7), Divine Intervention (H4), Call of Death: heal and resurrect
+--- The text copies the engine default (BattleSpellMechanics::describeTargetStep): on a unit "Cast X on Y" (core.genrltxt.27, Y singular or plural by count),
+--- when it cannot be cast "Select a target for the spell" (23); on a hex "Cast X" (26); damage and healing estimates are appended as usual.
+--- Steps (or modes) not listed in the table return nil and fall back to the engine default.
+function Script:describeTargetStep(mechanics, partialTarget, hoveredHex)
+	local CURSORS = { [1] = "combatHeal" } -- step number -> cursor
+	local AIM = { ["*"] = "creature" } -- target type of the first step (spell targetType)
+	if hoveredHex == nil or not hoveredHex:isValid() or mechanics:isMassive() then return nil end
+	local step = #partialTarget + 1
+	local cursor = CURSORS[step]
+	if cursor == nil then return nil end
+	local spell = mechanics:getSpell()
+	if step ~= 1 then return nil end
+	local aim = AIM[spell:getJsonKey()] or AIM["*"]
+	if aim ~= "creature" and aim ~= "location" then return nil end
+	local spellName = spell:getNameTextID()
+	if aim == "creature" then
+		local battle = mechanics:getBattle()
+		local unit = battle:getUnitByPos(hoveredHex, true) or battle:getUnitByPos(hoveredHex, false)
+		-- When pointing at an enemy stack (damage or no effect) use the engine default
+		if unit ~= nil and unit:getSide() ~= mechanics:getCasterSide() then return nil end
+		local names = { spellName }
+		if unit ~= nil then table.insert(names, unit:getCreature():getNameTextID(unit:getCount())) end
+		return {
+			cursor = cursor,
+			text = { append = { "core.genrltxt.27" }, replaceStrings = names }, -- Cast %s on %s
+			blockedText = { append = { "core.genrltxt.23" } },                  -- Select a target for the spell
+			healthGainTextID = "vcmi.battleWindow.healValuePreview"
+		}
 	end
+	return {
+		cursor = cursor,
+		text = { append = { "core.genrltxt.26" }, replaceStrings = { spellName } }, -- Cast %s
+		healthGainTextID = "vcmi.battleWindow.healValuePreview"
+	}
+end
+
+--- Hover estimate: same formula as apply (Heroes V healing amounts; with the Ring of Oblivion on the field only the top creature is healed, no resurrection); healing and resurrected counts of all targets are summed
+function Script:getHealthChange(mechanics, spellTarget)
+	local ok, result = pcall(function()
+		local out = { hpDelta = 0, unitsDelta = 0 }
+		for _, dest in ipairs(self:filterTarget(mechanics, spellTarget)) do
+			local unit = dest.unit
+			if unit then
+				local amount, level = self:getHealAmount(mechanics, unit, nil), self:getHealLevel()
+				if level == ENUM.HealLevel.resurrect then amount, level = C.reviveHeal(unit, amount) end
+				if amount > 0 then
+					local copy = unit:copy()
+					local healed, resurrected = copy:heal(amount, level, self:getHealPower())
+					out.hpDelta = out.hpDelta + healed
+					if resurrected > 0 then
+						out.unitsDelta = out.unitsDelta + resurrected
+						local cr = unit:getCreature()
+						if out.unitType == nil then out.unitType = cr
+						elseif out.unitType:getJsonKey() ~= cr:getJsonKey() then out.mixed = true end
+					end
+				end
+			end
+		end
+		-- When more than one kind of creature is resurrected it cannot be written as "+N creature", so only the restored health is shown
+		if out.mixed or out.unitType == nil then out.unitsDelta = 0 end
+		out.mixed = nil
+		return out
+	end)
+	if ok and result and (result.unitsDelta <= 0 or result.unitType) then return result end
+	return { hpDelta = 0, unitsDelta = 0 }
 end
 
 return Script

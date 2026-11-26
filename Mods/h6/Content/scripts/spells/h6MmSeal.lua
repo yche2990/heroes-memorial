@@ -57,4 +57,28 @@ function Script:apply(mechanics, server, target)
 end
 if not Base.describeTargetStep then function Script:describeTargetStep() return nil end end
 
+--- Cursor and status bar text while choosing a target: return nil to use the engine default ("Cast X on Y" / "Cast X", with damage and healing estimates added automatically).
+--- Every spell effect script must define this function.
+function Script:describeTargetStep(mechanics, partialTarget, hoveredHex)
+	return nil
+end
+
+--- Hover estimate: same formula as apply. From this stack of summoned demons take floor(min(total health, cap, losses of the source stack) / health of one) creatures back into the source stack (can resurrect;
+--- with the Ring of Oblivion on the field only the top creature is healed). Shows the health restored to the source stack and the number resurrected
+function Script:getHealthChange(mechanics, spellTarget)
+	local zero = { hpDelta = 0, unitsDelta = 0 }
+	local ok, result = pcall(function()
+		local first = self:filterTarget(mechanics, spellTarget or {})[1]
+		local u = first and first.unit
+		if u == nil or not u:isAlive() then return zero end
+		local amt, tpl = self:amount(mechanics, u)
+		local n = math.floor(amt / math.max(1, u:getMaxHealth()))
+		if tpl == nil or n <= 0 then return zero end
+		local healed, raised = tpl:copy():heal(n * tpl:getMaxHealth(), ring(tpl) and ENUM.HealLevel.heal or ENUM.HealLevel.resurrect, ENUM.HealPower.permanent)
+		return { hpDelta = healed or 0, unitsDelta = raised or 0, unitType = tpl:getCreature() }
+	end)
+	if ok and result then return result end
+	return zero
+end
+
 return Script

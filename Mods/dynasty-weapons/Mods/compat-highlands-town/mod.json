@@ -5,7 +5,7 @@
 		"name": "王朝武器匠·堡垒职业",
 		"description": "装了堡垒时生效：它的力量型、魔法型英雄职业也能在王朝武器匠领到王朝武器。"
 	},
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"author": "yche2990",
 	"modType": "Compatibility",
 	"depends": [

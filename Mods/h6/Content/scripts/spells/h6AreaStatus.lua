@@ -142,4 +142,70 @@ function Script:apply(mechanics, server, target)
 	L.useCast(server, battle, caster, self.key or mechanics:getSpell():getJsonKey(), nil)
 end
 
+--- Cursor and status bar text while choosing a target: return nil to use the engine default ("Cast X on Y" / "Cast X", with damage and healing estimates added automatically).
+--- Every spell effect script must define this function.
+function Script:describeTargetStep(mechanics, partialTarget, hoveredHex)
+	return nil
+end
+
+--- For the hover estimate: expected value of h6Lib.attackDamage (random damage takes the average of min and max, otherwise the same formula: attack/defense modifiers, damage bonuses and reductions, pct%)
+local function hcMeanAttack(attacker, target, pct, ranged)
+	ranged = ranged == true
+	local modifier = L.damageModifier(attacker, target, ranged)
+	if modifier <= 0 then return 0 end
+	local minDamage = attacker:getMinDamage(ranged)
+	local maxDamage = math.max(minDamage, attacker:getMaxDamage(ranged))
+	local base = attacker:getCount() * (minDamage + maxDamage) / 2
+	local diff = attacker:getAttack(ranged) - target:getDefense(ranged)
+	local factor
+	if diff > 0 then
+		factor = 1 + 0.05 * math.min(diff, 60)
+	else
+		factor = 1 - 0.025 * math.min(-diff, 28)
+	end
+	return math.max(1, math.floor(base * factor * modifier * (pct or 100) / 100))
+end
+
+--- For the hover estimate: a copy of L.hit that returns damage, kills (0, 0 when the target cannot be hit or the values are invalid)
+local function hcHit(target, amount)
+	amount = math.floor(amount or 0)
+	if target == nil or not target:isAlive() or target:isGhost() or target:isInvincible() or amount <= 0 then return 0, 0 end
+	local copy = target:copy()
+	local hp, cnt = copy:getAvailableHealth(), copy:getCount()
+	copy:damage(amount)
+	return hp - copy:getAvailableHealth(), cnt - copy:getCount()
+end
+
+--- Hover estimate: same formula as apply, only the immediate damage (pct: pct% of the stack's initial total health; attackPct: expected normal attack damage, without luck;
+--- per: per x number of casters, reduced by school and all-spell damage reductions), summed over all affected stacks. Damage over time and status spells are not counted
+--- (status spells are applied first; if one changes defense etc. the actual damage differs slightly)
+function Script:getHealthChange(mechanics, spellTarget)
+	local zero = { hpDelta = 0, unitsDelta = 0 }
+	if (self.pct or 0) <= 0 and (self.attackPct or 0) <= 0 and (self.per or 0) <= 0 then return zero end
+	local ok, result = pcall(function()
+		local caster = mechanics:getUnitCaster()
+		if caster == nil or not caster:isAlive() then return zero end
+		local first = self:filterTarget(mechanics, spellTarget or {})[1]
+		local center = first and first.unit
+		local out = { hpDelta = 0, unitsDelta = 0 }
+		for _, u in ipairs(self:victims(mechanics, caster, center)) do
+			if u:isAlive() then
+				local amount
+				if (self.pct or 0) > 0 then
+					amount = math.max(1, math.floor(u:getTotalHealth() * self.pct / 100))
+				elseif (self.attackPct or 0) > 0 then
+					amount = hcMeanAttack(caster, u, self.attackPct, false)
+				else
+					amount = math.floor(self.per * caster:getCount() * (100 - L.schoolReduction(u, self.school)) / 100)
+				end
+				local d, killed = hcHit(u, amount)
+				out.hpDelta, out.unitsDelta = out.hpDelta - d, out.unitsDelta - killed
+			end
+		end
+		return out
+	end)
+	if ok and result then return result end
+	return zero
+end
+
 return Script

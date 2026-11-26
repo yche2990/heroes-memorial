@@ -109,7 +109,7 @@
 		"value": 15000,
 		"text": {
 			"name": "Flower of Dolor",
-			"description": "{Flower of Dolor}\n\n+5 Knowledge. Allows casting Expert Chain Lightning.\n\nAn ancient sapphire holding a dragon's tear. After the sacrifice it shines brighter, and colder.",
+			"description": "{Flower of Dolor}\n\n+5 Knowledge. Allows casting Expert Chain Lightning.\n\nAn ancient sapphire holding a dragon's tear. After the sacrifice it shines brighter, and colder.\n\n(Requires a Spell Book.)",
 			"event": "At the top of the Tower of Shadows, an ice-blue flower glows quietly in the dark."
 		},
 		"graphics": {
@@ -139,8 +139,8 @@
 		"slot": "RIGHT_HAND",
 		"value": 15000,
 		"text": {
-			"name": "Deadwood Staff",
-			"description": "{Deadwood Staff}\n\n+10 Spell Power.\n\nA staff twisted from the branches of a long-dead ancient tree. Lost souls still whisper inside it.",
+			"name": "Whispering Staff",
+			"description": "{Whispering Staff}\n\n+10 Spell Power.\n\nA staff twisted from the branches of a long-dead ancient tree. Lost souls still whisper inside it.",
 			"event": "Deep in the webs hangs a staff of dead wood. Faint whispers come from within it."
 		},
 		"graphics": {
@@ -465,7 +465,7 @@
 		"fusedComponents": true,
 		"text": {
 			"name": "Griffin Battle Garb",
-			"description": "{Griffin Battle Garb}\n\n+4 Attack, +3 Defense, +1 Spell Power, +12 Knowledge, +1 Morale, +1 Luck, +1 Speed to all troops, +300 land movement points, +30% Light Magic effect, +2 rounds to the duration of spells cast by the hero, +10% experience. Allows casting Expert Resurrection.\n\nDuke Ivan's full set of griffin armor. A hero clad in all of it is guarded by the might of the griffin, and fallen comrades rise again.\n\n(The components are consumed when combined.)",
+			"description": "{Griffin Battle Garb}\n\n+4 Attack, +3 Defense, +1 Spell Power, +12 Knowledge, +1 Morale, +1 Luck, +1 Speed to all troops, +300 land movement points, +30% Light Magic effect, +2 rounds to the duration of spells cast by the hero, +10% experience. Allows casting Expert Resurrection.\n\nDuke Ivan's full set of griffin armor. A hero clad in all of it is guarded by the might of the griffin, and fallen comrades rise again.\n\n(The components are consumed when combined.)\n\n(Requires a Spell Book.)",
 			"event": "The four pieces of griffin armor join together into a complete battle garb."
 		},
 		"graphics": {

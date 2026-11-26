@@ -8,12 +8,20 @@
 		],
 		"description": "把《英雄无敌》4、5、6、7 代的兵种、魔法、能力和地图物件搬进 VCMI，尽量贴近原作。每一代是一个子 mod，可以单独关闭。素材来自《英雄无敌》4、5、6、7 代原版（© Ubisoft），由作者渲染转换为 VCMI 格式；部分图标、头像、地图物件和战斗特效用 AI（OpenArt）制作或在原画基础上重绘。攻城槌脚本来自 Karyoplasma 的 batteringRam mod。非商业同人作品，与 Ubisoft 无关。"
 	},
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"author": "yche2990",
 	"contact": "https://github.com/yche2990/heroes-memorial",
 	"changelog": {
 		"0.1.0": [
 			"First release: Heroes IV, V, VI and VII memorial, Heroes VI dynasty weapons and guarded treasure chests."
+		],
+		"0.1.1": [
+			"Targeted spells and creature abilities show their own cursor and status bar text while choosing a target (e.g. \"Devour the X\", \"Harpoon the X\", \"Open a gate here\"), and the status bar shows the expected damage, healing, kills or summoned creatures before casting",
+			"Heroes V stats corrected to the original: Harpooner, Rune Patriarch, Seraph, Foul Hydra, Blood Sister, Scarlet Dragon, Horned Grunt, Cerberus, Banshee, Horror Dragon, Nosferatu, Elder Druid, Bloodeye Cyclops, Warmonger, Combat Mage, Marble Gargoyle, Magnetic Golem",
+			"Control spells of Heroes IV, VI and VII no longer affect war machines; hidden or transformed stacks are immune to mass spells while they are off the field",
+			"Evasion, knockback and the centaur step-back are resolved when the action ends, so a moved stack is no longer retaliated against or struck from a distance (also avoids a crash on mobile)",
+			"Heroes VI: experience cast bonuses of Vestal, Celestial and Spectre no longer stack twice; Deadwood Staff renamed Whispering Staff; Flower of Dolor notes that it needs a Spell Book",
+			"Heroes VII Memorial Blacksmith appears less often on random maps; a missing frost sound effect fixed"
 		]
 	},
 	"modType": "Creatures",

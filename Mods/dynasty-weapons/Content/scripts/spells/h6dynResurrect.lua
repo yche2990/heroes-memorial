@@ -91,4 +91,50 @@ function Script:apply(mechanics, server, target)
 	end
 end
 
+--- Cursor and status bar text while choosing a target: cursor combatHeal; "Resurrect X" (original core.genrltxt.548, the target can only be a corpse), "Select a stack to resurrect" (542) over hexes that cannot be chosen.
+--- All texts are existing original strings, no new strings to register.
+function Script:describeTargetStep(mechanics, partialTarget, hoveredHex)
+	if #partialTarget ~= 0 or hoveredHex == nil or not hoveredHex:isValid() then return nil end
+	local battle = mechanics:getBattle()
+	local unit = battle:getUnitByPos(hoveredHex, true) or battle:getUnitByPos(hoveredHex, false)
+	local text = { append = { "core.genrltxt.548" } }
+	if unit ~= nil then
+		text.replaceStrings = { unit:getCreature():getNameTextID(unit:getCount()) }
+	end
+	return {
+		cursor = "combatHeal",
+		text = text,
+		blockedText = { append = { "core.genrltxt.542" } },
+		healthGainTextID = "vcmi.battleWindow.healValuePreview"
+	}
+end
+
+--- Hover estimate: same formula as apply. The corpse regains a fixed value of health and is resurrected (with the Ring of Oblivion on the field it is only healed, no resurrection, so no effect).
+--- Shows the number resurrected (the base class heal estimate ignores the Ring of Oblivion, so it is written here)
+function Script:getHealthChange(mechanics, spellTarget)
+	local zero = { hpDelta = 0, unitsDelta = 0 }
+	local ok, result = pcall(function()
+		local out = { hpDelta = 0, unitsDelta = 0 }
+		for _, dest in ipairs(spellTarget or {}) do
+			local unit = dest.unit
+			if unit and self:isValidTarget(mechanics, unit) then
+				local level = self:getHealLevel()
+				if Lib.ringOfOblivion(unit) then level = ENUM.HealLevel.heal end
+				local amount = math.floor(self:getHealAmount(mechanics, unit, nil))
+				if amount > 0 then
+					local healed, raised = unit:copy():heal(amount, level, self:getHealPower())
+					out.hpDelta = out.hpDelta + (healed or 0)
+					if raised and raised > 0 then
+						out.unitsDelta = out.unitsDelta + raised
+						out.unitType = out.unitType or unit:getCreature()
+					end
+				end
+			end
+		end
+		return out
+	end)
+	if ok and result and (result.unitsDelta <= 0 or result.unitType) then return result end
+	return zero
+end
+
 return Script

@@ -113,10 +113,6 @@ function Script:transformTarget(mechanics, aimPoint, spellTarget)
 	return result
 end
 
-function Script:describeTargetStep(mechanics, partialTarget, hoveredHex)
-	return nil
-end
-
 function Script:apply(mechanics, server, target)
 	local battle = mechanics:getBattle()
 	if self.mode == "proxy" then
@@ -174,6 +170,92 @@ function Script:apply(mechanics, server, target)
 		end
 	end
 	server:refreshBattleUnits(battle)
+end
+
+--- Cursor and status bar text while choosing a target, by mode:
+---   banish kadCursorBanish, the hypnotize proxy (proxy for hypnotize) kadCursorCharm, smoke kadCursorPlace: only the cursor changes, the text is the engine default;
+---   displace, second step picks a free hex: combatTeleport, hoverText "Push X here", blockedText "Cannot push here" (spell parameters);
+---   martyr, second step picks another ally: kadCursorLink, hoverText "Let X take the damage for Y" (X = the martyr chosen in the first step, Y = the stack pointed at);
+---   other modes, the first step of two-step modes and spells without hoverText use the engine default.
+function Script:describeTargetStep(mechanics, partialTarget, hoveredHex)
+	if hoveredHex == nil or not hoveredHex:isValid() then return nil end
+	local battle = mechanics:getBattle()
+	local function unitAt(hex)
+		return battle:getUnitByPos(hex, true) or battle:getUnitByPos(hex, false)
+	end
+	local function nameOf(u)
+		return u:getCreature():getNameTextID(u:getCount())
+	end
+	if #partialTarget == 0 then
+		local cursor = ({ banish = "kadCursorBanish", smoke = "kadCursorPlace" })[self.mode or ""]
+		if self.mode == "proxy" and self.spell == "hypnotize" then cursor = "kadCursorCharm" end
+		if cursor == nil or mechanics:isMassive() then return nil end
+		local spellName = mechanics:getSpell():getNameTextID()
+		if self.mode == "smoke" then
+			return {
+				cursor = cursor,
+				text = { append = { "core.genrltxt.26" }, replaceStrings = { spellName } }, -- Cast %s
+				healthGainTextID = "vcmi.battleWindow.healValuePreview"
+			}
+		end
+		local names = { spellName }
+		local unit = unitAt(hoveredHex)
+		if unit ~= nil then table.insert(names, nameOf(unit)) end
+		return {
+			cursor = cursor,
+			text = { append = { "core.genrltxt.27" }, replaceStrings = names }, -- Cast %s on %s
+			blockedText = { append = { "core.genrltxt.23" } },                  -- Select a target for the spell
+			healthGainTextID = "vcmi.battleWindow.healValuePreview"
+		}
+	end
+	if self.mode ~= "displace" and self.mode ~= "martyr" then return nil end
+	if #partialTarget ~= 1 or self.hoverText == nil then return nil end
+	local first = partialTarget[1].unit
+	if first == nil and partialTarget[1].hex ~= nil then first = unitAt(partialTarget[1].hex) end
+	if first == nil then return nil end
+	local names = { nameOf(first) }
+	local cursor = "combatTeleport"
+	local blocked = nil
+	if self.mode == "displace" then
+		if self.blockedText ~= nil then blocked = { append = { self.blockedText } } end
+	else
+		local other = unitAt(hoveredHex)
+		if other == nil then return nil end
+		table.insert(names, nameOf(other))
+		cursor = "kadCursorLink"
+		blocked = { append = { "core.genrltxt.23" } } -- Select a target for the spell
+	end
+	return {
+		cursor = cursor,
+		text = { append = { self.hoverText }, replaceStrings = names },
+		blockedText = blocked,
+		healthGainTextID = "vcmi.battleWindow.healValuePreview"
+	}
+end
+
+--- Hover estimate: only banish deals damage, same formula as apply: base + perPower x Spell Power, resistances not applied.
+--- The other modes (displace, martyr, mana drain, smoke, decoy) do not change health and return 0
+function Script:getHealthChange(mechanics, spellTarget)
+	local zero = { hpDelta = 0, unitsDelta = 0 }
+	if self.mode ~= "banish" then return zero end
+	local ok, result = pcall(function()
+		local out = { hpDelta = 0, unitsDelta = 0 }
+		local dmg = amount(self, mechanics)
+		if dmg <= 0 then return out end
+		for _, dest in ipairs(self:filterTarget(mechanics, spellTarget or {})) do
+			local u = dest.unit
+			if u and u:isAlive() then
+				local copy = u:copy()
+				local hp, cnt = copy:getAvailableHealth(), copy:getCount()
+				copy:damage(dmg)
+				out.hpDelta = out.hpDelta - (hp - copy:getAvailableHealth())
+				out.unitsDelta = out.unitsDelta - (cnt - copy:getCount())
+			end
+		end
+		return out
+	end)
+	if ok and result then return result end
+	return zero
 end
 
 return Script

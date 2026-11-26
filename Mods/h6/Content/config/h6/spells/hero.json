@@ -767,6 +767,7 @@
 		}
 	},
 	"h6SpTeleport": {
+		"targetCondition" : { "noneOf" : { "bonus.SIEGE_WEAPON" : "absolute" } },   // control effects do not work on war machines
 		"type": "combat",
 		"name": "Teleport (H6)",
 		"school": {
@@ -5018,6 +5019,7 @@
 		}
 	},
 	"h6SpBlindness": {
+		"targetCondition" : { "noneOf" : { "bonus.SIEGE_WEAPON" : "absolute" } },   // control effects do not work on war machines
 		"type": "combat",
 		"name": "Blindness (H6)",
 		"school": {
@@ -6312,6 +6314,7 @@
 		}
 	},
 	"h6SpPuppetMaster": {
+		"targetCondition" : { "noneOf" : { "bonus.SIEGE_WEAPON" : "absolute" } },   // control effects do not work on war machines
 		"type": "combat",
 		"name": "Puppet Master (H6)",
 		"school": {
@@ -6505,6 +6508,7 @@
 		}
 	},
 	"h6SpTerror": {
+		"targetCondition" : { "noneOf" : { "bonus.SIEGE_WEAPON" : "absolute" } },   // control effects do not work on war machines
 		"type": "combat",
 		"name": "Terror (H6)",
 		"school": {
@@ -6732,6 +6736,7 @@
 		}
 	},
 	"h6SpTimeStasis": {
+		"targetCondition" : { "noneOf" : { "bonus.SIEGE_WEAPON" : "absolute" } },   // control effects do not work on war machines
 		"type": "combat",
 		"name": "Time Stasis (H6)",
 		"school": {

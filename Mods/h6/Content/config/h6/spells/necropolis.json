@@ -262,6 +262,7 @@
 		}
 	},
 	"h6FrozenWeb": {
+		"targetCondition" : { "noneOf" : { "bonus.SIEGE_WEAPON" : "absolute" } },   // control effects do not work on war machines
 		"type": "ability",
 		"name": "Freezing Web",
 		"school": {

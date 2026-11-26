@@ -12,22 +12,6 @@ function Script:isValidTarget(mechanics, unit)
 	return not unit:isTurret()
 end
 
-function Script:getHealthChange(mechanics, spellTarget)
-	local result = { hpDelta = 0, unitsDelta = 0 }
-	local raw = Lib.value(self.base, self.perPower, Lib.level(mechanics), Lib.power(mechanics))
-	for _, dest in ipairs(spellTarget) do
-		local unit = dest.unit
-		if unit and unit:isAlive() then
-			local copy = unit:copy()
-			local hp, cnt = copy:getAvailableHealth(), copy:getCount()
-			copy:damage(math.floor(raw))
-			result.hpDelta = result.hpDelta - (hp - copy:getAvailableHealth())
-			result.unitsDelta = result.unitsDelta - (cnt - copy:getCount())
-		end
-	end
-	return result
-end
-
 function Script:apply(mechanics, server, target)
 	local battle = mechanics:getBattle()
 	local spellKey = mechanics:getSpell():getJsonKey()
@@ -43,6 +27,31 @@ end
 
 function Script:describeTargetStep(mechanics, partialTarget, hoveredHex)
 	return nil
+end
+
+--- Hover estimate: same formula as apply (h7WaspSwarmJump.sting): base + perPower x Spell Power, times the creature spell damage factor, resistances not applied;
+--- invulnerable stacks take no damage. Only the first sting is counted, not the later ones on other stacks
+function Script:getHealthChange(mechanics, spellTarget)
+	local ok, result = pcall(function()
+		local out = { hpDelta = 0, unitsDelta = 0 }
+		local raw = Lib.value(self.base, self.perPower, Lib.level(mechanics), Lib.power(mechanics)) * Lib.casterDamageFactor(mechanics)
+		for _, dest in ipairs(self:filterTarget(mechanics, spellTarget or {})) do
+			local unit = dest.unit
+			if unit and unit:isAlive() and not unit:isInvincible() then
+				local amount = math.min(math.floor(raw), unit:getAvailableHealth())
+				if amount > 0 then
+					local copy = unit:copy()
+					local hp, cnt = copy:getAvailableHealth(), copy:getCount()
+					copy:damage(amount)
+					out.hpDelta = out.hpDelta - (hp - copy:getAvailableHealth())
+					out.unitsDelta = out.unitsDelta - (cnt - copy:getCount())
+				end
+			end
+		end
+		return out
+	end)
+	if ok and result then return result end
+	return { hpDelta = 0, unitsDelta = 0 }
 end
 
 return Script

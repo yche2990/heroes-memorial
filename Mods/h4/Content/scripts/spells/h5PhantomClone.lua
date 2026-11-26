@@ -57,11 +57,18 @@ function Script:apply(mechanics, server, target)
 			sourceType = ENUM.BonusSource.spellEffect,
 			val        = 0,
 			sourceID   = "clone",   -- The engine only accepts marks with this source (BonusCache CLONE_MARKER)
+			sourceSecondaryID = mechanics:getEffectLevel(),   -- As in the engine's clone.lua: without it the status description is garbled
 			turns      = mechanics:getEffectDuration()
 		}, true)
 
 		::continue::
 	end
+end
+
+--- Cursor and status bar text while choosing a target: return nil to use the engine default ("Cast X on Y" / "Cast X", with damage and healing estimates added automatically).
+--- Every spell effect script must define this function.
+function Script:describeTargetStep(mechanics, partialTarget, hoveredHex)
+	return nil
 end
 
 return Script

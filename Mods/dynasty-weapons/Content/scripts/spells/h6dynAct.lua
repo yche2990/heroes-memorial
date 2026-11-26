@@ -262,4 +262,80 @@ function Script:apply(mechanics, server, target)
 	if animated then server:refreshBattleUnits(battle) end
 end
 
+--- Cursor and status bar text while choosing a target: return nil to use the engine default ("Cast X on Y" / "Cast X", with damage and healing estimates added automatically).
+--- Every spell effect script must define this function.
+function Script:describeTargetStep(mechanics, partialTarget, hoveredHex)
+	return nil
+end
+
+--- Hover estimate: same formula as apply, only the immediate damage and healing. Enemy stacks (and friendly ones with damageAll) take damage / damagePercent / dealtPercent
+--- (resolved as spell damage, first absorbed by the shields of Celestial Armor / Ice Armor); friendly stacks heal heal / healPercent (healLevel, no resurrection with the Ring of Oblivion on the field).
+--- Damage over time, life drain and bonuses are not counted. When both apply only the larger one is shown; when more than one kind of creature is resurrected only the restored health is shown
+function Script:getHealthChange(mechanics, spellTarget)
+	local zero = { hpDelta = 0, unitsDelta = 0 }
+	local ok, result = pcall(function()
+		local spell = mechanics:getSpell()
+		local heal, raised, damage, kills = 0, 0, 0, 0
+		local raisedType, mixed = nil, false
+		for _, dest in ipairs(self:filterTarget(mechanics, spellTarget or {})) do
+			local u = dest.unit
+			if u and u:isAlive() then
+				local mine = own(mechanics, u)
+				local copy = u:copy()
+				if ((not mine) or self.damageAll) and not u:isInvincible() then
+					local amount = 0
+					if self.damage == "power" then
+						amount = mechanics:adjustEffectValue(u)
+					else
+						local raw = self.damage or 0
+						if self.damagePercent then raw = raw + math.floor(Lib.initialHealth(u) * self.damagePercent / 100) end
+						if self.dealtPercent then
+							local d = math.floor(u:getBonusesValue({ type = "H6DYN_DEALT" }) * self.dealtPercent / 100)
+							if self.dealtMax and d > self.dealtMax then d = self.dealtMax end
+							raw = raw + d
+						end
+						amount = Lib.spellDamage(mechanics, spell, u, raw)
+					end
+					amount = math.floor(amount or 0)
+					if amount > 0 and u:getBonusesValue({ type = "H6DYN_SHIELD_ON" }) > 0 then
+						amount = amount - math.max(0, math.min(amount, u:getBonusesValue({ type = "H6DYN_SHIELD_LEFT" })))
+					end
+					if amount > 0 then
+						local hp, cnt = copy:getAvailableHealth(), copy:getCount()
+						copy:damage(amount)
+						damage = damage + (hp - copy:getAvailableHealth())
+						kills = kills + (cnt - copy:getCount())
+					end
+				end
+				if mine and copy:isAlive() then
+					local h = self:amount(mechanics, u, self.heal)
+					if self.heal == "power" then h = mechanics:getEffectValue() end
+					if self.healPercent then h = h + math.floor(Lib.initialHealth(u) * self.healPercent / 100) end
+					h = math.floor(h or 0)
+					if h > 0 and copy:getAvailableHealth() < copy:getTotalHealth() then
+						local level = (self.healLevel == "resurrect") and ENUM.HealLevel.resurrect or ENUM.HealLevel.heal
+						if Lib.ringOfOblivion(u) then level = ENUM.HealLevel.heal end
+						local got, r = copy:heal(h, level, ENUM.HealPower.permanent)
+						heal = heal + (got or 0)
+						if r and r > 0 then
+							raised = raised + r
+							local cr = u:getCreature()
+							if raisedType == nil then raisedType = cr
+							elseif raisedType:getJsonKey() ~= cr:getJsonKey() then mixed = true end
+						end
+					end
+				end
+			end
+		end
+		if damage > 0 and damage > heal then return { hpDelta = -damage, unitsDelta = -kills } end
+		if heal > 0 then
+			if raised > 0 and raisedType and not mixed then return { hpDelta = heal, unitsDelta = raised, unitType = raisedType } end
+			return { hpDelta = heal, unitsDelta = 0 }
+		end
+		return zero
+	end)
+	if ok and result then return result end
+	return zero
+end
+
 return Script

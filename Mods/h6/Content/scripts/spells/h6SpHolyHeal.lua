@@ -85,4 +85,91 @@ function Script:apply(mechanics, server, target)
 end
 if not Base.describeTargetStep then function Script:describeTargetStep() return nil end end
 
+--- Cursor and status bar text while choosing a target: only the cursor changes (cursor proxy cursor_map.json): Divine Intervention / Heal / Mass Heal / Resurrection (H6)
+--- The text copies the engine default (BattleSpellMechanics::describeTargetStep): on a unit "Cast X on Y" (core.genrltxt.27, Y singular or plural by count),
+--- when it cannot be cast "Select a target for the spell" (23); on a hex "Cast X" (26); damage and healing estimates are appended as usual.
+--- Steps (or modes) not listed in the table return nil and fall back to the engine default.
+function Script:describeTargetStep(mechanics, partialTarget, hoveredHex)
+	local CURSORS = { [1] = "combatHeal" } -- step number -> cursor
+	local AIM = { ["*"] = "creature" } -- target type of the first step (spell targetType)
+	if hoveredHex == nil or not hoveredHex:isValid() or mechanics:isMassive() then return nil end
+	local step = #partialTarget + 1
+	local cursor = CURSORS[step]
+	if cursor == nil then return nil end
+	local spell = mechanics:getSpell()
+	if step ~= 1 then return nil end
+	local aim = AIM[spell:getJsonKey()] or AIM["*"]
+	if aim ~= "creature" and aim ~= "location" then return nil end
+	local spellName = spell:getNameTextID()
+	if aim == "creature" then
+		local battle = mechanics:getBattle()
+		local unit = battle:getUnitByPos(hoveredHex, true) or battle:getUnitByPos(hoveredHex, false)
+		-- When pointing at an enemy stack (damage or no effect) use the engine default
+		if unit ~= nil and unit:getSide() ~= mechanics:getCasterSide() then return nil end
+		local names = { spellName }
+		if unit ~= nil then table.insert(names, unit:getCreature():getNameTextID(unit:getCount())) end
+		return {
+			cursor = cursor,
+			text = { append = { "core.genrltxt.27" }, replaceStrings = names }, -- Cast %s on %s
+			blockedText = { append = { "core.genrltxt.23" } },                  -- Select a target for the spell
+			healthGainTextID = "vcmi.battleWindow.healValuePreview"
+		}
+	end
+	return {
+		cursor = cursor,
+		text = { append = { "core.genrltxt.26" }, replaceStrings = { spellName } }, -- Cast %s
+		healthGainTextID = "vcmi.battleWindow.healValuePreview"
+	}
+end
+
+--- Hover estimate: same formula as apply. Friendly stacks: heal / resurrect base + per x Spell Power (living stacks can be resurrected; with the Ring of Oblivion on the field only the top creature is healed);
+--- enemy undead, demons and orcs: dmgBase + dmgPer x Spell Power light damage (through the engine's spell damage adjustment).
+--- When both apply, only the larger one is shown (the status bar holds one number); when more than one kind of creature is resurrected only the restored health is shown
+function Script:getHealthChange(mechanics, spellTarget)
+	local zero = { hpDelta = 0, unitsDelta = 0 }
+	local ok, result = pcall(function()
+		local side = mechanics:getCasterSide()
+		local healAmt = math.floor(S.value(mechanics, self.base, self.per))
+		local dmgAmt = math.floor(S.value(mechanics, self.dmgBase or self.base, self.dmgPer or self.per))
+		local heal, raised, damage, kills = 0, 0, 0, 0
+		local raisedType, mixed = nil, false
+		for _, dest in ipairs(self:filterTarget(mechanics, spellTarget or {})) do
+			local u = dest.unit
+			if u then
+				if u:getSide() == side then
+					local living = not (u:hasBonuses({ type = "UNDEAD" }) or u:hasBonuses({ type = "NON_LIVING" }) or u:hasBonuses({ type = "MECHANICAL" }))
+					local level = (living and not ring(u)) and ENUM.HealLevel.resurrect or ENUM.HealLevel.heal
+					if (u:isAlive() or level == ENUM.HealLevel.resurrect) and healAmt > 0 then
+						local h, r = u:copy():heal(healAmt, level, ENUM.HealPower.permanent)
+						heal = heal + (h or 0)
+						if r and r > 0 then
+							raised = raised + r
+							local cr = u:getCreature()
+							if raisedType == nil then raisedType = cr
+							elseif raisedType:getJsonKey() ~= cr:getJsonKey() then mixed = true end
+						end
+					end
+				elseif u:isAlive() and S.evil(u) then
+					local d = math.floor(S.spellDamage(mechanics, u, dmgAmt, "01lightSchool") or 0)
+					if d > 0 then
+						local copy = u:copy()
+						local hp, cnt = copy:getAvailableHealth(), copy:getCount()
+						copy:damage(d)
+						damage = damage + (hp - copy:getAvailableHealth())
+						kills = kills + (cnt - copy:getCount())
+					end
+				end
+			end
+		end
+		if damage > 0 and damage > heal then return { hpDelta = -damage, unitsDelta = -kills } end
+		if heal > 0 then
+			if raised > 0 and raisedType and not mixed then return { hpDelta = heal, unitsDelta = raised, unitType = raisedType } end
+			return { hpDelta = heal, unitsDelta = 0 }
+		end
+		return zero
+	end)
+	if ok and result then return result end
+	return zero
+end
+
 return Script

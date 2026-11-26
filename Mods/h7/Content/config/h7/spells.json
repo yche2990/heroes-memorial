@@ -777,6 +777,7 @@
 				},
 				"battleEffects": {
 					"charge": {
+						"hoverText": "Charge the %s",
 						"type": "h7AbCharge",
 						"mode": "feral",
 						"log": 3,
@@ -882,6 +883,7 @@
 				},
 				"battleEffects": {
 					"charge": {
+						"hoverText": "Pounce on the %s",
 						"type": "h7AbCharge",
 						"mode": "pounce",
 						"range": 2,
@@ -6956,6 +6958,7 @@
 		}
 	},
 	"h7FogShroud": {
+		"targetCondition" : { "noneOf" : { "bonus.SIEGE_WEAPON" : "absolute" } },   // control effects do not work on war machines
 		"type": "combat",
 		"name": "Fog Shroud (H7)",
 		"school": {

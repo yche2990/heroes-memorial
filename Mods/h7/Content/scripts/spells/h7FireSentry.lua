@@ -85,8 +85,19 @@ function Script:apply(mechanics, server, target)
 end
 
 --- Round 301: newer engines call this every time a target is chosen; returning nil uses the engine's default hint
+
+--- Cursor and status bar text while choosing a target: cursor kadCursorSummon; summons a Fire Sentry on a free hex.
+--- Hexes where it fits show "Cast X" (as the engine default, with the estimate); hexes where it does not fit show the original "X cannot be placed here" (core.genrltxt.181),
+--- where the engine default would show no text at all.
 function Script:describeTargetStep(mechanics, partialTarget, hoveredHex)
-	return nil
+	if #partialTarget ~= 0 or hoveredHex == nil or not hoveredHex:isValid() or mechanics:isMassive() then return nil end
+	local spellName = mechanics:getSpell():getNameTextID()
+	return {
+		cursor = "kadCursorSummon",
+		text = { append = { "core.genrltxt.26" }, replaceStrings = { spellName } },        -- Cast %s
+		blockedText = { append = { "core.genrltxt.181" }, replaceStrings = { spellName } }, -- %s cannot be placed here
+		healthGainTextID = "vcmi.battleWindow.healValuePreview"
+	}
 end
 
 return Script
